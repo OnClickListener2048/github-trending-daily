@@ -1,0 +1,14 @@
+{
+  "languages": [],
+  "since": "daily",
+  "limit": 25,
+  "mentions": {
+    "enabled": true,
+    "chunk_size": 10,
+    "opt_out_file": "data/opt_out.json"
+  },
+  "ai": {
+    "enabled": true,
+    "model": "claude-opus-5-5"
+  }
+}
