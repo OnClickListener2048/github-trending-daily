@@ -166,9 +166,9 @@ def analyze_all(repos: list[dict], cfg: dict) -> list[dict]:
     return results
 
 
-def render_report(repos: list[dict], date_str: str, pages_url: str = "") -> str:
+def render_report(repos: list[dict], date_str: str, pages_url: str = "", top_n: int = 10) -> str:
     """渲染 Markdown 日报（Issue 正文 / README 区块 / @提及邮件内容）。"""
-    top5 = sorted(repos, key=lambda r: r["stars_today"], reverse=True)[:5]
+    top = sorted(repos, key=lambda r: r["stars_today"], reverse=True)[:top_n]
 
     lines = [
         f"# 🔥 GitHub 每日 Trending · {date_str}",
@@ -177,9 +177,9 @@ def render_report(repos: list[dict], date_str: str, pages_url: str = "") -> str:
     ]
     if pages_url:
         lines.append(f"> 🎨 [打开精美 HTML 报告]({pages_url})（推荐浏览器查看）")
-    lines += ["", "## 🏆 今日之星 TOP 5（详细介绍）", ""]
+    lines += ["", f"## 🏆 今日之星 TOP {len(top)}（详细介绍）", ""]
 
-    for i, r in enumerate(top5, 1):
+    for i, r in enumerate(top, 1):
         lines.append(
             f"### {i}. [{r['full_name']}]({r['url']}) — ⭐ {r['stars']:,}（今日 +{r['stars_today']:,}）"
         )
@@ -256,7 +256,7 @@ section h2 { font-size: 1.3rem; margin: 26px 0 14px; }
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 16px;
 }
-.grid.top5 {
+.grid.featured {
   grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
   gap: 20px;
 }
@@ -369,11 +369,11 @@ def _card_html(r: dict, i: int, featured: bool) -> str:
 
 
 def render_html(
-    repos: list[dict], date_str: str, pages_url: str = "", repo_url: str = ""
+    repos: list[dict], date_str: str, pages_url: str = "", repo_url: str = "", top_n: int = 10
 ) -> str:
     """渲染完全自定义样式的 HTML 报告页（GitHub Pages）。"""
-    top5 = sorted(repos, key=lambda r: r["stars_today"], reverse=True)[:5]
-    top5_html = "\n".join(_card_html(r, i, True) for i, r in enumerate(top5, 1))
+    top = sorted(repos, key=lambda r: r["stars_today"], reverse=True)[:top_n]
+    top_html = "\n".join(_card_html(r, i, True) for i, r in enumerate(top, 1))
     all_html = "\n".join(_card_html(r, i, False) for i, r in enumerate(repos, 1))
 
     cta = (
@@ -405,9 +405,9 @@ def render_html(
 </header>
 <main>
   <section>
-    <h2>🏆 今日之星 TOP 5（详细介绍）</h2>
-    <div class="grid top5">
-{top5_html}
+    <h2>🏆 今日之星 TOP {len(top)}（详细介绍）</h2>
+    <div class="grid featured">
+{top_html}
     </div>
   </section>
   <section>

@@ -91,9 +91,14 @@ def main() -> None:
         repo["features"] = detail.get("features", [])
         repo["audience"] = detail.get("audience", "")
 
-    report = render_report(repos, date_str, cfg.get("pages_url", ""))
+    top_n = int(cfg.get("top_n", 10))
+    report = render_report(repos, date_str, cfg.get("pages_url", ""), top_n=top_n)
     html_page = render_html(
-        repos, date_str, cfg.get("pages_url", ""), cfg.get("repo_url", "")
+        repos,
+        date_str,
+        cfg.get("pages_url", ""),
+        cfg.get("repo_url", ""),
+        top_n=top_n,
     )
 
     daily_dir = os.path.join(ROOT, "data", "daily")
