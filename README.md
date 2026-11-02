@@ -35,8 +35,11 @@
 | `limit` | 榜单数量（默认 25） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
 | `mentions.chunk_size` | 每条评论 @ 的人数（默认 10，分批 @ 降低被判定骚扰的风险） |
-| `ai.enabled` | 是否用 AI 生成一句话中文简介（需在仓库 Secrets 配置 `ANTHROPIC_API_KEY`） |
-| `ai.model` | 简介用的 Claude 模型（默认 `claude-opus-5-5`） |
+| `ai.enabled` | 是否用 AI 生成一句话中文简介（需在仓库 Secrets 配置对应 Key） |
+| `ai.provider` | AI 简介提供商：`deepseek`（默认）或 `anthropic` |
+| `ai.model` | 模型名（DeepSeek 默认 `deepseek-chat`；Anthropic 如 `claude-opus-5-5`） |
+| `ai.base_url` | OpenAI 兼容接口地址（仅 deepseek 类 provider 使用，默认 DeepSeek 官方接口） |
+| `ai.api_key_env` | 密钥所在环境变量（默认 `DEEPSEEK_API_KEY`；用 Claude 时改成 `ANTHROPIC_API_KEY`） |
 
 ## ❓ 常见问题
 
@@ -53,7 +56,7 @@ GitHub 不提供 stargazer 的邮箱，本项目每天读取 star 名单并在 I
 数据来自 [github.com/trending](https://github.com/trending) 官方页面（GitHub 没有 trending API，本项目解析其页面）。偶发反爬失败时当天会跳过，第二天自动重试。
 
 **AI 简介怎么开？**
-在仓库 Settings → Secrets and variables → Actions 添加 `ANTHROPIC_API_KEY`，第二天自动生效。没有 Key 时回退显示仓库原始英文描述。
+默认走 DeepSeek：在仓库 Settings → Secrets and variables → Actions 添加 `DEEPSEEK_API_KEY`（或命令行 `gh secret set DEEPSEEK_API_KEY`），第二天自动生效。想用 Claude：把 `config.json` 的 `ai.provider` 改成 `anthropic`、`ai.api_key_env` 改成 `ANTHROPIC_API_KEY`，并设置对应 Secret。没有 Key 时回退显示仓库原始英文描述。
 
 ## ⚠️ 免责声明
 

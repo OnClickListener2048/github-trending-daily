@@ -39,10 +39,11 @@ def main() -> None:
 
     intros = None
     ai_cfg = cfg.get("ai", {})
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if ai_cfg.get("enabled", True) and api_key:
+    if ai_cfg.get("enabled", True) and os.environ.get(
+        ai_cfg.get("api_key_env", "DEEPSEEK_API_KEY")
+    ):
         try:
-            intros = generate_intros(repos, api_key, ai_cfg.get("model", "claude-opus-5-5"))
+            intros = generate_intros(repos, ai_cfg)
         except Exception as exc:  # AI 失败不影响推送，回退到原始描述
             print(f"⚠️ AI 简介生成失败，已回退到仓库原始描述：{exc}")
 
