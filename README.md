@@ -1,5 +1,8 @@
 # 🔥 GitHub Trending Daily · 每日热榜推送
 
+[![daily-trending](https://github.com/OnClickListener2048/github-trending-daily/actions/workflows/daily-trending.yml/badge.svg)](https://github.com/OnClickListener2048/github-trending-daily/actions/workflows/daily-trending.yml)
+![GitHub stars](https://img.shields.io/github/stars/OnClickListener2048/github-trending-daily)
+
 每天自动抓取 [github.com/trending](https://github.com/trending) 的热门仓库，**给每一位 Star 过本仓库的人发一封邮件**，正文就是当天榜单 + 每个仓库的一句话简介。
 
 ## ✨ 怎么接收
@@ -21,7 +24,7 @@
 ## 📚 历史日报
 
 - 每天的报告存档在 [`data/daily/`](data/daily/)
-- 每天的 Issue 都带有 `daily-trending` 标签：[查看全部](https://github.com/OWNER/REPO/issues?q=label%3Adaily-trending)
+- 每天的 Issue 都带有 `daily-trending` 标签：[查看全部](https://github.com/OnClickListener2048/github-trending-daily/issues?q=label%3Adaily-trending)
 
 ## 🛠 自定义（Fork 后改 `config.json`）
 
