@@ -20,81 +20,71 @@
 # 🔥 GitHub 每日 Trending · 2026-11-02
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 15 个仓库
+> 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
-### 1. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 8,424（今日 +2,243）
+## 🏆 今日之星 TOP 5
 
-> 基于 Rust 的桌面代理工具，通过操作系统无障碍树读取任意应用的真实 UI 结构并稳定操作。
-`Rust` · Fork 590
-
-### 2. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 110,366（今日 +1,799）
-
-> 为 AI 代理提供跨会话持久记忆，自动压缩会话内容并在未来对话中注入相关上下文。
-`TypeScript` · Fork 9,631
-
-### 3. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 92,375（今日 +892）
-
-> Python 网页抓取框架，从单次请求到大规模爬取全覆盖，内置反爬与自适应解析能力。
-`Python` · Fork 9,748
-
-### 4. [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) — ⭐ 39,719（今日 +508）
-
-> 独立且高度可定制的动态平铺 Wayland 合成器，外观与性能兼得。
-`C++` · Fork 2,143
-
-### 5. [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) — ⭐ 33,134（今日 +1,380）
-
-> 把 Claude Code 变成完整游戏开发工作室，含 49 个 AI 代理与 72 项工作流技能。
-`Shell` · Fork 4,486
-
-### 6. [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — ⭐ 15,845（今日 +654）
-
-> 在桌面本地高效运行大规模模型，把数据中心级推理服务带到个人电脑。
-`Python` · Fork 1,575
-
-### 7. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 40,462（今日 +3,216）
+### 1. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 40,499（今日 +3,216）
 
 > 暂无介绍
-`TypeScript` · Fork 9,026
 
-### 8. [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ⭐ 45,810（今日 +855）
+`TypeScript` · Fork 9,028 · 🔗 [官网](https://t3.codes)
 
-> 面向金融市场的语言基础模型，用大模型理解与预测金融时序数据。
-`Python` · Fork 7,554
+### 2. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 8,445（今日 +2,243）
 
-### 9. [kornia/kornia](https://github.com/kornia/kornia) — ⭐ 12,032（今日 +412）
+> 基于 Rust 的桌面代理工具，通过系统无障碍树让 AI 稳定识别并操作任意应用界面。
+- 💡 让代理可靠操作桌面应用
+- 💡 通过无障碍树识别真实 UI 结构
+- 💡 Rust 实现且动作引用稳定
 
-> 基于 PyTorch 的几何计算机视觉库，为空间 AI 提供可微图像处理与视觉算法。
-`Python` · Fork 1,484
+`Rust` · Fork 590 · 🔗 [官网](https://agent-browser.dev/desktop)
 
-### 10. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 46,269（今日 +655）
+### 3. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 110,371（今日 +1,799）
 
-> 纯 C 零依赖的推理引擎，将 MoE 专家流式加载，在自有硬件上运行前沿大模型。
-`C` · Fork 5,345
+> 为 AI 代理提供跨会话持久记忆，自动捕获并压缩会话内容，在后续对话中注入相关上下文。
+- 💡 跨会话持久保存代理记忆
+- 💡 AI 压缩历史会话内容
+- 💡 自动向新会话注入上下文
 
-### 11. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 309,879（今日 +970）
+`TypeScript` · Fork 9,631 · 🔗 [官网](https://claude-mem.ai)
 
-> 来自作者 .agents 目录的实用技能集，为真实工程师提供 AI 代理可用的技能。
-`Shell` · Fork 26,072
+### 4. [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) — ⭐ 33,142（今日 +1,380）
 
-### 12. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 9,882（今日 +115）
+> 将 Claude Code 扩展为完整游戏开发工作室，内置 49 个 AI 代理与 72 个工作流技能。
+- 💡 模拟真实游戏工作室层级
+- 💡 多角色 AI 代理协同开发
+- 💡 覆盖完整游戏开发流程
 
-> 管理 Git worktree 的命令行工具，专为并行 AI 代理工作流设计。
-`Rust` · Fork 353
+`Shell` · Fork 4,486
 
-### 13. [paperclipai/paperclip](https://github.com/paperclipai/paperclip) — ⭐ 110,181（今日 +507）
+### 5. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 309,882（今日 +970）
 
-> 开源应用，用于在工作场景中统一管理和调度 AI 代理。
-`TypeScript` · Fork 18,255
+> 面向真实工程师的 AI 代理技能集合，内容直接来自作者的 .agents 目录。
+- 💡 汇集工程师实用代理技能
+- 💡 面向真实软件工程场景
+- 💡 提供可直接复用的配置
 
-### 14. [karpathy/nanochat](https://github.com/karpathy/nanochat) — ⭐ 59,697（今日 +325）
+`Shell` · Fork 26,072 · 🔗 [官网](https://aihero.dev/skills)
 
-> Karpathy 的极简 ChatGPT 项目，用约 100 美元成本训练出完整对话模型。
-`Python` · Fork 8,394
+## 📋 完整榜单
 
-### 15. [p-e-w/heretic](https://github.com/p-e-w/heretic) — ⭐ 37,855（今日 +404）
-
-> 无需训练即可修改语言模型，可去除审查、抑制废话并降低谄媚等行为。
-`Python` · Fork 4,310
+| # | 仓库 | 一句话简介 | 语言 | ⭐ | 今日 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 基于 Rust 的桌面代理工具，通过系统无障碍树让 AI 稳定识别并操作任意应用界面。 | `Rust` | 8,445 | +2,243 |
+| 2 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 为 AI 代理提供跨会话持久记忆，自动捕获并压缩会话内容，在后续对话中注入相关上下文。 | `TypeScript` | 110,371 | +1,799 |
+| 3 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | Python Web 抓取框架，覆盖从单次请求到大规模爬取的完整场景。 | `Python` | 92,385 | +892 |
+| 4 | [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) | 独立且高度可定制的动态平铺 Wayland 合成器，兼顾美观与性能。 | `C++` | 39,721 | +508 |
+| 5 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | 将 Claude Code 扩展为完整游戏开发工作室，内置 49 个 AI 代理与 72 … | `Shell` | 33,142 | +1,380 |
+| 6 | [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) | 将数据中心级模型服务带到桌面，支持在本地高效运行大规模模型。 | `Python` | 15,847 | +654 |
+| 7 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | 暂无介绍 | `TypeScript` | 40,499 | +3,216 |
+| 8 | [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | 面向金融市场的语言基础模型，用于理解市场语言并支持金融预测任务。 | `Python` | 45,812 | +855 |
+| 9 | [kornia/kornia](https://github.com/kornia/kornia) | 面向空间 AI 的几何计算机视觉库，提供可微分视觉算法与张量工具。 | `Python` | 12,032 | +412 |
+| 10 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 纯 C 编写的轻量推理引擎，通过磁盘流式加载专家，在本地硬件运行前沿 MoE 模型。 | `C` | 46,272 | +655 |
+| 11 | [mattpocock/skills](https://github.com/mattpocock/skills) | 面向真实工程师的 AI 代理技能集合，内容直接来自作者的 .agents 目录。 | `Shell` | 309,882 | +970 |
+| 12 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 面向并行 AI 代理工作流的 Git worktree 管理 CLI，简化多工作树操作。 | `Rust` | 9,883 | +115 |
+| 13 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 开源 AI 代理管理应用，帮助团队在工作场景中统一管理代理。 | `TypeScript` | 110,182 | +507 |
+| 14 | [karpathy/nanochat](https://github.com/karpathy/nanochat) | 以约 100 美元成本训练和运行的 ChatGPT 风格对话模型项目。 | `Python` | 59,699 | +325 |
+| 15 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练即可修改语言模型，可移除审查、抑制废话并减少谄媚输出。 | `Python` | 37,860 | +404 |
 
 <!-- TRENDING:END -->
 
