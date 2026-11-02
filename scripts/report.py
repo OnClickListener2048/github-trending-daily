@@ -50,7 +50,8 @@ def _introduction_user_prompt(repo: dict, readme: str) -> str:
         '输出 JSON：{"summary": "一句话定位，20~40字", '
         '"intro": "详细介绍：它是什么、解决什么问题、怎么用，100~200字", '
         '"features": ["核心功能1", "核心功能2", "核心功能3", "核心功能4", "核心功能5", "核心功能6"], '
-        '"audience": "适合谁使用，20~40字（不确定就输出空字符串）"}'
+        '"audience": "适合谁使用，20~40字（不确定就输出空字符串）"}\n'
+        "注意：必须是合法 JSON，字符串内如出现双引号要转义为 \\\"。"
     )
 
 
@@ -95,22 +96,8 @@ def fallback_details(repo: dict) -> dict:
     }
 
 
-def analyze_repo(repo: dict, cfg: dict) -> dict:
-    """对单个仓库生成一次独立的详细介绍；失败时抛异常由调用方回退。"""
-    api_key = os.environ.get(cfg.get("api_key_env", "DEEPSEEK_API_KEY"))
-    if not api_key:
-        raise ValueError(f"未配置环境变量 {cfg.get('api_key_env', 'DEEPSEEK_API_KEY')}")
-    model = cfg.get("model", "deepseek-flash")
-    readme = (repo.get("readme") or "")[: int(cfg.get("readme_chars", 6000))]
-    user_prompt = _introduction_user_prompt(repo, readme)
-
-    if cfg.get("provider", "deepseek") == "anthropic":
-        text = _anthropic_chat(user_prompt, api_key, model)
-    else:
-        text = _openai_compatible_chat(
-            user_prompt, api_key, model, cfg.get("base_url", "https://api.deepseek.com/v1")
-        )
-
+def _parse_details(text: str, repo: dict) -> dict:
+    """解析 AI 返回的 JSON 对象；失败抛 ValueError。"""
     start, end = text.find("{"), text.rfind("}")
     if start == -1 or end <= start:
         raise ValueError(f"AI 返回中找不到 JSON 对象: {text[:200]}")
@@ -130,6 +117,35 @@ def analyze_repo(repo: dict, cfg: dict) -> dict:
         else []
     )
     return result
+
+
+def analyze_repo(repo: dict, cfg: dict) -> dict:
+    """对单个仓库生成一次独立的详细介绍；解析失败自动重试一次。"""
+    api_key = os.environ.get(cfg.get("api_key_env", "DEEPSEEK_API_KEY"))
+    if not api_key:
+        raise ValueError(f"未配置环境变量 {cfg.get('api_key_env', 'DEEPSEEK_API_KEY')}")
+    model = cfg.get("model", "deepseek-flash")
+    readme = (repo.get("readme") or "")[: int(cfg.get("readme_chars", 6000))]
+    user_prompt = _introduction_user_prompt(repo, readme)
+
+    last_error: Exception | None = None
+    for attempt in range(2):
+        try:
+            if cfg.get("provider", "deepseek") == "anthropic":
+                text = _anthropic_chat(user_prompt, api_key, model)
+            else:
+                text = _openai_compatible_chat(
+                    user_prompt,
+                    api_key,
+                    model,
+                    cfg.get("base_url", "https://api.deepseek.com/v1"),
+                )
+            return _parse_details(text, repo)
+        except (ValueError, json.JSONDecodeError, requests.RequestException) as exc:
+            last_error = exc
+            # 第二次尝试时提醒模型输出合法 JSON
+            user_prompt += "\n\n注意：你上一次的输出不是合法 JSON（字符串内的双引号必须转义为 \\\"）。请重新输出一次。"
+    raise ValueError(f"两次尝试均失败：{last_error}")
 
 
 def analyze_all(repos: list[dict], cfg: dict) -> list[dict]:
