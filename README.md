@@ -17,7 +17,84 @@
 
 <!-- TRENDING:START -->
 
-> 榜单将在第一次运行后出现在这里。
+# 🔥 GitHub 每日 Trending · 2026-11-02
+
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 15 个仓库
+
+### 1. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 8,424（今日 +2,243）
+
+> 基于 Rust 的桌面代理工具，通过操作系统无障碍树读取任意应用的真实 UI 结构并稳定操作。
+`Rust` · Fork 590
+
+### 2. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 110,366（今日 +1,799）
+
+> 为 AI 代理提供跨会话持久记忆，自动压缩会话内容并在未来对话中注入相关上下文。
+`TypeScript` · Fork 9,631
+
+### 3. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 92,375（今日 +892）
+
+> Python 网页抓取框架，从单次请求到大规模爬取全覆盖，内置反爬与自适应解析能力。
+`Python` · Fork 9,748
+
+### 4. [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) — ⭐ 39,719（今日 +508）
+
+> 独立且高度可定制的动态平铺 Wayland 合成器，外观与性能兼得。
+`C++` · Fork 2,143
+
+### 5. [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) — ⭐ 33,134（今日 +1,380）
+
+> 把 Claude Code 变成完整游戏开发工作室，含 49 个 AI 代理与 72 项工作流技能。
+`Shell` · Fork 4,486
+
+### 6. [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — ⭐ 15,845（今日 +654）
+
+> 在桌面本地高效运行大规模模型，把数据中心级推理服务带到个人电脑。
+`Python` · Fork 1,575
+
+### 7. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 40,462（今日 +3,216）
+
+> 暂无介绍
+`TypeScript` · Fork 9,026
+
+### 8. [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ⭐ 45,810（今日 +855）
+
+> 面向金融市场的语言基础模型，用大模型理解与预测金融时序数据。
+`Python` · Fork 7,554
+
+### 9. [kornia/kornia](https://github.com/kornia/kornia) — ⭐ 12,032（今日 +412）
+
+> 基于 PyTorch 的几何计算机视觉库，为空间 AI 提供可微图像处理与视觉算法。
+`Python` · Fork 1,484
+
+### 10. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 46,269（今日 +655）
+
+> 纯 C 零依赖的推理引擎，将 MoE 专家流式加载，在自有硬件上运行前沿大模型。
+`C` · Fork 5,345
+
+### 11. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 309,879（今日 +970）
+
+> 来自作者 .agents 目录的实用技能集，为真实工程师提供 AI 代理可用的技能。
+`Shell` · Fork 26,072
+
+### 12. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 9,882（今日 +115）
+
+> 管理 Git worktree 的命令行工具，专为并行 AI 代理工作流设计。
+`Rust` · Fork 353
+
+### 13. [paperclipai/paperclip](https://github.com/paperclipai/paperclip) — ⭐ 110,181（今日 +507）
+
+> 开源应用，用于在工作场景中统一管理和调度 AI 代理。
+`TypeScript` · Fork 18,255
+
+### 14. [karpathy/nanochat](https://github.com/karpathy/nanochat) — ⭐ 59,697（今日 +325）
+
+> Karpathy 的极简 ChatGPT 项目，用约 100 美元成本训练出完整对话模型。
+`Python` · Fork 8,394
+
+### 15. [p-e-w/heretic](https://github.com/p-e-w/heretic) — ⭐ 37,855（今日 +404）
+
+> 无需训练即可修改语言模型，可去除审查、抑制废话并降低谄媚等行为。
+`Python` · Fork 4,310
 
 <!-- TRENDING:END -->
 
