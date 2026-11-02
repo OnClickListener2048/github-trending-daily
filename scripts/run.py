@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""编排入口：抓取 → 补充信息 → 生成日报（可选 AI 简介）→ 生成 HTML → 发布。"""
+"""编排入口：抓取 → 补充 README/topics → 逐个深度分析 → 生成日报和 HTML → 发布。"""
 from __future__ import annotations
 
 import json
 import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -13,7 +14,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCRIPT_DIR)
 
 from trending import fetch_trending  # noqa: E402
-from report import generate_details, render_html, render_report  # noqa: E402
+from report import analyze_all, fallback_details, render_html, render_report  # noqa: E402
 import publish  # noqa: E402
 
 ROOT = os.path.dirname(SCRIPT_DIR)
@@ -25,7 +26,7 @@ def load_config() -> dict:
 
 
 def enrich_repos(repos: list[dict]) -> None:
-    """从 GitHub API 补充 topics / homepage，让报告信息更丰富（仅在有 token 时）。"""
+    """从 GitHub API 补充 topics / homepage / README 原文（仅在有 token 时）。"""
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         return
@@ -34,19 +35,30 @@ def enrich_repos(repos: list[dict]) -> None:
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
     }
-    for repo in repos:
+
+    def work(repo: dict) -> None:
         try:
             resp = requests.get(
                 f"https://api.github.com/repos/{repo['full_name']}",
                 headers=headers,
-                timeout=10,
+                timeout=15,
             )
             if resp.status_code == 200:
                 data = resp.json()
-                repo["topics"] = data.get("topics", [])[:6]
+                repo["topics"] = data.get("topics", [])
                 repo["homepage"] = data.get("homepage") or ""
+            readme_resp = requests.get(
+                f"https://api.github.com/repos/{repo['full_name']}/readme",
+                headers={**headers, "Accept": "application/vnd.github.raw"},
+                timeout=15,
+            )
+            if readme_resp.status_code == 200:
+                repo["readme"] = readme_resp.text[:8000]
         except Exception:  # 单个仓库失败不影响整体
-            continue
+            return
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(work, repos))
 
 
 def main() -> None:
@@ -66,23 +78,20 @@ def main() -> None:
 
     date_str = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
 
-    details = None
     ai_cfg = cfg.get("ai", {})
     if ai_cfg.get("enabled", True) and os.environ.get(
         ai_cfg.get("api_key_env", "DEEPSEEK_API_KEY")
     ):
-        try:
-            details = generate_details(repos, ai_cfg)
-        except Exception as exc:  # AI 失败不影响推送，回退到原始描述
-            print(f"⚠️ AI 简介生成失败，已回退到仓库原始描述：{exc}")
-    if not details:
-        details = [
-            {"intro": r["description"] or "（暂无介绍）", "highlights": []}
-            for r in repos
-        ]
+        details = analyze_all(repos, ai_cfg)
+    else:
+        details = [fallback_details(r) for r in repos]
     for repo, detail in zip(repos, details):
-        repo["intro"] = detail["intro"]
-        repo["highlights"] = detail["highlights"]
+        repo["summary"] = detail["summary"]
+        repo["what"] = detail.get("what", "")
+        repo["tech"] = detail.get("tech", "")
+        repo["audience"] = detail.get("audience", "")
+        repo["why_trending"] = detail.get("why_trending", "")
+        repo["highlights"] = detail.get("highlights", [])
 
     report = render_report(repos, date_str, cfg.get("pages_url", ""))
     html_page = render_html(

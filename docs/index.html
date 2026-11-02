@@ -7,68 +7,96 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --bg: #f6f8fa; --card: #ffffff; --text: #1f2328; --muted: #59636e;
-  --border: #d1d9e0; --accent: #0969da; --accent-soft: #ddf4ff;
+  --bg: #f6f8fa; --card: #ffffff; --panel: #f6f8fa; --text: #1f2328;
+  --muted: #59636e; --border: #d1d9e0; --accent: #0969da; --accent-soft: #ddf4ff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0d1117; --card: #161b22; --text: #e6edf3; --muted: #8b949e;
-    --border: #30363d; --accent: #4493f8; --accent-soft: #0c2d6b;
+    --bg: #0d1117; --card: #161b22; --panel: #0d1117; --text: #e6edf3;
+    --muted: #8b949e; --border: #30363d; --accent: #4493f8; --accent-soft: #0c2d6b;
   }
 }
+html { -webkit-text-size-adjust: 100%; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   background: var(--bg); color: var(--text); line-height: 1.6;
 }
-.hero { text-align: center; padding: 56px 20px 40px; }
-.hero h1 { font-size: 2rem; margin-bottom: 10px; }
-.hero .date { color: var(--muted); font-size: 1rem; }
-.hero .sub { color: var(--muted); margin-top: 14px; font-size: .95rem; }
-.hero a, footer a { color: var(--accent); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; }
+.hero { text-align: center; padding: 48px 20px 32px; }
+.hero h1 { font-size: 1.9rem; margin-bottom: 8px; }
+.hero .date { color: var(--muted); }
+.hero .sub { color: var(--muted); margin-top: 12px; font-size: .93rem; }
 .btn {
-  display: inline-block; margin-top: 18px; padding: 10px 22px;
+  display: inline-block; margin-top: 16px; padding: 9px 20px;
   background: var(--accent); color: #fff !important; border-radius: 999px;
-  font-weight: 600; font-size: .95rem; text-decoration: none;
+  font-weight: 600; font-size: .93rem;
 }
-main { max-width: 1080px; margin: 0 auto; padding: 0 20px 60px; }
-section h2 { font-size: 1.35rem; margin: 28px 0 16px; }
+main { max-width: 1080px; margin: 0 auto; padding: 0 20px 56px; }
+section h2 { font-size: 1.3rem; margin: 26px 0 14px; }
 .grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 16px;
 }
-.grid.top5 { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.grid.top5 {
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+  gap: 20px;
+}
 .card {
   display: flex; flex-direction: column; gap: 10px;
   background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-  padding: 18px; text-decoration: none; color: var(--text);
-  transition: transform .12s ease, box-shadow .12s ease;
+  padding: 18px; overflow-wrap: anywhere;
 }
-.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-.card-head { display: flex; align-items: center; gap: 8px; }
-.card-head .name { font-weight: 700; font-size: 1.02rem; color: var(--accent); }
+.card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.name { font-weight: 700; font-size: 1rem; }
 .rank {
   background: var(--accent); color: #fff; border-radius: 8px;
   padding: 1px 10px; font-size: .9rem; font-weight: 700;
 }
-.intro { color: var(--text); font-size: .92rem; }
-.highlights { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.highlights li { font-size: .88rem; color: var(--muted); padding-left: 18px; position: relative; }
-.highlights li::before { content: "▸"; position: absolute; left: 2px; color: var(--accent); }
+.summary {
+  font-size: .92rem; display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+.card.featured .summary { -webkit-line-clamp: unset; }
+.deep {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 10px 16px;
+}
+.deep-item {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px;
+}
+.deep-item .label {
+  display: block; font-size: .78rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 4px;
+}
+.deep-item p, .deep-item li { font-size: .86rem; }
+.hl { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.hl li { padding-left: 16px; position: relative; }
+.hl li::before { content: "▸"; position: absolute; left: 2px; color: var(--accent); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   background: var(--accent-soft); color: var(--accent);
   border-radius: 999px; padding: 2px 10px; font-size: 12px;
 }
-.chip .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+.chip .dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; margin-right: 5px;
+}
+details.deep-toggle { font-size: .88rem; }
+details.deep-toggle summary {
+  cursor: pointer; color: var(--accent); font-weight: 600; user-select: none;
+}
+details.deep-toggle .deep { margin-top: 10px; }
 .stats {
   display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
   margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);
   font-size: .85rem; color: var(--muted);
 }
 .stats .hot { color: #d1242f; font-weight: 600; }
-.stats .home { color: var(--accent); text-decoration: none; }
-footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-size: .85rem; }
+footer { text-align: center; padding: 26px 20px 46px; color: var(--muted); font-size: .85rem; }
 </style>
 </head>
 <body>
@@ -80,33 +108,33 @@ footer { text-align: center; padding: 30px 20px 50px; color: var(--muted); font-
 </header>
 <main>
   <section>
-    <h2>🏆 今日之星 TOP 5</h2>
+    <h2>🏆 今日之星 TOP 5（深度解析）</h2>
     <div class="grid top5">
-<a class="card featured" href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener"><div class="card-head"><span class="rank">1</span><span class="name">pingdotgg/t3code</span></div><p class="intro">暂无介绍</p><div class="stats"><span>⭐ 40,499</span><span class="hot">🔥 今日 +3,216</span><span>🍴 9,028</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span><a class="home" href="https://t3.codes" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card featured" href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener"><div class="card-head"><span class="rank">2</span><span class="name">vercel-labs/agent-desktop</span></div><p class="intro">基于 Rust 的桌面代理工具，通过系统无障碍树让 AI 稳定识别并操作任意应用界面。</p><ul class="highlights"><li>让代理可靠操作桌面应用</li><li>通过无障碍树识别真实 UI 结构</li><li>Rust 实现且动作引用稳定</li></ul><div class="chips"><span class="chip">accessibility</span><span class="chip">accessibility-api</span><span class="chip">ai-agents</span><span class="chip">automation</span><span class="chip">cli</span><span class="chip">computer-use</span></div><div class="stats"><span>⭐ 8,445</span><span class="hot">🔥 今日 +2,243</span><span>🍴 590</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span><a class="home" href="https://agent-browser.dev/desktop" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card featured" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener"><div class="card-head"><span class="rank">3</span><span class="name">thedotmack/claude-mem</span></div><p class="intro">为 AI 代理提供跨会话持久记忆，自动捕获并压缩会话内容，在后续对话中注入相关上下文。</p><ul class="highlights"><li>跨会话持久保存代理记忆</li><li>AI 压缩历史会话内容</li><li>自动向新会话注入上下文</li></ul><div class="chips"><span class="chip">ai</span><span class="chip">ai-agents</span><span class="chip">ai-memory</span><span class="chip">anthropic</span><span class="chip">artificial-intelligence</span><span class="chip">chromadb</span></div><div class="stats"><span>⭐ 110,371</span><span class="hot">🔥 今日 +1,799</span><span>🍴 9,631</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span><a class="home" href="https://claude-mem.ai" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card featured" href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener"><div class="card-head"><span class="rank">4</span><span class="name">Donchitos/Claude-Code-Game-Studios</span></div><p class="intro">将 Claude Code 扩展为完整游戏开发工作室，内置 49 个 AI 代理与 72 个工作流技能。</p><ul class="highlights"><li>模拟真实游戏工作室层级</li><li>多角色 AI 代理协同开发</li><li>覆盖完整游戏开发流程</li></ul><div class="chips"><span class="chip">ai-agents</span><span class="chip">ai-assisted-development</span><span class="chip">anthropic</span><span class="chip">claude</span><span class="chip">claude-code</span><span class="chip">game-design</span></div><div class="stats"><span>⭐ 33,142</span><span class="hot">🔥 今日 +1,380</span><span>🍴 4,486</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></a>
-<a class="card featured" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener"><div class="card-head"><span class="rank">5</span><span class="name">mattpocock/skills</span></div><p class="intro">面向真实工程师的 AI 代理技能集合，内容直接来自作者的 .agents 目录。</p><ul class="highlights"><li>汇集工程师实用代理技能</li><li>面向真实软件工程场景</li><li>提供可直接复用的配置</li></ul><div class="stats"><span>⭐ 309,882</span><span class="hot">🔥 今日 +970</span><span>🍴 26,072</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span><a class="home" href="https://aihero.dev/skills" target="_blank" rel="noopener">🔗 官网</a></div></a>
+<div class="card featured"><div class="card-head"><span class="rank">#1</span><a class="name" href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a></div><p class="summary">（暂无介绍）</p><div class="stats"><span>⭐ 40,536</span><span class="hot">🔥 今日 +3,216</span><span>🍴 9,029</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span></div></div>
+<div class="card featured"><div class="card-head"><span class="rank">#2</span><a class="name" href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener">vercel-labs/agent-desktop</a></div><p class="summary">Agent Desktop gives any agent reliable computer us</p><div class="stats"><span>⭐ 8,476</span><span class="hot">🔥 今日 +2,243</span><span>🍴 592</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span></div></div>
+<div class="card featured"><div class="card-head"><span class="rank">#3</span><a class="name" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a></div><p class="summary">Persistent Context Across Sessions for Every Agent</p><div class="stats"><span>⭐ 110,377</span><span class="hot">🔥 今日 +1,799</span><span>🍴 9,631</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span></div></div>
+<div class="card featured"><div class="card-head"><span class="rank">#4</span><a class="name" href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener">Donchitos/Claude-Code-Game-Studios</a></div><p class="summary">Turn Claude Code into a full game dev studio — 49 </p><div class="stats"><span>⭐ 33,150</span><span class="hot">🔥 今日 +1,380</span><span>🍴 4,486</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></div>
+<div class="card featured"><div class="card-head"><span class="rank">#5</span><a class="name" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></div><p class="summary">Skills for Real Engineers. Straight from my .agent</p><div class="stats"><span>⭐ 309,887</span><span class="hot">🔥 今日 +970</span><span>🍴 26,072</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></div>
     </div>
   </section>
   <section>
-    <h2>📋 完整榜单</h2>
+    <h2>📋 完整榜单（点开卡片查看深度分析）</h2>
     <div class="grid">
-<a class="card" href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener"><div class="card-head"><span class="name">vercel-labs/agent-desktop</span></div><p class="intro">基于 Rust 的桌面代理工具，通过系统无障碍树让 AI 稳定识别并操作任意应用界面。</p><ul class="highlights"><li>让代理可靠操作桌面应用</li><li>通过无障碍树识别真实 UI 结构</li><li>Rust 实现且动作引用稳定</li></ul><div class="chips"><span class="chip">accessibility</span><span class="chip">accessibility-api</span><span class="chip">ai-agents</span><span class="chip">automation</span><span class="chip">cli</span><span class="chip">computer-use</span></div><div class="stats"><span>⭐ 8,445</span><span class="hot">🔥 今日 +2,243</span><span>🍴 590</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span><a class="home" href="https://agent-browser.dev/desktop" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener"><div class="card-head"><span class="name">thedotmack/claude-mem</span></div><p class="intro">为 AI 代理提供跨会话持久记忆，自动捕获并压缩会话内容，在后续对话中注入相关上下文。</p><ul class="highlights"><li>跨会话持久保存代理记忆</li><li>AI 压缩历史会话内容</li><li>自动向新会话注入上下文</li></ul><div class="chips"><span class="chip">ai</span><span class="chip">ai-agents</span><span class="chip">ai-memory</span><span class="chip">anthropic</span><span class="chip">artificial-intelligence</span><span class="chip">chromadb</span></div><div class="stats"><span>⭐ 110,371</span><span class="hot">🔥 今日 +1,799</span><span>🍴 9,631</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span><a class="home" href="https://claude-mem.ai" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener"><div class="card-head"><span class="name">D4Vinci/Scrapling</span></div><p class="intro">Python Web 抓取框架，覆盖从单次请求到大规模爬取的完整场景。</p><ul class="highlights"><li>支持单请求到大规模爬取</li><li>内置自适应网页抓取能力</li><li>适合数据采集与爬虫开发</li></ul><div class="chips"><span class="chip">ai</span><span class="chip">ai-scraping</span><span class="chip">automation</span><span class="chip">crawler</span><span class="chip">crawling</span><span class="chip">crawling-python</span></div><div class="stats"><span>⭐ 92,385</span><span class="hot">🔥 今日 +892</span><span>🍴 9,748</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span><a class="home" href="https://scrapling.readthedocs.io/en/latest/" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/hyprwm/Hyprland" target="_blank" rel="noopener"><div class="card-head"><span class="name">hyprwm/Hyprland</span></div><p class="intro">独立且高度可定制的动态平铺 Wayland 合成器，兼顾美观与性能。</p><ul class="highlights"><li>提供动态平铺窗口管理</li><li>Wayland 原生窗口合成器</li><li>高度可定制外观与快捷键</li></ul><div class="chips"><span class="chip">compositor</span><span class="chip">cpp26</span><span class="chip">wayland</span><span class="chip">wayland-compositor</span></div><div class="stats"><span>⭐ 39,721</span><span class="hot">🔥 今日 +508</span><span>🍴 2,143</span><span class="chip"><span class="dot" style="background:#f34b7d"></span>C++</span><a class="home" href="https://hypr.land" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener"><div class="card-head"><span class="name">Donchitos/Claude-Code-Game-Studios</span></div><p class="intro">将 Claude Code 扩展为完整游戏开发工作室，内置 49 个 AI 代理与 72 个工作流技能。</p><ul class="highlights"><li>模拟真实游戏工作室层级</li><li>多角色 AI 代理协同开发</li><li>覆盖完整游戏开发流程</li></ul><div class="chips"><span class="chip">ai-agents</span><span class="chip">ai-assisted-development</span><span class="chip">anthropic</span><span class="chip">claude</span><span class="chip">claude-code</span><span class="chip">game-design</span></div><div class="stats"><span>⭐ 33,142</span><span class="hot">🔥 今日 +1,380</span><span>🍴 4,486</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></a>
-<a class="card" href="https://github.com/FlashML-org/FreeToken" target="_blank" rel="noopener"><div class="card-head"><span class="name">FlashML-org/FreeToken</span></div><p class="intro">将数据中心级模型服务带到桌面，支持在本地高效运行大规模模型。</p><ul class="highlights"><li>支持本地高效运行大模型</li><li>提供桌面级模型服务体验</li><li>显著降低大模型部署门槛</li></ul><div class="chips"><span class="chip">deepseek-v4</span><span class="chip">edge</span><span class="chip">glm</span><span class="chip">inference</span><span class="chip">minimax</span><span class="chip">moe</span></div><div class="stats"><span>⭐ 15,847</span><span class="hot">🔥 今日 +654</span><span>🍴 1,575</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span><a class="home" href="flashml.ai" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener"><div class="card-head"><span class="name">pingdotgg/t3code</span></div><p class="intro">暂无介绍</p><div class="stats"><span>⭐ 40,499</span><span class="hot">🔥 今日 +3,216</span><span>🍴 9,028</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span><a class="home" href="https://t3.codes" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener"><div class="card-head"><span class="name">shiyu-coder/Kronos</span></div><p class="intro">面向金融市场的语言基础模型，用于理解市场语言并支持金融预测任务。</p><ul class="highlights"><li>专门建模金融市场语言</li><li>支持金融时序分析与预测</li><li>适合量化研究与策略实验</li></ul><div class="stats"><span>⭐ 45,812</span><span class="hot">🔥 今日 +855</span><span>🍴 7,554</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></a>
-<a class="card" href="https://github.com/kornia/kornia" target="_blank" rel="noopener"><div class="card-head"><span class="name">kornia/kornia</span></div><p class="intro">面向空间 AI 的几何计算机视觉库，提供可微分视觉算法与张量工具。</p><ul class="highlights"><li>提供丰富几何视觉算法</li><li>可微分计算机视觉算子</li><li>支持空间 AI 与机器人应用</li></ul><div class="chips"><span class="chip">artificial-intelligence</span><span class="chip">computer-vision</span><span class="chip">deep-learning</span><span class="chip">hacktoberfest</span><span class="chip">image-processing</span><span class="chip">machine-learning</span></div><div class="stats"><span>⭐ 12,032</span><span class="hot">🔥 今日 +412</span><span>🍴 1,484</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span><a class="home" href="https://kornia.readthedocs.io" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener"><div class="card-head"><span class="name">JustVugg/colibri</span></div><p class="intro">纯 C 编写的轻量推理引擎，通过磁盘流式加载专家，在本地硬件运行前沿 MoE 模型。</p><ul class="highlights"><li>完全零依赖的纯 C 轻量引擎</li><li>专家权重从磁盘流式加载</li><li>在低配硬件运行大 MoE 模型</li></ul><div class="stats"><span>⭐ 46,272</span><span class="hot">🔥 今日 +655</span><span>🍴 5,346</span><span class="chip"><span class="dot" style="background:#555555"></span>C</span><a class="home" href="https://justvugg.github.io/colibri" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener"><div class="card-head"><span class="name">mattpocock/skills</span></div><p class="intro">面向真实工程师的 AI 代理技能集合，内容直接来自作者的 .agents 目录。</p><ul class="highlights"><li>汇集工程师实用代理技能</li><li>面向真实软件工程场景</li><li>提供可直接复用的配置</li></ul><div class="stats"><span>⭐ 309,882</span><span class="hot">🔥 今日 +970</span><span>🍴 26,072</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span><a class="home" href="https://aihero.dev/skills" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/max-sixty/worktrunk" target="_blank" rel="noopener"><div class="card-head"><span class="name">max-sixty/worktrunk</span></div><p class="intro">面向并行 AI 代理工作流的 Git worktree 管理 CLI，简化多工作树操作。</p><ul class="highlights"><li>可高效管理多个 Git 工作树</li><li>专为并行代理工作流设计</li><li>提供简洁高效的命令行操作</li></ul><div class="chips"><span class="chip">agents</span><span class="chip">claude-code</span><span class="chip">codex</span><span class="chip">developer-tools</span><span class="chip">git</span><span class="chip">worktrees</span></div><div class="stats"><span>⭐ 9,883</span><span class="hot">🔥 今日 +115</span><span>🍴 353</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span><a class="home" href="https://worktrunk.dev" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener"><div class="card-head"><span class="name">paperclipai/paperclip</span></div><p class="intro">开源 AI 代理管理应用，帮助团队在工作场景中统一管理代理。</p><ul class="highlights"><li>统一管理工作中的 AI 代理</li><li>开源应用支持自行部署</li><li>适合团队协作管理代理</li></ul><div class="chips"><span class="chip">acpx</span><span class="chip">agent-orchestration</span><span class="chip">agent-skills</span><span class="chip">agentic-ai</span><span class="chip">ai-agents</span><span class="chip">ai-engineering</span></div><div class="stats"><span>⭐ 110,182</span><span class="hot">🔥 今日 +507</span><span>🍴 18,256</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span><a class="home" href="https://paperclip.ing" target="_blank" rel="noopener">🔗 官网</a></div></a>
-<a class="card" href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener"><div class="card-head"><span class="name">karpathy/nanochat</span></div><p class="intro">以约 100 美元成本训练和运行的 ChatGPT 风格对话模型项目。</p><ul class="highlights"><li>百美元级训练对话模型</li><li>提供完整训练与推理流程</li><li>适合学习大模型全流程</li></ul><div class="stats"><span>⭐ 59,699</span><span class="hot">🔥 今日 +325</span><span>🍴 8,394</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></a>
-<a class="card" href="https://github.com/p-e-w/heretic" target="_blank" rel="noopener"><div class="card-head"><span class="name">p-e-w/heretic</span></div><p class="intro">无需训练即可修改语言模型，可移除审查、抑制废话并减少谄媚输出。</p><ul class="highlights"><li>无需训练干预语言模型</li><li>移除审查与模板化输出</li><li>有效降低模型谄媚倾向</li></ul><div class="chips"><span class="chip">abliteration</span><span class="chip">anti-censorship</span><span class="chip">anticensorship</span><span class="chip">censorship</span><span class="chip">censorship-resistance</span><span class="chip">llm</span></div><div class="stats"><span>⭐ 37,860</span><span class="hot">🔥 今日 +404</span><span>🍴 4,311</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span><a class="home" href="https://heretic-project.org" target="_blank" rel="noopener">🔗 官网</a></div></a>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener">vercel-labs/agent-desktop</a></div><p class="summary">Agent Desktop gives any agent reliable computer us</p><div class="stats"><span>⭐ 8,476</span><span class="hot">🔥 今日 +2,243</span><span>🍴 592</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a></div><p class="summary">Persistent Context Across Sessions for Every Agent</p><div class="stats"><span>⭐ 110,377</span><span class="hot">🔥 今日 +1,799</span><span>🍴 9,631</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener">D4Vinci/Scrapling</a></div><p class="summary">🕷️ The BEST Web Scraping framework that handles ev</p><div class="stats"><span>⭐ 92,398</span><span class="hot">🔥 今日 +892</span><span>🍴 9,748</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/hyprwm/Hyprland" target="_blank" rel="noopener">hyprwm/Hyprland</a></div><p class="summary">Hyprland is an independent, highly customizable, d</p><div class="stats"><span>⭐ 39,727</span><span class="hot">🔥 今日 +508</span><span>🍴 2,144</span><span class="chip"><span class="dot" style="background:#f34b7d"></span>C++</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener">Donchitos/Claude-Code-Game-Studios</a></div><p class="summary">Turn Claude Code into a full game dev studio — 49 </p><div class="stats"><span>⭐ 33,150</span><span class="hot">🔥 今日 +1,380</span><span>🍴 4,486</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/FlashML-org/FreeToken" target="_blank" rel="noopener">FlashML-org/FreeToken</a></div><p class="summary">FreeToken brings datacenter-scale model serving to</p><div class="stats"><span>⭐ 15,850</span><span class="hot">🔥 今日 +654</span><span>🍴 1,576</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a></div><p class="summary">（暂无介绍）</p><div class="stats"><span>⭐ 40,536</span><span class="hot">🔥 今日 +3,216</span><span>🍴 9,029</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener">shiyu-coder/Kronos</a></div><p class="summary">Kronos: A Foundation Model for the Language of Fin</p><div class="stats"><span>⭐ 45,819</span><span class="hot">🔥 今日 +855</span><span>🍴 7,554</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/kornia/kornia" target="_blank" rel="noopener">kornia/kornia</a></div><p class="summary">🐍 Geometric Computer Vision Library for Spatial AI</p><div class="stats"><span>⭐ 12,033</span><span class="hot">🔥 今日 +412</span><span>🍴 1,484</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">JustVugg/colibri</a></div><p class="summary">Run frontier MoE models on hardware you already ow</p><div class="stats"><span>⭐ 46,277</span><span class="hot">🔥 今日 +655</span><span>🍴 5,347</span><span class="chip"><span class="dot" style="background:#555555"></span>C</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></div><p class="summary">Skills for Real Engineers. Straight from my .agent</p><div class="stats"><span>⭐ 309,887</span><span class="hot">🔥 今日 +970</span><span>🍴 26,072</span><span class="chip"><span class="dot" style="background:#89e051"></span>Shell</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/max-sixty/worktrunk" target="_blank" rel="noopener">max-sixty/worktrunk</a></div><p class="summary">Worktrunk is a CLI for Git worktree management, de</p><div class="stats"><span>⭐ 9,886</span><span class="hot">🔥 今日 +115</span><span>🍴 353</span><span class="chip"><span class="dot" style="background:#dea584"></span>Rust</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip</a></div><p class="summary">The open-source app everyone uses to manage agents</p><div class="stats"><span>⭐ 110,189</span><span class="hot">🔥 今日 +507</span><span>🍴 18,256</span><span class="chip"><span class="dot" style="background:#3178c6"></span>TypeScript</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">karpathy/nanochat</a></div><p class="summary">The best ChatGPT that $100 can buy.</p><div class="stats"><span>⭐ 59,700</span><span class="hot">🔥 今日 +325</span><span>🍴 8,395</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
+<div class="card"><div class="card-head"><a class="name" href="https://github.com/p-e-w/heretic" target="_blank" rel="noopener">p-e-w/heretic</a></div><p class="summary">Training-free language model modification: Remove </p><div class="stats"><span>⭐ 37,864</span><span class="hot">🔥 今日 +404</span><span>🍴 4,311</span><span class="chip"><span class="dot" style="background:#3572A5"></span>Python</span></div></div>
     </div>
   </section>
 </main>
