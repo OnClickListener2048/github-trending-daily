@@ -87,11 +87,9 @@ def main() -> None:
         details = [fallback_details(r) for r in repos]
     for repo, detail in zip(repos, details):
         repo["summary"] = detail["summary"]
-        repo["what"] = detail.get("what", "")
-        repo["tech"] = detail.get("tech", "")
+        repo["intro"] = detail.get("intro", "")
+        repo["features"] = detail.get("features", [])
         repo["audience"] = detail.get("audience", "")
-        repo["why_trending"] = detail.get("why_trending", "")
-        repo["highlights"] = detail.get("highlights", [])
 
     report = render_report(repos, date_str, cfg.get("pages_url", ""))
     html_page = render_html(

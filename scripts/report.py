@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""把 Trending 数据渲染成 Markdown 日报和 HTML 报告；逐个仓库调用 LLM 深度分析。
+"""把 Trending 数据渲染成 Markdown 日报和 HTML 报告；逐个仓库调用 LLM 生成详细介绍。
 
 每个仓库单独调用一次 LLM，输入为仓库元数据 + README 原文（截断），输出：
-{"summary": "一句话定位", "what": "是什么/解决什么痛点", "tech": "技术方案",
- "highlights": ["亮点"], "audience": "适合谁", "why_trending": "为什么火"}
+{"summary": "一句话定位", "intro": "详细介绍", "features": ["核心功能"],
+ "audience": "适合谁"}
+
+要求是「介绍」而非技术分析：不写底层实现细节，不做数据归因。
 
 支持两种 provider（config.json 的 ai.provider 切换）：
 - deepseek（默认）及任何 OpenAI 兼容接口：直接 HTTP 调用，base_url 可配
@@ -19,10 +21,11 @@ from concurrent.futures import ThreadPoolExecutor
 import anthropic
 import requests
 
-ANALYSIS_SYSTEM_PROMPT = (
-    "你是一名资深技术分析师，为 GitHub Trending 仓库撰写个性化深度分析。"
-    "必须基于给定的 README 内容和数据给出具体、有洞察的判断，禁止套话空话"
-    "（如「为开发者提供强大能力」「提升开发效率」这类泛泛之谈）。"
+INTRODUCTION_SYSTEM_PROMPT = (
+    "你是 GitHub 开源项目的技术编辑。根据 README 内容，为仓库写一份面向开发者的详细项目介绍。"
+    "风格要求：像朋友介绍一个好项目一样，讲清楚它是什么、解决什么问题、有哪些核心功能、适合谁。"
+    "必须基于 README 的实际内容，写得具体、有信息量；禁止空话套话。"
+    "不要罗列底层技术实现细节（除非是项目的关键卖点），不要做 star 数据归因分析。"
     "只输出一个 JSON 对象，不要输出任何其他文字。"
 )
 
@@ -37,19 +40,17 @@ LANGUAGE_COLORS = {
 }
 
 
-def _analysis_user_prompt(repo: dict, readme: str) -> str:
+def _introduction_user_prompt(repo: dict, readme: str) -> str:
     return (
         f"仓库：{repo['full_name']}\n"
         f"语言：{repo['language'] or '未知'}\n"
-        f"总 Star：{repo['stars']:,}，今日新增：+{repo['stars_today']:,}，Fork：{repo['forks']:,}\n"
+        f"总 Star：{repo['stars']:,}，Fork：{repo['forks']:,}\n"
         f"官方描述：{repo['description'][:300] or '（无）'}\n"
         f"README 内容（截断）：\n{readme or '（未获取到）'}\n\n"
         '输出 JSON：{"summary": "一句话定位，20~40字", '
-        '"what": "它是什么、解决什么痛点，40~80字", '
-        '"tech": "核心技术方案或架构亮点，40~80字", '
-        '"highlights": ["亮点1", "亮点2", "亮点3"], '
-        '"audience": "适合谁使用，20~40字", '
-        '"why_trending": "结合今日新增数据，分析它为什么火，30~60字"}'
+        '"intro": "详细介绍：它是什么、解决什么问题、怎么用，100~200字", '
+        '"features": ["核心功能1", "核心功能2", "核心功能3", "核心功能4", "核心功能5", "核心功能6"], '
+        '"audience": "适合谁使用，20~40字（不确定就输出空字符串）"}'
     )
 
 
@@ -58,7 +59,7 @@ def _anthropic_chat(user_prompt: str, api_key: str, model: str) -> str:
     response = client.messages.create(
         model=model,
         max_tokens=2000,
-        system=ANALYSIS_SYSTEM_PROMPT,
+        system=INTRODUCTION_SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
     return "".join(block.text for block in response.content if block.type == "text")
@@ -74,7 +75,7 @@ def _openai_compatible_chat(user_prompt: str, api_key: str, model: str, base_url
             "temperature": 0.3,
             "max_tokens": 2000,
             "messages": [
-                {"role": "system", "content": ANALYSIS_SYSTEM_PROMPT},
+                {"role": "system", "content": INTRODUCTION_SYSTEM_PROMPT},
                 {"role": "user", "content": user_prompt},
             ],
         },
@@ -87,23 +88,21 @@ def _openai_compatible_chat(user_prompt: str, api_key: str, model: str, base_url
 def fallback_details(repo: dict) -> dict:
     """AI 不可用时的兜底内容。"""
     return {
-        "summary": (repo["description"][:50] or "（暂无介绍）"),
-        "what": "",
-        "tech": "",
-        "highlights": [],
+        "summary": repo["description"][:50] or "（暂无介绍）",
+        "intro": repo["description"] or "",
+        "features": [],
         "audience": "",
-        "why_trending": "",
     }
 
 
 def analyze_repo(repo: dict, cfg: dict) -> dict:
-    """对单个仓库做一次独立的深度分析；失败时抛异常由调用方回退。"""
+    """对单个仓库生成一次独立的详细介绍；失败时抛异常由调用方回退。"""
     api_key = os.environ.get(cfg.get("api_key_env", "DEEPSEEK_API_KEY"))
     if not api_key:
         raise ValueError(f"未配置环境变量 {cfg.get('api_key_env', 'DEEPSEEK_API_KEY')}")
     model = cfg.get("model", "deepseek-flash")
     readme = (repo.get("readme") or "")[: int(cfg.get("readme_chars", 6000))]
-    user_prompt = _analysis_user_prompt(repo, readme)
+    user_prompt = _introduction_user_prompt(repo, readme)
 
     if cfg.get("provider", "deepseek") == "anthropic":
         text = _anthropic_chat(user_prompt, api_key, model)
@@ -121,29 +120,27 @@ def analyze_repo(repo: dict, cfg: dict) -> dict:
 
     result = {
         "summary": str(data.get("summary") or "").strip() or fallback_details(repo)["summary"],
-        "what": str(data.get("what") or "").strip(),
-        "tech": str(data.get("tech") or "").strip(),
+        "intro": str(data.get("intro") or "").strip() or repo["description"],
         "audience": str(data.get("audience") or "").strip(),
-        "why_trending": str(data.get("why_trending") or "").strip(),
     }
-    highlights = data.get("highlights")
-    result["highlights"] = (
-        [str(h).strip() for h in highlights if str(h).strip()][:3]
-        if isinstance(highlights, list)
+    features = data.get("features")
+    result["features"] = (
+        [str(f).strip() for f in features if str(f).strip()][:6]
+        if isinstance(features, list)
         else []
     )
     return result
 
 
 def analyze_all(repos: list[dict], cfg: dict) -> list[dict]:
-    """并发地对每个仓库做独立深度分析；单个失败不影响整体。"""
+    """并发地为每个仓库生成独立详细介绍；单个失败不影响整体。"""
     results: list[dict] = [fallback_details(r) for r in repos]
 
     def work(index: int) -> tuple[int, dict]:
         try:
             return index, analyze_repo(repos[index], cfg)
         except Exception as exc:  # 单个仓库失败回退
-            print(f"⚠️ {repos[index]['full_name']} 分析失败，已回退：{exc}")
+            print(f"⚠️ {repos[index]['full_name']} 介绍生成失败，已回退：{exc}")
             return index, fallback_details(repos[index])
 
     workers = int(cfg.get("workers", 5))
@@ -164,7 +161,7 @@ def render_report(repos: list[dict], date_str: str, pages_url: str = "") -> str:
     ]
     if pages_url:
         lines.append(f"> 🎨 [打开精美 HTML 报告]({pages_url})（推荐浏览器查看）")
-    lines += ["", "## 🏆 今日之星 TOP 5（深度解析）", ""]
+    lines += ["", "## 🏆 今日之星 TOP 5（详细介绍）", ""]
 
     for i, r in enumerate(top5, 1):
         lines.append(
@@ -173,17 +170,13 @@ def render_report(repos: list[dict], date_str: str, pages_url: str = "") -> str:
         lines.append("")
         lines.append(f"> {r['summary']}")
         lines.append("")
-        deep_rows = [
-            ("🎯 它是什么", r.get("what", "")),
-            ("⚙️ 技术方案", r.get("tech", "")),
-            ("👥 适合谁", r.get("audience", "")),
-            ("🔥 为什么火", r.get("why_trending", "")),
-        ]
-        for label, text in deep_rows:
-            if text:
-                lines.append(f"- **{label}**：{text}")
-        for h in r.get("highlights", []):
-            lines.append(f"- 💡 {h}")
+        if r.get("intro"):
+            lines.append(r["intro"])
+            lines.append("")
+        for feature in r.get("features", []):
+            lines.append(f"- ✨ {feature}")
+        if r.get("audience"):
+            lines.append(f"- 👥 适合谁：{r['audience']}")
         lines.append("")
         meta = []
         if r["language"]:
@@ -267,23 +260,12 @@ section h2 { font-size: 1.3rem; margin: 26px 0 14px; }
   -webkit-box-orient: vertical; overflow: hidden;
 }
 .card.featured .summary { -webkit-line-clamp: unset; }
-.deep {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
-  gap: 10px 16px;
-}
-.deep-item {
-  background: var(--panel); border: 1px solid var(--border);
-  border-radius: 8px; padding: 10px 12px;
-}
-.deep-item .label {
-  display: block; font-size: .78rem; font-weight: 700;
-  color: var(--muted); margin-bottom: 4px;
-}
-.deep-item p, .deep-item li { font-size: .86rem; }
-.hl { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.hl li { padding-left: 16px; position: relative; }
-.hl li::before { content: "▸"; position: absolute; left: 2px; color: var(--accent); }
+.intro { font-size: .92rem; }
+.card.featured .intro { font-size: .95rem; }
+.hl { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.hl li { font-size: .88rem; padding-left: 18px; position: relative; }
+.hl li::before { content: "✨"; position: absolute; left: 0; }
+.audience { font-size: .86rem; color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   background: var(--accent-soft); color: var(--accent);
@@ -293,11 +275,11 @@ section h2 { font-size: 1.3rem; margin: 26px 0 14px; }
   display: inline-block; width: 8px; height: 8px;
   border-radius: 50%; margin-right: 5px;
 }
-details.deep-toggle { font-size: .88rem; }
-details.deep-toggle summary {
+details.intro-toggle { font-size: .88rem; }
+details.intro-toggle summary {
   cursor: pointer; color: var(--accent); font-weight: 600; user-select: none;
 }
-details.deep-toggle .deep { margin-top: 10px; }
+details.intro-toggle > *:not(summary) { margin-top: 8px; }
 .stats {
   display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
   margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border);
@@ -308,34 +290,26 @@ footer { text-align: center; padding: 26px 20px 46px; color: var(--muted); font-
 """
 
 
-def _deep_html(r: dict) -> str:
-    """深度分析区（featured 内联展示，普通卡片折叠展示）。"""
-    items = []
-    highlights = "".join(f"<li>{html.escape(h)}</li>" for h in r.get("highlights", []))
-    if highlights:
-        items.append(
-            f'<div class="deep-item"><span class="label">💡 亮点</span>'
-            f'<ul class="hl">{highlights}</ul></div>'
+def _intro_html(r: dict) -> str:
+    """详细介绍区（featured 内联展示，普通卡片折叠展示）。"""
+    parts = []
+    if r.get("intro"):
+        parts.append(f'<p class="intro">{html.escape(r["intro"])}</p>')
+    features = r.get("features", [])
+    if features:
+        items = "".join(f"<li>{html.escape(f)}</li>" for f in features)
+        parts.append(f'<ul class="hl">{items}</ul>')
+    if r.get("audience"):
+        parts.append(
+            f'<p class="audience">👥 适合谁：{html.escape(r["audience"])}</p>'
         )
-    for label, key in [
-        ("🎯 它是什么", "what"),
-        ("⚙️ 技术方案", "tech"),
-        ("👥 适合谁", "audience"),
-        ("🔥 为什么火", "why_trending"),
-    ]:
-        text = r.get(key, "")
-        if text:
-            items.append(
-                f'<div class="deep-item"><span class="label">{label}</span>'
-                f"<p>{html.escape(text)}</p></div>"
-            )
-    return f'<div class="deep">{"".join(items)}</div>' if items else ""
+    return "".join(parts)
 
 
 def _card_html(r: dict, i: int, featured: bool) -> str:
     name = html.escape(r["full_name"])
     summary = html.escape(r["summary"])
-    deep = _deep_html(r)
+    intro_html = _intro_html(r)
     topics = "".join(
         f'<span class="chip">{html.escape(t)}</span>' for t in r.get("topics", [])[:4]
     )
@@ -367,12 +341,14 @@ def _card_html(r: dict, i: int, featured: bool) -> str:
     chips_html = f'<div class="chips">{topics}</div>' if topics else ""
     body = f'<p class="summary">{summary}</p>'
     if featured:
-        body += deep
-        body += chips_html
+        body += intro_html + chips_html
     else:
         body += chips_html
-        if deep:
-            body += f'<details class="deep-toggle"><summary>🔍 深度分析</summary>{deep}</details>'
+        if intro_html:
+            body += (
+                f'<details class="intro-toggle"><summary>📖 详细介绍</summary>'
+                f"{intro_html}</details>"
+            )
     return f'<div class="{cls}">{head}{body}{stats}</div>'
 
 
@@ -413,13 +389,13 @@ def render_html(
 </header>
 <main>
   <section>
-    <h2>🏆 今日之星 TOP 5（深度解析）</h2>
+    <h2>🏆 今日之星 TOP 5（详细介绍）</h2>
     <div class="grid top5">
 {top5_html}
     </div>
   </section>
   <section>
-    <h2>📋 完整榜单（点开卡片查看深度分析）</h2>
+    <h2>📋 完整榜单（点开卡片查看详细介绍）</h2>
     <div class="grid">
 {all_html}
     </div>
