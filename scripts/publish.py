@@ -93,9 +93,11 @@ def post_mentions(
     report: str,
     users: list[str],
     chunk_size: int,
+    pages_url: str = "",
 ) -> int:
     """分批评论 @ 用户；每批评论正文带上完整榜单，保证邮件里能看到内容。"""
     issue_url = f"https://github.com/{owner}/{repo}/issues/{issue_number}"
+    pages_line = f"🎨 精美 HTML 报告：{pages_url}\n" if pages_url else ""
     count = 0
     for i in range(0, len(users), chunk_size):
         chunk = users[i : i + chunk_size]
@@ -105,7 +107,8 @@ def post_mentions(
             f"---\n"
             f"不想再收？取消 Star，或把你的用户名加进 `data/opt_out.json` 提个 PR，"
             f"或在 GitHub 通知设置里关闭提及通知。\n"
-            f"完整榜单：{issue_url}"
+            f"完整榜单：{issue_url}\n"
+            f"{pages_line}"
         )
         session.post(
             f"{API_BASE}/repos/{owner}/{repo}/issues/{issue_number}/comments",
@@ -152,6 +155,13 @@ def publish(report: str, date_str: str, cfg: dict) -> None:
         print("还没有 stargazer，跳过 @ 提醒")
         return
     comment_count = post_mentions(
-        session, owner, repo, issue_number, report, users, int(mentions.get("chunk_size", 10))
+        session,
+        owner,
+        repo,
+        issue_number,
+        report,
+        users,
+        int(mentions.get("chunk_size", 10)),
+        cfg.get("pages_url", ""),
     )
     print(f"✅ 已通过 {comment_count} 条评论 @ 提及 {len(users)} 位 stargazer（邮件已触发）")

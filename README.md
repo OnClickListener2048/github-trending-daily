@@ -9,7 +9,7 @@
 
 1. **Star 本仓库** ⭐
 2. 保持 GitHub 邮件通知开启（默认就是开的，不用动）
-3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件，正文就是今日 Trending
+3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 TOP 5 详细解析（每个仓库"是什么 + 能干什么"）+ 📋 完整榜单，并附精美 HTML 报告链接
 
 > 原理：每天自动创建一个 Issue 并 @ 你的用户名，GitHub 会把提及通知默认发送到你的邮箱。不需要填邮箱、不需要注册，**Star 即订阅**。全程使用 GitHub 官方机制，不收集任何个人信息。
 
@@ -98,6 +98,12 @@
 
 <!-- TRENDING:END -->
 
+## 🎨 HTML 报告
+
+每天同步生成一个卡片式样式的精美报告页（深色模式自适应），托管在 GitHub Pages：
+
+👉 **[打开 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)**
+
 ## 📚 历史日报
 
 - 每天的报告存档在 [`data/daily/`](data/daily/)
@@ -110,6 +116,8 @@
 | `languages` | 只看某些语言，如 `["python", "go", "rust"]`；`[]` 表示全部语言 |
 | `since` | `daily` / `weekly` / `monthly` |
 | `limit` | 榜单数量（默认 25） |
+| `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
+| `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
 | `mentions.chunk_size` | 每条评论 @ 的人数（默认 10，分批 @ 降低被判定骚扰的风险） |
 | `ai.enabled` | 是否用 AI 生成一句话中文简介（需在仓库 Secrets 配置对应 Key） |
@@ -128,6 +136,9 @@ GitHub 不提供 stargazer 的邮箱，本项目每天读取 star 名单并在 I
 
 **人多了会被限流吗？**
 @ 提及走的是 GitHub 官方通知机制。本项目已做分批 @（每条评论 10 人）和限速保护。如果 star 数量很大（数千人）被 GitHub 处置，可关闭 `mentions` 改纯 Issue 模式。
+
+**为什么邮件里没有自定义样式？**
+GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以邮件内容用 GitHub 支持的排版元素（标题、表格、列表）呈现，需要精美样式时点邮件里的链接打开 HTML 报告页即可。
 
 **数据来源可靠吗？**
 数据来自 [github.com/trending](https://github.com/trending) 官方页面（GitHub 没有 trending API，本项目解析其页面）。偶发反爬失败时当天会跳过，第二天自动重试。

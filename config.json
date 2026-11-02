@@ -2,6 +2,8 @@
   "languages": [],
   "since": "daily",
   "limit": 25,
+  "pages_url": "https://onclicklistener2048.github.io/github-trending-daily/",
+  "repo_url": "https://github.com/OnClickListener2048/github-trending-daily",
   "mentions": {
     "enabled": true,
     "chunk_size": 10,
