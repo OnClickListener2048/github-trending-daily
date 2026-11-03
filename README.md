@@ -17,192 +17,192 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-02
+# 🔥 GitHub 每日 Trending · 2026-11-03
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 15 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日之星 TOP 10（详细介绍）
 
-### 1. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 40,580（今日 +3,216）
+### 1. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 42,540（今日 +3,229）
 
-> 一个统一控制本机多种 AI 编码代理的开源控制台，手机和桌面都能用。
+> T3 Code 是一个本地 AI 编程代理的统一控制台，支持手机、网页和桌面多端远程操作。
 
-T3 Code 是一个“agent harness 控制台”：它本身不提供模型，而是接管你电脑上已经装好并登录的编码代理，包括 Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity 和 fx，让你用一个界面调度它们。它解决的问题是：这些代理各有一套命令行和窗口，分散在本地，出门在外就没法用。T3 Code 把服务器跑在你的机器上，再用 iOS、Android、网页或 Electron 桌面端连过去，从而在手机上继续操作。安装只需一行脚本，运行 t3 即可启动服务。项目完全免费开源，官方表示若方向跑偏，你可以直接 fork 出自己想要的编辑器。
+T3 Code 把自己定位为 "agent harness control surface"（代理框架控制界面）：它本身不是模型，也不卖服务，而是在你电脑上启动一个本地服务，接管你已经安装并登录的 AI 编程代理，包括 Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity 和 fx。你可以继续使用已有的订阅，用 iOS、Android、网页或 Electron 桌面端来驱动这些代理，并且可以远程从手机或另一台机器接入。作者称灵感来自 Codex 桌面版、Conductor、Claude Desktop、Cursor Glass，但认为它们都不够好，于是自己做了个性能好、可远程操作、真正开源、随时可 fork 的版本。安装方式灵活：一条 curl 命令安装 CLI（Windows 为 PowerShell），也可以 npx 直接试用；桌面端覆盖 winget、scoop、Homebrew、deb、AUR、Nix。项目仍处于早期，作者提醒会有 bug，而且基本不接受大型贡献。
 
-- ✨ 多代理统一接管：只要是本机已安装并登录的 Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity、fx，都能被它控制
-- ✨ 远程优先：手机 App、网页端和桌面端都能连接本机服务，在外面也能继续跑代理任务
-- ✨ 四种客户端形态：iOS、Android、Web（app.t3.codes）和 Electron 桌面应用，安装方式覆盖 curl 脚本、winget、scoop、Homebrew、.deb、AUR、Nix
-- ✨ 命令行工具 t3：一条命令起服务并打开本地 Web 应用，t3 service install 可常驻后台，t3 update 负责升级
-- ✨ 权限模式、快捷键、项目设置与外观偏好都可配置，另有源码管理集成和多账号支持（如 Codex、Claude 多账户）
-- ✨ 可通过 MCP 让 Claude Code、ChatGPT 等外部代理接入，文档齐全（docs/ 下有安装、远程访问、后台服务等指南）
-- 👥 适合谁：日常用多个 AI 编码代理、想统一管理并希望在手机上远程操作的开发者。
+- ✨ 统一接管本机已登录的多种 AI 编程代理：Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity、fx
+- ✨ 多端接入：iOS、Android 移动应用，网页应用，以及基于 Electron 的桌面应用
+- ✨ 远程访问：可从手机或另一台机器控制运行在家用电脑上的代理
+- ✨ CLI 工具 t3：一键启动服务并打开本地 Web 应用，支持 service install 后台常驻和 t3 update 升级
+- ✨ 覆盖主流包管理器的桌面端分发：winget、scoop、Homebrew、.deb、AUR（含 nightly 频道）、nixpkgs
+- ✨ 支持多账号，例如 Claude 与 Codex 可分别配置多套账号；还可通过 MCP 把 T3 Code 接入其他外部代理
+- 👥 适合谁：已经在用 Claude Code、Codex 等 AI 编程代理，希望多端和远程操控、又重视开源的开发者。
 
-`TypeScript` · Fork 9,032 · 🔗 [官网](https://t3.codes)
+`TypeScript` · Fork 9,136 · 🔗 [官网](https://t3.codes)
 
-### 2. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 8,497（今日 +2,243）
+### 2. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 10,833（今日 +2,275）
 
-> 基于操作系统无障碍树的桌面 Agent 工具，让 AI 稳定读取并操作任意桌面应用。
+> 让 AI agent 通过操作系统无障碍树观察并操作桌面应用的命令行工具
 
-agent-desktop 是 Vercel Labs 出品的 CLI 与 C 库，让 AI Agent 真正"用"电脑：它不靠截图猜像素，而是通过 macOS、Windows、Linux 的系统无障碍树读取应用真实的 UI 结构。每次 snapshot 返回一个 JSON，为每个可操作元素分配 ref；Agent 对 ref 执行 click 等动作，再 snapshot 一次验证结果，这个"观察—操作—再观察"的循环留在你自己的 Agent 里。它默认无头运行，不移动鼠标、不抢焦点，每个命令输出统一的 ok/error 信封，出错时给出 code、disposition 和 suggestion，告诉你能不能在 safe 的情况下重试。
+agent-desktop 是 Vercel Labs 推出的 CLI 与 C 库，支持 macOS、Windows 和 Linux。它不借助像素匹配或模拟鼠标键盘，而是通过操作系统无障碍树给桌面应用做快照，为每个可操作元素生成 ref；agent 对 ref 执行点击、输入、滚动等动作后，再次快照进行校验，整个循环留在你自己的 agent 里。默认无头执行，不抢占焦点也不移动指针。用 npm 全局安装即可，每条命令都输出统一的 JSON envelope。
 
-- ✨ snapshot 输出带 ref 的 UI 树，元素粒度可操作，无需像素匹配
-- ✨ ref 严格绑定所属快照：裸 @e8 直接拒绝，UI 变化时返回 STALE_REF 或 AMBIGUOUS_TARGET 强制重新观察
-- ✨ 默认无头执行，通过无障碍 API 操作，不移动指针不抢焦点；--headed 才允许物理输入
-- ✨ 多窗口冲突时在错误里返回候选 window id，用 --window-id 指定；密集应用可先 --skeleton 看骨架再用 --root 钻取局部
-- ✨ 跨 macOS、Windows、Linux 的 npm 安装，附带 x64/ARM64 原生二进制与平台辅助程序；macOS 通过私有命令宿主保留原生无障碍对象，避免已删除的行错误匹配到同名存活行
-- ✨ 为 Agent 自带版本匹配的文档：skills get desktop / platform 讲解循环、ref、验证与重试规则，可一键装进 agent harness
-- 👥 适合谁：做 computer-use Agent 的开发者，需要在桌面应用上稳定自动化与可验证重试的团队。
+- ✨ 快照返回完整的 JSON 元素树，每个可交互元素带 ref、角色、名称和可用动作列表
+- ✨ 提供 60 个命令名、56 个可用操作，覆盖观察、ref 操作、键盘鼠标三类场景
+- ✨ ref 严格绑定所属快照，UI 变化时返回 STALE_REF 或 AMBIGUOUS_TARGET，强制重新快照而不是盲目重试
+- ✨ 默认无头执行，通过无障碍 API 完成操作，不移动指针也不抢焦点；只有加 --headed 才允许物理输入
+- ✨ 二进制内置与版本匹配的技能文档，skills get desktop 和 skills get platform 让 agent 自己学会循环、校验、重试规则与平台差异
+- ✨ 面向元素密集的应用支持先用 skeleton 加 compact 做骨架映射，再用 --root 钻取单个区域，避免一次拉取过大的树
+- 👥 适合谁：做桌面端 computer use 的 AI agent 开发者，以及需要在 macOS、Windows、Linux 上构建 GUI 自动化流程的工程师。
 
-`Rust` · Fork 594 · 🔗 [官网](https://agent-browser.dev/desktop)
+`Rust` · Fork 724 · 🔗 [官网](https://agent-browser.dev/desktop)
 
-### 3. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 110,383（今日 +1,799）
+### 3. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 111,060（今日 +1,803）
 
-> 为 AI 编程助手打造跨会话持久记忆的压缩系统，自动捕捉、压缩并在后续会话注入上下文。
+> 为 AI 编程 Agent 提供跨会话持久记忆：自动记录会话过程，用 AI 压缩成摘要，并在未来的会话中回注相关上下文。
 
-claude-mem 是一个面向 AI 编程 Agent 的持久记忆与上下文压缩系统，最初为 Claude Code 打造，现在也支持 OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等多种 Agent。它要解决的是 Agent 的“失忆”问题：会话一结束，之前读过的代码、做过的决策和排查过程就全没了，下次还得从头讲一遍。claude-mem 会在会话过程中自动记录 Agent 的工具调用与操作观察，用 AI 生成语义摘要压缩存储，并在之后的会话里把相关上下文重新注入。安装方式很简单，通过 npx claude-mem install --ide <你的 IDE 或 Agent> 就能接入，还配套 MCP 搜索工具，方便按需检索历史记忆。
+claude-mem 是一个面向开发者、用于 AI 编程 Agent 的持久记忆压缩系统，最初为 Claude Code 打造，同时兼容 Codex、Gemini、Copilot、OpenCode、Grok Bot 等多家 Agent。它解决的是每个开发者都遇到的痛点：会话一结束，Agent 对项目的了解就归零，下次还得重新解释架构、约定和上次改到哪。装上之后，它会在后台自动捕获 Agent 在会话中做了哪些事，包括工具调用等；再用 AI 把这些原始记录压缩成语义摘要存起来；新会话开始时，它会把与当前任务相关的记忆重新注入上下文。安装很轻量，一条 npx claude-mem install --ide <你的 IDE/Agent> 即可，针对没有 host hooks 的环境（如 Grok Bot）也做了适配。
 
-- ✨ 自动捕捉会话中 Agent 的工具调用与操作观察，无需手动记录
-- ✨ 用 AI 将原始操作压缩成语义摘要，控制上下文体积
-- ✨ 在后续会话中自动注入相关历史上下文，保持项目知识连续性
-- ✨ 提供 MCP 搜索工具，可按需检索过往会话记忆
-- ✨ 支持 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等多种 Agent
-- ✨ 通过 npx claude-mem install --ide <name> 一键接入，并提供配置项与故障排查文档
-- 👥 适合谁：长期用 AI 编程 Agent 做项目的开发者，尤其是受困于会话间上下文丢失的人。
+- ✨ 跨会话持久记忆：会话结束后仍保留对项目的认知，新会话不用从头交代背景
+- ✨ 自动捕获会话行为：记录 Agent 在会话中的工具使用与操作轨迹，无需手动写笔记
+- ✨ AI 语义压缩：把冗长的原始操作记录压缩成精炼摘要，控制上下文开销
+- ✨ 上下文智能回注：在新会话中自动挑选并注入与当前任务相关的历史记忆
+- ✨ 多 Agent 兼容：支持 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等
+- ✨ MCP 搜索工具：提供搜索接口，让 Agent 主动检索过往记忆
+- 👥 适合谁：长期用 AI 编程 Agent 做同一项目、苦于每次会话都要重新交代背景的开发者
 
-`TypeScript` · Fork 9,632 · 🔗 [官网](https://claude-mem.ai)
+`TypeScript` · Fork 9,680 · 🔗 [官网](https://claude-mem.ai)
 
-### 4. [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) — ⭐ 33,165（今日 +1,380）
+### 4. [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) — ⭐ 33,898（今日 +1,379）
 
-> 把单次 Claude Code 会话变成完整游戏工作室：49 个智能体、74 个技能协同作战。
+> 把单次 Claude Code 会话变成 49 个 AI 角色组成的完整游戏工作室
 
-Claude Code Game Studios 是一套为 Claude Code 准备的游戏开发配置模板。它解决一个人用 AI 做游戏时缺少结构的问题：没有设计评审、没有质量检查，容易硬编码、跳过设计文档、写出难以维护的代码。项目按真实工作室的层级组织 49 个专业子代理，分为总监、部门主管、专员三个层级，覆盖设计、编程、美术、音频、叙事、QA 和制作；再配合 74 个斜杠命令，把从创意脑暴、系统设计、架构决策、史诗与故事拆分、逐故事开发到上线发布的整个流程串起来。此外，15 个 hook 在提交、推送、资产变更、文档读写等环节自动校验，14 条按路径生效的规则约束玩法、引擎、AI、UI、网络等代码的写法，62 个文档模板可直接用于 GDD、UX 规格、ADR、冲刺计划等。模板同时内置 Godot 4、Unity、Unreal Engine 5 三套引擎专家代理，按项目选用即可。最终决策权仍在你手里，但每一步都有“团队”帮你提问、纠错并保持项目有序。
+这是一个面向 Claude Code 的开源配置模板，包含 49 个 AI 子代理、74 个斜杠命令技能、15 个自动化钩子、14 条按路径生效的编码规则和 62 份文档模板。它解决的核心问题是：单靠一个通用 AI 助手做游戏，没有设计评审、没有 QA、没人拦你写魔法数字和意大利面代码。装好后，你的会话会被拆成导演、部门主管、专家三层工作室架构，每个角色有明确职责和质量关卡；通过 /start、/design-system、/create-epics、/dev-story 等命令覆盖从头脑风暴到上线的完整流程。最终决策权仍在你手里，但会有人替你问对问题、提早发现错误。
 
-- ✨ 49 个专业子代理，按总监、部门主管、专员三层工作室架构组织，职责与升级路径明确
-- ✨ 74 个斜杠命令贯穿全流程：/start、/brainstorm、/design-system、/create-epics、/create-stories、/dev-story、/story-done、/sprint-plan 等
-- ✨ 15 个自动化 hook，在提交、推送、资产变更、设计文档读写和会话生命周期等环节做校验与审计
-- ✨ 14 条按路径生效的编码规则，在编辑玩法、引擎、AI、UI、网络代码及场景资产时自动约束
-- ✨ 62 个文档模板，覆盖 GDD、UX 规格、ADR、冲刺计划、HUD 设计、无障碍设计等
-- ✨ 内置 Godot 4、Unity、Unreal Engine 5 三套引擎专家代理，含 GDScript/着色器、DOTS/ECS、GAS/蓝图/网络同步等子专家
-- 👥 适合谁：适合用 Claude Code 独立或小团队做游戏的开发者，尤其是需要设计评审与流程约束的独立游戏作者。
+- ✨ 49 个专用子代理，分导演、部门主管、专家三层，覆盖设计、程序、美术、音频、叙事、QA、制作
+- ✨ 74 个斜杠命令技能，贯穿 /start 上手、系统设计、Epics/Stories 拆分、开发与验收全流程
+- ✨ Godot 4、Unity、Unreal Engine 5 三套引擎专属代理，各含 GDScript/着色器/GAS 等子专家
+- ✨ 15 个自动化钩子，在提交、推送、资产变更、文档读写、会话生命周期等节点做校验
+- ✨ 14 条路径作用域编码规则，编辑玩法、引擎、AI、UI、网络、场景与资产文件时自动生效
+- ✨ 62 份文档模板，含 GDD、UX 规格、ADR、冲刺计划、HUD 设计、无障碍等
+- 👥 适合谁：用 Claude Code 独立开发或小团队做游戏的开发者，希望借助流程约束提升项目质量
 
-`Shell` · Fork 4,487
+`Shell` · Fork 4,543
 
-### 5. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 309,902（今日 +970）
+### 5. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 310,533（今日 +858）
 
-> Matt Pocock 每天自用的 AI 编码代理技能集，小而可组合，跨模型通用。
+> 一套小而可组合的 AI 编码代理技能集，帮助开发者做真正的工程实践。
 
-这是 Matt Pocock 从自己 .agents 目录里整理出来的代理技能（skills）集合，用来做真正的工程开发，而不是凭感觉写代码（vibe coding）。它针对 GSD、BMAD、Spec-Kit 这类“接管整个流程”的方案：那些方案虽然帮你管理流程，却拿走了控制权，一旦流程本身出错就很难排查。这里的每个技能都很小、容易改、可以自由组合，能和任意模型配合，你可以直接改动并变成自己的东西。安装只需一条命令（Claude Code、Codex、Copilot、Gemini CLI 等各有对应方式），然后在仓库里跑一次 /setup-matt-pocock-skills，告诉它你用哪个 issue tracker、分诊时打什么标签、文档存哪里，就可以开始用了。
+这是 Matt Pocock 从自己 .agents 目录里整理出来的日常 AI 编码技能集合。它针对的痛点很明确：现有的 GSD、BMAD、Spec-Kit 等方案替你把整个流程管起来，代价是失去控制权，流程本身出问题还很难排查。这些技能则刻意做小、易改、可组合，不绑定具体模型，每个技能对应一种常见失效模式的修法，比如开工前先用“拷问”让代理把需求问清楚，或先建立共享术语表让代理少说废话。安装方式按代理区分：Claude Code、Codex、GitHub Copilot 走插件自动更新，Gemini CLI 和其他代理可手动安装或通过 npx skills 拉取可编辑文件；装完先在仓库里跑一次 /setup-matt-pocock-skills 配置好 issue tracker、标签和文档位置即可使用。
 
-- ✨ /grill-me 与 /grill-with-docs：开工前让代理反过来逐条追问你的需求，把沟通偏差在写代码之前解决掉
-- ✨ 共享语言与术语表：给项目建立一份词汇表，让代理不再用 20 个词说清 1 个词就能说清的事
-- ✨ /setup-matt-pocock-skills：每个仓库跑一次，配置 issue tracker（GitHub、GitLab、本地文件或自定义）、分诊标签和文档存放位置
-- ✨ 支持主流编码代理：Claude Code、Codex、GitHub Copilot（CLI 与 VS Code）、Gemini CLI，以及 cursor、opencode、windsurf 等其他代理
-- ✨ 两种更新方式可选：插件市场自动更新，或用 skills.sh / npx skills 把可编辑文件复制进项目手动维护
-- ✨ 刻意保持小而可组合：不接管你的开发流程，任何模型都能用，改坏了也不难修
-- 👥 适合谁：使用 Claude Code、Codex 等编码代理做真实项目、希望保留流程控制权的开发者。
+- ✨ /grill-me 与 /grill-with-docs：开工前由代理反向提问、深挖需求，解决“代理没做我想要的”这一最常见错位问题
+- ✨ 共享语言（术语表）机制：用一份文档帮代理解读项目行话，减少啰嗦表达和理解偏差
+- ✨ 按代理区分的安装路径：Claude Code、Codex、GitHub Copilot 支持插件自动更新，Gemini CLI 等走手动或 npx 安装
+- ✨ /setup-matt-pocock-skills 一次性初始化：选择 issue tracker（GitHub、GitLab、本地文件或自定义）、配置 triage 标签、指定文档存放位置
+- ✨ /triage 等面向真实工程流程的技能，覆盖分诊、文档等日常环节
+- ✨ 技能刻意保持小体积、易改造、可自由组合，不锁定模型，鼓励使用者改成自己的版本
+- 👥 适合谁：使用 Claude Code、Codex、Copilot 等编码代理，想要可控、可改造工作流的开发者。
 
-`Shell` · Fork 26,073 · 🔗 [官网](https://aihero.dev/skills)
+`Shell` · Fork 26,122 · 🔗 [官网](https://aihero.dev/skills)
 
-### 6. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 92,406（今日 +858）
+### 6. [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ⭐ 46,119（今日 +857）
 
-> 一个 Python 库即可完成从单次请求到全站爬取的完整 Web 抓取流程
+> 首个开源金融K线基础模型，在45+全球交易所数据上预训练，提供预测与微调能力。
 
-Scrapling 是一个把快速 HTTP 请求、隐身浏览器、强大的页面解析与并发爬取整合进同一个库的 Python 爬虫框架。它解决的核心问题是：爬虫开发者常常需要分别维护请求库、浏览器自动化、解析器、代理池和导出逻辑，而 Scrapling 把这些环节统一到同一套 API 下。它能抓取静态页面、渲染 JavaScript、模拟用户与网站交互，还能直接提取页面背后 API 调用返回的数据。使用方式很灵活：可以在 Python 代码里调用，也能在终端用 CLI 运行，还能让 AI Agent 通过 MCP server 和 Agent Skill 来驱动。
+Kronos 是一个专门为金融市场「语言」——K线序列——打造的开源基础模型系列，采用 decoder-only 架构，在超过 45 个全球交易所的数据上预训练。它不像通用时间序列模型那样忽视金融数据的高噪声特性，而是用两阶段框架解决问题：先用专用 tokenizer 把连续的多维 OHLCV 数据量化成分层离散 token，再让自回归 Transformer 在这些 token 上预训练，从而用一个统一模型覆盖多种量化任务。使用上非常直接：从 Hugging Face 加载 tokenizer 与模型，实例化 KronosPredictor，它自动完成预处理、归一化、预测和反归一化，几行代码即可从原始行情得到预测结果。模型提供 mini、small、base 等多个规格，按算力和场景选择；官方还放出了微调脚本，方便适配自己的任务。
 
-- ✨ 统一抓取能力：支持 HTTP 请求与隐身浏览器，既能处理静态页面，也能渲染 JavaScript 并模拟交互
-- ✨ 页面解析与选择器：提供多种选择方法从 HTML 中精准提取字段，并能拿到页面背后 API 调用的数据
-- ✨ 完整爬虫架构：用可复用的 session 组织爬虫，支持并发爬取
-- ✨ 代理轮换与自动重试：内置代理轮换机制和失败自动重试，让抓取更稳定
-- ✨ 暂停与恢复：爬取任务可以中途暂停再继续，不必从头重跑
-- ✨ 内置数据导出：爬取结果可以直接导出，也能把整站内容整理成干净的 Markdown
-- 👥 适合谁：需要从单页提取数据到全站采集的 Python 开发者、数据工程师，以及想用 AI Agent 驱动抓取的人
+- ✨ 首个面向金融 K 线（OHLCV）的开源基础模型，预训练覆盖 45+ 全球交易所
+- ✨ 两阶段框架：专用 tokenizer 将多维 K 线量化为分层离散 token，再由自回归 Transformer 建模
+- ✨ KronosPredictor 一站式封装预处理、归一化、预测与反归一化，几行代码出结果
+- ✨ Model Zoo 提供多规格预训练权重：Kronos-mini（4.1M）、small（24.7M）、base（102.3M），均可从 Hugging Face 直接加载
+- ✨ 兼容不同上下文长度：mini 支持 2048，small/base 为 512，超长输入由 Predictor 自动截断
+- ✨ 提供微调脚本，可将模型适配到自定义量化任务
+- 👥 适合谁：量化研究员、金融时序建模开发者，以及想把基础模型用于行情预测的算法工程师。
 
-`Python` · Fork 9,748 · 🔗 [官网](https://scrapling.readthedocs.io/en/latest/)
+`Python` · Fork 7,600
 
-### 7. [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) — ⭐ 45,824（今日 +855）
+### 7. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 93,369（今日 +706）
 
-> 首个开源的金融K线基础模型，用45+交易所数据预训练，可直接预测行情。
+> 一个库覆盖从单次请求到大规模爬取的完整 Web 抓取流程
 
-Kronos 是第一个专门为金融K线（蜡烛图）打造的开源基础模型，用全球 45 个以上交易所的数据预训练而成，论文已被 AAAI 2026 接收。它解决的是通用时间序列模型在金融数据上「水土不服」的问题：金融数据噪声大、维度多，Kronos 先用专门的 tokenizer 把连续的 OHLCV 多维K线量化成分层离散 token，再用自回归 Transformer 在这些 token 上预训练，从而用一个模型统一支撑多种量化任务。使用上也很省心：从 Hugging Face 加载 tokenizer 和模型，套上 KronosPredictor，它自动完成预处理、归一化、预测和反归一化，几行代码就能从原始K线拿到未来走势预测。官方还提供了微调脚本，方便适配自己的任务。
+Scrapling 是一个 Python 爬虫框架，把快速 HTTP 请求、隐身浏览器、强大的解析选择和并发爬取放进同一个库里。它解决抓取流程分散的问题：静态页面、需要渲染 JavaScript 的页面、需要点击交互的站点，以及页面背后 API 调用返回的数据，都能在同一套接口里拿到。编写爬虫时，可以复用会话、轮换代理、自动重试、暂停与恢复，并直接导出数据；除了用 Python 编写，也能在终端使用 CLI，或交给 AI agent 通过 MCP server 和 Agent Skill 调用。
 
-- ✨ 首个面向金融K线的开源基础模型，预训练数据覆盖 45+ 家全球交易所
-- ✨ 两阶段框架：专用 tokenizer 将 OHLCV 多维K线量化为分层离散 token，再由自回归 Transformer 建模
-- ✨ KronosPredictor 一条龙封装：预处理、归一化、预测、反归一化全自动，几行代码出结果
-- ✨ 提供 Kronos-mini / small / base 三档开源模型（4.1M 到 102.3M 参数），按算力自由选择
-- ✨ 超过上下文长度自动截断，Kronos-mini 支持 2048、small/base 支持 512 的上下文
-- ✨ 官方发布微调脚本，可迁移到自己的预测任务；另有 BTC/USDT 未来 24 小时的在线 Demo 可直接看效果
-- 👥 适合谁：做量化研究和金融时序预测的开发者、算法交易团队，以及想把基础模型用到K线数据上的研究者。
+- ✨ 按场景切换 Fetcher：从轻量 HTTP 请求到能应对反爬的隐身浏览器
+- ✨ 既能处理静态页面和 JavaScript 渲染页面，也能与页面交互并抓取背后的 API 数据
+- ✨ 丰富的选择器解析能力，用于精准定位并提取结构化字段
+- ✨ 并发爬虫（Spiders）：复用会话、代理轮换、自动重试、暂停与恢复
+- ✨ 内置数据导出，整站抓取可直接产出干净的 Markdown
+- ✨ 三种入口：Python 库、命令行 CLI、通过 MCP server 或 Agent Skill 接入 AI agent
+- 👥 适合谁：需要抓取网页数据的 Python 开发者和数据工程师，以及希望用 AI agent 完成采集任务的团队
 
-`Python` · Fork 7,554
+`Python` · Fork 9,817 · 🔗 [官网](https://scrapling.readthedocs.io/en/latest/)
 
-### 8. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 46,282（今日 +655）
+### 8. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 46,764（今日 +675）
 
-> 纯 C 编写的轻量推理引擎，靠磁盘流式加载专家，在现有硬件上跑千亿级 MoE 大模型。
+> 纯 C 无依赖的推理引擎，让普通电脑也能跑起千亿级 MoE 大模型。
 
-colibri 是一个纯 C 实现、零依赖的推理引擎，专门用来在普通电脑上运行超大规模的开源 MoE 模型。它的思路是：MoE 模型每生成一个 token 只用到一小部分专家，所以把常驻部分留在内存、其余专家放在磁盘上按需读取。它内置 13 个引擎，覆盖 GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6、OLMoE 等十来种语言模型，外加文生图和决策模型，并可直接读取已发布的 GGUF 文件。使用门槛很低：装好脚本后自动检测机器、推荐能装下的模型、编译或下载预编译引擎、断点续传下载权重，最后启动浏览器面板，并暴露 OpenAI 与 Anthropic 兼容接口，已有应用改个 base URL 就能接上。
+colibri 是一个用纯 C 写的轻量推理引擎，目标是在你已有的硬件上运行前沿规模的 MoE 模型。MoE 模型处理每个 token 时只用到自身一小部分专家，colibri 就只把那部分常驻内存，其余专家按需从磁盘流式读取，因此数百亿到数千亿参数的模型也能在 8 GB 内存起步的机器上跑起来。它内置 13 个引擎，覆盖 GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6 等语言模型，以及图像和决策模型，直接读取现成的 GGUF 文件，CPU 可跑，也能通过 Vulkan、CUDA 用上显卡。安装只需运行 start-here.sh 或 START-HERE.bat：脚本会检测机器配置、推荐装得下的模型、编译或下载引擎、断点续传下载权重，最后启动服务并打开浏览器面板。
 
-- ✨ 专家流式加载：常驻内存的只留必要部分，其余专家从磁盘按需读取，744B MoE 模型实测常驻内存约 9.9 GB
-- ✨ 纯 C 实现、零第三方依赖，一个模型家族对应一个源文件，无需 GPU 也能跑
-- ✨ 13 个引擎开箱即用，含 GLM-5.2/5.3、Kimi K3、DeepSeek V4/V4.1 Flash、MiMo-V2.6、Qwen3.8-Flash-Next、Qwen3.6、OLMoE，以及 Qwen-Image-2.1 文生图与 Laya、GLiNER2.5-Decide、Clef 决策模型
-- ✨ 直接读取社区已发布的 GGUF 文件，不用转换、不用重新量化
-- ✨ 三种后端：CPU、Vulkan（跨厂商 GPU）、CUDA（NVIDIA），安装脚本会按硬件决定是否为 GPU 编译
-- ✨ 一键安装脚本 START-HERE.bat / start-here.sh：探测内存、磁盘、CPU 与 GPU，推荐装得下的模型，下载支持断点续传，下次启动无需重新构建
-- 👥 适合谁：想在消费级硬件上本地跑大 MoE 模型、又不想被 Python 框架和 GPU 显存卡住的开发者与自部署爱好者。
+- ✨ 专家流式加载：常驻内存的只有当前 token 需要的专家，其余从磁盘按需读取，README 示例中 744B 的 GLM-5.2 int4 常驻仅约 9.9 GB，32 秒内就绪
+- ✨ 13 个引擎覆盖十余款前沿模型：GLM-5.2/5.3（兼跑 Mistral-Large-4）、GLM-5.3-Flash、Inkling、Kimi K3、DeepSeek V4/V4.1 Flash、MiMo-V2.6 Flash/Pro、Qwen3.8-Flash-Next、Qwen3.6（兼跑 Qwen3-Coder、Qwen3.8-27B、Flint、Muse Spark Open、LFM3-VL）、OLMoE，另有图像模型 Qwen-Image-2.1 和决策模型 Laya、GLiNER2.5-Decide
+- ✨ 纯 C 实现、零依赖，每个模型家族一个文件，没有 GPU 也能运行；有显卡时可通过 Vulkan（跨平台）或 CUDA（NVIDIA）加速，脚本会判断值不值得为你的 GPU 编译
+- ✨ 直接读取社区已发布的 GGUF 文件，不需要转换或重新打包
+- ✨ 一步到位的安装脚本：自动探测内存、磁盘、CPU 和 GPU，推荐真正装得下的模型，缺编译器就用预编译版本，权重下载支持中断续传
+- ✨ 开箱即用的浏览器 dashboard，同时暴露 OpenAI（/v1）和 Anthropic 兼容的 API 地址，现有应用改个 base URL 就能接上；配套 coli status / coli stop 管理启停
+- 👥 适合谁：想在本地或私有硬件上跑大模型、但只有普通电脑的开发者、研究者与自建服务爱好者。
 
-`C` · Fork 5,349 · 🔗 [官网](https://justvugg.github.io/colibri)
+`C` · Fork 5,400 · 🔗 [官网](https://justvugg.github.io/colibri)
 
-### 9. [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — ⭐ 15,852（今日 +654）
+### 9. [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — ⭐ 16,282（今日 +653）
 
-> 把 290B+ 级 MoE 大模型跑在个人电脑上的边缘推理引擎
+> 把数据中心级的 MoE 推理搬到你自己的游戏本上，让 290B+ 大模型在本地以交互速度运行
 
-FreeToken 是一个面向个人和消费级硬件的 MoE 推理引擎，目标是把数据中心级的模型能力搬到你已经拥有的设备上：在游戏台式机、笔记本或工作站上，以可交互的速度运行 290B+ 参数的前沿开源 MoE 模型。它把 GPU、CPU、主机内存和互联带宽当成一个统一、弹性的推理平台，靠带宽自适应的 CPU–GPU 协同执行、全层双缓冲 prefill 流式加载和全局 LRU 专家缓存，解决显存装不下大模型的现实问题。用法上有 Windows/Linux 桌面应用（图形界面运行模型、聊天、调参），也可以用 uv 安装 CLI；对外提供 Anthropic/OpenAI 兼容 API，可直接接 Codex、Claude Code 这类编码智能体。
+FreeToken 是一个面向个人设备的边缘原生 MoE 推理引擎。它把 GPU、CPU、主机内存和互联带宽视为一个统一的弹性推理平台，让你能在游戏本、台式机或工作站上以交互级速度运行 290B+ 参数的前沿开源 MoE 模型，而不必把数据送到云端。使用方式有两种：下载 Windows/Linux 桌面应用，它自带 GUI，可聊天并调整参数；或者用 uv pip install "freetoken[accel]" 安装 CLI，也支持从源码构建。它对外提供 Anthropic/OpenAI 兼容 API，可以直接接入 Codex、Claude Code、OpenCode 等编码与工具调用 Agent。
 
-- ✨ 带宽自适应的 CPU–GPU 协同执行（q* 策略），配合全层双缓冲 prefill 流式加载和全局 LRU 专家缓存，在消费级硬件上跑到交互级速度
-- ✨ 语义感知缓存：用语义锚点保存 recurrent state 和 KV cache，工具调用、thinking 块等上下文编辑不必重算整段上下文
-- ✨ 弹性显存管理：运行时在专家缓存和 KV 内存之间动态重新分配显存，无需重启引擎或重新加载权重
-- ✨ 广泛的 MoE 与量化支持：覆盖 DeepSeek-V4-Flash、Qwen3.6-35B-A3B、GLM-5.2 等模型与 MXFP4/NVFP4/FP8/BF16 格式，并提供 FTW 快速权重格式
-- ✨ 提供 Anthropic/OpenAI 兼容 API，可无缝接入 Codex、Claude Code、OpenCode 等编码与工具调用智能体
-- ✨ 面向消费级硬件：覆盖笔记本、游戏台式机和工作站 GPU，原生支持 NVIDIA RTX 30/40/50 系，并有开箱即用的桌面 GUI 与 CLI 两种形态
-- 👥 适合谁：想在本地跑大模型、又不想添置数据中心显卡的开发者、Agent 玩家和研究者
+- ✨ 带宽自适应的 CPU–GPU 协同执行，根据硬件带宽动态分配计算，在消费级机器上实现交互级吞吐
+- ✨ 全层双缓冲的 prefill 流式加载、全局 LRU 专家缓存与图兼容执行，减少专家权重的重复搬运
+- ✨ FTW 快速权重格式，加快模型加载与复用，并配套旧检查点修复与加载诊断脚本
+- ✨ 语义感知缓存：用语义锚点 checkpoint 保存循环状态和 KV cache，当 Agent 修改上下文（工具调用、thinking 块）时避免重复计算
+- ✨ 弹性显存管理：运行时可把显存动态分配给专家缓存或 KV 内存，无需重启引擎或重新加载权重
+- ✨ 支持 DeepSeek-V4-Flash、Qwen3.6-35B-A3B、GLM-5.2 等前沿开源 MoE，覆盖 MXFP4/NVFP4/FP8/BF16 量化，并原生适配 RTX 30/40/50 系
+- 👥 适合谁：想在本地硬件上运行大模型的开发者、独立开发者和 AI Agent 重度用户，尤其是手上有 RTX 显卡的人
 
-`Python` · Fork 1,576 · 🔗 [官网](flashml.ai)
+`Python` · Fork 1,599 · 🔗 [官网](flashml.ai)
 
-### 10. [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) — ⭐ 39,729（今日 +508）
+### 10. [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) — ⭐ 40,085（今日 +509）
 
-> 独立的动态平铺 Wayland 合成器，兼顾颜值与深度可定制
+> 一个独立开发、高度可定制且外观出众的动态平铺 Wayland 合成器。
 
-Hyprland 是一个 100% 独立实现的动态平铺 Wayland 合成器，不基于 wlroots、libweston、kwin 或 mutter，代码自成一派。它要解决的是平铺窗口管理器长期存在的取舍问题：要么好看但没有动画特效，要么好看却难以深度定制。Hyprland 两者都要——渐变边框、多种模糊、辉光、阴影和自定义贝塞尔/弹簧动画曲线一应俱全，同时提供插件系统、Socket IPC、窗口/显示器/图层规则等可编程能力。安装、快速上手和配置都有官方 Wiki 指引（Install / Quick Start / Configure），配置文件保存后即时生效，不用重启会话。
+Hyprland 是一个完全独立实现的动态平铺 Wayland 合成器，不基于 wlroots、libweston、kwin 或 mutter。它要解决的问题是：传统的平铺合成器往往外观简陋、动画生硬、配置受限，而 Hyprland 在保留平铺高效工作流的同时，提供了渐变边框、多种模糊、动画、发光、阴影等视觉效果，还有自定义贝塞尔曲线和弹簧曲线，让动画顺畅自然。配置保存后即时重载，可以快速调整窗口、监视器和图层的规则；它提供基于 socket 的 IPC 和全局快捷键转发，方便与脚本、状态栏以及你自己的应用集成。它还支持撕裂，有助于提升游戏性能，并提供内置插件管理器以及强大的插件生态，方便扩展布局和功能。
 
-- ✨ 全套视觉特效：渐变边框、多种模糊、动画、辉光、阴影，动画曲线支持自定义贝塞尔与弹簧
-- ✨ 完全独立实现，不依赖 wlroots / libweston / kwin / mutter
-- ✨ 强大的插件支持并内置插件管理器，可自行扩展功能与布局
-- ✨ 窗口形态灵活：平铺 / 伪平铺 / 浮动 / 全屏，支持窗口组（标签模式）与特殊工作区（scratchpad）
-- ✨ 布局体系丰富：Dwindle、Scrolling、Master、Monocle，可用 Lua 写自定义布局，并支持按工作区指定布局
-- ✨ 面向高级用户的控制力：窗口/显示器/图层规则、全局快捷键转发给应用、Socket IPC、保存即热重载配置、原生 IME 与输入面板支持
-- 👥 适合谁：适合追求高颜值桌面、愿意花时间调配置的 Linux 进阶用户与折腾党，以及想写插件扩展合成器的开发者。
+- ✨ 丰富的视觉效果：渐变边框、多种模糊、动画、发光、阴影
+- ✨ 自定义贝塞尔与弹簧动画曲线
+- ✨ 内置插件管理器与强大的插件支持
+- ✨ 撕裂支持，提升游戏性能
+- ✨ 配置保存后即时重载，提供强大的窗口、监视器和图层规则
+- ✨ 基于 socket 的 IPC 与全局快捷键转发
+- 👥 适合谁：适合追求高性能平铺工作流、又想要精致动画与视觉效果的 Linux 桌面用户和开发者。
 
-`C++` · Fork 2,145 · 🔗 [官网](https://hypr.land)
+`C++` · Fork 2,159 · 🔗 [官网](https://hypr.land)
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 基于操作系统无障碍树的桌面 Agent 工具，让 AI 稳定读取并操作任意桌面应用。 | `Rust` | 8,497 | +2,243 |
-| 2 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 为 AI 编程助手打造跨会话持久记忆的压缩系统，自动捕捉、压缩并在后续会话注入上下文。 | `TypeScript` | 110,383 | +1,799 |
-| 3 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 一个 Python 库即可完成从单次请求到全站爬取的完整 Web 抓取流程 | `Python` | 92,406 | +858 |
-| 4 | [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) | 独立的动态平铺 Wayland 合成器，兼顾颜值与深度可定制 | `C++` | 39,729 | +508 |
-| 5 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单次 Claude Code 会话变成完整游戏工作室：49 个智能体、74 个技能协同作… | `Shell` | 33,165 | +1,380 |
-| 6 | [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) | 把 290B+ 级 MoE 大模型跑在个人电脑上的边缘推理引擎 | `Python` | 15,852 | +654 |
-| 7 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | 一个统一控制本机多种 AI 编码代理的开源控制台，手机和桌面都能用。 | `TypeScript` | 40,580 | +3,216 |
-| 8 | [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | 首个开源的金融K线基础模型，用45+交易所数据预训练，可直接预测行情。 | `Python` | 45,824 | +855 |
-| 9 | [kornia/kornia](https://github.com/kornia/kornia) | 基于 PyTorch 的可微视觉库，把图像处理与几何视觉算法搬上 GPU 并支持自动求导 | `Python` | 12,034 | +412 |
-| 10 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 纯 C 编写的轻量推理引擎，靠磁盘流式加载专家，在现有硬件上跑千亿级 MoE 大模型。 | `C` | 46,282 | +655 |
-| 11 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 每天自用的 AI 编码代理技能集，小而可组合，跨模型通用。 | `Shell` | 309,902 | +970 |
-| 12 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 一个把 Git worktree 变得像分支操作一样简单的 Rust 命令行工具，专为并行… | `Rust` | 9,888 | +136 |
-| 13 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | 开源的 AI 智能体团队编排应用，像经营一家公司一样管理你的 AI 员工。 | `TypeScript` | 110,190 | +507 |
-| 14 | [karpathy/nanochat](https://github.com/karpathy/nanochat) | 一个约百美元就能从零训练出 GPT-2 级模型的最小化实验框架 | `Python` | 59,701 | +325 |
-| 15 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练就能改造本地大模型行为的工具，默认帮你去除审查拒答，也能按需抑制废话、减少谄媚等 | `Python` | 37,866 | +404 |
+| 1 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 让 AI agent 通过操作系统无障碍树观察并操作桌面应用的命令行工具 | `Rust` | 10,833 | +2,275 |
+| 2 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 为 AI 编程 Agent 提供跨会话持久记忆：自动记录会话过程，用 AI 压缩成摘要，并… | `TypeScript` | 111,060 | +1,803 |
+| 3 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 一个库覆盖从单次请求到大规模爬取的完整 Web 抓取流程 | `Python` | 93,369 | +706 |
+| 4 | [hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) | 一个独立开发、高度可定制且外观出众的动态平铺 Wayland 合成器。 | `C++` | 40,085 | +509 |
+| 5 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单次 Claude Code 会话变成 49 个 AI 角色组成的完整游戏工作室 | `Shell` | 33,898 | +1,379 |
+| 6 | [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) | 把数据中心级的 MoE 推理搬到你自己的游戏本上，让 290B+ 大模型在本地以交互速度运… | `Python` | 16,282 | +653 |
+| 7 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | T3 Code 是一个本地 AI 编程代理的统一控制台，支持手机、网页和桌面多端远程操作。 | `TypeScript` | 42,540 | +3,229 |
+| 8 | [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | 首个开源金融K线基础模型，在45+全球交易所数据上预训练，提供预测与微调能力。 | `Python` | 46,119 | +857 |
+| 9 | [kornia/kornia](https://github.com/kornia/kornia) | 基于 PyTorch 的可微分几何计算机视觉库，为空间 AI 提供 1200+ 可微算子。 | `Python` | 12,229 | +412 |
+| 10 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 纯 C 无依赖的推理引擎，让普通电脑也能跑起千亿级 MoE 大模型。 | `C` | 46,764 | +675 |
+| 11 | [mattpocock/skills](https://github.com/mattpocock/skills) | 一套小而可组合的 AI 编码代理技能集，帮助开发者做真正的工程实践。 | `Shell` | 310,533 | +858 |
+| 12 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 为并行 AI 代理工作流设计的 Git worktree 管理 CLI，让 worktre… | `Rust` | 10,159 | +77 |
+| 13 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | Paperclip 是一个用于管理 AI 代理团队的开源应用，把多个 AI 代理当成公司员… | `TypeScript` | 110,581 | +412 |
+| 14 | [karpathy/nanochat](https://github.com/karpathy/nanochat) | 用不到100美元，在单台GPU节点上训练出GPT-2级大模型的极简实验框架。 | `Python` | 60,044 | +321 |
+| 15 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练即可改造开源大模型行为的工具，在消费级显卡上就能移除审查、压制废话与谄媚。 | `Python` | 38,280 | +420 |
 
 <!-- TRENDING:END -->
 
