@@ -224,7 +224,7 @@ Hyprland 是一个完全独立实现的动态平铺 Wayland 合成器，不基�
 | `languages` | 只看某些语言，如 `["python", "go", "rust"]`；`[]` 表示全部语言 |
 | `since` | `daily` / `weekly` / `monthly` |
 | `limit` | 榜单数量（默认 25） |
-| `top_n` | 详细介绍的仓库数（默认 10，按今日新增排序） |
+| `top_n` | 详细介绍的仓库数（默认 10，按 GitHub 页面原始顺序取前 N 个） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
