@@ -17,190 +17,195 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-04
+# 🔥 GitHub 每日 Trending · 2026-11-05
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 13 个仓库
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 16 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 TOP 10（详细介绍）
 
-### 1. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 112,197（今日 +1,139）
+### 1. [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) — ⭐ 5,768（今日 +2,050）
 
-> 给 AI 编程助手加上跨会话持久记忆，自动捕获、压缩并复用上下文
+> 从企业元数据构建语义本体层，让 LLM 与 Agent 的数据查询可验证、可溯源
 
-claude-mem 是一个为 AI 编程助手提供持久记忆的压缩系统。它在会话过程中自动记录 Agent 的工具调用和操作观察，再用 AI 压缩成语义摘要保存下来；当新会话开始时，它会把相关的历史上下文注入回去。这样一来，即使会话结束、终端关掉或重新连接，助手依然记得这个项目里做过什么、改过哪里、为什么这么改，不用你每次从头复述背景。安装只需一条 npx 命令，并按你使用的 IDE 选择对应接入方式。
+Auto Ontology 是 NVIDIA 开源的 Python 框架，用来在数据之上搭建一层语义化、图结构的推理层。它要解决的是 agentic analytics 中的可靠性问题：Agent 能查库、能检索文档，但如果答案里的营收数字是错的，速度再快也没有价值。它从企业元数据自动生成本体，也能接入已有的语义模型，把散落在各系统中的指标、实体和关系定义统一起来，让 Agent 知道数据在哪里、是什么意思、该不该用、怎么用。这套上下文通过 MCP、CLI 和 API 提供给任意 agent 框架。实际使用时，按仓库的 Quickstart，用 Docker Compose 加 NVIDIA NIM 和 Wide World Importers 样例库就能跑起完整栈。
 
-- ✨ 自动捕获会话中的工具使用与操作观察，不依赖手动记笔记
-- ✨ 用 AI 将原始记录压缩成语义摘要，长期留存而非堆积日志
-- ✨ 新会话开始时自动注入相关上下文，接续上次的工作进度
-- ✨ 内置 MCP 搜索工具，可主动检索历史记忆
-- ✨ 多 Agent 兼容：Claude Code、Codex、Gemini、Copilot、OpenCode 等
-- ✨ 通过 npx 按 IDE 一键安装，并提供配置项与故障排查文档
-- 👥 适合谁：长期用 AI 编程助手推进同一项目的开发者，尤其是受够了每次会话都要重新交代背景的人
+- ✨ 从企业元数据生成本体与 AI-ready 知识图谱，也可连接已有本体和语义模型
+- ✨ 统一并消解跨系统的指标、实体、关系定义冲突，为 Agent 提供可信业务语义
+- ✨ 自然语言查询结构化数据：问题转 SQL 后执行，由 NVIDIA NIM 驱动推理
+- ✨ 查询校验与溯源：用已认证的定义和血缘检查生成查询，每个答案附带来源
+- ✨ 通过 MCP、CLI、API 把上下文暴露给任意 agent harness
+- ✨ 语义目录与向量存储统一放在 Postgres + pgvector，附带聊天、分析、数据目录的 Web UI 与 RBAC
+- 👥 适合谁：做 agentic analytics 的 AI 平台团队、数据工程师和需要可信 NL-to-SQL 的开发者
 
-`TypeScript` · Fork 9,759 · 🔗 [官网](https://claude-mem.ai)
+`Python` · Fork 454
 
-### 2. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 13,391（今日 +3,791）
+### 2. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 11,195（今日 +531）
 
-> 让 AI Agent 通过系统无障碍树看见并操作桌面应用，不依赖截图和像素匹配
+> 为并行 AI agent 工作流设计的 Git worktree 管理 CLI，让 worktree 像分支一样好用
 
-agent-desktop 是 Vercel Labs 出的命令行工具，给 AI Agent 补上「操作桌面」的能力。它不做截图识别，而是直接读取 macOS、Windows、Linux 上应用的无障碍树，返回一份带 ref 的 JSON，Agent 对准 ref 点击或输入，再重新读一次 UI 验证结果，如此循环。项目本身不含任何模型，闭环逻辑跑在你自己的 Agent 里，以 CLI 和 C 库两种形式提供。安装只需 npm i -g agent-desktop；在 macOS 上运行 permissions --guide 可以一步步引导完成辅助功能授权，随后 snapshot --app Finder -i 即可拿到可交互元素列表。它还提供 MCP 模式和内置技能文档，方便直接接入现有 Agent 框架。
+Worktrunk 是一个 Rust 写的命令行工具，解决的是「git worktree 好用但难用」这个问题。当你要同时跑 5-10 个 Claude Code、Codex 之类的 AI agent 时，原生 worktree 能给每个 agent 独立工作目录，但操作繁琐——光是新建一个 worktree 就要把分支名敲三遍。Worktrunk 把 worktree 变成按分支名寻址：路径由可配置模板自动生成，也支持直接传 worktree 路径。核心就三条命令：wt switch 切换、wt remove 清理、wt list 列出并显示状态，原本三四行的 git 命令加 cd 现在一条搞定，还能用 -x 顺带把 agent 拉起来。
 
-- ✨ 用无障碍树快照把桌面 UI 转成带 ref 的 JSON，Agent 可精确点击或输入到具体元素
-- ✨ ref 绑定快照 id，UI 变化时返回 STALE_REF 或 AMBIGUOUS_TARGET，强制重新观察再操作
-- ✨ 默认无头操作，不移动鼠标也不抢焦点，需要真实输入时加 --headed
-- ✨ 所有命令输出统一的 JSON 信封，含错误码、退出码和 retry 处置建议
-- ✨ 内置 skills get desktop / platform 技能文档，指导 Agent 掌握循环、重试规则与平台差异
-- ✨ agent-desktop mcp 将所有命令以 MCP 工具形式通过 stdio 暴露，可直接挂到 MCP 客户端
-- 👥 适合谁：想把桌面应用操作能力接入自有 Agent 的开发者，尤其是做 computer use 类产品的团队
+- ✨ wt switch：按分支名一键切换 worktree，替换 cd ../repo.branch
+- ✨ wt switch -c -x claude feat：创建 worktree 并直接启动 Claude，一条命令替代 add + cd + 启动三步
+- ✨ wt remove：删除 worktree 连同对应分支，不用先 cd 回主仓库再手动清分支
+- ✨ wt list：列出所有 worktree 并附带状态信息，而不像 git worktree list 只给路径
+- ✨ Hooks：在创建等环节自动执行命令，把本地重复流程固化下来
+- ✨ copy-on-write 构建缓存：让多个并行 worktree 共享构建产物，减少重复编译开销
+- 👥 适合谁：需要同时并行跑多个 AI coding agent、或长期维护多条并行分支的开发者
 
-`Rust` · Fork 923 · 🔗 [官网](https://agent-browser.dev/desktop)
+`Rust` · Fork 418 · 🔗 [官网](https://worktrunk.dev)
 
-### 3. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 10,648（今日 +438）
+### 3. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 313,739（今日 +1,379）
 
-> Rust 写的 Git worktree 管理 CLI，专为并行跑 AI agent 的工作流设计
+> Matt Pocock 日常自用的 AI 编码 agent 技能集，小而可组合，目标是做真正的工程而非 vibe coding。
 
-Worktrunk 是一个 Git worktree 管理命令行工具。Git 原生 worktree 能让每个 AI agent 拥有独立工作目录、互不干扰，但用起来很别扭——新建一个 worktree 就得把分支名敲三遍，还要手动 cd 进去。Worktrunk 让 worktree 像分支一样好用：用分支名寻址，路径按可配置模板自动生成。日常就是三条命令：wt switch 切换、wt remove 清理、wt list 看状态；wt switch -c -x claude 一条命令就能建好 worktree 并直接拉起 agent。
+这是一套作者每天用 Claude Code、Codex 等编码 agent 做真实项目时积累的 skills，直接来自他自己的 .agents 目录。它针对的不是「怎么让 AI 写更多代码」，而是 agent 协作中最常见的失败：你说不清想要什么，agent 就埋头做出一个不是你想要的版本；以及 agent 不懂项目里的行话，用 20 个词说 1 个词能说清的事。相比 GSD、BMAD、Spec-Kit 这类接管整个流程的方案，这些技能刻意做得小而可改、可组合，不绑定某个模型，安装后运行一次 /setup-matt-pocock-skills 选好 issue tracker、标签和文档目录即可开工。
 
-- ✨ 三个核心命令覆盖日常操作：wt switch 切换或新建 worktree，wt remove 删除 worktree 并清理分支，wt list 带状态列出所有 worktree
-- ✨ 以分支名作为 worktree 的寻址方式，路径由可配置模板自动推算；命令既接受分支名，也接受 worktree 路径
-- ✨ wt switch -c -x claude 一步完成“创建 worktree + 切进去 + 启动 AI agent”，取代 git worktree add、cd、启动三步
-- ✨ Hooks 支持在创建、pre-* 等生命周期节点自动执行命令，把本地工作流固化下来
-- ✨ copy-on-write 构建缓存，让多个并行 worktree 共享构建产物，避免每个目录重复编译
-- ✨ 面对方便同时管理多个并行改动的需求，提供一系列 quality-of-life 功能，减少手工整理 worktree 的成本
-- 👥 适合谁：同时并行跑多个 AI 编码 agent、需要给每个任务隔离工作目录的开发者
+- ✨ 开箱即装的 30 秒安装：Claude Code、Codex、GitHub Copilot、Gemini CLI 各有插件命令自动更新，其他 agent 用 npx skills 拉取可手动编辑的文件
+- ✨ /grill-me 与 /grill-with-docs：在动手前让 agent 反过来详细盘问你，把需求对齐清楚，是作者最受欢迎的技能
+- ✨ 通过共享语言/术语表（如 CONTEXT.md）让 agent 快速读懂项目行话，减少啰嗦和误解
+- ✨ /setup-matt-pocock-skills 每个仓库跑一次，配置 issue tracker（GitHub、GitLab、本地文件或自定义）、triage 用的标签和文档存放位置
+- ✨ 同一套技能可跑在 Claude Code、Codex、Copilot CLI/VS Code、Gemini CLI、Cursor、opencode、devin、windsurf、amp 等多种 agent 上
+- ✨ 技能刻意保持小体量、易改造、可组合，鼓励你直接改成为自己用的版本
+- 👥 适合谁：适合用 AI agent 写真实生产代码、又不想把流程控制权交出去的工程师。
 
-`Rust` · Fork 388 · 🔗 [官网](https://worktrunk.dev)
+`Shell` · Fork 26,305 · 🔗 [官网](https://aihero.dev/skills)
 
-### 4. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 47,404（今日 +802）
+### 4. [floci-io/floci](https://github.com/floci-io/floci) — ⭐ 29,826（今日 +1,090）
 
-> 纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型
+> 免费开源的本地 AWS 模拟器，一条命令在 4566 端口跑起整套云服务
 
-colibri 是一个用纯 C 写的推理引擎，专门用来在你自己已有的硬件上运行超大规模的开源 MoE 模型。它利用 MoE 模型每次推理只激活少量专家的特点，把热专家放在 GPU、温专家放在内存、冷专家放在 NVMe 上按需流式读取；这样一来，744B 的 GLM-5.2 在 int4 量化下只需约 9.9 GB 常驻内存即可启动。它提供一键安装脚本，自动检测内存、磁盘和显卡，推荐能装下的模型，编译或下载引擎，支持断点续传下载模型，随后启动 Web 面板，并暴露 OpenAI 与 Anthropic 兼容接口。
+Floci 是一个免费开源的本地 AWS 模拟器，面向开发、测试和 CI。它把 AWS 形态的服务搬到你的机器上，不需要云账号、不需要 auth token，也没有付费功能门槛：执行 floci start 或 docker compose up 之后，把 AWS SDK、CLI、Terraform、CDK、OpenTofu 或测试套件指向 http://localhost:4566 就能照常用，凭证填任意非空值。所有 AWS 服务共用同一端口，任意已发布的 region 和分区都支持。如果你已经在用 LocalStack，它可以直接替换，换个镜像名即可继续。它属于 Floci 模拟器家族中的 AWS 成员，同系列还有 Azure、GCP、OCI 版本，分别占用 4577、4588、4599 端口。
 
-- ✨ 分层专家调度：热专家驻留 GPU（CUDA/Vulkan）、温专家放 RAM、冷专家从 NVMe 流式读取，按 token 需要加载
-- ✨ 十三个引擎覆盖多类模型：GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6、OLMoE 等十个语言模型，Qwen-Image-2.1 图像模型，以及 Laya、GLiNER2.5-Decide 决策模型
-- ✨ 直接读取社区已发布的 GGUF 文件，无需转换即可运行
-- ✨ 一键安装：START-HERE.bat 或 start-here.sh 自动探测硬件、推荐放得下的模型、按需为 CPU/Vulkan/CUDA 编译，缺依赖时打印安装命令
-- ✨ 模型下载支持进度显示与断点续传，中断后重跑可接着下载
-- ✨ 启动后开箱即用的 Web 控制台，并提供 OpenAI 兼容的 /v1 与 Anthropic 兼容的接口地址供其他应用接入
-- 👥 适合谁：想在消费级电脑或单卡工作站上本地跑大 MoE 模型的开发者与自建服务爱好者
+- ✨ 一条命令启动：floci start，或写四行 compose.yaml 跑 docker compose up，全部 AWS 服务统一暴露在 http://localhost:4566
+- ✨ 零门槛：无需云账号、无需认证 token、无功能付费墙，凭证可以是任意非空值，除非你主动开启更严格的服务级鉴权
+- ✨ 直接兼容现有工作流：AWS SDK、CLI、Terraform、CDK、OpenTofu 和现有测试套件只要改 endpoint 就能用
+- ✨ 可作为 LocalStack 的 drop-in 替代，换镜像即完成迁移；同时提示旧的 hectorvent/floci 镜像已停止更新，需改用 floci/floci
+- ✨ 内置浏览器 Web 控制台：访问 /_floci/ui 查看本地资源，首次请求时才按需拉起 sidecar 容器，端口由 Docker 绑定，日志流入 CloudWatch Logs 的 /floci/ui
+- ✨ 不依赖 Docker 也能跑：每个 release 提供 Linux、macOS、Windows 的独立 floci-aws 二进制，另提供 Testcontainers 集成
+- 👥 适合谁：需要在本地和 CI 中跑真实 AWS 依赖的后端开发、DevOps 与测试工程师
 
-`C` · Fork 5,475 · 🔗 [官网](https://justvugg.github.io/colibri)
+`Java` · Fork 3,293 · 🔗 [官网](https://floci.io/floci/)
 
-### 5. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 311,787（今日 +1,164）
+### 5. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 113,090（今日 +1,172）
 
-> 一套可直接安装的 AI 编程代理技能集，让代理按真实工程流程工作，告别随性式编码。
+> 给 AI 编程 Agent 装上跨会话持久记忆的压缩系统，自动记录、摘要并回注上下文。
 
-这是 Matt Pocock 从自己 .agents 目录里整理出的日常代理技能集，用来解决 AI 编码代理的几个常见问题：没理解需求就动手、输出啰嗦、缺少项目术语共识、过程失控。它不同于 GSD、BMAD、Spec-Kit 这类想接管整个流程的方案，每个技能都小而可改、可组合，支持任意模型。安装很简单：Claude Code、Codex、Copilot、Gemini CLI 各有一条命令，其他代理用 npx skills 安装；装好后每个仓库跑一次 /setup-matt-pocock-skills，选好 issue 跟踪方式、分诊标签和文档存放位置就能用。
+claude-mem 是一个为 Claude Code 等编程 Agent 设计的持久记忆压缩系统。它解决的是每次新会话 Agent 都从零开始、不记得上次做过什么的问题：在会话进行中自动捕获 Agent 的工具调用观察，用 AI 压缩成语义摘要存入本地记忆库，之后在新会话里把相关上下文自动注入回去。安装只需一条 npx 命令，支持通过 --ide 参数适配不同宿主，也能为没有宿主钩子的环境提供替代接入方式。除了自动记忆，它还暴露 MCP 搜索工具，让 Agent 主动检索历史记忆。
 
-- ✨ /grill-me 与 /grill-with-docs：在动手前让代理反过来追问你，把需求问清楚再开始写代码
-- ✨ 共享语言文档：为项目建立术语表，让代理读懂行话、少说废话
-- ✨ /triage 配合你自定义的标签，对工单进行分诊
-- ✨ 安装后一次配置 issue 跟踪（GitHub、GitLab、本地文件或自定义），统一工作流
-- ✨ 技能可自由修改、组合，不绑定特定模型
-- ✨ 多代理安装支持：Claude Code、Codex、GitHub Copilot、Gemini CLI 及其他代理，可自动更新或手动更新
-- 👥 适合谁：适合用 AI 代理写真实项目、希望保留流程控制权的开发者，尤其是嫌重型流程框架太黑盒的人。
+- ✨ 自动捕获会话中的工具使用观察，无需手动记录
+- ✨ 用 AI 把原始记录压缩成语义摘要，控制上下文体积
+- ✨ 在新会话开始时自动注入相关历史上下文，保持项目知识连续性
+- ✨ 提供 MCP 搜索工具，让 Agent 按需检索过往记忆
+- ✨ 一条 npx 命令安装，支持 --ide 参数适配多种 IDE/Agent 宿主
+- ✨ 覆盖 Claude Code、OpenClaw、Codex、Gemini、Copilot、OpenCode 等多种 Agent，并提供大量多语言文档
+- 👥 适合谁：长期用 AI 编程 Agent 做同一项目、苦于每次会话都要重新交代背景的开发者。
 
-`Shell` · Fork 26,200 · 🔗 [官网](https://aihero.dev/skills)
+`TypeScript` · Fork 9,820 · 🔗 [官网](https://claude-mem.ai)
 
-### 6. [p-e-w/heretic](https://github.com/p-e-w/heretic) — ⭐ 38,996（今日 +701）
+### 6. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 15,740（今日 +2,470）
 
-> 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。
+> 让 AI agent 通过系统无障碍树读取并操作桌面应用的 CLI 工具，无需截图
 
-Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。
+agent-desktop 是 Vercel Labs 出品的计算机操作工具，让 AI agent 在不截图、不做像素匹配的前提下操作 macOS、Windows 和 Linux 上的桌面应用。它读取目标应用的无障碍树，并以 JSON 返回，其中每个可操作元素都带有 ref（引用标识）；agent 用这个 ref 执行点击或输入，再重新读取界面来确认结果，如此循环。整个循环由你的 agent 驱动，它内部不含任何模型。它提供 CLI 和 C 库两种形态，用 npm 一条命令即可安装，并自带原生二进制。ref 绑定快照，UI 变化时会返回 STALE_REF，要求重新快照；操作默认在没有图形界面的模式下通过无障碍 API 完成，不移动鼠标、不抢焦点。
 
-- ✨ 去除审查、抑制拒答（默认行为）
-- ✨ 通过配置文件切换目标：减少废话、减少幽默、降低谄媚、调整情绪倾向
-- ✨ 支持通过插件自定义 scorer，控制优化目标
-- ✨ 支持多数稠密模型、多种 MoE 架构、多模态与混合模型
-- ✨ 支持 bitsandbytes 4-bit 动态量化，降低显存占用
-- ✨ 运行前自动测试硬件以确定最优批大小，完成后可保存、上传、对话测试或跑基准
-- 👥 适合谁：想在本地改造开源大模型行为、但缺乏大规模训练算力的开发者与爱好者。
+- ✨ 把无障碍树转成 JSON 快照，每个元素带 ref，供 agent 精确操作
+- ✨ ref 与快照强绑定：失效或有多窗口歧义时明确报错并给出候选窗口 id
+- ✨ 默认无图形界面执行，不移动指针、不抢焦点，可用 --headed 切换为物理输入
+- ✨ 针对复杂应用先用 --skeleton 看整体骨架，再用 --root 钻入局部区域
+- ✨ type、set-value、clipboard-set 支持 --stdin 传入文本，避免敏感内容出现在进程参数中
+- ✨ 内置版本匹配的 agent 指南（skills get desktop / platform），可直接装进 agent harness 或写入 AGENTS.md
+- 👥 适合谁：想把桌面应用自动化接入 AI agent 的开发者，以及需要跨平台 GUI 操作能力的工具与平台团队
 
-`Python` · Fork 4,401 · 🔗 [官网](https://heretic-project.org)
+`Rust` · Fork 1,093 · 🔗 [官网](https://agent-browser.dev/desktop)
 
-### 7. [spotify/portal-ai-plugins](https://github.com/spotify/portal-ai-plugins) — ⭐ 3,096（今日 +91）
+### 7. [github/spec-kit](https://github.com/github/spec-kit) — ⭐ 147,495（今日 +808）
 
-> 把 Spotify Portal 的软件目录与运维工作流接入 AI 编码助手
+> 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包
 
-这是 Spotify 官方推出的插件，将 Portal CLI 封装成一组能在 AI 编码助手里直接使用的工作流：配置认证、运行只读体检、用自然语言搜索软件目录与技术文档、生成服务简报（负责人、健康度、事故、文档），以及发现并安全调用 Portal 动作。它还支持创建、运行、诊断 Fleetshift 任务，并在任务完成后开 PR。安装后，在 Claude Code、Codex、Cursor 或 pi 里运行一次 setup 即可开始使用，底层通过 npx @spotify/portal-cli 调用上游命令。
+Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。
 
-- ✨ 一键为当前编码助手环境配置 Portal CLI 认证
-- ✨ doctor 只读体检，检查插件、CLI、认证与动作是否就绪
-- ✨ 用自然语言搜索软件目录和技术文档
-- ✨ 生成包含归属、健康度、事故与文档的服务简报
-- ✨ 发现并安全调用 Portal 动作，带内置帮助、dry-run 与确认保护
-- ✨ Fleetshift 全流程：创建 shift（含 dry-run 预览）、触发与限时监控、只读进度检查、失败任务日志诊断、确认后为完成目标开 PR、按需停止运行
-- 👥 适合谁：Spotify 内部开发者，尤其是要在编码助手里查服务归属、健康度、事故和文档的人
+- ✨ 规范驱动开发（SDD）：从一份规范出发，贯穿规划、实现到收敛，产出可追溯
+- ✨ Bug 修复流程：定位并评估成因、限定修复范围、记录验证结果
+- ✨ 想法评估流程：用证据支撑给出继续投入、先澄清或止损的判断
+- ✨ 多代理集成：连接并随时切换不同的 AI 编码代理
+- ✨ 扩展机制：新增命令、质量门禁或完整流程，并可挂接到代理生命周期事件与命令前后钩子
+- ✨ 预设与项目级覆盖：改造模板、命令、术语和方法论，满足组织或合规要求
+- 👥 适合谁：使用 AI 编码代理、希望用规范与流程约束开发过程的个人开发者和团队
 
-`TypeScript` · Fork 240
+`Python` · Fork 13,232 · 🔗 [官网](https://github.github.com/spec-kit/)
 
-### 8. [floci-io/floci](https://github.com/floci-io/floci) — ⭐ 29,044（今日 +482）
+### 8. [The-PR-Agent/pr-agent](https://github.com/The-PR-Agent/pr-agent) — ⭐ 14,905（今日 +280）
 
-> 一个免费开源的本地 AWS 模拟器，用一条 Docker 命令替代真实云环境。
+> 一个开源的 AI 代码评审 Agent，通过简单命令或 GitHub Action 自动审查 Pull Request。
 
-Floci 是面向开发、测试和 CI 的本地 AWS 模拟器，在 http://localhost:4566 上提供真实 AWS 形态的服务，无需云账号、无需认证令牌、没有付费功能限制。现有的 AWS SDK、CLI、Terraform、CDK、OpenTofu 和测试套件只要把端点指向本地，就能照常工作。启动方式也很简单：运行 floci start，或 docker compose up，用 eval $(floci env) 导出环境变量，然后正常执行 aws s3 mb、aws dynamodb create-table 等命令。它还是 LocalStack 的直接替代品，换掉镜像名即可继续使用，对想把云依赖从日常开发和流水线中剥离出来的团队来说相当省事。
+PR-Agent 是一个开源的、AI 驱动的代码评审 Agent，也是 Qodo 社区维护的 legacy 项目（注意：它并非 Qodo 面向开源项目的免费版产品）。它解决的是代码评审耗时、容易遗漏、大 PR 难以人工通读的问题：你可以在 PR 里触发 /review、/improve、/ask 等命令，让模型自动给出评审意见、改进建议，或者直接回答关于这次变更的问题。接入方式很灵活：既可以添加一个 GitHub Action 工作流文件，也可以在本地用 pip 安装后通过 CLI 跑 
+ pr-agent --pr_url ... review
+ 这种命令；此外还支持 GitLab webhook、BitBucket、Azure DevOps、Gitea 等平台，可部署为 Docker、自托管或 webhook 服务。模型侧支持 OpenAI、Claude、Gemini、DeepSeek、Mistral，以及通过 LiteLLM 接入 Azure、Bedrock、Vertex、Ollama 等。项目强调快速低成本（每个工具一次 LLM 调用，约 30 秒）、用 PR Compression 策略处理超大 PR，以及基于 JSON 的 prompt 配置来做团队级定制，数据完全由自己掌控。
 
-- ✨ 在 localhost:4566 上提供 AWS 形态的服务，支持任意已发布区域和全部分区
-- ✨ 不要求云账号、认证令牌或付费授权，凭据随便填非空值即可使用
-- ✨ 与现有 AWS SDK、CLI、Terraform、CDK、OpenTofu 和测试套件直接对接，几乎不改代码
-- ✨ 作为 LocalStack 的 drop-in 替代，只需替换镜像名即可迁移
-- ✨ 内置 Web 控制台（/_floci/ui），以 sidecar 方式按需启动，用于查看本地模拟器中的资源
-- ✨ 提供官方 CLI（floci start / floci env），并为 Linux、macOS、Windows 提供免 Docker 的独立二进制 floci-aws
-- 👥 适合谁：需要在本地或 CI 中运行 AWS 服务的后端开发者、测试工程师和平台团队。
+- ✨ /review 自动对 PR 做代码评审，输出结构化的意见
+- ✨ /improve 针对改动给出具体的改进建议
+- ✨ /ask 用自然语言提问，回答关于这次 PR 的问题
+- ✨ /describe 自动生成 PR 标题与描述，便于写变更说明
+- ✨ PR Compression 策略，让超大的 PR 也能被有效处理
+- ✨ JSON 配置驱动的提示词定制，可调整评审类别与行为
+- 👥 适合谁：适合需要给团队 PR 流程加自动化评审的开发团队，以及想自托管、掌控数据和提示词的团队。
 
-`Java` · Fork 3,230 · 🔗 [官网](https://floci.io/floci/)
+`Python` · Fork 2,100 · 🔗 [官网](https://www.pr-agent.ai)
 
-### 9. [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) — ⭐ 16,784（今日 +228）
+### 9. [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) — ⭐ 139,290（今日 +617）
 
-> 基于 Playwright 与 AI 的闲鱼多任务监控系统，带 Web 管理后台，帮你从海量商品中筛出值得买的那个。
+> 输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具。
 
-这是一个把“盯闲鱼”这件事自动化的工具。你不再需要反复刷新搜索页、肉眼看描述判断成色和性价比——它按你设定的关键词、价格区间、发布时间、包邮条件和省市区，用 Playwright 持续抓取新上架商品，再交给支持图片输入的多模态模型，按你写的选购标准判断值不值得买，命中就通过 ntfy.sh、企业微信、Bark、Telegram 或 Webhook 推到手机上。整个流程跑在一个 Web 后台里：任务管理、闲鱼账号登录态导入、AI 判断标准编辑、运行日志、结果浏览都能点着操作，还支持 Cron 定时、多任务并发、多账号与代理轮换。Docker 一键起，默认 http://127.0.0.1:8000，最少只需填三个 AI 相关环境变量。
+MoneyPrinterTurbo 是一个开源的 AI 短视频生成工具，专门解决从选题到成片的一系列制作工作。你只需给出一句话的主题或几个关键词，它就会调用大模型写出视频文案、提炼素材搜索词并匹配画面，再自动生成字幕、配上背景音乐，最后合成为高清短视频。项目同时提供 WebUI 和 API 两种使用方式，既能在网页里点几下出片，也能通过接口接入自己的生产流程批量产出；支持 Windows、macOS、Linux，提供简中、英文、日文文档，并适配 Kimi、火山引擎、Ofox 等多种模型服务。
 
-- ✨ 多任务并发监控，每个任务可独立配置关键词、价格范围、筛选条件与 AI Prompt
-- ✨ AI 驱动：用自然语言描述需求即可后台异步生成判断标准，多模态模型结合商品图与详情做深度分析
-- ✨ 高级筛选支持包邮、新发布时间范围、省/市/区三级区域选择
-- ✨ 即时通知覆盖 ntfy.sh、企业微信、Bark、Telegram、Webhook 等渠道
-- ✨ 多账号管理与代理池轮换，配合失败重试、黑名单 TTL 和任务失败自动暂停保护
-- ✨ 完整 Web 管理界面：任务、账号、结果、日志、Prompt 编辑集中在一个后台，数据存 SQLite 并支持旧数据自动导入
-- 👥 适合谁：想在闲鱼蹲低价好物、又不想手动刷新的个人买家，以及需要长期监控特定品类的小团队。
+- ✨ 输入主题或关键词一键成片，自动完成脚本、素材、字幕、配乐到合成成片的全流程
+- ✨ 大模型驱动文案创作，同时提炼素材搜索关键词并决定画面匹配，内容理解越准画面越贴题
+- ✨ 自动生成字幕并匹配背景音乐，输出高清短视频
+- ✨ 提供可视化 WebUI，无需写代码也能操作出片
+- ✨ 提供 API 接口，可接入自有系统做批量、自动化视频生产
+- ✨ 跨平台支持 Windows、macOS、Linux，提供简体中文、英文、日文文档，可灵活对接多家大模型与素材服务
+- 👥 适合谁：适合做短视频的自媒体、内容运营与营销人员，以及需要批量生产视频的开发者。
 
-`Python` · Fork 2,877
+`Python` · Fork 22,221
 
-### 10. [anomalyco/hex](https://github.com/anomalyco/hex) — ⭐ 4,755（今日 +410）
+### 10. [garrytan/gstack](https://github.com/garrytan/gstack) — ⭐ 139,500（今日 +290）
 
-> 按住快捷键说话、松开就自动粘贴到当前应用的本地语音听写工具，支持 Mac、Windows 和 Linux。
+> 把 Claude Code 变成一支虚拟工程团队的 23 个斜杠命令集
 
-Hex 是一款跨平台的本地语音听写工具，解决的是「打字慢、又不想把语音上传到云端」这个问题。用法很简单：按住快捷键开口说话，说完松手，Hex 会在这台设备上完成转写，并把文字直接粘贴进你当时正在使用的任何应用里，不需要切换窗口或复制粘贴。首次运行时会下载一个语音模型，之后所有处理都在本地完成，音频和文字都不会离开你的电脑。它提供 macOS（Apple silicon）、Windows x64/ARM64、Linux x86_64/ARM64 的安装包，也支持 Homebrew、AUR、Nix 和一条 Linux 安装脚本，此外还分稳定版与自动更新的 dev 通道。
+gstack 是 YC 总裁 Garry Tan 开源、他自己每天都在用的 Claude Code 配置：23 个各自扮演明确角色的斜杠命令，覆盖 CEO 重新审视产品、工程经理锁定架构、设计师拦下“AI 味”界面、评审找出生产 bug、QA 开真实浏览器复现问题、安全官跑 OWASP/STRIDE 审计、发布工程师把 PR 发出去。全部是 Markdown 命令，MIT 协议免费。装好后先跑 /office-hours 讲清楚你在做什么，接着用 /review 和 /qa 检查当前分支，想要完整一轮冲刺就用 /autoplan 和 /ship。
 
-- ✨ 按住快捷键说话、松手即粘贴，全程不用切换应用
-- ✨ 完全本地转写，首次下载模型后音频和文字都不离开设备
-- ✨ 支持 macOS（Apple silicon）、Windows x64/ARM64、Linux x86_64/ARM64
-- ✨ 提供 Homebrew、AUR、Nix、Linux 安装脚本等多种安装方式
-- ✨ 稳定版与 dev 双通道，dev 版本可自动从 dev 频道更新
-- ✨ 侧边栏底部有 Labs，收纳实验性功能
-- 👥 适合谁：适合经常需要大量输入文字、又在意隐私不想把语音传上云的 Mac、Windows、Linux 用户，比如写作者和开发者。
+- ✨ /office-hours 扮演 CEO：反驳你对问题的既有框架，产出后续技能都会读取的设计文档
+- ✨ /review 找出那些能通过 CI 却会在生产环境出问题的 bug，并顺手修掉明显的问题
+- ✨ /qa 打开真实浏览器，在 staging URL 上复现并修复 bug，也支持隔离的本地 API、CLI、定时任务和 webhook
+- ✨ /autoplan 端到端评审一份计划，/ship 负责跑测试、评审并提交 PR，串起完整冲刺
+- ✨ 安全官 /cso 执行 OWASP + STRIDE 审计，需要本机原生工具链
+- ✨ 团队模式：执行一条命令就把 gstack 写入仓库，队友自动获得，不提交任何副本文件，并自动检查更新，也可切换到 main 频道
+- 👥 适合谁：想继续亲自交付代码的技术型创始人/CEO、第一次用 Claude Code 需要结构化角色的新手、要在每个 PR 上做严格评审与发布的 tech lead 和资深工程师。
 
-`Rust` · Fork 265 · 🔗 [官网](https://anoma.ly/hex)
+`TypeScript` · Fork 20,647
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 给 AI 编程助手加上跨会话持久记忆，自动捕获、压缩并复用上下文 | `TypeScript` | 112,197 | +1,139 |
-| 2 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 让 AI Agent 通过系统无障碍树看见并操作桌面应用，不依赖截图和像素匹配 | `Rust` | 13,391 | +3,791 |
-| 3 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | Rust 写的 Git worktree 管理 CLI，专为并行跑 AI agent 的工… | `Rust` | 10,648 | +438 |
-| 4 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型 | `C` | 47,404 | +802 |
-| 5 | [mattpocock/skills](https://github.com/mattpocock/skills) | 一套可直接安装的 AI 编程代理技能集，让代理按真实工程流程工作，告别随性式编码。 | `Shell` | 311,787 | +1,164 |
-| 6 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。 | `Python` | 38,996 | +701 |
-| 7 | [spotify/portal-ai-plugins](https://github.com/spotify/portal-ai-plugins) | 把 Spotify Portal 的软件目录与运维工作流接入 AI 编码助手 | `TypeScript` | 3,096 | +91 |
-| 8 | [floci-io/floci](https://github.com/floci-io/floci) | 一个免费开源的本地 AWS 模拟器，用一条 Docker 命令替代真实云环境。 | `Java` | 29,044 | +482 |
-| 9 | [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright 与 AI 的闲鱼多任务监控系统，带 Web 管理后台，帮你从海… | `Python` | 16,784 | +228 |
-| 10 | [anomalyco/hex](https://github.com/anomalyco/hex) | 按住快捷键说话、松开就自动粘贴到当前应用的本地语音听写工具，支持 Mac、Windows … | `Rust` | 4,755 | +410 |
-| 11 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 一站式 Python 爬虫框架：从单次请求到大规模并发爬取全都覆盖。 | `Python` | 95,300 | +1,658 |
-| 12 | [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | 首个开源的金融 K 线基础模型，在 45 家以上全球交易所数据上预训练，可直接用于量化预测… | `Python` | 46,622 | +503 |
-| 13 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | 把单个 Claude Code 会话变成 49 个 AI agent 组成的有层级的游戏工… | `Shell` | 34,906 | +1,182 |
+| 1 | [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) | 从企业元数据构建语义本体层，让 LLM 与 Agent 的数据查询可验证、可溯源 | `Python` | 5,768 | +2,050 |
+| 2 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 为并行 AI agent 工作流设计的 Git worktree 管理 CLI，让 wor… | `Rust` | 11,195 | +531 |
+| 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 日常自用的 AI 编码 agent 技能集，小而可组合，目标是做真… | `Shell` | 313,739 | +1,379 |
+| 4 | [floci-io/floci](https://github.com/floci-io/floci) | 免费开源的本地 AWS 模拟器，一条命令在 4566 端口跑起整套云服务 | `Java` | 29,826 | +1,090 |
+| 5 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 给 AI 编程 Agent 装上跨会话持久记忆的压缩系统，自动记录、摘要并回注上下文。 | `TypeScript` | 113,090 | +1,172 |
+| 6 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 让 AI agent 通过系统无障碍树读取并操作桌面应用的 CLI 工具，无需截图 | `Rust` | 15,740 | +2,470 |
+| 7 | [github/spec-kit](https://github.com/github/spec-kit) | 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包 | `Python` | 147,495 | +808 |
+| 8 | [The-PR-Agent/pr-agent](https://github.com/The-PR-Agent/pr-agent) | 一个开源的 AI 代码评审 Agent，通过简单命令或 GitHub Action 自动审… | `Python` | 14,905 | +280 |
+| 9 | [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具… | `Python` | 139,290 | +617 |
+| 10 | [garrytan/gstack](https://github.com/garrytan/gstack) | 把 Claude Code 变成一支虚拟工程团队的 23 个斜杠命令集 | `TypeScript` | 139,500 | +290 |
+| 11 | [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 用便携 C99 在单块 CPU、8 GB 内存上跑 2.78 万亿参数 Kimi K3 推… | `C` | 10,510 | +351 |
+| 12 | [JiaFeiMiao-K-Cat/DiscImageStudio](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio) | 把图片刻成光盘盘面可见图案的跨平台图像生成与刻录工具，支持 CD、DVD 与单层 BD-R | `C#` | 6,824 | +1,778 |
+| 13 | [MichaelCade/90DaysOfDevOps](https://github.com/MichaelCade/90DaysOfDevOps) | 一份从个人学习日志成长为结构化 DevOps 学习地图的开源课程，涵盖三年内容。 | `Shell` | 30,610 | +97 |
+| 14 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 把快速请求、隐身浏览器、数据解析与并发爬取合一的 Python 爬虫框架 | `Python` | 96,979 | +2,005 |
+| 15 | [Thysrael/Horizon](https://github.com/Thysrael/Horizon) | 用 AI 把杂乱信息源压缩成每天一份中英双语简报的自托管新闻雷达。 | `Python` | 12,708 | +121 |
+| 16 | [scenario-labs/skills](https://github.com/scenario-labs/skills) | 给 AI 编程助手装上一整套 Scenario 内容生产能力，覆盖图像、视频、音频、3D … | `Python` | 2,611 | +224 |
 
 <!-- TRENDING:END -->
 
