@@ -17,195 +17,192 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-05
+# 🔥 GitHub 每日 Trending · 2026-11-06
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 16 个仓库
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 15 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 TOP 10（详细介绍）
 
-### 1. [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) — ⭐ 5,768（今日 +2,050）
+### 1. [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) — ⭐ 7,883（今日 +2,679）
 
-> 从企业元数据构建语义本体层，让 LLM 与 Agent 的数据查询可验证、可溯源
+> NVIDIA 开源的企业本体框架，为 LLM 与 Agent 构建语义化上下文层
 
-Auto Ontology 是 NVIDIA 开源的 Python 框架，用来在数据之上搭建一层语义化、图结构的推理层。它要解决的是 agentic analytics 中的可靠性问题：Agent 能查库、能检索文档，但如果答案里的营收数字是错的，速度再快也没有价值。它从企业元数据自动生成本体，也能接入已有的语义模型，把散落在各系统中的指标、实体和关系定义统一起来，让 Agent 知道数据在哪里、是什么意思、该不该用、怎么用。这套上下文通过 MCP、CLI 和 API 提供给任意 agent 框架。实际使用时，按仓库的 Quickstart，用 Docker Compose 加 NVIDIA NIM 和 Wide World Importers 样例库就能跑起完整栈。
+Auto Ontology 是 NVIDIA 开源的 Python 框架（Apache 2.0），从企业元数据中构建语义化、图谱化的上下文层。Agent 能查数据库、能检索文档，却常常答错数字，因此可靠性才是关键。它告诉 Agent 数据存在哪里、代表什么含义、该不该用、怎么用、来自哪里，并跨系统统一对指标与实体的定义。开发者可通过 MCP、CLI 或 API 把这份上下文接入任意 Agent 框架，也可用 Docker Compose 或 Helm 一键起服务，配置 NVIDIA NIM 的 API Key 后，就能对 Wide World Importers 样例库做自然语言提问。
 
-- ✨ 从企业元数据生成本体与 AI-ready 知识图谱，也可连接已有本体和语义模型
-- ✨ 统一并消解跨系统的指标、实体、关系定义冲突，为 Agent 提供可信业务语义
-- ✨ 自然语言查询结构化数据：问题转 SQL 后执行，由 NVIDIA NIM 驱动推理
-- ✨ 查询校验与溯源：用已认证的定义和血缘检查生成查询，每个答案附带来源
-- ✨ 通过 MCP、CLI、API 把上下文暴露给任意 agent harness
-- ✨ 语义目录与向量存储统一放在 Postgres + pgvector，附带聊天、分析、数据目录的 Web UI 与 RBAC
-- 👥 适合谁：做 agentic analytics 的 AI 平台团队、数据工程师和需要可信 NL-to-SQL 的开发者
+- ✨ 从企业元数据自动生成本体，也可接入已有本体与语义模型，构建 AI 就绪的知识图谱
+- ✨ 为指标、实体和关系提供可信的业务含义，并跨系统对齐不一致的定义
+- ✨ 用已认证的定义与数据血缘校验生成的查询，每个答案都附带来源溯源
+- ✨ 通过 MCP、CLI 和 API 把上下文暴露给任意 Agent 框架
+- ✨ 自然语言转 SQL 并直接执行，推理、嵌入、重排序均由 NVIDIA NIM 端点提供，可用托管服务或自托管
+- ✨ 把人工认证的修正与使用反馈回写本体，让共享上下文随每次提问持续改进
+- 👥 适合谁：适合做 Agent 分析应用的数据平台与 AI 工程师，以及需要可靠 NL-to-SQL 的团队
 
-`Python` · Fork 454
+`Python` · Fork 634
 
-### 2. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 11,195（今日 +531）
+### 2. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 315,729（今日 +2,071）
 
-> 为并行 AI agent 工作流设计的 Git worktree 管理 CLI，让 worktree 像分支一样好用
+> Matt Pocock 日常使用的 AI 编程 agent 技能集，小巧、可组合、可改造。
 
-Worktrunk 是一个 Rust 写的命令行工具，解决的是「git worktree 好用但难用」这个问题。当你要同时跑 5-10 个 Claude Code、Codex 之类的 AI agent 时，原生 worktree 能给每个 agent 独立工作目录，但操作繁琐——光是新建一个 worktree 就要把分支名敲三遍。Worktrunk 把 worktree 变成按分支名寻址：路径由可配置模板自动生成，也支持直接传 worktree 路径。核心就三条命令：wt switch 切换、wt remove 清理、wt list 列出并显示状态，原本三四行的 git 命令加 cd 现在一条搞定，还能用 -x 顺带把 agent 拉起来。
+这是 Matt Pocock 从其 .agents 目录公开的一套 agent 技能（skills），用于配合 Claude Code、Codex、GitHub Copilot、Gemini CLI、Cursor 等编程 agent 做“真正的工程”，而不是 vibe coding。它针对 GSD、BMAD、Spec-Kit 这类框架的痛点：这些框架接管流程的同时也拿走了开发者的控制权，流程一旦出 bug 就很难排查。这些技能刻意做小、可组合，并配一次性 /setup-matt-pocock-skills 初始化（选择 issue tracker、triage 标签、文档存放位置）。安装方式按 agent 分多种：插件会自动更新，skills.sh 则复制可编辑文件、需手动更新。
 
-- ✨ wt switch：按分支名一键切换 worktree，替换 cd ../repo.branch
-- ✨ wt switch -c -x claude feat：创建 worktree 并直接启动 Claude，一条命令替代 add + cd + 启动三步
-- ✨ wt remove：删除 worktree 连同对应分支，不用先 cd 回主仓库再手动清分支
-- ✨ wt list：列出所有 worktree 并附带状态信息，而不像 git worktree list 只给路径
-- ✨ Hooks：在创建等环节自动执行命令，把本地重复流程固化下来
-- ✨ copy-on-write 构建缓存：让多个并行 worktree 共享构建产物，减少重复编译开销
-- 👥 适合谁：需要同时并行跑多个 AI coding agent、或长期维护多条并行分支的开发者
+- ✨ /grill-me 与 /grill-with-docs：开工前让 agent 反过来详细盘问你，先把需求对齐再动手，是作者最受欢迎的技能
+- ✨ 共享语言/术语表机制：为项目建立一份词汇表，让 agent 不用 20 个词表达 1 个词能说清的事，减少啰嗦输出
+- ✨ /triage 配合你在 setup 时指定的标签，对工单进行分类整理
+- ✨ /setup-matt-pocock-skills 一次性初始化：选 issue tracker（GitHub、GitLab、本地文件或自定义）、配置标签、指定文档保存位置
+- ✨ 技能小巧、可组合、与模型无关，鼓励改造成自己的版本
+- ✨ 覆盖 Claude Code、Codex、GitHub Copilot（CLI 与 VS Code）、Gemini CLI，以及通过 npx skills 支持 Cursor、opencode、devin、windsurf、amp、pi 等
+- 👥 适合谁：用 AI 编程 agent 开发真实项目、希望保留流程控制权的工程师
 
-`Rust` · Fork 418 · 🔗 [官网](https://worktrunk.dev)
+`Shell` · Fork 26,424 · 🔗 [官网](https://aihero.dev/skills)
 
-### 3. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 313,739（今日 +1,379）
+### 3. [garrytan/gstack](https://github.com/garrytan/gstack) — ⭐ 140,160（今日 +612）
 
-> Matt Pocock 日常自用的 AI 编码 agent 技能集，小而可组合，目标是做真正的工程而非 vibe coding。
+> 把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出场的 23 个斜杠命令。
 
-这是一套作者每天用 Claude Code、Codex 等编码 agent 做真实项目时积累的 skills，直接来自他自己的 .agents 目录。它针对的不是「怎么让 AI 写更多代码」，而是 agent 协作中最常见的失败：你说不清想要什么，agent 就埋头做出一个不是你想要的版本；以及 agent 不懂项目里的行话，用 20 个词说 1 个词能说清的事。相比 GSD、BMAD、Spec-Kit 这类接管整个流程的方案，这些技能刻意做得小而可改、可组合，不绑定某个模型，安装后运行一次 /setup-matt-pocock-skills 选好 issue tracker、标签和文档目录即可开工。
+gstack 是 YC 总裁 Garry Tan 开源的 Claude Code 配置集，全部由 Markdown 斜杠命令组成，MIT 协议免费使用。它解决的问题很具体：直接用 AI 写代码时，提示词空白、缺少角色分工，AI 产出的设计千篇一律，代码能通过 CI 却会在生产环境出问题。gstack 给编码 Agent 装上固定角色——CEO 重新思考产品、工程经理确定架构、设计师挑出 AI 生成的俗套设计、审查者找生产 bug、QA 开真实浏览器复现问题、安全官跑 OWASP + STRIDE 审计、发布工程师提交 PR。安装只需两条粘贴命令，约 30 秒；推荐开启团队模式，团队成员共用同一版本并自动更新。
 
-- ✨ 开箱即装的 30 秒安装：Claude Code、Codex、GitHub Copilot、Gemini CLI 各有插件命令自动更新，其他 agent 用 npx skills 拉取可手动编辑的文件
-- ✨ /grill-me 与 /grill-with-docs：在动手前让 agent 反过来详细盘问你，把需求对齐清楚，是作者最受欢迎的技能
-- ✨ 通过共享语言/术语表（如 CONTEXT.md）让 agent 快速读懂项目行话，减少啰嗦和误解
-- ✨ /setup-matt-pocock-skills 每个仓库跑一次，配置 issue tracker（GitHub、GitLab、本地文件或自定义）、triage 用的标签和文档存放位置
-- ✨ 同一套技能可跑在 Claude Code、Codex、Copilot CLI/VS Code、Gemini CLI、Cursor、opencode、devin、windsurf、amp 等多种 agent 上
-- ✨ 技能刻意保持小体量、易改造、可组合，鼓励你直接改成为自己用的版本
-- 👥 适合谁：适合用 AI agent 写真实生产代码、又不想把流程控制权交出去的工程师。
+- ✨ /office-hours：挑战你对产品的最初定义，产出一份供其他 skill 读取的设计文档
+- ✨ /review：审查任意分支改动，找出能过 CI 却在生产环境出问题的 bug，并直接修掉显而易见的问题
+- ✨ /qa：对 staging URL 或本地 API、CLI、定时任务、webhook 打开真实浏览器，复现并修复 bug
+- ✨ /autoplan 与 /ship：端到端评审整份计划，然后跑测试、review 并提交 PR，覆盖完整 sprint
+- ✨ /cso 安全官：执行 OWASP + STRIDE 审计，需要原生工具链，缺失时 setup 会明确提示并禁用
+- ✨ 团队模式：仓库内一条命令完成引导，无 vendored 文件、无版本漂移，每小时静默检查更新，跟随稳定版通道
+- 👥 适合谁：想继续亲手交付的技术型创始人、CEO，第一次用 Claude Code 需要结构化角色的人，以及要在每个 PR 上做严格评审、QA 与发布自动化的 tech lead 和 staff 工程师。
 
-`Shell` · Fork 26,305 · 🔗 [官网](https://aihero.dev/skills)
+`TypeScript` · Fork 20,707
 
-### 4. [floci-io/floci](https://github.com/floci-io/floci) — ⭐ 29,826（今日 +1,090）
+### 4. [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) — ⭐ 17,932（今日 +240）
 
-> 免费开源的本地 AWS 模拟器，一条命令在 4566 端口跑起整套云服务
+> 基于 Playwright 和 AI 的闲鱼多任务实时监控系统，自带完整 Web 管理后台，从海量商品中筛出心仪好物。
 
-Floci 是一个免费开源的本地 AWS 模拟器，面向开发、测试和 CI。它把 AWS 形态的服务搬到你的机器上，不需要云账号、不需要 auth token，也没有付费功能门槛：执行 floci start 或 docker compose up 之后，把 AWS SDK、CLI、Terraform、CDK、OpenTofu 或测试套件指向 http://localhost:4566 就能照常用，凭证填任意非空值。所有 AWS 服务共用同一端口，任意已发布的 region 和分区都支持。如果你已经在用 LocalStack，它可以直接替换，换个镜像名即可继续。它属于 Floci 模拟器家族中的 AWS 成员，同系列还有 Azure、GCP、OCI 版本，分别占用 4577、4588、4599 端口。
+这是一个用 Python 写的闲鱼商品监控工具。你在 Web 界面里建任务，设定关键词、价格区间、包邮、发布时间、省市区域等筛选条件，系统用 Playwright 自动搜索闲鱼，把新出现的商品详情和卖家信息抓下来，交给多模态 AI 模型按你写的标准判断值不值得买，推荐的就通过 ntfy.sh、企业微信、Bark、Telegram、Webhook 推给你。支持多任务并发、Cron 定时调度、多账号绑定和代理轮换，遇到风控会自动换号重试。Docker 一键部署，镜像内置 Chromium，开箱即用。
 
-- ✨ 一条命令启动：floci start，或写四行 compose.yaml 跑 docker compose up，全部 AWS 服务统一暴露在 http://localhost:4566
-- ✨ 零门槛：无需云账号、无需认证 token、无功能付费墙，凭证可以是任意非空值，除非你主动开启更严格的服务级鉴权
-- ✨ 直接兼容现有工作流：AWS SDK、CLI、Terraform、CDK、OpenTofu 和现有测试套件只要改 endpoint 就能用
-- ✨ 可作为 LocalStack 的 drop-in 替代，换镜像即完成迁移；同时提示旧的 hectorvent/floci 镜像已停止更新，需改用 floci/floci
-- ✨ 内置浏览器 Web 控制台：访问 /_floci/ui 查看本地资源，首次请求时才按需拉起 sidecar 容器，端口由 Docker 绑定，日志流入 CloudWatch Logs 的 /floci/ui
-- ✨ 不依赖 Docker 也能跑：每个 release 提供 Linux、macOS、Windows 的独立 floci-aws 二进制，另提供 Testcontainers 集成
-- 👥 适合谁：需要在本地和 CI 中跑真实 AWS 依赖的后端开发、DevOps 与测试工程师
+- ✨ Web 可视化管理：任务管理、账号管理、AI 标准编辑、运行日志、结果浏览一站式操作
+- ✨ AI 驱动：用自然语言描述需求即可异步生成分析标准，再由多模态模型深度分析商品图文
+- ✨ 多任务并发：每个任务独立配置关键词、价格、筛选条件和 AI Prompt
+- ✨ 高级筛选：包邮、新发布时间范围、省/市/区三级区域筛选
+- ✨ 多渠道即时通知：ntfy.sh、企业微信、Bark、Telegram、Webhook
+- ✨ Cron 定时调度、多账号绑定与代理池轮换，风控失败自动重试并带任务熔断保护
+- 👥 适合谁：想蹲守闲鱼捡漏、盯特定商品的买家，以及需要长期监控商品行情的开发者和小团队。
 
-`Java` · Fork 3,293 · 🔗 [官网](https://floci.io/floci/)
+`Python` · Fork 2,973
 
-### 5. [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) — ⭐ 113,090（今日 +1,172）
+### 5. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 98,337（今日 +1,655）
 
-> 给 AI 编程 Agent 装上跨会话持久记忆的压缩系统，自动记录、摘要并回注上下文。
+> Scrapling 是一个 Python 爬虫框架，把请求、浏览器渲染、解析与并发爬取合为一体。
 
-claude-mem 是一个为 Claude Code 等编程 Agent 设计的持久记忆压缩系统。它解决的是每次新会话 Agent 都从零开始、不记得上次做过什么的问题：在会话进行中自动捕获 Agent 的工具调用观察，用 AI 压缩成语义摘要存入本地记忆库，之后在新会话里把相关上下文自动注入回去。安装只需一条 npx 命令，支持通过 --ide 参数适配不同宿主，也能为没有宿主钩子的环境提供替代接入方式。除了自动记忆，它还暴露 MCP 搜索工具，让 Agent 主动检索历史记忆。
+Scrapling 想做的是把网页抓取的整条链路收进一个库：用普通 HTTP 请求拿静态页面，用具备反检测能力的浏览器渲染 JavaScript、和页面交互，还能顺带抓取页面背后 API 调用返回的数据。它解决的是开发者平时要在 requests、Playwright、解析库、爬虫调度之间来回拼装的问题——现在用同一套 API 就能从单次请求扩展到整站爬取，支持可复用会话、代理轮换、自动重试、暂停与恢复，以及内置的数据导出。除了 Python 代码，它也能从命令行运行，或通过 MCP server 和 Agent Skill 交给 AI agent 调用，甚至把整站内容整理成干净的 Markdown。
 
-- ✨ 自动捕获会话中的工具使用观察，无需手动记录
-- ✨ 用 AI 把原始记录压缩成语义摘要，控制上下文体积
-- ✨ 在新会话开始时自动注入相关历史上下文，保持项目知识连续性
-- ✨ 提供 MCP 搜索工具，让 Agent 按需检索过往记忆
-- ✨ 一条 npx 命令安装，支持 --ide 参数适配多种 IDE/Agent 宿主
-- ✨ 覆盖 Claude Code、OpenClaw、Codex、Gemini、Copilot、OpenCode 等多种 Agent，并提供大量多语言文档
-- 👥 适合谁：长期用 AI 编程 Agent 做同一项目、苦于每次会话都要重新交代背景的开发者。
+- ✨ 统一抓取入口：支持静态 HTTP 请求与可渲染 JavaScript、可交互的隐身浏览器
+- ✨ 强大的选择器解析能力，从页面中精准提取所需字段
+- ✨ 并发爬虫（Spiders）：可复用会话、代理轮换、自动重试、暂停与恢复
+- ✨ 内置数据导出，便于把抓取结果整理成可用格式
+- ✨ 同时提供 CLI 命令行与 Python API 两种使用方式
+- ✨ 提供 MCP server 与 Agent Skill，可直接接入 AI agent 工作流
+- 👥 适合谁：需要从单页提取到整站采集的 Python 开发者、数据工程师，以及想把抓取能力交给 AI agent 使用的团队。
 
-`TypeScript` · Fork 9,820 · 🔗 [官网](https://claude-mem.ai)
+`Python` · Fork 10,299 · 🔗 [官网](https://scrapling.readthedocs.io/en/latest/)
 
-### 6. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 15,740（今日 +2,470）
+### 6. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 17,334（今日 +2,173）
 
-> 让 AI agent 通过系统无障碍树读取并操作桌面应用的 CLI 工具，无需截图
+> 通过操作系统无障碍树让 AI Agent 看见并操作桌面应用的 CLI 与 C 库。
 
-agent-desktop 是 Vercel Labs 出品的计算机操作工具，让 AI agent 在不截图、不做像素匹配的前提下操作 macOS、Windows 和 Linux 上的桌面应用。它读取目标应用的无障碍树，并以 JSON 返回，其中每个可操作元素都带有 ref（引用标识）；agent 用这个 ref 执行点击或输入，再重新读取界面来确认结果，如此循环。整个循环由你的 agent 驱动，它内部不含任何模型。它提供 CLI 和 C 库两种形态，用 npm 一条命令即可安装，并自带原生二进制。ref 绑定快照，UI 变化时会返回 STALE_REF，要求重新快照；操作默认在没有图形界面的模式下通过无障碍 API 完成，不移动鼠标、不抢焦点。
+agent-desktop 是 Vercel Labs 出品的桌面自动化工具，它让 AI Agent 具备 computer use 能力，但完全不用截图和像素匹配。它把应用的 accessibility tree 读成 JSON，并为每个可操作元素分配一个 ref；Agent 点击或输入某个 ref，再重新观察界面确认结果，如此循环。整个控制循环由调用方自己实现，工具本身不含模型。它同时提供 CLI 和 C 库，覆盖 macOS、Windows、Linux 三大平台，默认以 headless 方式驱动，不移动鼠标也不抢焦点。
 
-- ✨ 把无障碍树转成 JSON 快照，每个元素带 ref，供 agent 精确操作
-- ✨ ref 与快照强绑定：失效或有多窗口歧义时明确报错并给出候选窗口 id
-- ✨ 默认无图形界面执行，不移动指针、不抢焦点，可用 --headed 切换为物理输入
-- ✨ 针对复杂应用先用 --skeleton 看整体骨架，再用 --root 钻入局部区域
-- ✨ type、set-value、clipboard-set 支持 --stdin 传入文本，避免敏感内容出现在进程参数中
-- ✨ 内置版本匹配的 agent 指南（skills get desktop / platform），可直接装进 agent harness 或写入 AGENTS.md
-- 👥 适合谁：想把桌面应用自动化接入 AI agent 的开发者，以及需要跨平台 GUI 操作能力的工具与平台团队
+- ✨ 把桌面应用的无障碍树解析为 JSON 快照，每个可交互元素带唯一 ref
+- ✨ 支持 click、type、set-value、clipboard 等基于 ref 的操作，无需坐标与像素匹配
+- ✨ 快照与 ref 强绑定，界面变化返回 STALE_REF / AMBIGUOUS_TARGET 促使重新观察验证
+- ✨ 默认 headless 操作，不移动指针不抢焦点；加 --headed 才使用物理输入
+- ✨ 跨平台：macOS 走 AX API、Windows 走 UI Automation、Linux 走 AT-SPI
+- ✨ 内置与版本匹配的 skills 指南和 --help，方便 Agent 自行学习用法
+- 👥 适合谁：构建桌面端 computer use Agent 的开发者，以及需要脚本化操作桌面应用的团队。
 
-`Rust` · Fork 1,093 · 🔗 [官网](https://agent-browser.dev/desktop)
+`Rust` · Fork 1,234 · 🔗 [官网](https://agent-browser.dev/desktop)
 
-### 7. [github/spec-kit](https://github.com/github/spec-kit) — ⭐ 147,495（今日 +808）
+### 7. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 11,648（今日 +546）
 
-> 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包
+> 面向并行 AI agent 工作流的 Git worktree 管理 CLI，让 worktree 像分支一样易用
 
-Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。
+Worktrunk 是一个用 Rust 写的 Git worktree 命令行工具。现在 Claude Code、Codex 这类 AI agent 能长时间无人值守地跑任务，开发者经常要同时管理 5 到 10 个以上的任务；git 原生 worktree 可以让每个 agent 拥有独立的工作目录，避免互相干扰，但用起来很麻烦，光是新建一个 worktree 就要把分支名重复输入三次，还得手动 cd 过去。Worktrunk 改用分支名来定位 worktree，路径由可配置的模板自动计算，并用 wt switch、wt remove、wt list 三条核心命令覆盖切换、创建、清理和状态查看，创建时还能顺带执行命令，直接启动 Claude。
 
-- ✨ 规范驱动开发（SDD）：从一份规范出发，贯穿规划、实现到收敛，产出可追溯
-- ✨ Bug 修复流程：定位并评估成因、限定修复范围、记录验证结果
-- ✨ 想法评估流程：用证据支撑给出继续投入、先澄清或止损的判断
-- ✨ 多代理集成：连接并随时切换不同的 AI 编码代理
-- ✨ 扩展机制：新增命令、质量门禁或完整流程，并可挂接到代理生命周期事件与命令前后钩子
-- ✨ 预设与项目级覆盖：改造模板、命令、术语和方法论，满足组织或合规要求
-- 👥 适合谁：使用 AI 编码代理、希望用规范与流程约束开发过程的个人开发者和团队
+- ✨ wt switch：按分支名切换 worktree，路径根据可配置模板自动计算，也接受 worktree 的实际路径
+- ✨ wt switch -c -x claude：一条命令完成创建 worktree、新建分支并直接拉起 AI agent，替代 git 的三步操作
+- ✨ wt remove：删除 worktree 的同时一并清理对应分支，无需先 cd 回主仓库再执行 git worktree remove
+- ✨ wt list：列出所有 worktree 及其状态，而原生 git worktree list 只给出路径
+- ✨ Hooks：在创建、移除等生命周期节点自动执行命令，把本地工作流自动化
+- ✨ 写时复制（copy-on-write）构建缓存，让多个并行工作副本共享同一份构建产物，降低磁盘与重建开销
+- 👥 适合谁：需要同时跑多个 Claude Code、Codex 等 AI agent 的开发者，以及频繁在多个分支间切换的 Git 用户
 
-`Python` · Fork 13,232 · 🔗 [官网](https://github.github.com/spec-kit/)
+`Rust` · Fork 445 · 🔗 [官网](https://worktrunk.dev)
 
-### 8. [The-PR-Agent/pr-agent](https://github.com/The-PR-Agent/pr-agent) — ⭐ 14,905（今日 +280）
+### 8. [lz4/lz4](https://github.com/lz4/lz4) — ⭐ 12,466（今日 +23）
 
-> 一个开源的 AI 代码评审 Agent，通过简单命令或 GitHub Action 自动审查 Pull Request。
+> 极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。
 
-PR-Agent 是一个开源的、AI 驱动的代码评审 Agent，也是 Qodo 社区维护的 legacy 项目（注意：它并非 Qodo 面向开源项目的免费版产品）。它解决的是代码评审耗时、容易遗漏、大 PR 难以人工通读的问题：你可以在 PR 里触发 /review、/improve、/ask 等命令，让模型自动给出评审意见、改进建议，或者直接回答关于这次变更的问题。接入方式很灵活：既可以添加一个 GitHub Action 工作流文件，也可以在本地用 pip 安装后通过 CLI 跑 
- pr-agent --pr_url ... review
- 这种命令；此外还支持 GitLab webhook、BitBucket、Azure DevOps、Gitea 等平台，可部署为 Docker、自托管或 webhook 服务。模型侧支持 OpenAI、Claude、Gemini、DeepSeek、Mistral，以及通过 LiteLLM 接入 Azure、Bedrock、Vertex、Ollama 等。项目强调快速低成本（每个工具一次 LLM 调用，约 30 秒）、用 PR Compression 策略处理超大 PR，以及基于 JSON 的 prompt 配置来做团队级定制，数据完全由自己掌控。
+LZ4 是一个用 C 写的无损压缩算法及其参考实现，核心卖点是「快到几乎不构成瓶颈」：单核压缩速度 500 MB/s 以上，解压可达数 GB/s，多核下常常直接撞上内存带宽。它适合那些压缩率不是第一诉求、但对延迟和吞吐极其敏感的场景——比如缓存、日志、网络传输、列存和游戏资源。用起来也很直接：`make && make install` 就能装上库和 `lz4` 命令行工具，也可以通过 CMake、Meson、Visual Studio 构建，或用 vcpkg 及各大发行版的包管理器安装。库采用 BSD 2-Clause 许可，命令行工具则是 GPL-2.0-or-later，商用集成时需要注意这个区别。
 
-- ✨ /review 自动对 PR 做代码评审，输出结构化的意见
-- ✨ /improve 针对改动给出具体的改进建议
-- ✨ /ask 用自然语言提问，回答关于这次 PR 的问题
-- ✨ /describe 自动生成 PR 标题与描述，便于写变更说明
-- ✨ PR Compression 策略，让超大的 PR 也能被有效处理
-- ✨ JSON 配置驱动的提示词定制，可调整评审类别与行为
-- 👥 适合谁：适合需要给团队 PR 流程加自动化评审的开发团队，以及想自托管、掌控数据和提示词的团队。
+- ✨ 极致速度：单核压缩 >500 MB/s、解压数 GB/s，多核可线性扩展，官方基准中解压速度远超 Snappy、zlib、Zstandard 同级别配置
+- ✨ 动态可调的 acceleration 因子：可以按需在压缩率和速度之间滑块式调节，同一份数据按场景选择快一点还是小一点
+- ✨ 附带高压缩版本 LZ4_HC：用更多 CPU 时间换取更高压缩率，但解压速度与普通版本完全一致，读多写少的场景可以放心用
+- ✨ 字典压缩支持：API 和命令行（-D）都能把任意文件当字典（只取末尾 64 KB），还能配合 Zstandard 的字典构建器显著提升小文件的压缩效果
+- ✨ 格式规范清晰且有文档：block 格式和 frame 格式都有独立文档，多块组成帧以支持任意长度的流式数据，保证不同实现之间可互操作
+- ✨ 生态完善：除 C 参考实现外还有 Java、C#、Python、Perl、Ruby 等多语言移植版本，构建系统覆盖 Make、CMake、Meson、VS 和 vcpkg
+- 👥 适合谁：适合对吞吐和延迟敏感的开发者：缓存/存储、日志管道、网络协议、数据库、游戏与嵌入式等场景。
 
-`Python` · Fork 2,100 · 🔗 [官网](https://www.pr-agent.ai)
+`C` · Fork 1,639 · 🔗 [官网](http://www.lz4.org)
 
-### 9. [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) — ⭐ 139,290（今日 +617）
+### 9. [google/skills](https://github.com/google/skills) — ⭐ 22,520（今日 +211）
 
-> 输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具。
+> Google 官方 Agent Skills 合集，让 AI 编程助手学会用 Google 云与 AI 产品干活。
 
-MoneyPrinterTurbo 是一个开源的 AI 短视频生成工具，专门解决从选题到成片的一系列制作工作。你只需给出一句话的主题或几个关键词，它就会调用大模型写出视频文案、提炼素材搜索词并匹配画面，再自动生成字幕、配上背景音乐，最后合成为高清短视频。项目同时提供 WebUI 和 API 两种使用方式，既能在网页里点几下出片，也能通过接口接入自己的生产流程批量产出；支持 Windows、macOS、Linux，提供简中、英文、日文文档，并适配 Kimi、火山引擎、Ofox 等多种模型服务。
+这是 Google 官方维护的 Agent Skills 仓库，把 Google Cloud、Gemini、Genkit、BigQuery 等产品的使用知识封装成 AI Agent 可以直接加载的技能包。它解决的问题很实际：AI 助手虽然会写代码，但不懂你的云上具体怎么配 IAM、怎么搭 RAG、怎么调 GKE 上的推理服务。安装只需一条 npx skills add google/skills，按提示选择技能、目标 Agent 和安装范围（项目级或全局），之后用 npx skills update 即可更新并清理废弃技能。
 
-- ✨ 输入主题或关键词一键成片，自动完成脚本、素材、字幕、配乐到合成成片的全流程
-- ✨ 大模型驱动文案创作，同时提炼素材搜索关键词并决定画面匹配，内容理解越准画面越贴题
-- ✨ 自动生成字幕并匹配背景音乐，输出高清短视频
-- ✨ 提供可视化 WebUI，无需写代码也能操作出片
-- ✨ 提供 API 接口，可接入自有系统做批量、自动化视频生产
-- ✨ 跨平台支持 Windows、macOS、Linux，提供简体中文、英文、日文文档，可灵活对接多家大模型与素材服务
-- 👥 适合谁：适合做短视频的自媒体、内容运营与营销人员，以及需要批量生产视频的开发者。
+- ✨ 一条命令 npx skills add google/skills 安装，可挑选单个技能或全量安装，并指定目标 Agent 与项目级/全局作用域
+- ✨ 覆盖 Google Cloud 入门三件套：IAM 认证授权、Onboarding、Foundation Builder 基础搭建
+- ✨ 多产品方案级技能：方案架构工作流、多 Agent 安全网关、RAG 企业搜索、AlloyDB 混合检索、无边界数据湖仓、n 层无服务器 Web 应用等
+- ✨ AI/ML 技能矩阵：Agent Platform 的模型部署、微调、Prompt 管理、RAG Engine、评测飞轮、故障排查，以及 Gemini API / Live API / Interactions API
+- ✨ Genkit 四语言开发技能：Dart、Go、JS、Python 各一份，按技术栈对号入座
+- ✨ 基础设施技能：Cloud Storage 基础/桶架构/诊断/FUSE、Compute Engine 预留实例、网络洞察、Application Design Center 设计部署，以及 GKE TPU 挂起与性能退化排障
+- 👥 适合谁：使用 AI 编程助手开发、且工作涉及 Google Cloud、Gemini 或 Genkit 的开发者与架构师。
 
-`Python` · Fork 22,221
+`Python` · Fork 1,897
 
-### 10. [garrytan/gstack](https://github.com/garrytan/gstack) — ⭐ 139,500（今日 +290）
+### 10. [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — ⭐ 46,093（今日 +150）
 
-> 把 Claude Code 变成一支虚拟工程团队的 23 个斜杠命令集
+> 给 AI Agent 用的浏览器自动化 CLI，用一条条 shell 命令驱动浏览器。
 
-gstack 是 YC 总裁 Garry Tan 开源、他自己每天都在用的 Claude Code 配置：23 个各自扮演明确角色的斜杠命令，覆盖 CEO 重新审视产品、工程经理锁定架构、设计师拦下“AI 味”界面、评审找出生产 bug、QA 开真实浏览器复现问题、安全官跑 OWASP/STRIDE 审计、发布工程师把 PR 发出去。全部是 Markdown 命令，MIT 协议免费。装好后先跑 /office-hours 讲清楚你在做什么，接着用 /review 和 /qa 检查当前分支，想要完整一轮冲刺就用 /autoplan 和 /ship。
+agent-browser 是一个 Rust 编写的原生命令行工具，让 AI Agent 像人一样操作浏览器：open 打开页面，snapshot 把页面压成带 @e1 这类 ref 的紧凑文本，Agent 按 ref 点击、填表，再重新快照确认结果，如此循环。浏览器在命令之间保持开启，每步只是一次短小的 shell 调用。它解决的是让 Agent 用文本而非截图理解页面、并稳定定位元素的问题：点击目标若被遮挡、禁用或不可见会直接报错而不是假成功。全局安装 npm 包后跑一次 agent-browser install 下载 Chrome for Testing 即可上手。
 
-- ✨ /office-hours 扮演 CEO：反驳你对问题的既有框架，产出后续技能都会读取的设计文档
-- ✨ /review 找出那些能通过 CI 却会在生产环境出问题的 bug，并顺手修掉明显的问题
-- ✨ /qa 打开真实浏览器，在 staging URL 上复现并修复 bug，也支持隔离的本地 API、CLI、定时任务和 webhook
-- ✨ /autoplan 端到端评审一份计划，/ship 负责跑测试、评审并提交 PR，串起完整冲刺
-- ✨ 安全官 /cso 执行 OWASP + STRIDE 审计，需要本机原生工具链
-- ✨ 团队模式：执行一条命令就把 gstack 写入仓库，队友自动获得，不提交任何副本文件，并自动检查更新，也可切换到 main 频道
-- 👥 适合谁：想继续亲自交付代码的技术型创始人/CEO、第一次用 Claude Code 需要结构化角色的新手、要在每个 PR 上做严格评审与发布的 tech lead 和资深工程师。
+- ✨ snapshot 把页面转成带 ref（如 @e1）的紧凑可访问性树文本，Agent 可直接引用操作
+- ✨ click、fill、type、press、hover、select、check、scroll、drag、upload 等完整交互命令
+- ✨ 支持 CSS 选择器、文本、XPath 和语义定位，例如按 role 和 name 查找按钮
+- ✨ 后台 daemon 常驻，浏览器在命令间不关闭，每个 --session 独立拥有自己的 daemon 和浏览器
+- ✨ 内置与 CLI 版本匹配的 skills（agent-browser skills get core），让 Agent 指令始终对得上当前版本
+- ✨ 可切换 Chrome for Testing、连接的 Chrome（--cdp/--auto-connect）、Lightpanda、Obscura、iOS 模拟器 Safari 及多家云浏览器
+- 👥 适合谁：构建浏览器自动化 Agent 的开发者，尤其是用 shell 或 MCP 驱动 Agent 的团队。
 
-`TypeScript` · Fork 20,647
+`Rust` · Fork 3,155 · 🔗 [官网](https://agent-browser.dev)
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) | 从企业元数据构建语义本体层，让 LLM 与 Agent 的数据查询可验证、可溯源 | `Python` | 5,768 | +2,050 |
-| 2 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 为并行 AI agent 工作流设计的 Git worktree 管理 CLI，让 wor… | `Rust` | 11,195 | +531 |
-| 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 日常自用的 AI 编码 agent 技能集，小而可组合，目标是做真… | `Shell` | 313,739 | +1,379 |
-| 4 | [floci-io/floci](https://github.com/floci-io/floci) | 免费开源的本地 AWS 模拟器，一条命令在 4566 端口跑起整套云服务 | `Java` | 29,826 | +1,090 |
-| 5 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 给 AI 编程 Agent 装上跨会话持久记忆的压缩系统，自动记录、摘要并回注上下文。 | `TypeScript` | 113,090 | +1,172 |
-| 6 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 让 AI agent 通过系统无障碍树读取并操作桌面应用的 CLI 工具，无需截图 | `Rust` | 15,740 | +2,470 |
-| 7 | [github/spec-kit](https://github.com/github/spec-kit) | 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包 | `Python` | 147,495 | +808 |
-| 8 | [The-PR-Agent/pr-agent](https://github.com/The-PR-Agent/pr-agent) | 一个开源的 AI 代码评审 Agent，通过简单命令或 GitHub Action 自动审… | `Python` | 14,905 | +280 |
-| 9 | [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具… | `Python` | 139,290 | +617 |
-| 10 | [garrytan/gstack](https://github.com/garrytan/gstack) | 把 Claude Code 变成一支虚拟工程团队的 23 个斜杠命令集 | `TypeScript` | 139,500 | +290 |
-| 11 | [FareedKhan-dev/kimi-k3-in-c](https://github.com/FareedKhan-dev/kimi-k3-in-c) | 用便携 C99 在单块 CPU、8 GB 内存上跑 2.78 万亿参数 Kimi K3 推… | `C` | 10,510 | +351 |
-| 12 | [JiaFeiMiao-K-Cat/DiscImageStudio](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio) | 把图片刻成光盘盘面可见图案的跨平台图像生成与刻录工具，支持 CD、DVD 与单层 BD-R | `C#` | 6,824 | +1,778 |
-| 13 | [MichaelCade/90DaysOfDevOps](https://github.com/MichaelCade/90DaysOfDevOps) | 一份从个人学习日志成长为结构化 DevOps 学习地图的开源课程，涵盖三年内容。 | `Shell` | 30,610 | +97 |
-| 14 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | 把快速请求、隐身浏览器、数据解析与并发爬取合一的 Python 爬虫框架 | `Python` | 96,979 | +2,005 |
-| 15 | [Thysrael/Horizon](https://github.com/Thysrael/Horizon) | 用 AI 把杂乱信息源压缩成每天一份中英双语简报的自托管新闻雷达。 | `Python` | 12,708 | +121 |
-| 16 | [scenario-labs/skills](https://github.com/scenario-labs/skills) | 给 AI 编程助手装上一整套 Scenario 内容生产能力，覆盖图像、视频、音频、3D … | `Python` | 2,611 | +224 |
+| 1 | [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业本体框架，为 LLM 与 Agent 构建语义化上下文层 | `Python` | 7,883 | +2,679 |
+| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 日常使用的 AI 编程 agent 技能集，小巧、可组合、可改造。 | `Shell` | 315,729 | +2,071 |
+| 3 | [garrytan/gstack](https://github.com/garrytan/gstack) | 把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出… | `TypeScript` | 140,160 | +612 |
+| 4 | [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright 和 AI 的闲鱼多任务实时监控系统，自带完整 Web 管理后台… | `Python` | 17,932 | +240 |
+| 5 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | Scrapling 是一个 Python 爬虫框架，把请求、浏览器渲染、解析与并发爬取合为… | `Python` | 98,337 | +1,655 |
+| 6 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 通过操作系统无障碍树让 AI Agent 看见并操作桌面应用的 CLI 与 C 库。 | `Rust` | 17,334 | +2,173 |
+| 7 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 面向并行 AI agent 工作流的 Git worktree 管理 CLI，让 work… | `Rust` | 11,648 | +546 |
+| 8 | [lz4/lz4](https://github.com/lz4/lz4) | 极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。 | `C` | 12,466 | +23 |
+| 9 | [google/skills](https://github.com/google/skills) | Google 官方 Agent Skills 合集，让 AI 编程助手学会用 Google… | `Python` | 22,520 | +211 |
+| 10 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 给 AI Agent 用的浏览器自动化 CLI，用一条条 shell 命令驱动浏览器。 | `Rust` | 46,093 | +150 |
+| 11 | [scenario-labs/skills](https://github.com/scenario-labs/skills) | 让 AI 编程代理通过 Scenario MCP 产出可交付的图像、视频、3D 和音频素材… | `Python` | 3,244 | +667 |
+| 12 | [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) | 一套开箱即用的 Agent Skills 合集，让 AI 编程助手获得设计、视频、图像与知… | `JavaScript` | 14,329 | +175 |
+| 13 | [microsoft/VibeVoice](https://github.com/microsoft/VibeVoice) | 微软开源的前沿语音 AI 模型家族，覆盖长音频语音识别与实时语音合成。 | `Python` | 56,232 | +223 |
+| 14 | [floci-io/floci](https://github.com/floci-io/floci) | 免费开源的本地 AWS 模拟器，一条 docker compose up 即可跑起全套云服… | `Java` | 30,608 | +779 |
+| 15 | [JiaFeiMiao-K-Cat/DiscImageStudio](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio) | 把图片转成光盘物理层数据，刻录后在 CD / DVD / BD 盘面显出肉眼可见图案的工具 | `C#` | 7,465 | +984 |
 
 <!-- TRENDING:END -->
 
