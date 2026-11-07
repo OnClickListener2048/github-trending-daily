@@ -17,192 +17,195 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-06
+# 🔥 GitHub 每日 Trending · 2026-11-07
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 15 个仓库
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 18 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 TOP 10（详细介绍）
 
-### 1. [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) — ⭐ 7,883（今日 +2,679）
+### 1. [zed-industries/zed](https://github.com/zed-industries/zed) — ⭐ 93,817（今日 +306）
 
-> NVIDIA 开源的企业本体框架，为 LLM 与 Agent 构建语义化上下文层
+> 由 Atom 与 Tree-sitter 作者打造的高性能多人协作代码编辑器
 
-Auto Ontology 是 NVIDIA 开源的 Python 框架（Apache 2.0），从企业元数据中构建语义化、图谱化的上下文层。Agent 能查数据库、能检索文档，却常常答错数字，因此可靠性才是关键。它告诉 Agent 数据存在哪里、代表什么含义、该不该用、怎么用、来自哪里，并跨系统统一对指标与实体的定义。开发者可通过 MCP、CLI 或 API 把这份上下文接入任意 Agent 框架，也可用 Docker Compose 或 Helm 一键起服务，配置 NVIDIA NIM 的 API Key 后，就能对 Wide World Importers 样例库做自然语言提问。
+Zed 是一款用 Rust 编写的高性能代码编辑器，出自 Atom 和 Tree-sitter 的作者团队。它要解决的核心问题是：传统 Electron 编辑器在启动速度、输入延迟和大文件处理上的卡顿，同时把实时多人协作做成编辑器的一等能力。Zed 目前已在 macOS、Linux、Windows 提供直接下载和包管理器安装，Web 版仍在推进中。想参与开发可以按平台文档在本地构建，项目主体采用 GPL-3.0-or-later 许可，部分组件为 Apache-2.0，贡献前需阅读 CONTRIBUTING.md。
 
-- ✨ 从企业元数据自动生成本体，也可接入已有本体与语义模型，构建 AI 就绪的知识图谱
-- ✨ 为指标、实体和关系提供可信的业务含义，并跨系统对齐不一致的定义
-- ✨ 用已认证的定义与数据血缘校验生成的查询，每个答案都附带来源溯源
-- ✨ 通过 MCP、CLI 和 API 把上下文暴露给任意 Agent 框架
-- ✨ 自然语言转 SQL 并直接执行，推理、嵌入、重排序均由 NVIDIA NIM 端点提供，可用托管服务或自托管
-- ✨ 把人工认证的修正与使用反馈回写本体，让共享上下文随每次提问持续改进
-- 👥 适合谁：适合做 Agent 分析应用的数据平台与 AI 工程师，以及需要可靠 NL-to-SQL 的团队
+- ✨ 高性能编辑体验：追求低输入延迟与快速启动，主打“思考速度写代码”
+- ✨ 多人实时协作：内置 multiplayer 能力，可与他人同时编辑同一份代码
+- ✨ 由 Atom 与 Tree-sitter 作者打造，延续其在编辑器与语法解析上的积累
+- ✨ 跨平台支持：macOS、Linux、Windows 均可下载或通过包管理器安装
+- ✨ 开源可构建：提供各平台开发文档，可自行从源码编译 Zed
+- ✨ 活跃的开源协作：有 CI 测试流程、贡献指南，团队也在公开招聘
+- 👥 适合谁：追求低延迟编辑体验、需要实时结对或团队协作的开发者，以及愿意参与开源编辑器建设的贡献者
 
-`Python` · Fork 634
+`Rust` · Fork 11,512 · 🔗 [官网](https://zed.dev)
 
-### 2. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 315,729（今日 +2,071）
+### 2. [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) — ⭐ 9,313（今日 +2,015）
 
-> Matt Pocock 日常使用的 AI 编程 agent 技能集，小巧、可组合、可改造。
+> NVIDIA 开源的企业本体框架，为 AI Agent 构建语义与知识图谱推理层，保证查询结果可信且可解释。
 
-这是 Matt Pocock 从其 .agents 目录公开的一套 agent 技能（skills），用于配合 Claude Code、Codex、GitHub Copilot、Gemini CLI、Cursor 等编程 agent 做“真正的工程”，而不是 vibe coding。它针对 GSD、BMAD、Spec-Kit 这类框架的痛点：这些框架接管流程的同时也拿走了开发者的控制权，流程一旦出 bug 就很难排查。这些技能刻意做小、可组合，并配一次性 /setup-matt-pocock-skills 初始化（选择 issue tracker、triage 标签、文档存放位置）。安装方式按 agent 分多种：插件会自动更新，skills.sh 则复制可编辑文件、需手动更新。
+Auto Ontology 是 NVIDIA 推出的 Python 开源库，用于解决 Agent 分析数据可靠性低的问题。它从企业元数据自动生成本体，打通已有语义模型，为指标、实体和关系提供统一可信的业务定义，并校验生成的查询是否符合认证口径、附带数据血缘。对开发者而言，它可作为 Agent 的上下文层，通过 MCP、CLI 和 API 接入任意 Agent 框架，还支持将人工修正回流本体，让共享上下文随使用持续改进，并附带 Web UI、RBAC 和 Helm/Docker 部署方案。
 
-- ✨ /grill-me 与 /grill-with-docs：开工前让 agent 反过来详细盘问你，先把需求对齐再动手，是作者最受欢迎的技能
-- ✨ 共享语言/术语表机制：为项目建立一份词汇表，让 agent 不用 20 个词表达 1 个词能说清的事，减少啰嗦输出
-- ✨ /triage 配合你在 setup 时指定的标签，对工单进行分类整理
-- ✨ /setup-matt-pocock-skills 一次性初始化：选 issue tracker（GitHub、GitLab、本地文件或自定义）、配置标签、指定文档保存位置
-- ✨ 技能小巧、可组合、与模型无关，鼓励改造成自己的版本
-- ✨ 覆盖 Claude Code、Codex、GitHub Copilot（CLI 与 VS Code）、Gemini CLI，以及通过 npx skills 支持 Cursor、opencode、devin、windsurf、amp、pi 等
-- 👥 适合谁：用 AI 编程 agent 开发真实项目、希望保留流程控制权的工程师
+- ✨ 从企业元数据自动生成本体，并连接已有的本体与语义模型，构建 AI 就绪的知识图谱
+- ✨ 为 Agent 提供指标、实体和关系的可信业务含义，调和跨系统的不一致定义
+- ✨ 基于认证定义和数据血缘校验生成的查询，每个答案都附带来源可追溯信息
+- ✨ 通过 MCP、CLI 和 API 向任意 Agent 框架暴露上下文
+- ✨ 自然语言查询结构化数据，自动转 SQL 并在已连接的数据库上执行
+- ✨ 将人工修正和实际使用情况回流本体，让共享上下文随提问不断改进
+- 👥 适合谁：需要为 LLM 或 Agent 工作流构建可信数据上下文层的数据工程师、AI 应用开发者与数据平台团队。
 
-`Shell` · Fork 26,424 · 🔗 [官网](https://aihero.dev/skills)
+`Python` · Fork 739
 
-### 3. [garrytan/gstack](https://github.com/garrytan/gstack) — ⭐ 140,160（今日 +612）
+### 3. [rails/rails](https://github.com/rails/rails) — ⭐ 59,055（今日 +142）
 
-> 把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出场的 23 个斜杠命令。
+> Ruby 生态的全栈 Web 框架，按 MVC 模式一站式构建数据库驱动的 Web 应用
 
-gstack 是 YC 总裁 Garry Tan 开源的 Claude Code 配置集，全部由 Markdown 斜杠命令组成，MIT 协议免费使用。它解决的问题很具体：直接用 AI 写代码时，提示词空白、缺少角色分工，AI 产出的设计千篇一律，代码能通过 CI 却会在生产环境出问题。gstack 给编码 Agent 装上固定角色——CEO 重新思考产品、工程经理确定架构、设计师挑出 AI 生成的俗套设计、审查者找生产 bug、QA 开真实浏览器复现问题、安全官跑 OWASP + STRIDE 审计、发布工程师提交 PR。安装只需两条粘贴命令，约 30 秒；推荐开启团队模式，团队成员共用同一版本并自动更新。
+Rails 是一个遵循 Model-View-Controller 模式的 Web 应用框架，目标是提供创建数据库驱动 Web 应用所需的一切。它把应用拆成三层：Model 层用 ActiveRecord::Base 派生的类把数据库行映射成对象并承载业务逻辑；View 层用 ERB 等模板渲染 HTML 或邮件正文；Controller 层接收 HTTP 请求、操作模型并返回 HTML、JSON、XML、PDF 等响应。上手很简单：gem install rails 安装，rails new myapp 建项目，cd myapp 后 bin/rails server 启动，访问 localhost:3000 即可看到启动页。
 
-- ✨ /office-hours：挑战你对产品的最初定义，产出一份供其他 skill 读取的设计文档
-- ✨ /review：审查任意分支改动，找出能过 CI 却在生产环境出问题的 bug，并直接修掉显而易见的问题
-- ✨ /qa：对 staging URL 或本地 API、CLI、定时任务、webhook 打开真实浏览器，复现并修复 bug
-- ✨ /autoplan 与 /ship：端到端评审整份计划，然后跑测试、review 并提交 PR，覆盖完整 sprint
-- ✨ /cso 安全官：执行 OWASP + STRIDE 审计，需要原生工具链，缺失时 setup 会明确提示并禁用
-- ✨ 团队模式：仓库内一条命令完成引导，无 vendored 文件、无版本漂移，每小时静默检查更新，跟随稳定版通道
-- 👥 适合谁：想继续亲手交付的技术型创始人、CEO，第一次用 Claude Code 需要结构化角色的人，以及要在每个 PR 上做严格评审、QA 与发布自动化的 tech lead 和 staff 工程师。
+- ✨ MVC 三层架构：模型承载业务逻辑，视图负责呈现，控制器处理 HTTP 请求与响应
+- ✨ Active Record 把数据库行映射为对象，并提供业务逻辑方法
+- ✨ Action View 支持 ERB 等多种模板格式，可用于页面和邮件正文渲染
+- ✨ Action Pack（Action Dispatch 负责路由，Action Controller 负责控制器）处理请求分发与多格式响应
+- ✨ Action Mailer 生成并发送邮件，Action Mailbox 在应用内接收邮件
+- ✨ Active Job 声明后台任务并可运行在多种队列后端，Action Cable 集成 WebSocket
+- 👥 适合谁：适合用 Ruby 构建数据库驱动 Web 应用的开发者，尤其是希望以约定优于配置快速起步的团队
 
-`TypeScript` · Fork 20,707
+`Ruby` · Fork 23,833 · 🔗 [官网](https://rubyonrails.org)
 
-### 4. [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) — ⭐ 17,932（今日 +240）
+### 4. [mpv-player/mpv](https://github.com/mpv-player/mpv) — ⭐ 37,928（今日 +37）
 
-> 基于 Playwright 和 AI 的闲鱼多任务实时监控系统，自带完整 Web 管理后台，从海量商品中筛出心仪好物。
+> 一款免费开源的命令行媒体播放器，支持多种格式、编解码器与字幕。
 
-这是一个用 Python 写的闲鱼商品监控工具。你在 Web 界面里建任务，设定关键词、价格区间、包邮、发布时间、省市区域等筛选条件，系统用 Playwright 自动搜索闲鱼，把新出现的商品详情和卖家信息抓下来，交给多模态 AI 模型按你写的标准判断值不值得买，推荐的就通过 ntfy.sh、企业微信、Bark、Telegram、Webhook 推给你。支持多任务并发、Cron 定时调度、多账号绑定和代理轮换，遇到风控会自动换号重试。Docker 一键部署，镜像内置 Chromium，开箱即用。
+mpv 是一款自由软件的命令行媒体播放器，支持大量媒体文件格式、音视频编解码器和字幕类型。它适合喜欢用命令行精确控制播放、又想自由组合功能的用户。你可以在终端直接运行 mpv 打开文件，也可以用配置文件、Lua 脚本和命令行参数深度定制播放行为；默认集成的 OSC 提供基础界面。它依赖 FFmpeg、libass、libplacebo 等库，官方建议使用较新的 Linux、Windows 10 1607+ 或 macOS 10.15+，并且需要性能较好的 CPU 和 GPU；如果在低功耗设备上播放卡顿，可以用 --profile=fast 改善。发布版大约每年发布一至两次。
 
-- ✨ Web 可视化管理：任务管理、账号管理、AI 标准编辑、运行日志、结果浏览一站式操作
-- ✨ AI 驱动：用自然语言描述需求即可异步生成分析标准，再由多模态模型深度分析商品图文
-- ✨ 多任务并发：每个任务独立配置关键词、价格、筛选条件和 AI Prompt
-- ✨ 高级筛选：包邮、新发布时间范围、省/市/区三级区域筛选
-- ✨ 多渠道即时通知：ntfy.sh、企业微信、Bark、Telegram、Webhook
-- ✨ Cron 定时调度、多账号绑定与代理池轮换，风控失败自动重试并带任务熔断保护
-- 👥 适合谁：想蹲守闲鱼捡漏、盯特定商品的买家，以及需要长期监控商品行情的开发者和小团队。
+- ✨ 命令行播放，支持广泛的媒体文件格式、音视频编解码器和字幕类型
+- ✨ 支持 --hwdec 显式启用硬件解码
+- ✨ 可用 --profile=fast 在低性能 GPU 上平滑播放
+- ✨ 提供 OSC 屏幕控制器伪图形界面，依赖 Lua 脚本实现
+- ✨ 支持用户脚本扩展和大量可配置选项
+- ✨ 通过 meson 构建，可搭配 mpv-build 编译最新 FFmpeg、libass 并静态链接
+- 👥 适合谁：适合习惯命令行、需要精细控制和高可定制性的开发者与高级用户。
 
-`Python` · Fork 2,973
+`C` · Fork 3,635 · 🔗 [官网](https://mpv.io)
 
-### 5. [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) — ⭐ 98,337（今日 +1,655）
+### 5. [rust-lang/rust](https://github.com/rust-lang/rust) — ⭐ 121,515（今日 +192）
 
-> Scrapling 是一个 Python 爬虫框架，把请求、浏览器渲染、解析与并发爬取合为一体。
+> Rust 官方主仓库：编译器、标准库与文档的同一棵源码树
 
-Scrapling 想做的是把网页抓取的整条链路收进一个库：用普通 HTTP 请求拿静态页面，用具备反检测能力的浏览器渲染 JavaScript、和页面交互，还能顺带抓取页面背后 API 调用返回的数据。它解决的是开发者平时要在 requests、Playwright、解析库、爬虫调度之间来回拼装的问题——现在用同一套 API 就能从单次请求扩展到整站爬取，支持可复用会话、代理轮换、自动重试、暂停与恢复，以及内置的数据导出。除了 Python 代码，它也能从命令行运行，或通过 MCP server 和 Agent Skill 交给 AI agent 调用，甚至把整站内容整理成干净的 Markdown。
+这是 Rust 语言的主源码仓库，包含编译器（rustc）、标准库和官方文档，也就是说，你日常用的 rustc 与 std 就是从这里构建出来的。它要解决的问题很直接：让开发者用一门语言同时拿到 C/C++ 级别的性能、内存与线程安全，以及现代工具链的开发体验。普通用户不必编译源码，按《The Book》的 "Installation" 一章装的发行版即可；真的想从源码构建，请看 INSTALL.md，但官方并不推荐。想参与贡献的开发者可以从 CONTRIBUTING.md 和 rustc-dev-guide 入手。
 
-- ✨ 统一抓取入口：支持静态 HTTP 请求与可渲染 JavaScript、可交互的隐身浏览器
-- ✨ 强大的选择器解析能力，从页面中精准提取所需字段
-- ✨ 并发爬虫（Spiders）：可复用会话、代理轮换、自动重试、暂停与恢复
-- ✨ 内置数据导出，便于把抓取结果整理成可用格式
-- ✨ 同时提供 CLI 命令行与 Python API 两种使用方式
-- ✨ 提供 MCP server 与 Agent Skill，可直接接入 AI agent 工作流
-- 👥 适合谁：需要从单页提取到整站采集的 Python 开发者、数据工程师，以及想把抓取能力交给 AI agent 使用的团队。
+- ✨ rustc 编译器：依托类型系统与所有权模型，在编译期消除内存与并发错误，并提供清晰的诊断信息
+- ✨ 标准库：与编译器同步演进的 core/std 实现，覆盖关键服务、嵌入式设备等场景
+- ✨ 官方文档体系：《The Book》、语言参考与安装入门指南，按步骤可直接上手
+- ✨ 完整配套工具：Cargo 包管理与构建、rustfmt 自动格式化、Clippy 静态检查、rust-analyzer 编辑器支持
+- ✨ 性能与内存效率：运行快、占用低，并且容易与其它语言集成
+- ✨ 贡献者路径：CONTRIBUTING.md 与 rustc-dev-guide 详细讲解编译器架构与参与方式
+- 👥 适合谁：想用 Rust 写高性能、高可靠软件的开发者，以及准备给编译器提交 PR 的贡献者
 
-`Python` · Fork 10,299 · 🔗 [官网](https://scrapling.readthedocs.io/en/latest/)
+`Rust` · Fork 17,369 · 🔗 [官网](https://www.rust-lang.org)
 
-### 6. [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) — ⭐ 17,334（今日 +2,173）
+### 6. [react/react](https://github.com/react/react) — ⭐ 252,304（今日 +248）
 
-> 通过操作系统无障碍树让 AI Agent 看见并操作桌面应用的 CLI 与 C 库。
+> 用于构建 Web 与原生用户界面的 JavaScript 库，让交互界面变得声明式、可组合。
 
-agent-desktop 是 Vercel Labs 出品的桌面自动化工具，它让 AI Agent 具备 computer use 能力，但完全不用截图和像素匹配。它把应用的 accessibility tree 读成 JSON，并为每个可操作元素分配一个 ref；Agent 点击或输入某个 ref，再重新观察界面确认结果，如此循环。整个控制循环由调用方自己实现，工具本身不含模型。它同时提供 CLI 和 C 库，覆盖 macOS、Windows、Linux 三大平台，默认以 headless 方式驱动，不移动鼠标也不抢焦点。
+React 是 Facebook 开源的 JavaScript UI 库，核心解决的是「数据变化时如何高效更新界面」这个问题：你只需为每个状态描述界面应该长什么样，React 负责在数据变化时把正确的组件重新渲染出来，代码因此更可预测、更好调试。它采用组件化思路，把各自管理状态的封装组件组合成复杂界面，组件逻辑用 JavaScript 编写而非模板，数据和状态不落在 DOM 里。它不绑定技术栈，可渐进式引入到已有项目，也能通过 Node 做服务端渲染、通过 React Native 开发移动端应用。官方提供从 Quick Start、井字棋教程到 API 参考的完整文档，示例中用 JSX 描述结构，但 JSX 并非必需。
 
-- ✨ 把桌面应用的无障碍树解析为 JSON 快照，每个可交互元素带唯一 ref
-- ✨ 支持 click、type、set-value、clipboard 等基于 ref 的操作，无需坐标与像素匹配
-- ✨ 快照与 ref 强绑定，界面变化返回 STALE_REF / AMBIGUOUS_TARGET 促使重新观察验证
-- ✨ 默认 headless 操作，不移动指针不抢焦点；加 --headed 才使用物理输入
-- ✨ 跨平台：macOS 走 AX API、Windows 走 UI Automation、Linux 走 AT-SPI
-- ✨ 内置与版本匹配的 skills 指南和 --help，方便 Agent 自行学习用法
-- 👥 适合谁：构建桌面端 computer use Agent 的开发者，以及需要脚本化操作桌面应用的团队。
+- ✨ 声明式渲染：为每个状态设计视图，数据变化时自动高效更新界面
+- ✨ 组件化开发：构建自带状态管理的封装组件，再组合成复杂 UI
+- ✨ 渐进式采用：可以从一个小组件开始，按需引入到现有项目中
+- ✨ 跨端能力：同一套思路可做 Web、服务端渲染（Node）和移动端（React Native）
+- ✨ JSX 语法：用类似 HTML 的写法描述界面，提升可读性（非强制）
+- ✨ 完善的官方文档与示例：Quick Start、教程、Thinking in React、API 参考等
+- 👥 适合谁：前端开发者、需要构建交互式 Web 界面或跨端应用的团队，以及想渐进改造现有项目的工程师。
 
-`Rust` · Fork 1,234 · 🔗 [官网](https://agent-browser.dev/desktop)
+`JavaScript` · Fork 51,830 · 🔗 [官网](https://react.dev)
 
-### 7. [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) — ⭐ 11,648（今日 +546）
+### 7. [angular/angular](https://github.com/angular/angular) — ⭐ 101,419（今日 +135）
 
-> 面向并行 AI agent 工作流的 Git worktree 管理 CLI，让 worktree 像分支一样易用
+> Angular 是面向现代 Web 开发者的跨平台开发平台，用 TypeScript 构建移动端和桌面端 Web 应用。
 
-Worktrunk 是一个用 Rust 写的 Git worktree 命令行工具。现在 Claude Code、Codex 这类 AI agent 能长时间无人值守地跑任务，开发者经常要同时管理 5 到 10 个以上的任务；git 原生 worktree 可以让每个 agent 拥有独立的工作目录，避免互相干扰，但用起来很麻烦，光是新建一个 worktree 就要把分支名重复输入三次，还得手动 cd 过去。Worktrunk 改用分支名来定位 worktree，路径由可配置的模板自动计算，并用 wt switch、wt remove、wt list 三条核心命令覆盖切换、创建、清理和状态查看，创建时还能顺带执行命令，直接启动 Claude。
+Angular 是一个基于 TypeScript/JavaScript 的 Web 应用开发平台，目标是让开发者「有底气地交付 Web 应用」。它提供从项目脚手架、组件与模板、表单、路由懒加载到服务端渲染、动画、Angular Elements 的完整方案，并配套 Angular CLI 与 Angular Material 生态。上手方式很直接：全局安装 @angular/cli，用 ng new 创建工程，再 ng serve 本地运行，五分钟即可跑通第一个应用。官方文档站 angular.dev 覆盖入门、架构、API 与进阶主题，升级也有专门的 update guide。
 
-- ✨ wt switch：按分支名切换 worktree，路径根据可配置模板自动计算，也接受 worktree 的实际路径
-- ✨ wt switch -c -x claude：一条命令完成创建 worktree、新建分支并直接拉起 AI agent，替代 git 的三步操作
-- ✨ wt remove：删除 worktree 的同时一并清理对应分支，无需先 cd 回主仓库再执行 git worktree remove
-- ✨ wt list：列出所有 worktree 及其状态，而原生 git worktree list 只给出路径
-- ✨ Hooks：在创建、移除等生命周期节点自动执行命令，把本地工作流自动化
-- ✨ 写时复制（copy-on-write）构建缓存，让多个并行工作副本共享同一份构建产物，降低磁盘与重建开销
-- 👥 适合谁：需要同时跑多个 Claude Code、Codex 等 AI agent 的开发者，以及频繁在多个分支间切换的 Git 用户
+- ✨ Angular CLI：一条命令完成工程创建、本地开发与构建
+- ✨ 组件与模板体系，配合架构指南组织可扩展应用
+- ✨ 表单支持，覆盖用户输入与校验场景
+- ✨ 路由与懒加载组件，按需加载控制体积
+- ✨ 服务端渲染（SSR）与 Angular Elements 自定义元素
+- ✨ 动画能力与 Schematics 自动化代码生成
+- 👥 适合谁：适合用 TypeScript 构建中大型 Web 应用的开发者与团队，尤其是需要长期维护、跨端交付和完整工程化支持的项目。
 
-`Rust` · Fork 445 · 🔗 [官网](https://worktrunk.dev)
+`TypeScript` · Fork 28,914 · 🔗 [官网](https://angular.dev)
 
-### 8. [lz4/lz4](https://github.com/lz4/lz4) — ⭐ 12,466（今日 +23）
+### 8. [symfony/symfony](https://github.com/symfony/symfony) — ⭐ 31,475（今日 +128）
 
-> 极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。
+> Symfony 是面向 Web 与控制台应用的 PHP 框架，也是一套可复用的 PHP 组件库。
 
-LZ4 是一个用 C 写的无损压缩算法及其参考实现，核心卖点是「快到几乎不构成瓶颈」：单核压缩速度 500 MB/s 以上，解压可达数 GB/s，多核下常常直接撞上内存带宽。它适合那些压缩率不是第一诉求、但对延迟和吞吐极其敏感的场景——比如缓存、日志、网络传输、列存和游戏资源。用起来也很直接：`make && make install` 就能装上库和 `lz4` 命令行工具，也可以通过 CMake、Meson、Visual Studio 构建，或用 vcpkg 及各大发行版的包管理器安装。库采用 BSD 2-Clause 许可，命令行工具则是 GPL-2.0-or-later，商用集成时需要注意这个区别。
+Symfony 既是一个完整的 PHP 框架，用来开发 Web 应用和命令行应用，也是一组可以单独拿来用的 PHP 组件；大量流行 PHP 项目都在底层依赖它。它解决的是重复造轮子的问题：你可以用整套框架快速搭建业务，也可以在任意项目里按需引入单个组件。安装走 Composer，版本严格遵循语义化版本，并提供 LTS 长期支持版和可预期的发布流程，方便企业做升级规划。
 
-- ✨ 极致速度：单核压缩 >500 MB/s、解压数 GB/s，多核可线性扩展，官方基准中解压速度远超 Snappy、zlib、Zstandard 同级别配置
-- ✨ 动态可调的 acceleration 因子：可以按需在压缩率和速度之间滑块式调节，同一份数据按场景选择快一点还是小一点
-- ✨ 附带高压缩版本 LZ4_HC：用更多 CPU 时间换取更高压缩率，但解压速度与普通版本完全一致，读多写少的场景可以放心用
-- ✨ 字典压缩支持：API 和命令行（-D）都能把任意文件当字典（只取末尾 64 KB），还能配合 Zstandard 的字典构建器显著提升小文件的压缩效果
-- ✨ 格式规范清晰且有文档：block 格式和 frame 格式都有独立文档，多块组成帧以支持任意长度的流式数据，保证不同实现之间可互操作
-- ✨ 生态完善：除 C 参考实现外还有 Java、C#、Python、Perl、Ruby 等多语言移植版本，构建系统覆盖 Make、CMake、Meson、VS 和 vcpkg
-- 👥 适合谁：适合对吞吐和延迟敏感的开发者：缓存/存储、日志管道、网络协议、数据库、游戏与嵌入式等场景。
+- ✨ 完整框架与可复用组件并行，组件可脱离框架单独使用
+- ✨ 同时支持 Web 应用与 Console 命令行应用开发
+- ✨ 通过 Composer 安装，文档中明确列出环境要求
+- ✨ 严格遵循语义化版本，提供 LTS 长期支持版本
+- ✨ 发布流程可预期，便于企业规划升级
+- ✨ 官方学习资源齐全：入门指南、Demo 应用、Fast Track 书籍、组件文档与最佳实践
+- 👥 适合谁：适合用 PHP 开发 Web 或命令行应用的开发者，尤其是需要长期维护、看重稳定版本节奏的团队。
 
-`C` · Fork 1,639 · 🔗 [官网](http://www.lz4.org)
+`PHP` · Fork 9,949 · 🔗 [官网](https://symfony.com)
 
-### 9. [google/skills](https://github.com/google/skills) — ⭐ 22,520（今日 +211）
+### 9. [prometheus/prometheus](https://github.com/prometheus/prometheus) — ⭐ 67,233（今日 +148）
 
-> Google 官方 Agent Skills 合集，让 AI 编程助手学会用 Google 云与 AI 产品干活。
+> 云原生监控系统与时序数据库，定时抓取指标、评估规则并触发告警。
 
-这是 Google 官方维护的 Agent Skills 仓库，把 Google Cloud、Gemini、Genkit、BigQuery 等产品的使用知识封装成 AI Agent 可以直接加载的技能包。它解决的问题很实际：AI 助手虽然会写代码，但不懂你的云上具体怎么配 IAM、怎么搭 RAG、怎么调 GKE 上的推理服务。安装只需一条 npx skills add google/skills，按提示选择技能、目标 Agent 和安装范围（项目级或全局），之后用 npx skills update 即可更新并清理废弃技能。
+Prometheus 是 CNCF 旗下的系统与服务监控系统，同时也是一个时序数据库。它按固定间隔从配置的目标拉取指标，用规则表达式做评估，把结果展示出来，并在满足条件时触发告警。它想解决的核心问题，是把指标采集、存储、查询和告警整合到一套可以独立运行的系统里：不依赖分布式存储，单节点就能自治工作。上手也很简单，可以直接下载预编译二进制，或者用 Docker 一条命令跑起来（映射 9090 端口后访问 localhost:9090），也可以从源码用 go install 或 make build 构建；构建时会把 Web 资源一起编译进去。配置通过 --config.file 指定 YAML 文件，仓库里提供了示例配置。
 
-- ✨ 一条命令 npx skills add google/skills 安装，可挑选单个技能或全量安装，并指定目标 Agent 与项目级/全局作用域
-- ✨ 覆盖 Google Cloud 入门三件套：IAM 认证授权、Onboarding、Foundation Builder 基础搭建
-- ✨ 多产品方案级技能：方案架构工作流、多 Agent 安全网关、RAG 企业搜索、AlloyDB 混合检索、无边界数据湖仓、n 层无服务器 Web 应用等
-- ✨ AI/ML 技能矩阵：Agent Platform 的模型部署、微调、Prompt 管理、RAG Engine、评测飞轮、故障排查，以及 Gemini API / Live API / Interactions API
-- ✨ Genkit 四语言开发技能：Dart、Go、JS、Python 各一份，按技术栈对号入座
-- ✨ 基础设施技能：Cloud Storage 基础/桶架构/诊断/FUSE、Compute Engine 预留实例、网络洞察、Application Design Center 设计部署，以及 GKE TPU 挂起与性能退化排障
-- 👥 适合谁：使用 AI 编程助手开发、且工作涉及 Google Cloud、Gemini 或 Genkit 的开发者与架构师。
+- ✨ 多维数据模型：时间序列由指标名和一组键值维度定义，便于灵活切片与聚合
+- ✨ PromQL：充分利用多维度的强大且灵活的查询语言
+- ✨ 不依赖分布式存储，单个服务节点即可自治运行
+- ✨ 基于 HTTP 的拉取（pull）模型采集时序数据，批处理任务可通过中间网关推送
+- ✨ 通过服务发现或静态配置自动发现抓取目标，并内置多种服务发现插件，可用 Go build tags 裁剪
+- ✨ 支持多种图形与仪表盘方式，并支持分层与水平联邦
+- 👥 适合谁：适合需要自建指标监控与告警体系的运维、SRE、后端与云原生基础设施开发者。
 
-`Python` · Fork 1,897
+`Go` · Fork 10,989 · 🔗 [官网](https://prometheus.io/)
 
-### 10. [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — ⭐ 46,093（今日 +150）
+### 10. [google/skills](https://github.com/google/skills) — ⭐ 22,943（今日 +534）
 
-> 给 AI Agent 用的浏览器自动化 CLI，用一条条 shell 命令驱动浏览器。
+> Google 官方 Agent Skills 集合，把 Google 产品与技术能力封装成 AI 编程助手可调用的技能包。
 
-agent-browser 是一个 Rust 编写的原生命令行工具，让 AI Agent 像人一样操作浏览器：open 打开页面，snapshot 把页面压成带 @e1 这类 ref 的紧凑文本，Agent 按 ref 点击、填表，再重新快照确认结果，如此循环。浏览器在命令之间保持开启，每步只是一次短小的 shell 调用。它解决的是让 Agent 用文本而非截图理解页面、并稳定定位元素的问题：点击目标若被遮挡、禁用或不可见会直接报错而不是假成功。全局安装 npm 包后跑一次 agent-browser install 下载 Chrome for Testing 即可上手。
+这个仓库把 Google Cloud、Gemini、BigQuery、GKE、Cloud Storage 等产品的使用经验整理成结构化的 Agent Skill，让 Claude Code、Cursor 这类 AI 编程助手在遇到相关任务时能直接调用对应的专业流程，而不是靠模型凭记忆瞎猜。用 npx skills add google/skills 一条命令即可安装，并可以交互式地选择要装哪些技能、配置给哪些 agent、以及装到项目级还是全局；之后用 npx skills update 统一升级，还能顺带清理废弃技能。技能覆盖面很广，从 GCP 入门、IAM 认证授权、解决方案架构设计，到 RAG、多智能体安全、模型微调、TPU 排障都有对应条目。
 
-- ✨ snapshot 把页面转成带 ref（如 @e1）的紧凑可访问性树文本，Agent 可直接引用操作
-- ✨ click、fill、type、press、hover、select、check、scroll、drag、upload 等完整交互命令
-- ✨ 支持 CSS 选择器、文本、XPath 和语义定位，例如按 role 和 name 查找按钮
-- ✨ 后台 daemon 常驻，浏览器在命令间不关闭，每个 --session 独立拥有自己的 daemon 和浏览器
-- ✨ 内置与 CLI 版本匹配的 skills（agent-browser skills get core），让 Agent 指令始终对得上当前版本
-- ✨ 可切换 Chrome for Testing、连接的 Chrome（--cdp/--auto-connect）、Lightpanda、Obscura、iOS 模拟器 Safari 及多家云浏览器
-- 👥 适合谁：构建浏览器自动化 Agent 的开发者，尤其是用 shell 或 MCP 驱动 Agent 的团队。
+- ✨ 一条 npx 命令交互式安装，可按技能、目标 agent 和安装范围（项目级/全局）自由选择
+- ✨ npx skills update 统一升级已装技能，并支持清理过时条目
+- ✨ Google Cloud 入门系列：IAM 认证授权、Onboarding、Foundation Builder 基础搭建
+- ✨ AI/ML 全链路技能：模型部署、微调、Prompt 管理、RAG Engine、模型注册表、推理与故障排查
+- ✨ Gemini 相关技能：Gemini API、LiveAPI 实时流、Interactions API、托管 Agent API
+- ✨ Genkit 多语言开发技能，覆盖 Dart、Go、JS、Python 四套 SDK
+- 👥 适合谁：使用 Google Cloud 或 Gemini 生态开发、希望让 AI 编程助手掌握官方最佳实践的开发者与架构师。
 
-`Rust` · Fork 3,155 · 🔗 [官网](https://agent-browser.dev)
+`Python` · Fork 1,929
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业本体框架，为 LLM 与 Agent 构建语义化上下文层 | `Python` | 7,883 | +2,679 |
-| 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 日常使用的 AI 编程 agent 技能集，小巧、可组合、可改造。 | `Shell` | 315,729 | +2,071 |
-| 3 | [garrytan/gstack](https://github.com/garrytan/gstack) | 把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出… | `TypeScript` | 140,160 | +612 |
-| 4 | [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor) | 基于 Playwright 和 AI 的闲鱼多任务实时监控系统，自带完整 Web 管理后台… | `Python` | 17,932 | +240 |
-| 5 | [D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) | Scrapling 是一个 Python 爬虫框架，把请求、浏览器渲染、解析与并发爬取合为… | `Python` | 98,337 | +1,655 |
-| 6 | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop) | 通过操作系统无障碍树让 AI Agent 看见并操作桌面应用的 CLI 与 C 库。 | `Rust` | 17,334 | +2,173 |
-| 7 | [max-sixty/worktrunk](https://github.com/max-sixty/worktrunk) | 面向并行 AI agent 工作流的 Git worktree 管理 CLI，让 work… | `Rust` | 11,648 | +546 |
-| 8 | [lz4/lz4](https://github.com/lz4/lz4) | 极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。 | `C` | 12,466 | +23 |
-| 9 | [google/skills](https://github.com/google/skills) | Google 官方 Agent Skills 合集，让 AI 编程助手学会用 Google… | `Python` | 22,520 | +211 |
-| 10 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 给 AI Agent 用的浏览器自动化 CLI，用一条条 shell 命令驱动浏览器。 | `Rust` | 46,093 | +150 |
-| 11 | [scenario-labs/skills](https://github.com/scenario-labs/skills) | 让 AI 编程代理通过 Scenario MCP 产出可交付的图像、视频、3D 和音频素材… | `Python` | 3,244 | +667 |
-| 12 | [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) | 一套开箱即用的 Agent Skills 合集，让 AI 编程助手获得设计、视频、图像与知… | `JavaScript` | 14,329 | +175 |
-| 13 | [microsoft/VibeVoice](https://github.com/microsoft/VibeVoice) | 微软开源的前沿语音 AI 模型家族，覆盖长音频语音识别与实时语音合成。 | `Python` | 56,232 | +223 |
-| 14 | [floci-io/floci](https://github.com/floci-io/floci) | 免费开源的本地 AWS 模拟器，一条 docker compose up 即可跑起全套云服… | `Java` | 30,608 | +779 |
-| 15 | [JiaFeiMiao-K-Cat/DiscImageStudio](https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio) | 把图片转成光盘物理层数据，刻录后在 CD / DVD / BD 盘面显出肉眼可见图案的工具 | `C#` | 7,465 | +984 |
+| 1 | [zed-industries/zed](https://github.com/zed-industries/zed) | 由 Atom 与 Tree-sitter 作者打造的高性能多人协作代码编辑器 | `Rust` | 93,817 | +306 |
+| 2 | [NVIDIA/auto-ontology](https://github.com/NVIDIA/auto-ontology) | NVIDIA 开源的企业本体框架，为 AI Agent 构建语义与知识图谱推理层，保证查询… | `Python` | 9,313 | +2,015 |
+| 3 | [rails/rails](https://github.com/rails/rails) | Ruby 生态的全栈 Web 框架，按 MVC 模式一站式构建数据库驱动的 Web 应用 | `Ruby` | 59,055 | +142 |
+| 4 | [mpv-player/mpv](https://github.com/mpv-player/mpv) | 一款免费开源的命令行媒体播放器，支持多种格式、编解码器与字幕。 | `C` | 37,928 | +37 |
+| 5 | [rust-lang/rust](https://github.com/rust-lang/rust) | Rust 官方主仓库：编译器、标准库与文档的同一棵源码树 | `Rust` | 121,515 | +192 |
+| 6 | [react/react](https://github.com/react/react) | 用于构建 Web 与原生用户界面的 JavaScript 库，让交互界面变得声明式、可组合… | `JavaScript` | 252,304 | +248 |
+| 7 | [angular/angular](https://github.com/angular/angular) | Angular 是面向现代 Web 开发者的跨平台开发平台，用 TypeScript 构建… | `TypeScript` | 101,419 | +135 |
+| 8 | [symfony/symfony](https://github.com/symfony/symfony) | Symfony 是面向 Web 与控制台应用的 PHP 框架，也是一套可复用的 PHP 组… | `PHP` | 31,475 | +128 |
+| 9 | [prometheus/prometheus](https://github.com/prometheus/prometheus) | 云原生监控系统与时序数据库，定时抓取指标、评估规则并触发告警。 | `Go` | 67,233 | +148 |
+| 10 | [google/skills](https://github.com/google/skills) | Google 官方 Agent Skills 集合，把 Google 产品与技术能力封装成… | `Python` | 22,943 | +534 |
+| 11 | [microsoft/vscode](https://github.com/microsoft/vscode) | 微软与社区共同开发的跨平台开源代码编辑器，VS Code 的上游源码仓库。 | `TypeScript` | 195,076 | +301 |
+| 12 | [lz4/lz4](https://github.com/lz4/lz4) | 极致速度的无损压缩算法，单核压缩超 500 MB/s，解压可达数 GB/s | `C` | 12,644 | +315 |
+| 13 | [nushell/nushell](https://github.com/nushell/nushell) | Nushell 是一款用 Rust 编写的结构化数据 Shell，把管道从文本流升级为带类… | `Rust` | 41,019 | +131 |
+| 14 | [etcd-io/etcd](https://github.com/etcd-io/etcd) | 基于 Raft 的分布式可靠键值存储，为分布式系统保存最关键的那部分数据 | `Go` | 52,640 | +128 |
+| 15 | [openssl/openssl](https://github.com/openssl/openssl) | 商业级、全功能的开源 TLS/DTLS/QUIC 与通用密码学工具包 | `C` | 31,330 | +26 |
+| 16 | [mattpocock/skills](https://github.com/mattpocock/skills) | Matt Pocock 日常实战使用的 AI 编码 agent 技能集，小巧、可组合、可自… | `Shell` | 316,917 | +2,070 |
+| 17 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 把编码助手变成安全审计员的多阶段审计技能，产出可机器校验的发现 | `JavaScript` | 64,417 | +2,548 |
+| 18 | [astral-sh/ruff](https://github.com/astral-sh/ruff) | 用 Rust 重写的超快 Python linter 与格式化工具，一个工具替代 Flak… | `Rust` | 50,751 | +169 |
 
 <!-- TRENDING:END -->
 
