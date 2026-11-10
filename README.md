@@ -19,12 +19,12 @@
 
 # 🔥 GitHub 每日 Trending · 2026-11-10
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 12 个仓库
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 12 个仓库，另补充 3 个榜单外 trending 新项目
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 3. [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐ 114,770（今日 +465）
+### 3. [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐ 114,779（今日 +465）
 
 > 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。
 
@@ -38,9 +38,9 @@
 - ✨ 把项目级的硬性约束集中到 /constraints：一次决定、处处强制执行，避免规则散落
 - 👥 适合谁：使用 Claude Code、Cursor、Codex 等 AI 编程代理，希望让代理稳定产出生产级代码的开发者与团队。
 
-`JavaScript` · Fork 11,994 · 🔗 [官网](https://skills.addy.ie)
+`JavaScript` · Fork 11,996 · 🔗 [官网](https://skills.addy.ie)
 
-### 4. [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) — ⭐ 20,244（今日 +530）
+### 4. [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) — ⭐ 20,249（今日 +530）
 
 > Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏览器与电脑操作等场景。
 
@@ -54,9 +54,9 @@
 - ✨ Managed Agents 系列：浏览器聊天应用（同一套 handler 换上 Chat SDK 适配器即可跑在 Slack、Teams、Discord、Telegram、WhatsApp）、用 CopilotKit + AG-UI 把工具调用渲染成交互式生成式 UI、每工作日汇总 Slack 与 GitHub PR 的定时简报代理、把文档语料蒸馏成带出处版本化知识库的尽调维基
 - 👥 适合谁：想用 Claude API 做产品的开发者，尤其是要落地客服、数据分析、Agent 自动化类应用的团队和个人。
 
-`Python` · Fork 3,383
+`Python` · Fork 3,386
 
-### 5. [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) — ⭐ 17,153（今日 +453）
+### 5. [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) — ⭐ 17,154（今日 +453）
 
 > Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系统。
 
@@ -72,7 +72,7 @@ MuJoCo 名称是 Multi-Joint dynamics with Contact 的缩写，由 Google DeepMi
 
 `C++` · Fork 2,068 · 🔗 [官网](https://mujoco.org)
 
-### 6. [we-promise/sure](https://github.com/we-promise/sure) — ⭐ 11,390（今日 +184）
+### 6. [we-promise/sure](https://github.com/we-promise/sure) — ⭐ 11,399（今日 +184）
 
 > 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance
 
@@ -88,7 +88,7 @@ Sure 是一个可以完全自托管的个人财务与财富管理应用。它最
 
 `Ruby` · Fork 798 · 🔗 [官网](https://sure.am)
 
-### 7. [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) — ⭐ 6,315（今日 +792）
+### 7. [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) — ⭐ 6,321（今日 +792）
 
 > 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assistant 的 MCP 服务器
 
@@ -104,7 +104,7 @@ HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI
 
 `Python` · Fork 348 · 🔗 [官网](https://homeassistant-ai.github.io/ha-mcp/)
 
-### 10. [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ⭐ 6,581（今日 +192）
+### 10. [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ⭐ 6,586（今日 +192）
 
 > Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用。
 
@@ -118,9 +118,9 @@ Topcoat 是 tokio-rs 团队打造的模块化、开箱即用的全栈 Rust Web �
 - ✨ topcoat ui CLI 将基于 Tailwind、仿 shadcn/ui 的组件复制进项目，可自由修改
 - 👥 适合谁：想用 Rust 一套语言写完整 Web 应用、又不想折腾 wasm 和前后端分层的前后端开发者。
 
-`Rust` · Fork 235
+`Rust` · Fork 236
 
-### 12. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 320,284（今日 +1,223）
+### 12. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 320,301（今日 +1,223）
 
 > 从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编码代理技能集
 
@@ -134,24 +134,76 @@ Topcoat 是 tokio-rs 团队打造的模块化、开箱即用的全栈 Rust Web �
 - ✨ 小而可组合的技能设计，不接管流程、任何模型都能用，改起来没有负担
 - 👥 适合谁：用 Claude Code、Codex、Copilot 等代理写真实项目、想在保留控制权的前提下提升协作效率的开发者
 
-`Shell` · Fork 26,818 · 🔗 [官网](https://aihero.dev/skills)
+`Shell` · Fork 26,821 · 🔗 [官网](https://aihero.dev/skills)
+
+---
+
+> 🆕 以下为榜单外同样 trending、且近期未展示过的新项目：
+
+### 🆕 [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) — ⭐ 106,743（今日 +1,262）
+
+> 完全本地运行的 ElevenLabs 开源替代品，可克隆音色、设计声音、配音和转写，覆盖 646 种语言
+
+VoiceStudio 是一个完全运行在本地设备上的 AI 语音工作台，定位是 ElevenLabs 的开源替代方案。它把语音克隆、音色设计、视频配音、听写、转写和有声书旁白整合到一个应用里：音频素材不必上传云端，也不按字符计费，隐私和成本都掌握在自己手里。它支持 646 种语言，能在笔记本、台式机、服务器、手机和平板上运行，既有可直接下载的安装包，也能从源码自行构建；此外还提供 Pro 版和云端版。
+
+- ✨ 语音克隆：用少量声音样本复刻音色，生成自然的旁白和对白
+- ✨ 音色设计（Voice Design）：不依赖现成样本，直接描述并生成全新音色
+- ✨ 视频配音：为视频生成或替换多语言配音
+- ✨ 听写与转写：语音实时转成文字，或把录音整理成可编辑文稿
+- ✨ 有声书制作：对长文本分章朗读并生成旁白
+- ✨ 646 种语言覆盖，同一套工作流可在电脑、服务器、手机和平板上跑，并内置模型管理
+- 👥 适合谁：内容创作者、播客与有声书制作者，以及看重隐私和离线部署的开发者与团队
+
+`Python` · Fork 11,834 · 🔗 [官网](https://voicestudio.sh)
+
+### 🆕 [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — ⭐ 20,335（今日 +1,220）
+
+> 开源的 AI 机器人聊天应用，每个机器人都是运行在本机的独立智能体
+
+OpenMausBot 是一个受 Grok Bot 启发的开源项目，把 AI 助手做成类似 Telegram 的聊天应用：侧边栏里的每个聊天对象都是一个真实运行的 agent，底层在本机运行 Claude、Codex 或 Grok CLI，拥有独立的性格设定、模型、云端电脑和已连接的应用。它要解决的是「一个助手装在一个盒子里」这种形态不适合多 agent 协作的问题，同时把模型、电脑和数据都留在用户自己这边。你像对待联系人一样与机器人对话、看它们干活、只审批真正重要的事。项目基于 TypeScript、React 和 Electron，提供 macOS、Windows、Ubuntu 安装包，账号和订阅直接沿用你已有的，无需重新注册。
+
+- ✨ 每个机器人都是独立 agent，有各自的性格、模型、线程记忆和独立上下文
+- ✨ 自带 agent：直接复用本机已安装并登录的 claude、codex、grok CLI，无需新账号，也可在设置中指向自定义 CLI 二进制
+- ✨ 本地优先：127.0.0.1 上的小型 harness 服务管理所有 agent 进程，对话记录、密钥和事件存放在 ~/.openmausbot
+- ✨ 给 agent 一双手：可使用云端 Linux 桌面、隔离的 Local VM，或在明确授权后使用你自己的电脑
+- ✨ 通过 Composio 接入 500+ 第三方应用，让机器人真正能操作外部服务
+- ✨ 类即时通讯的聊天界面：像联系人一样对话、旁观 agent 工作过程，并对关键操作进行审批
+- 👥 适合谁：想让多个 AI agent 常驻本地、可对话可监督，并重视数据自主权的开发者与重度 AI 用户。
+
+`TypeScript` · Fork 2,813 · 🔗 [官网](https://www.mausbot.com/)
+
+### 🆕 [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) — ⭐ 69,454（今日 +1,062）
+
+> LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。
+
+这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。
+
+- ✨ AI 决策报告：核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单一次给全
+- ✨ 多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面
+- ✨ Web / 桌面工作台：手动分析、任务进度、历史报告、完整 Markdown、回测、持仓与配置管理，支持浅色/深色主题
+- ✨ Agent 策略问股：多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种策略，Web/Bot/API 均可调用
+- ✨ 智能导入与补全：支持图片、CSV/Excel、剪贴板导入自选股，股票代码/名称/拼音/别名自动补全
+- ✨ 自动化与推送：GitHub Actions、Docker、本地定时任务、FastAPI 服务，推送到企业微信/飞书/Telegram/Discord/Slack/邮件
+- 👥 适合谁：适合跟踪 A股、港股、美股等多市场的个人投资者，以及想低成本搭自选股日报的开发者。
+
+`Python` · Fork 56,591 · 🔗 [官网](https://dsa.zhulinsen.tech)
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [meta/astryx](https://github.com/meta/astryx) | Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手 | `TypeScript` | 21,330 | +3,111 |
-| 2 | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完… | `Python` | 191,740 | +1,676 |
-| 3 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。 | `JavaScript` | 114,770 | +465 |
-| 4 | [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏… | `Python` | 20,244 | +530 |
-| 5 | [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) | Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系… | `C++` | 17,153 | +453 |
-| 6 | [we-promise/sure](https://github.com/we-promise/sure) | 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance | `Ruby` | 11,390 | +184 |
-| 7 | [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) | 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assista… | `Python` | 6,315 | +792 |
-| 8 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具 | `Rust` | 48,872 | +775 |
-| 9 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具 | `Python` | 108,158 | +2,387 |
-| 10 | [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) | Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用… | `Rust` | 6,581 | +192 |
-| 11 | [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) | 一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 tok… | `TypeScript` | 5,939 | +374 |
-| 12 | [mattpocock/skills](https://github.com/mattpocock/skills) | 从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编… | `Shell` | 320,284 | +1,223 |
+| 1 | [meta/astryx](https://github.com/meta/astryx) | Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手 | `TypeScript` | 21,378 | +3,111 |
+| 2 | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完… | `Python` | 191,748 | +1,676 |
+| 3 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。 | `JavaScript` | 114,779 | +465 |
+| 4 | [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏… | `Python` | 20,249 | +530 |
+| 5 | [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) | Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系… | `C++` | 17,154 | +453 |
+| 6 | [we-promise/sure](https://github.com/we-promise/sure) | 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance | `Ruby` | 11,399 | +184 |
+| 7 | [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) | 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assista… | `Python` | 6,321 | +792 |
+| 8 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具 | `Rust` | 48,877 | +775 |
+| 9 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具 | `Python` | 108,181 | +2,387 |
+| 10 | [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) | Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用… | `Rust` | 6,586 | +192 |
+| 11 | [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) | 一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 tok… | `TypeScript` | 5,944 | +374 |
+| 12 | [mattpocock/skills](https://github.com/mattpocock/skills) | 从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编… | `Shell` | 320,301 | +1,223 |
 
 <!-- TRENDING:END -->
 
