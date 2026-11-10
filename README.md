@@ -17,170 +17,188 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-09
+# 🔥 GitHub 每日 Trending · 2026-11-10
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 9 个仓库
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 11 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
-## 🏆 TOP 9（详细介绍）
+## 🏆 TOP 10（详细介绍）
 
-### 1. [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) — ⭐ 104,810（今日 +2,373）
+### 1. [anthropics/skills](https://github.com/anthropics/skills) — ⭐ 191,452（今日 +1,038）
 
-> 一个命令行工具，用同一个用户名在 400+ 社交网络上批量排查账号是否存在。
+> Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完成专项任务。
 
-Sherlock 是一个用 Python 编写的开源 OSINT 命令行工具，解决的问题很直接：给你一个用户名，它会到 400 多个社交网络站点上逐个探测，告诉你哪些站点上存在这个账号。用法极简，执行 sherlock user123 就能得到结果；也支持一次传入多个用户名（sherlock user1 user2 user3）。结果会按用户名写入独立的 txt 文件，同时可选导出 CSV、XLSX、JSON 等格式。安装可以通过 pipx/pip/uv、Docker 或 dnf，README 特别提醒：第三方维护的 ParrotOS 和 Ubuntu 24.04 软件包目前不可用，建议改用 pipx 或 Docker。
+这是 Anthropic 公开的 Claude Skills 实现集合。Skill 就是一个文件夹，里面装有说明、脚本和资源，Claude 会在需要时动态加载它们，从而学会按可重复的方式完成特定任务，例如按公司品牌规范做文档、按组织流程分析数据，或自动化个人琐事。仓库收录了覆盖创意设计、开发技术、企业沟通和文档处理的示例技能，每个技能都自包含在独立文件夹中，并含一个 SKILL.md；开发者可从中获取灵感，或参考其中的模式。仓库还以 Apache 2.0 开源了支撑 Claude 文档能力的 docx、pdf、pptx、xlsx 技能，作为复杂生产级技能的参考。用法很简单：在 Claude Code 中把仓库注册为插件市场，再安装 document-skills 或 example-skills；在 Claude.ai 付费计划中已内置；也可通过 Claude API 使用。
 
-- ✨ 覆盖 400+ 社交网络站点，一条命令跑完全部检查
-- ✨ 支持一次性传入多个用户名批量搜索，并可用 {?} 对相似用户名做变形探测（替换为 _、-、.）
-- ✨ 结果输出灵活：默认按用户名生成 txt 文件，另支持 CSV、XLSX、JSON 格式
-- ✨ --site 参数可以只查指定站点，--print-all / --print-found 控制是否显示未命中和命中的站点
-- ✨ 支持 --proxy 走代理、--timeout 自定义请求超时、--dump-response 输出 HTTP 响应排查问题
-- ✨ --browse 直接在默认浏览器打开所有结果，--nsfw 可选纳入 NSFW 站点，--ignore-exclusions 可忽略上游排除规则（但可能带来更多误报）
-- 👥 适合谁：适合做 OSINT 调查、安全研究、账号资产排查的开发者和分析人员。
+- ✨ Skill 机制：文件夹 + SKILL.md，Claude 按需动态加载
+- ✨ YAML frontmatter 仅需 name 与 description 两个字段
+- ✨ 按创意设计、开发技术、企业沟通、文档四类组织的示例技能集
+- ✨ 开源 docx / pdf / pptx / xlsx 文档创建与编辑技能，生产环境在用
+- ✨ Claude Code 插件市场一键安装 document-skills 或 example-skills
+- ✨ 提供 Agent Skills 规范文档与 template 模板起步
+- 👥 适合谁：想给 Claude 定制可复用能力、或想学习 Skill 写法的开发者与团队。
 
-`Python` · Fork 12,216 · 🔗 [官网](https://sherlockproject.xyz)
+`Python` · Fork 22,473
 
-### 2. [dsx-ai-factory/nvke](https://github.com/dsx-ai-factory/nvke) — ⭐ 942（今日 +345）
+### 2. [meta/astryx](https://github.com/meta/astryx) — ⭐ 20,921（今日 +3,278）
 
-> 在自有 NVIDIA GPU 裸金属上搭建托管 Kubernetes 服务的管控平面
+> Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手
 
-NVKE 是运行在自有 NVIDIA GPU 裸金属之上的 Kubernetes 托管服务管控平面。它既不是 Kubernetes 发行版，也不是某个 Cluster API flavor，而是一座「集群工厂」：nvkectl 先用一个临时 seed 集群搭起管理集群，管理平面再通过 NICo 按需供给机器，生成多个彼此隔离、各有独立控制平面与 etcd 的 workload 集群，客户用自己的 kubectl 访问。目前处于 Preview，不建议跑生产负载。
+Astryx 是一个在 Meta 内部发展八年、支撑 13000+ 应用的设计系统，现在以 MIT 协议开源。它把 150+ 无障碍组件、品牌级主题、暗色模式、现成模板和一个 CLI 打包成一套完整方案，解决的是组件库难以定制、样式被锁死、人和 AI 助手各用各的参考这几类问题。使用方式很简单：安装核心包、一个主题和 CLI，引入预构建 CSS，再用带类型的 React 组件，全程不需要配置构建插件或 PostCSS/Babel；组件内部实现可以直接导出，也可用 swizzle 把组件源码弹出到项目里。
 
-- ✨ 通过 NVKE API 或 nvkectl 创建相互隔离的 workload 集群，每个集群拥有自己的 Kubernetes 控制平面、etcd 和节点池
-- ✨ 管理 workload 集群生命周期：创建、扩缩容、删除节点池，升级 Kubernetes 版本，替换节点
-- ✨ 节点先通过 TPM 配合 SPIFFE/SPIRE 完成身份证明，才拿到加入集群的凭证；支持按集群开启 etcd 数据加密
-- ✨ 通过 NVIDIA Infra Controller（NICo）在裸金属上供给 NVIDIA GPU 机器，NICo 是 Preview 阶段唯一支持的基础设施提供方
-- ✨ nvkectl 用一次性 seed 集群自举出管理集群，安装管理平面服务是独立的一步
-- ✨ 无需 GPU 也能评估：本地 quickstart 在模拟机器上跑开发用管理平面和一个 workload 集群，不需要 NVIDIA 账号
-- 👥 适合谁：需要在自有 GPU 裸金属上为内部客户提供托管 Kubernetes 的平台团队与基础设施运维者
+- ✨ 150+ 无障碍 React 组件，覆盖常见界面需求
+- ✨ 品牌级主题与暗色模式，主题本质上是一组 CSS 自定义属性覆盖，不 fork 源码也能彻底换皮
+- ✨ 不锁定样式方案：组件用 StyleX 编写，但消费方可以用 Tailwind、CSS Modules 或普通 CSS 通过 className 覆盖
+- ✨ 开放内部实现：组件可在任意层级组合，需要时用 swizzle 把组件完整源码弹出到自己的项目中接管
+- ✨ CLI 工具链：查看组件文档、模板与脚手架、主题生成和 codemod，并可全局安装让编码助手随时调用
+- ✨ 自带七套现成主题（neutral、butter、chocolate、matcha、stone、gothic、y2k），开箱即用
+- 👥 适合谁：需要可深度定制、不锁定样式的 React 19 团队，尤其是希望人和 AI 助手共用同一套工具链的开发者
 
-`Go` · Fork 113 · 🔗 [官网](https://docs.nvidia.com/nvke/)
+`TypeScript` · Fork 1,584 · 🔗 [官网](http://astryx.atmeta.com)
 
-### 3. [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — ⭐ 18,779（今日 +1,439）
+### 3. [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) — ⭐ 107,803（今日 +4,267）
 
-> 开源的 AI 机器人聊天应用，每个机器人都是运行在本机的独立智能体
+> 跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具
 
-OpenMausBot 是一个受 Grok Bot 启发的开源项目，把 AI 助手做成类似 Telegram 的聊天应用：侧边栏里的每个聊天对象都是一个真实运行的 agent，底层在本机运行 Claude、Codex 或 Grok CLI，拥有独立的性格设定、模型、云端电脑和已连接的应用。它要解决的是「一个助手装在一个盒子里」这种形态不适合多 agent 协作的问题，同时把模型、电脑和数据都留在用户自己这边。你像对待联系人一样与机器人对话、看它们干活、只审批真正重要的事。项目基于 TypeScript、React 和 Electron，提供 macOS、Windows、Ubuntu 安装包，账号和订阅直接沿用你已有的，无需重新注册。
+Sherlock 是一个用 Python 编写的命令行工具，解决的问题很直接：给你一个用户名，帮你在各大社交平台上找出它是否被注册。它覆盖 400+ 个社交网络，支持一次传入多个用户名批量查询，例如 `sherlock user1 user2 user3`，找到的账号会自动保存为与用户名对应的文本文件（如 user123.txt）。输出格式灵活，支持 txt、CSV、XLSX 以及 JSON 数据加载，还能用 --site 只查指定站点、用 --proxy 走代理、用 --browse 直接在浏览器打开所有命中结果。安装推荐 pipx、pip、uv 或 Docker 一行搞定，也可以指定 --nsfw、--timeout 等参数控制检索范围与请求行为。
 
-- ✨ 每个机器人都是独立 agent，有各自的性格、模型、线程记忆和独立上下文
-- ✨ 自带 agent：直接复用本机已安装并登录的 claude、codex、grok CLI，无需新账号，也可在设置中指向自定义 CLI 二进制
-- ✨ 本地优先：127.0.0.1 上的小型 harness 服务管理所有 agent 进程，对话记录、密钥和事件存放在 ~/.openmausbot
-- ✨ 给 agent 一双手：可使用云端 Linux 桌面、隔离的 Local VM，或在明确授权后使用你自己的电脑
-- ✨ 通过 Composio 接入 500+ 第三方应用，让机器人真正能操作外部服务
-- ✨ 类即时通讯的聊天界面：像联系人一样对话、旁观 agent 工作过程，并对关键操作进行审批
-- 👥 适合谁：想让多个 AI agent 常驻本地、可对话可监督，并重视数据自主权的开发者与重度 AI 用户。
+- ✨ 按用户名在 400+ 社交网络中检索账号是否存在
+- ✨ 支持一次查询多个用户名并分别输出结果
+- ✨ 结果可导出为 txt、CSV、XLSX 文件
+- ✨ 通过 --site 限定只检查指定站点，可叠加多个
+- ✨ 支持代理请求、自定义超时和调试响应输出
+- ✨ --browse 一键在浏览器中打开所有找到的账号
+- 👥 适合谁：适合做 OSINT 调查、安全研究、渗透测试前期信息收集，以及想核查自己用户名被哪些平台占用的开发者。
 
-`TypeScript` · Fork 2,588 · 🔗 [官网](https://www.mausbot.com/)
+`Python` · Fork 12,464 · 🔗 [官网](https://sherlockproject.xyz)
 
-### 4. [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) — ⭐ 19,604（今日 +32）
+### 4. [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) — ⭐ 17,075（今日 +574）
 
-> Anthropic 官方示例集，帮你用 Claude API 快速搭出可部署应用
+> Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系统。
 
-Claude Quickstarts 是 Anthropic 官方维护的一组示例项目，每个子项目都是一个可直接运行、可继续改造成自己产品的起点。它解决的是「拿到 API key 之后不知道从哪下手」的问题：你不用从零设计架构，而是挑一个最接近需求的模板，填上 API key 跑起来，再按自己的场景裁剪。覆盖客服知识库问答、金融数据可视化分析、桌面与浏览器自动化、自主编码、以及基于 Managed Agents 的多渠道聊天、Slack 日报、知识 Wiki 等方向。
+MuJoCo 名称是 Multi-Joint dynamics with Contact 的缩写，由 Google DeepMind 维护，是一个开源物理仿真器。它用于仿真由关节连接的刚体结构在环境中运动时与物体发生的接触和碰撞，主要解决机器人学、生物力学、图形动画和机器学习中对快速、准确仿真的需求。它提供性能高度优化的 C API 运行时，模型由内置 XML 编译器预先分配数据结构，并提供桌面窗口与浏览器中的交互式可视化工具和大量物理量计算函数。此外还有 Python 绑定和 Unity 插件。既可直接下载各平台预编译版本，也可通过 pip install mujoco 安装并快速上手。
 
-- ✨ 客服 Agent：让 Claude 结合知识库做 AI 辅助的客户支持
-- ✨ 金融数据分析师：用对话方式分析财务数据并做交互式可视化
-- ✨ Computer Use Demo：给 Claude 一套控制桌面的环境与工具
-- ✨ Computer Use 最佳实践：macOS 原生参考实现，演示工具定义、图像裁切、提示缓存、批量调用等可靠性与成本优化模式
-- ✨ Browser Use / Browser & Computer Toolset：基于 Playwright 或原生 CDP、VNC 的浏览器与桌面自动化最小示例（Python + TypeScript）
-- ✨ 自主编码 Agent：初始化 + 编码双 Agent 模式，跨多个会话逐步构建完整应用，进度用 git 持久化
-- 👥 适合谁：想上手 Claude API 的开发者、做 AI 应用原型的团队，以及需要 agent 自动化参考实现的人
+- ✨ 高性能 C API 物理仿真运行时，数据结构预分配，专为快速准确仿真优化
+- ✨ 内置 XML 模型编译器，用 XML 描述多关节结构的场景
+- ✨ 原生桌面窗口与 Web 浏览器中的交互式可视化，附带 simulate 查看器与 MuJoCo Studio
+- ✨ 大量物理相关计算工具函数，可直接获取仿真中的各类物理量
+- ✨ 官方 Python 绑定，pip install mujoco 即可使用，配有入门、模型编辑、rollout、LQR、最小二乘等 Colab 教程
+- ✨ MJX（MuJoCo XLA）JAX 分支，支持在 JAX 中运行并可通过教程训练可微物理策略
+- 👥 适合谁：从事机器人、生物力学、图形动画与机器学习研究，需要快速准确刚体仿真的开发者和研究者。
 
-`Python` · Fork 3,286
+`C++` · Fork 2,012 · 🔗 [官网](https://mujoco.org)
 
-### 5. [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — ⭐ 47,900（今日 +815）
+### 5. [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) — ⭐ 20,168（今日 +551）
 
-> 给 AI Agent 用的浏览器自动化 CLI，一条命令一步操作，页面以带 ref 的文本返回
+> Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏览器与电脑操作等场景。
 
-agent-browser 是 Vercel Labs 出品的原生 Rust 命令行工具，让 AI Agent 像人一样驱动浏览器：open 打开页面，snapshot 把页面转成紧凑的无障碍树文本，每个元素带 @e1 这样的 ref，Agent 用 ref 执行 click、fill 等操作，再读一次页面确认结果，循环推进。浏览器在命令之间保持打开，每步只是一次很短的 shell 调用，不用每次重新启动、重新定位。它通过后台守护进程和 CDP 控制 Chrome for Testing，也支持连接已有 Chrome、切换引擎或云端浏览器。
+这是一组能直接跑起来的示例工程，每个对应一类真实产品形态：客服代理、金融数据分析、电脑操作、浏览器自动化、自主编码、托管代理。它解决的问题很实际——你不需要从零摸索 Claude API 的调用方式、工具定义和前端交互长什么样，挑一个最接近自己需求的项目，填上 API key 就能跑通，再在这个基础上改造成自己的应用。所有示例都以可部署、可定制为出发点，而非只做接口演示。
 
-- ✨ snapshot 把页面输出为紧凑文本，每个可交互元素带 @e1 式 ref，Agent 直接按 ref 操作
-- ✨ 命令间浏览器常驻，配合后台 daemon，每步操作只花一次短 shell 调用
-- ✨ 覆盖点击、填写、按键、悬停、选择、滚动、拖拽、上传等完整交互命令，以及 wait、screenshot、pdf、录制等捕获能力
-- ✨ 除 ref 外还支持 CSS 选择器、文本、XPath 和 find role button click --name 这类语义定位
-- ✨ 点击目标隐藏、禁用、在视口外或被弹窗遮挡时会报失败而不是假成功，避免 Agent 误判
-- ✨ 内置随版本发布的 skills（core 技能、命令参考、electron/slack 等专项技能），并可 mcp 启动 MCP server 接入 MCP 客户端
-- 👥 适合谁：做浏览器自动化的 AI Agent 开发者，以及需要让 Agent 稳定操作网页的团队
+- ✨ Customer Support Agent：带知识库的 AI 客服示例，展示如何用 Claude 的自然语言理解与生成能力搭建辅助客服系统
+- ✨ Financial Data Analyst：通过聊天分析财务数据，并能生成交互式数据可视化
+- ✨ Computer Use：既能提供让 Claude 控制桌面电脑的环境与工具（含最新的 computer_toolset 工具集形态），也有原生 macOS 的最佳实践参考实现，示范显式工具定义、图像尺寸与裁剪、提示缓存、服务端压缩、批量工具调用、沙箱 shell 与轨迹记录等可靠性和成本优化模式
+- ✨ Browser Use Demo 与 Browser Toolset：前者基于 Playwright 自定义浏览器工具，让 Claude 导航网站、检查并操作 DOM、提取内容、填写表单；后者是最小 CDP 示例，用一个小驱动控制单个 Chromium 标签页
+- ✨ Autonomous Coding Agent：基于 Claude Agent SDK 的双代理模式（初始化代理 + 编码代理），跨多个会话逐步构建完整应用，进度通过 git 和功能清单持久化
+- ✨ Managed Agents 系列：浏览器聊天应用（同一套 handler 换上 Chat SDK 适配器即可跑在 Slack、Teams、Discord、Telegram、WhatsApp）、用 CopilotKit + AG-UI 把工具调用渲染成交互式生成式 UI、每工作日汇总 Slack 与 GitHub PR 的定时简报代理、把文档语料蒸馏成带出处版本化知识库的尽调维基
+- 👥 适合谁：想用 Claude API 做产品的开发者，尤其是要落地客服、数据分析、Agent 自动化类应用的团队和个人。
 
-`Rust` · Fork 3,272 · 🔗 [官网](https://agent-browser.dev)
+`Python` · Fork 3,328
 
-### 6. [meta/astryx](https://github.com/meta/astryx) — ⭐ 17,684（今日 +875）
+### 6. [garrytan/gbrain](https://github.com/garrytan/gbrain) — ⭐ 32,319（今日 +216）
 
-> Meta 开源的设计系统，150+ 组件、可换肤，人与 AI 用同一套工具构建
+> 给现有 AI Agent 加一个可控、可纠错、跨 Agent 共享的持久记忆大脑。
 
-Astryx 是 Meta 内部打磨八年的设计系统开源版，曾支撑公司 13000+ 应用。它把 150+ 无障碍组件、品牌级主题、暗色模式、现成模板和 CLI 打包成一套完整体验：引入预构建 CSS 和带类型的 React 组件即可，不需要构建插件或额外样式库。组件内部开放可组合，`swizzle` 能把源码弹出到你的项目；默认用 StyleX 写样式，但你仍可用 Tailwind、CSS Modules 或原生 CSS 覆盖；主题只是一组 CSS 自定义属性覆盖，设计师不改组件源码就能做出自己的风格。需 React 19+。
+GBrain 是 Garry Tan 为自己 OpenClaw/Hermes 部署打造的 Agent 记忆层，现已开源。它把明确的事实连同来源一起存下来，支持修正与撤回，并让同一份记忆在多个 Agent 之间共享。它要解决的是 Agent 记不住、记忆不可控、上下文反复丢失的问题。你可以把它挂到现有 Agent 上，让它把记忆保存在该 Agent 的环境中；也可以先使用无需密钥的关键词检索，之后再按需增加语义搜索、综合答案和后台自动丰富。生产实例已承载 15 万级页面，并有 66 个 cron 任务在夜间自动整理记忆。
 
-- ✨ 150+ 无障碍 React 组件，开箱即用
-- ✨ 主题即 CSS 变量覆盖，不 fork、不包装组件即可深度换肤
-- ✨ 开放内部结构，底层构件直接导出，swizzle 可弹出组件源码自行掌控
-- ✨ 不锁定样式方案，可用 Tailwind、CSS Modules 或原生 CSS 通过 className 覆盖
-- ✨ 七套现成主题（neutral、butter、chocolate、matcha、stone、gothic、y2k）
-- ✨ CLI 提供组件文档、模板、脚手架、主题与 codemod，人和 AI 助手共用同一套参考
-- 👥 适合谁：需要统一、可深度定制且适配 AI 辅助开发的 React 19 团队与设计系统维护者。
+- ✨ 显式事实存储：每条记忆都带来源出处，可修正、可撤回，不靠模型臆测
+- ✨ 关键词检索零门槛起步：先用 keyless 的关键词检索，需要时再开启语义搜索
+- ✨ 跨 Agent 共享同一份记忆：持久偏好与事实共用，临时任务状态仍留在本地
+- ✨ 综合答案层：跨人物、公司、交易与想法生成带引用的连贯回答，并明确指出大脑还不知道什么
+- ✨ 类型化知识图谱：本地写入可自动抽取引用并建边，支持毫秒级广度优先关系遍历（如谁在某公司工作）
+- ✨ 24/7 dream cycle：夜间自动摄取会议、邮件、推文、通话，丰富人物与公司信息、修复引用并合并记忆
+- 👥 适合谁：已在使用 AI Agent、希望拥有私有可控持久记忆的个人开发者，以及需要团队级共享记忆的工程团队。
 
-`TypeScript` · Fork 1,386 · 🔗 [官网](http://astryx.atmeta.com)
+`TypeScript` · Fork 4,780
 
-### 7. [anthropics/skills](https://github.com/anthropics/skills) — ⭐ 189,935（今日 +792）
+### 7. [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — ⭐ 48,733（今日 +916）
 
-> Anthropic 官方开源的 Agent Skills 仓库，用文件夹式指令教 Claude 稳定完成专业任务。
+> 让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具
 
-Skills 是打包了指令、脚本和资源的文件夹，Claude 会按需动态加载，从而在特定任务上表现得更稳定、可复现。这个仓库是 Anthropic 自己的技能实现合集，既展示技能系统能做什么，也给出可直接参考的写法：从艺术、音乐、设计类创意技能，到测试 Web 应用、生成 MCP 服务器这类技术任务，再到企业沟通与品牌工作流。每个技能都是独立文件夹，核心是一个带 YAML frontmatter 的 SKILL.md。值得一提的是，支撑 Claude 文档能力的 docx、pdf、pptx、xlsx 四个技能也以 Apache 2.0 开源放在这里，是生产环境在用的复杂技能范例。你可以在 Claude Code 里把它注册为插件市场安装，也能在 Claude.ai 和 API 中直接使用或上传自定义技能。
+agent-browser 是 Vercel Labs 推出的浏览器自动化 CLI，专门给 AI 智能体使用。核心玩法是“快照—操作—再快照”的循环：snapshot 把页面读成紧凑的可访问性树文本，每个元素带 @e1 这样的 ref；智能体对 ref 执行 click、fill 等命令，再读一次页面确认结果。浏览器在命令之间保持打开，每一步只是一次简短的 shell 调用。它解决了智能体直接啃 HTML 太费 token、又难以稳定定位元素的问题，并提供严格失败语义：点击目标隐藏、禁用、在视口外或被遮挡时直接报错而不是假装成功。安装走 npm 或 Homebrew，首次运行 agent-browser install 下载 Chrome for Testing。
 
-- ✨ 覆盖创意设计、开发与技术、企业与沟通、文档处理四大类的示例技能库，可直接浏览取用
-- ✨ docx、pdf、pptx、xlsx 四个文档技能开源，是 Claude 文档生成与编辑能力背后的生产级实现，可作为复杂技能的参考
-- ✨ 每个技能自包含在独立文件夹中，用 SKILL.md 的 YAML frontmatter（name、description）加 Markdown 指令、示例和指南定义
-- ✨ 附带 Agent Skills 规范（./spec）与技能模板（./template），照着模板改几行就能写出自己的技能
-- ✨ 在 Claude Code 中执行 /plugin marketplace add anthropics/skills 即可注册插件市场，再安装 document-skills 或 example-skills 使用
-- ✨ 同一套技能可在 Claude Code、Claude.ai 付费计划和 Claude API 中复用，也支持上传自定义技能
-- 👥 适合谁：想把 Claude 调教成特定领域熟手的开发者、团队，以及想学习技能写法的实践者。
+- ✨ snapshot 将页面转成紧凑文本并给每个元素分配 @e1 式 ref，智能体据此定位与操作
+- ✨ click、fill、type、hover、select、drag、upload 等完整交互命令，支持 CSS、文本、XPath 与语义查找
+- ✨ 目标不可见、被遮挡或被禁用时点击直接报错，避免智能体误判成功
+- ✨ 后台 daemon 保持浏览器常驻，命令间会话不中断，支持多 --session 隔离
+- ✨ 内置随版本发布的 skills，可用 agent-browser skills get core 让智能体获取与当前 CLI 匹配的操作指南
+- ✨ 支持接入运行中的 Chrome（--cdp / --auto-connect）、iOS 模拟器 Safari、Lightpanda 等引擎及 Browserbase 等云浏览器
+- 👥 适合谁：构建浏览器智能体的 AI 工程师、需要脚本化网页操作的开发者与自动化测试团队
 
-`Python` · Fork 22,377
+`Rust` · Fork 3,320 · 🔗 [官网](https://agent-browser.dev)
 
-### 8. [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) — ⭐ 16,579（今日 +41）
+### 8. [ruvnet/RuView](https://github.com/ruvnet/RuView) — ⭐ 103,685（今日 +172）
 
-> Google DeepMind 维护的通用物理引擎，专注多关节体与接触的快速精确仿真。
+> 把普通WiFi信号变成穿墙感知能力，无需摄像头即可检测人、呼吸和心跳
 
-MuJoCo 全称 Multi-Joint dynamics with Contact，是一个通用物理引擎，专门解决关节结构与环境发生接触时如何高效、精确仿真的问题，常用于机器人学、生物力学、图形动画和机器学习研究。核心运行时用 C 编写，面向预分配的底层数据结构调优，模型通过内置 XML 编译器描述；它同时提供大量计算物理量的工具函数。上手方式很轻：可以在 mujoco.org 用浏览器零安装试玩，也可以下载预编译版本，在本机运行 MuJoCo Studio 或 simulate 查看器；Python 用户直接 pip install mujoco 就能装到自带引擎的官方绑定。
+RuView 是一个基于 Rust 的 WiFi 感知平台。它利用低成本 ESP32 传感器采集信道状态信息（CSI），通过分析人体对无线电波的扰动，实现穿墙、黑暗中、无穿戴设备条件下的空间感知。它解决的是传统视频监控侵犯隐私、穿戴设备不便利、暗光失效等问题。使用上，它以单个 --mqtt 参数接入 Home Assistant，或作为 Matter Bridge 配对到 Apple Home、Google Home、Alexa、SmartThings，并提供录 CSI、训练模型、加载 RVF、切换 LoRA 的完整工作流与 HOMECORE 本地自动化。
 
-- ✨ 高性能 C 运行时：仿真模块针对预分配的底层数据结构调优，追求最大运行效率
-- ✨ 内置 XML 编译器：模型用 XML 描述，运行时所需数据结构在编译阶段一次性分配
-- ✨ 交互式可视化：支持原生桌面窗口和浏览器内的模型查看与拖拽操作
-- ✨ 官方 Python 绑定：pip install mujoco 即可安装，Linux wheel 基于 manylinux2014
-- ✨ MJX（MuJoCo XLA）：基于 JAX 的分支，支持可微物理，可用自动推导的解析梯度训练运动策略
-- ✨ rollout 多线程模块：支持批量并行仿真，配有可直接在 Colab 运行的系列教程
-- 👥 适合谁：机器人、生物力学、图形动画与机器学习方向，需要快速精确仿真关节结构的研究者和开发者。
+- ✨ 穿墙人员存在检测、人数统计与进出追踪
+- ✨ 非接触式呼吸率与心率监测，支持睡眠中测量
+- ✨ 活动识别：行走、坐姿、手势、跌倒
+- ✨ 无摄像头 17 关键点人体姿态估计
+- ✨ 环境映射与 RF 指纹：识别房间、发现家具移动与新物体
+- ✨ 睡眠质量分析：睡眠分期与呼吸暂停筛查
+- 👥 适合谁：智能家居玩家、隐私敏感的家庭看护场景开发者，以及做无线感知研究的嵌入式与 Rust 工程师
 
-`C++` · Fork 1,960 · 🔗 [官网](https://mujoco.org)
+`Rust` · Fork 13,431 · 🔗 [官网](https://cognitum.one)
 
-### 9. [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) — ⭐ 5,398（今日 +460）
+### 9. [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) — ⭐ 69,262（今日 +506）
 
-> 一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 token。
+> LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。
 
-billion-context 是一个 TypeScript 写的上下文压缩插件，解决的是编码 Agent 长时间干活时上下文被撑爆的问题：会话越久，历史越长，要么撞上窗口上限被迫重开，要么每轮都携带冗余历史导致 token 费用居高不下。它的思路是压缩而非截断，官方给出的效果是 5 倍 token 节省、100K 上下文就够用，并且单次会话可以持续一个月、累计处理到十亿级 token，同时强调压缩质量。安装很简单，一条 npm install -g 全局装上，即可接进 Claude Code、Codex、Gemini CLI、Qwen Code 等二十多种 CLI 编码工具。项目还提供了缓存健康度观测：健康的会话前缀缓存命中率应维持在 95%–97%，压缩本身开销不超过 2%，命中率持续偏低时可用 /acp 或 /acp-cache 排查原因。
+这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。
 
-- ✨ 上下文压缩：把冗长的会话历史压成更短的表示，而不是简单丢弃或截断
-- ✨ 5 倍 token 节省，官方称 100K 上下文窗口即可支撑长任务
-- ✨ 支持单次会话持续一个月、累计处理十亿级 token 的超长会话
-- ✨ 兼容 20+ 主流 CLI 编码 Agent：Claude Code、Codex、Gemini CLI、Qwen Code、Copilot CLI、Aider、Zed、goose、Kimi、Trae 等
-- ✨ 缓存健康度观测：健康会话前缀缓存命中率 95%–97%，压缩开销 ≤2%，异常时用 /acp、/acp-cache 定位原因
-- ✨ 基于论文实现的免训练增量式分层压缩，多代际管理长期上下文
-- 👥 适合谁：适合长期用 CLI 编码 Agent 做大型任务、又受限于上下文窗口和 token 成本的开发者。
+- ✨ AI 决策报告：核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单一次给全
+- ✨ 多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面
+- ✨ Web / 桌面工作台：手动分析、任务进度、历史报告、完整 Markdown、回测、持仓与配置管理，支持浅色/深色主题
+- ✨ Agent 策略问股：多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种策略，Web/Bot/API 均可调用
+- ✨ 智能导入与补全：支持图片、CSV/Excel、剪贴板导入自选股，股票代码/名称/拼音/别名自动补全
+- ✨ 自动化与推送：GitHub Actions、Docker、本地定时任务、FastAPI 服务，推送到企业微信/飞书/Telegram/Discord/Slack/邮件
+- 👥 适合谁：适合跟踪 A股、港股、美股等多市场的个人投资者，以及想低成本搭自选股日报的开发者。
 
-`TypeScript` · Fork 416
+`Python` · Fork 56,486 · 🔗 [官网](https://dsa.zhulinsen.tech)
+
+### 10. [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) — ⭐ 6,189（今日 +31）
+
+> 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assistant 的 MCP 服务器
+
+HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI 助手能够读取状态、修改配置、编写自动化，省去手写 YAML 的麻烦。最推荐的用法是通过 HACS 或 Home Assistant 2026.11+ 的 Marketplace 把它装成集成，直接在 Home Assistant 进程内运行完整服务器；它兼容 OS、Supervised、Container、Core 全部安装类型，功能完全一致，也取代了插件、Docker、uvx/PyPI 等旧方式（只能选一种）。安装后重启 Home Assistant，在“设置 → 设备与服务”添加 HA-MCP Server，填入管理员长令牌，或为它新建一个仅本地登录的管理员账号，选择远程访问（Secret URL 或 HA 登录）和/或本地网络访问，再从 Configure 界面复制连接 URL 粘进 AI 客户端即可。本地客户端也可直连 9584 端口。
+
+- ✨ 内置 87 个工具，覆盖 Home Assistant 的查询、配置与自动化操作
+- ✨ 以集成形式通过 HACS 或 Marketplace 安装，在 Home Assistant 进程内运行，无需另跑 Docker/uvx
+- ✨ 兼容 Home Assistant OS、Supervised、Container、Core 全部安装类型，功能完全一致
+- ✨ 两种接入方式：经 Home Assistant 的远程 webhook（Secret URL 或 HA 登录），以及本地网络直连
+- ✨ 认证灵活：可用自己的长令牌，也可为 HA-MCP 单独建管理员账号并由它自动生成令牌
+- ✨ 有端到端测试流水线保障，并把 ha_config_set_yaml 等实验能力放入 beta 通道
+- 👥 适合谁：用 Home Assistant 搭建智能家居、希望让 AI 代劳配置与自动化的玩家和自建用户
+
+`Python` · Fork 302 · 🔗 [官网](https://homeassistant-ai.github.io/ha-mcp/)
 
 ## 📋 完整榜单
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | 一个命令行工具，用同一个用户名在 400+ 社交网络上批量排查账号是否存在。 | `Python` | 104,810 | +2,373 |
-| 2 | [dsx-ai-factory/nvke](https://github.com/dsx-ai-factory/nvke) | 在自有 NVIDIA GPU 裸金属上搭建托管 Kubernetes 服务的管控平面 | `Go` | 942 | +345 |
-| 3 | [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) | 开源的 AI 机器人聊天应用，每个机器人都是运行在本机的独立智能体 | `TypeScript` | 18,779 | +1,439 |
-| 4 | [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方示例集，帮你用 Claude API 快速搭出可部署应用 | `Python` | 19,604 | +32 |
-| 5 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 给 AI Agent 用的浏览器自动化 CLI，一条命令一步操作，页面以带 ref 的文本… | `Rust` | 47,900 | +815 |
-| 6 | [meta/astryx](https://github.com/meta/astryx) | Meta 开源的设计系统，150+ 组件、可换肤，人与 AI 用同一套工具构建 | `TypeScript` | 17,684 | +875 |
-| 7 | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方开源的 Agent Skills 仓库，用文件夹式指令教 Clau… | `Python` | 189,935 | +792 |
-| 8 | [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) | Google DeepMind 维护的通用物理引擎，专注多关节体与接触的快速精确仿真。 | `C++` | 16,579 | +41 |
-| 9 | [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) | 一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 tok… | `TypeScript` | 5,398 | +460 |
+| 1 | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完… | `Python` | 191,452 | +1,038 |
+| 2 | [meta/astryx](https://github.com/meta/astryx) | Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手 | `TypeScript` | 20,921 | +3,278 |
+| 3 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具 | `Python` | 107,803 | +4,267 |
+| 4 | [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) | Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系… | `C++` | 17,075 | +574 |
+| 5 | [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏… | `Python` | 20,168 | +551 |
+| 6 | [garrytan/gbrain](https://github.com/garrytan/gbrain) | 给现有 AI Agent 加一个可控、可纠错、跨 Agent 共享的持久记忆大脑。 | `TypeScript` | 32,319 | +216 |
+| 7 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具 | `Rust` | 48,733 | +916 |
+| 8 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 把普通WiFi信号变成穿墙感知能力，无需摄像头即可检测人、呼吸和心跳 | `Rust` | 103,685 | +172 |
+| 9 | [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。 | `Python` | 69,262 | +506 |
+| 10 | [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) | 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assista… | `Python` | 6,189 | +31 |
+| 11 | [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) | 开源版 Grok Bot：在聊天应用里管理一支各有虚拟机的 AI 机器人团队 | `TypeScript` | 20,122 | +1,587 |
 
 <!-- TRENDING:END -->
 
