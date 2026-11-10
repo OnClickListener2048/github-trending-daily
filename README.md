@@ -175,6 +175,9 @@ Topcoat 是 tokio-rs 团队打造的模块化、开箱即用的全栈 Rust Web �
 | `limit` | 榜单数量（默认 25） |
 | `top_n` | 详细介绍的仓库数（默认 10，按 GitHub 页面原始顺序取，跳过连续在榜超限的仓库后顺延） |
 | `top_n_max_streak_days` | 连续在榜达到该天数的仓库不再进详细介绍（默认 3，仍保留在完整榜单里） |
+| `top_n_fill.enabled` | 精选不足 `top_n` 时，是否用榜单外的 trending 新仓库补满（默认开） |
+| `top_n_fill.languages` | 补位来源：这些语言的 trending 页（默认 python / typescript / javascript / rust / go / c++） |
+| `top_n_fill.cooldown_days` | 补位仓库的冷却期：最近 N 天内展示过的不再重复补（默认 7） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
@@ -211,7 +214,7 @@ GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以�
 每个仓库单独调用一次 AI（不是批量），输入是该仓库的 README 原文（截断 6000 字符）+ 仓库数据，输出"一句话定位 + 详细介绍（100~200 字）+ 核心功能列表 + 适合谁"。默认走 DeepSeek：在仓库 Settings → Secrets and variables → Actions 添加 `DEEPSEEK_API_KEY`（或命令行 `gh secret set DEEPSEEK_API_KEY`），第二天自动生效。想用 Claude：把 `config.json` 的 `ai.provider` 改成 `anthropic`、`ai.api_key_env` 改成 `ANTHROPIC_API_KEY`，并设置对应 Secret。没有 Key 时回退显示仓库原始英文描述。
 
 **同一个仓库连续上榜会重复总结吗？**
-不会。AI 分析结果缓存在 `data/repos.json`（随仓库提交），再次上榜时直接复用，不再调用 AI；缓存里同时记录首次出现、最近出现日期和连续在榜天数。连续在榜达到 `top_n_max_streak_days`（默认 3 天）的仓库会退出「今日精选」的详细介绍位，由榜单后面的新项目顺延补位，但仍保留在完整榜单中。
+不会。AI 分析结果缓存在 `data/repos.json`（随仓库提交），再次上榜时直接复用，不再调用 AI；缓存里同时记录首次出现、最近出现日期和连续在榜天数。连续在榜达到 `top_n_max_streak_days`（默认 3 天）的仓库会退出「今日精选」的详细介绍位，但仍保留在完整榜单中。精选位不够 `top_n` 时，会从各语言 trending 页补充「同样在 trending、但不在今日榜单、且最近 `top_n_fill.cooldown_days` 天没展示过」的新项目补满，标为 🆕。
 
 ## ⚠️ 免责声明
 

@@ -279,6 +279,11 @@
     "streak_days": 2,
     "summary": "把编码 Agent 变成安全审计员的多阶段审计技能，输出可机器校验的漏洞结论"
   },
+  "debpalash/VoiceStudio": {
+    "first_seen": "2026-11-10",
+    "last_seen": "2026-11-10",
+    "streak_days": 1
+  },
   "dsx-ai-factory/nvke": {
     "analyzed_at": "2026-11-09",
     "audience": "需要在自有 GPU 裸金属上为内部客户提供托管 Kubernetes 的平台团队与基础设施运维者",

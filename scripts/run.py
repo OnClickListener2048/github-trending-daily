@@ -59,6 +59,52 @@ def update_streaks(repos: list[dict], cache: dict, date_str: str) -> None:
         entry["last_seen"] = date_str
 
 
+def fetch_fill_repos(
+    repos: list[dict],
+    cache: dict,
+    need: int,
+    cfg: dict,
+    date_str: str,
+) -> list[dict]:
+    """从各语言 trending 页补充"不在今日榜单、且冷却期内未展示过"的新仓库。
+
+    用途：连续在榜较久的仓库退出精选后，用榜单外的 trending 新面孔补满 top_n。
+    """
+    seen = {repo["full_name"] for repo in repos}
+    cooldown = int(cfg.get("cooldown_days", 7))
+    cutoff = (
+        datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=cooldown)
+    ).strftime("%Y-%m-%d")
+    languages = cfg.get("languages") or [
+        "python",
+        "typescript",
+        "javascript",
+        "rust",
+        "go",
+        "c++",
+    ]
+    candidates: dict[str, dict] = {}
+    for language in languages:
+        try:
+            fetched = fetch_trending(language, cfg.get("since", "daily"))
+        except Exception as exc:  # 单个来源失败不影响整体
+            print(f"⚠️ 补充抓取 {language} trending 失败：{exc}")
+            continue
+        for repo in fetched:
+            name = repo["full_name"]
+            if name in seen or name in candidates:
+                continue
+            last_seen = cache.get(name, {}).get("last_seen", "")
+            # 冷却期内展示过的不算新面孔；当天刚补过位的允许同日重跑复用
+            if last_seen and last_seen >= cutoff and last_seen != date_str:
+                continue
+            candidates[name] = repo
+    ranked = sorted(
+        candidates.values(), key=lambda repo: repo.get("stars_today", 0), reverse=True
+    )
+    return ranked[:need]
+
+
 def enrich_repos(
     repos: list[dict], cached_names: set[str] | frozenset[str] = frozenset()
 ) -> None:
@@ -120,36 +166,50 @@ def main() -> None:
     cache_path = os.path.join(ROOT, "data", "repos.json")
     cache = load_cache(cache_path)
     update_streaks(repos, cache, date_str)
-    cached_names = {name for name, entry in cache.items() if entry.get("summary")}
-    reused = sum(1 for repo in repos if repo["full_name"] in cached_names)
 
-    enrich_repos(repos, cached_names)
+    top_n = int(cfg.get("top_n", 10))
+    max_streak = int(cfg.get("top_n_max_streak_days", 3))
+    fresh = [
+        repo
+        for repo in repos
+        if int(cache.get(repo["full_name"], {}).get("streak_days", 0)) < max_streak
+    ]
+
+    # 连续在榜较久的仓库退出精选后，用榜单外的 trending 新仓库把精选补满
+    fill_cfg = cfg.get("top_n_fill", {})
+    fills: list[dict] = []
+    if fill_cfg.get("enabled", True) and len(fresh) < top_n:
+        fills = fetch_fill_repos(repos, cache, top_n - len(fresh), fill_cfg, date_str)
+        update_streaks(fills, cache, date_str)
+        print(f"🆕 精选缺 {top_n - len(fresh)} 个，已补充榜单外 trending 新仓库 {len(fills)} 个")
+
+    all_repos = repos + fills
+    cached_names = {name for name, entry in cache.items() if entry.get("summary")}
+    reused = sum(1 for repo in all_repos if repo["full_name"] in cached_names)
+
+    enrich_repos(all_repos, cached_names)
 
     ai_cfg = cfg.get("ai", {})
     use_ai = bool(
         ai_cfg.get("enabled", True)
         and os.environ.get(ai_cfg.get("api_key_env", "DEEPSEEK_API_KEY"))
     )
-    details = analyze_all(repos, ai_cfg, cache=cache, date_str=date_str, use_ai=use_ai)
-    for repo, detail in zip(repos, details):
+    details = analyze_all(
+        all_repos, ai_cfg, cache=cache, date_str=date_str, use_ai=use_ai
+    )
+    for repo, detail in zip(all_repos, details):
         repo["summary"] = detail["summary"]
         repo["intro"] = detail.get("intro", "")
         repo["features"] = detail.get("features", [])
         repo["audience"] = detail.get("audience", "")
     save_cache(cache_path, cache)
     if use_ai:
-        print(f"📦 复用缓存 {reused} 个仓库介绍，AI 新分析 {len(repos) - reused} 个")
+        print(f"📦 复用缓存 {reused} 个仓库介绍，AI 新分析 {len(all_repos) - reused} 个")
     else:
         print(f"📦 复用缓存 {reused} 个仓库介绍（AI 未启用，其余走兜底）")
 
-    # 连续在榜达到上限的仓库不再占详细介绍位，由榜单后面的仓库顺延补位
-    top_n = int(cfg.get("top_n", 10))
-    max_streak = int(cfg.get("top_n_max_streak_days", 3))
-    featured = [
-        repo
-        for repo in repos
-        if int(cache.get(repo["full_name"], {}).get("streak_days", 0)) < max_streak
-    ][:top_n]
+    # 精选：今日榜单里连续在榜 < 上限的仓库 + 榜单外补位的新仓库
+    featured = fresh[:top_n] + fills
     if not featured:  # 极端情况：全部连续在榜很久，保证日报仍有内容
         featured = repos[:top_n]
     print(f"📌 今日精选 {len(featured)} 个（连续在榜 ≥{max_streak} 天的已跳过）")

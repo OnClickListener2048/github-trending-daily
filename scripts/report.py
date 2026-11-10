@@ -214,25 +214,43 @@ def render_report(
     """渲染 Markdown 日报（Issue 正文 / README 区块 / @提及邮件内容）。
 
     featured 是进入详细介绍的仓库列表（默认前 top_n 个）。连续在榜较久的
-    仓库会被跳过并由后面的仓库顺延补位，因此编号沿用完整榜单里的原始名次，
-    可能出现不连续。
+    仓库会被跳过，缺额由榜单外同样是 trending、但近期未展示过的新仓库补位；
+    榜单内仓库编号沿用原始名次（可能不连续），榜单外仓库用 🆕 标记。
     """
     top = list(featured) if featured is not None else repos[:top_n]
     rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
+    fill_count = sum(1 for r in top if r["full_name"] not in rank_of)
+
+    headline = (
+        "> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · "
+        f"每天 08:00（北京时间）自动推送 · 共 {len(repos)} 个仓库"
+    )
+    if fill_count:
+        headline += f"，另补充 {fill_count} 个榜单外 trending 新项目"
 
     lines = [
         f"# 🔥 GitHub 每日 Trending · {date_str}",
         "",
-        f"> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 {len(repos)} 个仓库",
+        headline,
     ]
     if pages_url:
         lines.append(f"> 🎨 [打开精美 HTML 报告]({pages_url})（推荐浏览器查看）")
     lines += ["", "## 🏆 今日精选（详细介绍）", ""]
 
+    fill_note_shown = False
     for r in top:
         i = rank_of.get(r["full_name"], 0)
+        if i == 0 and not fill_note_shown:
+            lines += [
+                "---",
+                "",
+                "> 🆕 以下为榜单外同样 trending、且近期未展示过的新项目：",
+                "",
+            ]
+            fill_note_shown = True
+        heading = f"### {i}. " if i else "### 🆕 "
         lines.append(
-            f"### {i}. [{r['full_name']}]({r['url']}) — ⭐ {r['stars']:,}（今日 +{r['stars_today']:,}）"
+            f"{heading}[{r['full_name']}]({r['url']}) — ⭐ {r['stars']:,}（今日 +{r['stars_today']:,}）"
         )
         lines.append("")
         lines.append(f"> {r['summary']}")
@@ -302,6 +320,7 @@ a { color: var(--accent); text-decoration: none; }
 }
 main { max-width: 1080px; margin: 0 auto; padding: 0 20px 56px; }
 section h2 { font-size: 1.3rem; margin: 26px 0 14px; }
+section .fill-note { color: var(--muted); font-size: .9rem; margin: -6px 0 14px; }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
@@ -400,7 +419,10 @@ def _card_html(r: dict, i: int, featured: bool) -> str:
     )
 
     cls = "card featured" if featured else "card"
-    rank = f'<span class="rank">#{i}</span>' if featured else ""
+    if not featured:
+        rank = ""
+    else:
+        rank = f'<span class="rank">#{i}</span>' if i else '<span class="rank">🆕</span>'
     head = (
         f'<div class="card-head">{rank}'
         f'<a class="name" href="{html.escape(r["url"])}" target="_blank" rel="noopener">{name}</a></div>'
@@ -429,15 +451,24 @@ def render_html(
 ) -> str:
     """渲染完全自定义样式的 HTML 报告页（GitHub Pages）。
 
-    精选卡片编号沿用完整榜单里的 GitHub 原始名次（可能不连续）。
+    精选卡片编号沿用完整榜单里的 GitHub 原始名次（可能不连续）；
+    榜单外补位的新仓库没有名次，用 🆕 标记。
     """
     top = list(featured) if featured is not None else repos[:top_n]
     rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
+    fill_count = sum(1 for r in top if r["full_name"] not in rank_of)
     top_html = "\n".join(
         _card_html(r, rank_of.get(r["full_name"], 0), True) for r in top
     )
     all_html = "\n".join(_card_html(r, i, False) for i, r in enumerate(repos, 1))
 
+    fill_note = f"（另补充 {fill_count} 个榜单外 trending 新项目）" if fill_count else ""
+    fill_hint = (
+        '<p class="fill-note">🆕 末尾项目同样来自 trending，'
+        "但不在今日榜单、且近期未展示过</p>"
+        if fill_count
+        else ""
+    )
     cta = (
         f'<a class="btn" href="{html.escape(repo_url)}" target="_blank" rel="noopener">'
         "⭐ Star 订阅每日推送</a>"
@@ -461,13 +492,14 @@ def render_html(
 <body>
 <header class="hero">
   <h1>🔥 GitHub 每日 Trending</h1>
-  <p class="date">{date_str} · 每天 08:00（北京时间）自动更新 · 共 {len(repos)} 个仓库</p>
+  <p class="date">{date_str} · 每天 08:00（北京时间）自动更新 · 共 {len(repos)} 个仓库{fill_note}</p>
   <p class="sub">数据来源 <a href="https://github.com/trending?since=daily" target="_blank" rel="noopener">github.com/trending</a></p>
   {cta}
 </header>
 <main>
   <section>
     <h2>🏆 今日精选（详细介绍）</h2>
+    {fill_hint}
     <div class="grid featured">
 {top_html}
     </div>
