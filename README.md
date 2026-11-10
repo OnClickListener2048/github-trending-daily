@@ -19,193 +19,187 @@
 
 # 🔥 GitHub 每日 Trending · 2026-11-10
 
-> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 12 个仓库，另补充 3 个榜单外 trending 新项目
+> 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐ 114,782（今日 +465）
+### 1. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 188,091（今日 +898）
 
-> 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。
+> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
 
-这是一套面向 AI 编程代理的「技能包」：把资深工程师在造软件时用的工作流、质量门禁和最佳实践写成结构化技能，让代理在开发的每个阶段都按同一套规矩办事。它解决的是 AI 写代码时流程随意、跳过测试、缺少评审的问题——用 9 个斜杠命令把开发切成定义、规划、构建、验证、评审、上线六段，每个命令自动挂载对应技能。通过 npx skills add 可一键装进 Claude Code、Cursor、Codex、Copilot、Cline 等 70 多个代理，也支持插件市场和本地目录方式集成。
+Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
 
-- ✨ 9 个生命周期斜杠命令：/spec、/plan、/build、/test、/constraints、/review、/webperf、/code-simplify、/ship，每个自动激活对应技能
-- ✨ 共 25 个技能，也可按需单独安装，例如 code-review-and-quality 做五维评审、interview-me 一次一问地追问需求、test-driven-development 强制红绿重构
-- ✨ /build auto 模式：批准一次计划后自动实现所有任务，仍然每任务测试驱动、逐个提交，遇失败或高风险步骤会暂停
-- ✨ 技能按上下文自动触发：设计 API 时启用 api-and-interface-design，写 UI 时启用 frontend-ui-engineering
-- ✨ 一条命令跨代理安装（npx skills add，支持 70+ 代理），并提供 Claude Code 插件市场、Cursor 的 .cursor/skills 与 rules 分离方案、Antigravity CLI 原生插件等集成方式
-- ✨ 把项目级的硬性约束集中到 /constraints：一次决定、处处强制执行，避免规则散落
-- 👥 适合谁：使用 Claude Code、Cursor、Codex 等 AI 编程代理，希望让代理稳定产出生产级代码的开发者与团队。
+- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
+- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
+- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
+- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
+- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
+- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
+- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
 
-`JavaScript` · Fork 11,997 · 🔗 [官网](https://skills.addy.ie)
+`JavaScript` · Fork 10,437 · 🔗 [官网](https://ponytail.dev)
 
-### 2. [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) — ⭐ 20,250（今日 +530）
+### 2. [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) — ⭐ 42,184（今日 +387）
 
-> Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏览器与电脑操作等场景。
+> 无分词器的端到端TTS系统，支持30种语言、音色设计与高保真克隆
 
-这是一组能直接跑起来的示例工程，每个对应一类真实产品形态：客服代理、金融数据分析、电脑操作、浏览器自动化、自主编码、托管代理。它解决的问题很实际——你不需要从零摸索 Claude API 的调用方式、工具定义和前端交互长什么样，挑一个最接近自己需求的项目，填上 API key 就能跑通，再在这个基础上改造成自己的应用。所有示例都以可部署、可定制为出发点，而非只做接口演示。
+VoxCPM 是一个 tokenizer-free 的文本转语音系统，采用扩散自回归架构直接生成连续语音表征，跳过离散 token 化，让合成结果更自然、更有表现力。最新版 VoxCPM2 是 2B 参数模型，基于 MiniCPM-4 骨干，用超过 200 万小时多语种语音数据训练，支持 30 种语言（含四川话、粤语等中文方言）、音色设计、可控/极致克隆与 48kHz 输出。它提供 Python API、CLI、Web Demo 以及基于 vLLM 的生产部署方式，权重与代码以 Apache-2.0 开源，可商用，也支持 SFT 与 LoRA 微调。
 
-- ✨ Customer Support Agent：带知识库的 AI 客服示例，展示如何用 Claude 的自然语言理解与生成能力搭建辅助客服系统
-- ✨ Financial Data Analyst：通过聊天分析财务数据，并能生成交互式数据可视化
-- ✨ Computer Use：既能提供让 Claude 控制桌面电脑的环境与工具（含最新的 computer_toolset 工具集形态），也有原生 macOS 的最佳实践参考实现，示范显式工具定义、图像尺寸与裁剪、提示缓存、服务端压缩、批量工具调用、沙箱 shell 与轨迹记录等可靠性和成本优化模式
-- ✨ Browser Use Demo 与 Browser Toolset：前者基于 Playwright 自定义浏览器工具，让 Claude 导航网站、检查并操作 DOM、提取内容、填写表单；后者是最小 CDP 示例，用一个小驱动控制单个 Chromium 标签页
-- ✨ Autonomous Coding Agent：基于 Claude Agent SDK 的双代理模式（初始化代理 + 编码代理），跨多个会话逐步构建完整应用，进度通过 git 和功能清单持久化
-- ✨ Managed Agents 系列：浏览器聊天应用（同一套 handler 换上 Chat SDK 适配器即可跑在 Slack、Teams、Discord、Telegram、WhatsApp）、用 CopilotKit + AG-UI 把工具调用渲染成交互式生成式 UI、每工作日汇总 Slack 与 GitHub PR 的定时简报代理、把文档语料蒸馏成带出处版本化知识库的尽调维基
-- 👥 适合谁：想用 Claude API 做产品的开发者，尤其是要落地客服、数据分析、Agent 自动化类应用的团队和个人。
+- ✨ 30 语种多语言合成：直接输入文本即可合成，无需语言标签；还支持四川话、粤语、吴语、东北话等 9 种中文方言
+- ✨ Voice Design：只用一段自然语言描述（性别、年龄、语气、情绪、语速）就能造出全新音色，不需要任何参考音频
+- ✨ 可控克隆：从一段短参考音频克隆音色，并可叠加风格引导来调整情绪、语速和表达，同时保留原始音色
+- ✨ 极致克隆：同时给出参考音频和对应文本，模型从参考无缝续写，忠实还原音色、节奏、情绪与风格等每个细节
+- ✨ 48kHz 录音棚级输出：接收 16kHz 参考音频，经 AudioVAE V2 非对称编解码直接输出 48kHz 音频，内置超分，无需外部升采样器
+- ✨ 实时流式合成：在 NVIDIA RTX 4090 上 RTF 低至约 0.3，经 Nano-vLLM 或 vLLM-Omni 加速可到约 0.13，并提供兼容 OpenAI 的 API
+- 👥 适合谁：做多语言语音合成、有声内容、虚拟人配音产品的开发者与研究团队
 
-`Python` · Fork 3,386
+`Python` · Fork 4,805 · 🔗 [官网](https://voxcpm.com)
 
-### 3. [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) — ⭐ 17,157（今日 +453）
+### 3. [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) — ⭐ 99,228（今日 +332）
 
-> Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系统。
+> 美国国家安全局（NSA）开源的全功能软件逆向工程框架，支持反汇编、反编译与脚本扩展。
 
-MuJoCo 名称是 Multi-Joint dynamics with Contact 的缩写，由 Google DeepMind 维护，是一个开源物理仿真器。它用于仿真由关节连接的刚体结构在环境中运动时与物体发生的接触和碰撞，主要解决机器人学、生物力学、图形动画和机器学习中对快速、准确仿真的需求。它提供性能高度优化的 C API 运行时，模型由内置 XML 编译器预先分配数据结构，并提供桌面窗口与浏览器中的交互式可视化工具和大量物理量计算函数。此外还有 Python 绑定和 Unity 插件。既可直接下载各平台预编译版本，也可通过 pip install mujoco 安装并快速上手。
+Ghidra 是 NSA 研究部门开发并开源的软件逆向工程（SRE）框架，最初用于解决复杂逆向任务中的规模化协作问题，同时提供一个可定制、可扩展的研究平台。它能分析 Windows、macOS、Linux 等多个平台上的编译后代码，既可以在图形界面中交互操作，也可以在自动化（批处理）模式下运行。安装只需 JDK 25 加官方发布包，解压后运行 ghidraRun 即可启动，另有 PyGhidra 入口；开发者还能用 Java 或 Python 编写脚本和扩展组件，把 Ghidra 改造成适合自己工作流的工具。
 
-- ✨ 高性能 C API 物理仿真运行时，数据结构预分配，专为快速准确仿真优化
-- ✨ 内置 XML 模型编译器，用 XML 描述多关节结构的场景
-- ✨ 原生桌面窗口与 Web 浏览器中的交互式可视化，附带 simulate 查看器与 MuJoCo Studio
-- ✨ 大量物理相关计算工具函数，可直接获取仿真中的各类物理量
-- ✨ 官方 Python 绑定，pip install mujoco 即可使用，配有入门、模型编辑、rollout、LQR、最小二乘等 Colab 教程
-- ✨ MJX（MuJoCo XLA）JAX 分支，支持在 JAX 中运行并可通过教程训练可微物理策略
-- 👥 适合谁：从事机器人、生物力学、图形动画与机器学习研究，需要快速准确刚体仿真的开发者和研究者。
+- ✨ 反汇编与汇编：查看和编辑目标程序的机器码与汇编指令
+- ✨ 反编译：将编译后的二进制还原为更易读的高级语言形式
+- ✨ 图形化分析：函数调用图、控制流图等可视化视图
+- ✨ 脚本与扩展：支持用 Java 或 Python 编写自定义脚本，并开发 Ghidra 扩展组件
+- ✨ 广泛的处理器指令集与可执行文件格式支持，覆盖多平台二进制
+- ✨ 交互与自动化双模式：既可在 GUI 中分析，也可批量自动运行
+- 👥 适合谁：适合逆向工程师、恶意代码分析人员、漏洞与安全研究人员，以及需要深入理解二进制程序的高校师生。
 
-`C++` · Fork 2,068 · 🔗 [官网](https://mujoco.org)
+`Java` · Fork 11,270
 
-### 4. [we-promise/sure](https://github.com/we-promise/sure) — ⭐ 11,407（今日 +184）
+### 4. [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) — ⭐ 78,213（今日 +326）
 
-> 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance
+> 542 节开源课程，带你从零实现模型内部、检索管线和智能体运行时，边写代码边学 AI 工程。
 
-Sure 是一个可以完全自托管的个人财务与财富管理应用。它最初由 Maybe Finance 团队投入近百万美元开发，2023 年停摆后开源，如今由社区 fork 继续维护。你能用它集中查看现金流、净资产、支出与资金流出，内置 AI 助手可以直接回答类似于「我的储蓄情况怎么样」的问题。部署方式很简单：用 Docker 自托管，或通过 Render 一键部署（有带 AI 和不带 AI 两个版本）。应用可以通过浏览器、macOS 桌面端、移动端、API 客户端和 LLM agent 访问。本地开发只需 Ruby、PostgreSQL 和 Redis，跑 bin/setup 后执行 rake demo_data:default 就能加载演示数据试玩。
+这是一个免费的 MIT 开源 AI 工程课程仓库，目标是让你不止于调包，而是真的把东西造出来：亲手实现模型内部机制、检索管线、智能体运行时，跑测试、排查失败原因，并把代码和评测结果留成自己的作品。全站共 542 节课、20 个阶段，覆盖 Python、TypeScript、Rust、Julia、Go。你可以直接在官网按课时学习，也可以配合编码智能体跟练，或者把仓库拉到本地跑代码。官网提供三条学习路线（模型基础、LLM 系统、智能体与交付），并配有交互式实验和项目挑战，学完就能上手做真实项目。
 
-- ✨ 可视化仪表盘：一屏查看现金流、净资产、支出与资金流出
-- ✨ 内置 AI 助手：用自然语言提问，直接回答关于你财务状况的问题
-- ✨ 多种客户端接入：浏览器、macOS 桌面应用、移动端、API 客户端和 LLM agent
-- ✨ 用 Docker 自托管，也可以借助 Render 一键部署，部署版本可选带 AI 或不带 AI
-- ✨ 完整的本地开发流程和演示数据集：执行 rake demo_data:default 即可得到可登录的示例账户
-- ✨ 公开的 Skylight 性能面板，暴露 demo 站上的慢请求和调用栈，方便社区针对性优化
-- 👥 适合谁：希望自己托管财务数据、注重隐私的个人用户，以及愿意参与 Ruby 开源项目贡献的开发者
+- ✨ 完整课程体系：542 节课分成 20 个阶段，从开发环境搭建一路走到智能体工程与交付
+- ✨ 三条学习路线：模型基础、LLM 系统（从提示工程起步）、智能体与交付（从智能体循环起步），可按职业方向选择
+- ✨ 动手实现核心组件：模型内部、检索管线、智能体运行时都要自己写，而不是只调用现成 API
+- ✨ 交互式实验：例如梯度下降可视化，20 个起点在二次损失上迭代，实时展示位置与平均损失变化
+- ✨ 项目挑战与评测留存：写完要测试、检查失败案例，并把代码和评测结果保留下来作为作品
+- ✨ 多语言代码示例（Python、TypeScript、Rust、Julia、Go）与 30 多种语言的 README 翻译
+- 👥 适合谁：想真正理解 AI 底层、愿意动手写代码的开发者，以及从后端或前端转向 AI 工程的工程师。
 
-`Ruby` · Fork 798 · 🔗 [官网](https://sure.am)
+`Python` · Fork 13,907 · 🔗 [官网](https://aiengineeringfromscratch.com)
 
-### 5. [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) — ⭐ 6,323（今日 +792）
+### 5. [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) — ⭐ 64,045（今日 +318）
 
-> 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assistant 的 MCP 服务器
+> 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。
 
-HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI 助手能够读取状态、修改配置、编写自动化，省去手写 YAML 的麻烦。最推荐的用法是通过 HACS 或 Home Assistant 2026.11+ 的 Marketplace 把它装成集成，直接在 Home Assistant 进程内运行完整服务器；它兼容 OS、Supervised、Container、Core 全部安装类型，功能完全一致，也取代了插件、Docker、uvx/PyPI 等旧方式（只能选一种）。安装后重启 Home Assistant，在“设置 → 设备与服务”添加 HA-MCP Server，填入管理员长令牌，或为它新建一个仅本地登录的管理员账号，选择远程访问（Secret URL 或 HA 登录）和/或本地网络访问，再从 Configure 界面复制连接 URL 粘进 AI 客户端即可。本地客户端也可直连 9584 端口。
+God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和公共摄像头这些本就公开的信号，放进同一个可探索的照片级 3D 地球，让你在全局态势与某架飞机、某艘船、某条街道之间自由切换。它解决的痛点在于：数据散落各处、彼此关系看不见。全部在本地浏览器运行，代码可检查、可扩展。用 Pinokio 一键安装，或在终端本地启动，不需要 API key 就能上手，需要时再在应用内填可选密钥；每一层数据都是独立模块，可以自行接入新数据源。
 
-- ✨ 内置 87 个工具，覆盖 Home Assistant 的查询、配置与自动化操作
-- ✨ 以集成形式通过 HACS 或 Marketplace 安装，在 Home Assistant 进程内运行，无需另跑 Docker/uvx
-- ✨ 兼容 Home Assistant OS、Supervised、Container、Core 全部安装类型，功能完全一致
-- ✨ 两种接入方式：经 Home Assistant 的远程 webhook（Secret URL 或 HA 登录），以及本地网络直连
-- ✨ 认证灵活：可用自己的长令牌，也可为 HA-MCP 单独建管理员账号并由它自动生成令牌
-- ✨ 有端到端测试流水线保障，并把 ha_config_set_yaml 等实验能力放入 beta 通道
-- 👥 适合谁：用 Home Assistant 搭建智能家居、希望让 AI 代劳配置与自动化的玩家和自建用户
+- ✨ 座舱视角：进入被追踪航班的机舱，镜头一路贴着下方地形飞行；另有按机型建模的 3D 机库（787、ATR-72、MQ-9 等），靠近时目标会从图标换成实体模型
+- ✨ 点击追踪与 250km 联系人名单：锁定目标后绘制渐隐轨迹并展示完整元数据，追踪火灾或船只可一键交接给最近的实时摄像头
+- ✨ 语音控制与语音白板：由实时 AI agent 驱动的免手操作，把标注、真实边界多边形和路线直接“说”到地球上
+- ✨ 传感器滤镜与 HUD：CRT、NVG、FLIR 热成像、Noir 等 GLSL 效果叠加在真实地球上，配合屏幕空间探测框和军事风格战术 HUD
+- ✨ 天气与卫星过境：GFS/ECMWF 预报风场、雷达回波、云层与闪电共用一条时间轴，可追踪 NHC/CPHC 气旋路径，还能用语音查询某颗卫星何时从头顶升起
+- ✨ 分享链接与场景导演：相机、风格、图层乃至被追踪目标都能序列化进 URL（追踪目标是交接而非收藏），Director 场景可导入导出为文件或数据包，另附尼泊尔博特科西洪水回放等打包场景
+- 👥 适合谁：对地理空间数据、开源情报与可视化感兴趣的开发者、记者和极客，以及想拿它做演示或视频素材的创作者。
 
-`Python` · Fork 348 · 🔗 [官网](https://homeassistant-ai.github.io/ha-mcp/)
+`JavaScript` · Fork 12,618 · 🔗 [官网](https://godseyeview.ai/)
 
-### 6. [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) — ⭐ 6,587（今日 +192）
+### 6. [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) — ⭐ 33,777（今日 +313）
 
-> Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用。
+> 一个开源、可自托管的 AI 图像与视频生成工作室，聚合 600+ 模型，无内容过滤。
 
-Topcoat 是 tokio-rs 团队打造的模块化、开箱即用的全栈 Rust Web 框架，主打简单和开发效率。它把 markup 全部放在服务端渲染，组件可以是 async 并直接查数据库，省掉单独写 API 层的样板代码；需要交互时，用 $(...) 表达式写普通 Rust，框架同时把它编译成 JavaScript 在浏览器即时执行，不需要 wasm 包和前端构建步骤。路由、UI 组件、模板语法都内置，项目处于早期实验阶段，API 可能会有破坏性变更。
+Open Generative AI 是商业 AI 视频/图像平台的替代品：你不用订阅 Midjourney、Runway、Kling，而是把这套 MIT 许可的前端应用部署到自己的服务器上，通过 MuAPI 调用 600+ 模型（Flux、Midjourney、Kling、Sora、Veo 等），在 14 个工作室里生成图像、视频、音频、对口型内容和工作流。它最大的卖点是没有任何内容过滤，也不锁定在某个封闭生态里。项目由 MuAPI 提供底层模型、队列和计费能力，README 还提供白标方案：换上自己的 Logo、配色和域名，就能把它变成自己品牌的 AI 工作室并按自己的价格卖给终端用户。
 
-- ✨ 服务端渲染所有组件，组件可为 async 并直接访问数据库，无需单独 API 层
-- ✨ $(...) 表达式同时用于服务端首屏和浏览器执行，实现无 wasm、无前端构建的客户端响应式
-- ✨ #[shard] 组件在参数变化时由服务端重渲染并原位替换 HTML，支持实时搜索等场景
-- ✨ view! 宏贴近 HTML 与 Rust，模板中可直接使用 for、if 等控制流
-- ✨ 基于模块目录结构自动推断路由树，无需构建步骤，支持布局文件与 API 路由
-- ✨ topcoat ui CLI 将基于 Tailwind、仿 shadcn/ui 的组件复制进项目，可自由修改
-- 👥 适合谁：想用 Rust 一套语言写完整 Web 应用、又不想折腾 wasm 和前后端分层的前后端开发者。
+- ✨ 600+ 图像与视频模型统一接入，包括 Flux、Midjourney、Kling、Sora、Veo
+- ✨ 14 个独立工作室，覆盖图像、视频、音频、对口型、Cinema 和 Workflows
+- ✨ 无内容过滤，不做提示词审查
+- ✨ 完全自托管、MIT 许可，代码和数据都在自己手里
+- ✨ 通过 MuAPI 统一调度模型、任务队列与计费，无需自建 GPU 基础设施
+- ✨ 官方白标方案，支持自定义品牌、域名与定价，直接转售为自己的产品
+- 👥 适合谁：想摆脱订阅制与内容审查的创作者、希望自建或转售 AI 生成产品的独立开发者与小团队。
 
-`Rust` · Fork 236
+`JavaScript` · Fork 6,419 · 🔗 [官网](https://muapi.ai/open-generative-ai?utm_source=github&utm_medium=about&utm_campaign=open-generative-ai)
 
-### 7. [mattpocock/skills](https://github.com/mattpocock/skills) — ⭐ 320,305（今日 +1,223）
+### 7. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) — ⭐ 52,820（今日 +313）
 
-> 从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编码代理技能集
+> 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具
 
-这是 Matt Pocock 每天实际使用的一套 agent skills，目标是用它们做真正的工程开发，而不是让 AI 随意生成代码（俗称 vibe coding）。README 明确指出 GSD、BMAD、Spec-Kit 这类方案虽然想帮忙，但通过接管流程夺走了开发者的控制权，出了问题也难以排查；这些技能则反过来追求小而可改、可自由组合，并且不绑定任何模型。安装上支持 Claude Code、Codex、GitHub Copilot、Gemini CLI，也能通过 npx skills 装到 cursor、opencode、devin、windsurf、amp 等代理里；插件方式会自动更新，也可以复制成可编辑文件手动维护。装完在每个仓库跑一次 /setup-matt-pocock-skills，告诉它你用哪个 issue tracker、triage 打什么标签、文档存哪里，就能开工。
+AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。
 
-- ✨ grill-me：在动手前让 agent 反过来追问你细节，先对齐需求再写代码
-- ✨ grill-with-docs：grill-me 的加强版，额外带上文档与上下文资料一起盘问
-- ✨ setup-matt-pocock-skills：每个仓库跑一次，配置 issue tracker、triage 标签和文档存放位置
-- ✨ /triage 配合自定义标签做工单分类
-- ✨ 共享语言（glossary）文档，让 agent 用项目自己的术语说话，避免啰嗦绕圈
-- ✨ 小而可组合的技能设计，不接管流程、任何模型都能用，改起来没有负担
-- 👥 适合谁：用 Claude Code、Codex、Copilot 等代理写真实项目、想在保留控制权的前提下提升协作效率的开发者
+- ✨ 自动重链接：把 PS5 可执行文件转换为 Linux、Windows 原生可执行格式
+- ✨ 提供 system prx 系统库实现，支持动态链接，无需模拟器或独立运行时进程
+- ✨ 着色器重编译器输出 SPIR-V，并可用 Spirv-Tools 校验结果
+- ✨ 网页版转换器，所有文件处理都在本地设备完成，不上传服务器
+- ✨ 输入映射支持 SDL 手柄（含摇杆与扳机），键鼠可通过 anyps5-input.ini 配置
+- ✨ 仅含 relinker 的构建可在 macOS（含 Apple silicon）上运行
+- 👥 适合谁：对 PS5 软件互操作性、移植研究与软件保存感兴趣的开发者和研究人员
 
-`Shell` · Fork 26,822 · 🔗 [官网](https://aihero.dev/skills)
+`C++` · Fork 5,014 · 🔗 [官网](https://boykopovar.github.io/AnyPS5/)
 
----
+### 8. [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — ⭐ 118,783（今日 +299）
 
-> 🆕 以下为榜单外同样 trending、且近期未展示过的新项目：
+> 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token
 
-### 🆕 [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) — ⭐ 106,748（今日 +1,262）
+Caveman 是一个装在开发者本机的代理与技能包，核心主张是「能少说就少说」：让编码 agent 的回答变短、让喂给模型的日志和网页变小，但代码本身一字不改。一条命令 npx @caveman-ai/cli@latest 即可完成安装，它会自动找到你机器上的 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 agent 并完成配置，装完直接照常用 claude 即可，用的还是你自己的 key 和 Claude Pro/Max 登录。官方实测整段会话输入 token 减少 33.2%，回复从 63 token 压到 20 token 而修复方案不变；Adobe Research、JetBrains、Elastic 都做过独立验证。
 
-> 完全本地运行的 ElevenLabs 开源替代品，可克隆音色、设计声音、配音和转写，覆盖 646 种语言
+- ✨ Say less：回答压缩成电报体，代码与命令保持精确，63 token 变 20 token，还分 /caveman、/ultracave、/megacave 三档强度
+- ✨ Read less：日志、JSON、CSV、测试输出在进模型之前先瘦身，整段会话输入 token 少 33.2%
+- ✨ Auto：按每个请求自动挑选模型与推理强度，相同得分下比 Opus 高强度模式便宜 54%
+- ✨ Blocks：code mode，agent 写过的脚本会被保留并重复执行，一次测试运行的 token 从 397 降到 76
+- ✨ Waste fixes：定位 token 到底花在哪并修掉，还能在你暂停时保持 prompt 缓存是热的
+- ✨ Browse：网页抓回来先压缩，页面体积缩小约 129.8 倍；另有 caveman status / caveman off 逐项开关
+- 👥 适合谁：重度使用 Claude Code、Codex 等编码 agent，被 token 账单和上下文塞满困扰的开发者
 
-VoiceStudio 是一个完全运行在本地设备上的 AI 语音工作台，定位是 ElevenLabs 的开源替代方案。它把语音克隆、音色设计、视频配音、听写、转写和有声书旁白整合到一个应用里：音频素材不必上传云端，也不按字符计费，隐私和成本都掌握在自己手里。它支持 646 种语言，能在笔记本、台式机、服务器、手机和平板上运行，既有可直接下载的安装包，也能从源码自行构建；此外还提供 Pro 版和云端版。
+`Go` · Fork 6,908 · 🔗 [官网](https://docs.caveman.so/caveman)
 
-- ✨ 语音克隆：用少量声音样本复刻音色，生成自然的旁白和对白
-- ✨ 音色设计（Voice Design）：不依赖现成样本，直接描述并生成全新音色
-- ✨ 视频配音：为视频生成或替换多语言配音
-- ✨ 听写与转写：语音实时转成文字，或把录音整理成可编辑文稿
-- ✨ 有声书制作：对长文本分章朗读并生成旁白
-- ✨ 646 种语言覆盖，同一套工作流可在电脑、服务器、手机和平板上跑，并内置模型管理
-- 👥 适合谁：内容创作者、播客与有声书制作者，以及看重隐私和离线部署的开发者与团队
+### 9. [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot) — ⭐ 39,548（今日 +279）
 
-`Python` · Fork 11,834 · 🔗 [官网](https://voicestudio.sh)
+> 开源全渠道客服平台，Intercom、Zendesk 的自托管替代方案。
 
-### 🆕 [milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) — ⭐ 20,340（今日 +1,220）
+Chatwoot 是一套可以自己部署的现代客服平台，目标是把分散在各个渠道的客户对话收进同一个收件箱。网站实时聊天、电子邮件、Facebook、Instagram、Twitter、WhatsApp、Telegram、Line、SMS 等来源的消息都会汇总到统一后台，客服不用在多个工具之间来回切换。它想解决的是商业客服软件价格高、数据不在自己手里、渠道割裂的问题：自托管意味着客户数据完全由你掌控，同时保留自动化、报表、帮助中心等成熟产品才有的能力。部署方式灵活，提供 Heroku、DigitalOcean 一键部署和 Docker、Helm 方案，开发团队也可以直接基于源码二次开发。
 
-> 开源的 AI 机器人聊天应用，每个机器人都是运行在本机的独立智能体
+- ✨ 全渠道统一收件箱：网站实时聊天、邮件、社交平台、WhatsApp、Telegram、Line、SMS 等消息集中处理
+- ✨ Captain AI 客服代理：自动回复常见问题，减轻人工坐席负担
+- ✨ 内置帮助中心：发布帮助文章与 FAQ，让客户自助查找答案
+- ✨ 团队协作能力：私有备注、@提及、标签、快捷回复、自动分配、团队与自动化流程
+- ✨ 客户数据与主动触达：联系人管理、分组、自定义属性、售前表单与营销活动
+- ✨ 集成与报表：Slack、Dialogflow、Shopify、Google Translate、Linear，以及对话、坐席、收件箱、CSAT 等多维报表
+- 👥 适合谁：适合希望自托管、掌控客户数据的中小企业与支持团队，以及需要二次开发客服系统的开发者。
 
-OpenMausBot 是一个受 Grok Bot 启发的开源项目，把 AI 助手做成类似 Telegram 的聊天应用：侧边栏里的每个聊天对象都是一个真实运行的 agent，底层在本机运行 Claude、Codex 或 Grok CLI，拥有独立的性格设定、模型、云端电脑和已连接的应用。它要解决的是「一个助手装在一个盒子里」这种形态不适合多 agent 协作的问题，同时把模型、电脑和数据都留在用户自己这边。你像对待联系人一样与机器人对话、看它们干活、只审批真正重要的事。项目基于 TypeScript、React 和 Electron，提供 macOS、Windows、Ubuntu 安装包，账号和订阅直接沿用你已有的，无需重新注册。
+`Ruby` · Fork 9,605 · 🔗 [官网](https://www.chatwoot.com/help-center)
 
-- ✨ 每个机器人都是独立 agent，有各自的性格、模型、线程记忆和独立上下文
-- ✨ 自带 agent：直接复用本机已安装并登录的 claude、codex、grok CLI，无需新账号，也可在设置中指向自定义 CLI 二进制
-- ✨ 本地优先：127.0.0.1 上的小型 harness 服务管理所有 agent 进程，对话记录、密钥和事件存放在 ~/.openmausbot
-- ✨ 给 agent 一双手：可使用云端 Linux 桌面、隔离的 Local VM，或在明确授权后使用你自己的电脑
-- ✨ 通过 Composio 接入 500+ 第三方应用，让机器人真正能操作外部服务
-- ✨ 类即时通讯的聊天界面：像联系人一样对话、旁观 agent 工作过程，并对关键操作进行审批
-- 👥 适合谁：想让多个 AI agent 常驻本地、可对话可监督，并重视数据自主权的开发者与重度 AI 用户。
+### 10. [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) — ⭐ 5,196（今日 +265）
 
-`TypeScript` · Fork 2,815 · 🔗 [官网](https://www.mausbot.com/)
+> 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。
 
-### 🆕 [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) — ⭐ 69,457（今日 +1,062）
+这是一个开源的中国历史交互地图集：从《资治通鉴》开篇的三家分晋（公元前403年）一直画到当代，横跨18个历史时期、164张疆域与政区快照。它要解决的是读史、读诗时那个很具体的疑问——“这个地方今天在哪？疆域是怎么一步步从‘秋海棠’变成‘雄鸡’的？”用起来很直接：拖动时间轴换朝代，点里程碑看疆域增益与丧失，悬停任意古城、关隘或州府，就能看到它的古今地名沿革、辖境对应和发生过的关键事件。
 
-> LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。
+- ✨ 时间轴拖拽切换18个历史时期，战国七雄、三国群雄、南北朝、五代十国、宋辽西夏大理金蒙等政权同屏高对比呈现，悬停图例即高亮其领土，点击可直飞该政权
+- ✨ 多阶段疆域演化 + 朱红虚线“幽灵边界差异”叠加：在秦取巴蜀、汉武帝开河西、唐安西四镇、元宣政院辖藏、1881年收复伊犁、1898年租借地、1945年台湾光复、1946年“秋海棠”转“雄鸡”等里程碑间切换，前一时段的得失一目了然
+- ✨ 时间轴上内联显示在位君主与年号，含庙号/谥号、姓名和在位区间（如“汉武帝·刘彻”“唐太宗·李世民”“清圣祖·玄烨”），并给出对应的帝王纪年
+- ✨ 一级政区（郡、道、路、省）以去重的羊皮纸描边绘制，悬停可查看辖境及现代省份对应，还能开启 X-Ray 透镜把当代省界直接投到历史地图上
+- ✨ 黄河改道、云梦泽与罗布泊/蒲昌海的盈缩、战国至明的长城、隋唐大运河、丝绸之路、郑和航线，以及渤海湾、苏北、长江口、珠三角的古海岸线，都随年代同步演变
+- ✨ 古今地名沿革与诗词、战场地标：长安两千年间的名称变迁与重大事件，苏轼贬谪黄州写《赤壁赋》的路线，韩愈立马的蓝关，岳飞北伐前线的朱仙镇，都能在地图上点开查看
+- 👥 适合谁：历史与古典诗词爱好者、读史时想对照今地的学生、需要历史地理可视化素材的开发者与教师。
 
-这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。
-
-- ✨ AI 决策报告：核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单一次给全
-- ✨ 多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面
-- ✨ Web / 桌面工作台：手动分析、任务进度、历史报告、完整 Markdown、回测、持仓与配置管理，支持浅色/深色主题
-- ✨ Agent 策略问股：多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种策略，Web/Bot/API 均可调用
-- ✨ 智能导入与补全：支持图片、CSV/Excel、剪贴板导入自选股，股票代码/名称/拼音/别名自动补全
-- ✨ 自动化与推送：GitHub Actions、Docker、本地定时任务、FastAPI 服务，推送到企业微信/飞书/Telegram/Discord/Slack/邮件
-- 👥 适合谁：适合跟踪 A股、港股、美股等多市场的个人投资者，以及想低成本搭自选股日报的开发者。
-
-`Python` · Fork 56,591 · 🔗 [官网](https://dsa.zhulinsen.tech)
+`JavaScript` · Fork 608 · 🔗 [官网](https://deanchen.me/jiangshan-map/)
 
 ## 📋 完整榜单
 
-> ℹ️ 按新鲜度重排：连续在榜 ≥3 天的仓库已移到榜单末尾
+> ℹ️ 每天只推送首次出现的新仓库，往期出现过的不会重复收录
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。 | `JavaScript` | 114,782 | +465 |
-| 2 | [anthropics/claude-quickstarts](https://github.com/anthropics/claude-quickstarts) | Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏… | `Python` | 20,250 | +530 |
-| 3 | [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco) | Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系… | `C++` | 17,157 | +453 |
-| 4 | [we-promise/sure](https://github.com/we-promise/sure) | 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance | `Ruby` | 11,407 | +184 |
-| 5 | [homeassistant-ai/ha-mcp](https://github.com/homeassistant-ai/ha-mcp) | 让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assista… | `Python` | 6,323 | +792 |
-| 6 | [tokio-rs/topcoat](https://github.com/tokio-rs/topcoat) | Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用… | `Rust` | 6,587 | +192 |
-| 7 | [mattpocock/skills](https://github.com/mattpocock/skills) | 从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编… | `Shell` | 320,305 | +1,223 |
-| 8 | [meta/astryx](https://github.com/meta/astryx) | Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手 | `TypeScript` | 21,392 | +3,111 |
-| 9 | [anthropics/skills](https://github.com/anthropics/skills) | Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完… | `Python` | 191,750 | +1,676 |
-| 10 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) | 让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具 | `Rust` | 48,880 | +775 |
-| 11 | [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock) | 跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具 | `Python` | 108,185 | +2,387 |
-| 12 | [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) | 一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 tok… | `TypeScript` | 5,947 | +374 |
+| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 188,091 | +898 |
+| 2 | [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) | 无分词器的端到端TTS系统，支持30种语言、音色设计与高保真克隆 | `Python` | 42,184 | +387 |
+| 3 | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | 美国国家安全局（NSA）开源的全功能软件逆向工程框架，支持反汇编、反编译与脚本扩展。 | `Java` | 99,228 | +332 |
+| 4 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 542 节开源课程，带你从零实现模型内部、检索管线和智能体运行时，边写代码边学 AI 工程… | `Python` | 78,213 | +326 |
+| 5 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。 | `JavaScript` | 64,045 | +318 |
+| 6 | [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) | 一个开源、可自托管的 AI 图像与视频生成工作室，聚合 600+ 模型，无内容过滤。 | `JavaScript` | 33,777 | +313 |
+| 7 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具 | `C++` | 52,820 | +313 |
+| 8 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token | `Go` | 118,783 | +299 |
+| 9 | [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot) | 开源全渠道客服平台，Intercom、Zendesk 的自托管替代方案。 | `Ruby` | 39,548 | +279 |
+| 10 | [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。 | `JavaScript` | 5,196 | +265 |
 
 <!-- TRENDING:END -->
 
