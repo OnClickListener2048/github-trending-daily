@@ -210,6 +210,7 @@ def render_report(
     pages_url: str = "",
     top_n: int = 10,
     featured: list[dict] | None = None,
+    table_note: str = "",
 ) -> str:
     """渲染 Markdown 日报（Issue 正文 / README 区块 / @提及邮件内容）。
 
@@ -272,9 +273,10 @@ def render_report(
         lines.append(" · ".join(meta))
         lines.append("")
 
+    lines += ["## 📋 完整榜单", ""]
+    if table_note:
+        lines += [f"> ℹ️ {table_note}", ""]
     lines += [
-        "## 📋 完整榜单",
-        "",
         "| # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |",
         "| --- | --- | --- | --- | --- | --- |",
     ]
@@ -448,6 +450,7 @@ def render_html(
     repo_url: str = "",
     top_n: int = 10,
     featured: list[dict] | None = None,
+    table_note: str = "",
 ) -> str:
     """渲染完全自定义样式的 HTML 报告页（GitHub Pages）。
 
@@ -468,6 +471,9 @@ def render_html(
         "但不在今日榜单、且近期未展示过</p>"
         if fill_count
         else ""
+    )
+    table_note_html = (
+        f'<p class="fill-note">ℹ️ {html.escape(table_note)}</p>' if table_note else ""
     )
     cta = (
         f'<a class="btn" href="{html.escape(repo_url)}" target="_blank" rel="noopener">'
@@ -506,6 +512,7 @@ def render_html(
   </section>
   <section>
     <h2>📋 完整榜单（点开卡片查看详细介绍）</h2>
+    {table_note_html}
     <div class="grid">
 {all_html}
     </div>

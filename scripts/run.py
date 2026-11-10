@@ -208,26 +208,38 @@ def main() -> None:
     else:
         print(f"📦 复用缓存 {reused} 个仓库介绍（AI 未启用，其余走兜底）")
 
+    # 展示顺序：新上榜的仓库排在前面，连续在榜较久的整体移到榜单末尾
+    fresh_names = {repo["full_name"] for repo in fresh}
+    stale_count = len(repos) - len(fresh)
+    ordered = fresh + [repo for repo in repos if repo["full_name"] not in fresh_names]
+    table_note = (
+        f"按新鲜度重排：连续在榜 ≥{max_streak} 天的仓库已移到榜单末尾"
+        if stale_count
+        else ""
+    )
+
     # 精选：今日榜单里连续在榜 < 上限的仓库 + 榜单外补位的新仓库
     featured = fresh[:top_n] + fills
     if not featured:  # 极端情况：全部连续在榜很久，保证日报仍有内容
-        featured = repos[:top_n]
-    print(f"📌 今日精选 {len(featured)} 个（连续在榜 ≥{max_streak} 天的已跳过）")
+        featured = ordered[:top_n]
+    print(f"📌 今日精选 {len(featured)} 个（连续在榜 ≥{max_streak} 天的已往后排）")
 
     report = render_report(
-        repos,
+        ordered,
         date_str,
         cfg.get("pages_url", ""),
         top_n=top_n,
         featured=featured,
+        table_note=table_note,
     )
     html_page = render_html(
-        repos,
+        ordered,
         date_str,
         cfg.get("pages_url", ""),
         cfg.get("repo_url", ""),
         top_n=top_n,
         featured=featured,
+        table_note=table_note,
     )
 
     daily_dir = os.path.join(ROOT, "data", "daily")
