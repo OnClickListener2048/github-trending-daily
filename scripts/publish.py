@@ -9,6 +9,8 @@ import time
 
 import requests
 
+from report import escape_mentions
+
 API_BASE = "https://api.github.com"
 
 README_START = "<!-- TRENDING:START -->"
@@ -85,6 +87,33 @@ def load_opt_out(path: str) -> set[str]:
         return set()
 
 
+def compose_message(
+    report: str,
+    users: list[str],
+    pages_url: str = "",
+    issue_url: str = "",
+) -> str:
+    """组装通知正文：完整榜单 + @ 提及 + 退订说明。
+
+    @ 提及直接写进 Issue 正文（而不是单独发评论）。GitHub 每产生一次
+    「Issue 创建 / 评论」事件就发一封邮件，把提及并入 Issue 正文后，
+    创建 Issue 只算一个事件 —— 每人每天只收到一封邮件。
+    正文里的 @xxx（如 AI 照抄 README 的 "@e1"）先转义，避免误提及真实账号。
+    """
+    lines = [escape_mentions(report), "", "---", ""]
+    if users:
+        lines.append(f"📬 今日 Trending 已送达：{' '.join('@' + user for user in users)}")
+    lines.append(
+        "不想再收？取消 Star，或把你的用户名加进 `data/opt_out.json` 提个 PR，"
+        "或在 GitHub 通知设置里关闭提及通知。"
+    )
+    if issue_url:
+        lines.append(f"完整榜单：{issue_url}")
+    if pages_url:
+        lines.append(f"🎨 精美 HTML 报告：{pages_url}")
+    return "\n".join(lines)
+
+
 def post_mentions(
     session: requests.Session,
     owner: str,
@@ -95,24 +124,14 @@ def post_mentions(
     chunk_size: int,
     pages_url: str = "",
 ) -> int:
-    """分批评论 @ 用户；每批评论正文带上完整榜单，保证邮件里能看到内容。"""
+    """给超出首批发不完的用户分批发评论 @（每批评论正文带上完整榜单）。"""
     issue_url = f"https://github.com/{owner}/{repo}/issues/{issue_number}"
-    pages_line = f"🎨 精美 HTML 报告：{pages_url}\n" if pages_url else ""
     count = 0
     for i in range(0, len(users), chunk_size):
         chunk = users[i : i + chunk_size]
-        body = (
-            f"📬 今日 Trending 已送达：{' '.join('@' + user for user in chunk)}\n\n"
-            f"{report}\n\n"
-            f"---\n"
-            f"不想再收？取消 Star，或把你的用户名加进 `data/opt_out.json` 提个 PR，"
-            f"或在 GitHub 通知设置里关闭提及通知。\n"
-            f"完整榜单：{issue_url}\n"
-            f"{pages_line}"
-        )
         session.post(
             f"{API_BASE}/repos/{owner}/{repo}/issues/{issue_number}/comments",
-            json={"body": body},
+            json={"body": compose_message(report, chunk, pages_url, issue_url)},
         ).raise_for_status()
         count += 1
         time.sleep(1)  # 放慢节奏，避免触发 secondary rate limit
@@ -137,31 +156,43 @@ def publish(report: str, date_str: str, cfg: dict) -> None:
         print(f"⚠️ 今天的 Issue 已存在（#{existing['number']}），已更新内容、跳过 @ 提醒")
         return
 
+    mentions = cfg.get("mentions", {})
+    chunk_size = int(mentions.get("chunk_size", 10))
+    users: list[str] = []
+    if mentions.get("enabled", True):
+        users = list_stargazers(session, owner, repo)
+        opt_out = load_opt_out(mentions.get("opt_out_file", "data/opt_out.json"))
+        users = [user for user in users if user not in opt_out]
+
+    # 第一批 @ 写进 Issue 正文，随创建事件一起通知；其余分批评论。
+    body_users, rest_users = users[:chunk_size], users[chunk_size:]
+    body = (
+        compose_message(report, body_users, cfg.get("pages_url", ""))
+        if body_users
+        else report
+    )
+
     resp = session.post(
         f"{API_BASE}/repos/{owner}/{repo}/issues",
-        json={"title": title, "body": report, "labels": ["daily-trending"]},
+        json={"title": title, "body": body, "labels": ["daily-trending"]},
     )
     resp.raise_for_status()
     issue_number = resp.json()["number"]
     print(f"✅ 已创建 Issue #{issue_number}：{title}")
 
-    mentions = cfg.get("mentions", {})
-    if not mentions.get("enabled", True):
-        return
-    users = list_stargazers(session, owner, repo)
-    opt_out = load_opt_out(mentions.get("opt_out_file", "data/opt_out.json"))
-    users = [user for user in users if user not in opt_out]
-    if not users:
+    if body_users:
+        print(f"✅ 已在 Issue 正文 @ 提及 {len(body_users)} 位 stargazer（1 封邮件/人）")
+    else:
         print("还没有 stargazer，跳过 @ 提醒")
-        return
-    comment_count = post_mentions(
-        session,
-        owner,
-        repo,
-        issue_number,
-        report,
-        users,
-        int(mentions.get("chunk_size", 10)),
-        cfg.get("pages_url", ""),
-    )
-    print(f"✅ 已通过 {comment_count} 条评论 @ 提及 {len(users)} 位 stargazer（邮件已触发）")
+    if rest_users:
+        comment_count = post_mentions(
+            session,
+            owner,
+            repo,
+            issue_number,
+            report,
+            rest_users,
+            chunk_size,
+            cfg.get("pages_url", ""),
+        )
+        print(f"✅ 已通过 {comment_count} 条评论 @ 提及其余 {len(rest_users)} 位 stargazer")

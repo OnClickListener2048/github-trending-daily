@@ -3,6 +3,7 @@
   "since": "daily",
   "limit": 25,
   "top_n": 10,
+  "top_n_max_streak_days": 3,
   "pages_url": "https://onclicklistener2048.github.io/github-trending-daily/",
   "repo_url": "https://github.com/OnClickListener2048/github-trending-daily",
   "mentions": {

@@ -16,6 +16,7 @@ from __future__ import annotations
 import html
 import json
 import os
+import re
 from concurrent.futures import ThreadPoolExecutor
 
 import anthropic
@@ -28,6 +29,17 @@ INTRODUCTION_SYSTEM_PROMPT = (
     "不要罗列底层技术实现细节（除非是项目的关键卖点），不要做 star 数据归因分析。"
     "只输出一个 JSON 对象，不要输出任何其他文字。"
 )
+
+# AI 生成的介绍里可能原样照抄 README 中的 "@xxx" 示例（如 "@e1 这样的 ref"），
+# 发到 Issue / 评论后 GitHub 会把它当成对真实账号/组织的提及并发送通知。
+# 在 @ 后插入零宽空格，显示效果不变，但不再被解析为 mention。
+# 负向后顾排除邮箱地址（a@b.com 的 @ 前面是单词字符），避免把邮箱拆坏。
+_MENTION_RE = re.compile(r"(?<![A-Za-z0-9._%+-])@(?=[A-Za-z0-9])")
+
+
+def escape_mentions(text: str) -> str:
+    return _MENTION_RE.sub("@\u200b", text or "")
+
 
 # GitHub 常见语言色（用于 HTML 报告的语言标签圆点）
 LANGUAGE_COLORS = {
@@ -148,16 +160,42 @@ def analyze_repo(repo: dict, cfg: dict) -> dict:
     raise ValueError(f"两次尝试均失败：{last_error}")
 
 
-def analyze_all(repos: list[dict], cfg: dict) -> list[dict]:
-    """并发地为每个仓库生成独立详细介绍；单个失败不影响整体。"""
+def analyze_all(
+    repos: list[dict],
+    cfg: dict,
+    cache: dict | None = None,
+    date_str: str = "",
+    use_ai: bool = True,
+) -> list[dict]:
+    """并发生成详细介绍；优先复用 cache 中已分析过的结果。
+
+    cache 以 full_name 为键，分析成功后原地写回（含 analyzed_at、first_seen
+    等字段）。use_ai=False（关闭 AI 或没配 Key）时缓存命中仍复用，否则兜底。
+    """
+    cache = cache if cache is not None else {}
     results: list[dict] = [fallback_details(r) for r in repos]
 
     def work(index: int) -> tuple[int, dict]:
+        repo = repos[index]
+        entry = cache.get(repo["full_name"]) or {}
+        if entry.get("summary"):
+            return index, {
+                "summary": entry["summary"],
+                "intro": entry.get("intro", ""),
+                "features": entry.get("features", []),
+                "audience": entry.get("audience", ""),
+            }
+        if not use_ai:
+            return index, fallback_details(repo)
         try:
-            return index, analyze_repo(repos[index], cfg)
-        except Exception as exc:  # 单个仓库失败回退
-            print(f"⚠️ {repos[index]['full_name']} 介绍生成失败，已回退：{exc}")
-            return index, fallback_details(repos[index])
+            detail = analyze_repo(repo, cfg)
+        except Exception as exc:  # 单个仓库失败回退，不写缓存，下次重试
+            print(f"⚠️ {repo['full_name']} 介绍生成失败，已回退：{exc}")
+            return index, fallback_details(repo)
+        entry.update(detail)
+        entry["analyzed_at"] = date_str
+        cache[repo["full_name"]] = entry
+        return index, detail
 
     workers = int(cfg.get("workers", 5))
     with ThreadPoolExecutor(max_workers=workers) as pool:
@@ -166,12 +204,21 @@ def analyze_all(repos: list[dict], cfg: dict) -> list[dict]:
     return results
 
 
-def render_report(repos: list[dict], date_str: str, pages_url: str = "", top_n: int = 10) -> str:
+def render_report(
+    repos: list[dict],
+    date_str: str,
+    pages_url: str = "",
+    top_n: int = 10,
+    featured: list[dict] | None = None,
+) -> str:
     """渲染 Markdown 日报（Issue 正文 / README 区块 / @提及邮件内容）。
 
-    顺序与 GitHub Trending 页面保持一致，不重新排序。
+    featured 是进入详细介绍的仓库列表（默认前 top_n 个）。连续在榜较久的
+    仓库会被跳过并由后面的仓库顺延补位，因此编号沿用完整榜单里的原始名次，
+    可能出现不连续。
     """
-    top = repos[:top_n]
+    top = list(featured) if featured is not None else repos[:top_n]
+    rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
 
     lines = [
         f"# 🔥 GitHub 每日 Trending · {date_str}",
@@ -180,9 +227,10 @@ def render_report(repos: list[dict], date_str: str, pages_url: str = "", top_n: 
     ]
     if pages_url:
         lines.append(f"> 🎨 [打开精美 HTML 报告]({pages_url})（推荐浏览器查看）")
-    lines += ["", f"## 🏆 TOP {len(top)}（详细介绍）", ""]
+    lines += ["", "## 🏆 今日精选（详细介绍）", ""]
 
-    for i, r in enumerate(top, 1):
+    for r in top:
+        i = rank_of.get(r["full_name"], 0)
         lines.append(
             f"### {i}. [{r['full_name']}]({r['url']}) — ⭐ {r['stars']:,}（今日 +{r['stars_today']:,}）"
         )
@@ -372,14 +420,22 @@ def _card_html(r: dict, i: int, featured: bool) -> str:
 
 
 def render_html(
-    repos: list[dict], date_str: str, pages_url: str = "", repo_url: str = "", top_n: int = 10
+    repos: list[dict],
+    date_str: str,
+    pages_url: str = "",
+    repo_url: str = "",
+    top_n: int = 10,
+    featured: list[dict] | None = None,
 ) -> str:
     """渲染完全自定义样式的 HTML 报告页（GitHub Pages）。
 
-    顺序与 GitHub Trending 页面保持一致，不重新排序。
+    精选卡片编号沿用完整榜单里的 GitHub 原始名次（可能不连续）。
     """
-    top = repos[:top_n]
-    top_html = "\n".join(_card_html(r, i, True) for i, r in enumerate(top, 1))
+    top = list(featured) if featured is not None else repos[:top_n]
+    rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
+    top_html = "\n".join(
+        _card_html(r, rank_of.get(r["full_name"], 0), True) for r in top
+    )
     all_html = "\n".join(_card_html(r, i, False) for i, r in enumerate(repos, 1))
 
     cta = (
@@ -411,7 +467,7 @@ def render_html(
 </header>
 <main>
   <section>
-    <h2>🏆 TOP {len(top)}（详细介绍）</h2>
+    <h2>🏆 今日精选（详细介绍）</h2>
     <div class="grid featured">
 {top_html}
     </div>

@@ -9,7 +9,7 @@
 
 1. **Star 本仓库** ⭐
 2. 保持 GitHub 邮件通知开启（默认就是开的，不用动）
-3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 TOP 5 详细解析（每个仓库"是什么 + 能干什么"）+ 📋 完整榜单，并附精美 HTML 报告链接
+3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，连续在榜较久的自动跳过）+ 📋 完整榜单，并附精美 HTML 报告链接
 
 > 原理：每天自动创建一个 Issue 并 @ 你的用户名，GitHub 会把提及通知默认发送到你的邮箱。不需要填邮箱、不需要注册，**Star 即订阅**。全程使用 GitHub 官方机制，不收集任何个人信息。
 
@@ -220,11 +220,12 @@ HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI
 | `languages` | 只看某些语言，如 `["python", "go", "rust"]`；`[]` 表示全部语言 |
 | `since` | `daily` / `weekly` / `monthly` |
 | `limit` | 榜单数量（默认 25） |
-| `top_n` | 详细介绍的仓库数（默认 10，按 GitHub 页面原始顺序取前 N 个） |
+| `top_n` | 详细介绍的仓库数（默认 10，按 GitHub 页面原始顺序取，跳过连续在榜超限的仓库后顺延） |
+| `top_n_max_streak_days` | 连续在榜达到该天数的仓库不再进详细介绍（默认 3，仍保留在完整榜单里） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
-| `mentions.chunk_size` | 每条评论 @ 的人数（默认 10，分批 @ 降低被判定骚扰的风险） |
+| `mentions.chunk_size` | 每批 @ 的人数（默认 10）：第一批写进 Issue 正文，超出部分分批发评论 |
 | `ai.enabled` | 是否用 AI 逐个仓库生成详细介绍（需在仓库 Secrets 配置对应 Key） |
 | `ai.provider` | AI 提供商：`deepseek`（默认）或 `anthropic` |
 | `ai.model` | 模型名（DeepSeek 默认 `deepseek-flash`；Anthropic 如 `claude-opus-5-5`） |
@@ -236,13 +237,16 @@ HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI
 ## ❓ 常见问题
 
 **为什么 Star 后就能收到邮件？**
-GitHub 不提供 stargazer 的邮箱，本项目每天读取 star 名单并在 Issue 评论里 @ 他们；GitHub 的提及通知默认发送到邮箱。无需也不收集用户的邮箱地址。
+GitHub 不提供 stargazer 的邮箱，本项目每天读取 star 名单并在当天 Issue 正文里 @ 他们；GitHub 的提及通知默认发送到邮箱。无需也不收集用户的邮箱地址。
+
+**为什么每天只收到一封邮件？**
+GitHub 每产生一次「Issue 创建 / 评论」事件就发一封邮件。@ 提及直接写进 Issue 正文，创建 Issue 只算一个事件，所以被 @ 的人和 Watch 仓库的人每天合计只收到一封邮件（正文里既有提及也有完整榜单）。
 
 **不想再收怎么办？**
 任选其一：取消 Star；把自己的用户名加进 [`data/opt_out.json`](data/opt_out.json) 提个 PR；在 GitHub 通知设置里关闭提及通知。
 
 **人多了会被限流吗？**
-@ 提及走的是 GitHub 官方通知机制。本项目已做分批 @（每条评论 10 人）和限速保护。如果 star 数量很大（数千人）被 GitHub 处置，可关闭 `mentions` 改纯 Issue 模式。
+@ 提及走的是 GitHub 官方通知机制。本项目已做分批 @（每批 10 人）和限速保护。如果 star 数量很大（数千人）被 GitHub 处置，可关闭 `mentions` 改纯 Issue 模式。
 
 **为什么邮件里没有自定义样式？**
 GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以邮件内容用 GitHub 支持的排版元素（标题、表格、列表）呈现，需要精美样式时点邮件里的链接打开 HTML 报告页即可。
@@ -252,6 +256,9 @@ GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以�
 
 **AI 介绍是怎么做的？**
 每个仓库单独调用一次 AI（不是批量），输入是该仓库的 README 原文（截断 6000 字符）+ 仓库数据，输出"一句话定位 + 详细介绍（100~200 字）+ 核心功能列表 + 适合谁"。默认走 DeepSeek：在仓库 Settings → Secrets and variables → Actions 添加 `DEEPSEEK_API_KEY`（或命令行 `gh secret set DEEPSEEK_API_KEY`），第二天自动生效。想用 Claude：把 `config.json` 的 `ai.provider` 改成 `anthropic`、`ai.api_key_env` 改成 `ANTHROPIC_API_KEY`，并设置对应 Secret。没有 Key 时回退显示仓库原始英文描述。
+
+**同一个仓库连续上榜会重复总结吗？**
+不会。AI 分析结果缓存在 `data/repos.json`（随仓库提交），再次上榜时直接复用，不再调用 AI；缓存里同时记录首次出现、最近出现日期和连续在榜天数。连续在榜达到 `top_n_max_streak_days`（默认 3 天）的仓库会退出「今日精选」的详细介绍位，由榜单后面的新项目顺延补位，但仍保留在完整榜单中。
 
 ## ⚠️ 免责声明
 

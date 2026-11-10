@@ -1,0 +1,876 @@
+{
+  "ConardLi/garden-skills": {
+    "first_seen": "2026-11-06",
+    "last_seen": "2026-11-06",
+    "streak_days": 1
+  },
+  "D4Vinci/Scrapling": {
+    "analyzed_at": "2026-11-06",
+    "audience": "需要从单页提取到整站采集的 Python 开发者、数据工程师，以及想把抓取能力交给 AI agent 使用的团队。",
+    "features": [
+      "统一抓取入口：支持静态 HTTP 请求与可渲染 JavaScript、可交互的隐身浏览器",
+      "强大的选择器解析能力，从页面中精准提取所需字段",
+      "并发爬虫（Spiders）：可复用会话、代理轮换、自动重试、暂停与恢复",
+      "内置数据导出，便于把抓取结果整理成可用格式",
+      "同时提供 CLI 命令行与 Python API 两种使用方式",
+      "提供 MCP server 与 Agent Skill，可直接接入 AI agent 工作流"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Scrapling 想做的是把网页抓取的整条链路收进一个库：用普通 HTTP 请求拿静态页面，用具备反检测能力的浏览器渲染 JavaScript、和页面交互，还能顺带抓取页面背后 API 调用返回的数据。它解决的是开发者平时要在 requests、Playwright、解析库、爬虫调度之间来回拼装的问题——现在用同一套 API 就能从单次请求扩展到整站爬取，支持可复用会话、代理轮换、自动重试、暂停与恢复，以及内置的数据导出。除了 Python 代码，它也能从命令行运行，或通过 MCP server 和 Agent Skill 交给 AI agent 调用，甚至把整站内容整理成干净的 Markdown。",
+    "last_seen": "2026-11-06",
+    "streak_days": 5,
+    "summary": "Scrapling 是一个 Python 爬虫框架，把请求、浏览器渲染、解析与并发爬取合为一体。"
+  },
+  "Donchitos/Claude-Code-Game-Studios": {
+    "analyzed_at": "2026-11-03",
+    "audience": "用 Claude Code 独立或小团队做游戏的开发者，尤其是需要设计文档与质量关卡的个人开发者",
+    "features": [
+      "49 个专业代理分三层：3 位导演、8 位部门主管、38 位专家，覆盖设计、程序、美术、音频、叙事、QA、制作",
+      "74 个斜杠命令串起完整工作流：/start、/design-system、/create-epics、/create-stories、/dev-story、/story-done 等",
+      "内置 Godot 4、Unity、Unreal Engine 5 三套引擎专属代理，各带子专家（GDScript/Shader/GDExtension、DOTS/Addressables/UI Toolkit、GAS/蓝图/网络同步/UMG）",
+      "15 个钩子在提交、推送、资源变更、设计文档读写和会话生命周期上自动校验，并保留代理审计轨迹与缺口检测",
+      "14 条按路径生效的编码规范，编辑玩法、引擎、AI、UI、网络代码及场景资源文件时自动约束",
+      "62 份文档模板，涵盖 GDD、UX 规格、ADR、冲刺计划、HUD 设计、无障碍等产出物"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "这是一个为 Claude Code 准备的配置工程：49 个按真实工作室层级组织的 AI 子代理、74 个覆盖全流程的斜杠命令、15 个钩子和 14 条路径级编码规范。它解决的是单人用 AI 做游戏时缺乏结构的问题——没人拦你硬编码魔法数字、跳过设计文档、写面条代码，也没有 QA 和设计评审。装上之后，导演层守愿景、部门主管管领域、专家动手干活，每个角色有明确职责和升级路径；你依然做所有决策，但会有人提前问对问题、及早抓错，从头脑风暴到上线都保持有序。",
+    "last_seen": "2026-11-04",
+    "streak_days": 3,
+    "summary": "把单次 Claude Code 会话变成 49 个 AI 角色组成的游戏开发工作室"
+  },
+  "FareedKhan-dev/kimi-k3-in-c": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "streak_days": 1
+  },
+  "FlashML-org/FreeToken": {
+    "analyzed_at": "2026-11-03",
+    "audience": "想在本地或消费级硬件上跑大模型的开发者、Agent 用户和研究者",
+    "features": [
+      "边缘原生高性能运行时：带宽自适应的 CPU-GPU 协同执行（q* 策略）、全层双缓冲 prefill 流式加载、全局 LRU 专家缓存、图兼容执行，以及 FTW 快速权重格式",
+      "语义感知缓存：为循环状态和 KV 缓存提供语义锚点检查点，Agent 的工具调用、思考块等上下文编辑无需重复计算整段上下文",
+      "弹性显存管理：运行时可在专家缓存与 KV 内存之间动态重新分配显存，无需重启引擎或重新加载权重",
+      "广泛的 MoE 与生态支持：支持 DeepSeek-V4-Flash、Qwen3.6-35B-A3B、GLM-5.2 等前沿开放权重 MoE 模型，覆盖多种参数规模和 MXFP4/NVFP4/FP8/BF16 量化格式",
+      "开箱对接现有 Agent 工具：提供 Anthropic/OpenAI 兼容 API，可直接接 Codex、Claude Code、OpenCode、OpenClaw、DeepSeek Harness 等编码与工具调用 Agent",
+      "覆盖常见消费级硬件：从笔记本、游戏台式机到工作站 GPU 均可扩展，原生支持 NVIDIA RTX 30/40/50 系列"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "FreeToken 是一个面向个人电脑和工作站的 MoE 推理引擎，目标是把原本只在数据中心才能跑的开放权重超大模型搬到你已经拥有的硬件上。它把 GPU、CPU、主机内存和互联带宽当成一个统一、可弹性伸缩的推理平台，通过带宽自适应的 CPU-GPU 协同执行，让你在自己的游戏主机上以交互级速度跑 290B+ 级别的 MoE 模型。使用上可以直接下载 Windows/Linux 桌面应用（自带 GUI，可运行模型、对话和调参），也可以用 uv/pip 安装命令行版本接入自己的工具链。",
+    "last_seen": "2026-11-03",
+    "streak_days": 2,
+    "summary": "在消费级硬件上本地运行 290B+ MoE 大模型的边缘推理引擎"
+  },
+  "JiaFeiMiao-K-Cat/DiscImageStudio": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-06",
+    "streak_days": 2
+  },
+  "JustVugg/colibri": {
+    "analyzed_at": "2026-11-04",
+    "audience": "想在消费级电脑或单卡工作站上本地跑大 MoE 模型的开发者与自建服务爱好者",
+    "features": [
+      "分层专家调度：热专家驻留 GPU（CUDA/Vulkan）、温专家放 RAM、冷专家从 NVMe 流式读取，按 token 需要加载",
+      "十三个引擎覆盖多类模型：GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6、OLMoE 等十个语言模型，Qwen-Image-2.1 图像模型，以及 Laya、GLiNER2.5-Decide 决策模型",
+      "直接读取社区已发布的 GGUF 文件，无需转换即可运行",
+      "一键安装：START-HERE.bat 或 start-here.sh 自动探测硬件、推荐放得下的模型、按需为 CPU/Vulkan/CUDA 编译，缺依赖时打印安装命令",
+      "模型下载支持进度显示与断点续传，中断后重跑可接着下载",
+      "启动后开箱即用的 Web 控制台，并提供 OpenAI 兼容的 /v1 与 Anthropic 兼容的接口地址供其他应用接入"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "colibri 是一个用纯 C 写的推理引擎，专门用来在你自己已有的硬件上运行超大规模的开源 MoE 模型。它利用 MoE 模型每次推理只激活少量专家的特点，把热专家放在 GPU、温专家放在内存、冷专家放在 NVMe 上按需流式读取；这样一来，744B 的 GLM-5.2 在 int4 量化下只需约 9.9 GB 常驻内存即可启动。它提供一键安装脚本，自动检测内存、磁盘和显卡，推荐能装下的模型，编译或下载引擎，支持断点续传下载模型，随后启动 Web 面板，并暴露 OpenAI 与 Anthropic 兼容接口。",
+    "last_seen": "2026-11-04",
+    "streak_days": 3,
+    "summary": "纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型"
+  },
+  "MichaelCade/90DaysOfDevOps": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "streak_days": 1
+  },
+  "NVIDIA/auto-ontology": {
+    "analyzed_at": "2026-11-07",
+    "audience": "需要为 LLM 或 Agent 工作流构建可信数据上下文层的数据工程师、AI 应用开发者与数据平台团队。",
+    "features": [
+      "从企业元数据自动生成本体，并连接已有的本体与语义模型，构建 AI 就绪的知识图谱",
+      "为 Agent 提供指标、实体和关系的可信业务含义，调和跨系统的不一致定义",
+      "基于认证定义和数据血缘校验生成的查询，每个答案都附带来源可追溯信息",
+      "通过 MCP、CLI 和 API 向任意 Agent 框架暴露上下文",
+      "自然语言查询结构化数据，自动转 SQL 并在已连接的数据库上执行",
+      "将人工修正和实际使用情况回流本体，让共享上下文随提问不断改进"
+    ],
+    "first_seen": "2026-11-05",
+    "intro": "Auto Ontology 是 NVIDIA 推出的 Python 开源库，用于解决 Agent 分析数据可靠性低的问题。它从企业元数据自动生成本体，打通已有语义模型，为指标、实体和关系提供统一可信的业务定义，并校验生成的查询是否符合认证口径、附带数据血缘。对开发者而言，它可作为 Agent 的上下文层，通过 MCP、CLI 和 API 接入任意 Agent 框架，还支持将人工修正回流本体，让共享上下文随使用持续改进，并附带 Web UI、RBAC 和 Helm/Docker 部署方案。",
+    "last_seen": "2026-11-07",
+    "streak_days": 3,
+    "summary": "NVIDIA 开源的企业本体框架，为 AI Agent 构建语义与知识图谱推理层，保证查询结果可信且可解释。"
+  },
+  "The-PR-Agent/pr-agent": {
+    "analyzed_at": "2026-11-05",
+    "audience": "适合需要给团队 PR 流程加自动化评审的开发团队，以及想自托管、掌控数据和提示词的团队。",
+    "features": [
+      "/review 自动对 PR 做代码评审，输出结构化的意见",
+      "/improve 针对改动给出具体的改进建议",
+      "/ask 用自然语言提问，回答关于这次 PR 的问题",
+      "/describe 自动生成 PR 标题与描述，便于写变更说明",
+      "PR Compression 策略，让超大的 PR 也能被有效处理",
+      "JSON 配置驱动的提示词定制，可调整评审类别与行为"
+    ],
+    "first_seen": "2026-11-05",
+    "intro": "PR-Agent 是一个开源的、AI 驱动的代码评审 Agent，也是 Qodo 社区维护的 legacy 项目（注意：它并非 Qodo 面向开源项目的免费版产品）。它解决的是代码评审耗时、容易遗漏、大 PR 难以人工通读的问题：你可以在 PR 里触发 /review、/improve、/ask 等命令，让模型自动给出评审意见、改进建议，或者直接回答关于这次变更的问题。接入方式很灵活：既可以添加一个 GitHub Action 工作流文件，也可以在本地用 pip 安装后通过 CLI 跑",
+    "last_seen": "2026-11-05",
+    "streak_days": 1,
+    "summary": "一个开源的 AI 代码评审 Agent，通过简单命令或 GitHub Action 自动审查 Pull Request。"
+  },
+  "Thysrael/Horizon": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-05",
+    "streak_days": 1
+  },
+  "Usagi-org/ai-goofish-monitor": {
+    "analyzed_at": "2026-11-06",
+    "audience": "想蹲守闲鱼捡漏、盯特定商品的买家，以及需要长期监控商品行情的开发者和小团队。",
+    "features": [
+      "Web 可视化管理：任务管理、账号管理、AI 标准编辑、运行日志、结果浏览一站式操作",
+      "AI 驱动：用自然语言描述需求即可异步生成分析标准，再由多模态模型深度分析商品图文",
+      "多任务并发：每个任务独立配置关键词、价格、筛选条件和 AI Prompt",
+      "高级筛选：包邮、新发布时间范围、省/市/区三级区域筛选",
+      "多渠道即时通知：ntfy.sh、企业微信、Bark、Telegram、Webhook",
+      "Cron 定时调度、多账号绑定与代理池轮换，风控失败自动重试并带任务熔断保护"
+    ],
+    "first_seen": "2026-11-04",
+    "intro": "这是一个用 Python 写的闲鱼商品监控工具。你在 Web 界面里建任务，设定关键词、价格区间、包邮、发布时间、省市区域等筛选条件，系统用 Playwright 自动搜索闲鱼，把新出现的商品详情和卖家信息抓下来，交给多模态 AI 模型按你写的标准判断值不值得买，推荐的就通过 ntfy.sh、企业微信、Bark、Telegram、Webhook 推给你。支持多任务并发、Cron 定时调度、多账号绑定和代理轮换，遇到风控会自动换号重试。Docker 一键部署，镜像内置 Chromium，开箱即用。",
+    "last_seen": "2026-11-06",
+    "streak_days": 1,
+    "summary": "基于 Playwright 和 AI 的闲鱼多任务实时监控系统，自带完整 Web 管理后台，从海量商品中筛出心仪好物。"
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+    "analyzed_at": "2026-11-10",
+    "audience": "适合跟踪 A股、港股、美股等多市场的个人投资者，以及想低成本搭自选股日报的开发者。",
+    "features": [
+      "AI 决策报告：核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单一次给全",
+      "多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面",
+      "Web / 桌面工作台：手动分析、任务进度、历史报告、完整 Markdown、回测、持仓与配置管理，支持浅色/深色主题",
+      "Agent 策略问股：多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种策略，Web/Bot/API 均可调用",
+      "智能导入与补全：支持图片、CSV/Excel、剪贴板导入自选股，股票代码/名称/拼音/别名自动补全",
+      "自动化与推送：GitHub Actions、Docker、本地定时任务、FastAPI 服务，推送到企业微信/飞书/Telegram/Discord/Slack/邮件"
+    ],
+    "first_seen": "2026-11-10",
+    "intro": "这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。",
+    "last_seen": "2026-11-10",
+    "streak_days": 1,
+    "summary": "LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。"
+  },
+  "angular/angular": {
+    "analyzed_at": "2026-11-07",
+    "audience": "适合用 TypeScript 构建中大型 Web 应用的开发者与团队，尤其是需要长期维护、跨端交付和完整工程化支持的项目。",
+    "features": [
+      "Angular CLI：一条命令完成工程创建、本地开发与构建",
+      "组件与模板体系，配合架构指南组织可扩展应用",
+      "表单支持，覆盖用户输入与校验场景",
+      "路由与懒加载组件，按需加载控制体积",
+      "服务端渲染（SSR）与 Angular Elements 自定义元素",
+      "动画能力与 Schematics 自动化代码生成"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Angular 是一个基于 TypeScript/JavaScript 的 Web 应用开发平台，目标是让开发者「有底气地交付 Web 应用」。它提供从项目脚手架、组件与模板、表单、路由懒加载到服务端渲染、动画、Angular Elements 的完整方案，并配套 Angular CLI 与 Angular Material 生态。上手方式很直接：全局安装 @angular/cli，用 ng new 创建工程，再 ng serve 本地运行，五分钟即可跑通第一个应用。官方文档站 angular.dev 覆盖入门、架构、API 与进阶主题，升级也有专门的 update guide。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "Angular 是面向现代 Web 开发者的跨平台开发平台，用 TypeScript 构建移动端和桌面端 Web 应用。"
+  },
+  "anomalyco/hex": {
+    "analyzed_at": "2026-11-04",
+    "audience": "适合经常需要大量输入文字、又在意隐私不想把语音传上云的 Mac、Windows、Linux 用户，比如写作者和开发者。",
+    "features": [
+      "按住快捷键说话、松手即粘贴，全程不用切换应用",
+      "完全本地转写，首次下载模型后音频和文字都不离开设备",
+      "支持 macOS（Apple silicon）、Windows x64/ARM64、Linux x86_64/ARM64",
+      "提供 Homebrew、AUR、Nix、Linux 安装脚本等多种安装方式",
+      "稳定版与 dev 双通道，dev 版本可自动从 dev 频道更新",
+      "侧边栏底部有 Labs，收纳实验性功能"
+    ],
+    "first_seen": "2026-11-04",
+    "intro": "Hex 是一款跨平台的本地语音听写工具，解决的是「打字慢、又不想把语音上传到云端」这个问题。用法很简单：按住快捷键开口说话，说完松手，Hex 会在这台设备上完成转写，并把文字直接粘贴进你当时正在使用的任何应用里，不需要切换窗口或复制粘贴。首次运行时会下载一个语音模型，之后所有处理都在本地完成，音频和文字都不会离开你的电脑。它提供 macOS（Apple silicon）、Windows x64/ARM64、Linux x86_64/ARM64 的安装包，也支持 Homebrew、AUR、Nix 和一条 Linux 安装脚本，此外还分稳定版与自动更新的 dev 通道。",
+    "last_seen": "2026-11-04",
+    "streak_days": 1,
+    "summary": "按住快捷键说话、松开就自动粘贴到当前应用的本地语音听写工具，支持 Mac、Windows 和 Linux。"
+  },
+  "anthropics/claude-quickstarts": {
+    "analyzed_at": "2026-11-10",
+    "audience": "想用 Claude API 做产品的开发者，尤其是要落地客服、数据分析、Agent 自动化类应用的团队和个人。",
+    "features": [
+      "Customer Support Agent：带知识库的 AI 客服示例，展示如何用 Claude 的自然语言理解与生成能力搭建辅助客服系统",
+      "Financial Data Analyst：通过聊天分析财务数据，并能生成交互式数据可视化",
+      "Computer Use：既能提供让 Claude 控制桌面电脑的环境与工具（含最新的 computer_toolset 工具集形态），也有原生 macOS 的最佳实践参考实现，示范显式工具定义、图像尺寸与裁剪、提示缓存、服务端压缩、批量工具调用、沙箱 shell 与轨迹记录等可靠性和成本优化模式",
+      "Browser Use Demo 与 Browser Toolset：前者基于 Playwright 自定义浏览器工具，让 Claude 导航网站、检查并操作 DOM、提取内容、填写表单；后者是最小 CDP 示例，用一个小驱动控制单个 Chromium 标签页",
+      "Autonomous Coding Agent：基于 Claude Agent SDK 的双代理模式（初始化代理 + 编码代理），跨多个会话逐步构建完整应用，进度通过 git 和功能清单持久化",
+      "Managed Agents 系列：浏览器聊天应用（同一套 handler 换上 Chat SDK 适配器即可跑在 Slack、Teams、Discord、Telegram、WhatsApp）、用 CopilotKit + AG-UI 把工具调用渲染成交互式生成式 UI、每工作日汇总 Slack 与 GitHub PR 的定时简报代理、把文档语料蒸馏成带出处版本化知识库的尽调维基"
+    ],
+    "first_seen": "2026-11-09",
+    "intro": "这是一组能直接跑起来的示例工程，每个对应一类真实产品形态：客服代理、金融数据分析、电脑操作、浏览器自动化、自主编码、托管代理。它解决的问题很实际——你不需要从零摸索 Claude API 的调用方式、工具定义和前端交互长什么样，挑一个最接近自己需求的项目，填上 API key 就能跑通，再在这个基础上改造成自己的应用。所有示例都以可部署、可定制为出发点，而非只做接口演示。",
+    "last_seen": "2026-11-10",
+    "streak_days": 2,
+    "summary": "Anthropic 官方开源的 Claude API 应用快速上手合集，覆盖客服、金融、浏览器与电脑操作等场景。"
+  },
+  "anthropics/skills": {
+    "analyzed_at": "2026-11-10",
+    "audience": "想给 Claude 定制可复用能力、或想学习 Skill 写法的开发者与团队。",
+    "features": [
+      "Skill 机制：文件夹 + SKILL.md，Claude 按需动态加载",
+      "YAML frontmatter 仅需 name 与 description 两个字段",
+      "按创意设计、开发技术、企业沟通、文档四类组织的示例技能集",
+      "开源 docx / pdf / pptx / xlsx 文档创建与编辑技能，生产环境在用",
+      "Claude Code 插件市场一键安装 document-skills 或 example-skills",
+      "提供 Agent Skills 规范文档与 template 模板起步"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "这是 Anthropic 公开的 Claude Skills 实现集合。Skill 就是一个文件夹，里面装有说明、脚本和资源，Claude 会在需要时动态加载它们，从而学会按可重复的方式完成特定任务，例如按公司品牌规范做文档、按组织流程分析数据，或自动化个人琐事。仓库收录了覆盖创意设计、开发技术、企业沟通和文档处理的示例技能，每个技能都自包含在独立文件夹中，并含一个 SKILL.md；开发者可从中获取灵感，或参考其中的模式。仓库还以 Apache 2.0 开源了支撑 Claude 文档能力的 docx、pdf、pptx、xlsx 技能，作为复杂生产级技能的参考。用法很简单：在 Claude Code 中把仓库注册为插件市场，再安装 document-skills 或 example-skills；在 Claude.ai 付费计划中已内置；也可通过 Claude API 使用。",
+    "last_seen": "2026-11-10",
+    "streak_days": 3,
+    "summary": "Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完成专项任务。"
+  },
+  "astral-sh/ruff": {
+    "analyzed_at": "2026-11-08",
+    "audience": "所有写 Python 的开发者，尤其是想统一并加速 lint 和格式化流程的团队与大型 monorepo 项目。",
+    "features": [
+      "速度比 Flake8、Black 等快 10-100 倍，在 CPython 代码库上可直观对比",
+      "内置 900 多条规则，原生重写了 flake8-bugbear 等流行插件",
+      "同时提供 linter 和 formatter，可替代 Flake8、Black、isort、pydocstyle、pyupgrade、autoflake",
+      "支持自动修复常见问题，例如自动移除未使用的 import",
+      "内置缓存，避免重复分析未改动的文件",
+      "官方提供 VS Code 等编辑器集成，支持 Python 3.15 与 pyproject.toml 配置"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Ruff 是 Astral 公司开发的 Python 代码检查与格式化工具，用 Rust 实现，比 Flake8、Black 等现有工具快 10 到 100 倍。它要解决的核心问题是：Python 项目过去需要同时安装 Flake8 及其大量插件、Black、isort、pydocstyle、pyupgrade、autoflake 等一堆工具，配置分散、速度慢；Ruff 把这些功能收进同一个接口，用一条命令跑完 lint 和 format，并通过 pip 安装、读取 pyproject.toml 配置。它还支持自动修复（如删除未使用的 import）、内置缓存跳过未改动文件，并在行为上与 Flake8、isort、Black 保持可直接替换的一致性，迁移时基本不用改代码风格。",
+    "last_seen": "2026-11-08",
+    "streak_days": 2,
+    "summary": "Rust 编写的超快 Python linter 与格式化工具，一个工具替代 Flake8、Black、isort 等一整套。"
+  },
+  "cloudflare/security-audit-skill": {
+    "analyzed_at": "2026-11-08",
+    "audience": "已有支持工具调用与并行子 Agent 的编码 Agent、想对代码库做系统化安全审计的开发者与安全团队",
+    "features": [
+      "六阶段编排：侦察产出 architecture.md 与覆盖账本，再依次狩猎、验证、输出、复核、报告",
+      "覆盖账本 coverage-ledger.json 驱动狩猎，并用覆盖批评者找出未审区域，避免漏审",
+      "每个候选漏洞交给全新的验证 Agent 尝试证伪，结论分为 confirmed、needs_validation、rejected 三态",
+      "findings.json 对照 report-schema.json 校验，附带零依赖校验脚本 validate-findings.cjs 与 validate-coverage-ledger.cjs",
+      "Phase 5 独立记录复核，被替换的结论必须再经一名独立验证者确认",
+      "十余份攻击类提示词库，覆盖内存安全与二进制、LLM 提示注入、Web 协议与认证、客户端、供应链、云与部署、RPC 消息、资源耗尽、数据隔离、桌面移动端本地 IPC"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "这是一个装进编码 Agent 的安全审计技能：让 Agent 依次执行侦察、按覆盖清单狩猎、候选验证、结构化输出、独立复核、中立报告六个阶段，解决人工审计容易漏掉攻击面、结论不可复现的问题。用 npx skills add 安装后，直接对 Agent 说\"security audit this codebase\"即可触发，审计产物写入 findings.json 与 REPORT.md。它是 Cloudflare 漏洞挖掘 harness 的单仓库起点。",
+    "last_seen": "2026-11-08",
+    "streak_days": 2,
+    "summary": "把编码 Agent 变成安全审计员的多阶段审计技能，输出可机器校验的漏洞结论"
+  },
+  "dsx-ai-factory/nvke": {
+    "analyzed_at": "2026-11-09",
+    "audience": "需要在自有 GPU 裸金属上为内部客户提供托管 Kubernetes 的平台团队与基础设施运维者",
+    "features": [
+      "通过 NVKE API 或 nvkectl 创建相互隔离的 workload 集群，每个集群拥有自己的 Kubernetes 控制平面、etcd 和节点池",
+      "管理 workload 集群生命周期：创建、扩缩容、删除节点池，升级 Kubernetes 版本，替换节点",
+      "节点先通过 TPM 配合 SPIFFE/SPIRE 完成身份证明，才拿到加入集群的凭证；支持按集群开启 etcd 数据加密",
+      "通过 NVIDIA Infra Controller（NICo）在裸金属上供给 NVIDIA GPU 机器，NICo 是 Preview 阶段唯一支持的基础设施提供方",
+      "nvkectl 用一次性 seed 集群自举出管理集群，安装管理平面服务是独立的一步",
+      "无需 GPU 也能评估：本地 quickstart 在模拟机器上跑开发用管理平面和一个 workload 集群，不需要 NVIDIA 账号"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "NVKE 是运行在自有 NVIDIA GPU 裸金属之上的 Kubernetes 托管服务管控平面。它既不是 Kubernetes 发行版，也不是某个 Cluster API flavor，而是一座「集群工厂」：nvkectl 先用一个临时 seed 集群搭起管理集群，管理平面再通过 NICo 按需供给机器，生成多个彼此隔离、各有独立控制平面与 etcd 的 workload 集群，客户用自己的 kubectl 访问。目前处于 Preview，不建议跑生产负载。",
+    "last_seen": "2026-11-09",
+    "streak_days": 2,
+    "summary": "在自有 NVIDIA GPU 裸金属上搭建托管 Kubernetes 服务的管控平面"
+  },
+  "etcd-io/etcd": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "streak_days": 1
+  },
+  "floci-io/floci": {
+    "analyzed_at": "2026-11-05",
+    "audience": "需要在本地和 CI 中跑真实 AWS 依赖的后端开发、DevOps 与测试工程师",
+    "features": [
+      "一条命令启动：floci start，或写四行 compose.yaml 跑 docker compose up，全部 AWS 服务统一暴露在 http://localhost:4566",
+      "零门槛：无需云账号、无需认证 token、无功能付费墙，凭证可以是任意非空值，除非你主动开启更严格的服务级鉴权",
+      "直接兼容现有工作流：AWS SDK、CLI、Terraform、CDK、OpenTofu 和现有测试套件只要改 endpoint 就能用",
+      "可作为 LocalStack 的 drop-in 替代，换镜像即完成迁移；同时提示旧的 hectorvent/floci 镜像已停止更新，需改用 floci/floci",
+      "内置浏览器 Web 控制台：访问 /_floci/ui 查看本地资源，首次请求时才按需拉起 sidecar 容器，端口由 Docker 绑定，日志流入 CloudWatch Logs 的 /floci/ui",
+      "不依赖 Docker 也能跑：每个 release 提供 Linux、macOS、Windows 的独立 floci-aws 二进制，另提供 Testcontainers 集成"
+    ],
+    "first_seen": "2026-11-04",
+    "intro": "Floci 是一个免费开源的本地 AWS 模拟器，面向开发、测试和 CI。它把 AWS 形态的服务搬到你的机器上，不需要云账号、不需要 auth token，也没有付费功能门槛：执行 floci start 或 docker compose up 之后，把 AWS SDK、CLI、Terraform、CDK、OpenTofu 或测试套件指向 http://localhost:4566 就能照常用，凭证填任意非空值。所有 AWS 服务共用同一端口，任意已发布的 region 和分区都支持。如果你已经在用 LocalStack，它可以直接替换，换个镜像名即可继续。它属于 Floci 模拟器家族中的 AWS 成员，同系列还有 Azure、GCP、OCI 版本，分别占用 4577、4588、4599 端口。",
+    "last_seen": "2026-11-06",
+    "streak_days": 3,
+    "summary": "免费开源的本地 AWS 模拟器，一条命令在 4566 端口跑起整套云服务"
+  },
+  "garrytan/gbrain": {
+    "analyzed_at": "2026-11-10",
+    "audience": "已在使用 AI Agent、希望拥有私有可控持久记忆的个人开发者，以及需要团队级共享记忆的工程团队。",
+    "features": [
+      "显式事实存储：每条记忆都带来源出处，可修正、可撤回，不靠模型臆测",
+      "关键词检索零门槛起步：先用 keyless 的关键词检索，需要时再开启语义搜索",
+      "跨 Agent 共享同一份记忆：持久偏好与事实共用，临时任务状态仍留在本地",
+      "综合答案层：跨人物、公司、交易与想法生成带引用的连贯回答，并明确指出大脑还不知道什么",
+      "类型化知识图谱：本地写入可自动抽取引用并建边，支持毫秒级广度优先关系遍历（如谁在某公司工作）",
+      "24/7 dream cycle：夜间自动摄取会议、邮件、推文、通话，丰富人物与公司信息、修复引用并合并记忆"
+    ],
+    "first_seen": "2026-11-10",
+    "intro": "GBrain 是 Garry Tan 为自己 OpenClaw/Hermes 部署打造的 Agent 记忆层，现已开源。它把明确的事实连同来源一起存下来，支持修正与撤回，并让同一份记忆在多个 Agent 之间共享。它要解决的是 Agent 记不住、记忆不可控、上下文反复丢失的问题。你可以把它挂到现有 Agent 上，让它把记忆保存在该 Agent 的环境中；也可以先使用无需密钥的关键词检索，之后再按需增加语义搜索、综合答案和后台自动丰富。生产实例已承载 15 万级页面，并有 66 个 cron 任务在夜间自动整理记忆。",
+    "last_seen": "2026-11-10",
+    "streak_days": 1,
+    "summary": "给现有 AI Agent 加一个可控、可纠错、跨 Agent 共享的持久记忆大脑。"
+  },
+  "garrytan/gstack": {
+    "analyzed_at": "2026-11-06",
+    "audience": "想继续亲手交付的技术型创始人、CEO，第一次用 Claude Code 需要结构化角色的人，以及要在每个 PR 上做严格评审、QA 与发布自动化的 tech lead 和 staff 工程师。",
+    "features": [
+      "/office-hours：挑战你对产品的最初定义，产出一份供其他 skill 读取的设计文档",
+      "/review：审查任意分支改动，找出能过 CI 却在生产环境出问题的 bug，并直接修掉显而易见的问题",
+      "/qa：对 staging URL 或本地 API、CLI、定时任务、webhook 打开真实浏览器，复现并修复 bug",
+      "/autoplan 与 /ship：端到端评审整份计划，然后跑测试、review 并提交 PR，覆盖完整 sprint",
+      "/cso 安全官：执行 OWASP + STRIDE 审计，需要原生工具链，缺失时 setup 会明确提示并禁用",
+      "团队模式：仓库内一条命令完成引导，无 vendored 文件、无版本漂移，每小时静默检查更新，跟随稳定版通道"
+    ],
+    "first_seen": "2026-11-05",
+    "intro": "gstack 是 YC 总裁 Garry Tan 开源的 Claude Code 配置集，全部由 Markdown 斜杠命令组成，MIT 协议免费使用。它解决的问题很具体：直接用 AI 写代码时，提示词空白、缺少角色分工，AI 产出的设计千篇一律，代码能通过 CI 却会在生产环境出问题。gstack 给编码 Agent 装上固定角色——CEO 重新思考产品、工程经理确定架构、设计师挑出 AI 生成的俗套设计、审查者找生产 bug、QA 开真实浏览器复现问题、安全官跑 OWASP + STRIDE 审计、发布工程师提交 PR。安装只需两条粘贴命令，约 30 秒；推荐开启团队模式，团队成员共用同一版本并自动更新。",
+    "last_seen": "2026-11-06",
+    "streak_days": 2,
+    "summary": "把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出场的 23 个斜杠命令。"
+  },
+  "github/spec-kit": {
+    "analyzed_at": "2026-11-05",
+    "audience": "使用 AI 编码代理、希望用规范与流程约束开发过程的个人开发者和团队",
+    "features": [
+      "规范驱动开发（SDD）：从一份规范出发，贯穿规划、实现到收敛，产出可追溯",
+      "Bug 修复流程：定位并评估成因、限定修复范围、记录验证结果",
+      "想法评估流程：用证据支撑给出继续投入、先澄清或止损的判断",
+      "多代理集成：连接并随时切换不同的 AI 编码代理",
+      "扩展机制：新增命令、质量门禁或完整流程，并可挂接到代理生命周期事件与命令前后钩子",
+      "预设与项目级覆盖：改造模板、命令、术语和方法论，满足组织或合规要求"
+    ],
+    "first_seen": "2026-11-05",
+    "intro": "Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。",
+    "last_seen": "2026-11-05",
+    "streak_days": 1,
+    "summary": "为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包"
+  },
+  "google-deepmind/mujoco": {
+    "analyzed_at": "2026-11-10",
+    "audience": "从事机器人、生物力学、图形动画与机器学习研究，需要快速准确刚体仿真的开发者和研究者。",
+    "features": [
+      "高性能 C API 物理仿真运行时，数据结构预分配，专为快速准确仿真优化",
+      "内置 XML 模型编译器，用 XML 描述多关节结构的场景",
+      "原生桌面窗口与 Web 浏览器中的交互式可视化，附带 simulate 查看器与 MuJoCo Studio",
+      "大量物理相关计算工具函数，可直接获取仿真中的各类物理量",
+      "官方 Python 绑定，pip install mujoco 即可使用，配有入门、模型编辑、rollout、LQR、最小二乘等 Colab 教程",
+      "MJX（MuJoCo XLA）JAX 分支，支持在 JAX 中运行并可通过教程训练可微物理策略"
+    ],
+    "first_seen": "2026-11-09",
+    "intro": "MuJoCo 名称是 Multi-Joint dynamics with Contact 的缩写，由 Google DeepMind 维护，是一个开源物理仿真器。它用于仿真由关节连接的刚体结构在环境中运动时与物体发生的接触和碰撞，主要解决机器人学、生物力学、图形动画和机器学习中对快速、准确仿真的需求。它提供性能高度优化的 C API 运行时，模型由内置 XML 编译器预先分配数据结构，并提供桌面窗口与浏览器中的交互式可视化工具和大量物理量计算函数。此外还有 Python 绑定和 Unity 插件。既可直接下载各平台预编译版本，也可通过 pip install mujoco 安装并快速上手。",
+    "last_seen": "2026-11-10",
+    "streak_days": 2,
+    "summary": "Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系统。"
+  },
+  "google/skills": {
+    "analyzed_at": "2026-11-08",
+    "audience": "在 Claude Code、Cursor 等 AI 编码工具中工作，需要在 Google Cloud 上实施 AI 应用与基础设施的开发者、架构师。",
+    "features": [
+      "Google Cloud 起步技能：涵盖 IAM 认证与授权、Onboarding 流程、Foundation Builder 基础搭建",
+      "多产品解决方案技能：提供 solution-architecture 工作流、RAG 企业搜索、AlloyDB 混合搜索、多智能体安全网关和 n-tier 无服务器架构等端到端方案",
+      "AI/ML 与 Agent Platform 全套能力：模型部署、调优与调优管理、Prompt 管理、Model Registry、RAG Engine、评测飞轮、访问审计和故障排查",
+      "Gemini API 相关技能：包括 LiveAPI 实时流式、Interactions API、Managed Agents API，以及从 AI Studio 迁移到 Agent Platform 的指南",
+      "Genkit 多语言开发技能：分别覆盖 Dart、Go、JS、Python 四个语言生态",
+      "基础设施技能：包括 Cloud Storage 基础配置、诊断与 Bucket 架构设计，Cloud Storage FUSE、Compute Engine 预留、网络洞察、Application Design Center 部署等"
+    ],
+    "first_seen": "2026-11-06",
+    "intro": "这是把 Google 产品（主要是 Google Cloud）的专业知识打包成 Agent Skills 的官方仓库。AI 助手通常擅长通用编程，但面对 IAM 授权、Agent Platform 模型部署、GKE 推理迁移这类具体场景时往往不够准确，而这里每个 skill 都是一份可被 Agent 直接加载的操作指南。安装只需执行 npx skills add google/skills，过程中可以选择需要的技能、要配置的目标 Agent 以及作用域（项目级或全局），后续用 npx skills update 统一升级，并可顺手清理已废弃的技能。",
+    "last_seen": "2026-11-08",
+    "streak_days": 3,
+    "summary": "Google 官方 Agent Skills 合集，一条 npx 命令即可安装到 AI 编码助手。"
+  },
+  "harry0703/MoneyPrinterTurbo": {
+    "analyzed_at": "2026-11-05",
+    "audience": "适合做短视频的自媒体、内容运营与营销人员，以及需要批量生产视频的开发者。",
+    "features": [
+      "输入主题或关键词一键成片，自动完成脚本、素材、字幕、配乐到合成成片的全流程",
+      "大模型驱动文案创作，同时提炼素材搜索关键词并决定画面匹配，内容理解越准画面越贴题",
+      "自动生成字幕并匹配背景音乐，输出高清短视频",
+      "提供可视化 WebUI，无需写代码也能操作出片",
+      "提供 API 接口，可接入自有系统做批量、自动化视频生产",
+      "跨平台支持 Windows、macOS、Linux，提供简体中文、英文、日文文档，可灵活对接多家大模型与素材服务"
+    ],
+    "first_seen": "2026-11-05",
+    "intro": "MoneyPrinterTurbo 是一个开源的 AI 短视频生成工具，专门解决从选题到成片的一系列制作工作。你只需给出一句话的主题或几个关键词，它就会调用大模型写出视频文案、提炼素材搜索词并匹配画面，再自动生成字幕、配上背景音乐，最后合成为高清短视频。项目同时提供 WebUI 和 API 两种使用方式，既能在网页里点几下出片，也能通过接口接入自己的生产流程批量产出；支持 Windows、macOS、Linux，提供简中、英文、日文文档，并适配 Kimi、火山引擎、Ofox 等多种模型服务。",
+    "last_seen": "2026-11-05",
+    "streak_days": 1,
+    "summary": "输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具。"
+  },
+  "homeassistant-ai/ha-mcp": {
+    "analyzed_at": "2026-11-10",
+    "audience": "用 Home Assistant 搭建智能家居、希望让 AI 代劳配置与自动化的玩家和自建用户",
+    "features": [
+      "内置 87 个工具，覆盖 Home Assistant 的查询、配置与自动化操作",
+      "以集成形式通过 HACS 或 Marketplace 安装，在 Home Assistant 进程内运行，无需另跑 Docker/uvx",
+      "兼容 Home Assistant OS、Supervised、Container、Core 全部安装类型，功能完全一致",
+      "两种接入方式：经 Home Assistant 的远程 webhook（Secret URL 或 HA 登录），以及本地网络直连",
+      "认证灵活：可用自己的长令牌，也可为 HA-MCP 单独建管理员账号并由它自动生成令牌",
+      "有端到端测试流水线保障，并把 ha_config_set_yaml 等实验能力放入 beta 通道"
+    ],
+    "first_seen": "2026-11-10",
+    "intro": "HA-MCP 是一个 Home Assistant 的 MCP 服务器，内置 87 个工具，让 AI 助手能够读取状态、修改配置、编写自动化，省去手写 YAML 的麻烦。最推荐的用法是通过 HACS 或 Home Assistant 2026.11+ 的 Marketplace 把它装成集成，直接在 Home Assistant 进程内运行完整服务器；它兼容 OS、Supervised、Container、Core 全部安装类型，功能完全一致，也取代了插件、Docker、uvx/PyPI 等旧方式（只能选一种）。安装后重启 Home Assistant，在“设置 → 设备与服务”添加 HA-MCP Server，填入管理员长令牌，或为它新建一个仅本地登录的管理员账号，选择远程访问（Secret URL 或 HA 登录）和/或本地网络访问，再从 Configure 界面复制连接 URL 粘进 AI 客户端即可。本地客户端也可直连 9584 端口。",
+    "last_seen": "2026-11-10",
+    "streak_days": 1,
+    "summary": "让 Claude、ChatGPT 等 AI 助手直接配置和自动化 Home Assistant 的 MCP 服务器"
+  },
+  "hyprwm/Hyprland": {
+    "analyzed_at": "2026-11-03",
+    "audience": "适合追求高效平铺操作、又不想牺牲桌面美观的 Linux 用户，尤其是喜欢折腾配置和插件的人。",
+    "features": [
+      "丰富的视觉表现：渐变边框、多种模糊、动画、发光与阴影",
+      "自定义贝塞尔与弹簧曲线，动画手感可精细调节",
+      "强大的插件生态与内置插件管理器",
+      "100% 独立实现，不依赖 wlroots/libweston/kwin/mutter",
+      "窗口形态齐全：平铺、伪平铺、浮动、全屏，外加窗口组（标签模式）与特殊工作区（scratchpad）",
+      "布局体系灵活：Dwindle、Scrolling、Master、Monocle，支持按工作区切换布局与 Lua 自定义布局"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Hyprland 是一个 100% 独立实现的动态平铺 Wayland 合成器——不基于 wlroots、libweston、kwin 或 mutter，而是自己啃下了合成器的底层实现。它要解决的是 Linux 桌面长期以来的两难：平铺窗口管理器高效但往往简陋，好看的桌面又难深度定制。Hyprland 两边都要——提供最新 Wayland 特性、即时生效的配置重载、socket 化 IPC，以及一整套视觉与交互上的细节体验。安装、快速上手与配置都可以在官方 wiki 找到，改完配置保存即生效，适合按自己的手感逐步调教。",
+    "last_seen": "2026-11-03",
+    "streak_days": 2,
+    "summary": "完全独立开发的动态平铺 Wayland 合成器，颜值与可定制性兼得。"
+  },
+  "karpathy/nanochat": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-03",
+    "streak_days": 2
+  },
+  "kornia/kornia": {
+    "analyzed_at": "2026-11-03",
+    "audience": "需要批量、可求导、跑在 GPU 上的视觉算法研究者与工程师，尤其是做几何视觉、3D 与空间 AI 的 PyTorch 用户。",
+    "features": [
+      "提供 1200+ 公开算子，覆盖 torchvision 基本没有的领域：相机模型与对极几何、最小求解器与 RANSAC、特征检测、描述与匹配、边缘检测、形态学、Lab 与 Bayer 色彩、图像损失与指标",
+      "单次批调用支持逐样本参数：gaussian_blur2d 接受 (B,2) 的 sigma，rotate 接受 (B,) 角度，warp_affine 与 warp_perspective 接受 (B,2,3) 和 (B,3,3) 矩阵，无需逐图循环",
+      "批量最小求解器与鲁棒估计：find_fundamental 支持 7 点法并返回全部实数解，另有 8 点法、5 点本质矩阵、DLT 单应与 solve_pnp_dlt，RANSAC 在设备上采样与打分",
+      "可微分几何：depth_to_3d_v2、unproject_points、project_points、warp_frame_depth、remap，支持 Brown–Conrady 与 Kannala–Brandt 畸变相机模型，以及 So3/Se3 李群，梯度可回传到深度、位姿和相机参数",
+      "标注同步增强：AugmentationSequential 用同一个采样变换同时作用于图像、掩码、框和关键点，并支持可逆的 2D 增强；CUDA 上参数迁移不会阻塞主机",
+      "GPU 上的局部特征与匹配：SIFT、HardNet、DISK、ALIKED、XFeat、DeDoDe、LoFTR、LightGlue，配套互为最近邻与比率测试匹配器，并有任意结构元素的批量形态学"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Kornia 是一个构建在 PyTorch 之上的可微分计算机视觉库：它把图像变换、增强、相机模型、对极几何、最小求解器、特征检测与匹配等算法，实现为可直接接入现有 AI 工作流的张量算子，让这些运算支持批处理、自动求导与 GPU 加速。当你用 torchvision 凑不齐算子、手写实现又长又脆、或者算法必须保留梯度时，它就是替代方案。安装后像普通 PyTorch 模块一样调用即可，还提供浏览器 Playground、教程与示例仓库。",
+    "last_seen": "2026-11-03",
+    "streak_days": 2,
+    "summary": "基于 PyTorch 的可微分计算机视觉库，把 1200+ 图像处理与几何视觉算子做成可批量、可求导的 GPU 模块。"
+  },
+  "lz4/lz4": {
+    "analyzed_at": "2026-11-06",
+    "audience": "适合对吞吐和延迟敏感的开发者：缓存/存储、日志管道、网络协议、数据库、游戏与嵌入式等场景。",
+    "features": [
+      "极致速度：单核压缩 >500 MB/s、解压数 GB/s，多核可线性扩展，官方基准中解压速度远超 Snappy、zlib、Zstandard 同级别配置",
+      "动态可调的 acceleration 因子：可以按需在压缩率和速度之间滑块式调节，同一份数据按场景选择快一点还是小一点",
+      "附带高压缩版本 LZ4_HC：用更多 CPU 时间换取更高压缩率，但解压速度与普通版本完全一致，读多写少的场景可以放心用",
+      "字典压缩支持：API 和命令行（-D）都能把任意文件当字典（只取末尾 64 KB），还能配合 Zstandard 的字典构建器显著提升小文件的压缩效果",
+      "格式规范清晰且有文档：block 格式和 frame 格式都有独立文档，多块组成帧以支持任意长度的流式数据，保证不同实现之间可互操作",
+      "生态完善：除 C 参考实现外还有 Java、C#、Python、Perl、Ruby 等多语言移植版本，构建系统覆盖 Make、CMake、Meson、VS 和 vcpkg"
+    ],
+    "first_seen": "2026-11-06",
+    "intro": "LZ4 是一个用 C 写的无损压缩算法及其参考实现，核心卖点是「快到几乎不构成瓶颈」：单核压缩速度 500 MB/s 以上，解压可达数 GB/s，多核下常常直接撞上内存带宽。它适合那些压缩率不是第一诉求、但对延迟和吞吐极其敏感的场景——比如缓存、日志、网络传输、列存和游戏资源。用起来也很直接：`make && make install` 就能装上库和 `lz4` 命令行工具，也可以通过 CMake、Meson、Visual Studio 构建，或用 vcpkg 及各大发行版的包管理器安装。库采用 BSD 2-Clause 许可，命令行工具则是 GPL-2.0-or-later，商用集成时需要注意这个区别。",
+    "last_seen": "2026-11-07",
+    "streak_days": 2,
+    "summary": "极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。"
+  },
+  "mattpocock/skills": {
+    "analyzed_at": "2026-11-08",
+    "audience": "用 Claude Code、Codex、Copilot 等代理写真实项目、想在保留控制权的前提下提升协作效率的开发者",
+    "features": [
+      "grill-me：在动手前让 agent 反过来追问你细节，先对齐需求再写代码",
+      "grill-with-docs：grill-me 的加强版，额外带上文档与上下文资料一起盘问",
+      "setup-matt-pocock-skills：每个仓库跑一次，配置 issue tracker、triage 标签和文档存放位置",
+      "/triage 配合自定义标签做工单分类",
+      "共享语言（glossary）文档，让 agent 用项目自己的术语说话，避免啰嗦绕圈",
+      "小而可组合的技能设计，不接管流程、任何模型都能用，改起来没有负担"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "这是 Matt Pocock 每天实际使用的一套 agent skills，目标是用它们做真正的工程开发，而不是让 AI 随意生成代码（俗称 vibe coding）。README 明确指出 GSD、BMAD、Spec-Kit 这类方案虽然想帮忙，但通过接管流程夺走了开发者的控制权，出了问题也难以排查；这些技能则反过来追求小而可改、可自由组合，并且不绑定任何模型。安装上支持 Claude Code、Codex、GitHub Copilot、Gemini CLI，也能通过 npx skills 装到 cursor、opencode、devin、windsurf、amp 等代理里；插件方式会自动更新，也可以复制成可编辑文件手动维护。装完在每个仓库跑一次 /setup-matt-pocock-skills，告诉它你用哪个 issue tracker、triage 打什么标签、文档存哪里，就能开工。",
+    "last_seen": "2026-11-08",
+    "streak_days": 7,
+    "summary": "从 Matt Pocock 日常使用的 .agents 目录整理的、小巧可组合的 AI 编码代理技能集"
+  },
+  "max-sixty/worktrunk": {
+    "analyzed_at": "2026-11-06",
+    "audience": "需要同时跑多个 Claude Code、Codex 等 AI agent 的开发者，以及频繁在多个分支间切换的 Git 用户",
+    "features": [
+      "wt switch：按分支名切换 worktree，路径根据可配置模板自动计算，也接受 worktree 的实际路径",
+      "wt switch -c -x claude：一条命令完成创建 worktree、新建分支并直接拉起 AI agent，替代 git 的三步操作",
+      "wt remove：删除 worktree 的同时一并清理对应分支，无需先 cd 回主仓库再执行 git worktree remove",
+      "wt list：列出所有 worktree 及其状态，而原生 git worktree list 只给出路径",
+      "Hooks：在创建、移除等生命周期节点自动执行命令，把本地工作流自动化",
+      "写时复制（copy-on-write）构建缓存，让多个并行工作副本共享同一份构建产物，降低磁盘与重建开销"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Worktrunk 是一个用 Rust 写的 Git worktree 命令行工具。现在 Claude Code、Codex 这类 AI agent 能长时间无人值守地跑任务，开发者经常要同时管理 5 到 10 个以上的任务；git 原生 worktree 可以让每个 agent 拥有独立的工作目录，避免互相干扰，但用起来很麻烦，光是新建一个 worktree 就要把分支名重复输入三次，还得手动 cd 过去。Worktrunk 改用分支名来定位 worktree，路径由可配置的模板自动计算，并用 wt switch、wt remove、wt list 三条核心命令覆盖切换、创建、清理和状态查看，创建时还能顺带执行命令，直接启动 Claude。",
+    "last_seen": "2026-11-06",
+    "streak_days": 5,
+    "summary": "面向并行 AI agent 工作流的 Git worktree 管理 CLI，让 worktree 像分支一样易用"
+  },
+  "mbillow/localthings": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "streak_days": 1
+  },
+  "meta/astryx": {
+    "analyzed_at": "2026-11-10",
+    "audience": "需要可深度定制、不锁定样式的 React 19 团队，尤其是希望人和 AI 助手共用同一套工具链的开发者",
+    "features": [
+      "150+ 无障碍 React 组件，覆盖常见界面需求",
+      "品牌级主题与暗色模式，主题本质上是一组 CSS 自定义属性覆盖，不 fork 源码也能彻底换皮",
+      "不锁定样式方案：组件用 StyleX 编写，但消费方可以用 Tailwind、CSS Modules 或普通 CSS 通过 className 覆盖",
+      "开放内部实现：组件可在任意层级组合，需要时用 swizzle 把组件完整源码弹出到自己的项目中接管",
+      "CLI 工具链：查看组件文档、模板与脚手架、主题生成和 codemod，并可全局安装让编码助手随时调用",
+      "自带七套现成主题（neutral、butter、chocolate、matcha、stone、gothic、y2k），开箱即用"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "Astryx 是一个在 Meta 内部发展八年、支撑 13000+ 应用的设计系统，现在以 MIT 协议开源。它把 150+ 无障碍组件、品牌级主题、暗色模式、现成模板和一个 CLI 打包成一套完整方案，解决的是组件库难以定制、样式被锁死、人和 AI 助手各用各的参考这几类问题。使用方式很简单：安装核心包、一个主题和 CLI，引入预构建 CSS，再用带类型的 React 组件，全程不需要配置构建插件或 PostCSS/Babel；组件内部实现可以直接导出，也可用 swizzle 把组件源码弹出到项目里。",
+    "last_seen": "2026-11-10",
+    "streak_days": 3,
+    "summary": "Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手"
+  },
+  "microsoft/VibeVoice": {
+    "first_seen": "2026-11-06",
+    "last_seen": "2026-11-06",
+    "streak_days": 1
+  },
+  "microsoft/vscode": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "streak_days": 1
+  },
+  "milind-soni/OpenMausBot": {
+    "analyzed_at": "2026-11-09",
+    "audience": "想让多个 AI agent 常驻本地、可对话可监督，并重视数据自主权的开发者与重度 AI 用户。",
+    "features": [
+      "每个机器人都是独立 agent，有各自的性格、模型、线程记忆和独立上下文",
+      "自带 agent：直接复用本机已安装并登录的 claude、codex、grok CLI，无需新账号，也可在设置中指向自定义 CLI 二进制",
+      "本地优先：127.0.0.1 上的小型 harness 服务管理所有 agent 进程，对话记录、密钥和事件存放在 ~/.openmausbot",
+      "给 agent 一双手：可使用云端 Linux 桌面、隔离的 Local VM，或在明确授权后使用你自己的电脑",
+      "通过 Composio 接入 500+ 第三方应用，让机器人真正能操作外部服务",
+      "类即时通讯的聊天界面：像联系人一样对话、旁观 agent 工作过程，并对关键操作进行审批"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "OpenMausBot 是一个受 Grok Bot 启发的开源项目，把 AI 助手做成类似 Telegram 的聊天应用：侧边栏里的每个聊天对象都是一个真实运行的 agent，底层在本机运行 Claude、Codex 或 Grok CLI，拥有独立的性格设定、模型、云端电脑和已连接的应用。它要解决的是「一个助手装在一个盒子里」这种形态不适合多 agent 协作的问题，同时把模型、电脑和数据都留在用户自己这边。你像对待联系人一样与机器人对话、看它们干活、只审批真正重要的事。项目基于 TypeScript、React 和 Electron，提供 macOS、Windows、Ubuntu 安装包，账号和订阅直接沿用你已有的，无需重新注册。",
+    "last_seen": "2026-11-10",
+    "streak_days": 3,
+    "summary": "开源的 AI 机器人聊天应用，每个机器人都是运行在本机的独立智能体"
+  },
+  "mpv-player/mpv": {
+    "analyzed_at": "2026-11-07",
+    "audience": "适合习惯命令行、需要精细控制和高可定制性的开发者与高级用户。",
+    "features": [
+      "命令行播放，支持广泛的媒体文件格式、音视频编解码器和字幕类型",
+      "支持 --hwdec 显式启用硬件解码",
+      "可用 --profile=fast 在低性能 GPU 上平滑播放",
+      "提供 OSC 屏幕控制器伪图形界面，依赖 Lua 脚本实现",
+      "支持用户脚本扩展和大量可配置选项",
+      "通过 meson 构建，可搭配 mpv-build 编译最新 FFmpeg、libass 并静态链接"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "mpv 是一款自由软件的命令行媒体播放器，支持大量媒体文件格式、音视频编解码器和字幕类型。它适合喜欢用命令行精确控制播放、又想自由组合功能的用户。你可以在终端直接运行 mpv 打开文件，也可以用配置文件、Lua 脚本和命令行参数深度定制播放行为；默认集成的 OSC 提供基础界面。它依赖 FFmpeg、libass、libplacebo 等库，官方建议使用较新的 Linux、Windows 10 1607+ 或 macOS 10.15+，并且需要性能较好的 CPU 和 GPU；如果在低功耗设备上播放卡顿，可以用 --profile=fast 改善。发布版大约每年发布一至两次。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "一款免费开源的命令行媒体播放器，支持多种格式、编解码器与字幕。"
+  },
+  "nushell/nushell": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "streak_days": 1
+  },
+  "openssl/openssl": {
+    "first_seen": "2026-11-07",
+    "last_seen": "2026-11-07",
+    "streak_days": 1
+  },
+  "p-e-w/heretic": {
+    "analyzed_at": "2026-11-04",
+    "audience": "想在本地改造开源大模型行为、但缺乏大规模训练算力的开发者与爱好者。",
+    "features": [
+      "去除审查、抑制拒答（默认行为）",
+      "通过配置文件切换目标：减少废话、减少幽默、降低谄媚、调整情绪倾向",
+      "支持通过插件自定义 scorer，控制优化目标",
+      "支持多数稠密模型、多种 MoE 架构、多模态与混合模型",
+      "支持 bitsandbytes 4-bit 动态量化，降低显存占用",
+      "运行前自动测试硬件以确定最优批大小，完成后可保存、上传、对话测试或跑基准"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。",
+    "last_seen": "2026-11-04",
+    "streak_days": 3,
+    "summary": "无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。"
+  },
+  "paperclipai/paperclip": {
+    "first_seen": "2026-11-02",
+    "last_seen": "2026-11-03",
+    "streak_days": 2
+  },
+  "pingdotgg/t3code": {
+    "analyzed_at": "2026-11-03",
+    "audience": "已经在用 Claude Code、Codex 等命令行 agent 写代码，并希望多端或远程操控它们的开发者。",
+    "features": [
+      "一个界面统管本机多个编码智能体：Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity、fx",
+      "iOS、Android、Web、Electron 桌面四端覆盖，支持从手机或另一台机器远程访问",
+      "复用你已有的订阅和 CLI 登录状态，前提是这些工具已在本机安装并认证",
+      "安装轻量：一行 curl / PowerShell 脚本，或 npx t3@latest 免安装试用，t3 update 升级",
+      "可注册为后台服务常驻运行，并支持通过 MCP 让外部 agent 接入",
+      "提供权限模式、键盘快捷键、项目设置、外观偏好和多账号切换等细粒度控制"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "T3 Code 是一个「agent harness 控制面」：它自己不训练模型，而是接管你电脑上已经装好并登录的编码智能体，让你在 iOS、Android、网页和 Electron 桌面端统一查看和控制它们运行。它解决的是 agent 只能在单机终端里跑、离开工位就断线的问题，并沿用你已有的 Claude Code、Codex、Cursor 等订阅，不必另买 API key。装一行 curl 脚本或 npx t3@latest 即可试用；运行 t3 会启动服务并打开本地 Web 应用，t3 service install 能让它常驻后台，再从手机远程接入。",
+    "last_seen": "2026-11-03",
+    "streak_days": 2,
+    "summary": "T3 Code 是 agent 控制台，可用手机、网页或桌面端远程操控本机上的编码智能体。"
+  },
+  "prometheus/prometheus": {
+    "analyzed_at": "2026-11-08",
+    "audience": "需要监控云原生环境、微服务与基础设施的运维、SRE 和开发者。",
+    "features": [
+      "多维数据模型，时间序列由指标名和一组 key/value 维度定义",
+      "PromQL 查询语言，充分利用多维标签做筛选、聚合与运算",
+      "不依赖分布式存储，单节点自治运行，部署运维简单",
+      "HTTP pull 拉取模型采集指标，批处理任务可经中间网关推送",
+      "支持服务发现与静态配置两种目标发现方式，内置多种服务发现插件",
+      "内置规则表达式求值、告警触发，以及多种图形与仪表盘支持"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Prometheus 是一套开源的系统与服务监控系统，同时自带时序数据库。它按设定的时间间隔从目标抓取指标，用规则表达式做计算，把结果画成图表，并在满足条件时触发告警。和很多监控系统不同，它采用多维数据模型（指标名加一组键值标签定义一条时间序列），配合自研查询语言 PromQL，可以灵活切片和聚合；不依赖分布式存储，单个服务节点即可自治运行；采集走 HTTP pull 模型，批处理任务可以通过中间网关推送数据；目标支持服务发现或静态配置，并支持分层与水平联邦。安装方式很省事：直接下载官方预编译二进制，或一条 docker run 命令把容器跑起来，访问 9090 端口就能用；从源码构建则需要 Go、NodeJS 和 npm，构建出的镜像和二进制都包含 React UI。",
+    "last_seen": "2026-11-08",
+    "streak_days": 2,
+    "summary": "CNCF 旗下的系统与服务监控系统，内置时序数据库和告警能力。"
+  },
+  "rails/rails": {
+    "analyzed_at": "2026-11-07",
+    "audience": "适合用 Ruby 构建数据库驱动 Web 应用的开发者，尤其是希望以约定优于配置快速起步的团队",
+    "features": [
+      "MVC 三层架构：模型承载业务逻辑，视图负责呈现，控制器处理 HTTP 请求与响应",
+      "Active Record 把数据库行映射为对象，并提供业务逻辑方法",
+      "Action View 支持 ERB 等多种模板格式，可用于页面和邮件正文渲染",
+      "Action Pack（Action Dispatch 负责路由，Action Controller 负责控制器）处理请求分发与多格式响应",
+      "Action Mailer 生成并发送邮件，Action Mailbox 在应用内接收邮件",
+      "Active Job 声明后台任务并可运行在多种队列后端，Action Cable 集成 WebSocket"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Rails 是一个遵循 Model-View-Controller 模式的 Web 应用框架，目标是提供创建数据库驱动 Web 应用所需的一切。它把应用拆成三层：Model 层用 ActiveRecord::Base 派生的类把数据库行映射成对象并承载业务逻辑；View 层用 ERB 等模板渲染 HTML 或邮件正文；Controller 层接收 HTTP 请求、操作模型并返回 HTML、JSON、XML、PDF 等响应。上手很简单：gem install rails 安装，rails new myapp 建项目，cd myapp 后 bin/rails server 启动，访问 localhost:3000 即可看到启动页。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "Ruby 生态的全栈 Web 框架，按 MVC 模式一站式构建数据库驱动的 Web 应用"
+  },
+  "ranxianglei/billion-context": {
+    "analyzed_at": "2026-11-09",
+    "audience": "适合长期用 CLI 编码 Agent 做大型任务、又受限于上下文窗口和 token 成本的开发者。",
+    "features": [
+      "上下文压缩：把冗长的会话历史压成更短的表示，而不是简单丢弃或截断",
+      "5 倍 token 节省，官方称 100K 上下文窗口即可支撑长任务",
+      "支持单次会话持续一个月、累计处理十亿级 token 的超长会话",
+      "兼容 20+ 主流 CLI 编码 Agent：Claude Code、Codex、Gemini CLI、Qwen Code、Copilot CLI、Aider、Zed、goose、Kimi、Trae 等",
+      "缓存健康度观测：健康会话前缀缓存命中率 95%–97%，压缩开销 ≤2%，异常时用 /acp、/acp-cache 定位原因",
+      "基于论文实现的免训练增量式分层压缩，多代际管理长期上下文"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "billion-context 是一个 TypeScript 写的上下文压缩插件，解决的是编码 Agent 长时间干活时上下文被撑爆的问题：会话越久，历史越长，要么撞上窗口上限被迫重开，要么每轮都携带冗余历史导致 token 费用居高不下。它的思路是压缩而非截断，官方给出的效果是 5 倍 token 节省、100K 上下文就够用，并且单次会话可以持续一个月、累计处理到十亿级 token，同时强调压缩质量。安装很简单，一条 npm install -g 全局装上，即可接进 Claude Code、Codex、Gemini CLI、Qwen Code 等二十多种 CLI 编码工具。项目还提供了缓存健康度观测：健康的会话前缀缓存命中率应维持在 95%–97%，压缩本身开销不超过 2%，命中率持续偏低时可用 /acp 或 /acp-cache 排查原因。",
+    "last_seen": "2026-11-09",
+    "streak_days": 2,
+    "summary": "一个面向长会话的上下文压缩插件，小窗口省 5 倍 token，让单次会话跑到几十亿 token。"
+  },
+  "react/react": {
+    "analyzed_at": "2026-11-07",
+    "audience": "前端开发者、需要构建交互式 Web 界面或跨端应用的团队，以及想渐进改造现有项目的工程师。",
+    "features": [
+      "声明式渲染：为每个状态设计视图，数据变化时自动高效更新界面",
+      "组件化开发：构建自带状态管理的封装组件，再组合成复杂 UI",
+      "渐进式采用：可以从一个小组件开始，按需引入到现有项目中",
+      "跨端能力：同一套思路可做 Web、服务端渲染（Node）和移动端（React Native）",
+      "JSX 语法：用类似 HTML 的写法描述界面，提升可读性（非强制）",
+      "完善的官方文档与示例：Quick Start、教程、Thinking in React、API 参考等"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "React 是 Facebook 开源的 JavaScript UI 库，核心解决的是「数据变化时如何高效更新界面」这个问题：你只需为每个状态描述界面应该长什么样，React 负责在数据变化时把正确的组件重新渲染出来，代码因此更可预测、更好调试。它采用组件化思路，把各自管理状态的封装组件组合成复杂界面，组件逻辑用 JavaScript 编写而非模板，数据和状态不落在 DOM 里。它不绑定技术栈，可渐进式引入到已有项目，也能通过 Node 做服务端渲染、通过 React Native 开发移动端应用。官方提供从 Quick Start、井字棋教程到 API 参考的完整文档，示例中用 JSX 描述结构，但 JSX 并非必需。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "用于构建 Web 与原生用户界面的 JavaScript 库，让交互界面变得声明式、可组合。"
+  },
+  "rust-lang/rust": {
+    "analyzed_at": "2026-11-07",
+    "audience": "想用 Rust 写高性能、高可靠软件的开发者，以及准备给编译器提交 PR 的贡献者",
+    "features": [
+      "rustc 编译器：依托类型系统与所有权模型，在编译期消除内存与并发错误，并提供清晰的诊断信息",
+      "标准库：与编译器同步演进的 core/std 实现，覆盖关键服务、嵌入式设备等场景",
+      "官方文档体系：《The Book》、语言参考与安装入门指南，按步骤可直接上手",
+      "完整配套工具：Cargo 包管理与构建、rustfmt 自动格式化、Clippy 静态检查、rust-analyzer 编辑器支持",
+      "性能与内存效率：运行快、占用低，并且容易与其它语言集成",
+      "贡献者路径：CONTRIBUTING.md 与 rustc-dev-guide 详细讲解编译器架构与参与方式"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "这是 Rust 语言的主源码仓库，包含编译器（rustc）、标准库和官方文档，也就是说，你日常用的 rustc 与 std 就是从这里构建出来的。它要解决的问题很直接：让开发者用一门语言同时拿到 C/C++ 级别的性能、内存与线程安全，以及现代工具链的开发体验。普通用户不必编译源码，按《The Book》的 \"Installation\" 一章装的发行版即可；真的想从源码构建，请看 INSTALL.md，但官方并不推荐。想参与贡献的开发者可以从 CONTRIBUTING.md 和 rustc-dev-guide 入手。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "Rust 官方主仓库：编译器、标准库与文档的同一棵源码树"
+  },
+  "ruvnet/RuView": {
+    "analyzed_at": "2026-11-10",
+    "audience": "智能家居玩家、隐私敏感的家庭看护场景开发者，以及做无线感知研究的嵌入式与 Rust 工程师",
+    "features": [
+      "穿墙人员存在检测、人数统计与进出追踪",
+      "非接触式呼吸率与心率监测，支持睡眠中测量",
+      "活动识别：行走、坐姿、手势、跌倒",
+      "无摄像头 17 关键点人体姿态估计",
+      "环境映射与 RF 指纹：识别房间、发现家具移动与新物体",
+      "睡眠质量分析：睡眠分期与呼吸暂停筛查"
+    ],
+    "first_seen": "2026-11-10",
+    "intro": "RuView 是一个基于 Rust 的 WiFi 感知平台。它利用低成本 ESP32 传感器采集信道状态信息（CSI），通过分析人体对无线电波的扰动，实现穿墙、黑暗中、无穿戴设备条件下的空间感知。它解决的是传统视频监控侵犯隐私、穿戴设备不便利、暗光失效等问题。使用上，它以单个 --mqtt 参数接入 Home Assistant，或作为 Matter Bridge 配对到 Apple Home、Google Home、Alexa、SmartThings，并提供录 CSI、训练模型、加载 RVF、切换 LoRA 的完整工作流与 HOMECORE 本地自动化。",
+    "last_seen": "2026-11-10",
+    "streak_days": 1,
+    "summary": "把普通WiFi信号变成穿墙感知能力，无需摄像头即可检测人、呼吸和心跳"
+  },
+  "scenario-labs/skills": {
+    "first_seen": "2026-11-05",
+    "last_seen": "2026-11-06",
+    "streak_days": 2
+  },
+  "sherlock-project/sherlock": {
+    "analyzed_at": "2026-11-10",
+    "audience": "适合做 OSINT 调查、安全研究、渗透测试前期信息收集，以及想核查自己用户名被哪些平台占用的开发者。",
+    "features": [
+      "按用户名在 400+ 社交网络中检索账号是否存在",
+      "支持一次查询多个用户名并分别输出结果",
+      "结果可导出为 txt、CSV、XLSX 文件",
+      "通过 --site 限定只检查指定站点，可叠加多个",
+      "支持代理请求、自定义超时和调试响应输出",
+      "--browse 一键在浏览器中打开所有找到的账号"
+    ],
+    "first_seen": "2026-11-08",
+    "intro": "Sherlock 是一个用 Python 编写的命令行工具，解决的问题很直接：给你一个用户名，帮你在各大社交平台上找出它是否被注册。它覆盖 400+ 个社交网络，支持一次传入多个用户名批量查询，例如 `sherlock user1 user2 user3`，找到的账号会自动保存为与用户名对应的文本文件（如 user123.txt）。输出格式灵活，支持 txt、CSV、XLSX 以及 JSON 数据加载，还能用 --site 只查指定站点、用 --proxy 走代理、用 --browse 直接在浏览器打开所有命中结果。安装推荐 pipx、pip、uv 或 Docker 一行搞定，也可以指定 --nsfw、--timeout 等参数控制检索范围与请求行为。",
+    "last_seen": "2026-11-10",
+    "streak_days": 3,
+    "summary": "跨 400+ 社交网络按用户名批量追踪账号的开源命令行工具"
+  },
+  "shiyu-coder/Kronos": {
+    "analyzed_at": "2026-11-03",
+    "audience": "量化研究者、金融时序预测开发者，以及想把K线基础模型微调到自己任务的人。",
+    "features": [
+      "首个开源的金融K线（candlestick）基础模型，预训练数据来自45+全球交易所",
+      "分层离散tokenizer将连续多维OHLCV K线量化成token，再由自回归Transformer建模",
+      "KronosPredictor封装预处理、归一化、预测和反归一化，几行代码完成预测",
+      "提供Kronos-mini、small、base、large多种规格模型，参数从4.1M到499.2M，按算力需求选择",
+      "模型权重托管在Hugging Face Hub，可直接from_pretrained加载",
+      "提供微调脚本，可将Kronos适配到自己的量化任务"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "Kronos是专门针对金融市场K线序列（OHLCV）预训练的decoder-only基础模型家族，不同于通用时间序列模型，它针对金融数据的高噪声特性做了专门设计：先用专用tokenizer把连续多维K线数据量化成分层离散token，再在这些token上预训练自回归Transformer，从而作为一个统一模型服务多种量化任务。使用上，加载Hugging Face上的tokenizer和模型后，用KronosPredictor几行代码即可完成预处理、归一化、预测与反归一化，得到未来K线预测；项目还提供微调脚本，便于适配自有任务。",
+    "last_seen": "2026-11-04",
+    "streak_days": 3,
+    "summary": "首个开源金融K线基础模型，预训练覆盖45+全球交易所，可做K线序列预测。"
+  },
+  "spotify/portal-ai-plugins": {
+    "analyzed_at": "2026-11-04",
+    "audience": "Spotify 内部开发者，尤其是要在编码助手里查服务归属、健康度、事故和文档的人",
+    "features": [
+      "一键为当前编码助手环境配置 Portal CLI 认证",
+      "doctor 只读体检，检查插件、CLI、认证与动作是否就绪",
+      "用自然语言搜索软件目录和技术文档",
+      "生成包含归属、健康度、事故与文档的服务简报",
+      "发现并安全调用 Portal 动作，带内置帮助、dry-run 与确认保护",
+      "Fleetshift 全流程：创建 shift（含 dry-run 预览）、触发与限时监控、只读进度检查、失败任务日志诊断、确认后为完成目标开 PR、按需停止运行"
+    ],
+    "first_seen": "2026-11-04",
+    "intro": "这是 Spotify 官方推出的插件，将 Portal CLI 封装成一组能在 AI 编码助手里直接使用的工作流：配置认证、运行只读体检、用自然语言搜索软件目录与技术文档、生成服务简报（负责人、健康度、事故、文档），以及发现并安全调用 Portal 动作。它还支持创建、运行、诊断 Fleetshift 任务，并在任务完成后开 PR。安装后，在 Claude Code、Codex、Cursor 或 pi 里运行一次 setup 即可开始使用，底层通过 npx @spotify/portal-cli 调用上游命令。",
+    "last_seen": "2026-11-04",
+    "streak_days": 1,
+    "summary": "把 Spotify Portal 的软件目录与运维工作流接入 AI 编码助手"
+  },
+  "symfony/symfony": {
+    "analyzed_at": "2026-11-07",
+    "audience": "适合用 PHP 开发 Web 或命令行应用的开发者，尤其是需要长期维护、看重稳定版本节奏的团队。",
+    "features": [
+      "完整框架与可复用组件并行，组件可脱离框架单独使用",
+      "同时支持 Web 应用与 Console 命令行应用开发",
+      "通过 Composer 安装，文档中明确列出环境要求",
+      "严格遵循语义化版本，提供 LTS 长期支持版本",
+      "发布流程可预期，便于企业规划升级",
+      "官方学习资源齐全：入门指南、Demo 应用、Fast Track 书籍、组件文档与最佳实践"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Symfony 既是一个完整的 PHP 框架，用来开发 Web 应用和命令行应用，也是一组可以单独拿来用的 PHP 组件；大量流行 PHP 项目都在底层依赖它。它解决的是重复造轮子的问题：你可以用整套框架快速搭建业务，也可以在任意项目里按需引入单个组件。安装走 Composer，版本严格遵循语义化版本，并提供 LTS 长期支持版和可预期的发布流程，方便企业做升级规划。",
+    "last_seen": "2026-11-07",
+    "streak_days": 1,
+    "summary": "Symfony 是面向 Web 与控制台应用的 PHP 框架，也是一套可复用的 PHP 组件库。"
+  },
+  "tailwindlabs/tailwindcss": {
+    "first_seen": "2026-11-08",
+    "last_seen": "2026-11-08",
+    "streak_days": 1
+  },
+  "thedotmack/claude-mem": {
+    "analyzed_at": "2026-11-05",
+    "audience": "长期用 AI 编程 Agent 做同一项目、苦于每次会话都要重新交代背景的开发者。",
+    "features": [
+      "自动捕获会话中的工具使用观察，无需手动记录",
+      "用 AI 把原始记录压缩成语义摘要，控制上下文体积",
+      "在新会话开始时自动注入相关历史上下文，保持项目知识连续性",
+      "提供 MCP 搜索工具，让 Agent 按需检索过往记忆",
+      "一条 npx 命令安装，支持 --ide 参数适配多种 IDE/Agent 宿主",
+      "覆盖 Claude Code、OpenClaw、Codex、Gemini、Copilot、OpenCode 等多种 Agent，并提供大量多语言文档"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "claude-mem 是一个为 Claude Code 等编程 Agent 设计的持久记忆压缩系统。它解决的是每次新会话 Agent 都从零开始、不记得上次做过什么的问题：在会话进行中自动捕获 Agent 的工具调用观察，用 AI 压缩成语义摘要存入本地记忆库，之后在新会话里把相关上下文自动注入回去。安装只需一条 npx 命令，支持通过 --ide 参数适配不同宿主，也能为没有宿主钩子的环境提供替代接入方式。除了自动记忆，它还暴露 MCP 搜索工具，让 Agent 主动检索历史记忆。",
+    "last_seen": "2026-11-05",
+    "streak_days": 4,
+    "summary": "给 AI 编程 Agent 装上跨会话持久记忆的压缩系统，自动记录、摘要并回注上下文。"
+  },
+  "vercel-labs/agent-browser": {
+    "analyzed_at": "2026-11-10",
+    "audience": "构建浏览器智能体的 AI 工程师、需要脚本化网页操作的开发者与自动化测试团队",
+    "features": [
+      "snapshot 将页面转成紧凑文本并给每个元素分配 @e1 式 ref，智能体据此定位与操作",
+      "click、fill、type、hover、select、drag、upload 等完整交互命令，支持 CSS、文本、XPath 与语义查找",
+      "目标不可见、被遮挡或被禁用时点击直接报错，避免智能体误判成功",
+      "后台 daemon 保持浏览器常驻，命令间会话不中断，支持多 --session 隔离",
+      "内置随版本发布的 skills，可用 agent-browser skills get core 让智能体获取与当前 CLI 匹配的操作指南",
+      "支持接入运行中的 Chrome（--cdp / --auto-connect）、iOS 模拟器 Safari、Lightpanda 等引擎及 Browserbase 等云浏览器"
+    ],
+    "first_seen": "2026-11-06",
+    "intro": "agent-browser 是 Vercel Labs 推出的浏览器自动化 CLI，专门给 AI 智能体使用。核心玩法是“快照—操作—再快照”的循环：snapshot 把页面读成紧凑的可访问性树文本，每个元素带 @e1 这样的 ref；智能体对 ref 执行 click、fill 等命令，再读一次页面确认结果。浏览器在命令之间保持打开，每一步只是一次简短的 shell 调用。它解决了智能体直接啃 HTML 太费 token、又难以稳定定位元素的问题，并提供严格失败语义：点击目标隐藏、禁用、在视口外或被遮挡时直接报错而不是假装成功。安装走 npm 或 Homebrew，首次运行 agent-browser install 下载 Chrome for Testing。",
+    "last_seen": "2026-11-10",
+    "streak_days": 3,
+    "summary": "让 AI 智能体通过命令行一步步驱动浏览器的原生 Rust CLI 工具"
+  },
+  "vercel-labs/agent-desktop": {
+    "analyzed_at": "2026-11-06",
+    "audience": "构建桌面端 computer use Agent 的开发者，以及需要脚本化操作桌面应用的团队。",
+    "features": [
+      "把桌面应用的无障碍树解析为 JSON 快照，每个可交互元素带唯一 ref",
+      "支持 click、type、set-value、clipboard 等基于 ref 的操作，无需坐标与像素匹配",
+      "快照与 ref 强绑定，界面变化返回 STALE_REF / AMBIGUOUS_TARGET 促使重新观察验证",
+      "默认 headless 操作，不移动指针不抢焦点；加 --headed 才使用物理输入",
+      "跨平台：macOS 走 AX API、Windows 走 UI Automation、Linux 走 AT-SPI",
+      "内置与版本匹配的 skills 指南和 --help，方便 Agent 自行学习用法"
+    ],
+    "first_seen": "2026-11-02",
+    "intro": "agent-desktop 是 Vercel Labs 出品的桌面自动化工具，它让 AI Agent 具备 computer use 能力，但完全不用截图和像素匹配。它把应用的 accessibility tree 读成 JSON，并为每个可操作元素分配一个 ref；Agent 点击或输入某个 ref，再重新观察界面确认结果，如此循环。整个控制循环由调用方自己实现，工具本身不含模型。它同时提供 CLI 和 C 库，覆盖 macOS、Windows、Linux 三大平台，默认以 headless 方式驱动，不移动鼠标也不抢焦点。",
+    "last_seen": "2026-11-06",
+    "streak_days": 5,
+    "summary": "通过操作系统无障碍树让 AI Agent 看见并操作桌面应用的 CLI 与 C 库。"
+  },
+  "zed-industries/zed": {
+    "analyzed_at": "2026-11-07",
+    "audience": "追求低延迟编辑体验、需要实时结对或团队协作的开发者，以及愿意参与开源编辑器建设的贡献者",
+    "features": [
+      "高性能编辑体验：追求低输入延迟与快速启动，主打“思考速度写代码”",
+      "多人实时协作：内置 multiplayer 能力，可与他人同时编辑同一份代码",
+      "由 Atom 与 Tree-sitter 作者打造，延续其在编辑器与语法解析上的积累",
+      "跨平台支持：macOS、Linux、Windows 均可下载或通过包管理器安装",
+      "开源可构建：提供各平台开发文档，可自行从源码编译 Zed",
+      "活跃的开源协作：有 CI 测试流程、贡献指南，团队也在公开招聘"
+    ],
+    "first_seen": "2026-11-07",
+    "intro": "Zed 是一款用 Rust 编写的高性能代码编辑器，出自 Atom 和 Tree-sitter 的作者团队。它要解决的核心问题是：传统 Electron 编辑器在启动速度、输入延迟和大文件处理上的卡顿，同时把实时多人协作做成编辑器的一等能力。Zed 目前已在 macOS、Linux、Windows 提供直接下载和包管理器安装，Web 版仍在推进中。想参与开发可以按平台文档在本地构建，项目主体采用 GPL-3.0-or-later 许可，部分组件为 Apache-2.0，贡献前需阅读 CONTRIBUTING.md。",
+    "last_seen": "2026-11-08",
+    "streak_days": 2,
+    "summary": "由 Atom 与 Tree-sitter 作者打造的高性能多人协作代码编辑器"
+  }
+}
