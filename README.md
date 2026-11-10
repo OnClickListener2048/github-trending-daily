@@ -9,7 +9,7 @@
 
 1. **Star 本仓库** ⭐
 2. 保持 GitHub 邮件通知开启（默认就是开的，不用动）
-3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，连续在榜较久的自动跳过）+ 📋 完整榜单，并附精美 HTML 报告链接
+3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，同一仓库只推送一次）+ 📋 完整榜单，并附精美 HTML 报告链接
 
 > 原理：每天自动创建一个 Issue 并 @ 你的用户名，GitHub 会把提及通知默认发送到你的邮箱。不需要填邮箱、不需要注册，**Star 即订阅**。全程使用 GitHub 官方机制，不收集任何个人信息。
 
@@ -227,11 +227,9 @@ OpenMausBot 是一个受 Grok Bot 启发的开源项目，把 AI 助手做成类
 | `languages` | 只看某些语言，如 `["python", "go", "rust"]`；`[]` 表示全部语言 |
 | `since` | `daily` / `weekly` / `monthly` |
 | `limit` | 榜单数量（默认 25） |
-| `top_n` | 详细介绍的仓库数（默认 10，取重排后榜单的前段：新上榜的在前，连续在榜较久的在后） |
-| `top_n_max_streak_days` | 连续在榜达到该天数的仓库不再进详细介绍（默认 3，完整榜单里会整体移到末尾） |
-| `top_n_fill.enabled` | 精选不足 `top_n` 时，是否用榜单外的 trending 新仓库补满（默认开） |
-| `top_n_fill.languages` | 补位来源：这些语言的 trending 页（默认 python / typescript / javascript / rust / go / c++） |
-| `top_n_fill.cooldown_days` | 补位仓库的冷却期：最近 N 天内展示过的不再重复补（默认 7） |
+| `top_n` | 每天推送的仓库数（默认 10，全部为从未出现过的新仓库） |
+| `top_n_fill.enabled` | 今日榜单新仓库不足 `top_n` 时，是否从其他语言的 trending 页补满（默认开） |
+| `top_n_fill.languages` | 补充来源：这些语言的 trending 页（默认 python / typescript / javascript / rust / go / c++ / java / c# / php / ruby / swift / kotlin） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
@@ -267,8 +265,8 @@ GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以�
 **AI 介绍是怎么做的？**
 每个仓库单独调用一次 AI（不是批量），输入是该仓库的 README 原文（截断 6000 字符）+ 仓库数据，输出"一句话定位 + 详细介绍（100~200 字）+ 核心功能列表 + 适合谁"。默认走 DeepSeek：在仓库 Settings → Secrets and variables → Actions 添加 `DEEPSEEK_API_KEY`（或命令行 `gh secret set DEEPSEEK_API_KEY`），第二天自动生效。想用 Claude：把 `config.json` 的 `ai.provider` 改成 `anthropic`、`ai.api_key_env` 改成 `ANTHROPIC_API_KEY`，并设置对应 Secret。没有 Key 时回退显示仓库原始英文描述。
 
-**同一个仓库连续上榜会重复总结吗？**
-不会。AI 分析结果缓存在 `data/repos.json`（随仓库提交），再次上榜时直接复用，不再调用 AI；缓存里同时记录首次出现、最近出现日期和连续在榜天数。完整榜单会按新鲜度重排：新上榜的仓库排在前面，连续在榜达到 `top_n_max_streak_days`（默认 3 天）的仓库整体移到榜单末尾、不再占「今日精选」的详细介绍位。精选位不够 `top_n` 时，会从各语言 trending 页补充「同样在 trending、但不在今日榜单、且最近 `top_n_fill.cooldown_days` 天没展示过」的新项目补满，标为 🆕。
+**同一个仓库会重复出现吗？**
+不会，而且每个仓库只会推送一次。`data/repos.json`（随仓库提交）记录所有出现过的仓库：每次运行先从今日 trending 榜单里挑从未出现过的仓库；不够 `top_n` 时，再从各语言 trending 页补充从未出现过的仓库（同样在 trending、但不在今日榜单），保证每天推送的都是全新的一套名单。AI 介绍只生成一次并随缓存提交，不会重复消耗。
 
 ## ⚠️ 免责声明
 
