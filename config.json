@@ -3,6 +3,7 @@
   "since": "daily",
   "limit": 25,
   "top_n": 10,
+  "cooldown_days": 3,
   "top_n_fill": {
     "enabled": true,
     "languages": ["python", "typescript", "javascript", "rust", "go", "c++", "java", "c#", "php", "ruby", "swift", "kotlin"],

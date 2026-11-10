@@ -9,7 +9,7 @@
 
 1. **Star 本仓库** ⭐
 2. 保持 GitHub 邮件通知开启（默认就是开的，不用动）
-3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，同一仓库只推送一次）+ 📋 完整榜单，并附精美 HTML 报告链接
+3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，同一仓库 3 天内不会重复出现）+ 📋 完整榜单，并附精美 HTML 报告链接
 
 > 原理：每天自动创建一个 Issue 并 @ 你的用户名，GitHub 会把提及通知默认发送到你的邮箱。不需要填邮箱、不需要注册，**Star 即订阅**。全程使用 GitHub 官方机制，不收集任何个人信息。
 
@@ -221,8 +221,9 @@ Chatwoot 是一套可以自己部署的现代客服平台，目标是把分散�
 | `languages` | 只看某些语言，如 `["python", "go", "rust"]`；`[]` 表示全部语言 |
 | `since` | `daily` / `weekly` / `monthly` |
 | `limit` | 榜单数量（默认 25） |
-| `top_n` | 每天推送的仓库数（默认 10，全部为从未出现过的新仓库） |
-| `top_n_fill.enabled` | 今日榜单新仓库不足 `top_n` 时，是否从其他语言的 trending 页补满（默认开） |
+| `top_n` | 每天推送的仓库数（默认 10，全部不在最近 `cooldown_days` 天出现过） |
+| `cooldown_days` | 冷却天数：一个仓库出现后，N 天内不再重复出现（默认 3，即第 4 天起可再次上榜） |
+| `top_n_fill.enabled` | 今日榜单可用仓库不足 `top_n` 时，是否从其他语言的 trending 页补满（默认开） |
 | `top_n_fill.languages` | 补充来源：这些语言的 trending 页（默认 python / typescript / javascript / rust / go / c++ / java / c# / php / ruby / swift / kotlin） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
@@ -260,7 +261,7 @@ GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以�
 每个仓库单独调用一次 AI（不是批量），输入是该仓库的 README 原文（截断 6000 字符）+ 仓库数据，输出"一句话定位 + 详细介绍（100~200 字）+ 核心功能列表 + 适合谁"。默认走 DeepSeek：在仓库 Settings → Secrets and variables → Actions 添加 `DEEPSEEK_API_KEY`（或命令行 `gh secret set DEEPSEEK_API_KEY`），第二天自动生效。想用 Claude：把 `config.json` 的 `ai.provider` 改成 `anthropic`、`ai.api_key_env` 改成 `ANTHROPIC_API_KEY`，并设置对应 Secret。没有 Key 时回退显示仓库原始英文描述。
 
 **同一个仓库会重复出现吗？**
-不会，而且每个仓库只会推送一次。`data/repos.json`（随仓库提交）记录所有出现过的仓库：每次运行先从今日 trending 榜单里挑从未出现过的仓库；不够 `top_n` 时，再从各语言 trending 页补充从未出现过的仓库（同样在 trending、但不在今日榜单），保证每天推送的都是全新的一套名单。AI 介绍只生成一次并随缓存提交，不会重复消耗。
+不会在短时间内重复。`data/repos.json`（随仓库提交）记录所有出现过的仓库和最近出现日期，冷却期默认为 3 天：一个仓库上榜后，接下来 3 天内不会再出现在日报里，第 4 天起可以再次上榜。每次运行先从今日 trending 榜单里挑不在冷却期内的仓库；不够 `top_n` 时，再从各语言 trending 页补充同样不在冷却期内的仓库（同样在 trending、但不在今日榜单）。AI 介绍缓存在缓存里，冷却结束后再次上榜可直接复用，不重复消耗。
 
 ## ⚠️ 免责声明
 

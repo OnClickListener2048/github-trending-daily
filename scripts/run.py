@@ -158,23 +158,36 @@ def main() -> None:
     cache = load_cache(cache_path)
 
     top_n = int(cfg.get("top_n", 10))
-    # 每个仓库只推送一次：缓存里出现过的都跳过，保证每天都是全新名单
-    seen = set(cache)
-    fresh = [repo for repo in repos if repo["full_name"] not in seen]
+    cooldown = int(cfg.get("cooldown_days", 3))
+    # 冷却窗口：cooldown 天内展示过的仓库不再出现；当天重跑允许复用当天名单（幂等）
+    cutoff = (
+        datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=cooldown)
+    ).strftime("%Y-%m-%d")
 
-    # 今日榜单的新面孔不够 top_n 时，从各语言 trending 页补充从未展示过的仓库
+    def is_fresh(name: str) -> bool:
+        last_seen = cache.get(name, {}).get("last_seen", "")
+        if not last_seen:
+            return True
+        return last_seen < cutoff or last_seen == date_str
+
+    fresh = [repo for repo in repos if is_fresh(repo["full_name"])]
+
+    # 今日榜单可用仓库不够 top_n 时，从各语言 trending 页补充同样满足冷却期的仓库
     fill_cfg = cfg.get("top_n_fill", {})
     if fill_cfg.get("enabled", True) and len(fresh) < top_n:
-        excluded = seen | {repo["full_name"] for repo in repos}
+        excluded = {name for name in cache if not is_fresh(name)}
+        excluded |= {repo["full_name"] for repo in repos}
         extra = fetch_fill_repos(excluded, top_n - len(fresh), fill_cfg)
         fresh.extend(extra)
-        print(f"🆕 今日榜单新仓库不足，已从其他语言 trending 补充 {len(extra)} 个")
+        print(f"🆕 今日榜单可用仓库不足，已从其他语言 trending 补充 {len(extra)} 个")
     selected = fresh[:top_n]
     if not selected:
-        sys.exit("❌ 今天没有发现未展示过的新仓库，本次跳过，明天自动重试")
+        sys.exit("❌ 今天没有符合冷却规则的新仓库，本次跳过，明天自动重试")
 
     update_streaks(selected, cache, date_str)
-    enrich_repos(selected)
+    cached_names = {name for name, entry in cache.items() if entry.get("summary")}
+    reused = sum(1 for repo in selected if repo["full_name"] in cached_names)
+    enrich_repos(selected, cached_names)
 
     ai_cfg = cfg.get("ai", {})
     use_ai = bool(
@@ -189,12 +202,12 @@ def main() -> None:
         repo["audience"] = detail.get("audience", "")
     save_cache(cache_path, cache)
     if use_ai:
-        print(f"📦 今日 {len(selected)} 个仓库均为首次出现，AI 逐个分析（每个仓库只分析一次）")
+        print(f"📦 复用缓存介绍 {reused} 个，AI 新分析 {len(selected) - reused} 个")
     else:
-        print(f"📦 今日 {len(selected)} 个仓库均为首次出现（AI 未启用，走兜底）")
+        print(f"📦 复用缓存介绍 {reused} 个（AI 未启用，其余走兜底）")
 
-    table_note = "每天只推送首次出现的新仓库，往期出现过的不会重复收录"
-    print(f"📌 今日精选 {len(selected)} 个全新仓库")
+    table_note = f"同一仓库 {cooldown} 天内不会重复出现，往期出现过的不会重复收录"
+    print(f"📌 今日精选 {len(selected)} 个（{cooldown} 天冷却外的仓库）")
 
     report = render_report(
         selected,
