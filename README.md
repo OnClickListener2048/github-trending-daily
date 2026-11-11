@@ -17,189 +17,189 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-10
+# 🔥 GitHub 每日 Trending · 2026-11-11
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 188,091（今日 +898）
+### 1. [tidain/YunX-Desktop](https://github.com/tidain/YunX-Desktop) — ⭐ 4,277（今日 +340）
 
-> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
+> 云析 YunX 官方 Windows 桌面版，粘贴分享链接即可解析并高速下载网盘、视频和 P2P 资源。
 
-Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
+云析（YunX）的官方 Windows 桌面端，AGPL-3.0 开源、完全免费，README 明确说明任何收费版本都是他人二次打包的骗局。它把网盘分享链接、视频作品链接和磁力 / BT / ed2k 链接集中到一个窗口里：登录账号后粘贴链接，即可浏览文件、在线预览并直接多线程下载，全程都在本机完成。提供免安装便携版（整个文件夹拷走即用）和可卸载的安装版两种分发形式；登录凭证加密存放在本机，支持多账号和加密导出备份，换机后不用逐个重新登录。
 
-- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
-- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
-- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
-- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
-- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
-- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
-- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
+- ✨ 分享链接解析：夸克 / UC / 迅雷 / 百度 / 139 / 123 / 115 / 光鸭 / 蓝奏云 / 蓝奏云优享版链接自动匹配提取码，另支持 GitHub 仓库、账号与文件直链
+- ✨ 视频解析与预览：抖音 / 快手 / 微博 / 小红书 / B站 / AcFun / Pixiv 链接（短链、口令、整段文案均可）解析；在线预览优先用 ffplay 直接读取直链、边下边播，未安装 FFmpeg 时可一键下载引擎到私有目录，图集可放大查看，支持 Live Photo 合成，B站高清分轨两轨并行下载后自动合轨
+- ✨ 高速下载：Range 分片并发 + 断点续传 + 慢连接自动换线 + 全局限速，下载进度实时显示为 Windows 通知中心 toast 进度条；另有原生托盘菜单、原生文件对话框和剪贴板分享链接检测
+- ✨ P2P 下载：磁力 / BT 种子 / ed2k 链接交由 Gopeed 引擎处理，可导入本地 .torrent 文件、在二级页管理 Tracker 服务器并开关 DHT，下载中可查看种子 / 连接 / 节点概览
+- ✨ 多账号与认证备份：内嵌 Chromium 登录、一键导入本机浏览器 Cookie 或手动粘贴 Cookie，凭证加密存本机，设置里的「认证备份」可加密导出 / 导入全部账号，换机免重登
+- ✨ 浏览器插件「云析下载助手」（Chrome / Edge，Manifest V3）：嗅探页面媒体与文件并按类型分类预览，接管浏览器下载并按线程数下载（最高 512），可归还原生下载并对该站点写 5 分钟冷却倒计时；扩展通过本机回环地址 + 随机 token 与云析通信，云析未运行时完全不干预浏览器
+- 👥 适合谁：常从网盘分享、视频平台或磁力链接下载资源的 Windows 用户，以及需要高速批量下载、偏好开源工具的人。
 
-`JavaScript` · Fork 10,437 · 🔗 [官网](https://ponytail.dev)
+`Kotlin` · Fork 321
 
-### 2. [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) — ⭐ 42,184（今日 +387）
+### 2. [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) — ⭐ 17,167（今日 +323）
 
-> 无分词器的端到端TTS系统，支持30种语言、音色设计与高保真克隆
+> 在自有基础设施上运行 AI agent 的隔离沙箱运行时，用 Docker 起步，用 Kubernetes 扩展。
 
-VoxCPM 是一个 tokenizer-free 的文本转语音系统，采用扩散自回归架构直接生成连续语音表征，跳过离散 token 化，让合成结果更自然、更有表现力。最新版 VoxCPM2 是 2B 参数模型，基于 MiniCPM-4 骨干，用超过 200 万小时多语种语音数据训练，支持 30 种语言（含四川话、粤语等中文方言）、音色设计、可控/极致克隆与 48kHz 输出。它提供 Python API、CLI、Web Demo 以及基于 vLLM 的生产部署方式，权重与代码以 Apache-2.0 开源，可商用，也支持 SFT 与 LoRA 微调。
+OpenSandbox 为 AI 应用提供隔离环境，让 agent 能安全地执行代码、运行命令、读写文件、操作浏览器或桌面。它要解决的核心问题是：AI 需要真正动手干活，但绝不能碰到宿主机和真实凭证。使用方式很直接：本地一条命令启动沙箱服务，Python 里创建沙箱、执行命令、写入脚本、读取文件，用完销毁；要上生产时换成 Kubernetes，同一套沙箱生命周期 API 不用改。配套五种语言 SDK、osb 命令行和 MCP 接入，主流 agent 框架可以直接对接。
 
-- ✨ 30 语种多语言合成：直接输入文本即可合成，无需语言标签；还支持四川话、粤语、吴语、东北话等 9 种中文方言
-- ✨ Voice Design：只用一段自然语言描述（性别、年龄、语气、情绪、语速）就能造出全新音色，不需要任何参考音频
-- ✨ 可控克隆：从一段短参考音频克隆音色，并可叠加风格引导来调整情绪、语速和表达，同时保留原始音色
-- ✨ 极致克隆：同时给出参考音频和对应文本，模型从参考无缝续写，忠实还原音色、节奏、情绪与风格等每个细节
-- ✨ 48kHz 录音棚级输出：接收 16kHz 参考音频，经 AudioVAE V2 非对称编解码直接输出 48kHz 音频，内置超分，无需外部升采样器
-- ✨ 实时流式合成：在 NVIDIA RTX 4090 上 RTF 低至约 0.3，经 Nano-vLLM 或 vLLM-Omni 加速可到约 0.13，并提供兼容 OpenAI 的 API
-- 👥 适合谁：做多语言语音合成、有声内容、虚拟人配音产品的开发者与研究团队
+- ✨ Fast Sandbox 运行时：Kubernetes 上高密度快速沙箱，Firecracker 创建延迟 64ms P50（串行）和 125.4ms P99（10 并发），支持暂停恢复并保留内存与磁盘状态
+- ✨ Agent 工作环境 API：内置命令执行、文件管理和代码运行接口，示例覆盖编码 agent、浏览器与桌面场景
+- ✨ 网络访问控制：入站流量统一走 ingress 网关，出站按沙箱粒度配置 egress 策略
+- ✨ Credential Vault：让 agent 调用外部服务，同时不把真实凭证暴露给沙箱内的工作负载
+- ✨ 本地到集群的一致体验：Docker 起步与 Kubernetes 部署共用统一生命周期 API，资源池和批量创建支撑 agent 评测与 RL 训练
+- ✨ 多语言 SDK 与工具链：提供 Python、Java/Kotlin、TypeScript/JavaScript、C#/.NET、Go SDK，另有 osb CLI、MCP 接入和可扩展的沙箱生命周期与执行协议
+- 👥 适合谁：构建 AI agent 的开发者、需要隔离执行 AI 生成代码的平台团队，以及做 agent 评测与 RL 训练的团队。
 
-`Python` · Fork 4,805 · 🔗 [官网](https://voxcpm.com)
+`Python` · Fork 1,622 · 🔗 [官网](https://open-sandbox.ai)
 
-### 3. [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) — ⭐ 99,228（今日 +332）
+### 3. [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) — ⭐ 56,396（今日 +225）
 
-> 美国国家安全局（NSA）开源的全功能软件逆向工程框架，支持反汇编、反编译与脚本扩展。
+> 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。
 
-Ghidra 是 NSA 研究部门开发并开源的软件逆向工程（SRE）框架，最初用于解决复杂逆向任务中的规模化协作问题，同时提供一个可定制、可扩展的研究平台。它能分析 Windows、macOS、Linux 等多个平台上的编译后代码，既可以在图形界面中交互操作，也可以在自动化（批处理）模式下运行。安装只需 JDK 25 加官方发布包，解压后运行 ghidraRun 即可启动，另有 PyGhidra 入口；开发者还能用 Java 或 Python 编写脚本和扩展组件，把 Ghidra 改造成适合自己工作流的工具。
+这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。
 
-- ✨ 反汇编与汇编：查看和编辑目标程序的机器码与汇编指令
-- ✨ 反编译：将编译后的二进制还原为更易读的高级语言形式
-- ✨ 图形化分析：函数调用图、控制流图等可视化视图
-- ✨ 脚本与扩展：支持用 Java 或 Python 编写自定义脚本，并开发 Ghidra 扩展组件
-- ✨ 广泛的处理器指令集与可执行文件格式支持，覆盖多平台二进制
-- ✨ 交互与自动化双模式：既可在 GUI 中分析，也可批量自动运行
-- 👥 适合谁：适合逆向工程师、恶意代码分析人员、漏洞与安全研究人员，以及需要深入理解二进制程序的高校师生。
+- ✨ 五个阶段的流程（调研、写作、审稿、修改、定稿）在每阶段都会暂停并等待你确认，AI 担任副驾驶，不替你做出决定
+- ✨ /ars-plan 通过苏格拉底式对话逐步问出论文结构，另外提供可选的审稿人校准模式，用你给的 gold set 测量它自身的漏报率 FNR 和误报率 FPR
+- ✨ 引用可信链：使用 source provenance frontmatter 和三层引用定位锚点，为后续在论断层面进行审计打下基础
+- ✨ 可选开启的论断审计（设置 ARS_CLAIM_AUDIT=1）会按每个锚点回抓被引原文，判断原文是否真的支持该论断；五类 HIGH-WARN 由格式化终端的硬性校验统一拦截
+- ✨ Stage 2.5 与 Stage 4.5 设置完整性校验关卡，执行 7 条 AI 研究失败模式阻断清单（包括实施 bug、编造结果、方法论捏造、引用幻觉、框架锁死等）
+- ✨ Style Calibration 从你过去的作品学习并贴合你的行文风格，Writing Quality Check 识别机器味浓的句式，目标是提高质量，并不教你怎么掩盖使用 AI 的痕迹
+- 👥 适合谁：用 Claude Code 做文献综述、投稿论文的研究生与科研人员，也适合需要把控引用真实性的写作者。
 
-`Java` · Fork 11,270
+`Python` · Fork 4,293 · 🔗 [官网](https://buymeacoffee.com/crucify020v)
 
-### 4. [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) — ⭐ 78,213（今日 +326）
+### 4. [orailnoor/cross-platform-llm-client](https://github.com/orailnoor/cross-platform-llm-client) — ⭐ 2,143（今日 +211）
 
-> 542 节开源课程，带你从零实现模型内部、检索管线和智能体运行时，边写代码边学 AI 工程。
+> 一个 Flutter 跨平台 AI 聊天客户端，把本地 GGUF 离线推理和多家云端 API 统一在同一个界面里。
 
-这是一个免费的 MIT 开源 AI 工程课程仓库，目标是让你不止于调包，而是真的把东西造出来：亲手实现模型内部机制、检索管线、智能体运行时，跑测试、排查失败原因，并把代码和评测结果留成自己的作品。全站共 542 节课、20 个阶段，覆盖 Python、TypeScript、Rust、Julia、Go。你可以直接在官网按课时学习，也可以配合编码智能体跟练，或者把仓库拉到本地跑代码。官网提供三条学习路线（模型基础、LLM 系统、智能体与交付），并配有交互式实验和项目挑战，学完就能上手做真实项目。
+PrivateLM 是一个可以直接安装使用的跨平台 AI 聊天客户端。它想解决的核心问题是：用云端 API 聊天时，模型无法离线使用且隐私不可控；运行本地模型时，又缺少统一好用的客户端。在 Android 和 iOS 上，你可以下载 GGUF 模型直接跑在设备上，借助 Vulkan 或 Metal 的 GPU 加速，下载完成后完全不需要联网；在 Web 端或不方便本地推理时，可以切换到 OpenAI、Anthropic、Gemini、Kimi 四家云端服务。四家 API 在代码中被统一整理，共用一套调用接口，聊天记录和设置全部存在本地的 Hive 里，除非你主动选择云模式，否则数据不会离开设备。首次启动时，它会根据设备可用内存推荐上下文长度和 token 上限。iOS 版以 IPA 形式分发，需要通过 AltStore 侧载安装。
 
-- ✨ 完整课程体系：542 节课分成 20 个阶段，从开发环境搭建一路走到智能体工程与交付
-- ✨ 三条学习路线：模型基础、LLM 系统（从提示工程起步）、智能体与交付（从智能体循环起步），可按职业方向选择
-- ✨ 动手实现核心组件：模型内部、检索管线、智能体运行时都要自己写，而不是只调用现成 API
-- ✨ 交互式实验：例如梯度下降可视化，20 个起点在二次损失上迭代，实时展示位置与平均损失变化
-- ✨ 项目挑战与评测留存：写完要测试、检查失败案例，并把代码和评测结果保留下来作为作品
-- ✨ 多语言代码示例（Python、TypeScript、Rust、Julia、Go）与 30 多种语言的 README 翻译
-- 👥 适合谁：想真正理解 AI 底层、愿意动手写代码的开发者，以及从后端或前端转向 AI 工程的工程师。
+- ✨ Android 与 iOS 本地 GGUF 推理，GPU 加速（Vulkan / Metal），下载后离线可用
+- ✨ 云端 API 接入 OpenAI、Anthropic、Google Gemini、Kimi（Moonshot），四套 API 统一到一个接口
+- ✨ 多模态聊天：文本加图片输入，本地 Qwen2-VL 与云端视觉模型都支持
+- ✨ 会话与设置全部通过 Hive 本地持久化，API Key 只发往对应服务商
+- ✨ 根据设备 RAM 和 GPU 等级自动推荐上下文大小、token 限制与线程数
+- ✨ 后台服务与 Firebase 推送通知，支持后台任务处理，附 5 秒空闲检测与 180 秒超时兜底
+- 👥 适合谁：想在手机上离线运行自定义或未审查模型，同时又需要随时切换到主流云端 API 的开发者与进阶用户。
 
-`Python` · Fork 13,907 · 🔗 [官网](https://aiengineeringfromscratch.com)
+`C++` · Fork 420
 
-### 5. [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) — ⭐ 64,045（今日 +318）
+### 5. [WhiteTowerAI/ohmygame](https://github.com/WhiteTowerAI/ohmygame) — ⭐ 2,055（今日 +170）
 
-> 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。
+> 开源的一人游戏工作室：在一个应用里用 AI 设计、生成素材、构建、试玩并发布游戏。
 
-God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和公共摄像头这些本就公开的信号，放进同一个可探索的照片级 3D 地球，让你在全局态势与某架飞机、某艘船、某条街道之间自由切换。它解决的痛点在于：数据散落各处、彼此关系看不见。全部在本地浏览器运行，代码可检查、可扩展。用 Pinokio 一键安装，或在终端本地启动，不需要 API key 就能上手，需要时再在应用内填可选密钥；每一层数据都是独立模块，可以自行接入新数据源。
+做游戏要同时用到设计文档、2D 美术、3D 模型、视频、代码和发布渠道，这些往往散落在五六个工具里。OhMyGame 把它们收进一个桌面应用：你用自然语言描述游戏，智能体就会写设计文档、在画布上生成图片、视频、3D 和音频素材、写代码、在实时预览里试玩并尝试修复问题，最后发布成一个浏览器可玩的链接。它开源、采用 BYOK，密钥留在你自己机器上，通过 Pi 支持 40+ 模型提供商，没有按次计费的积分。
 
-- ✨ 座舱视角：进入被追踪航班的机舱，镜头一路贴着下方地形飞行；另有按机型建模的 3D 机库（787、ATR-72、MQ-9 等），靠近时目标会从图标换成实体模型
-- ✨ 点击追踪与 250km 联系人名单：锁定目标后绘制渐隐轨迹并展示完整元数据，追踪火灾或船只可一键交接给最近的实时摄像头
-- ✨ 语音控制与语音白板：由实时 AI agent 驱动的免手操作，把标注、真实边界多边形和路线直接“说”到地球上
-- ✨ 传感器滤镜与 HUD：CRT、NVG、FLIR 热成像、Noir 等 GLSL 效果叠加在真实地球上，配合屏幕空间探测框和军事风格战术 HUD
-- ✨ 天气与卫星过境：GFS/ECMWF 预报风场、雷达回波、云层与闪电共用一条时间轴，可追踪 NHC/CPHC 气旋路径，还能用语音查询某颗卫星何时从头顶升起
-- ✨ 分享链接与场景导演：相机、风格、图层乃至被追踪目标都能序列化进 URL（追踪目标是交接而非收藏），Director 场景可导入导出为文件或数据包，另附尼泊尔博特科西洪水回放等打包场景
-- 👥 适合谁：对地理空间数据、开源情报与可视化感兴趣的开发者、记者和极客，以及想拿它做演示或视频素材的创作者。
+- ✨ 智能体驱动画布：像人一样排版画布、起草设计文档，并在画布节点上直接生成图片、视频、3D 模型和音频
+- ✨ 智能体自动试玩：把游戏跑在可观看的窗口里实际玩一遍（含实时 Canvas 和 WebGL 游戏），发现问题就改，改完再玩
+- ✨ 统一的设计空间：主设计文档与美术、视频、3D、音频并列在同一块画布上，节点之间可互相引用，产物进入共享素材库供游戏直接使用
+- ✨ 一键发布与社区：发布后得到一个任何人用浏览器就能玩的链接，重新发布会更新同一链接；应用内社区可按最新、最多浏览、最多点赞排序，也能逛创作者主页
+- ✨ 交互式故事：做视觉小说、互动电影和剧情游戏，每一屏都是智能体根据描述生成的网页，可以放视频、对话、选项甚至小游戏
+- ✨ 可扩展与自带智能体：Claude Code、Codex、OpenCode 可以接管对话；插件支持 Godot、Unity、Unreal、Cocos Creator 构建，Blender、Aseprite、Tiled 做素材，并发布到微信小游戏、抖音小游戏、TapTap
+- 👥 适合谁：想独立做游戏、又不想在五六个工具之间来回切换的个人开发者、独立创作者和小团队。
 
-`JavaScript` · Fork 12,618 · 🔗 [官网](https://godseyeview.ai/)
+`TypeScript` · Fork 259 · 🔗 [官网](https://ohmygame.ai/)
 
-### 6. [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) — ⭐ 33,777（今日 +313）
+### 6. [vorssaint/vorssaint-utils](https://github.com/vorssaint/vorssaint-utils) — ⭐ 34,057（今日 +166）
 
-> 一个开源、可自托管的 AI 图像与视频生成工作室，聚合 600+ 模型，无内容过滤。
+> 用一个菜单栏图标替代十几个付费 Mac 工具，免费开源、无账号、无遥测。
 
-Open Generative AI 是商业 AI 视频/图像平台的替代品：你不用订阅 Midjourney、Runway、Kling，而是把这套 MIT 许可的前端应用部署到自己的服务器上，通过 MuAPI 调用 600+ 模型（Flux、Midjourney、Kling、Sora、Veo 等），在 14 个工作室里生成图像、视频、音频、对口型内容和工作流。它最大的卖点是没有任何内容过滤，也不锁定在某个封闭生态里。项目由 MuAPI 提供底层模型、队列和计费能力，README 还提供白标方案：换上自己的 Logo、配色和域名，就能把它变成自己品牌的 AI 工作室并按自己的价格卖给终端用户。
+Vorssaint 是一款面向 macOS 14+（Apple Silicon）的菜单栏工具箱，采用 GPL-3.0 开源许可。它要解决的是 Mac 用户为了音量混音、系统监控、窗口管理、剪贴板历史这类小功能，不得不分别购买、分别订阅好几个 App 的问题，把十几种常用工具集中到一个菜单栏图标下。它最大的特点是模块化：在设置里的 Features hub 中，你可以按需安装单个功能，也可以从一个预设开始；卸载某个功能后，它就不再加载，并从界面上消失，重新安装时会恢复原有设置；首次配置时，它只申请你选中的功能所需的权限。面板分区可以重排或隐藏，可以切换紧凑布局，设置还能导出到另一台 Mac，或放进 dotfiles 里管理。界面支持十多种语言，全程无账号、无订阅、无遥测。
 
-- ✨ 600+ 图像与视频模型统一接入，包括 Flux、Midjourney、Kling、Sora、Veo
-- ✨ 14 个独立工作室，覆盖图像、视频、音频、对口型、Cinema 和 Workflows
-- ✨ 无内容过滤，不做提示词审查
-- ✨ 完全自托管、MIT 许可，代码和数据都在自己手里
-- ✨ 通过 MuAPI 统一调度模型、任务队列与计费，无需自建 GPU 基础设施
-- ✨ 官方白标方案，支持自定义品牌、域名与定价，直接转售为自己的产品
-- 👥 适合谁：想摆脱订阅制与内容审查的创作者、希望自建或转售 AI 生成产品的独立开发者与小团队。
+- ✨ 按应用音量混音：为每个 App 单独设置音量，将偏小的声音放大到 100% 以上，收藏并排序常用应用，无需安装音频驱动；还支持按应用指定输出设备，比如音乐走音箱、通话走耳机
+- ✨ 系统监控：显示 CPU、GPU、内存、温度、电池健康与功耗，提供历史曲线，并列出高耗能 App；另含测试阶段的 Fan Control，可手动设置风扇转速或温度曲线
+- ✨ 窗口与应用管理：内置更好用的 App 切换器、窗口吸附和 Dock 预览
+- ✨ 剪贴板历史、文本片段与文件架，另有卸载器和 Homebrew、媒体工具等实用小工具
+- ✨ 音频外围功能：快捷键切换输出设备、耳机断开时自动降低音量、选择首选麦克风输入、一键静音或调节输入音量，以及阻止误按播放键时自动启动 Music
+- ✨ 模块化安装与个性化：按需安装或卸载整个功能模块，权限按需申请，面板分区可重排隐藏、切换紧凑布局，设置可导出到其他 Mac 或放进 dotfiles
+- 👥 适合谁：希望用一个开源工具替掉一堆付费小 App 的 Mac 用户，尤其是注重隐私、爱折腾配置的开发者。
 
-`JavaScript` · Fork 6,419 · 🔗 [官网](https://muapi.ai/open-generative-ai?utm_source=github&utm_medium=about&utm_campaign=open-generative-ai)
+`Swift` · Fork 1,705 · 🔗 [官网](https://vorssaint.com)
 
-### 7. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) — ⭐ 52,820（今日 +313）
+### 7. [CYQawa/YunX](https://github.com/CYQawa/YunX) — ⭐ 7,147（今日 +153）
 
-> 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具
+> 粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用
 
-AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。
+云析（YunX）是一个 Kotlin 写的 Android 开源应用，专门解决「别人发来网盘或短视频链接，却要开一堆 App、手动找提取码、下载还龟速」的麻烦。把链接粘进「解析」页，它自动识别平台并补上提取码；浏览分享目录点文件即可拿到直链下载，抖音、小红书、B 站等视频与图文也能直出直链。下载使用 Range 分片并发 + 断点续传，图片视频音频可在线预览，批量下载会自动收纳成可折叠分组。
 
-- ✨ 自动重链接：把 PS5 可执行文件转换为 Linux、Windows 原生可执行格式
-- ✨ 提供 system prx 系统库实现，支持动态链接，无需模拟器或独立运行时进程
-- ✨ 着色器重编译器输出 SPIR-V，并可用 Spirv-Tools 校验结果
-- ✨ 网页版转换器，所有文件处理都在本地设备完成，不上传服务器
-- ✨ 输入映射支持 SDL 手柄（含摇杆与扳机），键鼠可通过 anyps5-input.ini 配置
-- ✨ 仅含 relinker 的构建可在 macOS（含 Apple silicon）上运行
-- 👥 适合谁：对 PS5 软件互操作性、移植研究与软件保存感兴趣的开发者和研究人员
+- ✨ 网盘分享链接解析：识别夸克 / UC / 迅雷 / 百度 / 139 / 123 / 115 / 光鸭 / 蓝奏云 / 蓝奏云优享版 链接，并自动匹配提取码
+- ✨ 视频与图集解析：抖音 / 小红书 / 快手 / 微博 / AcFun 免登录直出直链，哔哩哔哩登录后画质更高且音视频分轨在应用内合轨（不依赖 ffmpeg），Pixiv 粘贴浏览器 Cookie 可解析全部作品
+- ✨ 高速下载：Range 分片并发 + 断点续传，任务保存请求头与固定分片规划，并发上限 32
+- ✨ 在线预览与播放：图片 / 视频 / 音频直接在线播放，逐请求带上 Referer / Cookie 避免直链 403，网盘里的常见文本文件也能打开
+- ✨ 图集两列网格：点开可翻页、双指放大、单张下载，长按进入多选批量下载；整文件夹或一次批量下载会在下载页收成一个可折叠分组
+- ✨ 多平台登录与认证备份：WebView Cookie、账号密码 / 短信验证码、JWT 等多种方式登录，并用口令派生密钥以 AES-GCM 加密备份 Cookie / JWT；复制分享链接后回应用会提示一键粘贴解析
+- 👥 适合谁：常收到网盘或短视频分享链接、想少装几个 App 就高速保存素材的 Android 用户
 
-`C++` · Fork 5,014 · 🔗 [官网](https://boykopovar.github.io/AnyPS5/)
+`Kotlin` · Fork 375
 
-### 8. [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — ⭐ 118,783（今日 +299）
+### 8. [every-app/open-seo](https://github.com/every-app/open-seo) — ⭐ 27,241（今日 +141）
 
-> 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token
+> 开源 SEO 工具，按需付费的 Semrush、Ahrefs 替代方案，自带 MCP 与 AI 技能。
 
-Caveman 是一个装在开发者本机的代理与技能包，核心主张是「能少说就少说」：让编码 agent 的回答变短、让喂给模型的日志和网页变小，但代码本身一字不改。一条命令 npx @caveman-ai/cli@latest 即可完成安装，它会自动找到你机器上的 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 agent 并完成配置，装完直接照常用 claude 即可，用的还是你自己的 key 和 Claude Pro/Max 登录。官方实测整段会话输入 token 减少 33.2%，回复从 63 token 压到 20 token 而修复方案不变；Adobe Research、JetBrains、Elastic 都做过独立验证。
+OpenSEO 是面向普通人的 SEO 工具：如果你觉得 Semrush、Ahrefs 订阅太贵、功能太臃肿，它把关键词研究、排名追踪、竞品分析等常用工作流拆出来，做成一个简洁、可自行控制的界面。它不自带数据源，你需要绑定自己的 DataForSEO API key，用多少付多少，没有订阅费；官方托管版每月 10 美元，支持项目。最大特色是把 SEO 数据通过 MCP 暴露给 Claude Code、ChatGPT、Codex、Cursor 等 AI 代理，配合可复用的 Agent Skills，让 AI 直接干活。你可以用 Docker 在服务器上自托管，也可以用一条命令部署到自己的 Cloudflare 账户。
 
-- ✨ Say less：回答压缩成电报体，代码与命令保持精确，63 token 变 20 token，还分 /caveman、/ultracave、/megacave 三档强度
-- ✨ Read less：日志、JSON、CSV、测试输出在进模型之前先瘦身，整段会话输入 token 少 33.2%
-- ✨ Auto：按每个请求自动挑选模型与推理强度，相同得分下比 Opus 高强度模式便宜 54%
-- ✨ Blocks：code mode，agent 写过的脚本会被保留并重复执行，一次测试运行的 token 从 397 降到 76
-- ✨ Waste fixes：定位 token 到底花在哪并修掉，还能在你暂停时保持 prompt 缓存是热的
-- ✨ Browse：网页抓回来先压缩，页面体积缩小约 129.8 倍；另有 caveman status / caveman off 逐项开关
-- 👥 适合谁：重度使用 Claude Code、Codex 等编码 agent，被 token 账单和上下文塞满困扰的开发者
+- ✨ 关键词研究：覆盖搜索量、难度等核心指标
+- ✨ 排名追踪：持续监控目标关键词的搜索排名
+- ✨ 竞品洞察：分析和对比竞争对手的 SEO 表现
+- ✨ 外链分析：查看和分析反向链接数据
+- ✨ 站点审计：发现站内 SEO 问题
+- ✨ AI Visibility：跟踪品牌在 AI 搜索中的可见度
+- 👥 适合谁：预算有限的独立开发者、SEO 从业者和小团队，以及想用 AI 代理自动化 SEO 工作流的人。
 
-`Go` · Fork 6,908 · 🔗 [官网](https://docs.caveman.so/caveman)
+`TypeScript` · Fork 3,787 · 🔗 [官网](https://openseo.so)
 
-### 9. [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot) — ⭐ 39,548（今日 +279）
+### 9. [GyulyVGC/sniffnet](https://github.com/GyulyVGC/sniffnet) — ⭐ 42,364（今日 +139）
 
-> 开源全渠道客服平台，Intercom、Zendesk 的自托管替代方案。
+> 一款跨平台、界面友好的实时网络流量监控桌面应用，让人轻松看清电脑在连接什么。
 
-Chatwoot 是一套可以自己部署的现代客服平台，目标是把分散在各个渠道的客户对话收进同一个收件箱。网站实时聊天、电子邮件、Facebook、Instagram、Twitter、WhatsApp、Telegram、Line、SMS 等来源的消息都会汇总到统一后台，客服不用在多个工具之间来回切换。它想解决的是商业客服软件价格高、数据不在自己手里、渠道割裂的问题：自托管意味着客户数据完全由你掌控，同时保留自动化、报表、帮助中心等成熟产品才有的能力。部署方式灵活，提供 Heroku、DigitalOcean 一键部署和 Docker、Helm 方案，开发团队也可以直接基于源码二次开发。
+Sniffnet 是一个用 Rust 编写的开源网络流量监控应用，把原本需要命令行抓包工具才能做的事变成可视化桌面体验。它会实时展示你机器上的网络连接、流量走向和统计数据，支持按协议、地址、应用等维度筛选和检查单个连接，还能在出现异常流量时发出通知。提供 Windows、macOS、Linux 的安装包，下载即用，界面内置多重主题和缩略图模式，并已翻译成二十多种语言。无论你是想排查后台偷跑流量的程序，还是单纯好奇网络状况，它都能让你不写一行命令就看懂网络。
 
-- ✨ 全渠道统一收件箱：网站实时聊天、邮件、社交平台、WhatsApp、Telegram、Line、SMS 等消息集中处理
-- ✨ Captain AI 客服代理：自动回复常见问题，减轻人工坐席负担
-- ✨ 内置帮助中心：发布帮助文章与 FAQ，让客户自助查找答案
-- ✨ 团队协作能力：私有备注、@提及、标签、快捷回复、自动分配、团队与自动化流程
-- ✨ 客户数据与主动触达：联系人管理、分组、自定义属性、售前表单与营销活动
-- ✨ 集成与报表：Slack、Dialogflow、Shopify、Google Translate、Linear，以及对话、坐席、收件箱、CSAT 等多维报表
-- 👥 适合谁：适合希望自托管、掌控客户数据的中小企业与支持团队，以及需要二次开发客服系统的开发者。
+- ✨ 实时监控网络流量与连接概览，图表化展示整体网络活动
+- ✨ 逐个连接深入检查，查看对端地址、协议、端口等详细信息
+- ✨ 按协议、IP 地址、应用等条件过滤，快速定位关注的流量
+- ✨ 自定义通知规则，在满足特定条件的流量出现时提醒你
+- ✨ 多种配色主题与缩略图小窗模式，可自定义界面外观
+- ✨ 跨平台支持 Windows、macOS 与 Linux，并提供二十多种语言界面
+- 👥 适合谁：适合想直观了解本机网络状况的开发者、运维人员，以及关心隐私与后台流量的普通用户。
 
-`Ruby` · Fork 9,605 · 🔗 [官网](https://www.chatwoot.com/help-center)
+`Rust` · Fork 1,992 · 🔗 [官网](https://sniffnet.app)
 
-### 10. [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) — ⭐ 5,196（今日 +265）
+### 10. [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) — ⭐ 128,972（今日 +135）
 
-> 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。
+> 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品
 
-这是一个开源的中国历史交互地图集：从《资治通鉴》开篇的三家分晋（公元前403年）一直画到当代，横跨18个历史时期、164张疆域与政区快照。它要解决的是读史、读诗时那个很具体的疑问——“这个地方今天在哪？疆域是怎么一步步从‘秋海棠’变成‘雄鸡’的？”用起来很直接：拖动时间轴换朝代，点里程碑看疆域增益与丧失，悬停任意古城、关隘或州府，就能看到它的古今地名沿革、辖境对应和发生过的关键事件。
+RustDesk 是一个用 Rust 编写的开源远程桌面应用，定位是 TeamViewer 的自托管替代品。它开箱即用、无需配置，安装后即可建立远程连接；同时把数据的控制权完全交给你：你可以使用官方提供的 rendezvous/relay 服务器，也可以按官方文档自建服务器，甚至参照 rustdesk-server-demo 写一个自己的中继服务。官方提供 Windows、macOS、Linux 的安装包与 nightly 构建，Android 可从 F-Droid 获取，Linux 上还有 Flathub 版本；如需进阶功能可选 RustDesk Server Pro。
 
-- ✨ 时间轴拖拽切换18个历史时期，战国七雄、三国群雄、南北朝、五代十国、宋辽西夏大理金蒙等政权同屏高对比呈现，悬停图例即高亮其领土，点击可直飞该政权
-- ✨ 多阶段疆域演化 + 朱红虚线“幽灵边界差异”叠加：在秦取巴蜀、汉武帝开河西、唐安西四镇、元宣政院辖藏、1881年收复伊犁、1898年租借地、1945年台湾光复、1946年“秋海棠”转“雄鸡”等里程碑间切换，前一时段的得失一目了然
-- ✨ 时间轴上内联显示在位君主与年号，含庙号/谥号、姓名和在位区间（如“汉武帝·刘彻”“唐太宗·李世民”“清圣祖·玄烨”），并给出对应的帝王纪年
-- ✨ 一级政区（郡、道、路、省）以去重的羊皮纸描边绘制，悬停可查看辖境及现代省份对应，还能开启 X-Ray 透镜把当代省界直接投到历史地图上
-- ✨ 黄河改道、云梦泽与罗布泊/蒲昌海的盈缩、战国至明的长城、隋唐大运河、丝绸之路、郑和航线，以及渤海湾、苏北、长江口、珠三角的古海岸线，都随年代同步演变
-- ✨ 古今地名沿革与诗词、战场地标：长安两千年间的名称变迁与重大事件，苏轼贬谪黄州写《赤壁赋》的路线，韩愈立马的蓝关，岳飞北伐前线的朱仙镇，都能在地图上点开查看
-- 👥 适合谁：历史与古典诗词爱好者、读史时想对照今地的学生、需要历史地理可视化素材的开发者与教师。
+- ✨ 开箱即用的远程桌面连接，安装后无需额外配置即可使用
+- ✨ 支持自建 rendezvous/relay 服务器，数据完全由自己掌控
+- ✨ 可选用官方公共服务器，或基于 server-demo 自行实现中继服务端
+- ✨ 跨平台：Windows、macOS、Linux 桌面端，Android 可通过 F-Droid 安装，Linux 另有 Flathub 版本
+- ✨ 提供正式 release 与 nightly 构建，可直接下载二进制文件
+- ✨ 界面与文档支持数十种语言的社区翻译，含中文、日语、法语、德语、西班牙语等
+- 👥 适合谁：注重数据隐私、希望自托管远程桌面来替代 TeamViewer 的个人用户、IT 运维与企业团队
 
-`JavaScript` · Fork 608 · 🔗 [官网](https://deanchen.me/jiangshan-map/)
+`Rust` · Fork 20,540 · 🔗 [官网](https://rustdesk.com)
 
 ## 📋 完整榜单
 
-> ℹ️ 每天只推送首次出现的新仓库，往期出现过的不会重复收录
+> ℹ️ 同一仓库 3 天内不会重复出现，往期出现过的不会重复收录
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 188,091 | +898 |
-| 2 | [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) | 无分词器的端到端TTS系统，支持30种语言、音色设计与高保真克隆 | `Python` | 42,184 | +387 |
-| 3 | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | 美国国家安全局（NSA）开源的全功能软件逆向工程框架，支持反汇编、反编译与脚本扩展。 | `Java` | 99,228 | +332 |
-| 4 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 542 节开源课程，带你从零实现模型内部、检索管线和智能体运行时，边写代码边学 AI 工程… | `Python` | 78,213 | +326 |
-| 5 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。 | `JavaScript` | 64,045 | +318 |
-| 6 | [Anil-matcha/Open-Generative-AI](https://github.com/Anil-matcha/Open-Generative-AI) | 一个开源、可自托管的 AI 图像与视频生成工作室，聚合 600+ 模型，无内容过滤。 | `JavaScript` | 33,777 | +313 |
-| 7 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具 | `C++` | 52,820 | +313 |
-| 8 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token | `Go` | 118,783 | +299 |
-| 9 | [chatwoot/chatwoot](https://github.com/chatwoot/chatwoot) | 开源全渠道客服平台，Intercom、Zendesk 的自托管替代方案。 | `Ruby` | 39,548 | +279 |
-| 10 | [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。 | `JavaScript` | 5,196 | +265 |
+| 1 | [tidain/YunX-Desktop](https://github.com/tidain/YunX-Desktop) | 云析 YunX 官方 Windows 桌面版，粘贴分享链接即可解析并高速下载网盘、视频和 … | `Kotlin` | 4,277 | +340 |
+| 2 | [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | 在自有基础设施上运行 AI agent 的隔离沙箱运行时，用 Docker 起步，用 Ku… | `Python` | 17,167 | +323 |
+| 3 | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。 | `Python` | 56,396 | +225 |
+| 4 | [orailnoor/cross-platform-llm-client](https://github.com/orailnoor/cross-platform-llm-client) | 一个 Flutter 跨平台 AI 聊天客户端，把本地 GGUF 离线推理和多家云端 AP… | `C++` | 2,143 | +211 |
+| 5 | [WhiteTowerAI/ohmygame](https://github.com/WhiteTowerAI/ohmygame) | 开源的一人游戏工作室：在一个应用里用 AI 设计、生成素材、构建、试玩并发布游戏。 | `TypeScript` | 2,055 | +170 |
+| 6 | [vorssaint/vorssaint-utils](https://github.com/vorssaint/vorssaint-utils) | 用一个菜单栏图标替代十几个付费 Mac 工具，免费开源、无账号、无遥测。 | `Swift` | 34,057 | +166 |
+| 7 | [CYQawa/YunX](https://github.com/CYQawa/YunX) | 粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用 | `Kotlin` | 7,147 | +153 |
+| 8 | [every-app/open-seo](https://github.com/every-app/open-seo) | 开源 SEO 工具，按需付费的 Semrush、Ahrefs 替代方案，自带 MCP 与 … | `TypeScript` | 27,241 | +141 |
+| 9 | [GyulyVGC/sniffnet](https://github.com/GyulyVGC/sniffnet) | 一款跨平台、界面友好的实时网络流量监控桌面应用，让人轻松看清电脑在连接什么。 | `Rust` | 42,364 | +139 |
+| 10 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品 | `Rust` | 128,972 | +135 |
 
 <!-- TRENDING:END -->
 
