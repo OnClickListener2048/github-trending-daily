@@ -17,172 +17,172 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-13
+# 🔥 GitHub 每日 Trending · 2026-11-14
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [nvm-sh/nvm](https://github.com/nvm-sh/nvm) — ⭐ 96,062（今日 +63）
+### 1. [alibaba/open-code-review](https://github.com/alibaba/open-code-review) — ⭐ 50,839（今日 +215）
 
-> POSIX 兼容的 Node.js 版本管理脚本，一条命令即可安装、切换多个 Node 版本。
+> 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给出精确到行级的审查意见。
 
-nvm 是一个用 Shell 编写的 Node.js 版本管理器，按用户安装、按 shell 生效，可在 sh、dash、ksh、zsh、bash 等任意 POSIX 兼容 shell 中运行，支持 unix、macOS 和 Windows WSL。它解决的问题很直接：不同项目依赖不同 Node 版本，全局只能装一个版本时来回折腾非常麻烦。装上 nvm 后，nvm install 24 装新版本，nvm use 22 一行切回旧版本，node -v 立刻确认当前生效版本。安装方式是一条 curl 或 wget 脚本，脚本会把仓库克隆到 ~/.nvm 并自动把加载语句写进 ~/.bashrc、~/.zshrc 等配置文件。
+Open Code Review 是阿里巴巴开源的 AI 代码审查命令行工具，源自其内部官方 AI 代码审查助手——两年间服务了数万名开发者、识别出数百万个代码缺陷，经过大规模验证后开源。它读取 Git diff，把变更文件交给可配置的 LLM，由一个具备工具调用能力的 Agent 生成结构化的行级审查评论：Agent 可以读取完整文件内容、搜索代码库、查看其他变更文件来获取上下文，做深度审查而不只停留在 diff 表面。除了 diff 审查，它还提供 ocr scan 命令审查整个文件，适合审计没有有效 diff 的陌生代码库或目录。使用门槛很低，配置好一个模型端点就能开始，兼容 OpenAI 与 Anthropic 接口。
 
-- ✨ 一条命令安装并切换任意 Node 版本，nvm install / nvm use 即时生效
-- ✨ 支持 LTS 等版本类别，可直接指定 lts/* 等别名安装长期支持版
-- ✨ 读取项目目录下的 .nvmrc 文件，配合 bash/zsh/fish 的 shell 集成可在进入目录时自动切换版本
-- ✨ 安装新版本时可自动迁移全局 npm 包，也可在已装版本之间迁移全局包
-- ✨ 支持从文件声明默认全局包，安装时一并装上，方便统一开发环境
-- ✨ 支持离线安装、使用 Node 二进制镜像源（可带 Authorization 头），以及无官方二进制平台
-- 👥 适合谁：需要同时维护多个 Node 版本、复现旧项目环境的 Node 开发者与 CI 维护者。
+- ✨ 混合架构：确定性流水线负责覆盖与定位，LLM Agent 负责深度推理，兼顾审查速度与准确度
+- ✨ 行级精确的结构化评论，Agent 可读完整文件、搜索代码库、跨变更文件获取上下文，避免只看到 diff 片段
+- ✨ ocr scan 全文件审查模式，用于代码库审计或没有有意义 diff 的目录
+- ✨ 内置多语言规则集，覆盖 NPE、线程安全、XSS、SQL 注入等常见缺陷类型
+- ✨ 模型端点可配置，兼容 OpenAI 与 Anthropic 接口，无需绑定特定厂商
+- ✨ 支持 Claude Code、Codex、Cursor、Kimi Code 等 Agent 环境，覆盖 Windows、macOS、Linux，可通过 npm 安装
+- 👥 适合谁：需要把代码审查自动化接入日常开发或 CI 的团队与个人开发者，尤其是对误报噪音、API 成本和审查耗时敏感的工程团队。
 
-`Shell` · Fork 10,761
+`Go` · Fork 3,786 · 🔗 [官网](https://open-codereview.ai)
 
-### 2. [pookjw/HermesEnabler](https://github.com/pookjw/HermesEnabler) — ⭐ 1,648（今日 +218）
+### 2. [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) — ⭐ 71,864（今日 +256）
 
-> 让任意 Apple Watch 用上爱马仕 Hermès 表盘的开源工具，仅支持 watchOS 27.0–27.3 beta 1。
+> LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。
 
-HermesEnabler 2 是一个同时包含 iPhone 宿主 App 和 Watch App 的工程，用来在非 Hermès 款的 Apple Watch 上启用原本爱马仕独占的表盘。安装后在手表上打开 HermesEnabler2，按应用内提示操作即可。macOS 上可以用 Sideloadly 侧载预编译 IPA，也可以用 Xcode 直接编译运行；Windows 上则借助社区工具 WatchBridge 完成签名和安装。前提是 iPhone 已与目标手表配对、手表系统在支持范围内，并且需要在 iPhone 和 Watch 上都打开开发者模式。
+这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。
 
-- ✨ 在任意 Apple Watch 上启用原本 Hermès 独占的表盘
-- ✨ 提供预编译 IPA，可用 Sideloadly 侧载，也可用 Xcode 直接编译运行
-- ✨ Windows 端可配合社区工具 WatchBridge 完成签名与安装，USB 配对一次后可改用 Wi-Fi 安装和续签
-- ✨ 应用内分步引导：配对确认、开发者模式开启、安装流程
-- ✨ 提供 MobileGestalt 备份机制，并要求在删除应用前先在 App 内恢复备份
-- ✨ README 提供 10 种语言版本，含简体中文、繁体中文、日文、韩文等
-- 👥 适合谁：想在非 Hermès 款 Apple Watch 上用爱马仕表盘、愿意折腾侧载与开发者模式的用户。
+- ✨ AI 决策报告：核心结论、评分、趋势、买卖点位、风险警报、催化因素与操作检查清单一次给全
+- ✨ 多市场数据聚合：覆盖 A股、港股、美股、日股、韩股、台股和 ETF 的行情、K 线、技术指标、新闻、公告与基本面
+- ✨ Web / 桌面工作台：手动分析、任务进度、历史报告、完整 Markdown、回测、持仓与配置管理，支持浅色/深色主题
+- ✨ Agent 策略问股：多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种策略，Web/Bot/API 均可调用
+- ✨ 智能导入与补全：支持图片、CSV/Excel、剪贴板导入自选股，股票代码/名称/拼音/别名自动补全
+- ✨ 自动化与推送：GitHub Actions、Docker、本地定时任务、FastAPI 服务，推送到企业微信/飞书/Telegram/Discord/Slack/邮件
+- 👥 适合谁：适合跟踪 A股、港股、美股等多市场的个人投资者，以及想低成本搭自选股日报的开发者。
 
-`Objective-C` · Fork 145
+`Python` · Fork 57,364 · 🔗 [官网](https://dsa.zhulinsen.tech)
 
-### 3. [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) — ⭐ 29,979（今日 +151）
+### 3. [we-promise/sure](https://github.com/we-promise/sure) — ⭐ 14,885（今日 +925）
 
-> Qwen 官方开源的终端 AI 编码智能体，同一套能力也覆盖 IDE、桌面、浏览器与聊天工具。
+> 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance
 
-Qwen Code 是 Qwen 团队开源的 AI 编码智能体，主体运行在终端里：在项目目录执行 qwen 即可唤起会话，用 /auth 登录 Qwen 账号（Plus/Pro 订阅）或配置任意厂商的 API Key，然后就能让它读仓库、解释代码、改文件、跑命令。它解决的是“把大模型真正接进日常开发流程”这件事——不用自己搭 Agent 框架，Auto-Memory、SubAgents、MCP 等能力开箱即用；框架和底层 Qwen 模型同为开源、协同演进，不锁定单一供应商。安装支持一键脚本、npm（Node.js 22+）与 Homebrew，并附完整多语言文档。
+Sure 是一个可以完全自托管的个人财务与财富管理应用。它最初由 Maybe Finance 团队投入近百万美元开发，2023 年停摆后开源，如今由社区 fork 继续维护。你能用它集中查看现金流、净资产、支出与资金流出，内置 AI 助手可以直接回答类似于「我的储蓄情况怎么样」的问题。部署方式很简单：用 Docker 自托管，或通过 Render 一键部署（有带 AI 和不带 AI 两个版本）。应用可以通过浏览器、macOS 桌面端、移动端、API 客户端和 LLM agent 访问。本地开发只需 Ruby、PostgreSQL 和 Redis，跑 bin/setup 后执行 rake demo_data:default 就能加载演示数据试玩。
 
-- ✨ 开箱即用的 Agent 能力：Auto-Memory、Auto-Skills、SubAgents、Agent Teams 与 MCP，无需额外配置即可编排动态工作流
-- ✨ 多协议模型接入：兼容 OpenAI、Anthropic、Gemini、Qwen 接口，也可接 Ollama、vLLM 等本地或第三方模型，并支持运行时切换
-- ✨ 不止于终端：提供 IDE 插件（VS Code、Zed、JetBrains）、桌面应用、Web UI、SDK，以及 Telegram、钉钉、微信、飞书等聊天工具集成
-- ✨ 多种安装与登录方式：一键安装脚本、npm 全局安装、Homebrew，配合 /auth 用 Qwen 订阅账号登录或填入各厂商 API Key
-- ✨ 开源无锁定：Agent 框架与 Qwen 模型同为开源并一起演进，可自由替换模型与供应商
-- ✨ 项目自我迭代：团队用 Qwen Code 自身的 Agent 与模型来提 issue、提交 PR、审查代码和跑测试，社区与 AI 共同驱动
-- 👥 适合谁：习惯在终端里工作的开发者、需要私有化或自选模型的团队，以及想把 AI 编码助手接入 IDE、桌面和 IM 工作流的人。
+- ✨ 可视化仪表盘：一屏查看现金流、净资产、支出与资金流出
+- ✨ 内置 AI 助手：用自然语言提问，直接回答关于你财务状况的问题
+- ✨ 多种客户端接入：浏览器、macOS 桌面应用、移动端、API 客户端和 LLM agent
+- ✨ 用 Docker 自托管，也可以借助 Render 一键部署，部署版本可选带 AI 或不带 AI
+- ✨ 完整的本地开发流程和演示数据集：执行 rake demo_data:default 即可得到可登录的示例账户
+- ✨ 公开的 Skylight 性能面板，暴露 demo 站上的慢请求和调用栈，方便社区针对性优化
+- 👥 适合谁：希望自己托管财务数据、注重隐私的个人用户，以及愿意参与 Ruby 开源项目贡献的开发者
 
-`TypeScript` · Fork 3,409 · 🔗 [官网](https://qwenlm.github.io/qwen-code-docs/en/users/overview)
+`Ruby` · Fork 1,132 · 🔗 [官网](https://sure.am)
 
-### 4. [ashhart/TensorFold](https://github.com/ashhart/TensorFold) — ⭐ 2,017（今日 +54）
+### 4. [backnotprop/plannotator](https://github.com/backnotprop/plannotator) — ⭐ 10,565（今日 +108）
 
-> 用单个 Zig 二进制在 Apple Silicon 与 NVIDIA GPU 上直接跑 LLM 推理和 OpenAI 兼容服务的引擎。
+> 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。
 
-TensorFold 是一个本地 LLM 推理引擎，编译成一个 Zig 二进制，可直接在 Apple Silicon（Metal）和 NVIDIA GPU（CUDA）上读取 checkpoint、分词并执行内核，机器上不需要装 Python 或 MLX。它解决的是「只想在自己机器上跑个模型、却要先搭一整套 Python 环境」的麻烦：用 tensorfold pull 按固定 revision 拉模型，tensorfold serve 起服务并命名，再用一条 curl 请求 /v1/chat/completions 就能对话。Mac 上走 Homebrew，Linux 上使用带 sha256 校验的发布包（需要 glibc 2.28+ 和 R580+ 驱动），也可以直接服务本地 checkpoint 目录或现成的 Hugging Face 缓存。
+Plannotator 是跑在本地浏览器里的审阅界面，用来和 AI 编码代理协作。代理给出计划、规格、HTML 制品或改完代码后，它会自动打开浏览器，让你直接在上面标注、写评论，再一键把反馈送回代理执行。它通过插件、hooks 和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi 等代理，也能用 MCP 接入任意工具。除了审文档，它还能审本地改动和远程 PR，并用 Inbox 汇总多个代理的消息与待决事项。
 
-- ✨ 单个 Zig 二进制即可完成推理服务，Metal 与 CUDA 两条后端路径，无需 Python 或 MLX 环境
-- ✨ OpenAI 兼容 HTTP API：chat/completions、completions、Responses 以及 Anthropic Messages，/v1/models 返回已服务模型名
-- ✨ tensorfold pull 支持按 commit revision 固定模型版本（示例为 Qwen3.5-2B 的 4bit MLX checkpoint），便于复现
-- ✨ serve 提供 --context 控制上下文长度、--no-thinking 关闭思考模式，也可直接指向本地 checkpoint 目录或已有 HF 缓存
-- ✨ --parallel N/auto 控制并发流数量，显存放不下会直接拒绝显式数值；/health 暴露 live.connections 与 live.waiting 便于观测排队
-- ✨ tensorfold web 启动本地 Web 应用挑模型、运行与聊天，macOS 另有桌面工作区 app
-- 👥 适合谁：想在 Mac 或 NVIDIA 机器上自托管模型、又不想维护 Python 推理栈的开发者与小型团队。
+- ✨ 文档与制品标注：在计划、规格、Markdown、HTML 等交互制品上划线评论，反馈直接回传给代理
+- ✨ 代码审查：在本地改动或远程 PR 的 diff 上逐行评论、建议代码，支持 Git、GitButler、Jujutsu（jj）、Perforce（p4）、GitHub 和 GitLab
+- ✨ 内置 AI：可就正在审阅的内容随时提问，或启动 AI 评审自动往 diff 上贴评论
+- ✨ Plannotator Inbox：一个本地窗口收拢多个代理留下的问题、文件、截图和引导式评审，点一下即可回复，不阻塞任何会话
+- ✨ 多代理接入：通过插件、hooks、命令和 MCP 对接 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi，也兼容个人助理类工具
+- ✨ Herdr Annotate：在终端里标注文本、整份 Markdown 文档和代理回复，反馈作为下一条消息发回代理
+- 👥 适合谁：同时驱动多个 AI 编码代理、需要频繁审阅方案与代码的开发者和小团队。
 
-`Zig` · Fork 397 · 🔗 [官网](https://tensorfold.dev)
+`TypeScript` · Fork 791 · 🔗 [官网](https://plannotator.ai)
 
-### 5. [nodejs/node](https://github.com/nodejs/node) — ⭐ 123,653（今日 +62）
+### 5. [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) — ⭐ 93,962（今日 +71）
 
-> 跨平台开源 JavaScript 运行时，让 JS 脱离浏览器在服务端运行
+> 一款自托管的网站与服务可用性监控工具，界面现代、通知渠道丰富、部署简单。
 
-Node.js 是一个开源、跨平台的 JavaScript 运行时环境，把 JavaScript 从浏览器里解放出来，可以直接在服务器和本机跑。它解决的核心问题是：让前端开发者用同一门语言写后端、命令行工具和自动化脚本，不必再学一套新语言。日常使用很简单——到官网下载对应系统的安装包或二进制，或用包管理器装好后直接执行 node 命令运行脚本；需要尝鲜可以用 Nightly 构建，追求稳定则选 LTS 版本。项目采用开放治理模型，由 OpenJS Foundation 支持，遵循语义化版本，并有明确的贡献指南和行为准则。
+Uptime Kuma 是一个可以自己部署的监控面板，用来盯着你的网站、服务器和各类服务是否在线。它解决了依赖第三方监控服务的问题：数据和应用都跑在你自己机器上。部署方式很直接，一条 docker run 或 compose 命令就能起来，默认监听 3001 端口，也可以用 Node.js + PM2 裸机安装。监控项最小间隔可到 20 秒，出问题会通过你配置的渠道第一时间推送到手机或群里。UI 是响应式的，操作顺手，还支持多语言、多状态页、2FA 和代理。官方提供 10 分钟有效期的在线 Demo，想先看效果可以直接试。
 
-- ✨ 跨平台 JavaScript 运行时，支持在服务端和本机执行 JS
-- ✨ 清晰的版本发布体系：Alpha、Current、LTS、Nightly 四条线路
-- ✨ LTS 提供自首个 Current 版起共 36 个月的支持周期，主打稳定与安全
-- ✨ 官方提供二进制、安装包和源码包下载，另有每日 Nightly 构建
-- ✨ 发布文件附带 SHA 校验和与 PGP 签名，可用官方 keyring 验证完整性
-- ✨ 完善的 API 文档，按版本分别提供，历史版本文档也可查
-- 👥 适合谁：需要用 JavaScript 写服务端、命令行工具或自动化脚本的开发者，以及关注运行时选型和 LTS 稳定性的团队。
+- ✨ 多种监控类型：HTTP(s)、TCP、HTTP 关键词、JSON 查询、Websocket、Ping、DNS 记录、Push、Steam 游戏服务器、Docker 容器
+- ✨ 90+ 通知渠道，包括 Telegram、Discord、Slack、Gotify、Pushover、邮件 SMTP 等
+- ✨ 20 秒级检查间隔，并提供 Ping 图表和证书到期信息
+- ✨ 多个状态页，可绑定到指定域名对外展示
+- ✨ 现代响应式 UI，支持多语言、2FA 和代理
+- ✨ Docker Compose、docker run、Node.js + PM2 多种部署方式
+- 👥 适合谁：适合有自托管需求、希望掌控监控数据的开发者、运维和家庭服务器玩家。
 
-`JavaScript` · Fork 38,060 · 🔗 [官网](https://nodejs.org)
+`JavaScript` · Fork 8,728 · 🔗 [官网](https://uptime.kuma.pet)
 
-### 6. [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot) — ⭐ 11,842（今日 +298）
+### 6. [block/buzz](https://github.com/block/buzz) — ⭐ 37,360（今日 +97）
 
-> 一个可自托管的 AI 同事工作空间，每个 Bot 拥有独立浏览器、文件与工具，兼容任意 AG-UI 智能体。
+> 自托管的协作工作区，人类和 AI 智能体共享同一批房间、同一份事件日志。
 
-OpenBot 是 CopilotKit（AG-UI 协议作者）开源的模块化 AI 同事工作台。它给每个 Bot 一台自己的“电脑”：浏览器、文件和工具，让 AI 真正动手完成任务，而不是只回一段文字。关键在于：每个动作在执行前先被决定、执行后被记录，敏感操作会停下来等你批准，你也可以随时接管。模型可选 OpenAI、Claude、Gemini 或任意 OpenAI 兼容端点，已有智能体可通过 AG-UI 接入。上手很简单：Mac/Windows 安装包双击即用，内置前端加 Docker 后端，无需终端；团队场景可跑 Kubernetes 或等 Business 版。
+Buzz 是一个可自托管的团队工作区，核心特点是：AI 智能体是和人类同等的成员，不是外挂机器人。每条消息、表情回应、工作流步骤、评审批准和 git 事件都是同一条日志里的签名事件，作者是人还是进程没有区别。它想解决的是团队现在用聊天、代码托管、机器人、CI 面板、发布工具和搜索引擎拼凑起来的一堆割裂工具：与其在七个互不相关的标签页之间搬运信息，不如让所有内容都基于同一套基础设施。用起来像团队聊天：建频道、拉人、发消息；但它同时也是仓库、评审、工作流和搜索的入口。桌面端在独立仓库，relay 和移动端（iOS/Android）在 block/buzz。
 
-- ✨ 每个 Bot 拥有独立的浏览器、文件系统和工具，像真人同事一样操作电脑
-- ✨ 动作执行前先规划决策、执行后全程留痕记录，支持审批与人工接管
-- ✨ 模型自由选择：OpenAI、Claude、Gemini 或自托管 OpenAI 兼容端点
-- ✨ 通过 AG-UI 协议接入你已有的智能体，不同技术栈的 agent 可同处一个工作区
-- ✨ 桌面端一键安装（Apple silicon / Intel Mac、Windows x64），内置 Docker 后端，无需开发者工具
-- ✨ 支持从源码运行与 Kubernetes 部署，数据与基础设施完全自持
-- 👥 适合谁：需要让 AI 真正动手干活、又要求权限审批与审计留痕的开发者、技术团队和注重数据自主的企业。
+- ✨ 智能体作为成员加入频道：有自己的密钥、自己的频道成员关系和自己的审计轨迹，按身份而非权限开关来界定范围，就像给同事授权一样
+- ✨ 把功能分支变成房间：补丁以 NIP-34 事件形式提交，CI 推送结果，智能体做首轮评审，队友对关心的部分回应，合并决策和证据留在同一个频道里
+- ✨ 统一搜索：对话、补丁、工作流运行和审批都在同一个地方检索，因为它们本来就是同一类事件
+- ✨ 智能体不只聊天，还能操作工作区：创建频道、编辑画布、运行工作流、编排其他智能体、加入语音 huddle，能力范围与人类一致
+- ✨ 媒体可以带帧评论：视频播放时可把评论固定在具体画面上，讨论不会被时间轴冲走
+- ✨ 自助发布流程：打标签触发工作流，智能体读取已合并 PR 起草发布说明，等人点赞后发布，每一步都签名且可检索
+- 👥 适合谁：适合希望把 AI 智能体真正纳入协作流程、又要求数据自主可控和完整审计轨迹的工程团队。
 
-`TypeScript` · Fork 1,455 · 🔗 [官网](open.bot)
+`Rust` · Fork 4,944
 
-### 7. [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) — ⭐ 134,711（今日 +176）
+### 7. [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) — ⭐ 4,306（今日 +69）
 
-> 纯 C/C++ 实现的 LLM 与 VLM 推理引擎，无需额外依赖即可在多种硬件上本地运行大模型
+> 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记录整理成可执行的工作流。
 
-llama.cpp 的目标是让你以最小的配置成本，在从笔记本到服务器的各类硬件上运行大语言模型和视觉语言模型，并获得业界一流的性能。它用纯 C/C++ 实现，不依赖任何第三方库；支持 1.5 到 8 位整数量化，可显著降低内存占用并加速推理；还支持 CPU+GPU 混合推理，即使模型体积超过显存总量，也能把一部分计算放到 GPU 上加速。使用起来很简单：安装后，用 `llama cli -hf <模型仓库>` 即可直接从 Hugging Face 拉取并对话，或用 `llama serve` 启动一个兼容 OpenAI 接口的 API 服务（自带 Web UI）。
+这是一个面向时间有限的个人投资者的 Claude Skills 交易工作流工具包。它不替你做买卖决定，也不提供任何交易信号，只把市场复盘、风险管理、交易计划、交易日志和复盘改进这些环节拆成可以照着执行的流程。它面向以长期投资、ETF 和股息股为核心，并在市场条件合适时用小仓位做波段交易的投资者。上手方式是从 workflows/ 目录下的 YAML 清单选一条路径，例如 15 分钟每日大盘体检、每周核心组合复盘、风险允许时才找波段候选、每笔平仓后记录复盘、月度绩效复盘；新手可以先走 Your First Week 教程，用不花钱的数据 API 路径跑通第一次市场检查。
 
-- ✨ 纯 C/C++ 实现，无第三方依赖，编译后即可离线运行
-- ✨ 支持 1.5/2/3/4/5/6/8 位整数量化，大幅降低内存占用并提升推理速度
-- ✨ 针对 Apple Silicon 深度优化（ARM NEON、Accelerate、Metal），并对 x86 提供 AVX/AVX2/AVX512/AMX 支持
-- ✨ 后端覆盖极广：CUDA、HIP（AMD）、MUSA（摩尔线程）、Vulkan、SYCL、CANN（昇腾）、OpenCL、WebGPU、Hexagon 等
-- ✨ CPU+GPU 混合推理，可运行超出总显存容量的大模型
-- ✨ 内置 llama-server，提供 OpenAI 兼容的 REST API 与自带 Web UI，并支持 VLM 多模态会话
-- 👥 适合谁：希望在本地或自有服务器上低成本部署大模型、又不想被复杂框架和 Python 依赖困扰的开发者与研究者
+- ✨ 每日市场环境检查：由 market-breadth-analyzer、uptrend-analyzer 和 exposure-coach 组成的 workflow，15 分钟走完，最后给出建议仓位上限和 REDUCE_ONLY 等市场姿态，供人工判断而不是下单
+- ✨ 每周核心组合复盘：portfolio-manager 配合 kanchi-dividend-review-monitor 和 trader-memory-core，检查长期持仓与股息组合，Alpaca 为必需，手动 CSV 是降级方案
+- ✨ 波段机会筛选有前置条件：先用 drawdown-circuit-breaker 判断风险是否允许，通过后才用 vcp-screener 筛选，再经 technical-analyst、position-sizer、pre-trade-discipline-gate 逐层把关
+- ✨ 交易记忆闭环：每笔平仓都通过 trader-memory-core 和 signal-postmortem 归档，形成可回看的交易日志与教训记录
+- ✨ 月度绩效复盘：trader-memory-core、signal-postmortem 和 backtest-expert 一起统计实现盈亏，并据此调整交易规则
+- ✨ Trading Skills Navigator 导航：说明自己的目标后，它会推荐应从哪条 workflow 起步，并标明哪些步骤需要付费数据 API
+- 👥 适合谁：时间有限的个人投资者、长期持有 ETF 和股息股的人，以及想做有纪律的波段交易并坚持写交易日志的人。
 
-`C++` · Fork 25,524 · 🔗 [官网](https://llama.app)
+`Python` · Fork 881 · 🔗 [官网](https://tradermonty.github.io/claude-trading-skills/)
 
-### 8. [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) — ⭐ 25,743（今日 +297）
+### 8. [tailscale/tailcat](https://github.com/tailscale/tailcat) — ⭐ 9,573（今日 +256）
 
-> SkillSpector 是 NVIDIA 推出的 AI agent 技能安全扫描器，安装前先查漏洞和恶意模式。
+> 基于 Tailscale 数据面的 netcat 替代品，无需账号与控制面即可建立加密隧道
 
-AI agent 技能（Claude Code、Codex CLI、Gemini CLI、MCP 等）往往在几乎没有审查的情况下被直接信任执行，SkillSpector 就是用来回答“这个技能能不能安全安装”的工具。在 31,132 个技能的研究样本中，26.1% 存在漏洞，5.2% 有疑似恶意意图。它支持扫描 Git 仓库、URL、zip、目录或单个 SKILL.md 文件，先做快速静态分析，再可选叠加 LLM 语义评估，最终给出 0-100 风险分和明确处置建议，并可作为 NVIDIA Verified Skills 流水线的一环在发布前扫描、评估和签名。
+Tailcat 是 Tailscale 官方用自家开源组件改造出的工具：它只借用 Tailscale 的数据面（magicsock + DERP 中继），完全绕开控制面。实际效果就是「Tailscale without Tailscale」：服务端运行后打印一个短地址，客户端拿着这个地址即可连接，双方流量由 WireGuard 端到端加密，先经 DERP 引导，再尽量升级为点对点直连。不需要 Tailscale 账号、不需要 root，也不改动本机路由和 DNS，纯用户空间运行。连接元数据通过任意渠道带外传递。既可以当 CLI 用，也可以作为 Go 库 github.com/tailscale/tailcat 引入自己的程序。
 
-- ✨ 多形态输入：Git 仓库、URL、zip 包、本地目录或单个文件均可扫描
-- ✨ 17 大类共 71 种漏洞模式：提示注入、数据外泄、权限提升、供应链、过度自主、系统提示泄露、记忆投毒、工具滥用、YARA 签名、MCP 最小权限与工具投毒等
-- ✨ 两阶段分析：快速静态检测加可选的 LLM 语义评估
-- ✨ 通过 OSV.dev 实时查询 CVE，离线时自动回退
-- ✨ 支持 Terminal、JSON、Markdown、SARIF 多种报告格式，并输出 0-100 风险评分与严重度标签
-- ✨ 基线抑制机制：用 glob 规则或指纹接受已知问题，重扫时只暴露新增风险
-- 👥 适合谁：需要引入第三方 AI agent 技能的开发者、AI 平台与安全团队，以及维护技能目录和发布流水线的工程人员。
+- ✨ 像 netcat 一样直接在两端管道 stdin/stdout，服务端只吐出一个临时短地址
+- ✨ serve 模式把本地 TCP 端口（或 all）通过隧道暴露，客户端按端口连接即可
+- ✨ 支持端口映射，例如 5555:10.2.200.213:5555，可把局域网中某台设备（如 Android adb）的端口单独代理出去，而非整网段暴露
+- ✨ forward 子命令把服务端端口映射成本机普通 TCP 端口，方便浏览器、数据库客户端等不支持 SOCKS 的工具使用
+- ✨ exit-node 模式可转发到服务端所在网络内的任意 IP:端口，本地端口写 0 还能让系统自动分配空闲端口
+- ✨ 端到端 WireGuard 加密，DERP 仅作打洞信道与最后兜底中继，可自建 derper 或使用官方限速中继（默认 derpmap 在 tailcat.dev）
+- 👥 适合谁：需要临时点对点传文件、开端口又不想配 VPN 或装 Tailscale 的开发者与运维
 
-`Python` · Fork 2,273 · 🔗 [官网](https://docs.nvidia.com/skills/scanning-agent-skills)
+`Go` · Fork 435 · 🔗 [官网](https://tailscale.com/tailcat)
 
-### 9. [microsoft/Procexp-Mac](https://github.com/microsoft/Procexp-Mac) — ⭐ 857（今日 +243）
+### 9. [Likely7/Veyra-NRVideo](https://github.com/Likely7/Veyra-NRVideo) — ⭐ 1,722（今日 +256）
 
-> 微软 Sysinternals 出品的原生 macOS 进程浏览器，把 Windows 版 Process Explorer 的核心体验完整搬到了 Mac 上。
+> Windows 上把本地视频、采集卡与游戏串流统一进一条实时 GPU 增强管线的播放与录制工具。
 
-这是 Sysinternals Process Explorer 的 macOS 原生实现，用 Swift、SwiftUI 和 AppKit 编写，基于 libproc、sysctl、Mach 主机统计、Security.framework、IOKit 等公开 API 采样。它解决的是 Mac 上缺乏一个「像 Process Explorer 那样」的深度系统观察工具的问题：既有实时进程树和下半窗格里的模块、句柄、线程视图，也有每进程的详细属性、系统级性能图表和代码签名检查，并针对 macOS 补充了沙盒进程、Team ID、公证状态、性能核/能效核等本地化内容。使用方式是 xcodegen 生成工程后用 Xcode 构建，另有可选的 root 特权 helper 支持跨用户与提权操作。
+Veyra 是运行在 Windows 11 上的实时 GPU 视频增强与采集软件。你可以用它播放本地视频和图片，也可以接入采集卡，或接收 PS5、Xbox、PC 的串流画面，然后在同一条管线里叠加超分辨率、降噪、HDR 和帧生成，同时完成录制、即时回放、音频混音与导出。界面拆成 Home、Cinema、Professional List、Nodes、Colour、Export、Settings 等模块，支持简体中文、繁体中文、英文和日文，并提供可直接运行的便携包，另有 Wiki 用户指南和中文知识库协助配置与排错。
 
-- ✨ 实时进程树，按服务、自身进程、新建/已删除、挂起、沙盒、加壳镜像等 Process Explorer 风格配色区分，空格键可暂停/恢复刷新
-- ✨ 下半窗格可切换 DLL/镜像、句柄/文件描述符、线程三种模式，新增与消失的条目会高亮
-- ✨ 每进程属性窗口含 Image、Performance、性能图表、线程、TCP/IP、安全、环境变量、字符串等标签页，TCP/IP 页支持异步反查远程主机名
-- ✨ 代码签名与安全详情：签名者、发布者、证书链、Team ID、公证状态、SHA-256，并集成 VirusTotal 查询
-- ✨ 系统信息窗口含摘要、CPU、内存、I/O、网络、GPU 页面，图表覆盖 CPU、内存、交换、磁盘 I/O、网络 I/O、GPU 与逐核占用，Apple Silicon 上区分性能核与能效核
-- ✨ 进程操作齐全：kill、kill tree、挂起/恢复、设置优先级/nice、重启、置前、采样、在线搜索，另有菜单栏 CPU 历史项和可选的特权 helper
-- 👥 适合谁：适合需要深入排查进程、句柄、签名与系统性能的 macOS 开发者、运维和安全分析人员。
+- ✨ 实时预览本地视频、图片、采集卡与游戏串流来源，多路内容走同一套 GPU 增强管线
+- ✨ AI 超分辨率与多档增强：支持 DLSS、FSR、RTX 双超分、DLAA、两段式 SR 以及先超分再降采样
+- ✨ 分层降噪：每层可独立调增强幅度与总强度，支持在列表和节点里内联编辑，并带画面保护
+- ✨ 帧生成与 NVIDIA Low Latency，并针对采集时间戳与去重做帧节奏校正
+- ✨ 采集与录制：可录带音频的处理后画面，支持即时回放（F9）、麦克风混音与独立音轨、VB-CABLE 采集音频
+- ✨ 节点式编辑与色彩控制：包括可执行连接、独立 NR 与色彩参数、九项手动画面控制及按风格自动适配，预设与导出共享设置，另含 HDR 广色域还原、90° 旋转与导出尺寸调整
+- 👥 适合谁：想在 PC 上为主机或串流画面做实时画质增强、录屏与调色的 Windows 用户和内容创作者。
 
-`Swift` · Fork 23
+`C++` · Fork 77
 
-### 10. [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — ⭐ 60,018（今日 +208）
+### 10. [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) — ⭐ 55,670（今日 +67）
 
-> 为 AI 编程助手提供营销技能库，覆盖 CRO、文案、SEO、分析与增长。
+> 把 Chrome DevTools 的调试与性能分析能力接入 AI 编程助手，让 agent 能操控真实浏览器。
 
-这是一套面向 AI 代理的营销技能集合，本质是一批 Markdown 技能文件，让 Claude Code、Codex、Cursor、Windsurf 等支持 Agent Skills 规范的编码助手在遇到营销任务时，自动套用正确的框架和最佳实践。它解决的是技术型营销人和创始人用 AI 做营销时缺乏专业方法论的问题：所有技能都以 product-marketing 为基础，先读懂你的产品、受众与定位，再展开 SEO 审计、转化优化、冷邮件撰写、A/B 测试分析、推荐计划等具体工作。安装到项目后，代理会自行识别任务类型并调用相应技能，还可按引导流程连接营销工具账号，拿到真实的只读数据，而不必凭猜测下结论。
+chrome-devtools-mcp 是 Google 官方推出的 MCP 服务器兼 CLI 工具，让你的编码 agent（Claude、Cursor、Copilot、Antigravity 等）直接控制和检查一个正在运行的 Chrome。它解决的是 AI 写前端代码时“看不见浏览器里发生了什么”的问题：agent 可以录制性能 trace、分析网络请求、截图、读取带 source map 的 console 报错，并借助 puppeteer 可靠地执行操作、自动等待结果。接入只需在 MCP 客户端配置里加一行 npx 启动命令，无需 MCP 时也能用 chrome-devtools CLI 在终端里导航页面、截图。
 
-- ✨ product-marketing 基础技能，为所有其他技能提供产品、受众与定位上下文
-- ✨ SEO 与内容方向：seo-audit、ai-seo、site-architecture、programmatic SEO
-- ✨ CRO 方向：转化优化、注册流程、新手引导、弹窗设计
-- ✨ 内容与文案：copywriting、copy-editing、cold-email、邮件撰写
-- ✨ 付费与度量：广告、广告创意、A/B 测试、analytics 分析
-- ✨ 增长与留存：推荐计划、免费工具、流失预防，以及 revops、销售赋能、定价、发布、营销创意与心理、用户研究等 GTM 与策略技能
-- 👥 适合谁：技术型营销人、增长工程师和需要用 AI 代理执行营销任务的创始人。
+- ✨ 录制性能 trace 并提取可执行的性能优化建议
+- ✨ 深入调试：分析网络请求、截图、查看带 source map 堆栈的 console 消息
+- ✨ 基于 puppeteer 的可靠自动化，自动等待操作结果
+- ✨ 同时提供 MCP 服务器与 chrome-devtools 命令行两种使用方式
+- ✨ 内置多个技能包，覆盖可访问性审计、Cookie/会话调试、LCP 优化、内存泄漏排查等场景
+- ✨ 性能数据可结合 CrUX 真实用户数据，可用 --no-performance-crux 关闭
+- 👥 适合谁：使用 Claude、Cursor、Copilot 等 AI 编码工具的前端与 Web 性能开发者。
 
-`JavaScript` · Fork 8,768 · 🔗 [官网](https://marketing-skills.com)
+`TypeScript` · Fork 4,614 · 🔗 [官网](https://developer.chrome.com/docs/devtools/agents)
 
 ## 📋 完整榜单
 
@@ -190,16 +190,16 @@ AI agent 技能（Claude Code、Codex CLI、Gemini CLI、MCP 等）往往在几�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [nvm-sh/nvm](https://github.com/nvm-sh/nvm) | POSIX 兼容的 Node.js 版本管理脚本，一条命令即可安装、切换多个 Node 版… | `Shell` | 96,062 | +63 |
-| 2 | [pookjw/HermesEnabler](https://github.com/pookjw/HermesEnabler) | 让任意 Apple Watch 用上爱马仕 Hermès 表盘的开源工具，仅支持 watc… | `Objective-C` | 1,648 | +218 |
-| 3 | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) | Qwen 官方开源的终端 AI 编码智能体，同一套能力也覆盖 IDE、桌面、浏览器与聊天工… | `TypeScript` | 29,979 | +151 |
-| 4 | [ashhart/TensorFold](https://github.com/ashhart/TensorFold) | 用单个 Zig 二进制在 Apple Silicon 与 NVIDIA GPU 上直接跑 … | `Zig` | 2,017 | +54 |
-| 5 | [nodejs/node](https://github.com/nodejs/node) | 跨平台开源 JavaScript 运行时，让 JS 脱离浏览器在服务端运行 | `JavaScript` | 123,653 | +62 |
-| 6 | [CopilotKit/OpenBot](https://github.com/CopilotKit/OpenBot) | 一个可自托管的 AI 同事工作空间，每个 Bot 拥有独立浏览器、文件与工具，兼容任意 A… | `TypeScript` | 11,842 | +298 |
-| 7 | [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | 纯 C/C++ 实现的 LLM 与 VLM 推理引擎，无需额外依赖即可在多种硬件上本地运行… | `C++` | 134,711 | +176 |
-| 8 | [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) | SkillSpector 是 NVIDIA 推出的 AI agent 技能安全扫描器，安装… | `Python` | 25,743 | +297 |
-| 9 | [microsoft/Procexp-Mac](https://github.com/microsoft/Procexp-Mac) | 微软 Sysinternals 出品的原生 macOS 进程浏览器，把 Windows 版… | `Swift` | 857 | +243 |
-| 10 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 为 AI 编程助手提供营销技能库，覆盖 CRO、文案、SEO、分析与增长。 | `JavaScript` | 60,018 | +208 |
+| 1 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给… | `Go` | 50,839 | +215 |
+| 2 | [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。 | `Python` | 71,864 | +256 |
+| 3 | [we-promise/sure](https://github.com/we-promise/sure) | 社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance | `Ruby` | 14,885 | +925 |
+| 4 | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。 | `TypeScript` | 10,565 | +108 |
+| 5 | [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) | 一款自托管的网站与服务可用性监控工具，界面现代、通知渠道丰富、部署简单。 | `JavaScript` | 93,962 | +71 |
+| 6 | [block/buzz](https://github.com/block/buzz) | 自托管的协作工作区，人类和 AI 智能体共享同一批房间、同一份事件日志。 | `Rust` | 37,360 | +97 |
+| 7 | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记… | `Python` | 4,306 | +69 |
+| 8 | [tailscale/tailcat](https://github.com/tailscale/tailcat) | 基于 Tailscale 数据面的 netcat 替代品，无需账号与控制面即可建立加密隧道 | `Go` | 9,573 | +256 |
+| 9 | [Likely7/Veyra-NRVideo](https://github.com/Likely7/Veyra-NRVideo) | Windows 上把本地视频、采集卡与游戏串流统一进一条实时 GPU 增强管线的播放与录制… | `C++` | 1,722 | +256 |
+| 10 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 把 Chrome DevTools 的调试与性能分析能力接入 AI 编程助手，让 agen… | `TypeScript` | 55,670 | +67 |
 
 <!-- TRENDING:END -->
 

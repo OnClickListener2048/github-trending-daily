@@ -50,6 +50,23 @@
     "streak_days": 1,
     "summary": "粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用"
   },
+  "ChromeDevTools/chrome-devtools-mcp": {
+    "analyzed_at": "2026-11-14",
+    "audience": "使用 Claude、Cursor、Copilot 等 AI 编码工具的前端与 Web 性能开发者。",
+    "features": [
+      "录制性能 trace 并提取可执行的性能优化建议",
+      "深入调试：分析网络请求、截图、查看带 source map 堆栈的 console 消息",
+      "基于 puppeteer 的可靠自动化，自动等待操作结果",
+      "同时提供 MCP 服务器与 chrome-devtools 命令行两种使用方式",
+      "内置多个技能包，覆盖可访问性审计、Cookie/会话调试、LCP 优化、内存泄漏排查等场景",
+      "性能数据可结合 CrUX 真实用户数据，可用 --no-performance-crux 关闭"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "chrome-devtools-mcp 是 Google 官方推出的 MCP 服务器兼 CLI 工具，让你的编码 agent（Claude、Cursor、Copilot、Antigravity 等）直接控制和检查一个正在运行的 Chrome。它解决的是 AI 写前端代码时“看不见浏览器里发生了什么”的问题：agent 可以录制性能 trace、分析网络请求、截图、读取带 source map 的 console 报错，并借助 puppeteer 可靠地执行操作、自动等待结果。接入只需在 MCP 客户端配置里加一行 npx 启动命令，无需 MCP 时也能用 chrome-devtools CLI 在终端里导航页面、截图。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "把 Chrome DevTools 的调试与性能分析能力接入 AI 编程助手，让 agent 能操控真实浏览器。"
+  },
   "ConardLi/garden-skills": {
     "first_seen": "2026-11-06",
     "last_seen": "2026-11-06",
@@ -269,6 +286,23 @@
     "streak_days": 1,
     "summary": "一个可自托管的免费影视聚合搜索与观看平台，部署只需一分钟。"
   },
+  "Likely7/Veyra-NRVideo": {
+    "analyzed_at": "2026-11-14",
+    "audience": "想在 PC 上为主机或串流画面做实时画质增强、录屏与调色的 Windows 用户和内容创作者。",
+    "features": [
+      "实时预览本地视频、图片、采集卡与游戏串流来源，多路内容走同一套 GPU 增强管线",
+      "AI 超分辨率与多档增强：支持 DLSS、FSR、RTX 双超分、DLAA、两段式 SR 以及先超分再降采样",
+      "分层降噪：每层可独立调增强幅度与总强度，支持在列表和节点里内联编辑，并带画面保护",
+      "帧生成与 NVIDIA Low Latency，并针对采集时间戳与去重做帧节奏校正",
+      "采集与录制：可录带音频的处理后画面，支持即时回放（F9）、麦克风混音与独立音轨、VB-CABLE 采集音频",
+      "节点式编辑与色彩控制：包括可执行连接、独立 NR 与色彩参数、九项手动画面控制及按风格自动适配，预设与导出共享设置，另含 HDR 广色域还原、90° 旋转与导出尺寸调整"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Veyra 是运行在 Windows 11 上的实时 GPU 视频增强与采集软件。你可以用它播放本地视频和图片，也可以接入采集卡，或接收 PS5、Xbox、PC 的串流画面，然后在同一条管线里叠加超分辨率、降噪、HDR 和帧生成，同时完成录制、即时回放、音频混音与导出。界面拆成 Home、Cinema、Professional List、Nodes、Colour、Export、Settings 等模块，支持简体中文、繁体中文、英文和日文，并提供可直接运行的便携包，另有 Wiki 用户指南和中文知识库协助配置与排错。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "Windows 上把本地视频、采集卡与游戏串流统一进一条实时 GPU 增强管线的播放与录制工具。"
+  },
   "MichaelCade/90DaysOfDevOps": {
     "first_seen": "2026-11-05",
     "last_seen": "2026-11-05",
@@ -445,7 +479,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "这是一套基于大模型的股票分析系统：你只需给出自选股代码，它就会把行情、K 线与技术指标、新闻公告、基本面数据聚合起来，让 AI 输出包含核心结论、评分、趋势、买卖点位、风险警报、催化因素和操作清单的决策报告，并推送到企业微信、飞书、Telegram、Discord、Slack 或邮箱。使用时无需服务器：Fork 仓库后配好模型 Key、推送渠道和 STOCK_LIST，即可用 GitHub Actions 零成本定时运行；也支持 Docker、本地定时任务与 FastAPI 服务，还有 Web/桌面工作台可手动分析、翻历史报告、做回测。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-14",
     "streak_days": 1,
     "summary": "LLM 驱动的多市场自选股分析系统，每日自动生成决策仪表盘并推送到常用 IM。"
   },
@@ -465,6 +499,23 @@
     "last_seen": "2026-11-10",
     "streak_days": 1,
     "summary": "为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。"
+  },
+  "alibaba/open-code-review": {
+    "analyzed_at": "2026-11-14",
+    "audience": "需要把代码审查自动化接入日常开发或 CI 的团队与个人开发者，尤其是对误报噪音、API 成本和审查耗时敏感的工程团队。",
+    "features": [
+      "混合架构：确定性流水线负责覆盖与定位，LLM Agent 负责深度推理，兼顾审查速度与准确度",
+      "行级精确的结构化评论，Agent 可读完整文件、搜索代码库、跨变更文件获取上下文，避免只看到 diff 片段",
+      "ocr scan 全文件审查模式，用于代码库审计或没有有意义 diff 的目录",
+      "内置多语言规则集，覆盖 NPE、线程安全、XSS、SQL 注入等常见缺陷类型",
+      "模型端点可配置，兼容 OpenAI 与 Anthropic 接口，无需绑定特定厂商",
+      "支持 Claude Code、Codex、Cursor、Kimi Code 等 Agent 环境，覆盖 Windows、macOS、Linux，可通过 npm 安装"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Open Code Review 是阿里巴巴开源的 AI 代码审查命令行工具，源自其内部官方 AI 代码审查助手——两年间服务了数万名开发者、识别出数百万个代码缺陷，经过大规模验证后开源。它读取 Git diff，把变更文件交给可配置的 LLM，由一个具备工具调用能力的 Agent 生成结构化的行级审查评论：Agent 可以读取完整文件内容、搜索代码库、查看其他变更文件来获取上下文，做深度审查而不只停留在 diff 表面。除了 diff 审查，它还提供 ocr scan 命令审查整个文件，适合审计没有有效 diff 的陌生代码库或目录。使用门槛很低，配置好一个模型端点就能开始，兼容 OpenAI 与 Anthropic 接口。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给出精确到行级的审查意见。"
   },
   "angular/angular": {
     "analyzed_at": "2026-11-07",
@@ -568,6 +619,23 @@
     "streak_days": 2,
     "summary": "Rust 编写的超快 Python linter 与格式化工具，一个工具替代 Flake8、Black、isort 等一整套。"
   },
+  "backnotprop/plannotator": {
+    "analyzed_at": "2026-11-14",
+    "audience": "同时驱动多个 AI 编码代理、需要频繁审阅方案与代码的开发者和小团队。",
+    "features": [
+      "文档与制品标注：在计划、规格、Markdown、HTML 等交互制品上划线评论，反馈直接回传给代理",
+      "代码审查：在本地改动或远程 PR 的 diff 上逐行评论、建议代码，支持 Git、GitButler、Jujutsu（jj）、Perforce（p4）、GitHub 和 GitLab",
+      "内置 AI：可就正在审阅的内容随时提问，或启动 AI 评审自动往 diff 上贴评论",
+      "Plannotator Inbox：一个本地窗口收拢多个代理留下的问题、文件、截图和引导式评审，点一下即可回复，不阻塞任何会话",
+      "多代理接入：通过插件、hooks、命令和 MCP 对接 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi，也兼容个人助理类工具",
+      "Herdr Annotate：在终端里标注文本、整份 Markdown 文档和代理回复，反馈作为下一条消息发回代理"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Plannotator 是跑在本地浏览器里的审阅界面，用来和 AI 编码代理协作。代理给出计划、规格、HTML 制品或改完代码后，它会自动打开浏览器，让你直接在上面标注、写评论，再一键把反馈送回代理执行。它通过插件、hooks 和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi 等代理，也能用 MCP 接入任意工具。除了审文档，它还能审本地改动和远程 PR，并用 Inbox 汇总多个代理的消息与待决事项。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。"
+  },
   "bilawalsidhu/gods-eye-view": {
     "analyzed_at": "2026-11-10",
     "audience": "对地理空间数据、开源情报与可视化感兴趣的开发者、记者和极客，以及想拿它做演示或视频素材的创作者。",
@@ -584,6 +652,23 @@
     "last_seen": "2026-11-10",
     "streak_days": 1,
     "summary": "浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。"
+  },
+  "block/buzz": {
+    "analyzed_at": "2026-11-14",
+    "audience": "适合希望把 AI 智能体真正纳入协作流程、又要求数据自主可控和完整审计轨迹的工程团队。",
+    "features": [
+      "智能体作为成员加入频道：有自己的密钥、自己的频道成员关系和自己的审计轨迹，按身份而非权限开关来界定范围，就像给同事授权一样",
+      "把功能分支变成房间：补丁以 NIP-34 事件形式提交，CI 推送结果，智能体做首轮评审，队友对关心的部分回应，合并决策和证据留在同一个频道里",
+      "统一搜索：对话、补丁、工作流运行和审批都在同一个地方检索，因为它们本来就是同一类事件",
+      "智能体不只聊天，还能操作工作区：创建频道、编辑画布、运行工作流、编排其他智能体、加入语音 huddle，能力范围与人类一致",
+      "媒体可以带帧评论：视频播放时可把评论固定在具体画面上，讨论不会被时间轴冲走",
+      "自助发布流程：打标签触发工作流，智能体读取已合并 PR 起草发布说明，等人点赞后发布，每一步都签名且可检索"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Buzz 是一个可自托管的团队工作区，核心特点是：AI 智能体是和人类同等的成员，不是外挂机器人。每条消息、表情回应、工作流步骤、评审批准和 git 事件都是同一条日志里的签名事件，作者是人还是进程没有区别。它想解决的是团队现在用聊天、代码托管、机器人、CI 面板、发布工具和搜索引擎拼凑起来的一堆割裂工具：与其在七个互不相关的标签页之间搬运信息，不如让所有内容都基于同一套基础设施。用起来像团队聊天：建频道、拉人、发消息；但它同时也是仓库、评审、工作流和搜索的入口。桌面端在独立仓库，relay 和移动端（iOS/Android）在 block/buzz。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "自托管的协作工作区，人类和 AI 智能体共享同一批房间、同一份事件日志。"
   },
   "boykopovar/AnyPS5": {
     "analyzed_at": "2026-11-10",
@@ -917,6 +1002,23 @@
     "last_seen": "2026-11-03",
     "streak_days": 2,
     "summary": "基于 PyTorch 的可微分计算机视觉库，把 1200+ 图像处理与几何视觉算子做成可批量、可求导的 GPU 模块。"
+  },
+  "louislam/uptime-kuma": {
+    "analyzed_at": "2026-11-14",
+    "audience": "适合有自托管需求、希望掌控监控数据的开发者、运维和家庭服务器玩家。",
+    "features": [
+      "多种监控类型：HTTP(s)、TCP、HTTP 关键词、JSON 查询、Websocket、Ping、DNS 记录、Push、Steam 游戏服务器、Docker 容器",
+      "90+ 通知渠道，包括 Telegram、Discord、Slack、Gotify、Pushover、邮件 SMTP 等",
+      "20 秒级检查间隔，并提供 Ping 图表和证书到期信息",
+      "多个状态页，可绑定到指定域名对外展示",
+      "现代响应式 UI，支持多语言、2FA 和代理",
+      "Docker Compose、docker run、Node.js + PM2 多种部署方式"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Uptime Kuma 是一个可以自己部署的监控面板，用来盯着你的网站、服务器和各类服务是否在线。它解决了依赖第三方监控服务的问题：数据和应用都跑在你自己机器上。部署方式很直接，一条 docker run 或 compose 命令就能起来，默认监听 3001 端口，也可以用 Node.js + PM2 裸机安装。监控项最小间隔可到 20 秒，出问题会通过你配置的渠道第一时间推送到手机或群里。UI 是响应式的，操作顺手，还支持多语言、多状态页、2FA 和代理。官方提供 10 分钟有效期的在线 Demo，想先看效果可以直接试。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "一款自托管的网站与服务可用性监控工具，界面现代、通知渠道丰富、部署简单。"
   },
   "lz4/lz4": {
     "analyzed_at": "2026-11-06",
@@ -1463,6 +1565,23 @@
     "streak_days": 1,
     "summary": "Symfony 是面向 Web 与控制台应用的 PHP 框架，也是一套可复用的 PHP 组件库。"
   },
+  "tailscale/tailcat": {
+    "analyzed_at": "2026-11-14",
+    "audience": "需要临时点对点传文件、开端口又不想配 VPN 或装 Tailscale 的开发者与运维",
+    "features": [
+      "像 netcat 一样直接在两端管道 stdin/stdout，服务端只吐出一个临时短地址",
+      "serve 模式把本地 TCP 端口（或 all）通过隧道暴露，客户端按端口连接即可",
+      "支持端口映射，例如 5555:10.2.200.213:5555，可把局域网中某台设备（如 Android adb）的端口单独代理出去，而非整网段暴露",
+      "forward 子命令把服务端端口映射成本机普通 TCP 端口，方便浏览器、数据库客户端等不支持 SOCKS 的工具使用",
+      "exit-node 模式可转发到服务端所在网络内的任意 IP:端口，本地端口写 0 还能让系统自动分配空闲端口",
+      "端到端 WireGuard 加密，DERP 仅作打洞信道与最后兜底中继，可自建 derper 或使用官方限速中继（默认 derpmap 在 tailcat.dev）"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "Tailcat 是 Tailscale 官方用自家开源组件改造出的工具：它只借用 Tailscale 的数据面（magicsock + DERP 中继），完全绕开控制面。实际效果就是「Tailscale without Tailscale」：服务端运行后打印一个短地址，客户端拿着这个地址即可连接，双方流量由 WireGuard 端到端加密，先经 DERP 引导，再尽量升级为点对点直连。不需要 Tailscale 账号、不需要 root，也不改动本机路由和 DNS，纯用户空间运行。连接元数据通过任意渠道带外传递。既可以当 CLI 用，也可以作为 Go 库 github.com/tailscale/tailcat 引入自己的程序。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "基于 Tailscale 数据面的 netcat 替代品，无需账号与控制面即可建立加密隧道"
+  },
   "tailwindlabs/tailwindcss": {
     "first_seen": "2026-11-08",
     "last_seen": "2026-11-08",
@@ -1518,6 +1637,23 @@
     "last_seen": "2026-11-10",
     "streak_days": 1,
     "summary": "Tokio 出品的全栈 Rust Web 框架，内置组件、路由与客户端响应式能力，开箱即用。"
+  },
+  "tradermonty/claude-trading-skills": {
+    "analyzed_at": "2026-11-14",
+    "audience": "时间有限的个人投资者、长期持有 ETF 和股息股的人，以及想做有纪律的波段交易并坚持写交易日志的人。",
+    "features": [
+      "每日市场环境检查：由 market-breadth-analyzer、uptrend-analyzer 和 exposure-coach 组成的 workflow，15 分钟走完，最后给出建议仓位上限和 REDUCE_ONLY 等市场姿态，供人工判断而不是下单",
+      "每周核心组合复盘：portfolio-manager 配合 kanchi-dividend-review-monitor 和 trader-memory-core，检查长期持仓与股息组合，Alpaca 为必需，手动 CSV 是降级方案",
+      "波段机会筛选有前置条件：先用 drawdown-circuit-breaker 判断风险是否允许，通过后才用 vcp-screener 筛选，再经 technical-analyst、position-sizer、pre-trade-discipline-gate 逐层把关",
+      "交易记忆闭环：每笔平仓都通过 trader-memory-core 和 signal-postmortem 归档，形成可回看的交易日志与教训记录",
+      "月度绩效复盘：trader-memory-core、signal-postmortem 和 backtest-expert 一起统计实现盈亏，并据此调整交易规则",
+      "Trading Skills Navigator 导航：说明自己的目标后，它会推荐应从哪条 workflow 起步，并标明哪些步骤需要付费数据 API"
+    ],
+    "first_seen": "2026-11-14",
+    "intro": "这是一个面向时间有限的个人投资者的 Claude Skills 交易工作流工具包。它不替你做买卖决定，也不提供任何交易信号，只把市场复盘、风险管理、交易计划、交易日志和复盘改进这些环节拆成可以照着执行的流程。它面向以长期投资、ETF 和股息股为核心，并在市场条件合适时用小仓位做波段交易的投资者。上手方式是从 workflows/ 目录下的 YAML 清单选一条路径，例如 15 分钟每日大盘体检、每周核心组合复盘、风险允许时才找波段候选、每笔平仓后记录复盘、月度绩效复盘；新手可以先走 Your First Week 教程，用不花钱的数据 API 路径跑通第一次市场检查。",
+    "last_seen": "2026-11-14",
+    "streak_days": 1,
+    "summary": "基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记录整理成可执行的工作流。"
   },
   "vercel-labs/agent-browser": {
     "analyzed_at": "2026-11-10",
@@ -1583,7 +1719,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "Sure 是一个可以完全自托管的个人财务与财富管理应用。它最初由 Maybe Finance 团队投入近百万美元开发，2023 年停摆后开源，如今由社区 fork 继续维护。你能用它集中查看现金流、净资产、支出与资金流出，内置 AI 助手可以直接回答类似于「我的储蓄情况怎么样」的问题。部署方式很简单：用 Docker 自托管，或通过 Render 一键部署（有带 AI 和不带 AI 两个版本）。应用可以通过浏览器、macOS 桌面端、移动端、API 客户端和 LLM agent 访问。本地开发只需 Ruby、PostgreSQL 和 Redis，跑 bin/setup 后执行 rake demo_data:default 就能加载演示数据试玩。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-14",
     "streak_days": 1,
     "summary": "社区接手维护的开源自托管个人财务应用，接替已停止运营的 Maybe Finance"
   },
