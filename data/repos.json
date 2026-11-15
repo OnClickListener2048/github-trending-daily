@@ -46,7 +46,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "云析（YunX）是一个 Kotlin 写的 Android 开源应用，专门解决「别人发来网盘或短视频链接，却要开一堆 App、手动找提取码、下载还龟速」的麻烦。把链接粘进「解析」页，它自动识别平台并补上提取码；浏览分享目录点文件即可拿到直链下载，抖音、小红书、B 站等视频与图文也能直出直链。下载使用 Range 分片并发 + 断点续传，图片视频音频可在线预览，批量下载会自动收纳成可折叠分组。",
-    "last_seen": "2026-11-11",
+    "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用"
   },
@@ -248,7 +248,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "Caveman 是一个装在开发者本机的代理与技能包，核心主张是「能少说就少说」：让编码 agent 的回答变短、让喂给模型的日志和网页变小，但代码本身一字不改。一条命令 npx @caveman-ai/cli@latest 即可完成安装，它会自动找到你机器上的 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 agent 并完成配置，装完直接照常用 claude 即可，用的还是你自己的 key 和 Claude Pro/Max 登录。官方实测整段会话输入 token 减少 33.2%，回复从 63 token 压到 20 token 而修复方案不变；Adobe Research、JetBrains、Elastic 都做过独立验证。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token"
   },
@@ -265,8 +265,8 @@
     ],
     "first_seen": "2026-11-02",
     "intro": "colibri 是一个用纯 C 写的推理引擎，专门用来在你自己已有的硬件上运行超大规模的开源 MoE 模型。它利用 MoE 模型每次推理只激活少量专家的特点，把热专家放在 GPU、温专家放在内存、冷专家放在 NVMe 上按需流式读取；这样一来，744B 的 GLM-5.2 在 int4 量化下只需约 9.9 GB 常驻内存即可启动。它提供一键安装脚本，自动检测内存、磁盘和显卡，推荐能装下的模型，编译或下载引擎，支持断点续传下载模型，随后启动 Web 面板，并暴露 OpenAI 与 Anthropic 兼容接口。",
-    "last_seen": "2026-11-04",
-    "streak_days": 3,
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
     "summary": "纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型"
   },
   "LibreSpark/LibreTV": {
@@ -307,6 +307,23 @@
     "first_seen": "2026-11-05",
     "last_seen": "2026-11-05",
     "streak_days": 1
+  },
+  "ModernRelay/omnigraph": {
+    "analyzed_at": "2026-11-15",
+    "audience": "需要给多个长周期智能体提供共享、可版本化状态与检索层的后端和 AI 基础设施开发者",
+    "features": [
+      "类型化本体：.pg schema 声明节点与边类型、键和约束，每次写入引擎强制校验，智能体共享一份可执行的领域模型",
+      "多模态统一检索：图遍历 + 向量 ANN + 全文检索 + Reciprocal Rank Fusion 在同一个运行时里一次查询完成，支持过滤",
+      "Git 式分支：每个智能体或任务开一个分支提交可评审的改动，支持三方合并与整图时间旅行，不必直接写 main",
+      "声明式集群管理：cluster.yaml 声明图、schema、存储查询、embedding 提供方与策略，cluster plan 预览、cluster apply 收敛",
+      "安全即代码：Cedar 策略在服务端对每次变更强制执行，可作用于单个图或全服；bearer 认证、服务端解析 actor、审计追踪",
+      "对象存储原生 + 开放格式：存储与计算解耦，可跑在本地磁盘或 S3 兼容存储（RustFS/MinIO、AWS S3/R2、Azure 预览），数据用版本化的 Lance 格式含 Blob 值"
+    ],
+    "first_seen": "2026-11-15",
+    "intro": "Omnigraph 是一个用 Rust 写的图数据库，专门为「多个智能体共享同一份类型化世界模型」这个新负载设计：智能体不再是状态容器，而是把持久状态放进来读写。它用 .pg schema 声明节点/边类型、键和约束，写入时强制校验；一次查询里就能混合图遍历、向量 ANN、全文检索和 RRF 融合并带过滤。数据存在本地磁盘或 S3 兼容存储上，用开放的 Lance 格式，分支、三方合并、时间旅行都像 Git 一样工作；cluster.yaml 声明式管理，cluster plan/apply 收敛。装完即可用 omnigraph CLI 或 omnigraph-server，也可以在 Studio 桌面应用里浏览表和关系画布。",
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
+    "summary": "面向长周期智能体的对象存储原生图数据库，带分支与类型化本体"
   },
   "NVIDIA/SkillSpector": {
     "analyzed_at": "2026-11-13",
@@ -392,6 +409,23 @@
     "last_seen": "2026-11-13",
     "streak_days": 1,
     "summary": "Qwen 官方开源的终端 AI 编码智能体，同一套能力也覆盖 IDE、桌面、浏览器与聊天工具。"
+  },
+  "Tencent/LoopForge": {
+    "analyzed_at": "2026-11-15",
+    "audience": "希望把 AI 编码纳入规范交付流程的研发团队、平台工程与需要审批留痕的技术负责人。",
+    "features": [
+      "聊窗式主控（Main Bot）：用自然语言提需求，按需创建带仓库的 Docker 会话沙箱，按 @ 调用角色、技能、需求或 SOP，可中途排队消息、暂停、接管",
+      "SOP 流程引擎：按序执行 Agent、Script、Human-gate 与子 SOP 节点，每个节点在独立沙箱运行，内置后端、前端、Bug 修复、产品等模板",
+      "角色分离：规划、实现、评审、测试各自拥有独立的提示词、执行器、模型、规则、Skills 与 MCP 工具，既能当 SOP 节点也能当聊天子智能体",
+      "人工审批关卡：在关键节点停下等待审批，可阅读报告后批准放行，或把工作退回指定步骤，失败步骤支持重试、从任意节点重跑",
+      "可观测与可恢复：节点状态、工具调用轨迹、日志与产物集中展示，随时暂停、继续或从某个节点重跑",
+      "多执行器与自有基础设施：支持 CodeBuddy、Codex、Claude Code、OpenCode、Cursor CLI、Antigravity、Kimi Code 等十种编码 CLI，集成 GitHub、Skills、MCP，Docker 沙箱或本机运行时，MIT 自托管"
+    ],
+    "first_seen": "2026-11-15",
+    "intro": "LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。",
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
+    "summary": "自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。"
   },
   "The-PR-Agent/pr-agent": {
     "analyzed_at": "2026-11-05",
@@ -496,9 +530,26 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "这是一套面向 AI 编程代理的「技能包」：把资深工程师在造软件时用的工作流、质量门禁和最佳实践写成结构化技能，让代理在开发的每个阶段都按同一套规矩办事。它解决的是 AI 写代码时流程随意、跳过测试、缺少评审的问题——用 9 个斜杠命令把开发切成定义、规划、构建、验证、评审、上线六段，每个命令自动挂载对应技能。通过 npx skills add 可一键装进 Claude Code、Cursor、Codex、Copilot、Cline 等 70 多个代理，也支持插件市场和本地目录方式集成。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。"
+  },
+  "ag-ui-protocol/ag-ui": {
+    "analyzed_at": "2026-11-15",
+    "audience": "适合正在把 AI Agent 接入 Web 前端的开发者，以及想为自己的 Agent 框架补上用户交互层的团队。",
+    "features": [
+      "支持流式输出的实时 Agent 聊天",
+      "前后端双向状态同步，Agent 与 UI 共享同一份状态",
+      "生成式 UI 与结构化消息，让 Agent 直接驱动界面渲染",
+      "实时上下文增强，把用户当前环境信息持续喂给 Agent",
+      "前端工具集成，Agent 可调用浏览器侧定义的工具",
+      "Human-in-the-loop 协作，支持人工介入、审批与修正"
+    ],
+    "first_seen": "2026-11-15",
+    "intro": "AG-UI 解决的是“Agent 很强，但接不进用户界面”这一环：它规定 Agent 后端在运行过程中输出约 16 种标准事件，同时接受少量简单的 AG-UI 输入参数，前端依据这些事件实时渲染聊天、状态与界面组件。协议自带中间件层，支持 SSE、WebSocket、webhook 等任意传输方式，并允许宽松的事件格式匹配，因此不同框架写的 Agent 可以接入同一个前端。它还提供参考 HTTP 实现和默认连接器，用 npx create-ag-ui-app 就能在几秒内起一个可运行的应用。在协议栈中它与 MCP（给 Agent 工具）、A2A（Agent 之间通信）互补，负责把 Agent 带进面向用户的应用。",
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
+    "summary": "一个开放、轻量、基于事件的协议，标准化 AI Agent 与前端应用的连接方式。"
   },
   "alibaba/open-code-review": {
     "analyzed_at": "2026-11-14",
@@ -754,6 +805,23 @@
     "last_seen": "2026-11-10",
     "streak_days": 1,
     "summary": "完全本地运行的 ElevenLabs 开源替代品，可克隆音色、设计声音、配音和转写，覆盖 646 种语言"
+  },
+  "dream-num/univer": {
+    "analyzed_at": "2026-11-15",
+    "audience": "想把表格、文档编辑嵌入自有产品的开发者，以及为 AI Agent 接入 Office 内容的团队",
+    "features": [
+      "开箱即用的开源表格编辑器，能快速起步并逐步接入自有应用",
+      "Web SDK 提供内容模型、编辑、渲染、公式计算与 Facade API",
+      "插件化架构，为自定义功能划定清晰边界，便于组合扩展",
+      "跨功能的组合编辑与撤销/重做，保证复杂操作的一致性",
+      "通过 Facade API 和事件，让应用与 AI Agent 读写并操作可编辑内容",
+      "覆盖表格、文档、演示、关系表、画布与 PDF 的产品家族，另有 CLI 与 Agent 集成"
+    ],
+    "first_seen": "2026-11-15",
+    "intro": "Univer 是一套 Office SDK，帮你把表格、文档、演示、关系表、画布和 PDF 的编辑、计算、协作与文件处理能力直接搬进自己的产品，数据和权限仍由你掌控。它以 Web SDK 打底（内容模型、编辑、渲染、公式计算与 Facade API），你可以按需组合插件拼出嵌入式编辑器或完整 Office 应用。再通过 Facade API 与事件，把可编辑内容接到自己的应用或 AI Agent 上。",
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
+    "summary": "开源 Office SDK，可嵌入表格、文档与演示的编辑、计算和协作能力"
   },
   "dsx-ai-factory/nvke": {
     "analyzed_at": "2026-11-09",
@@ -1036,6 +1104,23 @@
     "last_seen": "2026-11-07",
     "streak_days": 2,
     "summary": "极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。"
+  },
+  "martin-olivier/airgorah": {
+    "analyzed_at": "2026-11-15",
+    "audience": "网络安全测试人员、渗透测试学习者，以及想审计自有 WiFi 强度的用户",
+    "features": [
+      "捕获附近 WiFi 流量，扫描并枚举周围接入点",
+      "发现并列出连接到各接入点的客户端设备",
+      "对目标 AP 发起去认证攻击，强制客户端重连",
+      "捕获 WPA 握手包与 PMKID 并保存",
+      "对抓到的握手包进行离线暴力破解，还原 AP 密码",
+      "GTK4 图形界面，普通用户运行 + polkit 按需提权，兼容 X11 与 Wayland"
+    ],
+    "first_seen": "2026-11-15",
+    "intro": "Airgorah 是一款开源的 WiFi 安全审计软件，专门用来检查你自己拥有的无线网络是否存在漏洞。它把以往需要用 aircrack-ng 命令行工具拼凑出来的整套流程做成了图形界面：扫描附近 AP、列出接入的客户端、对目标发起去认证攻击、捕获 WPA 握手包与 PMKID，最后离线破解 AP 密码。程序用 Rust 编写、界面基于 GTK4，且刻意做了权限分离——GUI 以普通用户身份运行，需要特权操作时才通过 polkit 拉起 airgorah-agent 并只弹一次认证，因此 X11 和 Wayland 下都能正常使用。前提是 Linux 系统加一张支持监听模式和数据包注入的无线网卡。",
+    "last_seen": "2026-11-15",
+    "streak_days": 1,
+    "summary": "Linux 上的 WiFi 安全审计图形工具，能抓包、去认证、捕获握手包并破解密码"
   },
   "mattpocock/skills": {
     "analyzed_at": "2026-11-08",
@@ -1617,7 +1702,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "云析（YunX）的官方 Windows 桌面端，AGPL-3.0 开源、完全免费，README 明确说明任何收费版本都是他人二次打包的骗局。它把网盘分享链接、视频作品链接和磁力 / BT / ed2k 链接集中到一个窗口里：登录账号后粘贴链接，即可浏览文件、在线预览并直接多线程下载，全程都在本机完成。提供免安装便携版（整个文件夹拷走即用）和可卸载的安装版两种分发形式；登录凭证加密存放在本机，支持多账号和加密导出备份，换机后不用逐个重新登录。",
-    "last_seen": "2026-11-11",
+    "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "云析 YunX 官方 Windows 桌面版，粘贴分享链接即可解析并高速下载网盘、视频和 P2P 资源。"
   },
