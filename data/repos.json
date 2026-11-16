@@ -192,7 +192,7 @@
     ],
     "first_seen": "2026-11-12",
     "intro": "Modern Web Guidance 是一组「技能」，把 Web 平台专业知识、最佳实践和浏览器兼容数据直接嵌入你的编码智能体，让编码智能体不再默认沿用训练数据里堆积的旧写法，转而使用平台原生、高性能的方案。这个仓库是它的源仓库，包含编写、校准与评估这些指南的代码和文档。使用起来很简单：运行 npx modern-web-guidance@latest install 走一遍交互式向导即可安装；不安装也能直接用 search 搜索指南、用 retrieve 按 ID 取回指南、用 legacy-scan 扫描代码库中的遗留模式。项目由 Chrome、Edge、Firefox 和 MDN 团队与 Web 开发社区共同维护。",
-    "last_seen": "2026-11-12",
+    "last_seen": "2026-11-16",
     "streak_days": 1,
     "summary": "一套为编码智能体注入现代 Web 平台知识与最佳实践的技能库源仓库。"
   },
@@ -324,6 +324,23 @@
     "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "面向长周期智能体的对象存储原生图数据库，带分支与类型化本体"
+  },
+  "NVIDIA/SkillEvaluator": {
+    "analyzed_at": "2026-11-16",
+    "audience": "构建和维护 AI agent 技能的开发者、需要在 CI 中把关技能质量的平台团队，以及做 agent 能力评测的研究者。",
+    "features": [
+      "三层评估体系：Tier 1 验证技能是否安全、格式规范、与 harness 兼容；Tier 2 检测技能内和技能间的语义重复与重叠；Tier 3 通过有无技能的对照实验测量技能对 agent 行为的真实影响",
+      "无需 LLM 即可跑通：纯静态质量检查不需要 API key、扫描器、GPU 或 Docker，几分钟内得到确定性评分和问题清单，默认及格线 70 分",
+      "语义重叠检测：用嵌入模型发现指导内容中的重复与冲突，支持传入 skill-catalog 做跨技能比对，避免技能库冗余",
+      "合成评估数据集生成：自动构造评估用的数据集，让实时评估不必完全依赖人工标注的测试用例",
+      "NVIDIA Build 免费接入：符合条件的开发者可用 NVIDIA 托管端点做原型验证，同一把 key 同时支持 Tier 2 的嵌入和 Tier 3 的 agent 评估",
+      "开箱即用的 CI 集成：skillevaluator ci init 自动提交 setup PR，GitHub Actions 与 GitLab CI 模板齐全，PR 中直接产出质量报告"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "SkillEvaluator 是 NVIDIA Verified Skills 流水线的一部分，专门评估按 Agent Skills 规范组织的技能文件夹（包含指令与配套文件）。它解决的核心问题是：技能写得对不对、是否安全、是否与已有技能重复，以及引入技能后 agent 的实际表现究竟变好还是变坏。它分为三个相互独立、可单独启用的层级：Tier 1 做静态验证，Tier 2 做语义去重，Tier 3 做实时评估。使用方式灵活：可以直接命令行运行，可以一条命令 skillevaluator ci init 接入 GitHub CI，在每次 PR 时检查变更的技能，也可以作为技能安装进 Claude Code、Codex 等 agent，用自然语言提问。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "NVIDIA 出品的 AI Agent 技能评估框架，通过三层质量门禁检查技能质量并量化其对任务结果的影响。"
   },
   "NVIDIA/SkillSpector": {
     "analyzed_at": "2026-11-13",
@@ -636,6 +653,23 @@
     "streak_days": 3,
     "summary": "Anthropic 官方的 Agent Skills 示例库，教 Claude 可复用地完成专项任务。"
   },
+  "antithesishq/bombadil": {
+    "analyzed_at": "2026-11-16",
+    "audience": "适合开发 Web 或终端界面的工程师，以及希望在 CI 或 Antithesis 中引入自动化属性测试、提升可靠性的团队。",
+    "features": [
+      "基于属性测试：描述界面必须始终满足的规则，而不是逐步写死操作脚本",
+      "同时覆盖 Web UI 与终端 UI 两类目标",
+      "自主探索交互路径，自动寻找能打破正确性属性的操作序列",
+      "目标是在开发早期就发现更难复现的 bug",
+      "可在本地开发环境、CI 流水线以及 Antithesis 平台内运行",
+      "提供完整在线手册、安装指南和示例，降低上手成本"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "Bombadil 是 Antithesis 开源的基于属性测试（property-based testing）工具，用 Rust 编写，专门针对 Web 页面和终端界面。你不需要手写一步步的测试脚本，只需描述界面应当始终满足的正确性属性，它就会自主探索 UI 的各种交互路径，验证这些属性是否被破坏，从而更早暴露那些难以复现的深层 bug。它既能跑在本地开发环境，也能接入 CI，还可以在 Antithesis 平台内运行。官方手册、安装说明和示例都放在 GitHub Pages 上，入门路径清晰。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "面向 Web 与终端 UI 的基于属性的测试工具，自主探索并发现更难的 bug"
+  },
   "ashhart/TensorFold": {
     "analyzed_at": "2026-11-13",
     "audience": "想在 Mac 或 NVIDIA 机器上自托管模型、又不想维护 Python 推理栈的开发者与小型团队。",
@@ -734,7 +768,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-16",
     "streak_days": 1,
     "summary": "把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具"
   },
@@ -840,6 +874,23 @@
     "streak_days": 2,
     "summary": "在自有 NVIDIA GPU 裸金属上搭建托管 Kubernetes 服务的管控平面"
   },
+  "elementalsouls/Claude-BugHunter": {
+    "analyzed_at": "2026-11-16",
+    "audience": "从事授权漏洞赏金、外部红队与 Web 应用安全测试的安全研究员",
+    "features": [
+      "83 个技能 + 15 个斜杠命令，按主题自动触发，无需按名称调用",
+      "58 个 hunt-* 漏洞类别技能，整理自 681 份公开 HackerOne 报告，含检测模式、payload、绕过表和链式利用模板",
+      "bb-methodology 与 redteam-mindset 提供五阶段非线性工作流、批判性思维框架和红队操作纪律",
+      "企业外围攻击矩阵：M365/Entra、Okta、vCenter、SSL-VPN、SharePoint、云 IAM 的 2024–2026 CVE 链与凭据后提权",
+      "triage-validation 七问门、VRT 感知定级、OOS 反驳话术、PII 脱敏与红队交付物",
+      "插件市场一键安装或脚本复制安装，附带 hunt 接驳目录脚手架、cbh CLI 与 Burp MCP 集成，可同时装到多个 agent harness"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用"
+  },
   "etcd-io/etcd": {
     "first_seen": "2026-11-07",
     "last_seen": "2026-11-07",
@@ -930,6 +981,23 @@
     "streak_days": 2,
     "summary": "把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出场的 23 个斜杠命令。"
   },
+  "ggml-org/ggml": {
+    "analyzed_at": "2026-11-16",
+    "audience": "需要在多种硬件上部署模型的 C/C++ 开发者，以及做嵌入式、边缘或浏览器端推理的工程师。",
+    "features": [
+      "纯 C/C++ 实现，零第三方依赖，CMake 构建即可上手",
+      "跨平台：x86、ARM、RISC-V、LoongArch、PowerPC、s390x 和 WebAssembly",
+      "针对 x86、ARM、RISC-V 的 SIMD 优化计算内核",
+      "广泛的后端支持：CPU、GPU、NPU 以及浏览器",
+      "支持 2 到 8 位整数量化，以及 MXFP4、NVFP4 微缩放格式",
+      "运行时零内存分配，适合对延迟和内存敏感的推理"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "ggml 是一个用纯 C/C++ 编写的机器学习张量库，目标是让开发者用最少的配置就能在各类硬件上运行模型。它不依赖任何第三方库，从源码用 CMake 几条命令即可编译，最小示例（矩阵乘法）在 examples/simple 里带完整注释。它提供跨平台的 SIMD 优化内核、CPU/GPU/NPU/浏览器多后端支持，以及 2 到 8 位整数量化和 MXFP4、NVFP4 微缩放格式，运行时不做任何内存分配，适合对性能和部署体积敏感的场景。GGUF 文件格式也由它定义，文档在 docs/gguf.md。注意核心库的改动建议提到 llama.cpp 仓库提交 PR，以获得更好的可见性和测试。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "纯 C/C++ 无依赖的张量库，为机器学习提供简单、可移植、高效的推理基础"
+  },
   "ggml-org/llama.cpp": {
     "analyzed_at": "2026-11-13",
     "audience": "希望在本地或自有服务器上低成本部署大模型、又不想被复杂框架和 Python 依赖困扰的开发者与研究者",
@@ -980,6 +1048,23 @@
     "last_seen": "2026-11-10",
     "streak_days": 2,
     "summary": "Google DeepMind 维护的通用物理引擎，能快速、准确地仿真带接触的多关节刚体系统。"
+  },
+  "google-labs-code/stitch-skills": {
+    "analyzed_at": "2026-11-16",
+    "audience": "需要把 UI 设计稿与代码库打通的前端工程师、全栈开发者和设计工程师，尤其是已在 Claude Code、Cursor、Codex 等 Agent 中工作的人。",
+    "features": [
+      "从文本或图片生成新界面，支持编辑已有屏幕、批量生成设计变体",
+      "把 React、Vue 等前端代码转成 Stitch 设计稿（HTML 提取 + 设计系统 + 上传）",
+      "从源码自动抽取 DESIGN.md 设计系统，并一键套用到全部屏幕",
+      "管理 Stitch 设计系统，上传 DESIGN.md、应用主题",
+      "提取自包含的静态 HTML，便于交付或迁移",
+      "多客户端插件化安装：Codex 市场、Claude Code/Cursor 的 npx 安装、OpenCode 手动接入"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统"
   },
   "google/skills": {
     "analyzed_at": "2026-11-08",
@@ -1049,6 +1134,23 @@
     "streak_days": 2,
     "summary": "完全独立开发的动态平铺 Wayland 合成器，颜值与可定制性兼得。"
   },
+  "kajisho5/ffmpeg-skill": {
+    "analyzed_at": "2026-11-16",
+    "audience": "用 Claude Code、Cursor、Codex 等编码助手做视频处理、又不想把素材上传云端的开发者",
+    "features": [
+      "剪切、拼接、静音段删除，以及按时长和画幅适配（fit）素材",
+      "字幕与卡拉 OK 动画字幕，叠加层与动态图形",
+      "HDR 转 SDR、LUT 调色、音频清理与类型化动态处理（dynamics）",
+      "响度标准化（loudness）、多机位（multicam）、带漂移校正的音画同步",
+      "交付检查（delivery checks）与整片项目渲染、批量文件夹处理",
+      "以 MCP server 暴露全部工具，默认只列出核心 12 个以节省客户端上下文，可用 FFMPEG_SKILL_MCP_FULL=1 展开全部 42 个"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "ffmpeg-skill 是一个 Agent Skill，让 Claude Code、Cursor、Codex 等能读 SKILL.md 的编码助手直接剪辑本地视频。它教给助手一套固定流程：先 probe 探测素材，再尽量无损地剪辑，然后检查、最后验证输出。所有操作由 42 个封装 ffmpeg/ffprobe 的工具完成，这套工具同时以 MCP server 形式暴露，并有一份机器可读的契约描述每个工具的输入。装好 ffmpeg 和 python3 就能用，npx ffmpeg-skill 即可启动，全程离线、不需要 API key、不用上传素材。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "给编码助手装上本地 FFmpeg 视频编辑器，42 个工具自带机器可读契约"
+  },
   "karpathy/nanochat": {
     "first_seen": "2026-11-02",
     "last_seen": "2026-11-03",
@@ -1104,6 +1206,23 @@
     "last_seen": "2026-11-07",
     "streak_days": 2,
     "summary": "极速无损压缩算法库，单核压缩超 500 MB/s，解压可达数 GB/s，接近内存带宽上限。"
+  },
+  "maillab/cloud-mail": {
+    "analyzed_at": "2026-11-16",
+    "audience": "想用自有域名低成本自建邮箱的开发者、站长，以及需要多邮箱管理和邮件 API 能力的团队。",
+    "features": [
+      "💰 低成本部署：整套服务运行在 Cloudflare Workers 上，一个域名即可开通多个邮箱账号",
+      "📧 邮件发送：集成 Cloudflare Email 与 Resend 两种发信通道，支持群发",
+      "📦 附件收发：使用 R2 对象存储保存和下载邮件附件",
+      "🛡️ 管理后台：管理用户与邮件，通过 RBAC 权限控制功能与资源配额",
+      "🔔 邮件推送：收到邮件后可转发到 Telegram 机器人或其他服务商邮箱",
+      "🔢 验证码识别与开放 API：用 Workers AI 自动识别邮件验证码，并提供 API 批量建用户、多条件查邮件"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "Cloud Mail 是一个可部署到 Cloudflare Workers 的开源邮箱服务平台。它解决了自建邮箱成本高、运维麻烦的问题：你只需要准备一个域名，就能像各大邮箱平台一样创建多个不同邮箱账号，把服务器成本压到很低。前端是响应式布局的 Web 邮箱界面，自动适配 PC 和手机浏览器；后端跑在 Workers 上，邮件收发、附件存储、用户与权限管理、数据统计都在同一套系统里完成。项目提供在线演示和完整部署文档，按文档接入 Cloudflare 的邮件、数据库和对象存储服务即可上线。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "只需一个域名，就能在 Cloudflare 上搭建属于自己的多用户邮箱平台的一站式开源方案。"
   },
   "martin-olivier/airgorah": {
     "analyzed_at": "2026-11-15",
@@ -1671,6 +1790,23 @@
     "first_seen": "2026-11-08",
     "last_seen": "2026-11-08",
     "streak_days": 1
+  },
+  "tashfeenahmed/freellmapi": {
+    "analyzed_at": "2026-11-16",
+    "audience": "想低成本做实验、跑原型或个人项目的开发者，以及习惯用 OpenAI 兼容客户端和编码 agent 的人。",
+    "features": [
+      "一个 OpenAI 兼容的 /v1 端点，聚合 87 家免费提供商、736 个模型家族 / 1,313 个免费端点",
+      "智能路由：按请求挑选当前最佳可用模型，而非固定绑定某一家",
+      "自动故障转移：某个 provider 触发限流或失败时，自动切换到下一个",
+      "按 key 追踪用量，让你始终卡在各家免费层的配额之内",
+      "所有 provider 密钥加密存储",
+      "除内置免费层外，还能接入任意自定义的 OpenAI 兼容 chat、embedding、image、audio 端点"
+    ],
+    "first_seen": "2026-11-16",
+    "intro": "FreeLLMAPI 解决的是「免费额度很多，但用起来很麻烦」的问题：各家 AI 实验室每月送几百万 token，单独看都像玩具，87 家叠加起来约等于每月 101 亿 token 的可用推理能力，但要接 87 个 SDK、盯 87 份限流规则，在 87 个地方处理失败。它把这些免费层连同你自定义的 OpenAI 兼容 chat / embedding / image / audio 端点，收拢到一个 /v1 接口后面。任何 OpenAI 客户端只要把 base URL 指向它就能用：路由器为每次请求挑当前最合适的模型，某个 provider 被限流就自动切到下一个，并按每个 key 记录用量，确保不越过任何一家免费层的上限。API key 加密存储。支持 macOS / Windows 桌面端、Docker 自托管和移动端，模型目录通过签名 feed 自动更新，无需 git pull。",
+    "last_seen": "2026-11-16",
+    "streak_days": 1,
+    "summary": "聚合 87 家免费 LLM 的额度，统一到一个 OpenAI 兼容 /v1 接口。"
   },
   "thedotmack/claude-mem": {
     "analyzed_at": "2026-11-05",

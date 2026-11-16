@@ -17,172 +17,172 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-15
+# 🔥 GitHub 每日 Trending · 2026-11-16
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [dream-num/univer](https://github.com/dream-num/univer) — ⭐ 25,093（今日 +495）
+### 1. [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ⭐ 9,464（今日 +247）
 
-> 开源 Office SDK，可嵌入表格、文档与演示的编辑、计算和协作能力
+> Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统
 
-Univer 是一套 Office SDK，帮你把表格、文档、演示、关系表、画布和 PDF 的编辑、计算、协作与文件处理能力直接搬进自己的产品，数据和权限仍由你掌控。它以 Web SDK 打底（内容模型、编辑、渲染、公式计算与 Facade API），你可以按需组合插件拼出嵌入式编辑器或完整 Office 应用。再通过 Facade API 与事件，把可编辑内容接到自己的应用或 AI Agent 上。
+这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。
 
-- ✨ 开箱即用的开源表格编辑器，能快速起步并逐步接入自有应用
-- ✨ Web SDK 提供内容模型、编辑、渲染、公式计算与 Facade API
-- ✨ 插件化架构，为自定义功能划定清晰边界，便于组合扩展
-- ✨ 跨功能的组合编辑与撤销/重做，保证复杂操作的一致性
-- ✨ 通过 Facade API 和事件，让应用与 AI Agent 读写并操作可编辑内容
-- ✨ 覆盖表格、文档、演示、关系表、画布与 PDF 的产品家族，另有 CLI 与 Agent 集成
-- 👥 适合谁：想把表格、文档编辑嵌入自有产品的开发者，以及为 AI Agent 接入 Office 内容的团队
+- ✨ 从文本或图片生成新界面，支持编辑已有屏幕、批量生成设计变体
+- ✨ 把 React、Vue 等前端代码转成 Stitch 设计稿（HTML 提取 + 设计系统 + 上传）
+- ✨ 从源码自动抽取 DESIGN.md 设计系统，并一键套用到全部屏幕
+- ✨ 管理 Stitch 设计系统，上传 DESIGN.md、应用主题
+- ✨ 提取自包含的静态 HTML，便于交付或迁移
+- ✨ 多客户端插件化安装：Codex 市场、Claude Code/Cursor 的 npx 安装、OpenCode 手动接入
+- 👥 适合谁：需要把 UI 设计稿与代码库打通的前端工程师、全栈开发者和设计工程师，尤其是已在 Claude Code、Cursor、Codex 等 Agent 中工作的人。
 
-`TypeScript` · Fork 2,296 · 🔗 [官网](https://univer.ai)
+`TypeScript` · Fork 1,171 · 🔗 [官网](https://stitch.withgoogle.com/docs/mcp/setup)
 
-### 2. [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) — ⭐ 17,460（今日 +9）
+### 2. [ggml-org/ggml](https://github.com/ggml-org/ggml) — ⭐ 16,001（今日 +43）
 
-> 一个开放、轻量、基于事件的协议，标准化 AI Agent 与前端应用的连接方式。
+> 纯 C/C++ 无依赖的张量库，为机器学习提供简单、可移植、高效的推理基础
 
-AG-UI 解决的是“Agent 很强，但接不进用户界面”这一环：它规定 Agent 后端在运行过程中输出约 16 种标准事件，同时接受少量简单的 AG-UI 输入参数，前端依据这些事件实时渲染聊天、状态与界面组件。协议自带中间件层，支持 SSE、WebSocket、webhook 等任意传输方式，并允许宽松的事件格式匹配，因此不同框架写的 Agent 可以接入同一个前端。它还提供参考 HTTP 实现和默认连接器，用 npx create-ag-ui-app 就能在几秒内起一个可运行的应用。在协议栈中它与 MCP（给 Agent 工具）、A2A（Agent 之间通信）互补，负责把 Agent 带进面向用户的应用。
+ggml 是一个用纯 C/C++ 编写的机器学习张量库，目标是让开发者用最少的配置就能在各类硬件上运行模型。它不依赖任何第三方库，从源码用 CMake 几条命令即可编译，最小示例（矩阵乘法）在 examples/simple 里带完整注释。它提供跨平台的 SIMD 优化内核、CPU/GPU/NPU/浏览器多后端支持，以及 2 到 8 位整数量化和 MXFP4、NVFP4 微缩放格式，运行时不做任何内存分配，适合对性能和部署体积敏感的场景。GGUF 文件格式也由它定义，文档在 docs/gguf.md。注意核心库的改动建议提到 llama.cpp 仓库提交 PR，以获得更好的可见性和测试。
 
-- ✨ 支持流式输出的实时 Agent 聊天
-- ✨ 前后端双向状态同步，Agent 与 UI 共享同一份状态
-- ✨ 生成式 UI 与结构化消息，让 Agent 直接驱动界面渲染
-- ✨ 实时上下文增强，把用户当前环境信息持续喂给 Agent
-- ✨ 前端工具集成，Agent 可调用浏览器侧定义的工具
-- ✨ Human-in-the-loop 协作，支持人工介入、审批与修正
-- 👥 适合谁：适合正在把 AI Agent 接入 Web 前端的开发者，以及想为自己的 Agent 框架补上用户交互层的团队。
+- ✨ 纯 C/C++ 实现，零第三方依赖，CMake 构建即可上手
+- ✨ 跨平台：x86、ARM、RISC-V、LoongArch、PowerPC、s390x 和 WebAssembly
+- ✨ 针对 x86、ARM、RISC-V 的 SIMD 优化计算内核
+- ✨ 广泛的后端支持：CPU、GPU、NPU 以及浏览器
+- ✨ 支持 2 到 8 位整数量化，以及 MXFP4、NVFP4 微缩放格式
+- ✨ 运行时零内存分配，适合对延迟和内存敏感的推理
+- 👥 适合谁：需要在多种硬件上部署模型的 C/C++ 开发者，以及做嵌入式、边缘或浏览器端推理的工程师。
 
-`TypeScript` · Fork 1,717 · 🔗 [官网](https://ag-ui.com)
+`C++` · Fork 2,050 · 🔗 [官网](https://github.com/ggml-org)
 
-### 3. [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — ⭐ 120,181（今日 +227）
+### 3. [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) — ⭐ 6,746（今日 +98）
 
-> 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token
+> 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用
 
-Caveman 是一个装在开发者本机的代理与技能包，核心主张是「能少说就少说」：让编码 agent 的回答变短、让喂给模型的日志和网页变小，但代码本身一字不改。一条命令 npx @caveman-ai/cli@latest 即可完成安装，它会自动找到你机器上的 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 agent 并完成配置，装完直接照常用 claude 即可，用的还是你自己的 key 和 Claude Pro/Max 登录。官方实测整段会话输入 token 减少 33.2%，回复从 63 token 压到 20 token 而修复方案不变；Adobe Research、JetBrains、Elastic 都做过独立验证。
+Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。
 
-- ✨ Say less：回答压缩成电报体，代码与命令保持精确，63 token 变 20 token，还分 /caveman、/ultracave、/megacave 三档强度
-- ✨ Read less：日志、JSON、CSV、测试输出在进模型之前先瘦身，整段会话输入 token 少 33.2%
-- ✨ Auto：按每个请求自动挑选模型与推理强度，相同得分下比 Opus 高强度模式便宜 54%
-- ✨ Blocks：code mode，agent 写过的脚本会被保留并重复执行，一次测试运行的 token 从 397 降到 76
-- ✨ Waste fixes：定位 token 到底花在哪并修掉，还能在你暂停时保持 prompt 缓存是热的
-- ✨ Browse：网页抓回来先压缩，页面体积缩小约 129.8 倍；另有 caveman status / caveman off 逐项开关
-- 👥 适合谁：重度使用 Claude Code、Codex 等编码 agent，被 token 账单和上下文塞满困扰的开发者
+- ✨ 83 个技能 + 15 个斜杠命令，按主题自动触发，无需按名称调用
+- ✨ 58 个 hunt-* 漏洞类别技能，整理自 681 份公开 HackerOne 报告，含检测模式、payload、绕过表和链式利用模板
+- ✨ bb-methodology 与 redteam-mindset 提供五阶段非线性工作流、批判性思维框架和红队操作纪律
+- ✨ 企业外围攻击矩阵：M365/Entra、Okta、vCenter、SSL-VPN、SharePoint、云 IAM 的 2024–2026 CVE 链与凭据后提权
+- ✨ triage-validation 七问门、VRT 感知定级、OOS 反驳话术、PII 脱敏与红队交付物
+- ✨ 插件市场一键安装或脚本复制安装，附带 hunt 接驳目录脚手架、cbh CLI 与 Burp MCP 集成，可同时装到多个 agent harness
+- 👥 适合谁：从事授权漏洞赏金、外部红队与 Web 应用安全测试的安全研究员
 
-`Go` · Fork 7,006 · 🔗 [官网](https://docs.caveman.so/caveman)
+`Python` · Fork 1,031 · 🔗 [官网](https://elementalsouls.github.io/Claude-BugHunter)
 
-### 4. [Tencent/LoopForge](https://github.com/Tencent/LoopForge) — ⭐ 1,014（今日 +33）
+### 4. [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) — ⭐ 7,481（今日 +1,219）
 
-> 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。
+> 一套为编码智能体注入现代 Web 平台知识与最佳实践的技能库源仓库。
 
-LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。
+Modern Web Guidance 是一组「技能」，把 Web 平台专业知识、最佳实践和浏览器兼容数据直接嵌入你的编码智能体，让编码智能体不再默认沿用训练数据里堆积的旧写法，转而使用平台原生、高性能的方案。这个仓库是它的源仓库，包含编写、校准与评估这些指南的代码和文档。使用起来很简单：运行 npx modern-web-guidance@latest install 走一遍交互式向导即可安装；不安装也能直接用 search 搜索指南、用 retrieve 按 ID 取回指南、用 legacy-scan 扫描代码库中的遗留模式。项目由 Chrome、Edge、Firefox 和 MDN 团队与 Web 开发社区共同维护。
 
-- ✨ 聊窗式主控（Main Bot）：用自然语言提需求，按需创建带仓库的 Docker 会话沙箱，按 @ 调用角色、技能、需求或 SOP，可中途排队消息、暂停、接管
-- ✨ SOP 流程引擎：按序执行 Agent、Script、Human-gate 与子 SOP 节点，每个节点在独立沙箱运行，内置后端、前端、Bug 修复、产品等模板
-- ✨ 角色分离：规划、实现、评审、测试各自拥有独立的提示词、执行器、模型、规则、Skills 与 MCP 工具，既能当 SOP 节点也能当聊天子智能体
-- ✨ 人工审批关卡：在关键节点停下等待审批，可阅读报告后批准放行，或把工作退回指定步骤，失败步骤支持重试、从任意节点重跑
-- ✨ 可观测与可恢复：节点状态、工具调用轨迹、日志与产物集中展示，随时暂停、继续或从某个节点重跑
-- ✨ 多执行器与自有基础设施：支持 CodeBuddy、Codex、Claude Code、OpenCode、Cursor CLI、Antigravity、Kimi Code 等十种编码 CLI，集成 GitHub、Skills、MCP，Docker 沙箱或本机运行时，MIT 自托管
-- 👥 适合谁：希望把 AI 编码纳入规范交付流程的研发团队、平台工程与需要审批留痕的技术负责人。
+- ✨ 一条 npx 命令启动交互式安装向导，把指南接入编码智能体
+- ✨ search 命令用自然语言检索相关指南（如动画化对话框遮罩）
+- ✨ retrieve 命令按 ID 取回完整指南，直接放进智能体的上下文窗口
+- ✨ legacy-scan 扫描现有代码库，找出需要现代化的遗留写法
+- ✨ 覆盖 250+ 现代 Web 特性，分为用户体验、CSS 布局、性能、表单与 UI、无障碍、内置 AI 六大方向
+- ✨ 指南刻意做成 token 高效，并用评估仪表盘跑 evals 剔除模型已掌握的冗余内容
+- 👥 适合谁：使用 AI 编码助手的前端/Web 开发者，以及想贡献或评估指南内容的社区作者。
 
-`Go` · Fork 232 · 🔗 [官网](https://loopforge.cn)
+`TypeScript` · Fork 645 · 🔗 [官网](https://goo.gle/modern-web-guidance)
 
-### 5. [martin-olivier/airgorah](https://github.com/martin-olivier/airgorah) — ⭐ 6,025（今日 +270）
+### 5. [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) — ⭐ 1,963（今日 +122）
 
-> Linux 上的 WiFi 安全审计图形工具，能抓包、去认证、捕获握手包并破解密码
+> NVIDIA 出品的 AI Agent 技能评估框架，通过三层质量门禁检查技能质量并量化其对任务结果的影响。
 
-Airgorah 是一款开源的 WiFi 安全审计软件，专门用来检查你自己拥有的无线网络是否存在漏洞。它把以往需要用 aircrack-ng 命令行工具拼凑出来的整套流程做成了图形界面：扫描附近 AP、列出接入的客户端、对目标发起去认证攻击、捕获 WPA 握手包与 PMKID，最后离线破解 AP 密码。程序用 Rust 编写、界面基于 GTK4，且刻意做了权限分离——GUI 以普通用户身份运行，需要特权操作时才通过 polkit 拉起 airgorah-agent 并只弹一次认证，因此 X11 和 Wayland 下都能正常使用。前提是 Linux 系统加一张支持监听模式和数据包注入的无线网卡。
+SkillEvaluator 是 NVIDIA Verified Skills 流水线的一部分，专门评估按 Agent Skills 规范组织的技能文件夹（包含指令与配套文件）。它解决的核心问题是：技能写得对不对、是否安全、是否与已有技能重复，以及引入技能后 agent 的实际表现究竟变好还是变坏。它分为三个相互独立、可单独启用的层级：Tier 1 做静态验证，Tier 2 做语义去重，Tier 3 做实时评估。使用方式灵活：可以直接命令行运行，可以一条命令 skillevaluator ci init 接入 GitHub CI，在每次 PR 时检查变更的技能，也可以作为技能安装进 Claude Code、Codex 等 agent，用自然语言提问。
 
-- ✨ 捕获附近 WiFi 流量，扫描并枚举周围接入点
-- ✨ 发现并列出连接到各接入点的客户端设备
-- ✨ 对目标 AP 发起去认证攻击，强制客户端重连
-- ✨ 捕获 WPA 握手包与 PMKID 并保存
-- ✨ 对抓到的握手包进行离线暴力破解，还原 AP 密码
-- ✨ GTK4 图形界面，普通用户运行 + polkit 按需提权，兼容 X11 与 Wayland
-- 👥 适合谁：网络安全测试人员、渗透测试学习者，以及想审计自有 WiFi 强度的用户
+- ✨ 三层评估体系：Tier 1 验证技能是否安全、格式规范、与 harness 兼容；Tier 2 检测技能内和技能间的语义重复与重叠；Tier 3 通过有无技能的对照实验测量技能对 agent 行为的真实影响
+- ✨ 无需 LLM 即可跑通：纯静态质量检查不需要 API key、扫描器、GPU 或 Docker，几分钟内得到确定性评分和问题清单，默认及格线 70 分
+- ✨ 语义重叠检测：用嵌入模型发现指导内容中的重复与冲突，支持传入 skill-catalog 做跨技能比对，避免技能库冗余
+- ✨ 合成评估数据集生成：自动构造评估用的数据集，让实时评估不必完全依赖人工标注的测试用例
+- ✨ NVIDIA Build 免费接入：符合条件的开发者可用 NVIDIA 托管端点做原型验证，同一把 key 同时支持 Tier 2 的嵌入和 Tier 3 的 agent 评估
+- ✨ 开箱即用的 CI 集成：skillevaluator ci init 自动提交 setup PR，GitHub Actions 与 GitLab CI 模板齐全，PR 中直接产出质量报告
+- 👥 适合谁：构建和维护 AI agent 技能的开发者、需要在 CI 中把关技能质量的平台团队，以及做 agent 能力评测的研究者。
 
-`Rust` · Fork 1,043 · 🔗 [官网](https://crates.io/crates/airgorah)
+`Python` · Fork 271 · 🔗 [官网](https://docs.nvidia.com/skills/skillevaluator/)
 
-### 6. [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — ⭐ 117,661（今日 +411）
+### 6. [tashfeenahmed/freellmapi](https://github.com/tashfeenahmed/freellmapi) — ⭐ 53,018（今日 +579）
 
-> 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。
+> 聚合 87 家免费 LLM 的额度，统一到一个 OpenAI 兼容 /v1 接口。
 
-这是一套面向 AI 编程代理的「技能包」：把资深工程师在造软件时用的工作流、质量门禁和最佳实践写成结构化技能，让代理在开发的每个阶段都按同一套规矩办事。它解决的是 AI 写代码时流程随意、跳过测试、缺少评审的问题——用 9 个斜杠命令把开发切成定义、规划、构建、验证、评审、上线六段，每个命令自动挂载对应技能。通过 npx skills add 可一键装进 Claude Code、Cursor、Codex、Copilot、Cline 等 70 多个代理，也支持插件市场和本地目录方式集成。
+FreeLLMAPI 解决的是「免费额度很多，但用起来很麻烦」的问题：各家 AI 实验室每月送几百万 token，单独看都像玩具，87 家叠加起来约等于每月 101 亿 token 的可用推理能力，但要接 87 个 SDK、盯 87 份限流规则，在 87 个地方处理失败。它把这些免费层连同你自定义的 OpenAI 兼容 chat / embedding / image / audio 端点，收拢到一个 /v1 接口后面。任何 OpenAI 客户端只要把 base URL 指向它就能用：路由器为每次请求挑当前最合适的模型，某个 provider 被限流就自动切到下一个，并按每个 key 记录用量，确保不越过任何一家免费层的上限。API key 加密存储。支持 macOS / Windows 桌面端、Docker 自托管和移动端，模型目录通过签名 feed 自动更新，无需 git pull。
 
-- ✨ 9 个生命周期斜杠命令：/spec、/plan、/build、/test、/constraints、/review、/webperf、/code-simplify、/ship，每个自动激活对应技能
-- ✨ 共 25 个技能，也可按需单独安装，例如 code-review-and-quality 做五维评审、interview-me 一次一问地追问需求、test-driven-development 强制红绿重构
-- ✨ /build auto 模式：批准一次计划后自动实现所有任务，仍然每任务测试驱动、逐个提交，遇失败或高风险步骤会暂停
-- ✨ 技能按上下文自动触发：设计 API 时启用 api-and-interface-design，写 UI 时启用 frontend-ui-engineering
-- ✨ 一条命令跨代理安装（npx skills add，支持 70+ 代理），并提供 Claude Code 插件市场、Cursor 的 .cursor/skills 与 rules 分离方案、Antigravity CLI 原生插件等集成方式
-- ✨ 把项目级的硬性约束集中到 /constraints：一次决定、处处强制执行，避免规则散落
-- 👥 适合谁：使用 Claude Code、Cursor、Codex 等 AI 编程代理，希望让代理稳定产出生产级代码的开发者与团队。
+- ✨ 一个 OpenAI 兼容的 /v1 端点，聚合 87 家免费提供商、736 个模型家族 / 1,313 个免费端点
+- ✨ 智能路由：按请求挑选当前最佳可用模型，而非固定绑定某一家
+- ✨ 自动故障转移：某个 provider 触发限流或失败时，自动切换到下一个
+- ✨ 按 key 追踪用量，让你始终卡在各家免费层的配额之内
+- ✨ 所有 provider 密钥加密存储
+- ✨ 除内置免费层外，还能接入任意自定义的 OpenAI 兼容 chat、embedding、image、audio 端点
+- 👥 适合谁：想低成本做实验、跑原型或个人项目的开发者，以及习惯用 OpenAI 兼容客户端和编码 agent 的人。
 
-`JavaScript` · Fork 12,311 · 🔗 [官网](https://skills.addy.ie)
+`TypeScript` · Fork 7,427 · 🔗 [官网](https://freellmapi.co)
 
-### 7. [tidain/YunX-Desktop](https://github.com/tidain/YunX-Desktop) — ⭐ 5,985（今日 +324）
+### 7. [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) — ⭐ 6,060（今日 +331）
 
-> 云析 YunX 官方 Windows 桌面版，粘贴分享链接即可解析并高速下载网盘、视频和 P2P 资源。
+> 给编码助手装上本地 FFmpeg 视频编辑器，42 个工具自带机器可读契约
 
-云析（YunX）的官方 Windows 桌面端，AGPL-3.0 开源、完全免费，README 明确说明任何收费版本都是他人二次打包的骗局。它把网盘分享链接、视频作品链接和磁力 / BT / ed2k 链接集中到一个窗口里：登录账号后粘贴链接，即可浏览文件、在线预览并直接多线程下载，全程都在本机完成。提供免安装便携版（整个文件夹拷走即用）和可卸载的安装版两种分发形式；登录凭证加密存放在本机，支持多账号和加密导出备份，换机后不用逐个重新登录。
+ffmpeg-skill 是一个 Agent Skill，让 Claude Code、Cursor、Codex 等能读 SKILL.md 的编码助手直接剪辑本地视频。它教给助手一套固定流程：先 probe 探测素材，再尽量无损地剪辑，然后检查、最后验证输出。所有操作由 42 个封装 ffmpeg/ffprobe 的工具完成，这套工具同时以 MCP server 形式暴露，并有一份机器可读的契约描述每个工具的输入。装好 ffmpeg 和 python3 就能用，npx ffmpeg-skill 即可启动，全程离线、不需要 API key、不用上传素材。
 
-- ✨ 分享链接解析：夸克 / UC / 迅雷 / 百度 / 139 / 123 / 115 / 光鸭 / 蓝奏云 / 蓝奏云优享版链接自动匹配提取码，另支持 GitHub 仓库、账号与文件直链
-- ✨ 视频解析与预览：抖音 / 快手 / 微博 / 小红书 / B站 / AcFun / Pixiv 链接（短链、口令、整段文案均可）解析；在线预览优先用 ffplay 直接读取直链、边下边播，未安装 FFmpeg 时可一键下载引擎到私有目录，图集可放大查看，支持 Live Photo 合成，B站高清分轨两轨并行下载后自动合轨
-- ✨ 高速下载：Range 分片并发 + 断点续传 + 慢连接自动换线 + 全局限速，下载进度实时显示为 Windows 通知中心 toast 进度条；另有原生托盘菜单、原生文件对话框和剪贴板分享链接检测
-- ✨ P2P 下载：磁力 / BT 种子 / ed2k 链接交由 Gopeed 引擎处理，可导入本地 .torrent 文件、在二级页管理 Tracker 服务器并开关 DHT，下载中可查看种子 / 连接 / 节点概览
-- ✨ 多账号与认证备份：内嵌 Chromium 登录、一键导入本机浏览器 Cookie 或手动粘贴 Cookie，凭证加密存本机，设置里的「认证备份」可加密导出 / 导入全部账号，换机免重登
-- ✨ 浏览器插件「云析下载助手」（Chrome / Edge，Manifest V3）：嗅探页面媒体与文件并按类型分类预览，接管浏览器下载并按线程数下载（最高 512），可归还原生下载并对该站点写 5 分钟冷却倒计时；扩展通过本机回环地址 + 随机 token 与云析通信，云析未运行时完全不干预浏览器
-- 👥 适合谁：常从网盘分享、视频平台或磁力链接下载资源的 Windows 用户，以及需要高速批量下载、偏好开源工具的人。
+- ✨ 剪切、拼接、静音段删除，以及按时长和画幅适配（fit）素材
+- ✨ 字幕与卡拉 OK 动画字幕，叠加层与动态图形
+- ✨ HDR 转 SDR、LUT 调色、音频清理与类型化动态处理（dynamics）
+- ✨ 响度标准化（loudness）、多机位（multicam）、带漂移校正的音画同步
+- ✨ 交付检查（delivery checks）与整片项目渲染、批量文件夹处理
+- ✨ 以 MCP server 暴露全部工具，默认只列出核心 12 个以节省客户端上下文，可用 FFMPEG_SKILL_MCP_FULL=1 展开全部 42 个
+- 👥 适合谁：用 Claude Code、Cursor、Codex 等编码助手做视频处理、又不想把素材上传云端的开发者
 
-`Kotlin` · Fork 463
+`Python` · Fork 537 · 🔗 [官网](https://www.npmjs.com/package/ffmpeg-skill)
 
-### 8. [JustVugg/colibri](https://github.com/JustVugg/colibri) — ⭐ 51,183（今日 +313）
+### 8. [maillab/cloud-mail](https://github.com/maillab/cloud-mail) — ⭐ 16,237（今日 +316）
 
-> 纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型
+> 只需一个域名，就能在 Cloudflare 上搭建属于自己的多用户邮箱平台的一站式开源方案。
 
-colibri 是一个用纯 C 写的推理引擎，专门用来在你自己已有的硬件上运行超大规模的开源 MoE 模型。它利用 MoE 模型每次推理只激活少量专家的特点，把热专家放在 GPU、温专家放在内存、冷专家放在 NVMe 上按需流式读取；这样一来，744B 的 GLM-5.2 在 int4 量化下只需约 9.9 GB 常驻内存即可启动。它提供一键安装脚本，自动检测内存、磁盘和显卡，推荐能装下的模型，编译或下载引擎，支持断点续传下载模型，随后启动 Web 面板，并暴露 OpenAI 与 Anthropic 兼容接口。
+Cloud Mail 是一个可部署到 Cloudflare Workers 的开源邮箱服务平台。它解决了自建邮箱成本高、运维麻烦的问题：你只需要准备一个域名，就能像各大邮箱平台一样创建多个不同邮箱账号，把服务器成本压到很低。前端是响应式布局的 Web 邮箱界面，自动适配 PC 和手机浏览器；后端跑在 Workers 上，邮件收发、附件存储、用户与权限管理、数据统计都在同一套系统里完成。项目提供在线演示和完整部署文档，按文档接入 Cloudflare 的邮件、数据库和对象存储服务即可上线。
 
-- ✨ 分层专家调度：热专家驻留 GPU（CUDA/Vulkan）、温专家放 RAM、冷专家从 NVMe 流式读取，按 token 需要加载
-- ✨ 十三个引擎覆盖多类模型：GLM-5.2/5.3、Kimi K3、DeepSeek V4 Flash、Qwen3.6、OLMoE 等十个语言模型，Qwen-Image-2.1 图像模型，以及 Laya、GLiNER2.5-Decide 决策模型
-- ✨ 直接读取社区已发布的 GGUF 文件，无需转换即可运行
-- ✨ 一键安装：START-HERE.bat 或 start-here.sh 自动探测硬件、推荐放得下的模型、按需为 CPU/Vulkan/CUDA 编译，缺依赖时打印安装命令
-- ✨ 模型下载支持进度显示与断点续传，中断后重跑可接着下载
-- ✨ 启动后开箱即用的 Web 控制台，并提供 OpenAI 兼容的 /v1 与 Anthropic 兼容的接口地址供其他应用接入
-- 👥 适合谁：想在消费级电脑或单卡工作站上本地跑大 MoE 模型的开发者与自建服务爱好者
+- ✨ 💰 低成本部署：整套服务运行在 Cloudflare Workers 上，一个域名即可开通多个邮箱账号
+- ✨ 📧 邮件发送：集成 Cloudflare Email 与 Resend 两种发信通道，支持群发
+- ✨ 📦 附件收发：使用 R2 对象存储保存和下载邮件附件
+- ✨ 🛡️ 管理后台：管理用户与邮件，通过 RBAC 权限控制功能与资源配额
+- ✨ 🔔 邮件推送：收到邮件后可转发到 Telegram 机器人或其他服务商邮箱
+- ✨ 🔢 验证码识别与开放 API：用 Workers AI 自动识别邮件验证码，并提供 API 批量建用户、多条件查邮件
+- 👥 适合谁：想用自有域名低成本自建邮箱的开发者、站长，以及需要多邮箱管理和邮件 API 能力的团队。
 
-`C` · Fork 6,147 · 🔗 [官网](https://justvugg.github.io/colibri)
+`JavaScript` · Fork 23,761 · 🔗 [官网](https://docs.skymail.ink)
 
-### 9. [ModernRelay/omnigraph](https://github.com/ModernRelay/omnigraph) — ⭐ 2,469（今日 +217）
+### 9. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) — ⭐ 54,275（今日 +238）
 
-> 面向长周期智能体的对象存储原生图数据库，带分支与类型化本体
+> 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具
 
-Omnigraph 是一个用 Rust 写的图数据库，专门为「多个智能体共享同一份类型化世界模型」这个新负载设计：智能体不再是状态容器，而是把持久状态放进来读写。它用 .pg schema 声明节点/边类型、键和约束，写入时强制校验；一次查询里就能混合图遍历、向量 ANN、全文检索和 RRF 融合并带过滤。数据存在本地磁盘或 S3 兼容存储上，用开放的 Lance 格式，分支、三方合并、时间旅行都像 Git 一样工作；cluster.yaml 声明式管理，cluster plan/apply 收敛。装完即可用 omnigraph CLI 或 omnigraph-server，也可以在 Studio 桌面应用里浏览表和关系画布。
+AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。
 
-- ✨ 类型化本体：.pg schema 声明节点与边类型、键和约束，每次写入引擎强制校验，智能体共享一份可执行的领域模型
-- ✨ 多模态统一检索：图遍历 + 向量 ANN + 全文检索 + Reciprocal Rank Fusion 在同一个运行时里一次查询完成，支持过滤
-- ✨ Git 式分支：每个智能体或任务开一个分支提交可评审的改动，支持三方合并与整图时间旅行，不必直接写 main
-- ✨ 声明式集群管理：cluster.yaml 声明图、schema、存储查询、embedding 提供方与策略，cluster plan 预览、cluster apply 收敛
-- ✨ 安全即代码：Cedar 策略在服务端对每次变更强制执行，可作用于单个图或全服；bearer 认证、服务端解析 actor、审计追踪
-- ✨ 对象存储原生 + 开放格式：存储与计算解耦，可跑在本地磁盘或 S3 兼容存储（RustFS/MinIO、AWS S3/R2、Azure 预览），数据用版本化的 Lance 格式含 Blob 值
-- 👥 适合谁：需要给多个长周期智能体提供共享、可版本化状态与检索层的后端和 AI 基础设施开发者
+- ✨ 自动重链接：把 PS5 可执行文件转换为 Linux、Windows 原生可执行格式
+- ✨ 提供 system prx 系统库实现，支持动态链接，无需模拟器或独立运行时进程
+- ✨ 着色器重编译器输出 SPIR-V，并可用 Spirv-Tools 校验结果
+- ✨ 网页版转换器，所有文件处理都在本地设备完成，不上传服务器
+- ✨ 输入映射支持 SDL 手柄（含摇杆与扳机），键鼠可通过 anyps5-input.ini 配置
+- ✨ 仅含 relinker 的构建可在 macOS（含 Apple silicon）上运行
+- 👥 适合谁：对 PS5 软件互操作性、移植研究与软件保存感兴趣的开发者和研究人员
 
-`Rust` · Fork 311 · 🔗 [官网](https://omnigraph.dev)
+`C++` · Fork 5,199 · 🔗 [官网](https://boykopovar.github.io/AnyPS5/)
 
-### 10. [CYQawa/YunX](https://github.com/CYQawa/YunX) — ⭐ 7,962（今日 +172）
+### 10. [antithesishq/bombadil](https://github.com/antithesishq/bombadil) — ⭐ 2,011（今日 +202）
 
-> 粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用
+> 面向 Web 与终端 UI 的基于属性的测试工具，自主探索并发现更难的 bug
 
-云析（YunX）是一个 Kotlin 写的 Android 开源应用，专门解决「别人发来网盘或短视频链接，却要开一堆 App、手动找提取码、下载还龟速」的麻烦。把链接粘进「解析」页，它自动识别平台并补上提取码；浏览分享目录点文件即可拿到直链下载，抖音、小红书、B 站等视频与图文也能直出直链。下载使用 Range 分片并发 + 断点续传，图片视频音频可在线预览，批量下载会自动收纳成可折叠分组。
+Bombadil 是 Antithesis 开源的基于属性测试（property-based testing）工具，用 Rust 编写，专门针对 Web 页面和终端界面。你不需要手写一步步的测试脚本，只需描述界面应当始终满足的正确性属性，它就会自主探索 UI 的各种交互路径，验证这些属性是否被破坏，从而更早暴露那些难以复现的深层 bug。它既能跑在本地开发环境，也能接入 CI，还可以在 Antithesis 平台内运行。官方手册、安装说明和示例都放在 GitHub Pages 上，入门路径清晰。
 
-- ✨ 网盘分享链接解析：识别夸克 / UC / 迅雷 / 百度 / 139 / 123 / 115 / 光鸭 / 蓝奏云 / 蓝奏云优享版 链接，并自动匹配提取码
-- ✨ 视频与图集解析：抖音 / 小红书 / 快手 / 微博 / AcFun 免登录直出直链，哔哩哔哩登录后画质更高且音视频分轨在应用内合轨（不依赖 ffmpeg），Pixiv 粘贴浏览器 Cookie 可解析全部作品
-- ✨ 高速下载：Range 分片并发 + 断点续传，任务保存请求头与固定分片规划，并发上限 32
-- ✨ 在线预览与播放：图片 / 视频 / 音频直接在线播放，逐请求带上 Referer / Cookie 避免直链 403，网盘里的常见文本文件也能打开
-- ✨ 图集两列网格：点开可翻页、双指放大、单张下载，长按进入多选批量下载；整文件夹或一次批量下载会在下载页收成一个可折叠分组
-- ✨ 多平台登录与认证备份：WebView Cookie、账号密码 / 短信验证码、JWT 等多种方式登录，并用口令派生密钥以 AES-GCM 加密备份 Cookie / JWT；复制分享链接后回应用会提示一键粘贴解析
-- 👥 适合谁：常收到网盘或短视频分享链接、想少装几个 App 就高速保存素材的 Android 用户
+- ✨ 基于属性测试：描述界面必须始终满足的规则，而不是逐步写死操作脚本
+- ✨ 同时覆盖 Web UI 与终端 UI 两类目标
+- ✨ 自主探索交互路径，自动寻找能打破正确性属性的操作序列
+- ✨ 目标是在开发早期就发现更难复现的 bug
+- ✨ 可在本地开发环境、CI 流水线以及 Antithesis 平台内运行
+- ✨ 提供完整在线手册、安装指南和示例，降低上手成本
+- 👥 适合谁：适合开发 Web 或终端界面的工程师，以及希望在 CI 或 Antithesis 中引入自动化属性测试、提升可靠性的团队。
 
-`Kotlin` · Fork 421
+`Rust` · Fork 78 · 🔗 [官网](https://antithesishq.github.io/bombadil/)
 
 ## 📋 完整榜单
 
@@ -190,16 +190,16 @@ Omnigraph 是一个用 Rust 写的图数据库，专门为「多个智能体共�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [dream-num/univer](https://github.com/dream-num/univer) | 开源 Office SDK，可嵌入表格、文档与演示的编辑、计算和协作能力 | `TypeScript` | 25,093 | +495 |
-| 2 | [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | 一个开放、轻量、基于事件的协议，标准化 AI Agent 与前端应用的连接方式。 | `TypeScript` | 17,460 | +9 |
-| 3 | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | 让 AI 编程助手像原始人一样省话的 Go 工具，一套安装砍掉大量 token | `Go` | 120,181 | +227 |
-| 4 | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。 | `Go` | 1,014 | +33 |
-| 5 | [martin-olivier/airgorah](https://github.com/martin-olivier/airgorah) | Linux 上的 WiFi 安全审计图形工具，能抓包、去认证、捕获握手包并破解密码 | `Rust` | 6,025 | +270 |
-| 6 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | 为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。 | `JavaScript` | 117,661 | +411 |
-| 7 | [tidain/YunX-Desktop](https://github.com/tidain/YunX-Desktop) | 云析 YunX 官方 Windows 桌面版，粘贴分享链接即可解析并高速下载网盘、视频和 … | `Kotlin` | 5,985 | +324 |
-| 8 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 纯 C 编写的分层推理引擎，让普通电脑跑起千亿参数 MoE 大模型 | `C` | 51,183 | +313 |
-| 9 | [ModernRelay/omnigraph](https://github.com/ModernRelay/omnigraph) | 面向长周期智能体的对象存储原生图数据库，带分支与类型化本体 | `Rust` | 2,469 | +217 |
-| 10 | [CYQawa/YunX](https://github.com/CYQawa/YunX) | 粘贴分享链接就能高速下载的 Android 网盘与视频解析下载开源应用 | `Kotlin` | 7,962 | +172 |
+| 1 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操… | `TypeScript` | 9,464 | +247 |
+| 2 | [ggml-org/ggml](https://github.com/ggml-org/ggml) | 纯 C/C++ 无依赖的张量库，为机器学习提供简单、可移植、高效的推理基础 | `C++` | 16,001 | +43 |
+| 3 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用 | `Python` | 6,746 | +98 |
+| 4 | [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) | 一套为编码智能体注入现代 Web 平台知识与最佳实践的技能库源仓库。 | `TypeScript` | 7,481 | +1,219 |
+| 5 | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) | NVIDIA 出品的 AI Agent 技能评估框架，通过三层质量门禁检查技能质量并量化其… | `Python` | 1,963 | +122 |
+| 6 | [tashfeenahmed/freellmapi](https://github.com/tashfeenahmed/freellmapi) | 聚合 87 家免费 LLM 的额度，统一到一个 OpenAI 兼容 /v1 接口。 | `TypeScript` | 53,018 | +579 |
+| 7 | [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) | 给编码助手装上本地 FFmpeg 视频编辑器，42 个工具自带机器可读契约 | `Python` | 6,060 | +331 |
+| 8 | [maillab/cloud-mail](https://github.com/maillab/cloud-mail) | 只需一个域名，就能在 Cloudflare 上搭建属于自己的多用户邮箱平台的一站式开源方案… | `JavaScript` | 16,237 | +316 |
+| 9 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具 | `C++` | 54,275 | +238 |
+| 10 | [antithesishq/bombadil](https://github.com/antithesishq/bombadil) | 面向 Web 与终端 UI 的基于属性的测试工具，自主探索并发现更难的 bug | `Rust` | 2,011 | +202 |
 
 <!-- TRENDING:END -->
 
