@@ -119,7 +119,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "这是一个开源的中国历史交互地图集：从《资治通鉴》开篇的三家分晋（公元前403年）一直画到当代，横跨18个历史时期、164张疆域与政区快照。它要解决的是读史、读诗时那个很具体的疑问——“这个地方今天在哪？疆域是怎么一步步从‘秋海棠’变成‘雄鸡’的？”用起来很直接：拖动时间轴换朝代，点里程碑看疆域增益与丧失，悬停任意古城、关隘或州府，就能看到它的古今地名沿革、辖境对应和发生过的关键事件。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-17",
     "streak_days": 1,
     "summary": "把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。"
   },
@@ -551,6 +551,23 @@
     "streak_days": 1,
     "summary": "为 AI 编程代理打包的 25 个生产级工程技能，把资深工程师的工作流和质量关卡固化下来。"
   },
+  "affaan-m/ECC": {
+    "analyzed_at": "2026-11-17",
+    "audience": "使用 Claude Code、Cursor 等 AI 编码代理的个人开发者与团队。",
+    "features": [
+      "Skills 技能层：把常用工作流封装成代理可直接调用的技能，不用每次从零写提示",
+      "Instincts 直觉机制：让代理在合适场景自动触发既定行为，减少人工干预",
+      "Memory 记忆能力：在会话之间保留项目上下文，避免反复交代背景",
+      "Security 安全防护：通过 ecc-agentshield 为代理行为加一层安全检查",
+      "Research-first 开发流程：强调先调研、再动手的代理工作方式",
+      "跨 harness 适配：同一套能力覆盖 Claude Code、Codex、Opencode、Cursor 等，并支持插件、npm 包与 GitHub App 多种安装方式"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "ECC 是一套面向 AI 编码代理的 harness 优化系统。它要解决的是：代理虽然能用，但每次都得重写提示、丢掉上下文、缺少安全边界。ECC 把技能（Skills）、直觉（Instincts）、记忆（Memory）、安全（Security）和“先调研后开发”的流程做成一层可安装的能力，并同时适配 Claude Code、Codex、Opencode、Cursor 等多种 harness。用法很轻：在 Claude Code 里跑引导式安装，或用原生插件命令装同一个 ecc@ecc 插件（两者别叠加）；另外还有 npm 包 ecc-universal、ecc-agentshield 和面向私有仓库的 GitHub App。项目为 MIT 许可，仓库本身永久免费。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。"
+  },
   "ag-ui-protocol/ag-ui": {
     "analyzed_at": "2026-11-15",
     "audience": "适合正在把 AI Agent 接入 Web 前端的开发者，以及想为自己的 Agent 框架补上用户交互层的团队。",
@@ -734,7 +751,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和公共摄像头这些本就公开的信号，放进同一个可探索的照片级 3D 地球，让你在全局态势与某架飞机、某艘船、某条街道之间自由切换。它解决的痛点在于：数据散落各处、彼此关系看不见。全部在本地浏览器运行，代码可检查、可扩展。用 Pinokio 一键安装，或在终端本地启动，不需要 API key 就能上手，需要时再在应用内填可选密钥；每一层数据都是独立模块，可以自行接入新数据源。",
-    "last_seen": "2026-11-10",
+    "last_seen": "2026-11-17",
     "streak_days": 1,
     "summary": "浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。"
   },
@@ -891,6 +908,23 @@
     "streak_days": 1,
     "summary": "装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用"
   },
+  "elie222/rakazo": {
+    "analyzed_at": "2026-11-17",
+    "audience": "想自托管、自己掌控模型与数据的开发者和小团队，需要长期在线 AI 助手来处理重复工作的人",
+    "features": [
+      "每个 bot 独占一台带浏览器、终端、文件和完整桌面的电脑，可实时观看并接管登录",
+      "Routines 例程：按计划、邮件或 webhook 触发运行，并保留每次运行记录",
+      "持久记忆，以及群聊中的多 bot 协作、任务委派与子代理",
+      "沙箱可选本地 Docker、e2b、daytona、novita 等云服务或自有机器，支持私有/共享团队电脑",
+      "Pages：bot 自动构建可全屏查看、按链接分享、可追问的实时看板与文档",
+      "支持任意模型并自带 API key，集成数千款应用与自有 MCP 服务器、OpenAPI 工具，含语音通话与全平台客户端"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "Rakazo 是一个开源、可自托管的 AI 助手平台，对标 Grok Bot、Meta Muse、OpenAI Dots 等产品，核心区别是你自己选模型、自己选沙箱、数据跑在自己的机器上。每个 bot 都有一台专属“电脑”——浏览器、终端、文件和完整桌面，你能实时看它干活，需要登录时接管操作再交还。bot 可定时、由邮件或 webhook 触发执行例程，把多个 bot 拉进群聊 @ 一下就能分工协作、互相检查。它还能生成可分享的实时看板与文档，支持语音通话，接 Gmail、Slack、GitHub、Notion、Linear 等数千个应用以及 MCP。部署上提供 Docker Compose 一键脚本（无需克隆代码），也可跑在 VPS 或 Railway 上，通过桌面端、移动端或浏览器访问同一个服务端。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "开源自托管的 Grok Bot 替代品：自带记忆、例程和电脑的持久 AI 队友"
+  },
   "etcd-io/etcd": {
     "first_seen": "2026-11-07",
     "last_seen": "2026-11-07",
@@ -981,6 +1015,23 @@
     "streak_days": 2,
     "summary": "把 Claude Code 变成一支虚拟工程团队：CEO、设计、工程经理、QA、发布各自出场的 23 个斜杠命令。"
   },
+  "getarcaneapp/arcane": {
+    "analyzed_at": "2026-11-17",
+    "audience": "适合想用图形界面管理 Docker 的开发者、家庭实验室玩家和小团队运维。",
+    "features": [
+      "现代 Web 仪表盘，可视化掌控 Docker 环境，v3 版本已重构界面（见 README 截图）",
+      "main 分支即 v3，旧版 2.x 保留在 release/2.x.x 分支，方便按需停留或平滑升级",
+      "界面支持多语言，通过 Crowdin 开放社区翻译，任何人都能参与本地化",
+      "公开软件物料清单（SBOM），在 getarcane.app/sbom 可查依赖构成，便于安全审计",
+      "以 Go 模块 getarcane.dev/arcane/v3 发布，提供 pkg.go.dev 官方 API 文档",
+      "社区协作流程清晰：功能请求集中到 Discussions 提案与投票，Issue 只用于 bug 报告以保证修复优先级"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "Arcane 是面向开发者和自建服务器用户的 Docker 管理平台。它提供一个现代 Web 仪表盘，用来替代终端里反复敲 docker ps、docker logs 的方式，集中查看和操作 Docker 环境。当前 main 分支已是 v3 版本，2.x 用户可从 release/2.x.x 分支获取上一代版本，升级路径明确。安装、配置和开发指南统一放在官网 getarcane.app，项目还公开了 SBOM，便于做供应链安全审查。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "Arcane 是一个为所有人设计的现代化 Docker 管理工具，用 Go 编写，提供 Web 图形界面。"
+  },
   "ggml-org/ggml": {
     "analyzed_at": "2026-11-16",
     "audience": "需要在多种硬件上部署模型的 C/C++ 开发者，以及做嵌入式、边缘或浏览器端推理的工程师。",
@@ -1066,6 +1117,23 @@
     "streak_days": 1,
     "summary": "Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统"
   },
+  "google-research/paper-orchestra": {
+    "analyzed_at": "2026-11-17",
+    "audience": "需要快速把实验结果整理成论文草稿的 AI 研究者、学生和工业界研究工程师。",
+    "features": [
+      "多智能体流水线：大纲、文献综述、分节写作、内容精修、绘图各司其职，端到端产出论文",
+      "自动文献综合：通过 Semantic Scholar 搜索、筛选并整合相关文献到正文中",
+      "图表生成：可从代码生成实验 plot，并支持插入概念示意图",
+      "LaTeX 自动化：按 CVPR 等目标会议模板输出投稿级稿件，模板可自行扩展",
+      "灵活输入：接受不受约束的 pre-writing 材料，如研究想法与实验日志",
+      "可配置模型与交互 Demo：写作/反思智能体可分别指定 LLM，并提供 Streamlit 前端"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "PaperOrchestra 是 Google Cloud AI Research 开源的多智能体写作框架，专门解决「研究做完了但论文写不动」的问题。你只需提供非结构化的前期材料（idea、实验日志），它就会像一支分工明确的小团队一样，依次完成大纲生成、文献检索与综述、分节撰写、内容打磨和图表绘制，最终输出符合目标会议模板、可直接投稿的 LaTeX 稿件。使用上先建 Conda 环境并配置 Semantic Scholar、OpenAI 或 Gemini 的 API Key，再通过 bash 脚本或 Python CLI 指定原始材料目录、LaTeX 模板目录和输出目录即可运行，还附带 Streamlit 交互 Demo。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。"
+  },
   "google/skills": {
     "analyzed_at": "2026-11-08",
     "audience": "在 Claude Code、Cursor 等 AI 编码工具中工作，需要在 Google Cloud 上实施 AI 应用与基础设施的开发者、架构师。",
@@ -1100,6 +1168,23 @@
     "streak_days": 1,
     "summary": "输入主题或关键词，即可自动生成脚本、素材、字幕与配乐，并合成高清短视频的一站式 AI 工具。"
   },
+  "hieunc229/mailflare": {
+    "analyzed_at": "2026-11-17",
+    "audience": "想用自有域名搭建专业邮箱、又希望数据自主可控的开发者、小团队和自托管爱好者。",
+    "features": [
+      "自定义域名邮箱，支持个人与共享邮箱及访问权限控制",
+      "收信路由规则：存储、转发、拒收或分类归档",
+      "日历支持带时区的重复事件，并向参与者发送邮件邀请",
+      "Booking 公共预约链接，别人可直接挑选你的空闲时间",
+      "Drive 文件存储与分享",
+      "内置 AI 代理，可搜索邮件、起草回复、管理日程，并可通过 MCP 接入其他 AI 工具"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "Mailflare 是开源的 Google Workspace 替代方案，解决小团队和开发者想用自己的域名提供专业邮箱，又不想被大厂订阅绑定、数据托管在别人手里的问题。它把邮件、日历、网盘、预约页面和内置 AI 代理整合成一套应用：你可以为域名创建个人或共享邮箱，设置收信路由规则，通过 Cloudflare Email、Resend 或 Amazon SES 收发邮件，文件存到 R2、B2 或 S3，数据库可选 D1、Postgres、MySQL、Turso 或本地 SQLite。部署很轻：点一下 Deploy to Cloudflare 按钮跑在 Workers 上，或用一个 Docker 容器自托管，然后访问 /setup 创建管理员、接入域名即可。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "一个可自托管的 Google Workspace 替代品，为自定义域名提供邮箱、日历、网盘、预约和 AI 代理。"
+  },
   "homeassistant-ai/ha-mcp": {
     "analyzed_at": "2026-11-10",
     "audience": "用 Home Assistant 搭建智能家居、希望让 AI 代劳配置与自动化的玩家和自建用户",
@@ -1133,6 +1218,23 @@
     "last_seen": "2026-11-03",
     "streak_days": 2,
     "summary": "完全独立开发的动态平铺 Wayland 合成器，颜值与可定制性兼得。"
+  },
+  "ifixai-ai/iFixAi": {
+    "analyzed_at": "2026-11-17",
+    "audience": "构建和部署 AI Agent 的开发者、Agent 平台的工程与安全团队，以及需要为 Agent 行为把关的产品负责人。",
+    "features": [
+      "独立审计 AI Agent 的实际行为，而不只是查看它自己的评分与日志",
+      "专抓 evals 检查全部通过时被掩盖的问题：越权操作、隐瞒信息、超出授权范围的决策",
+      "给出审计结论只需不到 120 秒，适合放进开发和上线前的检查环节",
+      "既可以由人手动发起审计，也可以让 Agent 在运行过程中自行调用",
+      "提供 Claude Code 和 Codex 插件，直接在写代码的工作流里审计 Agent",
+      "通过 pip 安装的 Python 包，附带快速上手示例和“审计返回什么”的结果说明"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "iFixAi 是一个 Python 工具（要求 3.10+，pip 安装即可用），专门用来审计 AI Agent 的行为。它要解决的是传统 evals 无法发现的问题：评分检查项全部通过，Agent 却在关键环节做出没人授权的事，比如隐瞒风险标记、绕过审批打款、私自修改收款账户。iFixAi 从业务意图、目标和组织权限的整体视角出发，检查 Agent 是否越界、是否做了没人要求的事。审计既可以由人手动触发，也可以让 Agent 自己在运行中调用。README 里提供了 quick start、测试自有 Agent 的流程，以及审计会返回哪些结果的说明，并带有 Claude Code 与 Codex 插件。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "给 AI Agent 做独立审计的工具，120 秒内回答一个关键问题：它到底有没有按预期做事。"
   },
   "kajisho5/ffmpeg-skill": {
     "analyzed_at": "2026-11-16",
@@ -1374,6 +1476,23 @@
     "last_seen": "2026-11-12",
     "streak_days": 1,
     "summary": "把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上"
+  },
+  "mvanhorn/last30days-skill": {
+    "analyzed_at": "2026-11-17",
+    "audience": "需要快速摸清某个话题或某个人近 30 天真实动态的开发者、创业者、销售与投资人。",
+    "features": [
+      "一条命令 /last30days <主题> 并行检索 Reddit、X、YouTube、TikTok、Instagram Reels、Hacker News、Polymarket、GitHub、Digg 等多个平台",
+      "按各平台真实互动信号（upvote、likes、播放量、Polymarket 资金赔率）排序打分，而不是按编辑推荐",
+      "对搜索对象做人物尽调：近期推文、播客逐字稿、PR 合并速度、高星仓库与发布说明",
+      "YouTube 长视频逐字稿全文检索，提炼出最值得引用的几句话",
+      "Polymarket 市场赔率自动附在相关事件下方，并标注赔率变动幅度",
+      "零配置开箱可用 Reddit、HN、Polymarket、GitHub、专利申请与招聘页面，向导 30 秒解锁 X、YouTube、TikTok、arXiv、Techmeme"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "last30days 是一个可装进 Claude Code、Cursor、Copilot、Gemini CLI 等 50 多个 Agent Skills 宿主的搜索技能。它解决的核心问题是：Google 只聚合编辑和 SEO 内容，而 Reddit 评论、X 帖子、YouTube 逐字稿、TikTok 互动、Polymarket 赔率分散在各自的围墙花园里，没有哪个 AI 原生能同时搜到。你只需带上自己的 API key 或浏览器会话，用一句 /last30days <主题或人名> 就能并行检索十几个平台，按点赞、投票和真金白银的赔率打分，再由 agent 裁判合成一份有据可查的简报。零配置即可用 Reddit、HN、Polymarket、GitHub，跑一次向导 30 秒解锁其余源。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN 与 Polymarket 上的真实声音。"
   },
   "nodejs/node": {
     "analyzed_at": "2026-11-13",
@@ -1751,6 +1870,23 @@
     "last_seen": "2026-11-04",
     "streak_days": 1,
     "summary": "把 Spotify Portal 的软件目录与运维工作流接入 AI 编码助手"
+  },
+  "sveltejs/svelte": {
+    "analyzed_at": "2026-11-17",
+    "audience": "希望减少运行时开销、愿意尝试编译式框架的前端开发者与 Web 应用团队。",
+    "features": [
+      "编译器式框架：在构建阶段将声明式组件转换为高效 JavaScript，而不是在浏览器里背着沉重的运行时",
+      "精准更新 DOM（surgically updates the DOM），数据变化时只改动真正需要改的部分，无需整棵虚拟 DOM 比对",
+      "声明式组件写法，界面与逻辑按组件组织，可读性和可维护性更好",
+      "MIT 许可的完全开源项目，代码与许可条款透明",
+      "由志愿者社区驱动开发，可通过 Open Collective 资助，捐款用于托管等开发相关支出",
+      "有公开的 roadmap 和 Contributing Guide（含 packages/svelte 包）方便了解进展与参与贡献"
+    ],
+    "first_seen": "2026-11-17",
+    "intro": "Svelte 提供了一种构建 Web 应用的新方式：一个编译器，它接收你写的声明式组件，把这些组件转换成高效的 JavaScript，并在数据变化时精准地更新 DOM。它要解决的是传统前端框架把大量工作留到浏览器运行时、依赖运行时机制查找界面差异所带来的开销问题——Svelte 把这一步提前到构建阶段完成。使用上，你按组件的方式组织界面和逻辑，交给 Svelte 编译后产出可直接运行的前端代码。项目采用 MIT 许可，开发完全由志愿者社区推动。",
+    "last_seen": "2026-11-17",
+    "streak_days": 1,
+    "summary": "把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。"
   },
   "symfony/symfony": {
     "analyzed_at": "2026-11-07",
