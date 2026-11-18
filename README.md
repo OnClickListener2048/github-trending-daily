@@ -17,172 +17,172 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-17
+# 🔥 GitHub 每日 Trending · 2026-11-18
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane) — ⭐ 8,943（今日 +46）
+### 1. [alibaba/open-code-review](https://github.com/alibaba/open-code-review) — ⭐ 53,980（今日 +763）
 
-> Arcane 是一个为所有人设计的现代化 Docker 管理工具，用 Go 编写，提供 Web 图形界面。
+> 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给出精确到行级的审查意见。
 
-Arcane 是面向开发者和自建服务器用户的 Docker 管理平台。它提供一个现代 Web 仪表盘，用来替代终端里反复敲 docker ps、docker logs 的方式，集中查看和操作 Docker 环境。当前 main 分支已是 v3 版本，2.x 用户可从 release/2.x.x 分支获取上一代版本，升级路径明确。安装、配置和开发指南统一放在官网 getarcane.app，项目还公开了 SBOM，便于做供应链安全审查。
+Open Code Review 是阿里巴巴开源的 AI 代码审查命令行工具，源自其内部官方 AI 代码审查助手——两年间服务了数万名开发者、识别出数百万个代码缺陷，经过大规模验证后开源。它读取 Git diff，把变更文件交给可配置的 LLM，由一个具备工具调用能力的 Agent 生成结构化的行级审查评论：Agent 可以读取完整文件内容、搜索代码库、查看其他变更文件来获取上下文，做深度审查而不只停留在 diff 表面。除了 diff 审查，它还提供 ocr scan 命令审查整个文件，适合审计没有有效 diff 的陌生代码库或目录。使用门槛很低，配置好一个模型端点就能开始，兼容 OpenAI 与 Anthropic 接口。
 
-- ✨ 现代 Web 仪表盘，可视化掌控 Docker 环境，v3 版本已重构界面（见 README 截图）
-- ✨ main 分支即 v3，旧版 2.x 保留在 release/2.x.x 分支，方便按需停留或平滑升级
-- ✨ 界面支持多语言，通过 Crowdin 开放社区翻译，任何人都能参与本地化
-- ✨ 公开软件物料清单（SBOM），在 getarcane.app/sbom 可查依赖构成，便于安全审计
-- ✨ 以 Go 模块 getarcane.dev/arcane/v3 发布，提供 pkg.go.dev 官方 API 文档
-- ✨ 社区协作流程清晰：功能请求集中到 Discussions 提案与投票，Issue 只用于 bug 报告以保证修复优先级
-- 👥 适合谁：适合想用图形界面管理 Docker 的开发者、家庭实验室玩家和小团队运维。
+- ✨ 混合架构：确定性流水线负责覆盖与定位，LLM Agent 负责深度推理，兼顾审查速度与准确度
+- ✨ 行级精确的结构化评论，Agent 可读完整文件、搜索代码库、跨变更文件获取上下文，避免只看到 diff 片段
+- ✨ ocr scan 全文件审查模式，用于代码库审计或没有有意义 diff 的目录
+- ✨ 内置多语言规则集，覆盖 NPE、线程安全、XSS、SQL 注入等常见缺陷类型
+- ✨ 模型端点可配置，兼容 OpenAI 与 Anthropic 接口，无需绑定特定厂商
+- ✨ 支持 Claude Code、Codex、Cursor、Kimi Code 等 Agent 环境，覆盖 Windows、macOS、Linux，可通过 npm 安装
+- 👥 适合谁：需要把代码审查自动化接入日常开发或 CI 的团队与个人开发者，尤其是对误报噪音、API 成本和审查耗时敏感的工程团队。
 
-`Go` · Fork 462 · 🔗 [官网](https://getarcane.app)
+`Go` · Fork 4,451 · 🔗 [官网](https://open-codereview.ai)
 
-### 2. [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) — ⭐ 7,365（今日 +288）
+### 2. [cursor/plugins](https://github.com/cursor/plugins) — ⭐ 16,999（今日 +201）
 
-> 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。
+> Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器
 
-这是一个开源的中国历史交互地图集：从《资治通鉴》开篇的三家分晋（公元前403年）一直画到当代，横跨18个历史时期、164张疆域与政区快照。它要解决的是读史、读诗时那个很具体的疑问——“这个地方今天在哪？疆域是怎么一步步从‘秋海棠’变成‘雄鸡’的？”用起来很直接：拖动时间轴换朝代，点里程碑看疆域增益与丧失，悬停任意古城、关隘或州府，就能看到它的古今地名沿革、辖境对应和发生过的关键事件。
+这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。
 
-- ✨ 时间轴拖拽切换18个历史时期，战国七雄、三国群雄、南北朝、五代十国、宋辽西夏大理金蒙等政权同屏高对比呈现，悬停图例即高亮其领土，点击可直飞该政权
-- ✨ 多阶段疆域演化 + 朱红虚线“幽灵边界差异”叠加：在秦取巴蜀、汉武帝开河西、唐安西四镇、元宣政院辖藏、1881年收复伊犁、1898年租借地、1945年台湾光复、1946年“秋海棠”转“雄鸡”等里程碑间切换，前一时段的得失一目了然
-- ✨ 时间轴上内联显示在位君主与年号，含庙号/谥号、姓名和在位区间（如“汉武帝·刘彻”“唐太宗·李世民”“清圣祖·玄烨”），并给出对应的帝王纪年
-- ✨ 一级政区（郡、道、路、省）以去重的羊皮纸描边绘制，悬停可查看辖境及现代省份对应，还能开启 X-Ray 透镜把当代省界直接投到历史地图上
-- ✨ 黄河改道、云梦泽与罗布泊/蒲昌海的盈缩、战国至明的长城、隋唐大运河、丝绸之路、郑和航线，以及渤海湾、苏北、长江口、珠三角的古海岸线，都随年代同步演变
-- ✨ 古今地名沿革与诗词、战场地标：长安两千年间的名称变迁与重大事件，苏轼贬谪黄州写《赤壁赋》的路线，韩愈立马的蓝关，岳飞北伐前线的朱仙镇，都能在地图上点开查看
-- 👥 适合谁：历史与古典诗词爱好者、读史时想对照今地的学生、需要历史地理可视化素材的开发者与教师。
+- ✨ Thermos 深度分支审查：针对安全性和正确性进行审计，采用严苛的代码质量评分标准，并行调度多个子 agent，并可选用 merge-ready PR 流程
+- ✨ Orchestrate 把大型任务拆分给并行的云端 agent，并包含 planner、worker、verifier 和结构化交接
+- ✨ Cursor Team Kit 提供 CI、代码评审、发版、本地自动化和验证等团队内部工作流
+- ✨ Create Plugin 用来搭建和校验新的 agent 插件；Teaching 提供技能映射、练习计划和学习复盘
+- ✨ Continual Learning 把对话记录增量写入 AGENTS.md 长期记忆；Ralph Loop 实现自引用式迭代 AI 循环
+- ✨ 大量第三方集成：GitHub、Playwright、Gmail、Google Drive、Calendar、Docs、Sheets、Slides、Salesforce、HubSpot、Zoom、Gong、Ashby 等，可直接操作真实业务数据
+- 👥 适合谁：使用 Cursor 的开发者、需要把 AI agent 接入团队工作流和 SaaS 工具的工程团队
 
-`JavaScript` · Fork 882 · 🔗 [官网](https://deanchen.me/jiangshan-map/)
+`TypeScript` · Fork 1,844
 
-### 3. [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) — ⭐ 68,400（今日 +135）
+### 3. [obra/superpowers](https://github.com/obra/superpowers) — ⭐ 319,565（今日 +1,917）
 
-> 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN 与 Polymarket 上的真实声音。
+> 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码
 
-last30days 是一个可装进 Claude Code、Cursor、Copilot、Gemini CLI 等 50 多个 Agent Skills 宿主的搜索技能。它解决的核心问题是：Google 只聚合编辑和 SEO 内容，而 Reddit 评论、X 帖子、YouTube 逐字稿、TikTok 互动、Polymarket 赔率分散在各自的围墙花园里，没有哪个 AI 原生能同时搜到。你只需带上自己的 API key 或浏览器会话，用一句 /last30days <主题或人名> 就能并行检索十几个平台，按点赞、投票和真金白银的赔率打分，再由 agent 裁判合成一份有据可查的简报。零配置即可用 Reddit、HN、Polymarket、GitHub，跑一次向导 30 秒解锁其余源。
+Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。
 
-- ✨ 一条命令 /last30days <主题> 并行检索 Reddit、X、YouTube、TikTok、Instagram Reels、Hacker News、Polymarket、GitHub、Digg 等多个平台
-- ✨ 按各平台真实互动信号（upvote、likes、播放量、Polymarket 资金赔率）排序打分，而不是按编辑推荐
-- ✨ 对搜索对象做人物尽调：近期推文、播客逐字稿、PR 合并速度、高星仓库与发布说明
-- ✨ YouTube 长视频逐字稿全文检索，提炼出最值得引用的几句话
-- ✨ Polymarket 市场赔率自动附在相关事件下方，并标注赔率变动幅度
-- ✨ 零配置开箱可用 Reddit、HN、Polymarket、GitHub、专利申请与招聘页面，向导 30 秒解锁 X、YouTube、TikTok、arXiv、Techmeme
-- 👥 适合谁：需要快速摸清某个话题或某个人近 30 天真实动态的开发者、创业者、销售与投资人。
+- ✨ 技能自动触发：代理在对话开始就加载 using-superpowers 技能，无需手动调用
+- ✨ 先澄清需求再编码：通过对话梳理出规格说明，并切成足够短、能真正读完的片段给你确认
+- ✨ 可执行的实施计划：细化到初级工程师能照做，同时强调红绿 TDD、YAGNI 与 DRY
+- ✨ 子代理驱动开发：每个工程任务交给子代理执行，主代理检查评审后继续推进
+- ✨ 长时间自主工作：可连续数小时按既定计划推进而不跑偏
+- ✨ 广泛的 harness 覆盖：Claude Code、Codex App/CLI、Cursor、Gemini CLI、GitHub Copilot CLI、Devin CLI、Factory Droid、Grok Build CLI、Kimi Code、OpenCode、Qwen Code 等均有对应安装方式
+- 👥 适合谁：希望让 AI 编码代理按严谨工程流程交付、而不只是补全代码的个人开发者与团队
 
-`Python` · Fork 6,086
+`Shell` · Fork 28,489
 
-### 4. [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) — ⭐ 1,901（今日 +313）
+### 4. [backnotprop/plannotator](https://github.com/backnotprop/plannotator) — ⭐ 13,201（今日 +691）
 
-> Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。
+> 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。
 
-PaperOrchestra 是 Google Cloud AI Research 开源的多智能体写作框架，专门解决「研究做完了但论文写不动」的问题。你只需提供非结构化的前期材料（idea、实验日志），它就会像一支分工明确的小团队一样，依次完成大纲生成、文献检索与综述、分节撰写、内容打磨和图表绘制，最终输出符合目标会议模板、可直接投稿的 LaTeX 稿件。使用上先建 Conda 环境并配置 Semantic Scholar、OpenAI 或 Gemini 的 API Key，再通过 bash 脚本或 Python CLI 指定原始材料目录、LaTeX 模板目录和输出目录即可运行，还附带 Streamlit 交互 Demo。
+Plannotator 是跑在本地浏览器里的审阅界面，用来和 AI 编码代理协作。代理给出计划、规格、HTML 制品或改完代码后，它会自动打开浏览器，让你直接在上面标注、写评论，再一键把反馈送回代理执行。它通过插件、hooks 和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi 等代理，也能用 MCP 接入任意工具。除了审文档，它还能审本地改动和远程 PR，并用 Inbox 汇总多个代理的消息与待决事项。
 
-- ✨ 多智能体流水线：大纲、文献综述、分节写作、内容精修、绘图各司其职，端到端产出论文
-- ✨ 自动文献综合：通过 Semantic Scholar 搜索、筛选并整合相关文献到正文中
-- ✨ 图表生成：可从代码生成实验 plot，并支持插入概念示意图
-- ✨ LaTeX 自动化：按 CVPR 等目标会议模板输出投稿级稿件，模板可自行扩展
-- ✨ 灵活输入：接受不受约束的 pre-writing 材料，如研究想法与实验日志
-- ✨ 可配置模型与交互 Demo：写作/反思智能体可分别指定 LLM，并提供 Streamlit 前端
-- 👥 适合谁：需要快速把实验结果整理成论文草稿的 AI 研究者、学生和工业界研究工程师。
+- ✨ 文档与制品标注：在计划、规格、Markdown、HTML 等交互制品上划线评论，反馈直接回传给代理
+- ✨ 代码审查：在本地改动或远程 PR 的 diff 上逐行评论、建议代码，支持 Git、GitButler、Jujutsu（jj）、Perforce（p4）、GitHub 和 GitLab
+- ✨ 内置 AI：可就正在审阅的内容随时提问，或启动 AI 评审自动往 diff 上贴评论
+- ✨ Plannotator Inbox：一个本地窗口收拢多个代理留下的问题、文件、截图和引导式评审，点一下即可回复，不阻塞任何会话
+- ✨ 多代理接入：通过插件、hooks、命令和 MCP 对接 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi，也兼容个人助理类工具
+- ✨ Herdr Annotate：在终端里标注文本、整份 Markdown 文档和代理回复，反馈作为下一条消息发回代理
+- 👥 适合谁：同时驱动多个 AI 编码代理、需要频繁审阅方案与代码的开发者和小团队。
 
-`Python` · Fork 299 · 🔗 [官网](https://yiwen-song.github.io/paper_orchestra/)
+`TypeScript` · Fork 1,322 · 🔗 [官网](https://plannotator.ai)
 
-### 5. [sveltejs/svelte](https://github.com/sveltejs/svelte) — ⭐ 89,134（今日 +115）
+### 5. [jingyaogong/minimind](https://github.com/jingyaogong/minimind) — ⭐ 66,284（今日 +192）
 
-> 把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。
+> 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。
 
-Svelte 提供了一种构建 Web 应用的新方式：一个编译器，它接收你写的声明式组件，把这些组件转换成高效的 JavaScript，并在数据变化时精准地更新 DOM。它要解决的是传统前端框架把大量工作留到浏览器运行时、依赖运行时机制查找界面差异所带来的开销问题——Svelte 把这一步提前到构建阶段完成。使用上，你按组件的方式组织界面和逻辑，交给 Svelte 编译后产出可直接运行的前端代码。项目采用 MIT 许可，开发完全由志愿者社区推动。
+MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。
 
-- ✨ 编译器式框架：在构建阶段将声明式组件转换为高效 JavaScript，而不是在浏览器里背着沉重的运行时
-- ✨ 精准更新 DOM（surgically updates the DOM），数据变化时只改动真正需要改的部分，无需整棵虚拟 DOM 比对
-- ✨ 声明式组件写法，界面与逻辑按组件组织，可读性和可维护性更好
-- ✨ MIT 许可的完全开源项目，代码与许可条款透明
-- ✨ 由志愿者社区驱动开发，可通过 Open Collective 资助，捐款用于托管等开发相关支出
-- ✨ 有公开的 roadmap 和 Contributing Guide（含 packages/svelte 包）方便了解进展与参与贡献
-- 👥 适合谁：希望减少运行时开销、愿意尝试编译式框架的前端开发者与 Web 应用团队。
+- ✨ 完整的MiniMind-LLM结构代码（Dense与MoE），主线对齐Qwen3/Qwen3-MoE生态
+- ✨ 覆盖Pretrain、SFT、LoRA、RLHF-DPO、RLAIF（PPO/GRPO/CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏全流程
+- ✨ 提供从收集、蒸馏、清洗到去重的高质量全阶段开源数据集，含工具调用与思考标记的Tokenizer训练代码
+- ✨ 关键训练算法从零原生实现，同时兼容transformers/trl/peft、llama.cpp/vllm/ollama与Llama-Factory
+- ✨ 支持单机单卡及多卡DDP/DeepSpeed训练、断点续训、wandb/swanlab可视化，并可在C-Eval等第三方评测集上测评
+- ✨ 附带兼容OpenAI协议的极简服务端与Streamlit聊天WebUI，支持reasoning_content、tool_calls与open_thinking，可接入FastGPT、Open-WebUI
+- 👥 适合谁：想深入理解大模型原理、亲手从零训练模型的学生、开发者与AI教学者。
 
-`JavaScript` · Fork 6,136 · 🔗 [官网](https://svelte.dev)
+`Python` · Fork 8,690 · 🔗 [官网](https://jingyaogong.github.io/minimind)
 
-### 6. [affaan-m/ECC](https://github.com/affaan-m/ECC) — ⭐ 304,844（今日 +718）
+### 6. [stablyai/orca](https://github.com/stablyai/orca) — ⭐ 128,210（今日 +1,066）
 
-> 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。
+> Orca 是一个 AI 编排器，让你用自己的订阅并行调度 Claude Code、Codex 等编码代理。
 
-ECC 是一套面向 AI 编码代理的 harness 优化系统。它要解决的是：代理虽然能用，但每次都得重写提示、丢掉上下文、缺少安全边界。ECC 把技能（Skills）、直觉（Instincts）、记忆（Memory）、安全（Security）和“先调研后开发”的流程做成一层可安装的能力，并同时适配 Claude Code、Codex、Opencode、Cursor 等多种 harness。用法很轻：在 Claude Code 里跑引导式安装，或用原生插件命令装同一个 ecc@ecc 插件（两者别叠加）；另外还有 npm 包 ecc-universal、ecc-agentshield 和面向私有仓库的 GitHub App。项目为 MIT 许可，仓库本身永久免费。
+Orca 是一个 AI 编排器：把 Claude Code、Codex 等编码代理组织成一支“代理舰队”，每个代理跑在各自独立的 git worktree 里，互不干扰。它要解决的是代理能写代码、但没人管理它们的问题：任务怎么拆、多个代理怎么并行、结果怎么回收、人不在电脑前怎么办。你可以把大任务交给一个协调者代理，由它拆解并启动 worker 代理；同一段对话能在 Chat 界面和原生终端之间来回切换而不丢上下文；worktree 还能跑在 SSH 主机或云端 VM 上，合上笔记本代理照样干活。桌面端支持 macOS/Windows/Linux，另有 iOS 与 Android 移动端。
 
-- ✨ Skills 技能层：把常用工作流封装成代理可直接调用的技能，不用每次从零写提示
-- ✨ Instincts 直觉机制：让代理在合适场景自动触发既定行为，减少人工干预
-- ✨ Memory 记忆能力：在会话之间保留项目上下文，避免反复交代背景
-- ✨ Security 安全防护：通过 ecc-agentshield 为代理行为加一层安全检查
-- ✨ Research-first 开发流程：强调先调研、再动手的代理工作方式
-- ✨ 跨 harness 适配：同一套能力覆盖 Claude Code、Codex、Opencode、Cursor 等，并支持插件、npm 包与 GitHub App 多种安装方式
-- 👥 适合谁：使用 Claude Code、Cursor 等 AI 编码代理的个人开发者与团队。
+- ✨ Chat 与终端双形态：同一个代理会话可在 Chat UI 和原生 CLI 之间自由切换，上下文不丢失
+- ✨ 代理编排：把大任务交给协调者代理，它自动拆分、在各自 workspace 启动 worker 代理并汇总结果
+- ✨ 并行 worktree：任务快速拆进互相隔离的环境，多个代理同时推进互不踩脚
+- ✨ 任意环境运行：配对 Remote Orca Server、在任意 SSH 主机上工作，或给单个 worktree 分配云 VM，笔记本休眠也不中断
+- ✨ 移动端伴随：iOS/Android App 在代理需要你时推送通知，直接在聊天里回复，人不在工位也能推动任务（比如让它开 PR）
+- ✨ 审查与 Git 集成：查看 diff、在具体改动行上留批注回传给代理，还能用 diff 起草 commit 与 PR，并把失败的检查或 PR 评论回抛给代理修
+- 👥 适合谁：同时推进多个 AI 编码任务的独立开发者与小团队，尤其是重度使用 Claude Code、Codex 的人。
 
-`JavaScript` · Fork 44,891 · 🔗 [官网](https://ecc.tools)
+`TypeScript` · Fork 8,122 · 🔗 [官网](https://orca.dev)
 
-### 7. [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) — ⭐ 46,183（今日 +311）
+### 7. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 193,444（今日 +862）
 
-> 给 AI Agent 做独立审计的工具，120 秒内回答一个关键问题：它到底有没有按预期做事。
+> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
 
-iFixAi 是一个 Python 工具（要求 3.10+，pip 安装即可用），专门用来审计 AI Agent 的行为。它要解决的是传统 evals 无法发现的问题：评分检查项全部通过，Agent 却在关键环节做出没人授权的事，比如隐瞒风险标记、绕过审批打款、私自修改收款账户。iFixAi 从业务意图、目标和组织权限的整体视角出发，检查 Agent 是否越界、是否做了没人要求的事。审计既可以由人手动触发，也可以让 Agent 自己在运行中调用。README 里提供了 quick start、测试自有 Agent 的流程，以及审计会返回哪些结果的说明，并带有 Claude Code 与 Codex 插件。
+Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
 
-- ✨ 独立审计 AI Agent 的实际行为，而不只是查看它自己的评分与日志
-- ✨ 专抓 evals 检查全部通过时被掩盖的问题：越权操作、隐瞒信息、超出授权范围的决策
-- ✨ 给出审计结论只需不到 120 秒，适合放进开发和上线前的检查环节
-- ✨ 既可以由人手动发起审计，也可以让 Agent 在运行过程中自行调用
-- ✨ 提供 Claude Code 和 Codex 插件，直接在写代码的工作流里审计 Agent
-- ✨ 通过 pip 安装的 Python 包，附带快速上手示例和“审计返回什么”的结果说明
-- 👥 适合谁：构建和部署 AI Agent 的开发者、Agent 平台的工程与安全团队，以及需要为 Agent 行为把关的产品负责人。
+- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
+- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
+- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
+- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
+- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
+- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
+- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
 
-`Python` · Fork 1,824 · 🔗 [官网](https://www.ifixai.ai)
+`JavaScript` · Fork 10,874 · 🔗 [官网](https://ponytail.dev)
 
-### 8. [elie222/rakazo](https://github.com/elie222/rakazo) — ⭐ 8,907（今日 +266）
+### 8. [bannedbook/fanqiang](https://github.com/bannedbook/fanqiang) — ⭐ 57,770（今日 +819）
 
-> 开源自托管的 Grok Bot 替代品：自带记忆、例程和电脑的持久 AI 队友
+> 一个按设备和场景整理的科学上网工具与教程合集库，覆盖手机、电脑、路由器和游戏机。
 
-Rakazo 是一个开源、可自托管的 AI 助手平台，对标 Grok Bot、Meta Muse、OpenAI Dots 等产品，核心区别是你自己选模型、自己选沙箱、数据跑在自己的机器上。每个 bot 都有一台专属“电脑”——浏览器、终端、文件和完整桌面，你能实时看它干活，需要登录时接管操作再交还。bot 可定时、由邮件或 webhook 触发执行例程，把多个 bot 拉进群聊 @ 一下就能分工协作、互相检查。它还能生成可分享的实时看板与文档，支持语音通话，接 Gmail、Slack、GitHub、Notion、Linear 等数千个应用以及 MCP。部署上提供 Docker Compose 一键脚本（无需克隆代码），也可跑在 VPS 或 Railway 上，通过桌面端、移动端或浏览器访问同一个服务端。
+这个仓库本质上是一个「翻墙资源导航站」：README 按平台把内容组织成 Windows、iOS、Android、macOS、路由器、Linux 和游戏机几大类，每类下面给出具体工具的教程入口，比如 Clash for Windows、V2rayN、Shadowrocket 小火箭、Clash for Android、ClashX 等。除了客户端使用教程，它还提供 Chrome、Edge、Firefox 和 TorBrowser 的一键翻墙包，自建 V2ray/Shadowsocks 服务器的简明教程，免费 ss/v2ray 账号信息，以及注册美区 Apple ID、在局域网内共享代理和用 v2rayN 配置链式代理等实用内容。如果你刚接触这类工具，可以按自己的设备找到对应教程直接跟着操作。
 
-- ✨ 每个 bot 独占一台带浏览器、终端、文件和完整桌面的电脑，可实时观看并接管登录
-- ✨ Routines 例程：按计划、邮件或 webhook 触发运行，并保留每次运行记录
-- ✨ 持久记忆，以及群聊中的多 bot 协作、任务委派与子代理
-- ✨ 沙箱可选本地 Docker、e2b、daytona、novita 等云服务或自有机器，支持私有/共享团队电脑
-- ✨ Pages：bot 自动构建可全屏查看、按链接分享、可追问的实时看板与文档
-- ✨ 支持任意模型并自带 API key，集成数千款应用与自有 MCP 服务器、OpenAPI 工具，含语音通话与全平台客户端
-- 👥 适合谁：想自托管、自己掌控模型与数据的开发者和小团队，需要长期在线 AI 助手来处理重复工作的人
+- ✨ 覆盖 Windows、macOS、Linux、Android、iOS、路由器和游戏机的分平台教程索引
+- ✨ Chrome、Edge、Firefox、TorBrowser 一键翻墙包，无需复杂配置即可使用
+- ✨ 自建 V2ray 与 Shadowsocks 服务器的简明教程
+- ✨ 免费 ss 账号与 v2ray 免费账号资源
+- ✨ Shadowrocket、Clash、V2RayNG、Surge、Quantumult X 等主流客户端配置教程
+- ✨ 局域网共享翻墙与旁路由方案，适用于 PS4/PS5、Switch、Xbox 等游戏机加速
+- 👥 适合谁：需要按设备查找科学上网工具和配置教程的普通用户与折腾爱好者。
 
-`TypeScript` · Fork 1,594 · 🔗 [官网](https://rakazo.com)
+`Kotlin` · Fork 8,837
 
-### 9. [hieunc229/mailflare](https://github.com/hieunc229/mailflare) — ⭐ 6,728（今日 +254）
+### 9. [pbakaus/impeccable](https://github.com/pbakaus/impeccable) — ⭐ 112,443（今日 +748）
 
-> 一个可自托管的 Google Workspace 替代品，为自定义域名提供邮箱、日历、网盘、预约和 AI 代理。
+> 给编码 Agent 装上设计词汇表：用具体命令引导、评审并拦截 AI 味界面。
 
-Mailflare 是开源的 Google Workspace 替代方案，解决小团队和开发者想用自己的域名提供专业邮箱，又不想被大厂订阅绑定、数据托管在别人手里的问题。它把邮件、日历、网盘、预约页面和内置 AI 代理整合成一套应用：你可以为域名创建个人或共享邮箱，设置收信路由规则，通过 Cloudflare Email、Resend 或 Amazon SES 收发邮件，文件存到 R2、B2 或 S3，数据库可选 D1、Postgres、MySQL、Turso 或本地 SQLite。部署很轻：点一下 Deploy to Cloudflare 按钮跑在 Workers 上，或用一个 Docker 容器自托管，然后访问 /setup 创建管理员、接入域名即可。
+Impeccable 是给 AI 编码工具用的界面设计技能包。执行 npx impeccable install 后，在 Claude Code、Cursor、Codex CLI 等 20 多种工具里用 /impeccable 斜杠命令调用。它针对一个很具体的问题：让 Agent 做页面，得到的往往是奶油底色、细衬线标题、紫色到蓝色渐变、卡片套卡片这类跨模型跨项目重复出现的「安全默认值」。它的解法是把「让它跳一点」这种模糊诉求换成 bolder、quieter、polish、critique 这样的明确动词，再用 init 生成的 PRODUCT.md 交代产品定位，让每次改动都有依据。
 
-- ✨ 自定义域名邮箱，支持个人与共享邮箱及访问权限控制
-- ✨ 收信路由规则：存储、转发、拒收或分类归档
-- ✨ 日历支持带时区的重复事件，并向参与者发送邮件邀请
-- ✨ Booking 公共预约链接，别人可直接挑选你的空闲时间
-- ✨ Drive 文件存储与分享
-- ✨ 内置 AI 代理，可搜索邮件、起草回复、管理日程，并可通过 MCP 接入其他 AI 工具
-- 👥 适合谁：想用自有域名搭建专业邮箱、又希望数据自主可控的开发者、小团队和自托管爱好者。
+- ✨ Steer 系列命令（bolder、quieter、distill、colorize、typeset、layout、animate、delight、overdrive）用明确动词指挥 Agent 调视觉方向，每条命令都配一份针对该动作的 playbook 并指向单一目标
+- ✨ critique 按可用性启发式给设计打分并排好修复优先级；audit 检查无障碍、性能、主题和响应式表现，问题按 P0（阻断）到 P3（打磨）分级
+- ✨ 内置 62 条确定性规则的 slop 检测器，不依赖 LLM 也不需要 API key，能识别 Inter 一统天下、紫蓝渐变、卡片套卡片、灰字压在彩色背景上、每个标题都顶个圆角图标块这类 AI 味，也抓内边距过窄、标题层级跳级等质量问题
+- ✨ live 模式在本地开发服务器上打开浮层，在浏览器里点选元素、循环切换变体，选中后直接写回源码；支持 Vite、Next、SvelteKit、Astro、Nuxt 和纯 HTML
+- ✨ init 读代码后只问它推断不出来的信息（产品给谁用、要做什么、约束是什么）生成 PRODUCT.md；document 把现有视觉体系沉淀为 DESIGN.md，保证后续改动不偏离品牌
+- ✨ 24 条命令覆盖收尾（polish、harden、clarify、adapt、optimize、onboard）和规划（shape、extract、generate），常用的可以用 pin 钉成 /audit 这样的独立快捷命令
+- 👥 适合谁：已在用 Claude Code、Cursor 等工具做前端，想让界面摆脱模板感的开发者和设计师。
 
-`TypeScript` · Fork 1,153 · 🔗 [官网](https://mailflare.co)
+`Rust` · Fork 6,701 · 🔗 [官网](https://impeccable.style)
 
-### 10. [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) — ⭐ 65,348（今日 +253）
+### 10. [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) — ⭐ 6,939（今日 +703）
 
-> 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。
+> 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记录整理成可执行的工作流。
 
-God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和公共摄像头这些本就公开的信号，放进同一个可探索的照片级 3D 地球，让你在全局态势与某架飞机、某艘船、某条街道之间自由切换。它解决的痛点在于：数据散落各处、彼此关系看不见。全部在本地浏览器运行，代码可检查、可扩展。用 Pinokio 一键安装，或在终端本地启动，不需要 API key 就能上手，需要时再在应用内填可选密钥；每一层数据都是独立模块，可以自行接入新数据源。
+这是一个面向时间有限的个人投资者的 Claude Skills 交易工作流工具包。它不替你做买卖决定，也不提供任何交易信号，只把市场复盘、风险管理、交易计划、交易日志和复盘改进这些环节拆成可以照着执行的流程。它面向以长期投资、ETF 和股息股为核心，并在市场条件合适时用小仓位做波段交易的投资者。上手方式是从 workflows/ 目录下的 YAML 清单选一条路径，例如 15 分钟每日大盘体检、每周核心组合复盘、风险允许时才找波段候选、每笔平仓后记录复盘、月度绩效复盘；新手可以先走 Your First Week 教程，用不花钱的数据 API 路径跑通第一次市场检查。
 
-- ✨ 座舱视角：进入被追踪航班的机舱，镜头一路贴着下方地形飞行；另有按机型建模的 3D 机库（787、ATR-72、MQ-9 等），靠近时目标会从图标换成实体模型
-- ✨ 点击追踪与 250km 联系人名单：锁定目标后绘制渐隐轨迹并展示完整元数据，追踪火灾或船只可一键交接给最近的实时摄像头
-- ✨ 语音控制与语音白板：由实时 AI agent 驱动的免手操作，把标注、真实边界多边形和路线直接“说”到地球上
-- ✨ 传感器滤镜与 HUD：CRT、NVG、FLIR 热成像、Noir 等 GLSL 效果叠加在真实地球上，配合屏幕空间探测框和军事风格战术 HUD
-- ✨ 天气与卫星过境：GFS/ECMWF 预报风场、雷达回波、云层与闪电共用一条时间轴，可追踪 NHC/CPHC 气旋路径，还能用语音查询某颗卫星何时从头顶升起
-- ✨ 分享链接与场景导演：相机、风格、图层乃至被追踪目标都能序列化进 URL（追踪目标是交接而非收藏），Director 场景可导入导出为文件或数据包，另附尼泊尔博特科西洪水回放等打包场景
-- 👥 适合谁：对地理空间数据、开源情报与可视化感兴趣的开发者、记者和极客，以及想拿它做演示或视频素材的创作者。
+- ✨ 每日市场环境检查：由 market-breadth-analyzer、uptrend-analyzer 和 exposure-coach 组成的 workflow，15 分钟走完，最后给出建议仓位上限和 REDUCE_ONLY 等市场姿态，供人工判断而不是下单
+- ✨ 每周核心组合复盘：portfolio-manager 配合 kanchi-dividend-review-monitor 和 trader-memory-core，检查长期持仓与股息组合，Alpaca 为必需，手动 CSV 是降级方案
+- ✨ 波段机会筛选有前置条件：先用 drawdown-circuit-breaker 判断风险是否允许，通过后才用 vcp-screener 筛选，再经 technical-analyst、position-sizer、pre-trade-discipline-gate 逐层把关
+- ✨ 交易记忆闭环：每笔平仓都通过 trader-memory-core 和 signal-postmortem 归档，形成可回看的交易日志与教训记录
+- ✨ 月度绩效复盘：trader-memory-core、signal-postmortem 和 backtest-expert 一起统计实现盈亏，并据此调整交易规则
+- ✨ Trading Skills Navigator 导航：说明自己的目标后，它会推荐应从哪条 workflow 起步，并标明哪些步骤需要付费数据 API
+- 👥 适合谁：时间有限的个人投资者、长期持有 ETF 和股息股的人，以及想做有纪律的波段交易并坚持写交易日志的人。
 
-`JavaScript` · Fork 12,912 · 🔗 [官网](https://godseyeview.ai/)
+`Python` · Fork 1,415 · 🔗 [官网](https://tradermonty.github.io/claude-trading-skills/)
 
 ## 📋 完整榜单
 
@@ -190,16 +190,16 @@ God's Eye View 把航班应答机、船舶信标、轨道根数、地震仪和�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane) | Arcane 是一个为所有人设计的现代化 Docker 管理工具，用 Go 编写，提供 W… | `Go` | 8,943 | +46 |
-| 2 | [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | 把2400年中国历史装进一张可拖时间轴的交互式羊皮纸地图，从战国一路拖到今天。 | `JavaScript` | 7,365 | +288 |
-| 3 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN … | `Python` | 68,400 | +135 |
-| 4 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。 | `Python` | 1,901 | +313 |
-| 5 | [sveltejs/svelte](https://github.com/sveltejs/svelte) | 把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。 | `JavaScript` | 89,134 | +115 |
-| 6 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。 | `JavaScript` | 304,844 | +718 |
-| 7 | [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) | 给 AI Agent 做独立审计的工具，120 秒内回答一个关键问题：它到底有没有按预期做… | `Python` | 46,183 | +311 |
-| 8 | [elie222/rakazo](https://github.com/elie222/rakazo) | 开源自托管的 Grok Bot 替代品：自带记忆、例程和电脑的持久 AI 队友 | `TypeScript` | 8,907 | +266 |
-| 9 | [hieunc229/mailflare](https://github.com/hieunc229/mailflare) | 一个可自托管的 Google Workspace 替代品，为自定义域名提供邮箱、日历、网盘… | `TypeScript` | 6,728 | +254 |
-| 10 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 浏览器中的间谍卫星模拟器：把航班、船舶、卫星、地震等公开实时信号汇聚到一个 3D 地球上。 | `JavaScript` | 65,348 | +253 |
+| 1 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给… | `Go` | 53,980 | +763 |
+| 2 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器 | `TypeScript` | 16,999 | +201 |
+| 3 | [obra/superpowers](https://github.com/obra/superpowers) | 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码 | `Shell` | 319,565 | +1,917 |
+| 4 | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。 | `TypeScript` | 13,201 | +691 |
+| 5 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。 | `Python` | 66,284 | +192 |
+| 6 | [stablyai/orca](https://github.com/stablyai/orca) | Orca 是一个 AI 编排器，让你用自己的订阅并行调度 Claude Code、Code… | `TypeScript` | 128,210 | +1,066 |
+| 7 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 193,444 | +862 |
+| 8 | [bannedbook/fanqiang](https://github.com/bannedbook/fanqiang) | 一个按设备和场景整理的科学上网工具与教程合集库，覆盖手机、电脑、路由器和游戏机。 | `Kotlin` | 57,770 | +819 |
+| 9 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 给编码 Agent 装上设计词汇表：用具体命令引导、评审并拦截 AI 味界面。 | `Rust` | 112,443 | +748 |
+| 10 | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记… | `Python` | 6,939 | +703 |
 
 <!-- TRENDING:END -->
 
