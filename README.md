@@ -24,7 +24,7 @@
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ⭐ 60,217（今日 +899）
+### 1. [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ⭐ 60,218（今日 +899）
 
 > 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。
 
@@ -40,7 +40,7 @@ CLI-Anything 是一个把现有软件变成 Agent 原生工具的项目：跑一
 
 `Python` · Fork 5,462 · 🔗 [官网](https://clianything.cc/)
 
-### 2. [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) — ⭐ 203,552（今日 +795）
+### 2. [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) — ⭐ 203,554（今日 +795）
 
 > 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的一站式知识基础设施。
 
@@ -54,7 +54,7 @@ Firecrawl 是一个面向 AI 应用和智能体的网页数据层：你给它一
 - ✨ Parse 与 Alexandria：把 PDF、DOCX 等文档解析成 Markdown/JSON，并通过 Firecrawl Cloud 接入 550+ 数据提供商
 - 👥 适合谁：适合做 AI Agent、RAG、知识库和数据采集的开发者与团队，需要稳定网页数据的后端与全栈工程师。
 
-`TypeScript` · Fork 10,663 · 🔗 [官网](https://firecrawl.dev)
+`TypeScript` · Fork 10,664 · 🔗 [官网](https://firecrawl.dev)
 
 ### 3. [nginx/nginx](https://github.com/nginx/nginx) — ⭐ 32,222（今日 +66）
 
@@ -72,7 +72,7 @@ Firecrawl 是一个面向 AI 应用和智能体的网页数据层：你给它一
 
 `C` · Fork 8,407 · 🔗 [官网](https://nginx.org/)
 
-### 4. [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) — ⭐ 11,447（今日 +246）
+### 4. [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) — ⭐ 11,448（今日 +246）
 
 > OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。
 
@@ -88,7 +88,7 @@ OpenVINO 解决的是“训练好的模型怎么在真实硬件上跑得快、�
 
 `C++` · Fork 3,610 · 🔗 [官网](https://docs.openvino.ai)
 
-### 5. [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ⭐ 68,351（今日 +332）
+### 5. [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ⭐ 68,356（今日 +332）
 
 > 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。
 
@@ -120,7 +120,7 @@ diagram-design 是一个 Agent Skill，可被 Claude Code、Cursor、Codex、Git
 
 `Shell` · Fork 112 · 🔗 [官网](https://mjmirza.github.io/app-store-compliance/)
 
-### 7. [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) — ⭐ 12,895（今日 +25）
+### 7. [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) — ⭐ 12,896（今日 +25）
 
 > 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。
 
@@ -152,7 +152,7 @@ AFFiNE（读音 [ə‘fain]）把文档、白板、表格、演示和知识库�
 
 `TypeScript` · Fork 5,542 · 🔗 [官网](https://affine.pro)
 
-### 9. [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) — ⭐ 12,270（今日 +432）
+### 9. [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) — ⭐ 12,272（今日 +432）
 
 > 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。
 
@@ -168,7 +168,7 @@ Ghost-Downloader-3 是一个用 Python 编写、基于 Qt 的跨平台下载器�
 
 `Python` · Fork 775 · 🔗 [官网](https://gd.xychr.com/)
 
-### 10. [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) — ⭐ 10,874（今日 +110）
+### 10. [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) — ⭐ 10,873（今日 +110）
 
 > 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。
 
@@ -197,7 +197,7 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 [Take Voyager 1 apart, down to a single memory chip](https://news.ycombinator.com/item?id=50548161) · ⬆️ 214 · 💬 50
 
-> HN 热帖带你逐层拆解旅行者一号探测器，直到一块内存芯片，已
+> Take Voyager 1 apart, down to a single memory chip
 
 
 ## 🧡 Product Hunt 今日榜
@@ -206,21 +206,21 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 > Blender, Unity or Unreal to a live 3D link in one click
 
-[Gemini 4 Neon](https://www.producthunt.com/products/gemini-6) · Product Hunt
+[Upsolve MCP Connections](https://www.producthunt.com/products/upsolve-ai) · Product Hunt
 
-> Gemini 4 Neon 发布，主打前沿推理能力，任务完成
+> Plug Notion, Linear and more into your data agent
 
-[Netlify Server](https://www.producthunt.com/products/netlify) · Product Hunt
+[Rezora IO](https://www.producthunt.com/products/rezora-io-ai-calling-assistant) · Product Hunt
 
-> Run WebSockets, multiplayer apps, and long-running agents
-
-[Ableten Hybrid AI Travel Planner](https://www.producthunt.com/products/ableten-source-library) · Product Hunt
-
-> Ableten Hybrid AI Travel Planner 发布，主打让
+> Rezora IO 是 AI 语音智能体的 Shopify，10 分钟即可上线。
 
 [Fieldwork Code](https://www.producthunt.com/products/fieldwork-code) · Product Hunt
 
-> Fieldwork Code 支持在笔记本或云端进行 AI 编程，并可从手机端远程操作。
+> Fieldwork Code 支持在笔记本或云端进行 AI 编程，也能用手机操作。
+
+[Netlify Server](https://www.producthunt.com/products/netlify) · Product Hunt
+
+> Netlify Server 今日发布，支持 WebSocket、多人应用和长时间运行的智能体。
 
 
 ## 🇨🇳 中文独立开发 · V2EX 分享创造
@@ -231,7 +231,7 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 [谷歌模型也是好起来了，最近搞了个检测重置的站](https://www.v2ex.com/t/1258356) · 💬 1 回复
 
-> 开发者分享自制检测站点，用于监测谷歌模型配额重置，并感叹谷歌模型近期确实好转。
+> 谷歌模型也是好起来了，最近搞了个检测重置的站
 
 [antigravity 登不上怎么搞？刚买的 pro](https://www.v2ex.com/t/1258353) · 💬 7 回复
 
@@ -239,11 +239,11 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 [大语言模型的思想起点](https://www.v2ex.com/t/1258350) · 💬 0 回复
 
-> 大语言模型的思想起点
+> V2EX 独立开发者分享作品「大语言模型的思想起点」，聚焦大模型思考的起始环节。
 
 [\[开源推广\] Antigravity 实时遥测仪表盘](https://www.v2ex.com/t/1258346) · 💬 0 回复
 
-> [开源推广] Antigravity 实时遥测仪表盘
+> 开发者开源 Antigravity 实时遥测仪表盘，用于实时监控与可视化遥测数据。
 
 ## 📋 完整榜单
 
@@ -251,16 +251,16 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。 | `Python` | 60,217 | +899 |
-| 2 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的… | `TypeScript` | 203,552 | +795 |
+| 1 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。 | `Python` | 60,218 | +899 |
+| 2 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的… | `TypeScript` | 203,554 | +795 |
 | 3 | [nginx/nginx](https://github.com/nginx/nginx) | 官方 NGINX 开源仓库：高性能 Web 服务器、反向代理与负载均衡器 | `C` | 32,222 | +66 |
-| 4 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。 | `C++` | 11,447 | +246 |
-| 5 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。 | `HTML` | 68,351 | +332 |
+| 4 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。 | `C++` | 11,448 | +246 |
+| 5 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。 | `HTML` | 68,356 | +332 |
 | 6 | [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) | 一套开源的 App Store 与 Google Play 上架合规手册，外加提交前的自动… | `Shell` | 1,482 | +542 |
-| 7 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。 | `Python` | 12,895 | +25 |
+| 7 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。 | `Python` | 12,896 | +25 |
 | 8 | [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | AFFiNE 是一个隐私优先、本地优先的开源一体化工作区，可以看作 Notion 与 Mi… | `TypeScript` | 74,800 | +170 |
-| 9 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。 | `Python` | 12,270 | +432 |
-| 10 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。 | `Python` | 10,874 | +110 |
+| 9 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。 | `Python` | 12,272 | +432 |
+| 10 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。 | `Python` | 10,873 | +110 |
 
 <!-- TRENDING:END -->
 
