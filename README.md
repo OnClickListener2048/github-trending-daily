@@ -17,172 +17,165 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-18
+# 🔥 GitHub 每日 Trending · 2026-11-19
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [alibaba/open-code-review](https://github.com/alibaba/open-code-review) — ⭐ 53,980（今日 +763）
+### 1. [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ⭐ 60,043（今日 +389）
 
-> 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给出精确到行级的审查意见。
+> 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。
 
-Open Code Review 是阿里巴巴开源的 AI 代码审查命令行工具，源自其内部官方 AI 代码审查助手——两年间服务了数万名开发者、识别出数百万个代码缺陷，经过大规模验证后开源。它读取 Git diff，把变更文件交给可配置的 LLM，由一个具备工具调用能力的 Agent 生成结构化的行级审查评论：Agent 可以读取完整文件内容、搜索代码库、查看其他变更文件来获取上下文，做深度审查而不只停留在 diff 表面。除了 diff 审查，它还提供 ocr scan 命令审查整个文件，适合审计没有有效 diff 的陌生代码库或目录。使用门槛很低，配置好一个模型端点就能开始，兼容 OpenAI 与 Anthropic 接口。
+CLI-Anything 是一个把现有软件变成 Agent 原生工具的项目：跑一条命令，就为某个软件或服务生成一套结构化的命令行接口（CLI harness）；Cursor、Claude Code、OpenClaw、Pi、nanobot 这类 Agent 都能直接调用它，不必再依赖 GUI 或非结构化接口。它要解决的是「今天的软件给人用，明天的用户是 Agent」这个断层。用法上分两条线：一是用 pip install cli-anything-hub 安装 CLI-Hub，再用 cli-hub install <name> 浏览、安装和管理社区构建的 CLI；二是自己按 CONTRIBUTING 提交一个 harness，PR 合并后立刻出现在 Hub 上。生成出来的命令既输出 JSON，供程序解析，也输出人类可读文本，方便调试。
 
-- ✨ 混合架构：确定性流水线负责覆盖与定位，LLM Agent 负责深度推理，兼顾审查速度与准确度
-- ✨ 行级精确的结构化评论，Agent 可读完整文件、搜索代码库、跨变更文件获取上下文，避免只看到 diff 片段
-- ✨ ocr scan 全文件审查模式，用于代码库审计或没有有意义 diff 的目录
-- ✨ 内置多语言规则集，覆盖 NPE、线程安全、XSS、SQL 注入等常见缺陷类型
-- ✨ 模型端点可配置，兼容 OpenAI 与 Anthropic 接口，无需绑定特定厂商
-- ✨ 支持 Claude Code、Codex、Cursor、Kimi Code 等 Agent 环境，覆盖 Windows、macOS、Linux，可通过 npm 安装
-- 👥 适合谁：需要把代码审查自动化接入日常开发或 CI 的团队与个人开发者，尤其是对误报噪音、API 成本和审查耗时敏感的工程团队。
+- ✨ 一条命令行即可让任意软件变成 agent-ready，兼容 Pi、OpenClaw、nanobot、Cursor、Claude Code 等 Agent 宿主
+- ✨ CLI-Hub 社区注册中心：pip install cli-anything-hub 后用 cli-hub install <name> 一键浏览、安装、管理所有社区 CLI，合并 PR 后即时上架
+- ✨ 每条命令同时提供 JSON 结构化输出和人类可读输出，Agent 解析与人工排查两不误
+- ✨ 配套 preview、live preview 和 trajectory loop 机制，Agent 能反复试跑并产出真实产物：CAD 构建、3D 场景、图表、游戏玩法、字幕等，官方 Demos 覆盖 18 个应用
+- ✨ 覆盖真实软件生态的现成 CLI：ArcGIS Pro 制图与地理处理、Calibre 书库、搜索、元数据、转换和导出、Joplin 笔记与同步、Obsidian 持久记忆、Sketch、Rekordbox 等
+- ✨ 贡献与需求双向通道：通过 wishlist 模板请求想要支持的软件，通过 contributor signup 认领 harness，并在 2,461 项通过的单元与 e2e 测试基线上做质量把关
+- 👥 适合谁：想让自家软件被 Agent 调用，或用 Agent 自动化各类桌面与专业软件的开发者。
 
-`Go` · Fork 4,451 · 🔗 [官网](https://open-codereview.ai)
+`Python` · Fork 5,454 · 🔗 [官网](https://clianything.cc/)
 
-### 2. [cursor/plugins](https://github.com/cursor/plugins) — ⭐ 16,999（今日 +201）
+### 2. [nvm-sh/nvm](https://github.com/nvm-sh/nvm) — ⭐ 96,198（今日 +237）
 
-> Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器
+> POSIX 兼容的 Node.js 版本管理脚本，一条命令即可安装、切换多个 Node 版本。
 
-这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。
+nvm 是一个用 Shell 编写的 Node.js 版本管理器，按用户安装、按 shell 生效，可在 sh、dash、ksh、zsh、bash 等任意 POSIX 兼容 shell 中运行，支持 unix、macOS 和 Windows WSL。它解决的问题很直接：不同项目依赖不同 Node 版本，全局只能装一个版本时来回折腾非常麻烦。装上 nvm 后，nvm install 24 装新版本，nvm use 22 一行切回旧版本，node -v 立刻确认当前生效版本。安装方式是一条 curl 或 wget 脚本，脚本会把仓库克隆到 ~/.nvm 并自动把加载语句写进 ~/.bashrc、~/.zshrc 等配置文件。
 
-- ✨ Thermos 深度分支审查：针对安全性和正确性进行审计，采用严苛的代码质量评分标准，并行调度多个子 agent，并可选用 merge-ready PR 流程
-- ✨ Orchestrate 把大型任务拆分给并行的云端 agent，并包含 planner、worker、verifier 和结构化交接
-- ✨ Cursor Team Kit 提供 CI、代码评审、发版、本地自动化和验证等团队内部工作流
-- ✨ Create Plugin 用来搭建和校验新的 agent 插件；Teaching 提供技能映射、练习计划和学习复盘
-- ✨ Continual Learning 把对话记录增量写入 AGENTS.md 长期记忆；Ralph Loop 实现自引用式迭代 AI 循环
-- ✨ 大量第三方集成：GitHub、Playwright、Gmail、Google Drive、Calendar、Docs、Sheets、Slides、Salesforce、HubSpot、Zoom、Gong、Ashby 等，可直接操作真实业务数据
-- 👥 适合谁：使用 Cursor 的开发者、需要把 AI agent 接入团队工作流和 SaaS 工具的工程团队
+- ✨ 一条命令安装并切换任意 Node 版本，nvm install / nvm use 即时生效
+- ✨ 支持 LTS 等版本类别，可直接指定 lts/* 等别名安装长期支持版
+- ✨ 读取项目目录下的 .nvmrc 文件，配合 bash/zsh/fish 的 shell 集成可在进入目录时自动切换版本
+- ✨ 安装新版本时可自动迁移全局 npm 包，也可在已装版本之间迁移全局包
+- ✨ 支持从文件声明默认全局包，安装时一并装上，方便统一开发环境
+- ✨ 支持离线安装、使用 Node 二进制镜像源（可带 Authorization 头），以及无官方二进制平台
+- 👥 适合谁：需要同时维护多个 Node 版本、复现旧项目环境的 Node 开发者与 CI 维护者。
 
-`TypeScript` · Fork 1,844
+`Shell` · Fork 10,791
 
-### 3. [obra/superpowers](https://github.com/obra/superpowers) — ⭐ 319,565（今日 +1,917）
+### 3. [astral-sh/uv](https://github.com/astral-sh/uv) — ⭐ 92,332（今日 +258）
 
-> 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码
+> Rust 编写的极速 Python 包与项目管理器，一个工具顶替 pip、poetry、pyenv 等一整排
 
-Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。
+uv 由 Astral（Ruff 的作者）用 Rust 打造，瞄准的是 Python 工具链碎片化与安装慢这两件老毛病：把 pip、pip-tools、pipx、poetry、pyenv、twine、virtualenv 等合并成一个命令。安装只要一行 curl 脚本，或者 pip install uv；之后 uv init 建项目、uv add 装依赖、uv lock 与 uv sync 管锁文件、uv run 直接跑命令和脚本。它同时提供 pip 兼容接口，原有使用习惯几乎不用改就能拿到 10-100 倍提速，macOS、Linux、Windows 全支持。
 
-- ✨ 技能自动触发：代理在对话开始就加载 using-superpowers 技能，无需手动调用
-- ✨ 先澄清需求再编码：通过对话梳理出规格说明，并切成足够短、能真正读完的片段给你确认
-- ✨ 可执行的实施计划：细化到初级工程师能照做，同时强调红绿 TDD、YAGNI 与 DRY
-- ✨ 子代理驱动开发：每个工程任务交给子代理执行，主代理检查评审后继续推进
-- ✨ 长时间自主工作：可连续数小时按既定计划推进而不跑偏
-- ✨ 广泛的 harness 覆盖：Claude Code、Codex App/CLI、Cursor、Gemini CLI、GitHub Copilot CLI、Devin CLI、Factory Droid、Grok Build CLI、Kimi Code、OpenCode、Qwen Code 等均有对应安装方式
-- 👥 适合谁：希望让 AI 编码代理按严谨工程流程交付、而不只是补全代码的个人开发者与团队
+- ✨ 一个工具替代 pip、pip-tools、pipx、poetry、pyenv、twine、virtualenv 等
+- ✨ 比 pip 快 10-100 倍，官方的基准测试图表直接印证
+- ✨ 完整的项目管理：通用 lockfile、Cargo 风格 workspace、uv init/add/lock/sync 一条龙
+- ✨ 单文件脚本可直接运行，支持内联依赖元数据（uv add --script 写入脚本）
+- ✨ 能安装和切换 Python 版本（uv python install 多版本并存，按需下载）
+- ✨ 以临时环境运行或全局安装 Python 包形式的 CLI 工具（uvx、uv tool install）
+- 👥 适合谁：Python 开发者、数据与 ML 工程师、需要统一团队环境和 CI 流程的工程团队，以及嫌 pip 慢、工具太杂的人。
 
-`Shell` · Fork 28,489
+`Rust` · Fork 3,928 · 🔗 [官网](https://docs.astral.sh/uv)
 
-### 4. [backnotprop/plannotator](https://github.com/backnotprop/plannotator) — ⭐ 13,201（今日 +691）
+### 4. [jquery/jquery](https://github.com/jquery/jquery) — ⭐ 60,069（今日 +266）
 
-> 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。
+> 老牌跨浏览器 DOM 操作与 AJAX 库，现已发布 4.0.0，支持按模块裁剪体积。
 
-Plannotator 是跑在本地浏览器里的审阅界面，用来和 AI 编码代理协作。代理给出计划、规格、HTML 制品或改完代码后，它会自动打开浏览器，让你直接在上面标注、写评论，再一键把反馈送回代理执行。它通过插件、hooks 和命令接入 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi 等代理，也能用 MCP 接入任意工具。除了审文档，它还能审本地改动和远程 PR，并用 Inbox 汇总多个代理的消息与待决事项。
+jQuery 是一个经典的 JavaScript 库，用于简化 HTML 文档遍历、事件处理、动画与 AJAX 交互，帮助开发者抹平不同浏览器之间的差异。它既可以作为传统 script 标签引入，也提供 ESM 模块版本，还能在 Node、浏览器扩展等非浏览器环境中使用。版本方面，4.x 为主力全量支持，3.x 仅接收关键修复，2.x 和 1.x 已停止支持，官方建议升级到最新版本。构建也很灵活，克隆仓库后执行 npm install、npm run build 即可，产物落在 dist/ 目录；通过 --exclude 和 --include 参数可按需裁剪模块，生成定制版本。
 
-- ✨ 文档与制品标注：在计划、规格、Markdown、HTML 等交互制品上划线评论，反馈直接回传给代理
-- ✨ 代码审查：在本地改动或远程 PR 的 diff 上逐行评论、建议代码，支持 Git、GitButler、Jujutsu（jj）、Perforce（p4）、GitHub 和 GitLab
-- ✨ 内置 AI：可就正在审阅的内容随时提问，或启动 AI 评审自动往 diff 上贴评论
-- ✨ Plannotator Inbox：一个本地窗口收拢多个代理留下的问题、文件、截图和引导式评审，点一下即可回复，不阻塞任何会话
-- ✨ 多代理接入：通过插件、hooks、命令和 MCP 对接 Claude Code、Codex、Copilot CLI、Gemini CLI、OpenCode、Kiro、Droid、Amp、Pi，也兼容个人助理类工具
-- ✨ Herdr Annotate：在终端里标注文本、整份 Markdown 文档和代理回复，反馈作为下一条消息发回代理
-- 👥 适合谁：同时驱动多个 AI 编码代理、需要频繁审阅方案与代码的开发者和小团队。
+- ✨ 跨浏览器的 DOM 选择、遍历与操作 API，统一各浏览器行为差异
+- ✨ 完整 AJAX 能力，包含 $.ajax、$.get、$.post、各类 transport 与 ajax 事件简写
+- ✨ 动画与特效体系，.animate() 及 slideUp 等简写，配合 css 模块使用
+- ✨ 尺寸与位置方法，如 .width()、.height() 及 inner、outer 变体
+- ✨ ESM 模块产物，jquery.module.js 以命名导出方式提供 jQuery 与 $
+- ✨ 自定义构建，可通过 --exclude/--include 裁剪模块生成精简版本，核心 core 不可移除
+- 👥 适合谁：需要兼容老浏览器、快速完成 DOM 与 AJAX 开发的前端开发者，以及维护存量 jQuery 项目的团队。
 
-`TypeScript` · Fork 1,322 · 🔗 [官网](https://plannotator.ai)
+`JavaScript` · Fork 20,713 · 🔗 [官网](https://jquery.com)
 
-### 5. [jingyaogong/minimind](https://github.com/jingyaogong/minimind) — ⭐ 66,284（今日 +192）
+### 5. [appwrite/appwrite](https://github.com/appwrite/appwrite) — ⭐ 58,322（今日 +232）
 
-> 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。
+> Appwrite 是一个开源的一站式云端开发平台，内置 MCP，专为 AI 代理与开发者打造。
 
-MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。
+Appwrite 把后端所需的基础能力打包成一个统一平台：它是 MCP 和 agent-first 的开源云，既可以直接托管到 Appwrite Cloud，也可以在自己的 Docker 环境里一键自托管。你可以把 Cursor、Claude Code、Codex 这类编码代理通过官方托管的 MCP Server 接到真实项目上，让代理直接操作 Appwrite 项目；也可以照常在自己的应用里集成 SDK。项目从 Auth、数据库、存储到函数、站点、消息、实时推送、防火墙都保持模块化却彼此统一，所以从原型到生产不用中途换工具。
 
-- ✨ 完整的MiniMind-LLM结构代码（Dense与MoE），主线对齐Qwen3/Qwen3-MoE生态
-- ✨ 覆盖Pretrain、SFT、LoRA、RLHF-DPO、RLAIF（PPO/GRPO/CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏全流程
-- ✨ 提供从收集、蒸馏、清洗到去重的高质量全阶段开源数据集，含工具调用与思考标记的Tokenizer训练代码
-- ✨ 关键训练算法从零原生实现，同时兼容transformers/trl/peft、llama.cpp/vllm/ollama与Llama-Factory
-- ✨ 支持单机单卡及多卡DDP/DeepSpeed训练、断点续训、wandb/swanlab可视化，并可在C-Eval等第三方评测集上测评
-- ✨ 附带兼容OpenAI协议的极简服务端与Streamlit聊天WebUI，支持reasoning_content、tool_calls与open_thinking，可接入FastGPT、Open-WebUI
-- 👥 适合谁：想深入理解大模型原理、亲手从零训练模型的学生、开发者与AI教学者。
+- ✨ Auth 用户认证：支持邮箱、短信、OAuth、匿名会话和魔法链接
+- ✨ Databases 数据建模与查询，支持托管 PostgreSQL 和 MySQL
+- ✨ Storage 文件存储，带压缩、加密、图片变换和访问控制
+- ✨ Functions 无服务器函数，隔离运行时并支持事件驱动执行
+- ✨ Sites 从 Git 部署静态、SSR、CSR 前端，带即时预览
+- ✨ Messaging 统一发送邮件、短信和推送通知
+- 👥 适合谁：适合想用 AI 编码代理加速开发、又需要自托管或统一后端能力的应用开发团队与独立开发者。
 
-`Python` · Fork 8,690 · 🔗 [官网](https://jingyaogong.github.io/minimind)
+`TypeScript` · Fork 5,889 · 🔗 [官网](https://appwrite.io)
 
-### 6. [stablyai/orca](https://github.com/stablyai/orca) — ⭐ 128,210（今日 +1,066）
+### 6. [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) — ⭐ 11,411（今日 +24）
 
-> Orca 是一个 AI 编排器，让你用自己的订阅并行调度 Claude Code、Codex 等编码代理。
+> OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。
 
-Orca 是一个 AI 编排器：把 Claude Code、Codex 等编码代理组织成一支“代理舰队”，每个代理跑在各自独立的 git worktree 里，互不干扰。它要解决的是代理能写代码、但没人管理它们的问题：任务怎么拆、多个代理怎么并行、结果怎么回收、人不在电脑前怎么办。你可以把大任务交给一个协调者代理，由它拆解并启动 worker 代理；同一段对话能在 Chat 界面和原生终端之间来回切换而不丢上下文；worktree 还能跑在 SSH 主机或云端 VM 上，合上笔记本代理照样干活。桌面端支持 macOS/Windows/Linux，另有 iOS 与 Android 移动端。
+OpenVINO 解决的是“训练好的模型怎么在真实硬件上跑得快、跑得省”这个问题。它可以把 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax 等框架训练的模型转换后直接部署，不需要原框架参与推理；也能通过 Optimum Intel 直接接入 Hugging Face Hub 上的 transformers 和 diffusers 模型。使用时先用 ov.convert_model 转换，再用 core.compile_model 指定设备编译，随后即可推理，pip install openvino 就能上手，官方还提供 Notebooks 和 C++/Python 示例。
 
-- ✨ Chat 与终端双形态：同一个代理会话可在 Chat UI 和原生 CLI 之间自由切换，上下文不丢失
-- ✨ 代理编排：把大任务交给协调者代理，它自动拆分、在各自 workspace 启动 worker 代理并汇总结果
-- ✨ 并行 worktree：任务快速拆进互相隔离的环境，多个代理同时推进互不踩脚
-- ✨ 任意环境运行：配对 Remote Orca Server、在任意 SSH 主机上工作，或给单个 worktree 分配云 VM，笔记本休眠也不中断
-- ✨ 移动端伴随：iOS/Android App 在代理需要你时推送通知，直接在聊天里回复，人不在工位也能推动任务（比如让它开 PR）
-- ✨ 审查与 Git 集成：查看 diff、在具体改动行上留批注回传给代理，还能用 diff 起草 commit 与 PR，并把失败的检查或 PR 评论回抛给代理修
-- 👥 适合谁：同时推进多个 AI 编码任务的独立开发者与小团队，尤其是重度使用 Claude Code、Codex 的人。
+- ✨ 推理优化：面向计算机视觉、语音识别、生成式 AI 与 NLP（含大小语言模型）等常见任务提升性能
+- ✨ 多框架模型支持：兼容 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax，并可脱离原框架转换部署
+- ✨ Hugging Face 集成：通过 Optimum Intel 直接使用 transformers 与 diffusers 模型
+- ✨ 广泛硬件覆盖：支持 CPU（x86、ARM）、GPU（Intel 集显与独显）以及 Intel NPU 等 AI 加速器，覆盖边缘到云端
+- ✨ 简单部署 API：convert_model 转换 + compile_model 指定设备编译，几行代码完成模型推理
+- ✨ 丰富学习资源：OpenVINO Notebooks 提供 LLM 聊天机器人、YOLOv11 优化、文生图、LLaVa 多模态、Whisper 语音识别等实战示例
+- 👥 适合谁：需要在 Intel CPU、GPU、NPU 或边缘设备上高效部署和优化深度学习模型的 AI 应用开发者。
 
-`TypeScript` · Fork 8,122 · 🔗 [官网](https://orca.dev)
+`C++` · Fork 3,609 · 🔗 [官网](https://docs.openvino.ai)
 
-### 7. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 193,444（今日 +862）
+### 7. [n8n-io/n8n](https://github.com/n8n-io/n8n) — ⭐ 211,270（今日 +325）
 
-> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
+> 可自托管或云端的 fair-code 工作流自动化平台，原生支持构建和运营 AI 智能体。
 
-Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
+n8n 是一个 fair-code（源码可见、可自托管、可扩展）的工作流自动化平台，把可视化画布和自定义代码结合起来。它要解决的是：AI 自动化从原型走向生产时，既能编排多步智能体、接入自有数据和模型，又能保留逻辑分支、人工审批和可观测性，而不是把业务流程绑死在某一家模型厂商上。用法很直接：有 Docker 就能用官方脚本或一条 docker run 命令在本地 5678 端口启动编辑器，也可以直接用云端版；在画布上拖拽节点搭建流程，需要时插入 JavaScript、Python 或 npm 包，再连接 1500+ 集成把 AI 接入现有系统。
 
-- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
-- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
-- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
-- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
-- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
-- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
-- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
+- ✨ AI 原生：用自有数据、模型和工具构建并运营多步 AI 智能体与工作流
+- ✨ 模型不锁定：可接 OpenAI、Anthropic、Google 或开源模型，切换供应商无需改动架构
+- ✨ 从原型到生产：支持逻辑分支、工具调用、人工审批和完整可观测性
+- ✨ 可视化 + 代码：画布拖拽搭建，按需嵌入 JavaScript、Python 和 npm 包
+- ✨ 企业级能力：自托管部署，提供基于角色的访问控制、审计追踪，适配敏感数据
+- ✨ 生态丰富：1500+ 集成与 9000+ 工作流模板，快速对接现有系统
+- 👥 适合谁：需要把 AI 工作流落到生产、又想自托管掌控数据的开发者和自动化团队。
 
-`JavaScript` · Fork 10,874 · 🔗 [官网](https://ponytail.dev)
+`TypeScript` · Fork 61,579 · 🔗 [官网](https://n8n.io)
 
-### 8. [bannedbook/fanqiang](https://github.com/bannedbook/fanqiang) — ⭐ 57,770（今日 +819）
+### 8. [solidjs/solid](https://github.com/solidjs/solid) — ⭐ 36,695（今日 +40）
 
-> 一个按设备和场景整理的科学上网工具与教程合集库，覆盖手机、电脑、路由器和游戏机。
+> Solid 是一个用细粒度响应式直接更新真实 DOM 的声明式 JavaScript UI 库，不依赖虚拟 DOM。
 
-这个仓库本质上是一个「翻墙资源导航站」：README 按平台把内容组织成 Windows、iOS、Android、macOS、路由器、Linux 和游戏机几大类，每类下面给出具体工具的教程入口，比如 Clash for Windows、V2rayN、Shadowrocket 小火箭、Clash for Android、ClashX 等。除了客户端使用教程，它还提供 Chrome、Edge、Firefox 和 TorBrowser 的一键翻墙包，自建 V2ray/Shadowsocks 服务器的简明教程，免费 ss/v2ray 账号信息，以及注册美区 Apple ID、在局域网内共享代理和用 v2rayN 配置链式代理等实用内容。如果你刚接触这类工具，可以按自己的设备找到对应教程直接跟着操作。
+Solid 用编译器把 JSX 模板编译成真实的 DOM 操作，再用细粒度响应式精确更新数据变化所影响的那部分代码。它要解决的是虚拟 DOM diff 带来的运行时开销，以及组件反复重渲染带来的心智负担：组件函数只在挂载时执行一次，之后的更新精确到具体的 DOM 节点和表达式。用法上，用 createSignal、createMemo、createStore 声明状态，在 JSX 里读取即可自动建立依赖；更新会在微任务中批量执行，也可以调用 flush() 同步刷新。它通过 @solidjs/vite-plugin 接入 Vite，开箱即用，还支持流式 SSR 与渐进式水合。
 
-- ✨ 覆盖 Windows、macOS、Linux、Android、iOS、路由器和游戏机的分平台教程索引
-- ✨ Chrome、Edge、Firefox、TorBrowser 一键翻墙包，无需复杂配置即可使用
-- ✨ 自建 V2ray 与 Shadowsocks 服务器的简明教程
-- ✨ 免费 ss 账号与 v2ray 免费账号资源
-- ✨ Shadowrocket、Clash、V2RayNG、Surge、Quantumult X 等主流客户端配置教程
-- ✨ 局域网共享翻墙与旁路由方案，适用于 PS4/PS5、Switch、Xbox 等游戏机加速
-- 👥 适合谁：需要按设备查找科学上网工具和配置教程的普通用户与折腾爱好者。
+- ✨ 细粒度响应式更新真实 DOM，没有虚拟 DOM diff
+- ✨ render-once 组件：组件函数只运行一次，更新精确到单个表达式
+- ✨ 声明式响应式原语：createSignal、createMemo、createStore，读取即自动追踪依赖
+- ✨ 微任务批量更新，并提供 flush() 用于同步互操作
+- ✨ 一等公民的异步支持：任意计算可返回 Promise/AsyncIterable，以 <Loading> 作为边界
+- ✨ 乐观 UI 原语 createOptimistic/createOptimisticStore 与结构化 action 变更
+- 👥 适合谁：适合追求极致运行时性能、喜欢 JSX 与 TypeScript、希望组件逻辑简单可预测的前端开发者。
 
-`Kotlin` · Fork 8,837
+`TypeScript` · Fork 1,190 · 🔗 [官网](https://solidjs.com)
 
-### 9. [pbakaus/impeccable](https://github.com/pbakaus/impeccable) — ⭐ 112,443（今日 +748）
+### 9. [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) — ⭐ 98,158（今日 +53）
 
-> 给编码 Agent 装上设计词汇表：用具体命令引导、评审并拦截 AI 味界面。
+> 一份精选的 MCP 服务器目录，帮你快速找到能接进 AI 的工具
 
-Impeccable 是给 AI 编码工具用的界面设计技能包。执行 npx impeccable install 后，在 Claude Code、Cursor、Codex CLI 等 20 多种工具里用 /impeccable 斜杠命令调用。它针对一个很具体的问题：让 Agent 做页面，得到的往往是奶油底色、细衬线标题、紫色到蓝色渐变、卡片套卡片这类跨模型跨项目重复出现的「安全默认值」。它的解法是把「让它跳一点」这种模糊诉求换成 bolder、quieter、polish、critique 这样的明确动词，再用 init 生成的 PRODUCT.md 交代产品定位，让每次改动都有依据。
+这是一个精选的 Model Context Protocol（MCP）服务器清单。MCP 是一套开放协议，让 AI 模型通过标准化的服务端实现，安全地访问本地和远程资源。这个仓库要解决的是「我知道 MCP 有用，但不知道有哪些现成服务器可用」的问题：它按聚合器、浏览器自动化、数据库、文件系统、搜索、金融、安全、社交媒体等几十个分类收录了生产可用和实验性的服务器实现，每条都标注了开发语言、云端还是本地、支持的操作系统，还有官方实现的标记。除了服务器列表，仓库还提供客户端推荐、教程、框架、社区入口和选型技巧，并附有多语言 README 与同步更新的网页版目录。
 
-- ✨ Steer 系列命令（bolder、quieter、distill、colorize、typeset、layout、animate、delight、overdrive）用明确动词指挥 Agent 调视觉方向，每条命令都配一份针对该动作的 playbook 并指向单一目标
-- ✨ critique 按可用性启发式给设计打分并排好修复优先级；audit 检查无障碍、性能、主题和响应式表现，问题按 P0（阻断）到 P3（打磨）分级
-- ✨ 内置 62 条确定性规则的 slop 检测器，不依赖 LLM 也不需要 API key，能识别 Inter 一统天下、紫蓝渐变、卡片套卡片、灰字压在彩色背景上、每个标题都顶个圆角图标块这类 AI 味，也抓内边距过窄、标题层级跳级等质量问题
-- ✨ live 模式在本地开发服务器上打开浮层，在浏览器里点选元素、循环切换变体，选中后直接写回源码；支持 Vite、Next、SvelteKit、Astro、Nuxt 和纯 HTML
-- ✨ init 读代码后只问它推断不出来的信息（产品给谁用、要做什么、约束是什么）生成 PRODUCT.md；document 把现有视觉体系沉淀为 DESIGN.md，保证后续改动不偏离品牌
-- ✨ 24 条命令覆盖收尾（polish、harden、clarify、adapt、optimize、onboard）和规划（shape、extract、generate），常用的可以用 pin 钉成 /audit 这样的独立快捷命令
-- 👥 适合谁：已在用 Claude Code、Cursor 等工具做前端，想让界面摆脱模板感的开发者和设计师。
 
-`Rust` · Fork 6,701 · 🔗 [官网](https://impeccable.style)
+Fork 20,380 · 🔗 [官网](https://glama.ai/mcp/servers)
 
-### 10. [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) — ⭐ 6,939（今日 +703）
+### 10. [pingdotgg/t3code](https://github.com/pingdotgg/t3code) — ⭐ 65,582（今日 +1,220）
 
-> 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记录整理成可执行的工作流。
+> T3 Code 是 agent 控制台，可用手机、网页或桌面端远程操控本机上的编码智能体。
 
-这是一个面向时间有限的个人投资者的 Claude Skills 交易工作流工具包。它不替你做买卖决定，也不提供任何交易信号，只把市场复盘、风险管理、交易计划、交易日志和复盘改进这些环节拆成可以照着执行的流程。它面向以长期投资、ETF 和股息股为核心，并在市场条件合适时用小仓位做波段交易的投资者。上手方式是从 workflows/ 目录下的 YAML 清单选一条路径，例如 15 分钟每日大盘体检、每周核心组合复盘、风险允许时才找波段候选、每笔平仓后记录复盘、月度绩效复盘；新手可以先走 Your First Week 教程，用不花钱的数据 API 路径跑通第一次市场检查。
+T3 Code 是一个「agent harness 控制面」：它自己不训练模型，而是接管你电脑上已经装好并登录的编码智能体，让你在 iOS、Android、网页和 Electron 桌面端统一查看和控制它们运行。它解决的是 agent 只能在单机终端里跑、离开工位就断线的问题，并沿用你已有的 Claude Code、Codex、Cursor 等订阅，不必另买 API key。装一行 curl 脚本或 npx t3@latest 即可试用；运行 t3 会启动服务并打开本地 Web 应用，t3 service install 能让它常驻后台，再从手机远程接入。
 
-- ✨ 每日市场环境检查：由 market-breadth-analyzer、uptrend-analyzer 和 exposure-coach 组成的 workflow，15 分钟走完，最后给出建议仓位上限和 REDUCE_ONLY 等市场姿态，供人工判断而不是下单
-- ✨ 每周核心组合复盘：portfolio-manager 配合 kanchi-dividend-review-monitor 和 trader-memory-core，检查长期持仓与股息组合，Alpaca 为必需，手动 CSV 是降级方案
-- ✨ 波段机会筛选有前置条件：先用 drawdown-circuit-breaker 判断风险是否允许，通过后才用 vcp-screener 筛选，再经 technical-analyst、position-sizer、pre-trade-discipline-gate 逐层把关
-- ✨ 交易记忆闭环：每笔平仓都通过 trader-memory-core 和 signal-postmortem 归档，形成可回看的交易日志与教训记录
-- ✨ 月度绩效复盘：trader-memory-core、signal-postmortem 和 backtest-expert 一起统计实现盈亏，并据此调整交易规则
-- ✨ Trading Skills Navigator 导航：说明自己的目标后，它会推荐应从哪条 workflow 起步，并标明哪些步骤需要付费数据 API
-- 👥 适合谁：时间有限的个人投资者、长期持有 ETF 和股息股的人，以及想做有纪律的波段交易并坚持写交易日志的人。
+- ✨ 一个界面统管本机多个编码智能体：Claude Code、Codex、Cursor、Grok Build、OpenCode、Antigravity、fx
+- ✨ iOS、Android、Web、Electron 桌面四端覆盖，支持从手机或另一台机器远程访问
+- ✨ 复用你已有的订阅和 CLI 登录状态，前提是这些工具已在本机安装并认证
+- ✨ 安装轻量：一行 curl / PowerShell 脚本，或 npx t3@latest 免安装试用，t3 update 升级
+- ✨ 可注册为后台服务常驻运行，并支持通过 MCP 让外部 agent 接入
+- ✨ 提供权限模式、键盘快捷键、项目设置、外观偏好和多账号切换等细粒度控制
+- 👥 适合谁：已经在用 Claude Code、Codex 等命令行 agent 写代码，并希望多端或远程操控它们的开发者。
 
-`Python` · Fork 1,415 · 🔗 [官网](https://tradermonty.github.io/claude-trading-skills/)
+`TypeScript` · Fork 11,482 · 🔗 [官网](https://t3.codes)
 
 ## 📋 完整榜单
 
@@ -190,16 +183,16 @@ Impeccable 是给 AI 编码工具用的界面设计技能包。执行 npx impecc
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 阿里开源的 AI 代码审查 CLI，混合架构（确定性流水线 + LLM Agent），能给… | `Go` | 53,980 | +763 |
-| 2 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器 | `TypeScript` | 16,999 | +201 |
-| 3 | [obra/superpowers](https://github.com/obra/superpowers) | 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码 | `Shell` | 319,565 | +1,917 |
-| 4 | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | 为 AI 编码代理打造的本地浏览器审阅台：标注计划、审查代码、一键回传反馈。 | `TypeScript` | 13,201 | +691 |
-| 5 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。 | `Python` | 66,284 | +192 |
-| 6 | [stablyai/orca](https://github.com/stablyai/orca) | Orca 是一个 AI 编排器，让你用自己的订阅并行调度 Claude Code、Code… | `TypeScript` | 128,210 | +1,066 |
-| 7 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 193,444 | +862 |
-| 8 | [bannedbook/fanqiang](https://github.com/bannedbook/fanqiang) | 一个按设备和场景整理的科学上网工具与教程合集库，覆盖手机、电脑、路由器和游戏机。 | `Kotlin` | 57,770 | +819 |
-| 9 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 给编码 Agent 装上设计词汇表：用具体命令引导、评审并拦截 AI 味界面。 | `Rust` | 112,443 | +748 |
-| 10 | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 基于 Claude Skills 的个人投资者交易流程工具箱，把市场复盘、风险管理和交易记… | `Python` | 6,939 | +703 |
+| 1 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。 | `Python` | 60,043 | +389 |
+| 2 | [nvm-sh/nvm](https://github.com/nvm-sh/nvm) | POSIX 兼容的 Node.js 版本管理脚本，一条命令即可安装、切换多个 Node 版… | `Shell` | 96,198 | +237 |
+| 3 | [astral-sh/uv](https://github.com/astral-sh/uv) | Rust 编写的极速 Python 包与项目管理器，一个工具顶替 pip、poetry、p… | `Rust` | 92,332 | +258 |
+| 4 | [jquery/jquery](https://github.com/jquery/jquery) | 老牌跨浏览器 DOM 操作与 AJAX 库，现已发布 4.0.0，支持按模块裁剪体积。 | `JavaScript` | 60,069 | +266 |
+| 5 | [appwrite/appwrite](https://github.com/appwrite/appwrite) | Appwrite 是一个开源的一站式云端开发平台，内置 MCP，专为 AI 代理与开发者打… | `TypeScript` | 58,322 | +232 |
+| 6 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。 | `C++` | 11,411 | +24 |
+| 7 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 可自托管或云端的 fair-code 工作流自动化平台，原生支持构建和运营 AI 智能体。 | `TypeScript` | 211,270 | +325 |
+| 8 | [solidjs/solid](https://github.com/solidjs/solid) | Solid 是一个用细粒度响应式直接更新真实 DOM 的声明式 JavaScript UI… | `TypeScript` | 36,695 | +40 |
+| 9 | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | 一份精选的 MCP 服务器目录，帮你快速找到能接进 AI 的工具 | — | 98,158 | +53 |
+| 10 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | T3 Code 是 agent 控制台，可用手机、网页或桌面端远程操控本机上的编码智能体。 | `TypeScript` | 65,582 | +1,220 |
 
 <!-- TRENDING:END -->
 
