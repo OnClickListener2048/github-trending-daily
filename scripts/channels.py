@@ -22,7 +22,7 @@ UA = (
 
 POST_SUMMARY_SYSTEM_PROMPT = (
     "你是面向开发者的中文技术编辑，擅长把社区热帖和新产品介绍翻译并浓缩成一句中文。"
-    "要求：20~45 字，保留产品名和关键信息，只输出这一句话。"
+    "要求：20~45 字，保留产品名和关键信息，必须输出中文（标题是英文时要翻译），只输出这一句话。"
 )
 
 _SOURCE_LABEL = {
@@ -187,7 +187,7 @@ def _summarize_one(item: dict, source: str, cfg: dict) -> str:
         )
         resp.raise_for_status()
         text = resp.json()["choices"][0]["message"]["content"]
-    return text.strip() or post_fallback(item)
+    return text.strip()
 
 
 def summarize_posts(
@@ -207,6 +207,13 @@ def summarize_posts(
             summary = _summarize_one(item, source, cfg)
         except Exception as exc:  # 单个失败不影响整体
             print(f"⚠️ {item['id']} 摘要生成失败，用原标题兜底：{exc}")
+            return
+        if not summary:
+            print(f"⚠️ {item['id']} 摘要为空，保持兜底，不写缓存")
+            return
+        # AI 原样回显标题/官方简介的不算有效摘要，不缓存（保持兜底，冷却后重试）
+        if summary == item["title"] or (item.get("tagline") and summary == item["tagline"]):
+            print(f"⚠️ {item['id']} AI 原样回显，保持兜底，不写缓存")
             return
         entry["summary"] = summary
         entry["analyzed_at"] = date_str
