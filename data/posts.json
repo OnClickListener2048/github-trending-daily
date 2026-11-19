@@ -1,0 +1,78 @@
+{
+  "hn:50497589": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "用约200行纯Jax代码实现了DeepSeek V3模型。"
+  },
+  "hn:50547980": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "ExitPath 是一个开源项目，提供从 Slack、Notion 和 Microsoft 365 迁移或退出的方案。"
+  },
+  "hn:50548161": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "新项目带你逐层拆解旅行"
+  },
+  "ph:1226465": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "Ableten Hybrid AI Travel Planner 发布，让团队成员在同一张地图上协同规划行程。"
+  },
+  "ph:1311952": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "Netlify Server 今日发布，支持运行 WebSocket、多人应用和长时间运行的代理。"
+  },
+  "ph:1319192": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "Source 发布面向 AI 智能体的归因数据层，帮助驱动销售管道增长。"
+  },
+  "ph:1320414": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "Ctruh 推出 Verse Engine，支持一键将 Blender、Unity 或 Unreal 场景转为实时 3D 链接。"
+  },
+  "ph:1321708": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "Fieldwork Code 支持在笔记本或云端进行 AI 编程，并可通过手机远程操作。"
+  },
+  "v2ex:1258346": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "开源项目 Antigravity 推出实时遥测仪表盘，可实时监控和展示运行数据。"
+  },
+  "v2ex:1258350": {
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19"
+  },
+  "v2ex:1258353": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "V2EX 开发者发帖求助：刚购买的 Antigravity Pro 无法登录，询问解决办法。"
+  },
+  "v2ex:1258356": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "一位开发者在V2EX分享：谷歌模型有所提升，并做了个检测重置的网站。"
+  },
+  "v2ex:1258361": {
+    "analyzed_at": "2026-11-19",
+    "first_seen": "2026-11-19",
+    "last_seen": "2026-11-19",
+    "summary": "为 Google Antigravity 2.0 做了状态监控套件，含桌面常驻面板和 CLI 状态栏，可实时显示 tok/s、缓存命中率和剩余额度，全程本地只读。"
+  }
+}
