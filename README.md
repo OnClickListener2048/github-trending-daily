@@ -9,7 +9,7 @@
 
 1. **Star 本仓库** ⭐
 2. 保持 GitHub 邮件通知开启（默认就是开的，不用动）
-3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，同一仓库 3 天内不会重复出现）+ 📋 完整榜单，并附精美 HTML 报告链接
+3. 完成。每天早上 08:30（北京时间）你会收到一封来自 GitHub 的邮件：🏆 今日精选详解（每个仓库"是什么 + 能干什么"，同一仓库 3 天内不会重复出现）+ 🚀 Show HN 新品 + 🧡 Product Hunt 今日榜 + 🇨🇳 V2EX 独立开发 + 📋 完整榜单，并附精美 HTML 报告链接
 
 > 原理：每天自动创建一个 Issue 并 @ 你的用户名，GitHub 会把提及通知默认发送到你的邮箱。不需要填邮箱、不需要注册，**Star 即订阅**。全程使用 GitHub 官方机制，不收集任何个人信息。
 
@@ -218,6 +218,10 @@ T3 Code 是一个「agent harness 控制面」：它自己不训练模型，而�
 | `cooldown_days` | 冷却天数：一个仓库出现后，N 天内不再重复出现（默认 3，即第 4 天起可再次上榜） |
 | `top_n_fill.enabled` | 今日榜单可用仓库不足 `top_n` 时，是否从其他语言的 trending 页补满（默认开） |
 | `top_n_fill.languages` | 补充来源：这些语言的 trending 页（默认 python / typescript / javascript / rust / go / c++ / java / c# / php / ruby / swift / kotlin） |
+| `posts.enabled` | 是否开启独立创业板块（Show HN / Product Hunt / V2EX 分享创造，默认开） |
+| `posts.show_hn.count` / `min_points` | Show HN 展示条数（默认 3）与最低分数过滤（默认 20） |
+| `posts.product_hunt.count` | Product Hunt 今日榜条数（默认 5，来自官方 Atom feed） |
+| `posts.v2ex.count` | V2EX「分享创造」节点条数（默认 5） |
 | `pages_url` | HTML 报告地址（GitHub Pages，邮件和日报里带这个链接） |
 | `repo_url` | 仓库地址（HTML 报告页的订阅按钮用） |
 | `mentions.enabled` | 是否 @ 提及 stargazer（关闭后改为纯 Issue 模式，需用户 Watch 才能收到通知） |
@@ -255,6 +259,9 @@ GitHub 通知邮件由 GitHub 统一渲染，无法注入自定义 CSS。所以�
 
 **同一个仓库会重复出现吗？**
 不会在短时间内重复。`data/repos.json`（随仓库提交）记录所有出现过的仓库和最近出现日期，冷却期默认为 3 天：一个仓库上榜后，接下来 3 天内不会再出现在日报里，第 4 天起可以再次上榜。每次运行先从今日 trending 榜单里挑不在冷却期内的仓库；不够 `top_n` 时，再从各语言 trending 页补充同样不在冷却期内的仓库（同样在 trending、但不在今日榜单）。AI 介绍缓存在缓存里，冷却结束后再次上榜可直接复用，不重复消耗。
+
+**除了 Trending 还有哪些内容？**
+日报还聚合了三个独立创业/一人公司渠道（`config.json` 的 `posts` 可调）：🚀 Show HN（Hacker News 的新品发布帖，按分数取 Top N）、🧡 Product Hunt 今日榜（官方 Atom feed）、🇨🇳 V2EX「分享创造」节点（中文独立开发者作品）。每条内容同样遵守 3 天冷却期，并用 AI 生成一句话中文摘要（缓存在 `data/posts.json`）；单个渠道抓取失败只跳过该栏目，不影响整封邮件。
 
 ## ⚠️ 免责声明
 

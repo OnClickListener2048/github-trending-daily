@@ -211,12 +211,13 @@ def render_report(
     top_n: int = 10,
     featured: list[dict] | None = None,
     table_note: str = "",
+    sections: list[dict] | None = None,
 ) -> str:
     """渲染 Markdown 日报（Issue 正文 / README 区块 / @提及邮件内容）。
 
-    featured 是进入详细介绍的仓库列表（默认前 top_n 个）。连续在榜较久的
-    仓库会被跳过，缺额由榜单外同样是 trending、但近期未展示过的新仓库补位；
-    榜单内仓库编号沿用原始名次（可能不连续），榜单外仓库用 🆕 标记。
+    featured 是进入详细介绍的仓库列表（默认前 top_n 个）。
+    sections 是渠道聚合栏目（Show HN / Product Hunt / V2EX 等）：
+    [{"title": str, "items": [{"title", "url", "summary", "meta"}]}]，为空则省略。
     """
     top = list(featured) if featured is not None else repos[:top_n]
     rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
@@ -272,6 +273,18 @@ def render_report(
             meta.append(f"🔗 [官网]({r['homepage']})")
         lines.append(" · ".join(meta))
         lines.append("")
+
+    for section in sections or []:
+        lines += ["", f"## {section['title']}", ""]
+        for item in section["items"]:
+            title = item["title"].replace("]", "\\]").replace("[", "\\[")
+            meta = f" · {item['meta']}" if item.get("meta") else ""
+            lines.append(f"[{title}]({item['url']}){meta}")
+            summary = item.get("summary") or item.get("tagline") or ""
+            if summary:
+                lines.append("")
+                lines.append(f"> {summary}")
+            lines.append("")
 
     lines += ["## 📋 完整榜单", ""]
     if table_note:
@@ -443,6 +456,20 @@ def _card_html(r: dict, i: int, featured: bool) -> str:
     return f'<div class="{cls}">{head}{body}{stats}</div>'
 
 
+def _post_card_html(item: dict) -> str:
+    """渠道聚合帖子的卡片（Show HN / Product Hunt / V2EX）。"""
+    title = html.escape(item["title"])
+    url = html.escape(item.get("url", ""))
+    summary = html.escape(item.get("summary") or item.get("tagline") or "")
+    meta = html.escape(item.get("meta", ""))
+    meta_html = f'<div class="stats"><span>{meta}</span></div>' if meta else ""
+    return (
+        f'<div class="card"><div class="card-head">'
+        f'<a class="name" href="{url}" target="_blank" rel="noopener">{title}</a></div>'
+        f'<p class="summary">{summary}</p>{meta_html}</div>'
+    )
+
+
 def render_html(
     repos: list[dict],
     date_str: str,
@@ -451,11 +478,13 @@ def render_html(
     top_n: int = 10,
     featured: list[dict] | None = None,
     table_note: str = "",
+    sections: list[dict] | None = None,
 ) -> str:
     """渲染完全自定义样式的 HTML 报告页（GitHub Pages）。
 
     精选卡片编号沿用完整榜单里的 GitHub 原始名次（可能不连续）；
     榜单外补位的新仓库没有名次，用 🆕 标记。
+    sections 是渠道聚合栏目，插在精选与完整榜单之间。
     """
     top = list(featured) if featured is not None else repos[:top_n]
     rank_of = {r["full_name"]: i for i, r in enumerate(repos, 1)}
@@ -464,6 +493,14 @@ def render_html(
         _card_html(r, rank_of.get(r["full_name"], 0), True) for r in top
     )
     all_html = "\n".join(_card_html(r, i, False) for i, r in enumerate(repos, 1))
+
+    sections_html = ""
+    for section in sections or []:
+        cards = "\n".join(_post_card_html(item) for item in section["items"])
+        sections_html += (
+            f"  <section>\n    <h2>{html.escape(section['title'])}</h2>\n"
+            f'    <div class="grid">\n{cards}\n    </div>\n  </section>\n'
+        )
 
     fill_note = f"（另补充 {fill_count} 个榜单外 trending 新项目）" if fill_count else ""
     fill_hint = (
@@ -510,7 +547,7 @@ def render_html(
 {top_html}
     </div>
   </section>
-  <section>
+{sections_html}  <section>
     <h2>📋 完整榜单（点开卡片查看详细介绍）</h2>
     {table_note_html}
     <div class="grid">

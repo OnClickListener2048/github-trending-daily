@@ -15,6 +15,7 @@ sys.path.insert(0, SCRIPT_DIR)
 
 from trending import fetch_trending  # noqa: E402
 from report import analyze_all, render_html, render_report  # noqa: E402
+from channels import build_post_sections  # noqa: E402
 import publish  # noqa: E402
 
 ROOT = os.path.dirname(SCRIPT_DIR)
@@ -209,6 +210,21 @@ def main() -> None:
     table_note = f"同一仓库 {cooldown} 天内不会重复出现，往期出现过的不会重复收录"
     print(f"📌 今日精选 {len(selected)} 个（{cooldown} 天冷却外的仓库）")
 
+    # 独立创业渠道聚合（Show HN / Product Hunt / V2EX 分享创造）
+    sections: list[dict] = []
+    posts_cfg = cfg.get("posts") or {}
+    if posts_cfg.get("enabled", True):
+        posts_cache_path = os.path.join(ROOT, "data", "posts.json")
+        posts_cache = load_cache(posts_cache_path)
+        sections = build_post_sections(
+            posts_cfg, ai_cfg, posts_cache, date_str, cooldown, use_ai
+        )
+        save_cache(posts_cache_path, posts_cache)
+        print(
+            "📡 独立创业板块："
+            + ("、".join(s["title"] for s in sections) or "今日各渠道均无冷却期外的新内容")
+        )
+
     report = render_report(
         selected,
         date_str,
@@ -216,6 +232,7 @@ def main() -> None:
         top_n=top_n,
         featured=selected,
         table_note=table_note,
+        sections=sections,
     )
     html_page = render_html(
         selected,
@@ -225,6 +242,7 @@ def main() -> None:
         top_n=top_n,
         featured=selected,
         table_note=table_note,
+        sections=sections,
     )
 
     daily_dir = os.path.join(ROOT, "data", "daily")

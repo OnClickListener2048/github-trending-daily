@@ -9,6 +9,12 @@
     "languages": ["python", "typescript", "javascript", "rust", "go", "c++", "java", "c#", "php", "ruby", "swift", "kotlin"],
     "since": "daily"
   },
+  "posts": {
+    "enabled": true,
+    "show_hn": {"enabled": true, "count": 3, "min_points": 20},
+    "product_hunt": {"enabled": true, "count": 5},
+    "v2ex": {"enabled": true, "count": 5}
+  },
   "pages_url": "https://onclicklistener2048.github.io/github-trending-daily/",
   "repo_url": "https://github.com/OnClickListener2048/github-trending-daily",
   "mentions": {
