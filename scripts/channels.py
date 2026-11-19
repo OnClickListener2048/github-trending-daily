@@ -8,11 +8,13 @@
 from __future__ import annotations
 
 import html as html_lib
+import os
 import re
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 
+import anthropic
 import requests
 
 UA = (
@@ -150,18 +152,13 @@ def _post_user_prompt(item: dict, source: str) -> str:
     return "\n".join(lines)
 
 
-def _summarize_one(item: dict, source: str, cfg: dict) -> str:
+def _call_llm(cfg: dict, user_prompt: str) -> str:
     api_key_env = cfg.get("api_key_env", "DEEPSEEK_API_KEY")
-    import os
-
     api_key = os.environ.get(api_key_env)
     if not api_key:
         raise ValueError(f"未配置环境变量 {api_key_env}")
     model = cfg.get("model", "deepseek-flash")
-    user_prompt = _post_user_prompt(item, source)
     if cfg.get("provider", "deepseek") == "anthropic":
-        import anthropic
-
         client = anthropic.Anthropic(api_key=api_key)
         response = client.messages.create(
             model=model,
@@ -169,25 +166,41 @@ def _summarize_one(item: dict, source: str, cfg: dict) -> str:
             system=POST_SUMMARY_SYSTEM_PROMPT,
             messages=[{"role": "user", "content": user_prompt}],
         )
-        text = "".join(block.text for block in response.content if block.type == "text")
-    else:
-        resp = requests.post(
-            f"{cfg.get('base_url', 'https://api.deepseek.com/v1').rstrip('/')}/chat/completions",
-            headers={"Authorization": f"Bearer {api_key}"},
-            json={
-                "model": model,
-                "temperature": 0.3,
-                "max_tokens": 200,
-                "messages": [
-                    {"role": "system", "content": POST_SUMMARY_SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-            },
-            timeout=120,
-        )
-        resp.raise_for_status()
-        text = resp.json()["choices"][0]["message"]["content"]
-    return text.strip()
+        return "".join(
+            block.text for block in response.content if block.type == "text"
+        ).strip()
+    resp = requests.post(
+        f"{cfg.get('base_url', 'https://api.deepseek.com/v1').rstrip('/')}/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}"},
+        json={
+            "model": model,
+            "temperature": 0.3,
+            "max_tokens": 200,
+            "messages": [
+                {"role": "system", "content": POST_SUMMARY_SYSTEM_PROMPT},
+                {"role": "user", "content": user_prompt},
+            ],
+        },
+        timeout=120,
+    )
+    resp.raise_for_status()
+    return resp.json()["choices"][0]["message"]["content"].strip()
+
+
+def _summarize_one(item: dict, source: str, cfg: dict) -> str:
+    """生成一句话中文摘要；原样回显标题/简介时再试一次，仍回显则返回空串。"""
+    echoed = {item["title"], item.get("tagline", "")}
+    user_prompt = _post_user_prompt(item, source)
+    text = _call_llm(cfg, user_prompt)
+    if text and text not in echoed:
+        return text
+    retry_prompt = (
+        user_prompt
+        + "\n\n注意：你刚才原样重复了标题或英文原文，不符合要求。"
+        "请务必翻译成一句中文（20~45 字），只输出这句话。"
+    )
+    text = _call_llm(cfg, retry_prompt)
+    return text if text and text not in echoed else ""
 
 
 def summarize_posts(
