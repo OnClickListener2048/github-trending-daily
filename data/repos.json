@@ -243,7 +243,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。",
-    "last_seen": "2026-11-11",
+    "last_seen": "2026-11-20",
     "streak_days": 1,
     "summary": "一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。"
   },
@@ -457,7 +457,7 @@
     ],
     "first_seen": "2026-11-15",
     "intro": "LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。",
-    "last_seen": "2026-11-15",
+    "last_seen": "2026-11-20",
     "streak_days": 1,
     "summary": "自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。"
   },
@@ -636,6 +636,23 @@
     "streak_days": 1,
     "summary": "一个开放、轻量、基于事件的协议，标准化 AI Agent 与前端应用的连接方式。"
   },
+  "agent-substrate/substrate": {
+    "analyzed_at": "2026-11-20",
+    "audience": "需要多租户、大规模运行不可信 agent 与工具的 AI 平台团队和基础设施工程师。",
+    "features": [
+      "强制 VM 级隔离：每个 actor 都运行在独立的 gVisor（runsc）或 Cloud Hypervisor 微 VM 沙箱中，计算、网络、存储全部隔离，不支持普通 Linux 容器",
+      "Actor Teleport：空闲 actor 被快照移出内存，需要时恢复到池中任意 worker，RAM 工作内存与文件系统状态完整保留，不丢失进行中的会话和工具状态",
+      "10x–30x 超卖：把大量有状态 actor 映射到少量热 worker pod 上，只在 agent 真正推理或调用工具时消耗计算",
+      "默认每个活跃 actor 都获得短期 SPIFFE X.509 证书，egress 网关还可按出站策略现场签发 per-actor JWT，身份中携带 actor 与 atespace 信息，可对接外部身份体系",
+      "沙箱内零凭据：agent 自身拿不到身份证书、API key 或云 token，由内置 egress 网关 atenet-egress 在沙箱之外向被批准的外发请求注入凭据，即使被 prompt 注入也无东西可窃取",
+      "默认拒绝的网络：私有网络栈，入站只能经 atenet-router 进入，禁止 actor 之间横向访问和控制面访问，出站被 egress 网关限制；该网关是可替换的外部策略执行点，可挂接自己的授权、DLP、prompt 注入扫描或云 IAM 策略"
+    ],
+    "first_seen": "2026-11-20",
+    "intro": "Agent Substrate 是运行在标准 Kubernetes 上的安全加固运行时。它解决一个现实矛盾：agent 大部分时间在等待模型、工具或人，却一直占用着内存和计算资源。Substrate 把有状态 actor 快照出内存，请求到达时再恢复到一小池预热 worker 上，恢复时间不到 500ms，每秒可完成 500+ 次激活，密度比普通容器高一个数量级。它定位为低约束运行时，并非 agent SDK，工作负载不限于 AI agent；沙箱支持 gVisor 和 Cloud Hypervisor 微 VM，沿用熟悉的 Pod、自动扩缩容和 NetworkPolicy。",
+    "last_seen": "2026-11-20",
+    "streak_days": 1,
+    "summary": "面向 Kubernetes 的零信任 agent 沙箱运行时，让海量 agent 以远超容器的密度安全复用节点。"
+  },
   "alibaba/open-code-review": {
     "analyzed_at": "2026-11-14",
     "audience": "需要把代码审查自动化接入日常开发或 CI 的团队与个人开发者，尤其是对误报噪音、API 成本和审查耗时敏感的工程团队。",
@@ -686,6 +703,23 @@
     "last_seen": "2026-11-04",
     "streak_days": 1,
     "summary": "按住快捷键说话、松开就自动粘贴到当前应用的本地语音听写工具，支持 Mac、Windows 和 Linux。"
+  },
+  "anomalyco/opencode": {
+    "analyzed_at": "2026-11-20",
+    "audience": "适合习惯在终端工作的开发者，尤其是需要 AI 辅助读代码、改代码、执行命令的人。",
+    "features": [
+      "终端 UI（TUI）形式的编码智能体，直接在命令行里工作",
+      "内置 build 与 plan 两个 agent，用 Tab 键随时切换",
+      "plan 为只读模式：默认拒绝文件编辑，执行 bash 前先征求许可，适合探索陌生代码库",
+      "general 子代理用于复杂搜索和多步任务，可在消息中用 @general 调用",
+      "安装方式覆盖 curl 脚本、npm/bun/pnpm/yarn、Homebrew、Arch 的 pacman 与 AUR、mise、Nix",
+      "提供 Beta 桌面应用，支持 macOS（Apple Silicon/Intel）、Windows 和 Linux 的 deb/rpm/AppImage"
+    ],
+    "first_seen": "2026-11-20",
+    "intro": "OpenCode 是一个开源的 AI 编码智能体，官方定位就是「The open source coding agent」。它把 AI 助手放进你的终端：既能直接改代码、跑 bash 命令干开发活，也能切成只读模式，先摸清陌生代码库再动手。安装很轻，一条 curl 脚本或 npm、brew、pacman、mise、nix 都能装好，另外还提供处于 Beta 阶段的桌面应用（macOS、Windows、Linux）。想深入了解配置可以看官方文档，社区在 Discord 和 X 上。",
+    "last_seen": "2026-11-20",
+    "streak_days": 1,
+    "summary": "开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。"
   },
   "anthropics/claude-quickstarts": {
     "analyzed_at": "2026-11-10",
@@ -887,7 +921,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。",
-    "last_seen": "2026-11-16",
+    "last_seen": "2026-11-20",
     "streak_days": 1,
     "summary": "把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具"
   },
@@ -1040,7 +1074,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。",
-    "last_seen": "2026-11-16",
+    "last_seen": "2026-11-20",
     "streak_days": 1,
     "summary": "装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用"
   },
@@ -1266,7 +1300,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。",
-    "last_seen": "2026-11-16",
+    "last_seen": "2026-11-20",
     "streak_days": 1,
     "summary": "Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统"
   },
@@ -1586,6 +1620,23 @@
     "streak_days": 3,
     "summary": "Meta 开源的设计系统，含 150+ 组件，可深度定制，也面向 AI 编程助手"
   },
+  "microsoft/BitNet": {
+    "analyzed_at": "2026-11-20",
+    "audience": "希望在本地或边缘设备低成本、低能耗部署 1-bit/三值大模型的开发者与研究者。",
+    "features": [
+      "面向 BitNet b1.58 三值模型的官方优化推理内核，CPU 推理无损且显著加速",
+      "x86 CPU 上 2.37x~6.17x 加速、71.9%~82.2% 能耗下降；ARM 上 1.37x~5.07x 加速、55.4%~70.0% 能耗下降",
+      "单颗 CPU 即可运行 100B BitNet b1.58 模型，达到 5-7 token/s 的类人阅读速度",
+      "官方 GPU 推理内核，把 1-bit 推理从 CPU 扩展到 GPU（NPU 支持在路上）",
+      "提供 BitNet-b1.58-2B-4T 官方模型（2.4B 参数、4T token 训练）及配套 Hugging Face 模型集合",
+      "支持 I2_S 量化转换与优化内核，并已扩展至 1-bit embedding 模型（0.6B/270M，prefill 较 F16 快 1.32x~2.28x）"
+    ],
+    "first_seen": "2026-11-20",
+    "intro": "bitnet.cpp 是 BitNet b1.58 等 1-bit 大模型的官方推理框架。它提供一组专为三值权重优化的内核，解决低比特模型在实际硬件上推理慢、能耗高的问题：在 x86 CPU 上比全精度模型快 2.37x~6.17x、省电 71.9%~82.2%，ARM 上快 1.37x~5.07x、省电 55.4%~70.0%，且推理无损，甚至能在单颗 CPU 上以 5-7 token/s 跑 100B 模型。可直接从源码编译在本地 CPU 或 GPU 上运行，也可先试在线 Demo；配套 Hugging Face 上的 BitNet-b1.58-2B-4T 官方模型与 I2_S 量化转换工具链。",
+    "last_seen": "2026-11-20",
+    "streak_days": 1,
+    "summary": "微软官方 1-bit LLM 推理框架，在 CPU 与 GPU 上实现快速且无损的 1.58-bit 模型推理。"
+  },
   "microsoft/Procexp-Mac": {
     "analyzed_at": "2026-11-13",
     "audience": "适合需要深入排查进程、句柄、签名与系统性能的 macOS 开发者、运维和安全分析人员。",
@@ -1607,6 +1658,23 @@
     "first_seen": "2026-11-06",
     "last_seen": "2026-11-06",
     "streak_days": 1
+  },
+  "microsoft/markitdown": {
+    "analyzed_at": "2026-11-20",
+    "audience": "需要给 LLM 或文本分析流水线批量准备文档数据的 Python 开发者、数据工程师和 AI 应用团队。",
+    "features": [
+      "支持 PDF、Word、PowerPoint、Excel、EPub、HTML、CSV/JSON/XML、ZIP 等多种输入格式",
+      "保留标题、列表、表格、链接等关键文档结构，而不是退化为纯文本",
+      "图片可提取 EXIF 元数据并做描述，音频可提取元数据并转写（依赖托管服务）",
+      "支持 YouTube URL 转录和 Outlook 邮件转换",
+      "可选依赖按格式拆分安装（如 [pdf, docx, pptx]），也可用 [all] 一次装齐",
+      "支持第三方插件，默认关闭，需用 --list-plugins / --use-plugins 管理，官方还提供 markitdown-ocr 插件为 PDF、DOCX、PPTX、XLSX 中的内嵌图片补充 OCR"
+    ],
+    "first_seen": "2026-11-20",
+    "intro": "MarkItDown 是一个轻量级 Python 工具，用来把 PDF、Office 文档、图片、音频、HTML 等多种格式转换成 Markdown。它和 textract 定位相似，但重点是保留标题、列表、表格、链接等文档结构，方便喂给 LLM 和文本分析流水线。可以用命令行直接转换（markitdown file.pdf > out.md，支持 -o 和管道输入），也可以作为库调用。它更偏向给分析工具消费，而不是追求人类阅读级的高保真排版。",
+    "last_seen": "2026-11-20",
+    "streak_days": 1,
+    "summary": "微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。"
   },
   "microsoft/vscode": {
     "first_seen": "2026-11-07",
@@ -1874,8 +1942,8 @@
     ],
     "first_seen": "2026-11-02",
     "intro": "Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。",
-    "last_seen": "2026-11-04",
-    "streak_days": 3,
+    "last_seen": "2026-11-20",
+    "streak_days": 1,
     "summary": "无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。"
   },
   "paperclipai/paperclip": {

@@ -5,6 +5,12 @@
     "last_seen": "2026-11-19",
     "summary": "用约200行纯Jax代码实现了DeepSeek V3模型。"
   },
+  "hn:50532385": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Alloy CSS 发布，提供无需 JavaScript 即可运行的对话框、菜单和标签页组件。"
+  },
   "hn:50547980": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -17,17 +23,41 @@
     "last_seen": "2026-11-19",
     "summary": "新项目带你逐层拆解旅行"
   },
+  "hn:50548660": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Mastra 团队发布开源软件工厂 Mastra Factory，用于构建 Mastra 本身。"
+  },
+  "hn:50561515": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "受 H"
+  },
   "ph:1226465": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Ableten Hybrid AI Travel Planner 发布，让团队成员在同一张地图上协同规划行程。"
   },
+  "ph:1310799": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Manufact 今日发布，支持将 MCP 发布到各插件市场并完成测试。"
+  },
   "ph:1311952": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Netlify Server 今日发布，支持运行 WebSocket、多人应用和长时间运行的代理。"
+  },
+  "ph:1312482": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Stripo Email Widgets 让你无需写代码，就能在下一封邮件里嵌入小游戏、测验或问卷。"
   },
   "ph:1319192": {
     "analyzed_at": "2026-11-19",
@@ -46,6 +76,24 @@
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Fieldwork Code 支持在笔记本或云端进行 AI 编程，并可通过手机远程操作。"
+  },
+  "ph:1321837": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Noteshell 在 Product Hunt 发布，提供能搭建并运营工作区的 AI 队友。"
+  },
+  "ph:1321847": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Room AI 让你像和设计师"
+  },
+  "ph:1322379": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "Tecla 是一款以待办清单为界面的主动型 AI 智能体。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -74,5 +122,35 @@
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "为 Google Antigravity 2.0 做了状态监控套件，含桌面常驻面板和 CLI 状态栏，可实时显示 tok/s、缓存命中率和剩余额度，全程本地只读。"
+  },
+  "v2ex:1258551": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "ConvoExport 已上架 Edge，可把 ChatGPT 和 Claude 对话完全本地导出为 Markdown、TXT、Word 或 PDF。"
+  },
+  "v2ex:1258553": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "独立开发者上线 AI 羊毛网站，搜集了 300 款免费 AI 工具，分享并求反馈。"
+  },
+  "v2ex:1258557": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "独立开发者分享「回声口袋」，支持中文音视频转文字，带时间轴和说话人区分，可导出字幕。"
+  },
+  "v2ex:1258559": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "独立开发者分享「波波小红书获客助手」，支持养号、AI 自动评论和自动发现线索，并送码。"
+  },
+  "v2ex:1258565": {
+    "analyzed_at": "2026-11-20",
+    "first_seen": "2026-11-20",
+    "last_seen": "2026-11-20",
+    "summary": "开发者做了个 WorkBuddy skill 用于生成儿童英语绘本，并晒出样例外。"
   }
 }
