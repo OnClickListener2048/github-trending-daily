@@ -5,11 +5,23 @@
     "last_seen": "2026-11-19",
     "summary": "用约200行纯Jax代码实现了DeepSeek V3模型。"
   },
+  "hn:50526023": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "我开发了一个音频转MIDI模型，效率提升60倍。"
+  },
   "hn:50532385": {
     "analyzed_at": "2026-11-20",
     "first_seen": "2026-11-20",
     "last_seen": "2026-11-20",
     "summary": "Alloy CSS 发布，提供无需 JavaScript 即可运行的对话框、菜单和标签页组件。"
+  },
+  "hn:50541568": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "Show HN 发布 Tinnitus frequency finder and audio notch tool，帮用户找到耳鸣频率并用音频陷波工具缓解。"
   },
   "hn:50547980": {
     "analyzed_at": "2026-11-19",
@@ -53,17 +65,35 @@
     "last_seen": "2026-11-19",
     "summary": "Netlify Server 今日发布，支持运行 WebSocket、多人应用和长时间运行的代理。"
   },
+  "ph:1312059": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "aiteam.space 发布：打造一支 AI 团队，每个智能体都拥有独立电脑。"
+  },
   "ph:1312482": {
     "analyzed_at": "2026-11-20",
     "first_seen": "2026-11-20",
     "last_seen": "2026-11-20",
     "summary": "Stripo Email Widgets 让你无需写代码，就能在下一封邮件里嵌入小游戏、测验或问卷。"
   },
+  "ph:1314856": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "FFMPA Kids News 上线，为5到15岁孩子提供平静、经事实核查的新闻内容。"
+  },
   "ph:1319192": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Source 发布面向 AI 智能体的归因数据层，帮助驱动销售管道增长。"
+  },
+  "ph:1319569": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "Salus 今日在 Product Hunt 发布，帮助用户发现捷克共和国的福利与"
   },
   "ph:1320414": {
     "analyzed_at": "2026-11-19",
@@ -94,6 +124,18 @@
     "first_seen": "2026-11-20",
     "last_seen": "2026-11-20",
     "summary": "Tecla 是一款以待办清单为界面的主动型 AI 智能体。"
+  },
+  "ph:1322979": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "Andromon 发布：可将你的安卓手机投到电脑上使用，且免费。"
+  },
+  "ph:1323788": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "greatai 在 Product Hunt 发布，为开源项目和非营利组织提供免费 AI 加人工代码审查。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -152,5 +194,35 @@
     "first_seen": "2026-11-20",
     "last_seen": "2026-11-20",
     "summary": "开发者做了个 WorkBuddy skill 用于生成儿童英语绘本，并晒出样例外。"
+  },
+  "v2ex:1258731": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "独立开发者推出的 File-Organizer（文件归档与批量重命名）已上架 App Store，并为庆祝黑五回馈"
+  },
+  "v2ex:1258744": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "开发者制作了一款B站浏览器插件，可屏蔽低质量或不喜欢的UP主。"
+  },
+  "v2ex:1258746": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "开发者分享 ClassyGit，可把 Gist 当博客、把 GitHub 变成复古个人主页，并抽送 50USDT。"
+  },
+  "v2ex:1258748": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "开发者推出两款单"
+  },
+  "v2ex:1258754": {
+    "analyzed_at": "2026-11-21",
+    "first_seen": "2026-11-21",
+    "last_seen": "2026-11-21",
+    "summary": "独立开发者持续更新一个专注软考系统架构师刷题的网站。"
   }
 }

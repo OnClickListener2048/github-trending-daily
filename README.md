@@ -17,233 +17,229 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-20
+# 🔥 GitHub 每日 Trending · 2026-11-21
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) — ⭐ 13,009（今日 +1,349）
+### 1. [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) — ⭐ 71,591（今日 +681）
 
-> 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用
+> 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN 与 Polymarket 上的真实声音。
 
-Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。
+last30days 是一个可装进 Claude Code、Cursor、Copilot、Gemini CLI 等 50 多个 Agent Skills 宿主的搜索技能。它解决的核心问题是：Google 只聚合编辑和 SEO 内容，而 Reddit 评论、X 帖子、YouTube 逐字稿、TikTok 互动、Polymarket 赔率分散在各自的围墙花园里，没有哪个 AI 原生能同时搜到。你只需带上自己的 API key 或浏览器会话，用一句 /last30days <主题或人名> 就能并行检索十几个平台，按点赞、投票和真金白银的赔率打分，再由 agent 裁判合成一份有据可查的简报。零配置即可用 Reddit、HN、Polymarket、GitHub，跑一次向导 30 秒解锁其余源。
 
-- ✨ 83 个技能 + 15 个斜杠命令，按主题自动触发，无需按名称调用
-- ✨ 58 个 hunt-* 漏洞类别技能，整理自 681 份公开 HackerOne 报告，含检测模式、payload、绕过表和链式利用模板
-- ✨ bb-methodology 与 redteam-mindset 提供五阶段非线性工作流、批判性思维框架和红队操作纪律
-- ✨ 企业外围攻击矩阵：M365/Entra、Okta、vCenter、SSL-VPN、SharePoint、云 IAM 的 2024–2026 CVE 链与凭据后提权
-- ✨ triage-validation 七问门、VRT 感知定级、OOS 反驳话术、PII 脱敏与红队交付物
-- ✨ 插件市场一键安装或脚本复制安装，附带 hunt 接驳目录脚手架、cbh CLI 与 Burp MCP 集成，可同时装到多个 agent harness
-- 👥 适合谁：从事授权漏洞赏金、外部红队与 Web 应用安全测试的安全研究员
+- ✨ 一条命令 /last30days <主题> 并行检索 Reddit、X、YouTube、TikTok、Instagram Reels、Hacker News、Polymarket、GitHub、Digg 等多个平台
+- ✨ 按各平台真实互动信号（upvote、likes、播放量、Polymarket 资金赔率）排序打分，而不是按编辑推荐
+- ✨ 对搜索对象做人物尽调：近期推文、播客逐字稿、PR 合并速度、高星仓库与发布说明
+- ✨ YouTube 长视频逐字稿全文检索，提炼出最值得引用的几句话
+- ✨ Polymarket 市场赔率自动附在相关事件下方，并标注赔率变动幅度
+- ✨ 零配置开箱可用 Reddit、HN、Polymarket、GitHub、专利申请与招聘页面，向导 30 秒解锁 X、YouTube、TikTok、arXiv、Techmeme
+- 👥 适合谁：需要快速摸清某个话题或某个人近 30 天真实动态的开发者、创业者、销售与投资人。
 
-`Python` · Fork 1,621 · 🔗 [官网](https://elementalsouls.github.io/Claude-BugHunter)
+`Python` · Fork 6,342
 
-### 2. [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ⭐ 10,823（今日 +302）
+### 2. [affaan-m/ECC](https://github.com/affaan-m/ECC) — ⭐ 307,985（今日 +649）
 
-> Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统
+> 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。
 
-这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。
+ECC 是一套面向 AI 编码代理的 harness 优化系统。它要解决的是：代理虽然能用，但每次都得重写提示、丢掉上下文、缺少安全边界。ECC 把技能（Skills）、直觉（Instincts）、记忆（Memory）、安全（Security）和“先调研后开发”的流程做成一层可安装的能力，并同时适配 Claude Code、Codex、Opencode、Cursor 等多种 harness。用法很轻：在 Claude Code 里跑引导式安装，或用原生插件命令装同一个 ecc@ecc 插件（两者别叠加）；另外还有 npm 包 ecc-universal、ecc-agentshield 和面向私有仓库的 GitHub App。项目为 MIT 许可，仓库本身永久免费。
 
-- ✨ 从文本或图片生成新界面，支持编辑已有屏幕、批量生成设计变体
-- ✨ 把 React、Vue 等前端代码转成 Stitch 设计稿（HTML 提取 + 设计系统 + 上传）
-- ✨ 从源码自动抽取 DESIGN.md 设计系统，并一键套用到全部屏幕
-- ✨ 管理 Stitch 设计系统，上传 DESIGN.md、应用主题
-- ✨ 提取自包含的静态 HTML，便于交付或迁移
-- ✨ 多客户端插件化安装：Codex 市场、Claude Code/Cursor 的 npx 安装、OpenCode 手动接入
-- 👥 适合谁：需要把 UI 设计稿与代码库打通的前端工程师、全栈开发者和设计工程师，尤其是已在 Claude Code、Cursor、Codex 等 Agent 中工作的人。
+- ✨ Skills 技能层：把常用工作流封装成代理可直接调用的技能，不用每次从零写提示
+- ✨ Instincts 直觉机制：让代理在合适场景自动触发既定行为，减少人工干预
+- ✨ Memory 记忆能力：在会话之间保留项目上下文，避免反复交代背景
+- ✨ Security 安全防护：通过 ecc-agentshield 为代理行为加一层安全检查
+- ✨ Research-first 开发流程：强调先调研、再动手的代理工作方式
+- ✨ 跨 harness 适配：同一套能力覆盖 Claude Code、Codex、Opencode、Cursor 等，并支持插件、npm 包与 GitHub App 多种安装方式
+- 👥 适合谁：使用 Claude Code、Cursor 等 AI 编码代理的个人开发者与团队。
 
-`TypeScript` · Fork 1,393 · 🔗 [官网](https://stitch.withgoogle.com/docs/mcp/setup)
+`JavaScript` · Fork 45,323 · 🔗 [官网](https://ecc.tools)
 
-### 3. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) — ⭐ 58,125（今日 +1,853）
+### 3. [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) — ⭐ 5,501（今日 +454）
 
-> 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具
+> Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。
 
-AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。
+PaperOrchestra 是 Google Cloud AI Research 开源的多智能体写作框架，专门解决「研究做完了但论文写不动」的问题。你只需提供非结构化的前期材料（idea、实验日志），它就会像一支分工明确的小团队一样，依次完成大纲生成、文献检索与综述、分节撰写、内容打磨和图表绘制，最终输出符合目标会议模板、可直接投稿的 LaTeX 稿件。使用上先建 Conda 环境并配置 Semantic Scholar、OpenAI 或 Gemini 的 API Key，再通过 bash 脚本或 Python CLI 指定原始材料目录、LaTeX 模板目录和输出目录即可运行，还附带 Streamlit 交互 Demo。
 
-- ✨ 自动重链接：把 PS5 可执行文件转换为 Linux、Windows 原生可执行格式
-- ✨ 提供 system prx 系统库实现，支持动态链接，无需模拟器或独立运行时进程
-- ✨ 着色器重编译器输出 SPIR-V，并可用 Spirv-Tools 校验结果
-- ✨ 网页版转换器，所有文件处理都在本地设备完成，不上传服务器
-- ✨ 输入映射支持 SDL 手柄（含摇杆与扳机），键鼠可通过 anyps5-input.ini 配置
-- ✨ 仅含 relinker 的构建可在 macOS（含 Apple silicon）上运行
-- 👥 适合谁：对 PS5 软件互操作性、移植研究与软件保存感兴趣的开发者和研究人员
+- ✨ 多智能体流水线：大纲、文献综述、分节写作、内容精修、绘图各司其职，端到端产出论文
+- ✨ 自动文献综合：通过 Semantic Scholar 搜索、筛选并整合相关文献到正文中
+- ✨ 图表生成：可从代码生成实验 plot，并支持插入概念示意图
+- ✨ LaTeX 自动化：按 CVPR 等目标会议模板输出投稿级稿件，模板可自行扩展
+- ✨ 灵活输入：接受不受约束的 pre-writing 材料，如研究想法与实验日志
+- ✨ 可配置模型与交互 Demo：写作/反思智能体可分别指定 LLM，并提供 Streamlit 前端
+- 👥 适合谁：需要快速把实验结果整理成论文草稿的 AI 研究者、学生和工业界研究工程师。
 
-`C++` · Fork 5,609 · 🔗 [官网](https://boykopovar.github.io/AnyPS5/)
+`Python` · Fork 689 · 🔗 [官网](https://yiwen-song.github.io/paper_orchestra/)
 
-### 4. [microsoft/markitdown](https://github.com/microsoft/markitdown) — ⭐ 197,104（今日 +434）
+### 4. [FlashML-org/FreeVideo](https://github.com/FlashML-org/FreeVideo) — ⭐ 3,924（今日 +293）
 
-> 微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。
+> 在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存、16 GB 内存即可起步。
 
-MarkItDown 是一个轻量级 Python 工具，用来把 PDF、Office 文档、图片、音频、HTML 等多种格式转换成 Markdown。它和 textract 定位相似，但重点是保留标题、列表、表格、链接等文档结构，方便喂给 LLM 和文本分析流水线。可以用命令行直接转换（markitdown file.pdf > out.md，支持 -o 和管道输入），也可以作为库调用。它更偏向给分析工具消费，而不是追求人类阅读级的高保真排版。
+FreeVideo 是一个面向消费级显卡的 MiniMax H3 本地推理引擎。它基于 OpenVDN 的 8 步 VDN-H3 模型，把显存、内存和磁盘统筹起来，根据你的硬件自动调整权重放置方式、计算精度和注意力算子，从而让普通电脑也能生成视频，而不必租用云端显卡，也不必升级机器。它以 ComfyUI 插件的形式工作，提供 Windows、macOS、Linux 三个平台的启动器：下载后选择一个已有的 ComfyUI 目录或新建一个，点击 Install & launch，浏览器里就会打开 FreeVideo 工作区，直接开始创作；工作区不满意还能切到节点视图精细调整。目前还支持 16 MP 图片生成、超过一分钟的长视频和 AI Agent 自动创作。
 
-- ✨ 支持 PDF、Word、PowerPoint、Excel、EPub、HTML、CSV/JSON/XML、ZIP 等多种输入格式
-- ✨ 保留标题、列表、表格、链接等关键文档结构，而不是退化为纯文本
-- ✨ 图片可提取 EXIF 元数据并做描述，音频可提取元数据并转写（依赖托管服务）
-- ✨ 支持 YouTube URL 转录和 Outlook 邮件转换
-- ✨ 可选依赖按格式拆分安装（如 [pdf, docx, pptx]），也可用 [all] 一次装齐
-- ✨ 支持第三方插件，默认关闭，需用 --list-plugins / --use-plugins 管理，官方还提供 markitdown-ocr 插件为 PDF、DOCX、PPTX、XLSX 中的内嵌图片补充 OCR
-- 👥 适合谁：需要给 LLM 或文本分析流水线批量准备文档数据的 Python 开发者、数据工程师和 AI 应用团队。
+- ✨ 硬件自适应执行：根据 GPU 类型自动选择权重格式，GeForce 与 RTX 30 系列使用 int8，工作站与数据中心卡使用 FP8，并自动探测可用的注意力 kernel
+- ✨ 低显存推理：通过权重流式加载、异步预取和分块计算压低峰值内存，最低 8 GB 显存加 16 GB 内存即可推理
+- ✨ 多模态输入：支持文本提示词、首帧与尾帧，以及图像、视频、音频参考
+- ✨ ComfyUI 集成工作区：内置创作界面，支持两遍采样、批量生成和历史记录；切到节点视图可加 LoRA、自定义工作流
+- ✨ 一键部署启动器：自动安装 ComfyUI、运行环境和模型，可复用已有模型目录，支持离线安装，Windows 版有代码签名
+- ✨ 创作控制与复用：四档画质（Light、Medium、High、Max）可选，可先出半分辨率预览再决定是否完成，视频文件自带 prompt、seed 和设置，拖回 ComfyUI 画布即可还原
+- 👥 适合谁：想在本地用消费级显卡生成视频的创作者和 ComfyUI 用户，尤其是显存只有 8-12 GB、不想上云的个人开发者。
 
-`Python` · Fork 14,931
+`Python` · Fork 546
 
-### 5. [microsoft/BitNet](https://github.com/microsoft/BitNet) — ⭐ 42,282（今日 +282）
+### 5. [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) — ⭐ 130,551（今日 +250）
 
-> 微软官方 1-bit LLM 推理框架，在 CPU 与 GPU 上实现快速且无损的 1.58-bit 模型推理。
+> 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品
 
-bitnet.cpp 是 BitNet b1.58 等 1-bit 大模型的官方推理框架。它提供一组专为三值权重优化的内核，解决低比特模型在实际硬件上推理慢、能耗高的问题：在 x86 CPU 上比全精度模型快 2.37x~6.17x、省电 71.9%~82.2%，ARM 上快 1.37x~5.07x、省电 55.4%~70.0%，且推理无损，甚至能在单颗 CPU 上以 5-7 token/s 跑 100B 模型。可直接从源码编译在本地 CPU 或 GPU 上运行，也可先试在线 Demo；配套 Hugging Face 上的 BitNet-b1.58-2B-4T 官方模型与 I2_S 量化转换工具链。
+RustDesk 是一个用 Rust 编写的开源远程桌面应用，定位是 TeamViewer 的自托管替代品。它开箱即用、无需配置，安装后即可建立远程连接；同时把数据的控制权完全交给你：你可以使用官方提供的 rendezvous/relay 服务器，也可以按官方文档自建服务器，甚至参照 rustdesk-server-demo 写一个自己的中继服务。官方提供 Windows、macOS、Linux 的安装包与 nightly 构建，Android 可从 F-Droid 获取，Linux 上还有 Flathub 版本；如需进阶功能可选 RustDesk Server Pro。
 
-- ✨ 面向 BitNet b1.58 三值模型的官方优化推理内核，CPU 推理无损且显著加速
-- ✨ x86 CPU 上 2.37x~6.17x 加速、71.9%~82.2% 能耗下降；ARM 上 1.37x~5.07x 加速、55.4%~70.0% 能耗下降
-- ✨ 单颗 CPU 即可运行 100B BitNet b1.58 模型，达到 5-7 token/s 的类人阅读速度
-- ✨ 官方 GPU 推理内核，把 1-bit 推理从 CPU 扩展到 GPU（NPU 支持在路上）
-- ✨ 提供 BitNet-b1.58-2B-4T 官方模型（2.4B 参数、4T token 训练）及配套 Hugging Face 模型集合
-- ✨ 支持 I2_S 量化转换与优化内核，并已扩展至 1-bit embedding 模型（0.6B/270M，prefill 较 F16 快 1.32x~2.28x）
-- 👥 适合谁：希望在本地或边缘设备低成本、低能耗部署 1-bit/三值大模型的开发者与研究者。
+- ✨ 开箱即用的远程桌面连接，安装后无需额外配置即可使用
+- ✨ 支持自建 rendezvous/relay 服务器，数据完全由自己掌控
+- ✨ 可选用官方公共服务器，或基于 server-demo 自行实现中继服务端
+- ✨ 跨平台：Windows、macOS、Linux 桌面端，Android 可通过 F-Droid 安装，Linux 另有 Flathub 版本
+- ✨ 提供正式 release 与 nightly 构建，可直接下载二进制文件
+- ✨ 界面与文档支持数十种语言的社区翻译，含中文、日语、法语、德语、西班牙语等
+- 👥 适合谁：注重数据隐私、希望自托管远程桌面来替代 TeamViewer 的个人用户、IT 运维与企业团队
 
-`C++` · Fork 3,986
+`Rust` · Fork 21,021 · 🔗 [官网](https://rustdesk.com)
 
-### 6. [Tencent/LoopForge](https://github.com/Tencent/LoopForge) — ⭐ 5,130（今日 +276）
+### 6. [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) — ⭐ 5,400（今日 +198）
 
-> 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。
+> 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone 和 Android 手机的开源工具
 
-LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。
+phone-harness 是一个 Python 命令行工具，目标是让 AI agent 真正“上手”你的手机。装上 CLI 后，agent 就能在你的实体手机上滑动、点击、输入文字、读取屏幕内容，从而完成订车、点单这类跨 App 的操作。它不需要越狱、不需要 Xcode，手机上也不用装任何东西：iPhone 通过 Mac 的“iPhone 镜像”窗口操作，Android 通过 adb 连接，也支持用 Phone Harness Cloud 把云端真机接入。安装方式很省心，把 README 里的 setup prompt 丢给你的编码 agent，它会自己装 CLI、注册 skill、询问用哪台手机，并带你走完需要手动确认的步骤。
 
-- ✨ 聊窗式主控（Main Bot）：用自然语言提需求，按需创建带仓库的 Docker 会话沙箱，按 @ 调用角色、技能、需求或 SOP，可中途排队消息、暂停、接管
-- ✨ SOP 流程引擎：按序执行 Agent、Script、Human-gate 与子 SOP 节点，每个节点在独立沙箱运行，内置后端、前端、Bug 修复、产品等模板
-- ✨ 角色分离：规划、实现、评审、测试各自拥有独立的提示词、执行器、模型、规则、Skills 与 MCP 工具，既能当 SOP 节点也能当聊天子智能体
-- ✨ 人工审批关卡：在关键节点停下等待审批，可阅读报告后批准放行，或把工作退回指定步骤，失败步骤支持重试、从任意节点重跑
-- ✨ 可观测与可恢复：节点状态、工具调用轨迹、日志与产物集中展示，随时暂停、继续或从某个节点重跑
-- ✨ 多执行器与自有基础设施：支持 CodeBuddy、Codex、Claude Code、OpenCode、Cursor CLI、Antigravity、Kimi Code 等十种编码 CLI，集成 GitHub、Skills、MCP，Docker 沙箱或本机运行时，MIT 自托管
-- 👥 适合谁：希望把 AI 编码纳入规范交付流程的研发团队、平台工程与需要审批留痕的技术负责人。
+- ✨ 支持 iPhone：通过 macOS 的 iPhone 镜像窗口操控，无需越狱或 Xcode
+- ✨ 支持 Android：在 macOS、Linux、Windows 上通过 adb 连接真机
+- ✨ 提供 find_text、tap、读屏等原语，agent 可滚动、点击、输入并读取屏幕内容
+- ✨ 手机端零安装，不往设备里塞任何 App
+- ✨ 一键 setup prompt，让编码 agent 自行完成安装、注册 skill 与引导配置
+- ✨ 内置 phone-harness doctor 连接诊断，并可选 Phone Harness Cloud 云端真机（含 2FA、真实号码）
+- 👥 适合谁：想让 AI agent 代操作真实手机的开发者，以及做移动端自动化、Agent 工具链的工程师
 
-`Go` · Fork 713 · 🔗 [官网](https://loopforge.cn)
+`Python` · Fork 561 · 🔗 [官网](phone-harness.com)
 
-### 7. [p-e-w/heretic](https://github.com/p-e-w/heretic) — ⭐ 42,257（今日 +252）
+### 7. [multica-ai/multica](https://github.com/multica-ai/multica) — ⭐ 56,976（今日 +173）
 
-> 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。
+> 把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上
 
-Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。
+Multica 是一个可自托管的协作工作区，用来解决「同时开了好几个 agent 终端标签、每个都要重新解释上下文、还要全程盯着」的问题。它把你已经在用的编码 agent（Claude Code、Codex、Cursor、Copilot、Kimi、OpenCode 等）变成看板上的正式成员：给 agent 起名、指定 provider 和 runtime 后，就能像给同事派活一样把 issue 指派给它。agent 自己领取任务、在你自己机器或云主机上的 daemon runtime 里执行、边跑边评论、遇到阻塞会抛出来，最后交回给人类 review。意图、执行过程、决策和 diff 都挂在同一个 issue 上，没人需要重建上下文，也没有东西能在人类点头前上线。
 
-- ✨ 去除审查、抑制拒答（默认行为）
-- ✨ 通过配置文件切换目标：减少废话、减少幽默、降低谄媚、调整情绪倾向
-- ✨ 支持通过插件自定义 scorer，控制优化目标
-- ✨ 支持多数稠密模型、多种 MoE 架构、多模态与混合模型
-- ✨ 支持 bitsandbytes 4-bit 动态量化，降低显存占用
-- ✨ 运行前自动测试硬件以确定最优批大小，完成后可保存、上传、对话测试或跑基准
-- 👥 适合谁：想在本地改造开源大模型行为、但缺乏大规模训练算力的开发者与爱好者。
+- ✨ Agent 即队友：给每个 agent 起名字、绑定 provider 和 runtime，它会像普通成员一样出现在看板上并被指派 issue
+- ✨ 兼容现有 agent CLI：Claude Code、Codex、Cursor、Copilot、Kimi、OpenCode 等直接用，不锁定厂商
+- ✨ 自托管 runtime：agent 的「工位」是你笔记本或云主机上的 daemon，代码不离开你的机器
+- ✨ 执行日志与实时干预：每次工具调用、命令和报错都带时间戳可回放，运行中回复消息会落进当前 run 而不是下一个
+- ✨ Squads 与 Skills：人和 agent 混编成队由 leader 分派任务，把解决过的问题沉淀成所有 agent 可复用的 playbook
+- ✨ Autopilots、Chat 与 Projects：用 cron 跑站会、审计和报告，直接向工作区提问或不起单就开始干活，并给项目挂上仓库和文档作为上下文
+- 👥 适合谁：已经同时使用多个编码 agent、想要可审计可自托管的团队与独立开发者
 
-`Python` · Fork 5,233 · 🔗 [官网](https://heretic-project.org)
+`Go` · Fork 7,502 · 🔗 [官网](https://multica.ai)
 
-### 8. [anomalyco/opencode](https://github.com/anomalyco/opencode) — ⭐ 228,111（今日 +249）
+### 8. [github/spec-kit](https://github.com/github/spec-kit) — ⭐ 150,857（今日 +166）
 
-> 开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。
+> 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包
 
-OpenCode 是一个开源的 AI 编码智能体，官方定位就是「The open source coding agent」。它把 AI 助手放进你的终端：既能直接改代码、跑 bash 命令干开发活，也能切成只读模式，先摸清陌生代码库再动手。安装很轻，一条 curl 脚本或 npm、brew、pacman、mise、nix 都能装好，另外还提供处于 Beta 阶段的桌面应用（macOS、Windows、Linux）。想深入了解配置可以看官方文档，社区在 Discord 和 X 上。
+Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。
 
-- ✨ 终端 UI（TUI）形式的编码智能体，直接在命令行里工作
-- ✨ 内置 build 与 plan 两个 agent，用 Tab 键随时切换
-- ✨ plan 为只读模式：默认拒绝文件编辑，执行 bash 前先征求许可，适合探索陌生代码库
-- ✨ general 子代理用于复杂搜索和多步任务，可在消息中用 @general 调用
-- ✨ 安装方式覆盖 curl 脚本、npm/bun/pnpm/yarn、Homebrew、Arch 的 pacman 与 AUR、mise、Nix
-- ✨ 提供 Beta 桌面应用，支持 macOS（Apple Silicon/Intel）、Windows 和 Linux 的 deb/rpm/AppImage
-- 👥 适合谁：适合习惯在终端工作的开发者，尤其是需要 AI 辅助读代码、改代码、执行命令的人。
+- ✨ 规范驱动开发（SDD）：从一份规范出发，贯穿规划、实现到收敛，产出可追溯
+- ✨ Bug 修复流程：定位并评估成因、限定修复范围、记录验证结果
+- ✨ 想法评估流程：用证据支撑给出继续投入、先澄清或止损的判断
+- ✨ 多代理集成：连接并随时切换不同的 AI 编码代理
+- ✨ 扩展机制：新增命令、质量门禁或完整流程，并可挂接到代理生命周期事件与命令前后钩子
+- ✨ 预设与项目级覆盖：改造模板、命令、术语和方法论，满足组织或合规要求
+- 👥 适合谁：使用 AI 编码代理、希望用规范与流程约束开发过程的个人开发者和团队
 
-`TypeScript` · Fork 30,960 · 🔗 [官网](https://opencode.ai)
+`Python` · Fork 13,549 · 🔗 [官网](https://github.github.com/spec-kit/)
 
-### 9. [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) — ⭐ 57,818（今日 +244）
+### 9. [LiberNT/LiberNT](https://github.com/LiberNT/LiberNT) — ⭐ 1,696（今日 +166）
 
-> 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。
+> 基于 NT 架构的免费开源操作系统，兼容 Windows 11，支持 amd64、arm64、riscv64。
 
-这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。
+LiberNT 是一个从零构建的自由 NT 操作系统，名字里的 liber 取自拉丁语，意为 free（自由）。它沿用 Windows 的内核、驱动模型与系统服务架构，以 Windows 11 为兼容性对标目标，让开发者能在一个开放、可长期维护的代码库上做内核与驱动层面的工作，而不必受制于闭源系统。上手很直接：从 Releases 下载对应架构的镜像压缩包，在虚拟机或备用机器上启动，用内置的 LiberNT Setup 分区并安装到 NTFS；想自己定制，就用 menuconfig 选好目标平台、编译器和功能开关后从源码构建。目前仍是活跃开发阶段，Release 里的构建属于 Debug 预发布版，只适合测试。
 
-- ✨ 五个阶段的流程（调研、写作、审稿、修改、定稿）在每阶段都会暂停并等待你确认，AI 担任副驾驶，不替你做出决定
-- ✨ /ars-plan 通过苏格拉底式对话逐步问出论文结构，另外提供可选的审稿人校准模式，用你给的 gold set 测量它自身的漏报率 FNR 和误报率 FPR
-- ✨ 引用可信链：使用 source provenance frontmatter 和三层引用定位锚点，为后续在论断层面进行审计打下基础
-- ✨ 可选开启的论断审计（设置 ARS_CLAIM_AUDIT=1）会按每个锚点回抓被引原文，判断原文是否真的支持该论断；五类 HIGH-WARN 由格式化终端的硬性校验统一拦截
-- ✨ Stage 2.5 与 Stage 4.5 设置完整性校验关卡，执行 7 条 AI 研究失败模式阻断清单（包括实施 bug、编造结果、方法论捏造、引用幻觉、框架锁死等）
-- ✨ Style Calibration 从你过去的作品学习并贴合你的行文风格，Writing Quality Check 识别机器味浓的句式，目标是提高质量，并不教你怎么掩盖使用 AI 的痕迹
-- 👥 适合谁：用 Claude Code 做文献综述、投稿论文的研究生与科研人员，也适合需要把控引用真实性的写作者。
+- ✨ 64 位优先：内核、HAL 与 FreeLoader 运行在 amd64、arm64、riscv64 上，i386 和 PowerPC 也可从源码构建
+- ✨ UEFI 启动：支持 UEFI 固件、GOP 帧缓冲和早期显示，预装磁盘可用 UEFI 或 BIOS 引导
+- ✨ 现代总线与存储：PCIe/PCI、即插即用、xHCI USB、SD/eMMC，以及配套的总线和存储驱动
+- ✨ 真实开发板支持：覆盖 Raspberry Pi 及其 RP1 I/O 控制器，另为 JH7110 单独构建 riscv64 镜像
+- ✨ Windows 11 驱动模型兼容：NT10 兼容性与驱动模型工作直接对照 Windows 11 本身验证
+- ✨ 图形与 Arm 上的 x86 应用：Mesa 图形驱动模型和基于 FEX 的 WoW64 都是可开关的构建选项
+- 👥 适合谁：对 NT 内核与驱动开发感兴趣的系统程序员、操作系统爱好者和 ARM/嵌入式平台开发者。
 
-`Python` · Fork 4,406 · 🔗 [官网](https://buymeacoffee.com/crucify020v)
+`C` · Fork 47 · 🔗 [官网](https://libernt.com/)
 
-### 10. [agent-substrate/substrate](https://github.com/agent-substrate/substrate) — ⭐ 7,860（今日 +244）
+### 10. [earendil-works/pi](https://github.com/earendil-works/pi) — ⭐ 123,107（今日 +165）
 
-> 面向 Kubernetes 的零信任 agent 沙箱运行时，让海量 agent 以远超容器的密度安全复用节点。
+> 一个极简、可扩展的 TypeScript AI agent 工具箱，覆盖统一 LLM API、agent 运行时、TUI 和编码 CLI。
 
-Agent Substrate 是运行在标准 Kubernetes 上的安全加固运行时。它解决一个现实矛盾：agent 大部分时间在等待模型、工具或人，却一直占用着内存和计算资源。Substrate 把有状态 actor 快照出内存，请求到达时再恢复到一小池预热 worker 上，恢复时间不到 500ms，每秒可完成 500+ 次激活，密度比普通容器高一个数量级。它定位为低约束运行时，并非 agent SDK，工作负载不限于 AI agent；沙箱支持 gVisor 和 Cloud Hypervisor 微 VM，沿用熟悉的 Pod、自动扩缩容和 NetworkPolicy。
+Pi 是一套可改造的 agent harness：它把多供应商 LLM 调用、agent 循环与状态管理、终端界面、编码 agent CLI 打包成一个 monorepo，你可以按自己的流程定制它，而不是迁就它的默认工作方式。它不自带 sub-agent、plan mode 这类功能，而是通过 extensions、skills、prompt 模板和主题来扩展，并能打成 Pi packages 经 npm 或 git 分享。使用上，用安装脚本或 npm 装上 CLI，在项目目录执行 pi，/login 接入供应商后即可派活；同时支持交互模式、print/JSON 自动化、RPC 控制和 TypeScript SDK 嵌入。
 
-- ✨ 强制 VM 级隔离：每个 actor 都运行在独立的 gVisor（runsc）或 Cloud Hypervisor 微 VM 沙箱中，计算、网络、存储全部隔离，不支持普通 Linux 容器
-- ✨ Actor Teleport：空闲 actor 被快照移出内存，需要时恢复到池中任意 worker，RAM 工作内存与文件系统状态完整保留，不丢失进行中的会话和工具状态
-- ✨ 10x–30x 超卖：把大量有状态 actor 映射到少量热 worker pod 上，只在 agent 真正推理或调用工具时消耗计算
-- ✨ 默认每个活跃 actor 都获得短期 SPIFFE X.509 证书，egress 网关还可按出站策略现场签发 per-actor JWT，身份中携带 actor 与 atespace 信息，可对接外部身份体系
-- ✨ 沙箱内零凭据：agent 自身拿不到身份证书、API key 或云 token，由内置 egress 网关 atenet-egress 在沙箱之外向被批准的外发请求注入凭据，即使被 prompt 注入也无东西可窃取
-- ✨ 默认拒绝的网络：私有网络栈，入站只能经 atenet-router 进入，禁止 actor 之间横向访问和控制面访问，出站被 egress 网关限制；该网关是可替换的外部策略执行点，可挂接自己的授权、DLP、prompt 注入扫描或云 IAM 策略
-- 👥 适合谁：需要多租户、大规模运行不可信 agent 与工具的 AI 平台团队和基础设施工程师。
+- ✨ 统一多供应商 LLM API，覆盖 OpenAI、Anthropic、Google 等
+- ✨ 带工具调用与状态管理的 agent 运行时
+- ✨ 差分渲染的终端 UI 库与交互式编码 agent CLI
+- ✨ 通过 extensions、skills、prompt 模板、themes 定制，并可打包成 Pi packages 分享
+- ✨ 多种使用形态：交互式、print/JSON 模式、RPC、TypeScript SDK
+- ✨ 提供容器化/沙箱方案（Gondolin 微虚拟机、Docker、OpenShell）补足权限边界
+- 👥 适合谁：想把 AI 编码 agent 改造成自己工作流的开发者、需要嵌入 agent 能力的工具作者与团队。
 
-`Go` · Fork 863 · 🔗 [官网](https://ate.dev/)
+`TypeScript` · Fork 15,878
 
 
 ## 🚀 Show HN 今日新品
 
-[Cornhole News – A Hacker News inspired site for news across the Midwest](https://news.ycombinator.com/item?id=50561515) · ⬆️ 217 · 💬 99
+[I made an audio-to-MIDI model 60x more efficient](https://news.ycombinator.com/item?id=50526023) · ⬆️ 272 · 💬 56
 
-> 受 H
+> 我开发了一个音频转MIDI模型，效率提升60倍。
 
-[Alloy CSS, dialogs, menus and tabs that work with JavaScript off](https://news.ycombinator.com/item?id=50532385) · ⬆️ 210 · 💬 38
+[Tinnitus frequency finder and audio notch tool](https://news.ycombinator.com/item?id=50541568) · ⬆️ 156 · 💬 109
 
-> Alloy CSS 发布，提供无需 JavaScript 即可运行的对话框、菜单和标签页组件。
-
-[Mastra Factory, the open-source software factory we use to build Mastra](https://news.ycombinator.com/item?id=50548660) · ⬆️ 144 · 💬 42
-
-> Mastra 团队发布开源软件工厂 Mastra Factory，用于构建 Mastra 本身。
+> Show HN 发布 Tinnitus frequency finder and audio notch tool，帮用户找到耳鸣频率并用音频陷波工具缓解。
 
 
 ## 🧡 Product Hunt 今日榜
 
-[Stripo Email Widgets](https://www.producthunt.com/products/stripo-email) · Product Hunt
+[FFMPA Kids News](https://www.producthunt.com/products/ffmpa-kids-news) · Product Hunt
 
-> Stripo Email Widgets 让你无需写代码，就能在下一封邮件里嵌入小游戏、测验或问卷。
+> FFMPA Kids News 上线，为5到15岁孩子提供平静、经事实核查的新闻内容。
 
-[Manufact](https://www.producthunt.com/products/manufact) · Product Hunt
+[aiteam.space](https://www.producthunt.com/products/aiteam-space) · Product Hunt
 
-> Manufact 今日发布，支持将 MCP 发布到各插件市场并完成测试。
+> aiteam.space 发布：打造一支 AI 团队，每个智能体都拥有独立电脑。
 
-[Tecla](https://www.producthunt.com/products/tecla-3) · Product Hunt
+[greatai Review](https://www.producthunt.com/products/greatai-review) · Product Hunt
 
-> Tecla 是一款以待办清单为界面的主动型 AI 智能体。
+> greatai 在 Product Hunt 发布，为开源项目和非营利组织提供免费 AI 加人工代码审查。
 
-[Noteshell](https://www.producthunt.com/products/noteshell) · Product Hunt
+[Salus](https://www.producthunt.com/products/salus) · Product Hunt
 
-> Noteshell 在 Product Hunt 发布，提供能搭建并运营工作区的 AI 队友。
+> Salus 今日在 Product Hunt 发布，帮助用户发现捷克共和国的福利与
 
-[Room AI](https://www.producthunt.com/products/room-ai-2) · Product Hunt
+[Andromon](https://www.producthunt.com/products/andromon) · Product Hunt
 
-> Room AI 让你像和设计师
+> Andromon 发布：可将你的安卓手机投到电脑上使用，且免费。
 
 
 ## 🇨🇳 中文独立开发 · V2EX 分享创造
 
-[做了个儿童英语绘本的 WorkBuddy skill，晒一本生成的样例](https://www.v2ex.com/t/1258565) · 💬 1 回复
+[\[持续更新\] 做了一个专注 软考 -- 系统架构师 刷题的网站](https://www.v2ex.com/t/1258754) · 💬 0 回复
 
-> 开发者做了个 WorkBuddy skill 用于生成儿童英语绘本，并晒出样例外。
+> 独立开发者持续更新一个专注软考系统架构师刷题的网站。
 
-[\[送码\] 波波小红书获客助手：养号、AI 自动评论、自动发现线索（自己天天在用的小工具）](https://www.v2ex.com/t/1258559) · 💬 4 回复
+[做了两款单机麻将游戏，招募 Google Play 安卓封测玩家（可互测）](https://www.v2ex.com/t/1258748) · 💬 0 回复
 
-> 独立开发者分享「波波小红书获客助手」，支持养号、AI 自动评论和自动发现线索，并送码。
+> 开发者推出两款单
 
-[\[分享创造\] 回声口袋：中文音视频转文字，带时间轴和说话人区分，可导出字幕](https://www.v2ex.com/t/1258557) · 💬 0 回复
+[\[抽送 50USDT\] ClassyGit: 把 Gist 当博客用，把 GitHub 变成复古个人主页](https://www.v2ex.com/t/1258746) · 💬 0 回复
 
-> 独立开发者分享「回声口袋」，支持中文音视频转文字，带时间轴和说话人区分，可导出字幕。
+> 开发者分享 ClassyGit，可把 Gist 当博客、把 GitHub 变成复古个人主页，并抽送 50USDT。
 
-[上线了一个 AI 羊毛网站，搜集 300 款免费 AI 工具，分享一下，求大家反馈。](https://www.v2ex.com/t/1258553) · 💬 0 回复
+[做了一个 B 站浏览器插件，屏蔽低质量或者不喜欢类型的 UP](https://www.v2ex.com/t/1258744) · 💬 0 回复
 
-> 独立开发者上线 AI 羊毛网站，搜集了 300 款免费 AI 工具，分享并求反馈。
+> 开发者制作了一款B站浏览器插件，可屏蔽低质量或不喜欢的UP主。
 
-[ConvoExport 已上架 Edge：把 ChatGPT / Claude 对话导出为 Markdown、TXT、Word 或 PDF，完全本地](https://www.v2ex.com/t/1258551) · 💬 0 回复
+[🎉 File-Organizer (文件归档/批量重命名) 上架 App Store | 黑五回馈 V 友](https://www.v2ex.com/t/1258731) · 💬 11 回复
 
-> ConvoExport 已上架 Edge，可把 ChatGPT 和 Claude 对话完全本地导出为 Markdown、TXT、Word 或 PDF。
+> 独立开发者推出的 File-Organizer（文件归档与批量重命名）已上架 App Store，并为庆祝黑五回馈
 
 ## 📋 完整榜单
 
@@ -251,16 +247,16 @@ Agent Substrate 是运行在标准 Kubernetes 上的安全加固运行时。它�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用 | `Python` | 13,009 | +1,349 |
-| 2 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操… | `TypeScript` | 10,823 | +302 |
-| 3 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具 | `C++` | 58,125 | +1,853 |
-| 4 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。 | `Python` | 197,104 | +434 |
-| 5 | [microsoft/BitNet](https://github.com/microsoft/BitNet) | 微软官方 1-bit LLM 推理框架，在 CPU 与 GPU 上实现快速且无损的 1.5… | `C++` | 42,282 | +282 |
-| 6 | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。 | `Go` | 5,130 | +276 |
-| 7 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。 | `Python` | 42,257 | +252 |
-| 8 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。 | `TypeScript` | 228,111 | +249 |
-| 9 | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。 | `Python` | 57,818 | +244 |
-| 10 | [agent-substrate/substrate](https://github.com/agent-substrate/substrate) | 面向 Kubernetes 的零信任 agent 沙箱运行时，让海量 agent 以远超容… | `Go` | 7,860 | +244 |
+| 1 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN … | `Python` | 71,591 | +681 |
+| 2 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。 | `JavaScript` | 307,985 | +649 |
+| 3 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。 | `Python` | 5,501 | +454 |
+| 4 | [FlashML-org/FreeVideo](https://github.com/FlashML-org/FreeVideo) | 在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存… | `Python` | 3,924 | +293 |
+| 5 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品 | `Rust` | 130,551 | +250 |
+| 6 | [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) | 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone … | `Python` | 5,400 | +198 |
+| 7 | [multica-ai/multica](https://github.com/multica-ai/multica) | 把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上 | `Go` | 56,976 | +173 |
+| 8 | [github/spec-kit](https://github.com/github/spec-kit) | 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包 | `Python` | 150,857 | +166 |
+| 9 | [LiberNT/LiberNT](https://github.com/LiberNT/LiberNT) | 基于 NT 架构的免费开源操作系统，兼容 Windows 11，支持 amd64、arm6… | `C` | 1,696 | +166 |
+| 10 | [earendil-works/pi](https://github.com/earendil-works/pi) | 一个极简、可扩展的 TypeScript AI agent 工具箱，覆盖统一 LLM AP… | `TypeScript` | 123,107 | +165 |
 
 <!-- TRENDING:END -->
 
