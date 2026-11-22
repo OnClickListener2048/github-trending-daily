@@ -17,229 +17,218 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-21
+# 🔥 GitHub 每日 Trending · 2026-11-22
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) — ⭐ 71,591（今日 +681）
+### 1. [obra/superpowers](https://github.com/obra/superpowers) — ⭐ 323,884（今日 +883）
 
-> 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN 与 Polymarket 上的真实声音。
+> 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码
 
-last30days 是一个可装进 Claude Code、Cursor、Copilot、Gemini CLI 等 50 多个 Agent Skills 宿主的搜索技能。它解决的核心问题是：Google 只聚合编辑和 SEO 内容，而 Reddit 评论、X 帖子、YouTube 逐字稿、TikTok 互动、Polymarket 赔率分散在各自的围墙花园里，没有哪个 AI 原生能同时搜到。你只需带上自己的 API key 或浏览器会话，用一句 /last30days <主题或人名> 就能并行检索十几个平台，按点赞、投票和真金白银的赔率打分，再由 agent 裁判合成一份有据可查的简报。零配置即可用 Reddit、HN、Polymarket、GitHub，跑一次向导 30 秒解锁其余源。
+Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。
 
-- ✨ 一条命令 /last30days <主题> 并行检索 Reddit、X、YouTube、TikTok、Instagram Reels、Hacker News、Polymarket、GitHub、Digg 等多个平台
-- ✨ 按各平台真实互动信号（upvote、likes、播放量、Polymarket 资金赔率）排序打分，而不是按编辑推荐
-- ✨ 对搜索对象做人物尽调：近期推文、播客逐字稿、PR 合并速度、高星仓库与发布说明
-- ✨ YouTube 长视频逐字稿全文检索，提炼出最值得引用的几句话
-- ✨ Polymarket 市场赔率自动附在相关事件下方，并标注赔率变动幅度
-- ✨ 零配置开箱可用 Reddit、HN、Polymarket、GitHub、专利申请与招聘页面，向导 30 秒解锁 X、YouTube、TikTok、arXiv、Techmeme
-- 👥 适合谁：需要快速摸清某个话题或某个人近 30 天真实动态的开发者、创业者、销售与投资人。
+- ✨ 技能自动触发：代理在对话开始就加载 using-superpowers 技能，无需手动调用
+- ✨ 先澄清需求再编码：通过对话梳理出规格说明，并切成足够短、能真正读完的片段给你确认
+- ✨ 可执行的实施计划：细化到初级工程师能照做，同时强调红绿 TDD、YAGNI 与 DRY
+- ✨ 子代理驱动开发：每个工程任务交给子代理执行，主代理检查评审后继续推进
+- ✨ 长时间自主工作：可连续数小时按既定计划推进而不跑偏
+- ✨ 广泛的 harness 覆盖：Claude Code、Codex App/CLI、Cursor、Gemini CLI、GitHub Copilot CLI、Devin CLI、Factory Droid、Grok Build CLI、Kimi Code、OpenCode、Qwen Code 等均有对应安装方式
+- 👥 适合谁：希望让 AI 编码代理按严谨工程流程交付、而不只是补全代码的个人开发者与团队
 
-`Python` · Fork 6,342
+`Shell` · Fork 28,728
 
-### 2. [affaan-m/ECC](https://github.com/affaan-m/ECC) — ⭐ 307,985（今日 +649）
+### 2. [jingyaogong/minimind](https://github.com/jingyaogong/minimind) — ⭐ 68,278（今日 +488）
 
-> 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。
+> 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。
 
-ECC 是一套面向 AI 编码代理的 harness 优化系统。它要解决的是：代理虽然能用，但每次都得重写提示、丢掉上下文、缺少安全边界。ECC 把技能（Skills）、直觉（Instincts）、记忆（Memory）、安全（Security）和“先调研后开发”的流程做成一层可安装的能力，并同时适配 Claude Code、Codex、Opencode、Cursor 等多种 harness。用法很轻：在 Claude Code 里跑引导式安装，或用原生插件命令装同一个 ecc@ecc 插件（两者别叠加）；另外还有 npm 包 ecc-universal、ecc-agentshield 和面向私有仓库的 GitHub App。项目为 MIT 许可，仓库本身永久免费。
+MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。
 
-- ✨ Skills 技能层：把常用工作流封装成代理可直接调用的技能，不用每次从零写提示
-- ✨ Instincts 直觉机制：让代理在合适场景自动触发既定行为，减少人工干预
-- ✨ Memory 记忆能力：在会话之间保留项目上下文，避免反复交代背景
-- ✨ Security 安全防护：通过 ecc-agentshield 为代理行为加一层安全检查
-- ✨ Research-first 开发流程：强调先调研、再动手的代理工作方式
-- ✨ 跨 harness 适配：同一套能力覆盖 Claude Code、Codex、Opencode、Cursor 等，并支持插件、npm 包与 GitHub App 多种安装方式
-- 👥 适合谁：使用 Claude Code、Cursor 等 AI 编码代理的个人开发者与团队。
+- ✨ 完整的MiniMind-LLM结构代码（Dense与MoE），主线对齐Qwen3/Qwen3-MoE生态
+- ✨ 覆盖Pretrain、SFT、LoRA、RLHF-DPO、RLAIF（PPO/GRPO/CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏全流程
+- ✨ 提供从收集、蒸馏、清洗到去重的高质量全阶段开源数据集，含工具调用与思考标记的Tokenizer训练代码
+- ✨ 关键训练算法从零原生实现，同时兼容transformers/trl/peft、llama.cpp/vllm/ollama与Llama-Factory
+- ✨ 支持单机单卡及多卡DDP/DeepSpeed训练、断点续训、wandb/swanlab可视化，并可在C-Eval等第三方评测集上测评
+- ✨ 附带兼容OpenAI协议的极简服务端与Streamlit聊天WebUI，支持reasoning_content、tool_calls与open_thinking，可接入FastGPT、Open-WebUI
+- 👥 适合谁：想深入理解大模型原理、亲手从零训练模型的学生、开发者与AI教学者。
 
-`JavaScript` · Fork 45,323 · 🔗 [官网](https://ecc.tools)
+`Python` · Fork 8,928 · 🔗 [官网](https://jingyaogong.github.io/minimind)
 
-### 3. [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) — ⭐ 5,501（今日 +454）
+### 3. [cursor/plugins](https://github.com/cursor/plugins) — ⭐ 18,184（今日 +260）
 
-> Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。
+> Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器
 
-PaperOrchestra 是 Google Cloud AI Research 开源的多智能体写作框架，专门解决「研究做完了但论文写不动」的问题。你只需提供非结构化的前期材料（idea、实验日志），它就会像一支分工明确的小团队一样，依次完成大纲生成、文献检索与综述、分节撰写、内容打磨和图表绘制，最终输出符合目标会议模板、可直接投稿的 LaTeX 稿件。使用上先建 Conda 环境并配置 Semantic Scholar、OpenAI 或 Gemini 的 API Key，再通过 bash 脚本或 Python CLI 指定原始材料目录、LaTeX 模板目录和输出目录即可运行，还附带 Streamlit 交互 Demo。
+这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。
 
-- ✨ 多智能体流水线：大纲、文献综述、分节写作、内容精修、绘图各司其职，端到端产出论文
-- ✨ 自动文献综合：通过 Semantic Scholar 搜索、筛选并整合相关文献到正文中
-- ✨ 图表生成：可从代码生成实验 plot，并支持插入概念示意图
-- ✨ LaTeX 自动化：按 CVPR 等目标会议模板输出投稿级稿件，模板可自行扩展
-- ✨ 灵活输入：接受不受约束的 pre-writing 材料，如研究想法与实验日志
-- ✨ 可配置模型与交互 Demo：写作/反思智能体可分别指定 LLM，并提供 Streamlit 前端
-- 👥 适合谁：需要快速把实验结果整理成论文草稿的 AI 研究者、学生和工业界研究工程师。
+- ✨ Thermos 深度分支审查：针对安全性和正确性进行审计，采用严苛的代码质量评分标准，并行调度多个子 agent，并可选用 merge-ready PR 流程
+- ✨ Orchestrate 把大型任务拆分给并行的云端 agent，并包含 planner、worker、verifier 和结构化交接
+- ✨ Cursor Team Kit 提供 CI、代码评审、发版、本地自动化和验证等团队内部工作流
+- ✨ Create Plugin 用来搭建和校验新的 agent 插件；Teaching 提供技能映射、练习计划和学习复盘
+- ✨ Continual Learning 把对话记录增量写入 AGENTS.md 长期记忆；Ralph Loop 实现自引用式迭代 AI 循环
+- ✨ 大量第三方集成：GitHub、Playwright、Gmail、Google Drive、Calendar、Docs、Sheets、Slides、Salesforce、HubSpot、Zoom、Gong、Ashby 等，可直接操作真实业务数据
+- 👥 适合谁：使用 Cursor 的开发者、需要把 AI agent 接入团队工作流和 SaaS 工具的工程团队
 
-`Python` · Fork 689 · 🔗 [官网](https://yiwen-song.github.io/paper_orchestra/)
+`TypeScript` · Fork 1,986
 
-### 4. [FlashML-org/FreeVideo](https://github.com/FlashML-org/FreeVideo) — ⭐ 3,924（今日 +293）
+### 4. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 196,513（今日 +780）
 
-> 在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存、16 GB 内存即可起步。
+> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
 
-FreeVideo 是一个面向消费级显卡的 MiniMax H3 本地推理引擎。它基于 OpenVDN 的 8 步 VDN-H3 模型，把显存、内存和磁盘统筹起来，根据你的硬件自动调整权重放置方式、计算精度和注意力算子，从而让普通电脑也能生成视频，而不必租用云端显卡，也不必升级机器。它以 ComfyUI 插件的形式工作，提供 Windows、macOS、Linux 三个平台的启动器：下载后选择一个已有的 ComfyUI 目录或新建一个，点击 Install & launch，浏览器里就会打开 FreeVideo 工作区，直接开始创作；工作区不满意还能切到节点视图精细调整。目前还支持 16 MP 图片生成、超过一分钟的长视频和 AI Agent 自动创作。
+Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
 
-- ✨ 硬件自适应执行：根据 GPU 类型自动选择权重格式，GeForce 与 RTX 30 系列使用 int8，工作站与数据中心卡使用 FP8，并自动探测可用的注意力 kernel
-- ✨ 低显存推理：通过权重流式加载、异步预取和分块计算压低峰值内存，最低 8 GB 显存加 16 GB 内存即可推理
-- ✨ 多模态输入：支持文本提示词、首帧与尾帧，以及图像、视频、音频参考
-- ✨ ComfyUI 集成工作区：内置创作界面，支持两遍采样、批量生成和历史记录；切到节点视图可加 LoRA、自定义工作流
-- ✨ 一键部署启动器：自动安装 ComfyUI、运行环境和模型，可复用已有模型目录，支持离线安装，Windows 版有代码签名
-- ✨ 创作控制与复用：四档画质（Light、Medium、High、Max）可选，可先出半分辨率预览再决定是否完成，视频文件自带 prompt、seed 和设置，拖回 ComfyUI 画布即可还原
-- 👥 适合谁：想在本地用消费级显卡生成视频的创作者和 ComfyUI 用户，尤其是显存只有 8-12 GB、不想上云的个人开发者。
+- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
+- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
+- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
+- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
+- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
+- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
+- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
 
-`Python` · Fork 546
+`JavaScript` · Fork 11,077 · 🔗 [官网](https://ponytail.dev)
 
-### 5. [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) — ⭐ 130,551（今日 +250）
+### 5. [driceroland/Search](https://github.com/driceroland/Search) — ⭐ 3,731（今日 +230）
 
-> 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品
+> Office Commun 出品的 macOS 极简 WebKit 浏览器，约 10 MB，无工具栏、无账号、无同步。
 
-RustDesk 是一个用 Rust 编写的开源远程桌面应用，定位是 TeamViewer 的自托管替代品。它开箱即用、无需配置，安装后即可建立远程连接；同时把数据的控制权完全交给你：你可以使用官方提供的 rendezvous/relay 服务器，也可以按官方文档自建服务器，甚至参照 rustdesk-server-demo 写一个自己的中继服务。官方提供 Windows、macOS、Linux 的安装包与 nightly 构建，Android 可从 F-Droid 获取，Linux 上还有 Flathub 版本；如需进阶功能可选 RustDesk Server Pro。
+Search 是一款把「浏览器」还原成工具的 macOS 浏览器，由一家整天泡在浏览器里的设计工作室开发——他们受够了那些把自己做成产品的浏览器。整个界面只有一栏标签页（左侧或顶部，可切换）和网页本身：没有工具栏、没有起始页、没有推荐侧栏、没有要登录的账号。它复用系统自带的 WebKit 引擎，所以安装包只有约 10 MB，启动几乎瞬时，不需要再下载维护一份 Chromium。使用方式极简：在唯一的输入框里敲地址就跳转、敲词就搜索，历史补全在本地完成，回车之前不向任何地方发送内容。支持 macOS 14 及以上，免费，也可用 Homebrew cask 安装。
 
-- ✨ 开箱即用的远程桌面连接，安装后无需额外配置即可使用
-- ✨ 支持自建 rendezvous/relay 服务器，数据完全由自己掌控
-- ✨ 可选用官方公共服务器，或基于 server-demo 自行实现中继服务端
-- ✨ 跨平台：Windows、macOS、Linux 桌面端，Android 可通过 F-Droid 安装，Linux 另有 Flathub 版本
-- ✨ 提供正式 release 与 nightly 构建，可直接下载二进制文件
-- ✨ 界面与文档支持数十种语言的社区翻译，含中文、日语、法语、德语、西班牙语等
-- 👥 适合谁：注重数据隐私、希望自托管远程桌面来替代 TeamViewer 的个人用户、IT 运维与企业团队
+- ✨ 单一输入框：地址与搜索合一，基于本地历史补全，按下回车前不发送任何输入
+- ✨ 克制的标签页：常驻页面可固定并缩成图标或首字母，上次会话的标签恢复不占资源，⌘K 按名称检索所有打开的标签
+- ✨ 分屏视图：把一个标签拖到页面上即可左右并排，拖动分隔线调整宽度，成对标签与宽度随空间一起恢复
+- ✨ 永久隐藏元素：⇧⌘H 后点掉 Cookie 横幅、订阅弹层、相关推荐栏，下次访问时页面渲染前就已消失
+- ✨ 网络层广告拦截：第三方追踪器与广告网络在请求阶段就被拦掉，默认开启，站点出错可按站关闭
+- ✨ 阅读模式与画中画：⇧⌘R 剥离正文，⇧⌘P 把视频提为置顶小窗，浮于其他应用之上
+- 👥 适合谁：适合追求速度与隐私、厌恶功能膨胀和账号体系的 Mac 用户，尤其是每天长时间在浏览器里工作的开发者与设计师。
 
-`Rust` · Fork 21,021 · 🔗 [官网](https://rustdesk.com)
+`Swift` · Fork 387
 
-### 6. [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) — ⭐ 5,400（今日 +198）
+### 6. [rtk-ai/rtk](https://github.com/rtk-ai/rtk) — ⭐ 87,441（今日 +125）
 
-> 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone 和 Android 手机的开源工具
+> 把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用。
 
-phone-harness 是一个 Python 命令行工具，目标是让 AI agent 真正“上手”你的手机。装上 CLI 后，agent 就能在你的实体手机上滑动、点击、输入文字、读取屏幕内容，从而完成订车、点单这类跨 App 的操作。它不需要越狱、不需要 Xcode，手机上也不用装任何东西：iPhone 通过 Mac 的“iPhone 镜像”窗口操作，Android 通过 adb 连接，也支持用 Phone Harness Cloud 把云端真机接入。安装方式很省心，把 README 里的 setup prompt 丢给你的编码 agent，它会自己装 CLI、注册 skill、询问用哪台手机，并带你走完需要手动确认的步骤。
+RTK 是一个面向 AI 编程 Agent 的 token 成本削减工具。它安装在你的机器上，通过 hook 自动接管 git status、测试、diff、日志、构建等 100+ 条常见命令：Agent 发出命令时，实际执行的是 rtk 包装后的版本，原始输出在 Agent 读取前就被压缩成精简摘要，例如 40 行的 git status 变成 3 行总结。无需改配置、无需学习新命令，装完重启 Agent 即生效；每条命令开销低于 25ms。它同时提供 pipelines 机制，用一份 Agent 无关的配置文件做更进一步的优化，比如把重读取交给更便宜的模型、压缩 bash 之外的内容、在不破坏 prompt 缓存的前提下清理 API 流量。
 
-- ✨ 支持 iPhone：通过 macOS 的 iPhone 镜像窗口操控，无需越狱或 Xcode
-- ✨ 支持 Android：在 macOS、Linux、Windows 上通过 adb 连接真机
-- ✨ 提供 find_text、tap、读屏等原语，agent 可滚动、点击、输入并读取屏幕内容
-- ✨ 手机端零安装，不往设备里塞任何 App
-- ✨ 一键 setup prompt，让编码 agent 自行完成安装、注册 skill 与引导配置
-- ✨ 内置 phone-harness doctor 连接诊断，并可选 Phone Harness Cloud 云端真机（含 2FA、真实号码）
-- 👥 适合谁：想让 AI agent 代操作真实手机的开发者，以及做移动端自动化、Agent 工具链的工程师
+- ✨ 开箱即用的输出压缩：100+ 条常用命令，单条开销低于 25ms，无需任何配置
+- ✨ 透明接入 Agent：rtk init -g 注册 hook，重启后命令自动被包装，工作方式完全不变
+- ✨ rtk gain 用量仪表盘：汇总统计、30 天 ASCII 图表、历史记录、按天明细与 JSON 导出
+- ✨ rtk discover 找出被遗漏的节省机会，支持跨项目、按时间范围扫描
+- ✨ Pipelines 进阶优化：一份 Agent 无关的配置文件，可从内置模板起步、安装社区分享的、或自己编写并分享
+- ✨ 跨平台单二进制分发：Homebrew、winget、安装脚本均可，另有 RTK Pro 为团队提供统一网关、成本与合规管控
+- 👥 适合谁：适合使用 Claude Code 等 AI 编程 Agent、希望降低 token 开销的开发者与团队。
 
-`Python` · Fork 561 · 🔗 [官网](phone-harness.com)
+`Rust` · Fork 5,612 · 🔗 [官网](https://www.rtk-ai.app)
 
-### 7. [multica-ai/multica](https://github.com/multica-ai/multica) — ⭐ 56,976（今日 +173）
+### 7. [superdesigndev/treg](https://github.com/superdesigndev/treg) — ⭐ 8,721（今日 +121）
 
-> 把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上
+> 面向 agent 的工具版 OpenRouter：一个 token 调用数千个按次计费的第三方 API
 
-Multica 是一个可自托管的协作工作区，用来解决「同时开了好几个 agent 终端标签、每个都要重新解释上下文、还要全程盯着」的问题。它把你已经在用的编码 agent（Claude Code、Codex、Cursor、Copilot、Kimi、OpenCode 等）变成看板上的正式成员：给 agent 起名、指定 provider 和 runtime 后，就能像给同事派活一样把 issue 指派给它。agent 自己领取任务、在你自己机器或云主机上的 daemon runtime 里执行、边跑边评论、遇到阻塞会抛出来，最后交回给人类 review。意图、执行过程、决策和 diff 都挂在同一个 issue 上，没人需要重建上下文，也没有东西能在人类点头前上线。
+treg 把 agent 真正干活需要的工具集中到一个网关后面：SEO 与反链、社交与趋势、人物与公司信息补全、广告、抓取、图像视频生成，覆盖数千个端点，按次计费、最低一分钱起，不用去各家注册账号。它替团队持有 Semrush、Moz、Crunchbase、Apollo 这类订阅，让你按调用付费，而不是按席位买月费。装好 CLI 后执行 treg login，用 treg catalog search 按「要做什么」找工具，treg call 直接调用，treg balance 看这一单花了多少。你还可以把团队自己的 API 账号、OAuth、厂商 CLI 或 SKILL.md 注册进来，用自己的 key 调用且不计费。
 
-- ✨ Agent 即队友：给每个 agent 起名字、绑定 provider 和 runtime，它会像普通成员一样出现在看板上并被指派 issue
-- ✨ 兼容现有 agent CLI：Claude Code、Codex、Cursor、Copilot、Kimi、OpenCode 等直接用，不锁定厂商
-- ✨ 自托管 runtime：agent 的「工位」是你笔记本或云主机上的 daemon，代码不离开你的机器
-- ✨ 执行日志与实时干预：每次工具调用、命令和报错都带时间戳可回放，运行中回复消息会落进当前 run 而不是下一个
-- ✨ Squads 与 Skills：人和 agent 混编成队由 leader 分派任务，把解决过的问题沉淀成所有 agent 可复用的 playbook
-- ✨ Autopilots、Chat 与 Projects：用 cron 跑站会、审计和报告，直接向工作区提问或不起单就开始干活，并给项目挂上仓库和文档作为上下文
-- 👥 适合谁：已经同时使用多个编码 agent、想要可审计可自托管的团队与独立开发者
+- ✨ 策展目录覆盖数千个端点：SEO 与反链、社交趋势、人物与公司信息补全、广告、爬取、图像视频生成，按次计价，最低一分钱起
+- ✨ 无需向供应商注册：上游账号由 treg 持有，也支持无需 key 的公开路由；自有 key 永远优先于 treg 的 key，且这类调用从不计费
+- ✨ 三类自带工具统一注册：endpoint（base_url + 多个凭证绑定，一次请求可同时注入 OAuth bearer 和 developer-token 头）、CLI（stripe、gh、vercel 等二进制）、skill/bundle（SKILL.md + secrets + tools）
+- ✨ 代理只转发、不建模，并在服务端注入鉴权：上游 API 改动不会波及调用方，调用者永远拿不到密钥
+- ✨ 换 base URL 即可迁移：把 https://api.dataforseo.com/v3 换成 https://treg.to/call/dataforseo，已有客户端就能跑对应目录工具，目录未列出的路径一律 404、不做转发
+- ✨ strict_query 工具做严格参数校验：未声明、重复、超范围或类型不符的参数直接返回 400 catalog_parameter_invalid 并指明参数，且不计费
+- 👥 适合谁：把 agent 用于真实业务的开发者与团队，尤其是做增长、SEO、数据补全类 agent，且需要共享凭证、可自托管的人
 
-`Go` · Fork 7,502 · 🔗 [官网](https://multica.ai)
+`Python` · Fork 859 · 🔗 [官网](https://treg.to)
 
-### 8. [github/spec-kit](https://github.com/github/spec-kit) — ⭐ 150,857（今日 +166）
+### 8. [datazip-inc/olake-go](https://github.com/datazip-inc/olake-go) — ⭐ 2,224（今日 +93）
 
-> 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包
+> 开源高性能数据入湖引擎，把数据库、Kafka 和 S3 的数据实时复制进 Apache Iceberg 或 Parquet。
 
-Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。
+OLake Go 是一个用 Go 编写的数据摄取引擎，解决的是「把业务数据搬进开放湖仓」这件事。它支持从 PostgreSQL、MySQL、MongoDB、Oracle、DB2、MSSQL 这类事务库，以及 Kafka、S3 读取数据，写入 Apache Iceberg 表或纯 Parquet 文件。相比传统方案，它不需要 Spark、Flink、Kafka、Debezium 这一整套重型组件，因此基础设施成本很低；用 Docker Compose 就能起一套带 Web UI 的服务，也可以用 CLI 操作。它提供全量加 CDC 增量同步、自动 schema 发现与演进、Exactly-once 投递，写入走 Arrow，官方公布的 Postgres 全量吞吐达 580K RPS。Iceberg 侧兼容 Glue、Hive、JDBC、REST 四类 Catalog，表维护交给配套的 olake-fusion 项目。
 
-- ✨ 规范驱动开发（SDD）：从一份规范出发，贯穿规划、实现到收敛，产出可追溯
-- ✨ Bug 修复流程：定位并评估成因、限定修复范围、记录验证结果
-- ✨ 想法评估流程：用证据支撑给出继续投入、先澄清或止损的判断
-- ✨ 多代理集成：连接并随时切换不同的 AI 编码代理
-- ✨ 扩展机制：新增命令、质量门禁或完整流程，并可挂接到代理生命周期事件与命令前后钩子
-- ✨ 预设与项目级覆盖：改造模板、命令、术语和方法论，满足组织或合规要求
-- 👥 适合谁：使用 AI 编码代理、希望用规范与流程约束开发过程的个人开发者和团队
+- ✨ 全量与 CDC 增量复制一体，支持自动 schema 发现和 schema 演进
+- ✨ 官方基准：Postgres 全量 580K RPS、Oracle 526K RPS、MSSQL 345K RPS，CDC 场景下 Postgres/MySQL 均快于 Fivetran
+- ✨ Exactly-once 语义保证，基于 Arrow 列式写入兼顾速度与准确性
+- ✨ Iceberg 原生支持，可对接 Glue、Hive、JDBC、REST 四种 Catalog，也可直接落地纯 Parquet
+- ✨ 覆盖 Postgres、MySQL、MongoDB、Oracle、DB2、MSSQL、Kafka、S3 八类数据源
+- ✨ 提供 Web UI 与 CLI 两种使用方式，Docker Compose 一条命令即可部署，无需 Spark/Flink/Debezium
+- 👥 适合谁：需要把业务库或流数据实时同步到 Iceberg 湖仓、又不想维护 Spark/Flink 重型栈的数据团队与平台工程师。
 
-`Python` · Fork 13,549 · 🔗 [官网](https://github.github.com/spec-kit/)
+`Go` · Fork 325 · 🔗 [官网](https://olake.io/olake-go/)
 
-### 9. [LiberNT/LiberNT](https://github.com/LiberNT/LiberNT) — ⭐ 1,696（今日 +166）
+### 9. [jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac) — ⭐ 119,092（今日 +92）
 
-> 基于 NT 架构的免费开源操作系统，兼容 Windows 11，支持 amd64、arm64、riscv64。
+> 一份系统整理 macOS 优质软件的精选清单，按类别归纳，方便查找和使用。
 
-LiberNT 是一个从零构建的自由 NT 操作系统，名字里的 liber 取自拉丁语，意为 free（自由）。它沿用 Windows 的内核、驱动模型与系统服务架构，以 Windows 11 为兼容性对标目标，让开发者能在一个开放、可长期维护的代码库上做内核与驱动层面的工作，而不必受制于闭源系统。上手很直接：从 Releases 下载对应架构的镜像压缩包，在虚拟机或备用机器上启动，用内置的 LiberNT Setup 分区并安装到 NTFS；想自己定制，就用 menuconfig 选好目标平台、编译器和功能开关后从源码构建。目前仍是活跃开发阶段，Release 里的构建属于 Debug 预发布版，只适合测试。
+awesome-mac 是一个面向 Mac 用户的软件精选合集，目标是把散落在各处的优质 macOS 应用集中起来，并按类别系统化整理，解决“想找某个功能的 Mac 软件却不知道用什么好”的问题。它不是代码库，而是一份持续维护的清单：你可以直接在目录里按分类浏览，比如效率工具、开发工具、设计、系统增强等，快速定位到具体应用。遇到合适的项目，按清单里的链接前往官网或商店获取即可。适合当作日常查阅的 Mac 软件选型参考。
 
-- ✨ 64 位优先：内核、HAL 与 FreeLoader 运行在 amd64、arm64、riscv64 上，i386 和 PowerPC 也可从源码构建
-- ✨ UEFI 启动：支持 UEFI 固件、GOP 帧缓冲和早期显示，预装磁盘可用 UEFI 或 BIOS 引导
-- ✨ 现代总线与存储：PCIe/PCI、即插即用、xHCI USB、SD/eMMC，以及配套的总线和存储驱动
-- ✨ 真实开发板支持：覆盖 Raspberry Pi 及其 RP1 I/O 控制器，另为 JH7110 单独构建 riscv64 镜像
-- ✨ Windows 11 驱动模型兼容：NT10 兼容性与驱动模型工作直接对照 Windows 11 本身验证
-- ✨ 图形与 Arm 上的 x86 应用：Mesa 图形驱动模型和基于 FEX 的 WoW64 都是可开关的构建选项
-- 👥 适合谁：对 NT 内核与驱动开发感兴趣的系统程序员、操作系统爱好者和 ARM/嵌入式平台开发者。
+- ✨ 按类别系统整理 macOS 软件，便于按用途快速查找
+- ✨ 持续收录高质量 Mac 应用，形成可长期参考的清单
+- ✨ 覆盖效率、开发、设计、系统工具等多个方向
+- ✨ 每个条目提供应用名称与跳转链接，方便直接获取
+- ✨ 以 Markdown 清单形式维护，阅读和检索成本低
+- ✨ 由社区参与补充和更新，保持内容与时俱进
+- 👥 适合谁：适合所有 Mac 用户，尤其是想按类别发掘优质应用、需要软件选型参考的开发者与效率爱好者。
 
-`C` · Fork 47 · 🔗 [官网](https://libernt.com/)
+`Swift` · Fork 10,494 · 🔗 [官网](https://git.io/macx)
 
-### 10. [earendil-works/pi](https://github.com/earendil-works/pi) — ⭐ 123,107（今日 +165）
+### 10. [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) — ⭐ 75,434（今日 +89）
 
-> 一个极简、可扩展的 TypeScript AI agent 工具箱，覆盖统一 LLM API、agent 运行时、TUI 和编码 CLI。
+> 面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。
 
-Pi 是一套可改造的 agent harness：它把多供应商 LLM 调用、agent 循环与状态管理、终端界面、编码 agent CLI 打包成一个 monorepo，你可以按自己的流程定制它，而不是迁就它的默认工作方式。它不自带 sub-agent、plan mode 这类功能，而是通过 extensions、skills、prompt 模板和主题来扩展，并能打成 Pi packages 经 npm 或 git 分享。使用上，用安装脚本或 npm 装上 CLI，在项目目录执行 pi，/login 接入供应商后即可派活；同时支持交互模式、print/JSON 自动化、RPC 控制和 TypeScript SDK 嵌入。
+OpenSpec 是一套在终端里使用的规格驱动开发框架：用 /openspec-propose 让 AI 先把需求写成 proposal.md、specs、design.md 和 tasks.md，再由 AI 按清单逐条实现，做完归档并把规格沉淀下来。它要解决的是「AI 一上来就写代码、需求和实现两头跑偏」的问题——规格全是纯 Markdown，不需要学新语法，你审完计划再让它动手，个人项目和多人协作都能用，也支持直接在已有代码库上迭代。
 
-- ✨ 统一多供应商 LLM API，覆盖 OpenAI、Anthropic、Google 等
-- ✨ 带工具调用与状态管理的 agent 运行时
-- ✨ 差分渲染的终端 UI 库与交互式编码 agent CLI
-- ✨ 通过 extensions、skills、prompt 模板、themes 定制，并可打包成 Pi packages 分享
-- ✨ 多种使用形态：交互式、print/JSON 模式、RPC、TypeScript SDK
-- ✨ 提供容器化/沙箱方案（Gondolin 微虚拟机、Docker、OpenShell）补足权限边界
-- 👥 适合谁：想把 AI 编码 agent 改造成自己工作流的开发者、需要嵌入 agent 能力的工具作者与团队。
+- ✨ /openspec-explore：零风险的思考搭子，先读你的代码、比较几种方案、收敛范围，再决定要不要做
+- ✨ /openspec-propose：一次产出 proposal.md（为什么做、改什么）、specs（需求与场景）、design.md（技术方案）和 tasks.md（实现清单）
+- ✨ /openspec-apply-change：AI 按 tasks.md 逐条实现并打勾，做到哪一步一眼能看到
+- ✨ /openspec-archive-change：完成后自动归档到 changes/archive/日期-名称，同时更新规格，留给下一个特性继续用
+- ✨ 规格就是纯 Markdown：Requirement + Scenario 的 WHEN/THEN 写法，AI 负责写、你负责审，不需要学新语法
+- ✨ Stores（beta）：把 openspec/ 放进独立仓库，让一次变更横跨 API、Web 和共享库；平台团队维护规格，产品团队只读引用，不用维护会走样的 wiki
+- 👥 适合谁：使用 Claude Code、Cursor 等 AI 编码助手的开发者与技术团队，尤其是已有代码库、需要跨仓库协作的中大型团队。
 
-`TypeScript` · Fork 15,878
-
-
-## 🚀 Show HN 今日新品
-
-[I made an audio-to-MIDI model 60x more efficient](https://news.ycombinator.com/item?id=50526023) · ⬆️ 272 · 💬 56
-
-> 我开发了一个音频转MIDI模型，效率提升60倍。
-
-[Tinnitus frequency finder and audio notch tool](https://news.ycombinator.com/item?id=50541568) · ⬆️ 156 · 💬 109
-
-> Show HN 发布 Tinnitus frequency finder and audio notch tool，帮用户找到耳鸣频率并用音频陷波工具缓解。
+`TypeScript` · Fork 5,154 · 🔗 [官网](https://openspec.dev/)
 
 
 ## 🧡 Product Hunt 今日榜
 
-[FFMPA Kids News](https://www.producthunt.com/products/ffmpa-kids-news) · Product Hunt
+[Beat Watcher](https://www.producthunt.com/products/beat-watcher) · Product Hunt
 
-> FFMPA Kids News 上线，为5到15岁孩子提供平静、经事实核查的新闻内容。
+> Beat Wat
 
-[aiteam.space](https://www.producthunt.com/products/aiteam-space) · Product Hunt
+[Smorza](https://www.producthunt.com/products/smorza) · Product Hunt
 
-> aiteam.space 发布：打造一支 AI 团队，每个智能体都拥有独立电脑。
+> Smorza 让每个 Mac 应用都能拥有独立音量和输出设备。
 
-[greatai Review](https://www.producthunt.com/products/greatai-review) · Product Hunt
+[AlterContacts](https://www.producthunt.com/products/alter-contacts-ai-client-relationships) · Product Hunt
 
-> greatai 在 Product Hunt 发布，为开源项目和非营利组织提供免费 AI 加人工代码审查。
+> AlterContacts 是一款能
 
-[Salus](https://www.producthunt.com/products/salus) · Product Hunt
+[Stitch Loop](https://www.producthunt.com/products/stitch-loop) · Product Hunt
 
-> Salus 今日在 Product Hunt 发布，帮助用户发现捷克共和国的福利与
+> Stitch Loop 是 Google 的 AI 代理，能自动交付修复并持续监控指标。
 
-[Andromon](https://www.producthunt.com/products/andromon) · Product Hunt
+[Publicit](https://www.producthunt.com/products/publicit) · Product Hunt
 
-> Andromon 发布：可将你的安卓手机投到电脑上使用，且免费。
+> Publicit 是面向营销人员和 AI 代理的全渠道广告基础设施。
 
 
 ## 🇨🇳 中文独立开发 · V2EX 分享创造
 
-[\[持续更新\] 做了一个专注 软考 -- 系统架构师 刷题的网站](https://www.v2ex.com/t/1258754) · 💬 0 回复
+[创建了几个 muse 账户，有谁想玩吗](https://www.v2ex.com/t/1258889) · 💬 5 回复
 
-> 独立开发者持续更新一个专注软考系统架构师刷题的网站。
+> 开发者创建了几个 muse 账户，
 
-[做了两款单机麻将游戏，招募 Google Play 安卓封测玩家（可互测）](https://www.v2ex.com/t/1258748) · 💬 0 回复
+[我做了 Kooyu：一个本地优先的 AI 助手，统一调度你手里所有的编程 CLI](https://www.v2ex.com/t/1258880) · 💬 4 回复
 
-> 开发者推出两款单
+> 开发者打造了本地优先的 AI 助手 Kooyu，可统一调度各类编程 CLI。
 
-[\[抽送 50USDT\] ClassyGit: 把 Gist 当博客用，把 GitHub 变成复古个人主页](https://www.v2ex.com/t/1258746) · 💬 0 回复
+[\[开源\] 微子中枢 v0.6.1：一键部署 + 远程控制，新增本地 Ollama 和 OpenCode](https://www.v2ex.com/t/1258878) · 💬 0 回复
 
-> 开发者分享 ClassyGit，可把 Gist 当博客、把 GitHub 变成复古个人主页，并抽送 50USDT。
+> 开源项目微子中枢 v0.6.1 支持一键部署和远程控制，新增本地 Ollama 与 OpenCode。
 
-[做了一个 B 站浏览器插件，屏蔽低质量或者不喜欢类型的 UP](https://www.v2ex.com/t/1258744) · 💬 0 回复
+[myco：可能是全网唯一能安全使用 Claude 的客户端，开放免费内测啦！](https://www.v2ex.com/t/1258876) · 💬 0 回复
 
-> 开发者制作了一款B站浏览器插件，可屏蔽低质量或不喜欢的UP主。
+> 独立开发者发布 myco 客户端，号称全网唯一能安全使用 Claude，现已开放免费内测。
 
-[🎉 File-Organizer (文件归档/批量重命名) 上架 App Store | 黑五回馈 V 友](https://www.v2ex.com/t/1258731) · 💬 11 回复
+[年初做的终端排障小工具推倒重做成了 aist：零配置融进 Shell、多机 SSH、带环境记忆，再来求各位老哥拍砖](https://www.v2ex.com/t/1258874) · 💬 0 回复
 
-> 独立开发者推出的 File-Organizer（文件归档与批量重命名）已上架 App Store，并为庆祝黑五回馈
+> 独立开发者将年初的终端排障小工具重做成 aist，支持零配置融入 Shell、多机 SSH 和环境记忆。
 
 ## 📋 完整榜单
 
@@ -247,16 +236,16 @@ Pi 是一套可改造的 agent harness：它把多供应商 LLM 调用、agent �
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN … | `Python` | 71,591 | +681 |
-| 2 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。 | `JavaScript` | 307,985 | +649 |
-| 3 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。 | `Python` | 5,501 | +454 |
-| 4 | [FlashML-org/FreeVideo](https://github.com/FlashML-org/FreeVideo) | 在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存… | `Python` | 3,924 | +293 |
-| 5 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品 | `Rust` | 130,551 | +250 |
-| 6 | [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) | 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone … | `Python` | 5,400 | +198 |
-| 7 | [multica-ai/multica](https://github.com/multica-ai/multica) | 把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上 | `Go` | 56,976 | +173 |
-| 8 | [github/spec-kit](https://github.com/github/spec-kit) | 为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包 | `Python` | 150,857 | +166 |
-| 9 | [LiberNT/LiberNT](https://github.com/LiberNT/LiberNT) | 基于 NT 架构的免费开源操作系统，兼容 Windows 11，支持 amd64、arm6… | `C` | 1,696 | +166 |
-| 10 | [earendil-works/pi](https://github.com/earendil-works/pi) | 一个极简、可扩展的 TypeScript AI agent 工具箱，覆盖统一 LLM AP… | `TypeScript` | 123,107 | +165 |
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码 | `Shell` | 323,884 | +883 |
+| 2 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。 | `Python` | 68,278 | +488 |
+| 3 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器 | `TypeScript` | 18,184 | +260 |
+| 4 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 196,513 | +780 |
+| 5 | [driceroland/Search](https://github.com/driceroland/Search) | Office Commun 出品的 macOS 极简 WebKit 浏览器，约 10 MB… | `Swift` | 3,731 | +230 |
+| 6 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | 把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用… | `Rust` | 87,441 | +125 |
+| 7 | [superdesigndev/treg](https://github.com/superdesigndev/treg) | 面向 agent 的工具版 OpenRouter：一个 token 调用数千个按次计费的第… | `Python` | 8,721 | +121 |
+| 8 | [datazip-inc/olake-go](https://github.com/datazip-inc/olake-go) | 开源高性能数据入湖引擎，把数据库、Kafka 和 S3 的数据实时复制进 Apache I… | `Go` | 2,224 | +93 |
+| 9 | [jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac) | 一份系统整理 macOS 优质软件的精选清单，按类别归纳，方便查找和使用。 | `Swift` | 119,092 | +92 |
+| 10 | [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | 面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。 | `TypeScript` | 75,434 | +89 |
 
 <!-- TRENDING:END -->
 

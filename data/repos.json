@@ -136,7 +136,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-22",
     "streak_days": 1,
     "summary": "给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。"
   },
@@ -161,6 +161,23 @@
     "first_seen": "2026-11-05",
     "last_seen": "2026-11-05",
     "streak_days": 1
+  },
+  "Fission-AI/OpenSpec": {
+    "analyzed_at": "2026-11-22",
+    "audience": "使用 Claude Code、Cursor 等 AI 编码助手的开发者与技术团队，尤其是已有代码库、需要跨仓库协作的中大型团队。",
+    "features": [
+      "/openspec-explore：零风险的思考搭子，先读你的代码、比较几种方案、收敛范围，再决定要不要做",
+      "/openspec-propose：一次产出 proposal.md（为什么做、改什么）、specs（需求与场景）、design.md（技术方案）和 tasks.md（实现清单）",
+      "/openspec-apply-change：AI 按 tasks.md 逐条实现并打勾，做到哪一步一眼能看到",
+      "/openspec-archive-change：完成后自动归档到 changes/archive/日期-名称，同时更新规格，留给下一个特性继续用",
+      "规格就是纯 Markdown：Requirement + Scenario 的 WHEN/THEN 写法，AI 负责写、你负责审，不需要学新语法",
+      "Stores（beta）：把 openspec/ 放进独立仓库，让一次变更横跨 API、Web 和共享库；平台团队维护规格，产品团队只读引用，不用维护会走样的 wiki"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "OpenSpec 是一套在终端里使用的规格驱动开发框架：用 /openspec-propose 让 AI 先把需求写成 proposal.md、specs、design.md 和 tasks.md，再由 AI 按清单逐条实现，做完归档并把规格沉淀下来。它要解决的是「AI 一上来就写代码、需求和实现两头跑偏」的问题——规格全是纯 Markdown，不需要学新语法，你审完计划再让它动手，个人项目和多人协作都能用，也支持直接在已有代码库上迭代。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。"
   },
   "FlashML-org/FreeToken": {
     "analyzed_at": "2026-11-03",
@@ -1040,9 +1057,26 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-22",
     "streak_days": 1,
     "summary": "Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器"
+  },
+  "datazip-inc/olake-go": {
+    "analyzed_at": "2026-11-22",
+    "audience": "需要把业务库或流数据实时同步到 Iceberg 湖仓、又不想维护 Spark/Flink 重型栈的数据团队与平台工程师。",
+    "features": [
+      "全量与 CDC 增量复制一体，支持自动 schema 发现和 schema 演进",
+      "官方基准：Postgres 全量 580K RPS、Oracle 526K RPS、MSSQL 345K RPS，CDC 场景下 Postgres/MySQL 均快于 Fivetran",
+      "Exactly-once 语义保证，基于 Arrow 列式写入兼顾速度与准确性",
+      "Iceberg 原生支持，可对接 Glue、Hive、JDBC、REST 四种 Catalog，也可直接落地纯 Parquet",
+      "覆盖 Postgres、MySQL、MongoDB、Oracle、DB2、MSSQL、Kafka、S3 八类数据源",
+      "提供 Web UI 与 CLI 两种使用方式，Docker Compose 一条命令即可部署，无需 Spark/Flink/Debezium"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "OLake Go 是一个用 Go 编写的数据摄取引擎，解决的是「把业务数据搬进开放湖仓」这件事。它支持从 PostgreSQL、MySQL、MongoDB、Oracle、DB2、MSSQL 这类事务库，以及 Kafka、S3 读取数据，写入 Apache Iceberg 表或纯 Parquet 文件。相比传统方案，它不需要 Spark、Flink、Kafka、Debezium 这一整套重型组件，因此基础设施成本很低；用 Docker Compose 就能起一套带 Web UI 的服务，也可以用 CLI 操作。它提供全量加 CDC 增量同步、自动 schema 发现与演进、Exactly-once 投递，写入走 Arrow，官方公布的 Postgres 全量吞吐达 580K RPS。Iceberg 侧兼容 Glue、Hive、JDBC、REST 四类 Catalog，表维护交给配套的 olake-fusion 项目。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "开源高性能数据入湖引擎，把数据库、Kafka 和 S3 的数据实时复制进 Apache Iceberg 或 Parquet。"
   },
   "debpalash/VoiceStudio": {
     "analyzed_at": "2026-11-10",
@@ -1077,6 +1111,23 @@
     "last_seen": "2026-11-15",
     "streak_days": 1,
     "summary": "开源 Office SDK，可嵌入表格、文档与演示的编辑、计算和协作能力"
+  },
+  "driceroland/Search": {
+    "analyzed_at": "2026-11-22",
+    "audience": "适合追求速度与隐私、厌恶功能膨胀和账号体系的 Mac 用户，尤其是每天长时间在浏览器里工作的开发者与设计师。",
+    "features": [
+      "单一输入框：地址与搜索合一，基于本地历史补全，按下回车前不发送任何输入",
+      "克制的标签页：常驻页面可固定并缩成图标或首字母，上次会话的标签恢复不占资源，⌘K 按名称检索所有打开的标签",
+      "分屏视图：把一个标签拖到页面上即可左右并排，拖动分隔线调整宽度，成对标签与宽度随空间一起恢复",
+      "永久隐藏元素：⇧⌘H 后点掉 Cookie 横幅、订阅弹层、相关推荐栏，下次访问时页面渲染前就已消失",
+      "网络层广告拦截：第三方追踪器与广告网络在请求阶段就被拦掉，默认开启，站点出错可按站关闭",
+      "阅读模式与画中画：⇧⌘R 剥离正文，⇧⌘P 把视频提为置顶小窗，浮于其他应用之上"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "Search 是一款把「浏览器」还原成工具的 macOS 浏览器，由一家整天泡在浏览器里的设计工作室开发——他们受够了那些把自己做成产品的浏览器。整个界面只有一栏标签页（左侧或顶部，可切换）和网页本身：没有工具栏、没有起始页、没有推荐侧栏、没有要登录的账号。它复用系统自带的 WebKit 引擎，所以安装包只有约 10 MB，启动几乎瞬时，不需要再下载维护一份 Chromium。使用方式极简：在唯一的输入框里敲地址就跳转、敲词就搜索，历史补全在本地完成，回车之前不向任何地方发送内容。支持 macOS 14 及以上，免费，也可用 Homebrew cask 安装。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "Office Commun 出品的 macOS 极简 WebKit 浏览器，约 10 MB，无工具栏、无账号、无同步。"
   },
   "dsx-ai-factory/nvke": {
     "analyzed_at": "2026-11-09",
@@ -1474,6 +1525,23 @@
     "streak_days": 1,
     "summary": "给 AI Agent 做独立审计的工具，120 秒内回答一个关键问题：它到底有没有按预期做事。"
   },
+  "jaywcjlove/awesome-mac": {
+    "analyzed_at": "2026-11-22",
+    "audience": "适合所有 Mac 用户，尤其是想按类别发掘优质应用、需要软件选型参考的开发者与效率爱好者。",
+    "features": [
+      "按类别系统整理 macOS 软件，便于按用途快速查找",
+      "持续收录高质量 Mac 应用，形成可长期参考的清单",
+      "覆盖效率、开发、设计、系统工具等多个方向",
+      "每个条目提供应用名称与跳转链接，方便直接获取",
+      "以 Markdown 清单形式维护，阅读和检索成本低",
+      "由社区参与补充和更新，保持内容与时俱进"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "awesome-mac 是一个面向 Mac 用户的软件精选合集，目标是把散落在各处的优质 macOS 应用集中起来，并按类别系统化整理，解决“想找某个功能的 Mac 软件却不知道用什么好”的问题。它不是代码库，而是一份持续维护的清单：你可以直接在目录里按分类浏览，比如效率工具、开发工具、设计、系统增强等，快速定位到具体应用。遇到合适的项目，按清单里的链接前往官网或商店获取即可。适合当作日常查阅的 Mac 软件选型参考。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "一份系统整理 macOS 优质软件的精选清单，按类别归纳，方便查找和使用。"
+  },
   "jingyaogong/minimind": {
     "analyzed_at": "2026-11-18",
     "audience": "想深入理解大模型原理、亲手从零训练模型的学生、开发者与AI教学者。",
@@ -1487,7 +1555,7 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-22",
     "streak_days": 1,
     "summary": "从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。"
   },
@@ -1903,7 +1971,7 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。",
-    "last_seen": "2026-11-18",
+    "last_seen": "2026-11-22",
     "streak_days": 1,
     "summary": "为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码"
   },
@@ -2165,6 +2233,23 @@
     "streak_days": 1,
     "summary": "542 节开源课程，带你从零实现模型内部、检索管线和智能体运行时，边写代码边学 AI 工程。"
   },
+  "rtk-ai/rtk": {
+    "analyzed_at": "2026-11-22",
+    "audience": "适合使用 Claude Code 等 AI 编程 Agent、希望降低 token 开销的开发者与团队。",
+    "features": [
+      "开箱即用的输出压缩：100+ 条常用命令，单条开销低于 25ms，无需任何配置",
+      "透明接入 Agent：rtk init -g 注册 hook，重启后命令自动被包装，工作方式完全不变",
+      "rtk gain 用量仪表盘：汇总统计、30 天 ASCII 图表、历史记录、按天明细与 JSON 导出",
+      "rtk discover 找出被遗漏的节省机会，支持跨项目、按时间范围扫描",
+      "Pipelines 进阶优化：一份 Agent 无关的配置文件，可从内置模板起步、安装社区分享的、或自己编写并分享",
+      "跨平台单二进制分发：Homebrew、winget、安装脚本均可，另有 RTK Pro 为团队提供统一网关、成本与合规管控"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "RTK 是一个面向 AI 编程 Agent 的 token 成本削减工具。它安装在你的机器上，通过 hook 自动接管 git status、测试、diff、日志、构建等 100+ 条常见命令：Agent 发出命令时，实际执行的是 rtk 包装后的版本，原始输出在 Agent 读取前就被压缩成精简摘要，例如 40 行的 git status 变成 3 行总结。无需改配置、无需学习新命令，装完重启 Agent 即生效；每条命令开销低于 25ms。它同时提供 pipelines 机制，用一份 Agent 无关的配置文件做更进一步的优化，比如把重读取交给更便宜的模型、压缩 bash 之外的内容、在不破坏 prompt 缓存的前提下清理 API 流量。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用。"
+  },
   "rust-lang/rust": {
     "analyzed_at": "2026-11-07",
     "audience": "想用 Rust 写高性能、高可靠软件的开发者，以及准备给编译器提交 PR 的贡献者",
@@ -2339,6 +2424,23 @@
     "last_seen": "2026-11-18",
     "streak_days": 1,
     "summary": "Orca 是一个 AI 编排器，让你用自己的订阅并行调度 Claude Code、Codex 等编码代理。"
+  },
+  "superdesigndev/treg": {
+    "analyzed_at": "2026-11-22",
+    "audience": "把 agent 用于真实业务的开发者与团队，尤其是做增长、SEO、数据补全类 agent，且需要共享凭证、可自托管的人",
+    "features": [
+      "策展目录覆盖数千个端点：SEO 与反链、社交趋势、人物与公司信息补全、广告、爬取、图像视频生成，按次计价，最低一分钱起",
+      "无需向供应商注册：上游账号由 treg 持有，也支持无需 key 的公开路由；自有 key 永远优先于 treg 的 key，且这类调用从不计费",
+      "三类自带工具统一注册：endpoint（base_url + 多个凭证绑定，一次请求可同时注入 OAuth bearer 和 developer-token 头）、CLI（stripe、gh、vercel 等二进制）、skill/bundle（SKILL.md + secrets + tools）",
+      "代理只转发、不建模，并在服务端注入鉴权：上游 API 改动不会波及调用方，调用者永远拿不到密钥",
+      "换 base URL 即可迁移：把 https://api.dataforseo.com/v3 换成 https://treg.to/call/dataforseo，已有客户端就能跑对应目录工具，目录未列出的路径一律 404、不做转发",
+      "strict_query 工具做严格参数校验：未声明、重复、超范围或类型不符的参数直接返回 400 catalog_parameter_invalid 并指明参数，且不计费"
+    ],
+    "first_seen": "2026-11-22",
+    "intro": "treg 把 agent 真正干活需要的工具集中到一个网关后面：SEO 与反链、社交与趋势、人物与公司信息补全、广告、抓取、图像视频生成，覆盖数千个端点，按次计费、最低一分钱起，不用去各家注册账号。它替团队持有 Semrush、Moz、Crunchbase、Apollo 这类订阅，让你按调用付费，而不是按席位买月费。装好 CLI 后执行 treg login，用 treg catalog search 按「要做什么」找工具，treg call 直接调用，treg balance 看这一单花了多少。你还可以把团队自己的 API 账号、OAuth、厂商 CLI 或 SKILL.md 注册进来，用自己的 key 调用且不计费。",
+    "last_seen": "2026-11-22",
+    "streak_days": 1,
+    "summary": "面向 agent 的工具版 OpenRouter：一个 token 调用数千个按次计费的第三方 API"
   },
   "sveltejs/svelte": {
     "analyzed_at": "2026-11-17",

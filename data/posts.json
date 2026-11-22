@@ -83,6 +83,12 @@
     "last_seen": "2026-11-21",
     "summary": "FFMPA Kids News 上线，为5到15岁孩子提供平静、经事实核查的新闻内容。"
   },
+  "ph:1317062": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "Beat Wat"
+  },
   "ph:1319192": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -95,6 +101,12 @@
     "last_seen": "2026-11-21",
     "summary": "Salus 今日在 Product Hunt 发布，帮助用户发现捷克共和国的福利与"
   },
+  "ph:1320128": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "AlterContacts 是一款能"
+  },
   "ph:1320414": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -106,6 +118,12 @@
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Fieldwork Code 支持在笔记本或云端进行 AI 编程，并可通过手机远程操作。"
+  },
+  "ph:1321826": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "Publicit 是面向营销人员和 AI 代理的全渠道广告基础设施。"
   },
   "ph:1321837": {
     "analyzed_at": "2026-11-20",
@@ -136,6 +154,18 @@
     "first_seen": "2026-11-21",
     "last_seen": "2026-11-21",
     "summary": "greatai 在 Product Hunt 发布，为开源项目和非营利组织提供免费 AI 加人工代码审查。"
+  },
+  "ph:1324641": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "Smorza 让每个 Mac 应用都能拥有独立音量和输出设备。"
+  },
+  "ph:1324651": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "Stitch Loop 是 Google 的 AI 代理，能自动交付修复并持续监控指标。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -224,5 +254,35 @@
     "first_seen": "2026-11-21",
     "last_seen": "2026-11-21",
     "summary": "独立开发者持续更新一个专注软考系统架构师刷题的网站。"
+  },
+  "v2ex:1258874": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "独立开发者将年初的终端排障小工具重做成 aist，支持零配置融入 Shell、多机 SSH 和环境记忆。"
+  },
+  "v2ex:1258876": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "独立开发者发布 myco 客户端，号称全网唯一能安全使用 Claude，现已开放免费内测。"
+  },
+  "v2ex:1258878": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "开源项目微子中枢 v0.6.1 支持一键部署和远程控制，新增本地 Ollama 与 OpenCode。"
+  },
+  "v2ex:1258880": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "开发者打造了本地优先的 AI 助手 Kooyu，可统一调度各类编程 CLI。"
+  },
+  "v2ex:1258889": {
+    "analyzed_at": "2026-11-22",
+    "first_seen": "2026-11-22",
+    "last_seen": "2026-11-22",
+    "summary": "开发者创建了几个 muse 账户，"
   }
 }
