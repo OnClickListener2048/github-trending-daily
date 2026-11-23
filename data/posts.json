@@ -26,13 +26,13 @@
   "hn:50547980": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
-    "last_seen": "2026-11-19",
+    "last_seen": "2026-11-23",
     "summary": "ExitPath 是一个开源项目，提供从 Slack、Notion 和 Microsoft 365 迁移或退出的方案。"
   },
   "hn:50548161": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
-    "last_seen": "2026-11-19",
+    "last_seen": "2026-11-23",
     "summary": "新项目带你逐层拆解旅行"
   },
   "hn:50548660": {
@@ -47,11 +47,29 @@
     "last_seen": "2026-11-20",
     "summary": "受 H"
   },
+  "hn:50599762": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "在Show HN上，有人发布了一款游戏：玩家扮演LLM的分代理，该帖获得309分和74条评论。"
+  },
   "ph:1226465": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Ableten Hybrid AI Travel Planner 发布，让团队成员在同一张地图上协同规划行程。"
+  },
+  "ph:1285780": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "Daymaker 推出一款能送出高度个性化礼物的工具，让潜在客户更愿意接受会面。"
+  },
+  "ph:1306148": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "Yoroll 让你无需游戏引擎即可构建可玩的故事。"
   },
   "ph:1310799": {
     "analyzed_at": "2026-11-20",
@@ -107,6 +125,12 @@
     "last_seen": "2026-11-22",
     "summary": "AlterContacts 是一款能"
   },
+  "ph:1320357": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "MeshLive 推出基于蓝牙 mesh 的离线视频通话与直播功能。"
+  },
   "ph:1320414": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -149,6 +173,12 @@
     "last_seen": "2026-11-21",
     "summary": "Andromon 发布：可将你的安卓手机投到电脑上使用，且免费。"
   },
+  "ph:1323666": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "Mockreel 可将屏幕录制放进 3D 手机画面展示，免费且无需注册。"
+  },
   "ph:1323788": {
     "analyzed_at": "2026-11-21",
     "first_seen": "2026-11-21",
@@ -166,6 +196,12 @@
     "first_seen": "2026-11-22",
     "last_seen": "2026-11-22",
     "summary": "Stitch Loop 是 Google 的 AI 代理，能自动交付修复并持续监控指标。"
+  },
+  "ph:1324705": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "Creavit Studio 4.0 登陆 Product Hunt，为 Mac 带来屏幕录制、iPhone 摄像头和电影级演示功能。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -284,5 +320,35 @@
     "first_seen": "2026-11-22",
     "last_seen": "2026-11-22",
     "summary": "开发者创建了几个 muse 账户，"
+  },
+  "v2ex:1259142": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "独立开发者分享极"
+  },
+  "v2ex:1259146": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "开发者做了个纯浏览器本地运行的免费 OCR 工具，免登录不上传，支持粘贴截图对照校对。"
+  },
+  "v2ex:1259151": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "开发者用 DeepSeek 编写了原生跨平台文本编辑器 Zpad，并邀请大家体验。"
+  },
+  "v2ex:1259152": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "失业大半年的独立开发者分享作品：一个用猫咪陪伴学英语的小程序。"
+  },
+  "v2ex:1259157": {
+    "analyzed_at": "2026-11-23",
+    "first_seen": "2026-11-23",
+    "last_seen": "2026-11-23",
+    "summary": "GPT-Team 账号可免费领取 Codex 4375 Credit，价值 175 美元账单金额。"
   }
 }
