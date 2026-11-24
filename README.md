@@ -17,233 +17,229 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-23
+# 🔥 GitHub 每日 Trending · 2026-11-24
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ⭐ 63,043（今日 +699）
+### 1. [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) — ⭐ 20,470（今日 +2,029）
 
-> 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。
+> 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用
 
-CLI-Anything 是一个把现有软件变成 Agent 原生工具的项目：跑一条命令，就为某个软件或服务生成一套结构化的命令行接口（CLI harness）；Cursor、Claude Code、OpenClaw、Pi、nanobot 这类 Agent 都能直接调用它，不必再依赖 GUI 或非结构化接口。它要解决的是「今天的软件给人用，明天的用户是 Agent」这个断层。用法上分两条线：一是用 pip install cli-anything-hub 安装 CLI-Hub，再用 cli-hub install <name> 浏览、安装和管理社区构建的 CLI；二是自己按 CONTRIBUTING 提交一个 harness，PR 合并后立刻出现在 Hub 上。生成出来的命令既输出 JSON，供程序解析，也输出人类可读文本，方便调试。
+Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。
 
-- ✨ 一条命令行即可让任意软件变成 agent-ready，兼容 Pi、OpenClaw、nanobot、Cursor、Claude Code 等 Agent 宿主
-- ✨ CLI-Hub 社区注册中心：pip install cli-anything-hub 后用 cli-hub install <name> 一键浏览、安装、管理所有社区 CLI，合并 PR 后即时上架
-- ✨ 每条命令同时提供 JSON 结构化输出和人类可读输出，Agent 解析与人工排查两不误
-- ✨ 配套 preview、live preview 和 trajectory loop 机制，Agent 能反复试跑并产出真实产物：CAD 构建、3D 场景、图表、游戏玩法、字幕等，官方 Demos 覆盖 18 个应用
-- ✨ 覆盖真实软件生态的现成 CLI：ArcGIS Pro 制图与地理处理、Calibre 书库、搜索、元数据、转换和导出、Joplin 笔记与同步、Obsidian 持久记忆、Sketch、Rekordbox 等
-- ✨ 贡献与需求双向通道：通过 wishlist 模板请求想要支持的软件，通过 contributor signup 认领 harness，并在 2,461 项通过的单元与 e2e 测试基线上做质量把关
-- 👥 适合谁：想让自家软件被 Agent 调用，或用 Agent 自动化各类桌面与专业软件的开发者。
+- ✨ 83 个技能 + 15 个斜杠命令，按主题自动触发，无需按名称调用
+- ✨ 58 个 hunt-* 漏洞类别技能，整理自 681 份公开 HackerOne 报告，含检测模式、payload、绕过表和链式利用模板
+- ✨ bb-methodology 与 redteam-mindset 提供五阶段非线性工作流、批判性思维框架和红队操作纪律
+- ✨ 企业外围攻击矩阵：M365/Entra、Okta、vCenter、SSL-VPN、SharePoint、云 IAM 的 2024–2026 CVE 链与凭据后提权
+- ✨ triage-validation 七问门、VRT 感知定级、OOS 反驳话术、PII 脱敏与红队交付物
+- ✨ 插件市场一键安装或脚本复制安装，附带 hunt 接驳目录脚手架、cbh CLI 与 Burp MCP 集成，可同时装到多个 agent harness
+- 👥 适合谁：从事授权漏洞赏金、外部红队与 Web 应用安全测试的安全研究员
 
-`Python` · Fork 5,733 · 🔗 [官网](https://clianything.cc/)
+`Python` · Fork 2,166 · 🔗 [官网](https://elementalsouls.github.io/Claude-BugHunter)
 
-### 2. [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) — ⭐ 207,305（今日 +915）
+### 2. [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) — ⭐ 12,472（今日 +422）
 
-> 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的一站式知识基础设施。
+> Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统
 
-Firecrawl 是一个面向 AI 应用和智能体的网页数据层：你给它一个 URL 或者一句搜索词，它返回干净的 Markdown、结构化 JSON 或截图，省掉代理轮换、JS 渲染、限流这些脏活。README 强调它覆盖 96% 的网页（包括重 JS 的站点），P95 延迟约 3.4 秒，输出对 LLM 友好，能少烧 token。除了单页抓取，它还支持整站爬取、URL 发现、批量异步抓取、内容变更监控，以及用 Actions 先点击、滚动、输入再抽取，甚至用 AI 提示词在页面上继续操作。既可以开源自托管，也可以直接用托管服务，Python、Node、cURL、CLI 都提供一行调用的入口。
+这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。
 
-- ✨ Search：搜索网页并直接返回结果页的完整内容（markdown），省去二次抓取
-- ✨ Scrape：把任意 URL 转成 Markdown、HTML、截图或结构化 JSON，自带代理、JS 渲染和限流处理
-- ✨ Interact：先抓页面再用 AI 提示词或代码与页面交互，Actions 支持点击、滚动、输入、等待、按键
-- ✨ Crawl 与 Map：一次请求爬完整站所有 URL，或快速发现站点全部链接
-- ✨ Batch Scrape 与 Monitor：异步批量抓取上千 URL，并在网页内容变化时收到通知
-- ✨ Parse 与 Alexandria：把 PDF、DOCX 等文档解析成 Markdown/JSON，并通过 Firecrawl Cloud 接入 550+ 数据提供商
-- 👥 适合谁：适合做 AI Agent、RAG、知识库和数据采集的开发者与团队，需要稳定网页数据的后端与全栈工程师。
+- ✨ 从文本或图片生成新界面，支持编辑已有屏幕、批量生成设计变体
+- ✨ 把 React、Vue 等前端代码转成 Stitch 设计稿（HTML 提取 + 设计系统 + 上传）
+- ✨ 从源码自动抽取 DESIGN.md 设计系统，并一键套用到全部屏幕
+- ✨ 管理 Stitch 设计系统，上传 DESIGN.md、应用主题
+- ✨ 提取自包含的静态 HTML，便于交付或迁移
+- ✨ 多客户端插件化安装：Codex 市场、Claude Code/Cursor 的 npx 安装、OpenCode 手动接入
+- 👥 适合谁：需要把 UI 设计稿与代码库打通的前端工程师、全栈开发者和设计工程师，尤其是已在 Claude Code、Cursor、Codex 等 Agent 中工作的人。
 
-`TypeScript` · Fork 10,836 · 🔗 [官网](https://firecrawl.dev)
+`TypeScript` · Fork 1,519 · 🔗 [官网](https://stitch.withgoogle.com/docs/mcp/setup)
 
-### 3. [nginx/nginx](https://github.com/nginx/nginx) — ⭐ 32,938（今日 +163）
+### 3. [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) — ⭐ 61,145（今日 +792）
 
-> 官方 NGINX 开源仓库：高性能 Web 服务器、反向代理与负载均衡器
+> 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具
 
-这是 NGINX 官方开源代码仓库，采用类 BSD 2-clause 许可，可免费使用。NGINX 不是单一进程，而是由一个 master 进程读取并校验配置、管理多个 worker 进程处理实际请求，因此能突破操作系统进程数限制并横向扩展。它通过文本配置文件中的指令（directives）完成配置，功能由模块拆分扩展，模块可分静态编译进二进制或作为动态模块加载。除源码构建外，官方为主流 Linux 发行版、FreeBSD 和 Windows 提供二进制包，README 还给出了安装 SSL 证书启用 TLS、负载均衡、限流和内容缓存的上手路径。
+AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。
 
-- ✨ 作为 Web 服务器、反向代理、负载均衡器、API 网关和内容缓存多合一使用
-- ✨ master/worker 多进程架构，可通过 worker_processes 等指令调优并发能力
-- ✨ 模块化设计，功能按模块拆分，支持静态编译与动态模块两种分发方式
-- ✨ 纯文本配置文件和指令体系，可灵活组合出所需行为
-- ✨ 官方提供 Linux、FreeBSD、Windows 等多平台二进制包及源码构建流程
-- ✨ README 覆盖 TLS 证书配置、负载均衡、限流、内容缓存等常见场景入门指引
-- 👥 适合谁：需要部署 Web 服务、反向代理或负载均衡的后端与运维开发者，以及想从源码构建定制 NGINX 的工程师
+- ✨ 自动重链接：把 PS5 可执行文件转换为 Linux、Windows 原生可执行格式
+- ✨ 提供 system prx 系统库实现，支持动态链接，无需模拟器或独立运行时进程
+- ✨ 着色器重编译器输出 SPIR-V，并可用 Spirv-Tools 校验结果
+- ✨ 网页版转换器，所有文件处理都在本地设备完成，不上传服务器
+- ✨ 输入映射支持 SDL 手柄（含摇杆与扳机），键鼠可通过 anyps5-input.ini 配置
+- ✨ 仅含 relinker 的构建可在 macOS（含 Apple silicon）上运行
+- 👥 适合谁：对 PS5 软件互操作性、移植研究与软件保存感兴趣的开发者和研究人员
 
-`C` · Fork 8,393 · 🔗 [官网](https://nginx.org/)
+`C++` · Fork 5,939 · 🔗 [官网](https://boykopovar.github.io/AnyPS5/)
 
-### 4. [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) — ⭐ 12,162（今日 +158）
+### 4. [anomalyco/opencode](https://github.com/anomalyco/opencode) — ⭐ 228,879（今日 +263）
 
-> OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。
+> 开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。
 
-OpenVINO 解决的是“训练好的模型怎么在真实硬件上跑得快、跑得省”这个问题。它可以把 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax 等框架训练的模型转换后直接部署，不需要原框架参与推理；也能通过 Optimum Intel 直接接入 Hugging Face Hub 上的 transformers 和 diffusers 模型。使用时先用 ov.convert_model 转换，再用 core.compile_model 指定设备编译，随后即可推理，pip install openvino 就能上手，官方还提供 Notebooks 和 C++/Python 示例。
+OpenCode 是一个开源的 AI 编码智能体，官方定位就是「The open source coding agent」。它把 AI 助手放进你的终端：既能直接改代码、跑 bash 命令干开发活，也能切成只读模式，先摸清陌生代码库再动手。安装很轻，一条 curl 脚本或 npm、brew、pacman、mise、nix 都能装好，另外还提供处于 Beta 阶段的桌面应用（macOS、Windows、Linux）。想深入了解配置可以看官方文档，社区在 Discord 和 X 上。
 
-- ✨ 推理优化：面向计算机视觉、语音识别、生成式 AI 与 NLP（含大小语言模型）等常见任务提升性能
-- ✨ 多框架模型支持：兼容 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax，并可脱离原框架转换部署
-- ✨ Hugging Face 集成：通过 Optimum Intel 直接使用 transformers 与 diffusers 模型
-- ✨ 广泛硬件覆盖：支持 CPU（x86、ARM）、GPU（Intel 集显与独显）以及 Intel NPU 等 AI 加速器，覆盖边缘到云端
-- ✨ 简单部署 API：convert_model 转换 + compile_model 指定设备编译，几行代码完成模型推理
-- ✨ 丰富学习资源：OpenVINO Notebooks 提供 LLM 聊天机器人、YOLOv11 优化、文生图、LLaVa 多模态、Whisper 语音识别等实战示例
-- 👥 适合谁：需要在 Intel CPU、GPU、NPU 或边缘设备上高效部署和优化深度学习模型的 AI 应用开发者。
+- ✨ 终端 UI（TUI）形式的编码智能体，直接在命令行里工作
+- ✨ 内置 build 与 plan 两个 agent，用 Tab 键随时切换
+- ✨ plan 为只读模式：默认拒绝文件编辑，执行 bash 前先征求许可，适合探索陌生代码库
+- ✨ general 子代理用于复杂搜索和多步任务，可在消息中用 @general 调用
+- ✨ 安装方式覆盖 curl 脚本、npm/bun/pnpm/yarn、Homebrew、Arch 的 pacman 与 AUR、mise、Nix
+- ✨ 提供 Beta 桌面应用，支持 macOS（Apple Silicon/Intel）、Windows 和 Linux 的 deb/rpm/AppImage
+- 👥 适合谁：适合习惯在终端工作的开发者，尤其是需要 AI 辅助读代码、改代码、执行命令的人。
 
-`C++` · Fork 3,669 · 🔗 [官网](https://docs.openvino.ai)
+`TypeScript` · Fork 31,127 · 🔗 [官网](https://opencode.ai)
 
-### 5. [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ⭐ 70,524（今日 +518）
+### 5. [microsoft/markitdown](https://github.com/microsoft/markitdown) — ⭐ 198,159（今日 +246）
 
-> 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。
+> 微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。
 
-diagram-design 是一个 Agent Skill，可被 Claude Code、Cursor、Codex、GitHub Copilot、Qoder 等能读取技能的宿主加载。你只需用自然语言说明需求，例如画一张应用架构图、一个 Q2 项目影响与投入象限图，或一次带 401 刷新令牌的 Bearer 调用序列；代理会先确定图表类型、说明方案，再写出一个自包含的 .html 文件，双击即可打开。它主要想解决 Mermaid 一类工具产出的图千篇一律、带阴影、设计师看不下去的问题：内置 51 种图表类型，统一走编辑级设计风格，还能读取你的网站配色和字体，让图表与品牌保持一致。
+MarkItDown 是一个轻量级 Python 工具，用来把 PDF、Office 文档、图片、音频、HTML 等多种格式转换成 Markdown。它和 textract 定位相似，但重点是保留标题、列表、表格、链接等文档结构，方便喂给 LLM 和文本分析流水线。可以用命令行直接转换（markitdown file.pdf > out.md，支持 -o 和管道输入），也可以作为库调用。它更偏向给分析工具消费，而不是追求人类阅读级的高保真排版。
 
-- ✨ 覆盖 51 种图表类型，架构图、序列图、象限图等常见表达基本齐备
-- ✨ 产物是单个自包含 HTML + SVG 文件，无外部依赖，双击就能打开和分享
-- ✨ 编辑级设计取向：明确不要阴影、不要 Mermaid 那种同质化的观感
-- ✨ 品牌对齐：让它抓取你的站点，提取配色与字体，之后每张图都自动匹配
-- ✨ 支持从 draw.io、Mermaid、Excalidraw、PlantUML 导入已有图表
-- ✨ 可导出 PNG / SVG，另提供 /export-diagram、/import-mermaid 等斜杠命令
-- 👥 适合谁：需要在文档、演示或 PR 里放架构图、流程图，又不想折腾设计工具的开发者与技术写作者。
+- ✨ 支持 PDF、Word、PowerPoint、Excel、EPub、HTML、CSV/JSON/XML、ZIP 等多种输入格式
+- ✨ 保留标题、列表、表格、链接等关键文档结构，而不是退化为纯文本
+- ✨ 图片可提取 EXIF 元数据并做描述，音频可提取元数据并转写（依赖托管服务）
+- ✨ 支持 YouTube URL 转录和 Outlook 邮件转换
+- ✨ 可选依赖按格式拆分安装（如 [pdf, docx, pptx]），也可用 [all] 一次装齐
+- ✨ 支持第三方插件，默认关闭，需用 --list-plugins / --use-plugins 管理，官方还提供 markitdown-ocr 插件为 PDF、DOCX、PPTX、XLSX 中的内嵌图片补充 OCR
+- 👥 适合谁：需要给 LLM 或文本分析流水线批量准备文档数据的 Python 开发者、数据工程师和 AI 应用团队。
 
-`HTML` · Fork 4,733 · 🔗 [官网](https://diagramdesign.dev)
+`Python` · Fork 15,026
 
-### 6. [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) — ⭐ 4,267（今日 +621）
+### 6. [Tencent/LoopForge](https://github.com/Tencent/LoopForge) — ⭐ 5,937（今日 +235）
 
-> 一套开源的 App Store 与 Google Play 上架合规手册，外加提交前的自动扫描守卫。
+> 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。
 
-这是一个把「上架被拒」从靠运气变成可检查项的项目。它整理了 117 个有据可查的拒审模式及对应修复，覆盖隐私清单（privacy manifest）、Android Data safety 表单等最常翻车的检查点，并追踪 95 个监管截止日期（EU AI Act、DSA、COPPA、各州年龄法）。用法很简单：git clone 后用 bash 运行 agent-os/hooks/app-store-compliance-guard.sh 指向你的工程目录，它只读不改，几秒到一分钟内打印结果，末尾一行是 BLOCKED、CLEAR 或 NOT CHECKED，告诉你接下来该做什么。它还能挂进 Claude Code、Codex、Gemini CLI、Copilot、Cursor 等 AI 编码工具，在每次提交前自动先跑一遍。
+LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。
 
-- ✨ 117 个已记录的拒审模式，每条都对应具体条款与可执行的修复方式
-- ✨ 提交前自动扫描：运行一条 bash 命令即可得到 BLOCKED / CLEAR / NOT CHECKED 结论，不会改动你的代码
-- ✨ 优先覆盖两大高频拒审原因：可用的演示账号与真实后端，以及与运行时行为一致的隐私声明（含每个 SDK）
-- ✨ 隐私清单与 Google Play Data safety 检查，兼容 Expo 的 app.json / app.config 读取
-- ✨ 追踪 95 个合规截止日期：EU AI Act、DSA、COPPA 与各州年龄相关法规
-- ✨ 面向 AI 编码代理的技能包，可安装进 Claude Code、Codex、Gemini CLI、Copilot、Cursor 等工具，在每次提交前自动拦截
-- 👥 适合谁：iOS/Android 开发者、独立开发者与小团队，以及需要走通上架流程但不写代码的产品或运营人员。
+- ✨ 聊窗式主控（Main Bot）：用自然语言提需求，按需创建带仓库的 Docker 会话沙箱，按 @ 调用角色、技能、需求或 SOP，可中途排队消息、暂停、接管
+- ✨ SOP 流程引擎：按序执行 Agent、Script、Human-gate 与子 SOP 节点，每个节点在独立沙箱运行，内置后端、前端、Bug 修复、产品等模板
+- ✨ 角色分离：规划、实现、评审、测试各自拥有独立的提示词、执行器、模型、规则、Skills 与 MCP 工具，既能当 SOP 节点也能当聊天子智能体
+- ✨ 人工审批关卡：在关键节点停下等待审批，可阅读报告后批准放行，或把工作退回指定步骤，失败步骤支持重试、从任意节点重跑
+- ✨ 可观测与可恢复：节点状态、工具调用轨迹、日志与产物集中展示，随时暂停、继续或从某个节点重跑
+- ✨ 多执行器与自有基础设施：支持 CodeBuddy、Codex、Claude Code、OpenCode、Cursor CLI、Antigravity、Kimi Code 等十种编码 CLI，集成 GitHub、Skills、MCP，Docker 沙箱或本机运行时，MIT 自托管
+- 👥 适合谁：希望把 AI 编码纳入规范交付流程的研发团队、平台工程与需要审批留痕的技术负责人。
 
-`Shell` · Fork 273 · 🔗 [官网](https://mjmirza.github.io/app-store-compliance/)
+`Go` · Fork 831 · 🔗 [官网](https://loopforge.cn)
 
-### 7. [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) — ⭐ 14,549（今日 +399）
+### 7. [p-e-w/heretic](https://github.com/p-e-w/heretic) — ⭐ 42,907（今日 +194）
 
-> 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。
+> 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。
 
-OpenSRE 是一个自托管的 CLI agent，专门用来处理 CI 失败：CI 只会告诉你构建失败了，却不会告诉你原因和修复方法。运行时，它会读取失败的运行日志、验证假设，定位根本原因，然后把修复推送出来交给你 review。它还能区分是 CI 环境自身的问题还是代码问题，避免团队只靠重跑绕过。用一条 curl 安装脚本装好之后，在代码仓库里执行 opensre 就能启动，模型用你自己的。目前处于 public alpha 阶段，核心流程可用但还不完全稳定，接口和集成可能变化。
+Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。
 
-- ✨ 失败即调查：CI 运行失败时自动读取日志、验证假设并定位根因
-- ✨ 自动推送修复补丁，交由开发者审阅
-- ✨ 区分 CI 环境导致的失败与代码本身导致的失败，避免只靠重跑掩盖问题
-- ✨ 统计 CI 失败率、因 CI 不可靠损失的开发者工时、main 分支保持红色的时长
-- ✨ 自托管部署，支持接入用户自己的模型
-- ✨ 端到端测试覆盖真实云端场景，并维护语义化测试目录便于区分 e2e/单元、本地/云端边界
-- 👥 适合谁：适用于经常被红色构建和 flaky 检查拖累的研发团队，以及希望把 CI 排障自动化、并保持代码和数据不出自建环境的工程组织。
+- ✨ 去除审查、抑制拒答（默认行为）
+- ✨ 通过配置文件切换目标：减少废话、减少幽默、降低谄媚、调整情绪倾向
+- ✨ 支持通过插件自定义 scorer，控制优化目标
+- ✨ 支持多数稠密模型、多种 MoE 架构、多模态与混合模型
+- ✨ 支持 bitsandbytes 4-bit 动态量化，降低显存占用
+- ✨ 运行前自动测试硬件以确定最优批大小，完成后可保存、上传、对话测试或跑基准
+- 👥 适合谁：想在本地改造开源大模型行为、但缺乏大规模训练算力的开发者与爱好者。
 
-`Python` · Fork 1,978 · 🔗 [官网](https://opensre.com)
+`Python` · Fork 5,355 · 🔗 [官网](https://heretic-project.org)
 
-### 8. [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) — ⭐ 77,011（今日 +542）
+### 8. [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) — ⭐ 58,349（今日 +160）
 
-> AFFiNE 是一个隐私优先、本地优先的开源一体化工作区，可以看作 Notion 与 Miro 的结合与延伸。
+> 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。
 
-AFFiNE（读音 [ə‘fain]）把文档、白板、表格、演示和知识库整合到同一个平台里，解决的是「知识管理要开好几个工具」的割裂问题。它的核心思路是「万物皆块」：富文本、便签、嵌入网页、多维表格、链接页面、形状乃至幻灯片，都能作为块放在无边界画布上，文档与白板不再是两个割裂的模块。数据默认保存在本地磁盘，同时支持 Web 与跨平台客户端的实时同步和多人协作；既可以开箱即用，也可以自行部署、fork 定制，还配套了 AFFiNE AI 帮你从大纲生成幻灯片、把文章整理成思维导图、规划任务。
+这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。
 
-- ✨ 文档与白板完全融合：任意块都能放到无边界画布上，富文本、便签、嵌入网页、多维表格、形状、幻灯片随处摆放
-- ✨ 多视图数据库：支持表格等多种视图组织信息，兼具笔记与结构化数据管理
-- ✨ AFFiNE AI：把大纲转成演示幻灯片、把文章整理成思维导图、梳理任务计划，甚至一句话生成原型页面
-- ✨ 本地优先：数据保存在你自己的磁盘上，不依赖云端也能完整使用
-- ✨ 跨端实时协作：Web 与各平台客户端之间实时同步，多人同时编辑
-- ✨ 可自托管与可定制：自由部署、fork、自行构建，基于 BlockSuite 的插件与第三方块生态
-- 👥 适合谁：适合需要同时做笔记、画白板、管任务与做演示的创作者、产品与研发团队，以及重视数据隐私、愿意自托管的开发者。
+- ✨ 五个阶段的流程（调研、写作、审稿、修改、定稿）在每阶段都会暂停并等待你确认，AI 担任副驾驶，不替你做出决定
+- ✨ /ars-plan 通过苏格拉底式对话逐步问出论文结构，另外提供可选的审稿人校准模式，用你给的 gold set 测量它自身的漏报率 FNR 和误报率 FPR
+- ✨ 引用可信链：使用 source provenance frontmatter 和三层引用定位锚点，为后续在论断层面进行审计打下基础
+- ✨ 可选开启的论断审计（设置 ARS_CLAIM_AUDIT=1）会按每个锚点回抓被引原文，判断原文是否真的支持该论断；五类 HIGH-WARN 由格式化终端的硬性校验统一拦截
+- ✨ Stage 2.5 与 Stage 4.5 设置完整性校验关卡，执行 7 条 AI 研究失败模式阻断清单（包括实施 bug、编造结果、方法论捏造、引用幻觉、框架锁死等）
+- ✨ Style Calibration 从你过去的作品学习并贴合你的行文风格，Writing Quality Check 识别机器味浓的句式，目标是提高质量，并不教你怎么掩盖使用 AI 的痕迹
+- 👥 适合谁：用 Claude Code 做文献综述、投稿论文的研究生与科研人员，也适合需要把控引用真实性的写作者。
 
-`TypeScript` · Fork 5,646 · 🔗 [官网](https://affine.pro)
+`Python` · Fork 4,450 · 🔗 [官网](https://buymeacoffee.com/crucify020v)
 
-### 9. [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) — ⭐ 15,646（今日 +701）
+### 9. [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) — ⭐ 33,858（今日 +149）
 
-> 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。
+> 把多账号管理、协议转换与请求调度装进一个桌面端的本地 AI 中转站。
 
-Ghost-Downloader-3 是一个用 Python 编写、基于 Qt 的跨平台下载器，目标是把日常可能用到的下载场景全部收进一个应用里。它起源于帮一位 Bilibili 创作者管理资源的个人项目，如今已支持 Windows、macOS、Linux、Android 四个平台。它解决的问题很直接：以前下 HTTP 资源用一个工具、下 BT 用另一个、下视频又要装扩展或第三方软件，而它对 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k 全都原生支持，还能直接解析 YouTube、Bilibili 的视频（可选清晰度、字幕、播放列表与多 P），并对 GitHub、HuggingFace 做镜像加速。除了图形界面，它还提供 ghd 命令行工具和兼容 aria2 的 RPC API，方便脚本化与第三方集成。
+Antigravity Tools 是一款面向开发者和 AI 爱好者的桌面应用，核心思路是把多账号矩阵管理、协议转换和智能请求调度合到一起，在本地搭一个稳定、快速、低成本的 AI 中转站。它最实用的一点是能把常见的 Web Session（Google、Anthropic）转换成标准化的 API 接口，省掉不同供应商之间的协议差异，让你用统一的接口去调用。日常使用时，你在图形界面里集中看所有账号的配额健康度，由系统挑出当前最合适的账号一键切换，再配合请求调度把流量分摊到多个账号上。项目用 Tauri v2 + React 构建界面、Rust 写后端，属于安装即用的跨平台桌面程序，不必自己搭服务。
 
-- ✨ 多协议统一支持：HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k 一个应用全搞定
-- ✨ 智能分块下载且无需文件合并，自动检测带宽，在弱网环境下依然能保持速度
-- ✨ 内置真实浏览器 TLS 指纹，降低被反爬机制拦截的概率
-- ✨ 视频站点深度解析：YouTube、Bilibili 可选清晰度与字幕，支持播放列表和多 P 剧集
-- ✨ 浏览器扩展可嗅探页面所有媒体资源，一键接管下载并沿用登录状态，无需复制链接
-- ✨ 跨平台原生体验，Android 端支持直播 M3U8 录制与后台持续下载
-- 👥 适合谁：需要频繁下载各类资源的普通用户、追剧与收藏视频的内容爱好者，以及希望用 CLI/RPC 做自动化的开发者。
+- ✨ 智能账号面板：集中查看所有账号的健康状况，实时掌握 Gemini Pro、Gemini Flash、Claude 与 Gemini 图像生成的剩余配额
+- ✨ 智能推荐与一键切换：按配额冗余度实时算出“最佳账号”并推荐，支持一键切换，无需手动改配置
+- ✨ 当前账号快照：用可视化方式呈现活跃账号状态，切换前后一目了然
+- ✨ 协议转换：把 Google / Anthropic 的 Web Session 转成标准化 API 接口，抹平不同供应商之间的协议差异
+- ✨ 智能请求调度与多账号矩阵分发：按策略把请求分配到多个账号上，避免单一账号被打满
+- ✨ 本地 AI 中转站：以桌面应用形式在本地提供统一 API 入口，配合文档中的集成示例可直接接入现有工具链
+- 👥 适合谁：手里有多个 AI 账号、想把网页会话转成标准 API 并统一调度请求的开发者与 AI 爱好者。
 
-`Python` · Fork 950 · 🔗 [官网](https://gd.xychr.com/)
+`Rust` · Fork 3,587 · 🔗 [官网](https://lbjlaq.github.io/Antigravity-Manager/)
 
-### 10. [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) — ⭐ 13,844（今日 +641）
+### 10. [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) — ⭐ 78,562（今日 +123）
 
-> 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。
+> 为 AI 编码代理预建代码知识图谱，减少 token 与工具调用，完全本地运行
 
-AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长视频剪成短视频」这件费力的事：播客、访谈、课程动辄一两个小时，人工挑高光、卡字幕、套画幅、写文案，一条成片能耗掉大半天。它的用法很简单——贴一个视频链接，选好要发的平台，剩下的交给它：自动挑出值得剪的片段，配上分页字幕、封面和发布文案，直接出片。剪辑与渲染都在你自己的电脑上完成，软件本身免费，只有调用云端模型时按量计费。对自动结果不满意，还能进编辑器手动调整。
+CodeGraph 是一个预索引的代码知识图谱工具，专为 Claude Code、Cursor、Codex、Gemini、Copilot 等 AI 编码代理服务。它解决了代理在大型仓库中反复搜索、读取大量文件导致 token 消耗高、工具调用次数多的问题：提前把跨文件的符号、引用、路由关系建成图，代码变更时自动同步，代理通过 MCP 工具直接查询到「精准上下文」，而不是靠一次次 grep。安装只需一条命令，不依赖本机 Node.js，内置运行时，跨 Windows、macOS、Linux，数据 100% 留在本地。
 
-- ✨ 贴链接一键出片：给一个 YouTube、B 站等长视频地址，自动挑片段、剪辑、配字幕，直接输出可发布的短视频
-- ✨ 多平台画幅与排版：竖版访谈式、满屏播客式适配抖音、小红书、TikTok、Reels、YouTube Shorts，横版保留原画幅给 B 站与 YouTube
-- ✨ 视频、字幕、封面、发布文案一起生成，字幕支持中文、英文等多语言
-- ✨ 本地剪辑与渲染：素材和成片都在自己电脑上处理，MIT 开源，软件免费，云端模型按量计费
-- ✨ 内置编辑器：自动结果需要微调时手动改，字幕分页、人物取景都能调
-- ✨ 桌面端之外还有 CLI 与 MCP，可脚本化跑长视频队列，也能接进支持 MCP 的 AI 客户端
-- 👥 适合谁：做播客、访谈、课程的内容创作者，需要批量做短视频分发的运营与自媒体团队，以及想把剪辑流程脚本化的开发者。
+- ✨ 预索引代码知识图谱，跨文件符号与引用关系开箱即查
+- ✨ 代码变更自动同步索引，无需手动重建
+- ✨ 通过 MCP 工具接入 Claude Code、Cursor、Codex、Gemini、Copilot 等十余种代理
+- ✨ 框架感知的路由识别，能追踪 Web 框架的请求路径
+- ✨ 支持 iOS、React Native、Expo 混合项目的跨语言桥接分析
+- ✨ 完全本地运行，带 CLI（index/status/upgrade）与库调用接口
+- 👥 适合谁：使用 AI 编码代理、维护中大型多语言仓库的开发者与团队
 
-`Python` · Fork 2,173 · 🔗 [官网](https://zhouxiaoka.github.io/autoclip_intro/)
+`TypeScript` · Fork 5,230 · 🔗 [官网](https://colbymchenry.github.io/codegraph/)
 
 
 ## 🚀 Show HN 今日新品
 
-[I built a game where you are an LLM's subagent](https://news.ycombinator.com/item?id=50599762) · ⬆️ 309 · 💬 74
+[Cornhole News – A Hacker News inspired site for news across the Midwest](https://news.ycombinator.com/item?id=50561515) · ⬆️ 237 · 💬 122
 
-> 在Show HN上，有人发布了一款游戏：玩家扮演LLM的分代理，该帖获得309分和74条评论。
+> 受 H
 
-[ExitPath – Open-source ways out of Slack, Notion and Microsoft 365](https://news.ycombinator.com/item?id=50547980) · ⬆️ 251 · 💬 94
+[Alloy CSS, dialogs, menus and tabs that work with JavaScript off](https://news.ycombinator.com/item?id=50532385) · ⬆️ 211 · 💬 40
 
-> ExitPath 是一个开源项目，提供从 Slack、Notion 和 Microsoft 365 迁移或退出的方案。
-
-[Take Voyager 1 apart, down to a single memory chip](https://news.ycombinator.com/item?id=50548161) · ⬆️ 240 · 💬 60
-
-> 新项目带你逐层拆解旅行
+> Alloy CSS 发布，提供无需 JavaScript 即可运行的对话框、菜单和标签页组件。
 
 
 ## 🧡 Product Hunt 今日榜
 
-[MeshLive](https://www.producthunt.com/products/meshlive) · Product Hunt
+[Even G2 Enterprise SDK](https://www.producthunt.com/products/even-g2) · Product Hunt
 
-> MeshLive 推出基于蓝牙 mesh 的离线视频通话与直播功能。
+> Even G2 企业级 SDK 发布，支持为 Even G2 智能眼镜开发定制业务应用。
 
-[Mockreel](https://www.producthunt.com/products/mockreel) · Product Hunt
+[Adanotch](https://www.producthunt.com/products/adanotch) · Product Hunt
 
-> Mockreel 可将屏幕录制放进 3D 手机画面展示，免费且无需注册。
+> Adanotch 为 MacBook 刘海带来实时动态岛功能。
 
-[Daymaker](https://www.producthunt.com/products/daymaker) · Product Hunt
+[Viktor Code](https://www.producthunt.com/products/viktor) · Product Hunt
 
-> Daymaker 推出一款能送出高度个性化礼物的工具，让潜在客户更愿意接受会面。
+> Coding agents know your repo. Viktor knows your company.
 
-[Creavit Studio 4.0](https://www.producthunt.com/products/creavit-studio) · Product Hunt
+[tday.com](https://www.producthunt.com/products/tday) · Product Hunt
 
-> Creavit Studio 4.0 登陆 Product Hunt，为 Mac 带来屏幕录制、iPhone 摄像头和电影级演示功能。
+> tday.com 让你向编码智能体索取任意功能的带旁白演示。
 
-[Yoroll](https://www.producthunt.com/products/yoroll) · Product Hunt
+[Prates](https://www.producthunt.com/products/prates) · Product Hunt
 
-> Yoroll 让你无需游戏引擎即可构建可玩的故事。
+> Prates 能学习你的写作习惯，然后完全按你的风格和口吻代写内容。
 
 
 ## 🇨🇳 中文独立开发 · V2EX 分享创造
 
-[GPT-Team 账号免费领取 Codex 4375 Credit（$175 账单金额）](https://www.v2ex.com/t/1259157) · 💬 2 回复
+[做了个 GTA 6 主线任务清单，查章节进度时少踩剧透](https://www.v2ex.com/t/1259516) · 💬 0 回复
 
-> GPT-Team 账号可免费领取 Codex 4375 Credit，价值 175 美元账单金额。
+> 开发者做了个 GTA 6 主线任务清单，方便玩家查章节进度时避开剧透。
 
-[失业大半年，开始尝试独立开发，做了个猫咪陪伴学英语的小程序](https://www.v2ex.com/t/1259152) · 💬 4 回复
+[Deskbell：面向桌面零碎问题设计的轻量级 AI 浮窗助手](https://www.v2ex.com/t/1259514) · 💬 0 回复
 
-> 失业大半年的独立开发者分享作品：一个用猫咪陪伴学英语的小程序。
+> Deskbell 是一款轻量级 AI 浮窗助手，专门解决桌面上的零碎问题。
 
-[用 DeepSeek 写了一个原生跨平台文本编辑器 Zpad，邀请大家体验](https://www.v2ex.com/t/1259151) · 💬 3 回复
+[结合自身的婚恋经历 vibe coding 了一个小网站 超级想恋爱·在线](https://www.v2ex.com/t/1259511) · 💬 2 回复
 
-> 开发者用 DeepSeek 编写了原生跨平台文本编辑器 Zpad，并邀请大家体验。
+> 开发者结合自身婚恋经历，用 vibe coding 做了「超级想恋爱·在线」小网站。
 
-[做了个纯浏览器本地运行的免费 OCR 工具，免登录不上传，支持粘贴截图对照校对](https://www.v2ex.com/t/1259146) · 💬 0 回复
+[做了一个内容互助工具：奇伴批阅，给创作者找真实反馈](https://www.v2ex.com/t/1259509) · 💬 1 回复
 
-> 开发者做了个纯浏览器本地运行的免费 OCR 工具，免登录不上传，支持粘贴截图对照校对。
+> 开发者分享内容互助工具「奇伴批阅」，帮创作者获取真实反馈。
 
-[16 个字符就够写下一切 - 极客风 16 进制主题小网站](https://www.v2ex.com/t/1259142) · 💬 1 回复
+[做了个浏览器指纹收集工具 应该是全网最全的](https://www.v2ex.com/t/1259506) · 💬 1 回复
 
-> 独立开发者分享极
+> 开发者做了一个号称全网最全的浏览器指纹收集工具。
 
 ## 📋 完整榜单
 
@@ -251,16 +247,16 @@ AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长�
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。 | `Python` | 63,043 | +699 |
-| 2 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的… | `TypeScript` | 207,305 | +915 |
-| 3 | [nginx/nginx](https://github.com/nginx/nginx) | 官方 NGINX 开源仓库：高性能 Web 服务器、反向代理与负载均衡器 | `C` | 32,938 | +163 |
-| 4 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。 | `C++` | 12,162 | +158 |
-| 5 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。 | `HTML` | 70,524 | +518 |
-| 6 | [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) | 一套开源的 App Store 与 Google Play 上架合规手册，外加提交前的自动… | `Shell` | 4,267 | +621 |
-| 7 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。 | `Python` | 14,549 | +399 |
-| 8 | [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | AFFiNE 是一个隐私优先、本地优先的开源一体化工作区，可以看作 Notion 与 Mi… | `TypeScript` | 77,011 | +542 |
-| 9 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。 | `Python` | 15,646 | +701 |
-| 10 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。 | `Python` | 13,844 | +641 |
+| 1 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用 | `Python` | 20,470 | +2,029 |
+| 2 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操… | `TypeScript` | 12,472 | +422 |
+| 3 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具 | `C++` | 61,145 | +792 |
+| 4 | [anomalyco/opencode](https://github.com/anomalyco/opencode) | 开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。 | `TypeScript` | 228,879 | +263 |
+| 5 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。 | `Python` | 198,159 | +246 |
+| 6 | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。 | `Go` | 5,937 | +235 |
+| 7 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | 无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。 | `Python` | 42,907 | +194 |
+| 8 | [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) | 一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。 | `Python` | 58,349 | +160 |
+| 9 | [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 把多账号管理、协议转换与请求调度装进一个桌面端的本地 AI 中转站。 | `Rust` | 33,858 | +149 |
+| 10 | [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) | 为 AI 编码代理预建代码知识图谱，减少 token 与工具调用，完全本地运行 | `TypeScript` | 78,562 | +123 |
 
 <!-- TRENDING:END -->
 

@@ -277,7 +277,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。"
   },
@@ -508,7 +508,7 @@
     ],
     "first_seen": "2026-11-15",
     "intro": "LoopForge 是腾讯开源的自托管工作台，让团队用编码智能体真正交付软件，而不只是演示。在聊天里向 Main Bot 描述需求，它会按需拉起 Docker 沙箱、检出仓库、把任务分派给不同项目角色，最后提交 PR。当某种做法被验证有效，就可以固化成 SOP（智能体、脚本与人工审批节点组成的标准流程），下个需求照同样方式交付。底层调用 CodeBuddy、Codex、Claude Code 等编码 CLI，LoopForge 在其上补齐角色、沙箱、检查点与历史记录，全部跑在自己的服务器上，MIT 协议。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "自托管编码智能体交付平台，用 SOP 与人工审批把 AI 写代码变成团队可重复的流程。"
   },
@@ -768,7 +768,7 @@
     ],
     "first_seen": "2026-11-20",
     "intro": "OpenCode 是一个开源的 AI 编码智能体，官方定位就是「The open source coding agent」。它把 AI 助手放进你的终端：既能直接改代码、跑 bash 命令干开发活，也能切成只读模式，先摸清陌生代码库再动手。安装很轻，一条 curl 脚本或 npm、brew、pacman、mise、nix 都能装好，另外还提供处于 Beta 阶段的桌面应用（macOS、Windows、Linux）。想深入了解配置可以看官方文档，社区在 Discord 和 X 上。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。"
   },
@@ -972,7 +972,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具"
   },
@@ -1026,6 +1026,23 @@
     "last_seen": "2026-11-08",
     "streak_days": 2,
     "summary": "把编码 Agent 变成安全审计员的多阶段审计技能，输出可机器校验的漏洞结论"
+  },
+  "colbymchenry/codegraph": {
+    "analyzed_at": "2026-11-24",
+    "audience": "使用 AI 编码代理、维护中大型多语言仓库的开发者与团队",
+    "features": [
+      "预索引代码知识图谱，跨文件符号与引用关系开箱即查",
+      "代码变更自动同步索引，无需手动重建",
+      "通过 MCP 工具接入 Claude Code、Cursor、Codex、Gemini、Copilot 等十余种代理",
+      "框架感知的路由识别，能追踪 Web 框架的请求路径",
+      "支持 iOS、React Native、Expo 混合项目的跨语言桥接分析",
+      "完全本地运行，带 CLI（index/status/upgrade）与库调用接口"
+    ],
+    "first_seen": "2026-11-24",
+    "intro": "CodeGraph 是一个预索引的代码知识图谱工具，专为 Claude Code、Cursor、Codex、Gemini、Copilot 等 AI 编码代理服务。它解决了代理在大型仓库中反复搜索、读取大量文件导致 token 消耗高、工具调用次数多的问题：提前把跨文件的符号、引用、路由关系建成图，代码变更时自动同步，代理通过 MCP 工具直接查询到「精准上下文」，而不是靠一次次 grep。安装只需一条命令，不依赖本机 Node.js，内置运行时，跨 Windows、macOS、Linux，数据 100% 留在本地。",
+    "last_seen": "2026-11-24",
+    "streak_days": 1,
+    "summary": "为 AI 编码代理预建代码知识图谱，减少 token 与工具调用，完全本地运行"
   },
   "coreyhaines31/marketingskills": {
     "analyzed_at": "2026-11-13",
@@ -1176,7 +1193,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用"
   },
@@ -1402,7 +1419,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统"
   },
@@ -1615,6 +1632,23 @@
     "streak_days": 2,
     "summary": "基于 PyTorch 的可微分计算机视觉库，把 1200+ 图像处理与几何视觉算子做成可批量、可求导的 GPU 模块。"
   },
+  "lbjlaq/Antigravity-Manager": {
+    "analyzed_at": "2026-11-24",
+    "audience": "手里有多个 AI 账号、想把网页会话转成标准 API 并统一调度请求的开发者与 AI 爱好者。",
+    "features": [
+      "智能账号面板：集中查看所有账号的健康状况，实时掌握 Gemini Pro、Gemini Flash、Claude 与 Gemini 图像生成的剩余配额",
+      "智能推荐与一键切换：按配额冗余度实时算出“最佳账号”并推荐，支持一键切换，无需手动改配置",
+      "当前账号快照：用可视化方式呈现活跃账号状态，切换前后一目了然",
+      "协议转换：把 Google / Anthropic 的 Web Session 转成标准化 API 接口，抹平不同供应商之间的协议差异",
+      "智能请求调度与多账号矩阵分发：按策略把请求分配到多个账号上，避免单一账号被打满",
+      "本地 AI 中转站：以桌面应用形式在本地提供统一 API 入口，配合文档中的集成示例可直接接入现有工具链"
+    ],
+    "first_seen": "2026-11-24",
+    "intro": "Antigravity Tools 是一款面向开发者和 AI 爱好者的桌面应用，核心思路是把多账号矩阵管理、协议转换和智能请求调度合到一起，在本地搭一个稳定、快速、低成本的 AI 中转站。它最实用的一点是能把常见的 Web Session（Google、Anthropic）转换成标准化的 API 接口，省掉不同供应商之间的协议差异，让你用统一的接口去调用。日常使用时，你在图形界面里集中看所有账号的配额健康度，由系统挑出当前最合适的账号一键切换，再配合请求调度把流量分摊到多个账号上。项目用 Tauri v2 + React 构建界面、Rust 写后端，属于安装即用的跨平台桌面程序，不必自己搭服务。",
+    "last_seen": "2026-11-24",
+    "streak_days": 1,
+    "summary": "把多账号管理、协议转换与请求调度装进一个桌面端的本地 AI 中转站。"
+  },
   "louislam/uptime-kuma": {
     "analyzed_at": "2026-11-14",
     "audience": "适合有自托管需求、希望掌控监控数据的开发者、运维和家庭服务器玩家。",
@@ -1791,7 +1825,7 @@
     ],
     "first_seen": "2026-11-20",
     "intro": "MarkItDown 是一个轻量级 Python 工具，用来把 PDF、Office 文档、图片、音频、HTML 等多种格式转换成 Markdown。它和 textract 定位相似，但重点是保留标题、列表、表格、链接等文档结构，方便喂给 LLM 和文本分析流水线。可以用命令行直接转换（markitdown file.pdf > out.md，支持 -o 和管道输入），也可以作为库调用。它更偏向给分析工具消费，而不是追求人类阅读级的高保真排版。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。"
   },
@@ -2061,7 +2095,7 @@
     ],
     "first_seen": "2026-11-02",
     "intro": "Heretic 是一个让普通开发者在自己的显卡上直接改造语言模型的工具。过去这类修改（例如去除审查）通常只有算力充足的大公司才能做，而 Heretic 不做昂贵的训练，而是利用一组数学方法，根据对比示例提示和对应的评分器来引导模型行为。安装后执行一条命令（如 heretic Qwen/Qwen3-4B-Instruct-2507）即可运行，默认行为是去除模型的拒绝回答倾向；在 RTX 3090 上处理 Qwen3-4B 大约需要 30-40 分钟，完成后可以选择保存模型、上传到 Hugging Face、直接对话测试或运行基准评测。",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "streak_days": 1,
     "summary": "无需训练即可改造本地大模型，去掉拒答、减少废话和谄媚。"
   },

@@ -14,7 +14,7 @@
   "hn:50532385": {
     "analyzed_at": "2026-11-20",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "summary": "Alloy CSS 发布，提供无需 JavaScript 即可运行的对话框、菜单和标签页组件。"
   },
   "hn:50541568": {
@@ -44,7 +44,7 @@
   "hn:50561515": {
     "analyzed_at": "2026-11-20",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-24",
     "summary": "受 H"
   },
   "hn:50599762": {
@@ -137,6 +137,12 @@
     "last_seen": "2026-11-19",
     "summary": "Ctruh 推出 Verse Engine，支持一键将 Blender、Unity 或 Unreal 场景转为实时 3D 链接。"
   },
+  "ph:1320807": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "Adanotch 为 MacBook 刘海带来实时动态岛功能。"
+  },
   "ph:1321708": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -202,6 +208,28 @@
     "first_seen": "2026-11-23",
     "last_seen": "2026-11-23",
     "summary": "Creavit Studio 4.0 登陆 Product Hunt，为 Mac 带来屏幕录制、iPhone 摄像头和电影级演示功能。"
+  },
+  "ph:1325372": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "Prates 能学习你的写作习惯，然后完全按你的风格和口吻代写内容。"
+  },
+  "ph:1327970": {
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24"
+  },
+  "ph:1328122": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "Even G2 企业级 SDK 发布，支持为 Even G2 智能眼镜开发定制业务应用。"
+  },
+  "ph:1328270": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "tday.com 让你向编码智能体索取任意功能的带旁白演示。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -350,5 +378,35 @@
     "first_seen": "2026-11-23",
     "last_seen": "2026-11-23",
     "summary": "GPT-Team 账号可免费领取 Codex 4375 Credit，价值 175 美元账单金额。"
+  },
+  "v2ex:1259506": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "开发者做了一个号称全网最全的浏览器指纹收集工具。"
+  },
+  "v2ex:1259509": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "开发者分享内容互助工具「奇伴批阅」，帮创作者获取真实反馈。"
+  },
+  "v2ex:1259511": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "开发者结合自身婚恋经历，用 vibe coding 做了「超级想恋爱·在线」小网站。"
+  },
+  "v2ex:1259514": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "Deskbell 是一款轻量级 AI 浮窗助手，专门解决桌面上的零碎问题。"
+  },
+  "v2ex:1259516": {
+    "analyzed_at": "2026-11-24",
+    "first_seen": "2026-11-24",
+    "last_seen": "2026-11-24",
+    "summary": "开发者做了个 GTA 6 主线任务清单，方便玩家查章节进度时避开剧透。"
   }
 }
