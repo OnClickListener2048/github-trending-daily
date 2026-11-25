@@ -209,7 +209,7 @@
     ],
     "first_seen": "2026-11-21",
     "intro": "FreeVideo 是一个面向消费级显卡的 MiniMax H3 本地推理引擎。它基于 OpenVDN 的 8 步 VDN-H3 模型，把显存、内存和磁盘统筹起来，根据你的硬件自动调整权重放置方式、计算精度和注意力算子，从而让普通电脑也能生成视频，而不必租用云端显卡，也不必升级机器。它以 ComfyUI 插件的形式工作，提供 Windows、macOS、Linux 三个平台的启动器：下载后选择一个已有的 ComfyUI 目录或新建一个，点击 Install & launch，浏览器里就会打开 FreeVideo 工作区，直接开始创作；工作区不满意还能切到节点视图精细调整。目前还支持 16 MP 图片生成、超过一分钟的长视频和 AI Agent 自动创作。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存、16 GB 内存即可起步。"
   },
@@ -666,7 +666,7 @@
     ],
     "first_seen": "2026-11-17",
     "intro": "ECC 是一套面向 AI 编码代理的 harness 优化系统。它要解决的是：代理虽然能用，但每次都得重写提示、丢掉上下文、缺少安全边界。ECC 把技能（Skills）、直觉（Instincts）、记忆（Memory）、安全（Security）和“先调研后开发”的流程做成一层可安装的能力，并同时适配 Claude Code、Codex、Opencode、Cursor 等多种 harness。用法很轻：在 Claude Code 里跑引导式安装，或用原生插件命令装同一个 ecc@ecc 插件（两者别叠加）；另外还有 npm 包 ecc-universal、ecc-agentshield 和面向私有仓库的 GitHub App。项目为 MIT 许可，仓库本身永久免费。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "给 AI 编码代理提速的 harness 优化系统，把技能、记忆与安全打包成可装插件。"
   },
@@ -1176,7 +1176,7 @@
     ],
     "first_seen": "2026-11-21",
     "intro": "Pi 是一套可改造的 agent harness：它把多供应商 LLM 调用、agent 循环与状态管理、终端界面、编码 agent CLI 打包成一个 monorepo，你可以按自己的流程定制它，而不是迁就它的默认工作方式。它不自带 sub-agent、plan mode 这类功能，而是通过 extensions、skills、prompt 模板和主题来扩展，并能打成 Pi packages 经 npm 或 git 分享。使用上，用安装脚本或 npm 装上 CLI，在项目目录执行 pi，/login 接入供应商后即可派活；同时支持交互模式、print/JSON 自动化、RPC 控制和 TypeScript SDK 嵌入。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "一个极简、可扩展的 TypeScript AI agent 工具箱，覆盖统一 LLM API、agent 运行时、TUI 和编码 CLI。"
   },
@@ -1385,7 +1385,7 @@
     ],
     "first_seen": "2026-11-05",
     "intro": "Spec Kit 是 GitHub 开源的一套工具包，用来给 AI 编码代理补上“流程”这一环：它不再只靠一句提示词就动手写代码，而是按规范推进、留下可追溯的产物。核心是 SDD（规范驱动开发），把一份规范贯穿到规划、实现和收敛阶段；另有修 bug 和评估想法两个扩展流程，也可以只用它的基础能力自行组装流程。安装 specify-cli 后用 specify init 建项目，在项目目录里启动你的编码代理即可开始。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "为 AI 编程代理提供结构化流程、可复用模板与可记录产出的开源工具包"
   },
@@ -1436,7 +1436,7 @@
     ],
     "first_seen": "2026-11-17",
     "intro": "PaperOrchestra 是 Google Cloud AI Research 开源的多智能体写作框架，专门解决「研究做完了但论文写不动」的问题。你只需提供非结构化的前期材料（idea、实验日志），它就会像一支分工明确的小团队一样，依次完成大纲生成、文献检索与综述、分节撰写、内容打磨和图表绘制，最终输出符合目标会议模板、可直接投稿的 LaTeX 稿件。使用上先建 Conda 环境并配置 Semantic Scholar、OpenAI 或 Gemini 的 API Key，再通过 bash 脚本或 Python CLI 指定原始材料目录、LaTeX 模板目录和输出目录即可运行，还附带 Streamlit 交互 Demo。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "Google 多智能体框架，把零散想法和实验日志自动变成投稿级 LaTeX 论文。"
   },
@@ -1898,7 +1898,7 @@
     ],
     "first_seen": "2026-11-12",
     "intro": "Multica 是一个可自托管的协作工作区，用来解决「同时开了好几个 agent 终端标签、每个都要重新解释上下文、还要全程盯着」的问题。它把你已经在用的编码 agent（Claude Code、Codex、Cursor、Copilot、Kimi、OpenCode 等）变成看板上的正式成员：给 agent 起名、指定 provider 和 runtime 后，就能像给同事派活一样把 issue 指派给它。agent 自己领取任务、在你自己机器或云主机上的 daemon runtime 里执行、边跑边评论、遇到阻塞会抛出来，最后交回给人类 review。意图、执行过程、决策和 diff 都挂在同一个 issue 上，没人需要重建上下文，也没有东西能在人类点头前上线。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "把 AI 编码 agent 当队友派活的开源自托管工作区，工作进度全程留在看板上"
   },
@@ -1915,7 +1915,7 @@
     ],
     "first_seen": "2026-11-17",
     "intro": "last30days 是一个可装进 Claude Code、Cursor、Copilot、Gemini CLI 等 50 多个 Agent Skills 宿主的搜索技能。它解决的核心问题是：Google 只聚合编辑和 SEO 内容，而 Reddit 评论、X 帖子、YouTube 逐字稿、TikTok 互动、Polymarket 赔率分散在各自的围墙花园里，没有哪个 AI 原生能同时搜到。你只需带上自己的 API key 或浏览器会话，用一句 /last30days <主题或人名> 就能并行检索十几个平台，按点赞、投票和真金白银的赔率打分，再由 agent 裁判合成一份有据可查的简报。零配置即可用 Reddit、HN、Polymarket、GitHub，跑一次向导 30 秒解锁其余源。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "由 AI agent 驱动的跨平台搜索技能，汇总 Reddit、X、YouTube、HN 与 Polymarket 上的真实声音。"
   },
@@ -2199,6 +2199,23 @@
     "streak_days": 1,
     "summary": "一份精选的 MCP 服务器目录，帮你快速找到能接进 AI 的工具"
   },
+  "qqxpee/antigravity2-cn": {
+    "analyzed_at": "2026-11-25",
+    "audience": "使用 Antigravity 编程、希望界面全中文且能随时还原官方原版的中文开发者。",
+    "features": [
+      "覆盖界面、Tooltip、设置面板、新手引导与登录页等全场景汉化",
+      "连 Sidecar 伴生面板（含 Swarm、plugin:// 子框架）、系统菜单、托盘和原生右键菜单一并汉化",
+      "主进程原生弹窗也不放过：退出确认、WSL/SSH 提示、设备与 Passkey 选择、更新弹窗、启动加载页",
+      "一键安装 / 一键卸载，首次运行自动备份 app.asar，支持无损还原",
+      "纯 Node.js 零依赖引擎，无需安装 Python，自动释放进程锁并清理多级字节码缓存",
+      "可选联动注入 Windows 免 TUN 透明代理（基于 antigravity-proxy），配好 proxy_config 目录即随安装自动更新"
+    ],
+    "first_seen": "2026-11-25",
+    "intro": "这是一个专为 Antigravity 2.0（Electron 架构）打造的中文本地化套件。它要解决的是官方界面全英文、菜单和弹窗看着吃力的痛点：通过纯 Node.js 原生解析并校验 app.asar，把动态汉化运行时注入到 preload.js 和主进程补丁里，不改动核心二进制，装完重启软件即全中文。使用上很简单：完全退出软件后双击对应平台的安装脚本（Windows 是 .bat，macOS 是 .command），按提示选择左上角品牌名显示方式；想还原就双击卸载脚本，无痕回到官方英文。",
+    "last_seen": "2026-11-25",
+    "streak_days": 1,
+    "summary": "Antigravity 2.0 的零依赖中文汉化包，纯 Node.js 注入 ASAR，一键安装与无痕还原。"
+  },
   "rails/rails": {
     "analyzed_at": "2026-11-07",
     "audience": "适合用 Ruby 构建数据库驱动 Web 应用的开发者，尤其是希望以约定优于配置快速起步的团队",
@@ -2314,7 +2331,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "RustDesk 是一个用 Rust 编写的开源远程桌面应用，定位是 TeamViewer 的自托管替代品。它开箱即用、无需配置，安装后即可建立远程连接；同时把数据的控制权完全交给你：你可以使用官方提供的 rendezvous/relay 服务器，也可以按官方文档自建服务器，甚至参照 rustdesk-server-demo 写一个自己的中继服务。官方提供 Windows、macOS、Linux 的安装包与 nightly 构建，Android 可从 F-Droid 获取，Linux 上还有 Flathub 版本；如需进阶功能可选 RustDesk Server Pro。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "用 Rust 编写的开源远程桌面，可自托管，是 TeamViewer 的开源替代品"
   },
@@ -2509,6 +2526,23 @@
     "last_seen": "2026-11-07",
     "streak_days": 1,
     "summary": "Symfony 是面向 Web 与控制台应用的 PHP 框架，也是一套可复用的 PHP 组件库。"
+  },
+  "t8y2/dbx": {
+    "analyzed_at": "2026-11-25",
+    "audience": "需要同时对接多种数据库的开发者、DBA 和数据工程团队，尤其是偏好轻量工具的人。",
+    "features": [
+      "25 MB 体积支持 100+ 数据库，涵盖 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、SQL Server、达梦等",
+      "桌面客户端开箱即用，跨平台运行",
+      "同时提供 Docker 镜像和 CLI，方便在服务器、容器和脚本里使用",
+      "内置 AI 助手，在客户端内直接辅助查询与 SQL 编写",
+      "内置 MCP Server，可被 AI 工具链调用",
+      "一个客户端管理多种数据库，不必为每种数据库单独安装一套工具"
+    ],
+    "first_seen": "2026-11-25",
+    "intro": "DBX 是一个用 Rust 写的轻量级跨平台数据库管理工具，安装包只有 25 MB，却能连接 MySQL、PostgreSQL、SQLite、Redis、MongoDB、DuckDB、SQL Server、达梦等 100 多种数据库。它解决的是“为每种数据库各装一个客户端、来回切换”的麻烦：桌面端开箱即用，也能跑在 Docker 里或通过 CLI 调用；内置 AI 助手和 MCP Server，让查数据、写 SQL、接入自动化流程都在同一个工具里完成。",
+    "last_seen": "2026-11-25",
+    "streak_days": 1,
+    "summary": "25 MB 的跨平台数据库客户端，一个工具连 100+ 种数据库，还自带 AI 助手和 MCP Server。"
   },
   "tailscale/tailcat": {
     "analyzed_at": "2026-11-14",
