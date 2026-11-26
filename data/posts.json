@@ -38,8 +38,14 @@
   "hn:50548660": {
     "analyzed_at": "2026-11-20",
     "first_seen": "2026-11-20",
-    "last_seen": "2026-11-20",
+    "last_seen": "2026-11-26",
     "summary": "Mastra 团队发布开源软件工厂 Mastra Factory，用于构建 Mastra 本身。"
+  },
+  "hn:50561199": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Show HN 上发布了面向 OpenStreetMap 数据的快速、确定性自然语言搜索工具。"
   },
   "hn:50561515": {
     "analyzed_at": "2026-11-20",
@@ -58,6 +64,12 @@
     "first_seen": "2026-11-23",
     "last_seen": "2026-11-23",
     "summary": "在Show HN上，有人发布了一款游戏：玩家扮演LLM的分代理，该帖获得309分和74条评论。"
+  },
+  "hn:50638503": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "有人在浏览器中重新运行了 Nvidia 和 ATI 的旧技术演示，引发热议。"
   },
   "ph:1226465": {
     "analyzed_at": "2026-11-19",
@@ -221,6 +233,12 @@
     "last_seen": "2026-11-24",
     "summary": "Prates 能学习你的写作习惯，然后完全按你的风格和口吻代写内容。"
   },
+  "ph:1326096": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Watch Reader 登陆 Product Hunt，支持在 Apple Watch 上朗读电子书和文章。"
+  },
   "ph:1326465": {
     "analyzed_at": "2026-11-25",
     "first_seen": "2026-11-25",
@@ -255,6 +273,12 @@
     "last_seen": "2026-11-25",
     "summary": "Hai 是一款能真正替你拨打电话的 AI 助手，已在 Product Hunt 发布。"
   },
+  "ph:1329325": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Bifura 帮你从 AI 智能体视角查看网站，了解它们如何理解和读取你的网页。"
+  },
   "ph:1329544": {
     "analyzed_at": "2026-11-25",
     "first_seen": "2026-11-25",
@@ -266,6 +290,24 @@
     "first_seen": "2026-11-25",
     "last_seen": "2026-11-25",
     "summary": "Sand AI 发布 MAGI-2 模型，480B 参数，专注电影级视频生成。"
+  },
+  "ph:1330423": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Postmaster of Puppets 上线，可检测是否有人冒用你的域名发送邮件。"
+  },
+  "ph:1330765": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Ottante 是一款在 Mac 上直接核查 AI 代理工作成果的新工具。"
+  },
+  "ph:1331434": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "Pydantic 推出编码 agent Pax，其特色是连编码本身都作为插件实现。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -474,5 +516,29 @@
     "first_seen": "2026-11-25",
     "last_seen": "2026-11-25",
     "summary": "一位开发者打算开发名为《戒果》的APP，发帖在V2EX征求V友意见。"
+  },
+  "v2ex:1260043": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "独立开发者推出跨端思维导图「蒲公英脑图」，免注册无水印，支持导出 Xmind、PPT 演说和拍照转公式。"
+  },
+  "v2ex:1260044": {
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26"
+  },
+  "v2ex:1260051": {
+    "analyzed_at": "2026-11-26",
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26",
+    "summary": "因不满 Android Studio 占内存，开发者用 Swift 开源了菜单栏「开发工具箱」。"
+  },
+  "v2ex:1260052": {
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26"
+  },
+  "v2ex:1260055": {
+    "first_seen": "2026-11-26",
+    "last_seen": "2026-11-26"
   }
 }

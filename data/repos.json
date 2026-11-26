@@ -136,7 +136,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。"
   },
@@ -175,7 +175,7 @@
     ],
     "first_seen": "2026-11-22",
     "intro": "OpenSpec 是一套在终端里使用的规格驱动开发框架：用 /openspec-propose 让 AI 先把需求写成 proposal.md、specs、design.md 和 tasks.md，再由 AI 按清单逐条实现，做完归档并把规格沉淀下来。它要解决的是「AI 一上来就写代码、需求和实现两头跑偏」的问题——规格全是纯 Markdown，不需要学新语法，你审完计划再让它动手，个人项目和多人协作都能用，也支持直接在已有代码库上迭代。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。"
   },
@@ -212,6 +212,23 @@
     "last_seen": "2026-11-25",
     "streak_days": 1,
     "summary": "在现有消费级电脑上本地运行 MiniMax H3 视频生成的推理引擎，最低 8 GB 显存、16 GB 内存即可起步。"
+  },
+  "FrizzleM/SideInstaller": {
+    "analyzed_at": "2026-11-26",
+    "audience": "想给 iPhone 侧载应用、但手边没有电脑的 iOS 用户，尤其是 iOS 27 及以上系统的设备持有者。",
+    "features": [
+      "在设备本地完成 SideStore 和 LiveContainer 的完整安装，不需要 PC 或 Mac",
+      "自动处理配对、provisioning 与安装步骤，用户只需按提示走几步",
+      "支持一键选择安装 SideStore，或 SideStore + LiveContainer",
+      "可从 SideStore 获取并导入配对文件，配对信息导入后无需重复操作",
+      "支持 sideinstaller:// URL scheme：一键下载并安装指定 IPA、导入配对文件、导入证书",
+      "提供 siboot 免电脑自签安装方式（iOS 27+），并为旧系统保留企业证书安装路径"
+    ],
+    "first_seen": "2026-11-26",
+    "intro": "SideInstaller 是一个免费开源的 iOS 应用，用来在 iPhone 上直接安装 SideStore 和 LiveContainer。这两个是目前 iOS 侧载的主流工具，但原本必须插上电脑、运行桌面端工具才能装好。SideInstaller 把配对、provisioning 和安装这一整套流程搬到了手机本地：打开 App、登录自己的 Apple 账号（凭据不会被收集）、点一下安装，就能得到一套可用的侧载环境。没有命令行，没有复杂配置，也不需要理解底层机制。代码完全开放，任何人都可以阅读、审计或参与贡献。",
+    "last_seen": "2026-11-26",
+    "streak_days": 1,
+    "summary": "在 iPhone 上直接安装 SideStore 与 LiveContainer 的免费开源 iOS 应用，全程无需电脑。"
   },
   "GoogleChrome/modern-web-guidance-src": {
     "analyzed_at": "2026-11-12",
@@ -1074,7 +1091,7 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器"
   },
@@ -1572,7 +1589,7 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。"
   },
@@ -2005,7 +2022,7 @@
     ],
     "first_seen": "2026-11-18",
     "intro": "Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码"
   },
@@ -2134,7 +2151,7 @@
     ],
     "first_seen": "2026-11-21",
     "intro": "phone-harness 是一个 Python 命令行工具，目标是让 AI agent 真正“上手”你的手机。装上 CLI 后，agent 就能在你的实体手机上滑动、点击、输入文字、读取屏幕内容，从而完成订车、点单这类跨 App 的操作。它不需要越狱、不需要 Xcode，手机上也不用装任何东西：iPhone 通过 Mac 的“iPhone 镜像”窗口操作，Android 通过 adb 连接，也支持用 Phone Harness Cloud 把云端真机接入。安装方式很省心，把 README 里的 setup prompt 丢给你的编码 agent，它会自己装 CLI、注册 skill、询问用哪台手机，并带你走完需要手动确认的步骤。",
-    "last_seen": "2026-11-21",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone 和 Android 手机的开源工具"
   },
@@ -2297,7 +2314,7 @@
     ],
     "first_seen": "2026-11-22",
     "intro": "RTK 是一个面向 AI 编程 Agent 的 token 成本削减工具。它安装在你的机器上，通过 hook 自动接管 git status、测试、diff、日志、构建等 100+ 条常见命令：Agent 发出命令时，实际执行的是 rtk 包装后的版本，原始输出在 Agent 读取前就被压缩成精简摘要，例如 40 行的 git status 变成 3 行总结。无需改配置、无需学习新命令，装完重启 Agent 即生效；每条命令开销低于 25ms。它同时提供 pipelines 机制，用一份 Agent 无关的配置文件做更进一步的优化，比如把重读取交给更便宜的模型、压缩 bash 之外的内容、在不破坏 prompt 缓存的前提下清理 API 流量。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用。"
   },
@@ -2493,6 +2510,23 @@
     "streak_days": 1,
     "summary": "面向 agent 的工具版 OpenRouter：一个 token 调用数千个按次计费的第三方 API"
   },
+  "suversal/WrapPin": {
+    "analyzed_at": "2026-11-26",
+    "audience": "需要在自有 iPhone 上做定位、路线与步行测试的开发者、测试人员和进阶用户",
+    "features": [
+      "用 Apple 地图搜索地点、输入经纬度或直接点图选点，精确选点支持拖动地图、摇杆微调和固定准星确认",
+      "固定位置模拟时单独标出模拟目标，可一键回到目标，也可选中其他地点后更换模拟坐标",
+      "预览 Apple 地图步行或驾车路线，多条路线最多选三条；步行支持三档预设或 1–12 公里/小时自定义速度，驾车支持 5–240 公里/小时",
+      "步行过程中可暂停、继续、原路返回或更换目的地，并能在 GCJ-02 修正与 WGS84 原值之间切换",
+      "收藏常用地点并在“收藏与历史”中用铅笔改名，或快速选取最近使用的位置",
+      "会话结束主动清除模拟坐标并恢复真实位置，提供 Wi-Fi 与蜂窝网络分开的连接引导和诊断，并可选择 LocalDevVPN、Shadowrocket、Surge 等隧道跳转应用"
+    ],
+    "first_seen": "2026-11-26",
+    "intro": "WrapPin 是 Roam Control 的非官方简体中文社区分支，由 suversal 维护。它把 iPhone 向系统报告的位置放到地图上选择、测试和移动：可固定坐标、模拟步行或驾车路线，并在停止后恢复真实位置。它走 iOS 开发者位置模拟通道，不伪造公网 IP、不改 Apple 账号地区；iOS 18–26 需用电脑导入 RPPairing，iOS 27 及以上可用六位码配对。",
+    "last_seen": "2026-11-26",
+    "streak_days": 1,
+    "summary": "iOS 本机虚拟定位与步行、驾车路线模拟测试工具"
+  },
   "sveltejs/svelte": {
     "analyzed_at": "2026-11-17",
     "audience": "希望减少运行时开销、愿意尝试编译式框架的前端开发者与 Web 应用团队。",
@@ -2506,7 +2540,7 @@
     ],
     "first_seen": "2026-11-17",
     "intro": "Svelte 提供了一种构建 Web 应用的新方式：一个编译器，它接收你写的声明式组件，把这些组件转换成高效的 JavaScript，并在数据变化时精准地更新 DOM。它要解决的是传统前端框架把大量工作留到浏览器运行时、依赖运行时机制查找界面差异所带来的开销问题——Svelte 把这一步提前到构建阶段完成。使用上，你按组件的方式组织界面和逻辑，交给 Svelte 编译后产出可直接运行的前端代码。项目采用 MIT 许可，开发完全由志愿者社区推动。",
-    "last_seen": "2026-11-17",
+    "last_seen": "2026-11-26",
     "streak_days": 1,
     "summary": "把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。"
   },
