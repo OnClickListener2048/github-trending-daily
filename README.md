@@ -17,233 +17,233 @@
 
 <!-- TRENDING:START -->
 
-# 🔥 GitHub 每日 Trending · 2026-11-26
+# 🔥 GitHub 每日 Trending · 2026-11-27
 
 > 数据来源：[github.com/trending](https://github.com/trending?since=daily) · 每天 08:00（北京时间）自动推送 · 共 10 个仓库
 > 🎨 [打开精美 HTML 报告](https://onclicklistener2048.github.io/github-trending-daily/)（推荐浏览器查看）
 
 ## 🏆 今日精选（详细介绍）
 
-### 1. [obra/superpowers](https://github.com/obra/superpowers) — ⭐ 326,924（今日 +903）
+### 1. [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — ⭐ 66,614（今日 +746）
 
-> 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码
+> 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。
 
-Superpowers 是一套构建在可组合技能之上的软件开发方法论，安装后会自动作用于你的编码代理。它不会立刻写代码，而是先退后一步问你真正想解决什么问题，把需求梳理成规格，并分块展示给你确认。设计通过后，它会生成一份实施计划，细到没有项目背景、不重视测试的初级工程师也能照着执行，并强调真正的红绿 TDD、YAGNI 和 DRY。你确认开始后，它进入子代理驱动开发流程：逐项推进任务，检查并评审每个子代理的产出，常常能自主按计划工作数小时而不偏离。技能会自动触发，你不需要额外操作。
+CLI-Anything 是一个把现有软件变成 Agent 原生工具的项目：跑一条命令，就为某个软件或服务生成一套结构化的命令行接口（CLI harness）；Cursor、Claude Code、OpenClaw、Pi、nanobot 这类 Agent 都能直接调用它，不必再依赖 GUI 或非结构化接口。它要解决的是「今天的软件给人用，明天的用户是 Agent」这个断层。用法上分两条线：一是用 pip install cli-anything-hub 安装 CLI-Hub，再用 cli-hub install <name> 浏览、安装和管理社区构建的 CLI；二是自己按 CONTRIBUTING 提交一个 harness，PR 合并后立刻出现在 Hub 上。生成出来的命令既输出 JSON，供程序解析，也输出人类可读文本，方便调试。
 
-- ✨ 技能自动触发：代理在对话开始就加载 using-superpowers 技能，无需手动调用
-- ✨ 先澄清需求再编码：通过对话梳理出规格说明，并切成足够短、能真正读完的片段给你确认
-- ✨ 可执行的实施计划：细化到初级工程师能照做，同时强调红绿 TDD、YAGNI 与 DRY
-- ✨ 子代理驱动开发：每个工程任务交给子代理执行，主代理检查评审后继续推进
-- ✨ 长时间自主工作：可连续数小时按既定计划推进而不跑偏
-- ✨ 广泛的 harness 覆盖：Claude Code、Codex App/CLI、Cursor、Gemini CLI、GitHub Copilot CLI、Devin CLI、Factory Droid、Grok Build CLI、Kimi Code、OpenCode、Qwen Code 等均有对应安装方式
-- 👥 适合谁：希望让 AI 编码代理按严谨工程流程交付、而不只是补全代码的个人开发者与团队
+- ✨ 一条命令行即可让任意软件变成 agent-ready，兼容 Pi、OpenClaw、nanobot、Cursor、Claude Code 等 Agent 宿主
+- ✨ CLI-Hub 社区注册中心：pip install cli-anything-hub 后用 cli-hub install <name> 一键浏览、安装、管理所有社区 CLI，合并 PR 后即时上架
+- ✨ 每条命令同时提供 JSON 结构化输出和人类可读输出，Agent 解析与人工排查两不误
+- ✨ 配套 preview、live preview 和 trajectory loop 机制，Agent 能反复试跑并产出真实产物：CAD 构建、3D 场景、图表、游戏玩法、字幕等，官方 Demos 覆盖 18 个应用
+- ✨ 覆盖真实软件生态的现成 CLI：ArcGIS Pro 制图与地理处理、Calibre 书库、搜索、元数据、转换和导出、Joplin 笔记与同步、Obsidian 持久记忆、Sketch、Rekordbox 等
+- ✨ 贡献与需求双向通道：通过 wishlist 模板请求想要支持的软件，通过 contributor signup 认领 harness，并在 2,461 项通过的单元与 e2e 测试基线上做质量把关
+- 👥 适合谁：想让自家软件被 Agent 调用，或用 Agent 自动化各类桌面与专业软件的开发者。
 
-`Shell` · Fork 29,000
+`Python` · Fork 6,081 · 🔗 [官网](https://clianything.cc/)
 
-### 2. [jingyaogong/minimind](https://github.com/jingyaogong/minimind) — ⭐ 71,291（今日 +826）
+### 2. [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) — ⭐ 211,208（今日 +1,046）
 
-> 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。
+> 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的一站式知识基础设施。
 
-MiniMind 是一个从零手写大语言模型全流程的开源项目：用约3元GPU租用成本、单卡3090跑2小时，就能训练出64M参数的迷你语言模型。它要解决的是主流框架把训练封装得太黑箱、付费课程又讲不透的问题——核心算法全部用PyTorch原生实现，不依赖transformers/trl/peft的高层抽象，让你真正读懂每一行代码。项目还提供Tokenizer训练、全阶段开源数据、OpenAI兼容API服务端和Streamlit聊天界面，可直接上手复现和二次开发。
+Firecrawl 是一个面向 AI 应用和智能体的网页数据层：你给它一个 URL 或者一句搜索词，它返回干净的 Markdown、结构化 JSON 或截图，省掉代理轮换、JS 渲染、限流这些脏活。README 强调它覆盖 96% 的网页（包括重 JS 的站点），P95 延迟约 3.4 秒，输出对 LLM 友好，能少烧 token。除了单页抓取，它还支持整站爬取、URL 发现、批量异步抓取、内容变更监控，以及用 Actions 先点击、滚动、输入再抽取，甚至用 AI 提示词在页面上继续操作。既可以开源自托管，也可以直接用托管服务，Python、Node、cURL、CLI 都提供一行调用的入口。
 
-- ✨ 完整的MiniMind-LLM结构代码（Dense与MoE），主线对齐Qwen3/Qwen3-MoE生态
-- ✨ 覆盖Pretrain、SFT、LoRA、RLHF-DPO、RLAIF（PPO/GRPO/CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏全流程
-- ✨ 提供从收集、蒸馏、清洗到去重的高质量全阶段开源数据集，含工具调用与思考标记的Tokenizer训练代码
-- ✨ 关键训练算法从零原生实现，同时兼容transformers/trl/peft、llama.cpp/vllm/ollama与Llama-Factory
-- ✨ 支持单机单卡及多卡DDP/DeepSpeed训练、断点续训、wandb/swanlab可视化，并可在C-Eval等第三方评测集上测评
-- ✨ 附带兼容OpenAI协议的极简服务端与Streamlit聊天WebUI，支持reasoning_content、tool_calls与open_thinking，可接入FastGPT、Open-WebUI
-- 👥 适合谁：想深入理解大模型原理、亲手从零训练模型的学生、开发者与AI教学者。
+- ✨ Search：搜索网页并直接返回结果页的完整内容（markdown），省去二次抓取
+- ✨ Scrape：把任意 URL 转成 Markdown、HTML、截图或结构化 JSON，自带代理、JS 渲染和限流处理
+- ✨ Interact：先抓页面再用 AI 提示词或代码与页面交互，Actions 支持点击、滚动、输入、等待、按键
+- ✨ Crawl 与 Map：一次请求爬完整站所有 URL，或快速发现站点全部链接
+- ✨ Batch Scrape 与 Monitor：异步批量抓取上千 URL，并在网页内容变化时收到通知
+- ✨ Parse 与 Alexandria：把 PDF、DOCX 等文档解析成 Markdown/JSON，并通过 Firecrawl Cloud 接入 550+ 数据提供商
+- 👥 适合谁：适合做 AI Agent、RAG、知识库和数据采集的开发者与团队，需要稳定网页数据的后端与全栈工程师。
 
-`Python` · Fork 9,251 · 🔗 [官网](https://jingyaogong.github.io/minimind)
+`TypeScript` · Fork 11,073 · 🔗 [官网](https://firecrawl.dev)
 
-### 3. [cursor/plugins](https://github.com/cursor/plugins) — ⭐ 19,627（今日 +416）
+### 3. [nginx/nginx](https://github.com/nginx/nginx) — ⭐ 33,574（今日 +150）
 
-> Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器
+> 官方 NGINX 开源仓库：高性能 Web 服务器、反向代理与负载均衡器
 
-这是 Cursor 官方维护的插件集合，每个插件都是仓库根目录下的独立文件夹，并带有自己的 .cursor-plugin/plugin.json 清单，可以单独安装和使用。它解决的核心问题是：AI 编程助手通常只了解本地代码，却无法访问 PR 评审、云任务编排、Google Workspace、Salesforce 等真实工作流，而 Cursor 把这些能力封装成了可复用的插件。使用方式很直接：在插件目录中找到需要的能力并启用它，再通过 agent 技能、命令或 CLI 在对话里调用。目前已覆盖教学、代码审查、并行云端 agent 编排、SDK 开发，以及一大批第三方 SaaS 集成。
+这是 NGINX 官方开源代码仓库，采用类 BSD 2-clause 许可，可免费使用。NGINX 不是单一进程，而是由一个 master 进程读取并校验配置、管理多个 worker 进程处理实际请求，因此能突破操作系统进程数限制并横向扩展。它通过文本配置文件中的指令（directives）完成配置，功能由模块拆分扩展，模块可分静态编译进二进制或作为动态模块加载。除源码构建外，官方为主流 Linux 发行版、FreeBSD 和 Windows 提供二进制包，README 还给出了安装 SSL 证书启用 TLS、负载均衡、限流和内容缓存的上手路径。
 
-- ✨ Thermos 深度分支审查：针对安全性和正确性进行审计，采用严苛的代码质量评分标准，并行调度多个子 agent，并可选用 merge-ready PR 流程
-- ✨ Orchestrate 把大型任务拆分给并行的云端 agent，并包含 planner、worker、verifier 和结构化交接
-- ✨ Cursor Team Kit 提供 CI、代码评审、发版、本地自动化和验证等团队内部工作流
-- ✨ Create Plugin 用来搭建和校验新的 agent 插件；Teaching 提供技能映射、练习计划和学习复盘
-- ✨ Continual Learning 把对话记录增量写入 AGENTS.md 长期记忆；Ralph Loop 实现自引用式迭代 AI 循环
-- ✨ 大量第三方集成：GitHub、Playwright、Gmail、Google Drive、Calendar、Docs、Sheets、Slides、Salesforce、HubSpot、Zoom、Gong、Ashby 等，可直接操作真实业务数据
-- 👥 适合谁：使用 Cursor 的开发者、需要把 AI agent 接入团队工作流和 SaaS 工具的工程团队
+- ✨ 作为 Web 服务器、反向代理、负载均衡器、API 网关和内容缓存多合一使用
+- ✨ master/worker 多进程架构，可通过 worker_processes 等指令调优并发能力
+- ✨ 模块化设计，功能按模块拆分，支持静态编译与动态模块两种分发方式
+- ✨ 纯文本配置文件和指令体系，可灵活组合出所需行为
+- ✨ 官方提供 Linux、FreeBSD、Windows 等多平台二进制包及源码构建流程
+- ✨ README 覆盖 TLS 证书配置、负载均衡、限流、内容缓存等常见场景入门指引
+- 👥 适合谁：需要部署 Web 服务、反向代理或负载均衡的后端与运维开发者，以及想从源码构建定制 NGINX 的工程师
 
-`TypeScript` · Fork 2,119
+`C` · Fork 8,441 · 🔗 [官网](https://nginx.org/)
 
-### 4. [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) — ⭐ 198,951（今日 +672）
+### 4. [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) — ⭐ 12,867（今日 +176）
 
-> 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。
+> OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。
 
-Ponytail 是一个给 AI 编程 Agent 使用的技能包（skill），相当于把团队里那位扎马尾、话不多、五十行变一行的老工程师装进你的 Agent。它要解决的是 AI 编码助手常见的过度工程：为了一个日期选择器手搓 335 行日历，或者随手引入新依赖。Ponytail 让 Agent 先看仓库里已有什么、平台已自带什么，只写任务真正需要的那部分。它的原则不是“最少 token”，而是绝不砍掉校验、错误处理、安全与可访问性——代码小是因为必要，不是因为高尔夫式删减。README 给出的对照基准显示：代码量 -53%、耗时 -41%、成本 -26%、token -45%，同时 98% 的风险逻辑带测试（不用时为 68%），还附有 20 个 Agent 的兼容说明。
+OpenVINO 解决的是“训练好的模型怎么在真实硬件上跑得快、跑得省”这个问题。它可以把 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax 等框架训练的模型转换后直接部署，不需要原框架参与推理；也能通过 Optimum Intel 直接接入 Hugging Face Hub 上的 transformers 和 diffusers 模型。使用时先用 ov.convert_model 转换，再用 core.compile_model 指定设备编译，随后即可推理，pip install openvino 就能上手，官方还提供 Notebooks 和 C++/Python 示例。
 
-- ✨ 懒人式复用优先：先检查仓库现有组件和浏览器原生能力，10 行替代手搓的 335 行日期选择器
-- ✨ 克制引入依赖：不为一件事装一个库，能拼装现有能力就不新增包
-- ✨ 不牺牲正确性：校验、错误处理、安全、可访问性一律保留，只删冗余
-- ✨ 自带测试倾向：基准中 98% 的风险逻辑附带测试，Agent 自写测试能拦住 66% 的注入 bug（对照组 46%）
-- ✨ 可量化的收益：官方基准 39 个任务（含真实 FastAPI + React 仓库），代码 -53%、时间 -41%、成本 -26%、token -45%
-- ✨ 安全任务全通过：SQL 注入、路径穿越、伪造 token、限流、畸形 CSV、缓存 6 类场景 30 次运行全数通过
-- 👥 适合谁：日常用 AI Agent 写业务代码、受够了过度工程和多余依赖的开发者与团队。
+- ✨ 推理优化：面向计算机视觉、语音识别、生成式 AI 与 NLP（含大小语言模型）等常见任务提升性能
+- ✨ 多框架模型支持：兼容 PyTorch、TensorFlow、ONNX、Keras、PaddlePaddle、JAX/Flax，并可脱离原框架转换部署
+- ✨ Hugging Face 集成：通过 Optimum Intel 直接使用 transformers 与 diffusers 模型
+- ✨ 广泛硬件覆盖：支持 CPU（x86、ARM）、GPU（Intel 集显与独显）以及 Intel NPU 等 AI 加速器，覆盖边缘到云端
+- ✨ 简单部署 API：convert_model 转换 + compile_model 指定设备编译，几行代码完成模型推理
+- ✨ 丰富学习资源：OpenVINO Notebooks 提供 LLM 聊天机器人、YOLOv11 优化、文生图、LLaVa 多模态、Whisper 语音识别等实战示例
+- 👥 适合谁：需要在 Intel CPU、GPU、NPU 或边缘设备上高效部署和优化深度学习模型的 AI 应用开发者。
 
-`JavaScript` · Fork 11,287 · 🔗 [官网](https://ponytail.dev)
+`C++` · Fork 3,754 · 🔗 [官网](https://docs.openvino.ai)
 
-### 5. [sveltejs/svelte](https://github.com/sveltejs/svelte) — ⭐ 89,936（今日 +136）
+### 5. [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) — ⭐ 74,135（今日 +955）
 
-> 把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。
+> 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。
 
-Svelte 提供了一种构建 Web 应用的新方式：一个编译器，它接收你写的声明式组件，把这些组件转换成高效的 JavaScript，并在数据变化时精准地更新 DOM。它要解决的是传统前端框架把大量工作留到浏览器运行时、依赖运行时机制查找界面差异所带来的开销问题——Svelte 把这一步提前到构建阶段完成。使用上，你按组件的方式组织界面和逻辑，交给 Svelte 编译后产出可直接运行的前端代码。项目采用 MIT 许可，开发完全由志愿者社区推动。
+diagram-design 是一个 Agent Skill，可被 Claude Code、Cursor、Codex、GitHub Copilot、Qoder 等能读取技能的宿主加载。你只需用自然语言说明需求，例如画一张应用架构图、一个 Q2 项目影响与投入象限图，或一次带 401 刷新令牌的 Bearer 调用序列；代理会先确定图表类型、说明方案，再写出一个自包含的 .html 文件，双击即可打开。它主要想解决 Mermaid 一类工具产出的图千篇一律、带阴影、设计师看不下去的问题：内置 51 种图表类型，统一走编辑级设计风格，还能读取你的网站配色和字体，让图表与品牌保持一致。
 
-- ✨ 编译器式框架：在构建阶段将声明式组件转换为高效 JavaScript，而不是在浏览器里背着沉重的运行时
-- ✨ 精准更新 DOM（surgically updates the DOM），数据变化时只改动真正需要改的部分，无需整棵虚拟 DOM 比对
-- ✨ 声明式组件写法，界面与逻辑按组件组织，可读性和可维护性更好
-- ✨ MIT 许可的完全开源项目，代码与许可条款透明
-- ✨ 由志愿者社区驱动开发，可通过 Open Collective 资助，捐款用于托管等开发相关支出
-- ✨ 有公开的 roadmap 和 Contributing Guide（含 packages/svelte 包）方便了解进展与参与贡献
-- 👥 适合谁：希望减少运行时开销、愿意尝试编译式框架的前端开发者与 Web 应用团队。
+- ✨ 覆盖 51 种图表类型，架构图、序列图、象限图等常见表达基本齐备
+- ✨ 产物是单个自包含 HTML + SVG 文件，无外部依赖，双击就能打开和分享
+- ✨ 编辑级设计取向：明确不要阴影、不要 Mermaid 那种同质化的观感
+- ✨ 品牌对齐：让它抓取你的站点，提取配色与字体，之后每张图都自动匹配
+- ✨ 支持从 draw.io、Mermaid、Excalidraw、PlantUML 导入已有图表
+- ✨ 可导出 PNG / SVG，另提供 /export-diagram、/import-mermaid 等斜杠命令
+- 👥 适合谁：需要在文档、演示或 PR 里放架构图、流程图，又不想折腾设计工具的开发者与技术写作者。
 
-`JavaScript` · Fork 6,076 · 🔗 [官网](https://svelte.dev)
+`HTML` · Fork 4,966 · 🔗 [官网](https://diagramdesign.dev)
 
-### 6. [rtk-ai/rtk](https://github.com/rtk-ai/rtk) — ⭐ 87,876（今日 +125）
+### 6. [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) — ⭐ 7,226（今日 +562）
 
-> 把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用。
+> 一套开源的 App Store 与 Google Play 上架合规手册，外加提交前的自动扫描守卫。
 
-RTK 是一个面向 AI 编程 Agent 的 token 成本削减工具。它安装在你的机器上，通过 hook 自动接管 git status、测试、diff、日志、构建等 100+ 条常见命令：Agent 发出命令时，实际执行的是 rtk 包装后的版本，原始输出在 Agent 读取前就被压缩成精简摘要，例如 40 行的 git status 变成 3 行总结。无需改配置、无需学习新命令，装完重启 Agent 即生效；每条命令开销低于 25ms。它同时提供 pipelines 机制，用一份 Agent 无关的配置文件做更进一步的优化，比如把重读取交给更便宜的模型、压缩 bash 之外的内容、在不破坏 prompt 缓存的前提下清理 API 流量。
+这是一个把「上架被拒」从靠运气变成可检查项的项目。它整理了 117 个有据可查的拒审模式及对应修复，覆盖隐私清单（privacy manifest）、Android Data safety 表单等最常翻车的检查点，并追踪 95 个监管截止日期（EU AI Act、DSA、COPPA、各州年龄法）。用法很简单：git clone 后用 bash 运行 agent-os/hooks/app-store-compliance-guard.sh 指向你的工程目录，它只读不改，几秒到一分钟内打印结果，末尾一行是 BLOCKED、CLEAR 或 NOT CHECKED，告诉你接下来该做什么。它还能挂进 Claude Code、Codex、Gemini CLI、Copilot、Cursor 等 AI 编码工具，在每次提交前自动先跑一遍。
 
-- ✨ 开箱即用的输出压缩：100+ 条常用命令，单条开销低于 25ms，无需任何配置
-- ✨ 透明接入 Agent：rtk init -g 注册 hook，重启后命令自动被包装，工作方式完全不变
-- ✨ rtk gain 用量仪表盘：汇总统计、30 天 ASCII 图表、历史记录、按天明细与 JSON 导出
-- ✨ rtk discover 找出被遗漏的节省机会，支持跨项目、按时间范围扫描
-- ✨ Pipelines 进阶优化：一份 Agent 无关的配置文件，可从内置模板起步、安装社区分享的、或自己编写并分享
-- ✨ 跨平台单二进制分发：Homebrew、winget、安装脚本均可，另有 RTK Pro 为团队提供统一网关、成本与合规管控
-- 👥 适合谁：适合使用 Claude Code 等 AI 编程 Agent、希望降低 token 开销的开发者与团队。
+- ✨ 117 个已记录的拒审模式，每条都对应具体条款与可执行的修复方式
+- ✨ 提交前自动扫描：运行一条 bash 命令即可得到 BLOCKED / CLEAR / NOT CHECKED 结论，不会改动你的代码
+- ✨ 优先覆盖两大高频拒审原因：可用的演示账号与真实后端，以及与运行时行为一致的隐私声明（含每个 SDK）
+- ✨ 隐私清单与 Google Play Data safety 检查，兼容 Expo 的 app.json / app.config 读取
+- ✨ 追踪 95 个合规截止日期：EU AI Act、DSA、COPPA 与各州年龄相关法规
+- ✨ 面向 AI 编码代理的技能包，可安装进 Claude Code、Codex、Gemini CLI、Copilot、Cursor 等工具，在每次提交前自动拦截
+- 👥 适合谁：iOS/Android 开发者、独立开发者与小团队，以及需要走通上架流程但不写代码的产品或运营人员。
 
-`Rust` · Fork 5,639 · 🔗 [官网](https://www.rtk-ai.app)
+`Shell` · Fork 503 · 🔗 [官网](https://mjmirza.github.io/app-store-compliance/)
 
-### 7. [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) — ⭐ 5,854（今日 +113）
+### 7. [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) — ⭐ 15,951（今日 +327）
 
-> 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone 和 Android 手机的开源工具
+> 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。
 
-phone-harness 是一个 Python 命令行工具，目标是让 AI agent 真正“上手”你的手机。装上 CLI 后，agent 就能在你的实体手机上滑动、点击、输入文字、读取屏幕内容，从而完成订车、点单这类跨 App 的操作。它不需要越狱、不需要 Xcode，手机上也不用装任何东西：iPhone 通过 Mac 的“iPhone 镜像”窗口操作，Android 通过 adb 连接，也支持用 Phone Harness Cloud 把云端真机接入。安装方式很省心，把 README 里的 setup prompt 丢给你的编码 agent，它会自己装 CLI、注册 skill、询问用哪台手机，并带你走完需要手动确认的步骤。
+OpenSRE 是一个自托管的 CLI agent，专门用来处理 CI 失败：CI 只会告诉你构建失败了，却不会告诉你原因和修复方法。运行时，它会读取失败的运行日志、验证假设，定位根本原因，然后把修复推送出来交给你 review。它还能区分是 CI 环境自身的问题还是代码问题，避免团队只靠重跑绕过。用一条 curl 安装脚本装好之后，在代码仓库里执行 opensre 就能启动，模型用你自己的。目前处于 public alpha 阶段，核心流程可用但还不完全稳定，接口和集成可能变化。
 
-- ✨ 支持 iPhone：通过 macOS 的 iPhone 镜像窗口操控，无需越狱或 Xcode
-- ✨ 支持 Android：在 macOS、Linux、Windows 上通过 adb 连接真机
-- ✨ 提供 find_text、tap、读屏等原语，agent 可滚动、点击、输入并读取屏幕内容
-- ✨ 手机端零安装，不往设备里塞任何 App
-- ✨ 一键 setup prompt，让编码 agent 自行完成安装、注册 skill 与引导配置
-- ✨ 内置 phone-harness doctor 连接诊断，并可选 Phone Harness Cloud 云端真机（含 2FA、真实号码）
-- 👥 适合谁：想让 AI agent 代操作真实手机的开发者，以及做移动端自动化、Agent 工具链的工程师
+- ✨ 失败即调查：CI 运行失败时自动读取日志、验证假设并定位根因
+- ✨ 自动推送修复补丁，交由开发者审阅
+- ✨ 区分 CI 环境导致的失败与代码本身导致的失败，避免只靠重跑掩盖问题
+- ✨ 统计 CI 失败率、因 CI 不可靠损失的开发者工时、main 分支保持红色的时长
+- ✨ 自托管部署，支持接入用户自己的模型
+- ✨ 端到端测试覆盖真实云端场景，并维护语义化测试目录便于区分 e2e/单元、本地/云端边界
+- 👥 适合谁：适用于经常被红色构建和 flaky 检查拖累的研发团队，以及希望把 CI 排障自动化、并保持代码和数据不出自建环境的工程组织。
 
-`Python` · Fork 618 · 🔗 [官网](phone-harness.com)
+`Python` · Fork 2,084 · 🔗 [官网](https://opensre.com)
 
-### 8. [FrizzleM/SideInstaller](https://github.com/FrizzleM/SideInstaller) — ⭐ 1,993（今日 +108）
+### 8. [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) — ⭐ 79,135（今日 +525）
 
-> 在 iPhone 上直接安装 SideStore 与 LiveContainer 的免费开源 iOS 应用，全程无需电脑。
+> AFFiNE 是一个隐私优先、本地优先的开源一体化工作区，可以看作 Notion 与 Miro 的结合与延伸。
 
-SideInstaller 是一个免费开源的 iOS 应用，用来在 iPhone 上直接安装 SideStore 和 LiveContainer。这两个是目前 iOS 侧载的主流工具，但原本必须插上电脑、运行桌面端工具才能装好。SideInstaller 把配对、provisioning 和安装这一整套流程搬到了手机本地：打开 App、登录自己的 Apple 账号（凭据不会被收集）、点一下安装，就能得到一套可用的侧载环境。没有命令行，没有复杂配置，也不需要理解底层机制。代码完全开放，任何人都可以阅读、审计或参与贡献。
+AFFiNE（读音 [ə‘fain]）把文档、白板、表格、演示和知识库整合到同一个平台里，解决的是「知识管理要开好几个工具」的割裂问题。它的核心思路是「万物皆块」：富文本、便签、嵌入网页、多维表格、链接页面、形状乃至幻灯片，都能作为块放在无边界画布上，文档与白板不再是两个割裂的模块。数据默认保存在本地磁盘，同时支持 Web 与跨平台客户端的实时同步和多人协作；既可以开箱即用，也可以自行部署、fork 定制，还配套了 AFFiNE AI 帮你从大纲生成幻灯片、把文章整理成思维导图、规划任务。
 
-- ✨ 在设备本地完成 SideStore 和 LiveContainer 的完整安装，不需要 PC 或 Mac
-- ✨ 自动处理配对、provisioning 与安装步骤，用户只需按提示走几步
-- ✨ 支持一键选择安装 SideStore，或 SideStore + LiveContainer
-- ✨ 可从 SideStore 获取并导入配对文件，配对信息导入后无需重复操作
-- ✨ 支持 sideinstaller:// URL scheme：一键下载并安装指定 IPA、导入配对文件、导入证书
-- ✨ 提供 siboot 免电脑自签安装方式（iOS 27+），并为旧系统保留企业证书安装路径
-- 👥 适合谁：想给 iPhone 侧载应用、但手边没有电脑的 iOS 用户，尤其是 iOS 27 及以上系统的设备持有者。
+- ✨ 文档与白板完全融合：任意块都能放到无边界画布上，富文本、便签、嵌入网页、多维表格、形状、幻灯片随处摆放
+- ✨ 多视图数据库：支持表格等多种视图组织信息，兼具笔记与结构化数据管理
+- ✨ AFFiNE AI：把大纲转成演示幻灯片、把文章整理成思维导图、梳理任务计划，甚至一句话生成原型页面
+- ✨ 本地优先：数据保存在你自己的磁盘上，不依赖云端也能完整使用
+- ✨ 跨端实时协作：Web 与各平台客户端之间实时同步，多人同时编辑
+- ✨ 可自托管与可定制：自由部署、fork、自行构建，基于 BlockSuite 的插件与第三方块生态
+- 👥 适合谁：适合需要同时做笔记、画白板、管任务与做演示的创作者、产品与研发团队，以及重视数据隐私、愿意自托管的开发者。
 
-`Swift` · Fork 167 · 🔗 [官网](https://SideInstaller.net)
+`TypeScript` · Fork 5,775 · 🔗 [官网](https://affine.pro)
 
-### 9. [suversal/WrapPin](https://github.com/suversal/WrapPin) — ⭐ 1,347（今日 +107）
+### 9. [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) — ⭐ 19,473（今日 +889）
 
-> iOS 本机虚拟定位与步行、驾车路线模拟测试工具
+> 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。
 
-WrapPin 是 Roam Control 的非官方简体中文社区分支，由 suversal 维护。它把 iPhone 向系统报告的位置放到地图上选择、测试和移动：可固定坐标、模拟步行或驾车路线，并在停止后恢复真实位置。它走 iOS 开发者位置模拟通道，不伪造公网 IP、不改 Apple 账号地区；iOS 18–26 需用电脑导入 RPPairing，iOS 27 及以上可用六位码配对。
+Ghost-Downloader-3 是一个用 Python 编写、基于 Qt 的跨平台下载器，目标是把日常可能用到的下载场景全部收进一个应用里。它起源于帮一位 Bilibili 创作者管理资源的个人项目，如今已支持 Windows、macOS、Linux、Android 四个平台。它解决的问题很直接：以前下 HTTP 资源用一个工具、下 BT 用另一个、下视频又要装扩展或第三方软件，而它对 HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k 全都原生支持，还能直接解析 YouTube、Bilibili 的视频（可选清晰度、字幕、播放列表与多 P），并对 GitHub、HuggingFace 做镜像加速。除了图形界面，它还提供 ghd 命令行工具和兼容 aria2 的 RPC API，方便脚本化与第三方集成。
 
-- ✨ 用 Apple 地图搜索地点、输入经纬度或直接点图选点，精确选点支持拖动地图、摇杆微调和固定准星确认
-- ✨ 固定位置模拟时单独标出模拟目标，可一键回到目标，也可选中其他地点后更换模拟坐标
-- ✨ 预览 Apple 地图步行或驾车路线，多条路线最多选三条；步行支持三档预设或 1–12 公里/小时自定义速度，驾车支持 5–240 公里/小时
-- ✨ 步行过程中可暂停、继续、原路返回或更换目的地，并能在 GCJ-02 修正与 WGS84 原值之间切换
-- ✨ 收藏常用地点并在“收藏与历史”中用铅笔改名，或快速选取最近使用的位置
-- ✨ 会话结束主动清除模拟坐标并恢复真实位置，提供 Wi-Fi 与蜂窝网络分开的连接引导和诊断，并可选择 LocalDevVPN、Shadowrocket、Surge 等隧道跳转应用
-- 👥 适合谁：需要在自有 iPhone 上做定位、路线与步行测试的开发者、测试人员和进阶用户
+- ✨ 多协议统一支持：HTTP、Magnet/BT、FTP、M3U8、MPEG-DASH、eD2k 一个应用全搞定
+- ✨ 智能分块下载且无需文件合并，自动检测带宽，在弱网环境下依然能保持速度
+- ✨ 内置真实浏览器 TLS 指纹，降低被反爬机制拦截的概率
+- ✨ 视频站点深度解析：YouTube、Bilibili 可选清晰度与字幕，支持播放列表和多 P 剧集
+- ✨ 浏览器扩展可嗅探页面所有媒体资源，一键接管下载并沿用登录状态，无需复制链接
+- ✨ 跨平台原生体验，Android 端支持直播 M3U8 录制与后台持续下载
+- 👥 适合谁：需要频繁下载各类资源的普通用户、追剧与收藏视频的内容爱好者，以及希望用 CLI/RPC 做自动化的开发者。
 
-`Swift` · Fork 178
+`Python` · Fork 1,186 · 🔗 [官网](https://gd.xychr.com/)
 
-### 10. [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) — ⭐ 75,756（今日 +106）
+### 10. [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) — ⭐ 17,271（今日 +774）
 
-> 面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。
+> 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。
 
-OpenSpec 是一套在终端里使用的规格驱动开发框架：用 /openspec-propose 让 AI 先把需求写成 proposal.md、specs、design.md 和 tasks.md，再由 AI 按清单逐条实现，做完归档并把规格沉淀下来。它要解决的是「AI 一上来就写代码、需求和实现两头跑偏」的问题——规格全是纯 Markdown，不需要学新语法，你审完计划再让它动手，个人项目和多人协作都能用，也支持直接在已有代码库上迭代。
+AutoClip 是一款开源的 AI 视频剪辑桌面工具，解决的正是「长视频剪成短视频」这件费力的事：播客、访谈、课程动辄一两个小时，人工挑高光、卡字幕、套画幅、写文案，一条成片能耗掉大半天。它的用法很简单——贴一个视频链接，选好要发的平台，剩下的交给它：自动挑出值得剪的片段，配上分页字幕、封面和发布文案，直接出片。剪辑与渲染都在你自己的电脑上完成，软件本身免费，只有调用云端模型时按量计费。对自动结果不满意，还能进编辑器手动调整。
 
-- ✨ /openspec-explore：零风险的思考搭子，先读你的代码、比较几种方案、收敛范围，再决定要不要做
-- ✨ /openspec-propose：一次产出 proposal.md（为什么做、改什么）、specs（需求与场景）、design.md（技术方案）和 tasks.md（实现清单）
-- ✨ /openspec-apply-change：AI 按 tasks.md 逐条实现并打勾，做到哪一步一眼能看到
-- ✨ /openspec-archive-change：完成后自动归档到 changes/archive/日期-名称，同时更新规格，留给下一个特性继续用
-- ✨ 规格就是纯 Markdown：Requirement + Scenario 的 WHEN/THEN 写法，AI 负责写、你负责审，不需要学新语法
-- ✨ Stores（beta）：把 openspec/ 放进独立仓库，让一次变更横跨 API、Web 和共享库；平台团队维护规格，产品团队只读引用，不用维护会走样的 wiki
-- 👥 适合谁：使用 Claude Code、Cursor 等 AI 编码助手的开发者与技术团队，尤其是已有代码库、需要跨仓库协作的中大型团队。
+- ✨ 贴链接一键出片：给一个 YouTube、B 站等长视频地址，自动挑片段、剪辑、配字幕，直接输出可发布的短视频
+- ✨ 多平台画幅与排版：竖版访谈式、满屏播客式适配抖音、小红书、TikTok、Reels、YouTube Shorts，横版保留原画幅给 B 站与 YouTube
+- ✨ 视频、字幕、封面、发布文案一起生成，字幕支持中文、英文等多语言
+- ✨ 本地剪辑与渲染：素材和成片都在自己电脑上处理，MIT 开源，软件免费，云端模型按量计费
+- ✨ 内置编辑器：自动结果需要微调时手动改，字幕分页、人物取景都能调
+- ✨ 桌面端之外还有 CLI 与 MCP，可脚本化跑长视频队列，也能接进支持 MCP 的 AI 客户端
+- 👥 适合谁：做播客、访谈、课程的内容创作者，需要批量做短视频分发的运营与自媒体团队，以及想把剪辑流程脚本化的开发者。
 
-`TypeScript` · Fork 5,185 · 🔗 [官网](https://openspec.dev/)
+`Python` · Fork 2,420 · 🔗 [官网](https://zhouxiaoka.github.io/autoclip_intro/)
 
 
 ## 🚀 Show HN 今日新品
 
-[Old Nvidia and ATI tech demos, running again in the browser](https://news.ycombinator.com/item?id=50638503) · ⬆️ 346 · 💬 80
+[I built a game where you are an LLM's subagent](https://news.ycombinator.com/item?id=50599762) · ⬆️ 362 · 💬 90
 
-> 有人在浏览器中重新运行了 Nvidia 和 ATI 的旧技术演示，引发热议。
+> 在Show HN上，有人发布了一款游戏：玩家扮演LLM的分代理，该帖获得309分和74条评论。
 
-[Mastra Factory, the open-source software factory we use to build Mastra](https://news.ycombinator.com/item?id=50548660) · ⬆️ 159 · 💬 45
+[Fuck_data_brokers.py](https://news.ycombinator.com/item?id=50658191) · ⬆️ 233 · 💬 49
 
-> Mastra 团队发布开源软件工厂 Mastra Factory，用于构建 Mastra 本身。
+> Show HN 发布 Fuck_data_brokers.py，一个用于清理和删除数据经纪商所持个人信息的 Python 脚本，获 233 分和 49 条评论。
 
-[Fast deterministic natural language search for OpenStreetMap data](https://news.ycombinator.com/item?id=50561199) · ⬆️ 142 · 💬 52
+[I wrote an entire Vim manual over 4 years](https://news.ycombinator.com/item?id=50655868) · ⬆️ 159 · 💬 47
 
-> Show HN 上发布了面向 OpenStreetMap 数据的快速、确定性自然语言搜索工具。
+> 作者耗时四年编写了一套完整的 Vim 手册，在 Hacker News 上发布后获 159 分和 47 条评论。
 
 
 ## 🧡 Product Hunt 今日榜
 
-[Watch Reader](https://www.producthunt.com/products/watch-reader) · Product Hunt
+[Wizstar R1](https://www.producthunt.com/products/wizstar) · Product Hunt
 
-> Watch Reader 登陆 Product Hunt，支持在 Apple Watch 上朗读电子书和文章。
+> Seedance 2.0-level product videos at a lower cost
 
-[Pax by Pydantic](https://www.producthunt.com/products/pydantic) · Product Hunt
+[RightFont 2026](https://www.producthunt.com/products/rightfont) · Product Hunt
 
-> Pydantic 推出编码 agent Pax，其特色是连编码本身都作为插件实现。
+> RightFont 2026 今日在 Product Hunt 发布，主打“即刻找到合适字体”。
 
-[Postmaster of Puppets](https://www.producthunt.com/products/postmaster-of-puppets) · Product Hunt
+[Ploid](https://www.producthunt.com/products/ploid) · Product Hunt
 
-> Postmaster of Puppets 上线，可检测是否有人冒用你的域名发送邮件。
+> Ploid 支持在超20亿份档案中搜索 AI 智能体。
 
-[Bifura](https://www.producthunt.com/products/bifura) · Product Hunt
+[Prosed AI 2.0 + MCP](https://www.producthunt.com/products/prosed-turn-your-content-into-a-book) · Product Hunt
 
-> Bifura 帮你从 AI 智能体视角查看网站，了解它们如何理解和读取你的网页。
+> Prosed AI 2.0 + MCP 发布，能把公司的文字内容汇编成一本专属书籍
 
-[Ottante](https://www.producthunt.com/products/ottante) · Product Hunt
+[Spark AI](https://www.producthunt.com/products/spark-ai-7) · Product Hunt
 
-> Ottante 是一款在 Mac 上直接核查 AI 代理工作成果的新工具。
+> AI-native permitting & diligence services for data centers
 
 
 ## 🇨🇳 中文独立开发 · V2EX 分享创造
 
-[给搭手写了个邮件插件：多邮箱 + AI 批注 + 刘海岛通知](https://www.v2ex.com/t/1260055) · 💬 0 回复
+[做了个 Poople 答案站，上线一周的真实情况：Google 点击从一天 42 次掉到 1 次](https://www.v2ex.com/t/1260371) · 💬 0 回复
 
-> 给搭手写了个邮件插件：多邮箱 + AI 批注 + 刘海岛通知
+> 独立开发者分享 Poople 答案站上线一周：Google 点击从每天 42 次骤降至 1 次。
 
-[真的不喜欢丑丑头像吗？ 那就全部变成丑丑 🎭](https://www.v2ex.com/t/1260052) · 💬 0 回复
+[自研的 iOS 视频逐帧 / A-B 循环工具「逐帧 FrameSnap」黑五 5 折（¥68→¥38 永久买断）](https://www.v2ex.com/t/1260365) · 💬 0 回复
 
-> 真的不喜欢丑丑头像吗？ 那就全部变成丑丑 🎭
+> 独立开发者推出 iOS 视频逐帧与 A-B 循环工具「逐帧 FrameSnap」，黑五五折 ¥38 永久买断。
 
-[\[开源\] 受够了后台挂着吃内存的 Android Studio，用 Swift 写了个菜单栏「开发工具箱」](https://www.v2ex.com/t/1260051) · 💬 0 回复
+[ConeShare 开源虚拟资料室，外发链接支持动态水印、逐页阅读统计和远程 MCP](https://www.v2ex.com/t/1260363) · 💬 0 回复
 
-> 因不满 Android Studio 占内存，开发者用 Swift 开源了菜单栏「开发工具箱」。
+> ConeShare 开源虚拟资料室，外发链接支持动态水印、逐页阅读统计与远程 MCP。
 
-[推特热榜和德州，摸鱼新姿势，让 Agent 和你一起打牌。](https://www.v2ex.com/t/1260044) · 💬 0 回复
+[\[开源\] 做了一个 Grok Bot 平替](https://www.v2ex.com/t/1260362) · 💬 0 回复
 
-> 推特热榜和德州，摸鱼新姿势，让 Agent 和你一起打牌。
+> 开发者开源了一个 Grok Bot 的平替方案。
 
-[自己写了个跨端思维导图「蒲公英脑图」：免注册无水印、直接导 Xmind、能切 PPT 演说、能拍板书转公式](https://www.v2ex.com/t/1260043) · 💬 0 回复
+[搓了个 Mac 菜单栏小工具：AI 干活的时候听歌，轮到我了音乐自己往后退](https://www.v2ex.com/t/1260361) · 💬 1 回复
 
-> 独立开发者推出跨端思维导图「蒲公英脑图」，免注册无水印，支持导出 Xmind、PPT 演说和拍照转公式。
+> 开发者推出 Mac 菜单栏小工具：AI 干活时放歌，轮到自己
 
 ## 📋 完整榜单
 
@@ -251,16 +251,16 @@ OpenSpec 是一套在终端里使用的规格驱动开发框架：用 /openspec-
 
 | # | 仓库 | 一句话定位 | 语言 | ⭐ | 今日 |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 为编码代理准备的一套完整软件开发方法论，让 AI 先问清需求再动手写代码 | `Shell` | 326,924 | +903 |
-| 2 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 从零训练64M参数小语言模型，2小时3块钱，完整覆盖LLM全流程的开源教程项目。 | `Python` | 71,291 | +826 |
-| 3 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 官方插件仓库，把开发工作流和 SaaS 工具接入 AI 编辑器 | `TypeScript` | 19,627 | +416 |
-| 4 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 给 AI 编程助手加上“最懒资深开发”的思维，让它少写代码但不少写安全。 | `JavaScript` | 198,951 | +672 |
-| 5 | [sveltejs/svelte](https://github.com/sveltejs/svelte) | 把声明式组件编译成高效 JavaScript，并精准更新 DOM 的 Web 框架。 | `JavaScript` | 89,936 | +136 |
-| 6 | [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | 把常见开发命令的输出压缩 60-90% 的 CLI 代理，单个 Rust 二进制，装完即用… | `Rust` | 87,876 | +125 |
-| 7 | [phone-harness/phone-harness](https://github.com/phone-harness/phone-harness) | 让 Claude Code、Codex 等 AI agent 直接操控真实 iPhone … | `Python` | 5,854 | +113 |
-| 8 | [FrizzleM/SideInstaller](https://github.com/FrizzleM/SideInstaller) | 在 iPhone 上直接安装 SideStore 与 LiveContainer 的免费开… | `Swift` | 1,993 | +108 |
-| 9 | [suversal/WrapPin](https://github.com/suversal/WrapPin) | iOS 本机虚拟定位与步行、驾车路线模拟测试工具 | `Swift` | 1,347 | +107 |
-| 10 | [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | 面向 AI 编码助手的规格驱动开发（SDD）框架，先定计划再写代码。 | `TypeScript` | 75,756 | +106 |
+| 1 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为任意软件生成 CLI 封装，让 AI Agent 直接调用它，成为原生工具。 | `Python` | 66,614 | +746 |
+| 2 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 把任意网页和文档转成 LLM 可用的干净数据，并提供搜索、抓取、交互和 550+ 数据源的… | `TypeScript` | 211,208 | +1,046 |
+| 3 | [nginx/nginx](https://github.com/nginx/nginx) | 官方 NGINX 开源仓库：高性能 Web 服务器、反向代理与负载均衡器 | `C` | 33,574 | +150 |
+| 4 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | OpenVINO 是一个用于深度学习模型推理优化与跨平台部署的开源工具包。 | `C++` | 12,867 | +176 |
+| 5 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 给 AI 编码助手用的图表技能，一条命令产出编辑级设计的单文件 HTML+SVG 图表。 | `HTML` | 74,135 | +955 |
+| 6 | [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) | 一套开源的 App Store 与 Google Play 上架合规手册，外加提交前的自动… | `Shell` | 7,226 | +562 |
+| 7 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | 开源 CI/CD 可靠性 agent，自动排查失败构建并提交修复供你审阅。 | `Python` | 15,951 | +327 |
+| 8 | [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | AFFiNE 是一个隐私优先、本地优先的开源一体化工作区，可以看作 Notion 与 Mi… | `TypeScript` | 79,135 | +525 |
+| 9 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 一个跨四大平台、通吃几乎所有下载协议的多合一开源下载器，专治网络差和资源分散。 | `Python` | 19,473 | +889 |
+| 10 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 把播客、访谈、课程等长视频一键剪成适配全平台短视频的开源桌面工具。 | `Python` | 17,271 | +774 |
 
 <!-- TRENDING:END -->
 

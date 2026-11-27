@@ -62,7 +62,7 @@
   "hn:50599762": {
     "analyzed_at": "2026-11-23",
     "first_seen": "2026-11-23",
-    "last_seen": "2026-11-23",
+    "last_seen": "2026-11-27",
     "summary": "在Show HN上，有人发布了一款游戏：玩家扮演LLM的分代理，该帖获得309分和74条评论。"
   },
   "hn:50638503": {
@@ -70,6 +70,18 @@
     "first_seen": "2026-11-26",
     "last_seen": "2026-11-26",
     "summary": "有人在浏览器中重新运行了 Nvidia 和 ATI 的旧技术演示，引发热议。"
+  },
+  "hn:50655868": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "作者耗时四年编写了一套完整的 Vim 手册，在 Hacker News 上发布后获 159 分和 47 条评论。"
+  },
+  "hn:50658191": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "Show HN 发布 Fuck_data_brokers.py，一个用于清理和删除数据经纪商所持个人信息的 Python 脚本，获 233 分和 49 条评论。"
   },
   "ph:1226465": {
     "analyzed_at": "2026-11-19",
@@ -82,6 +94,12 @@
     "first_seen": "2026-11-23",
     "last_seen": "2026-11-23",
     "summary": "Daymaker 推出一款能送出高度个性化礼物的工具，让潜在客户更愿意接受会面。"
+  },
+  "ph:1294141": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "Prosed AI 2.0 + MCP 发布，能把公司的文字内容汇编成一本专属书籍"
   },
   "ph:1306148": {
     "analyzed_at": "2026-11-23",
@@ -291,6 +309,14 @@
     "last_seen": "2026-11-25",
     "summary": "Sand AI 发布 MAGI-2 模型，480B 参数，专注电影级视频生成。"
   },
+  "ph:1330200": {
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27"
+  },
+  "ph:1330231": {
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27"
+  },
   "ph:1330423": {
     "analyzed_at": "2026-11-26",
     "first_seen": "2026-11-26",
@@ -308,6 +334,18 @@
     "first_seen": "2026-11-26",
     "last_seen": "2026-11-26",
     "summary": "Pydantic 推出编码 agent Pax，其特色是连编码本身都作为插件实现。"
+  },
+  "ph:1332536": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "Ploid 支持在超20亿份档案中搜索 AI 智能体。"
+  },
+  "ph:1332620": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "RightFont 2026 今日在 Product Hunt 发布，主打“即刻找到合适字体”。"
   },
   "v2ex:1258346": {
     "analyzed_at": "2026-11-19",
@@ -540,5 +578,35 @@
   "v2ex:1260055": {
     "first_seen": "2026-11-26",
     "last_seen": "2026-11-26"
+  },
+  "v2ex:1260361": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "开发者推出 Mac 菜单栏小工具：AI 干活时放歌，轮到自己"
+  },
+  "v2ex:1260362": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "开发者开源了一个 Grok Bot 的平替方案。"
+  },
+  "v2ex:1260363": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "ConeShare 开源虚拟资料室，外发链接支持动态水印、逐页阅读统计与远程 MCP。"
+  },
+  "v2ex:1260365": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "独立开发者推出 iOS 视频逐帧与 A-B 循环工具「逐帧 FrameSnap」，黑五五折 ¥38 永久买断。"
+  },
+  "v2ex:1260371": {
+    "analyzed_at": "2026-11-27",
+    "first_seen": "2026-11-27",
+    "last_seen": "2026-11-27",
+    "summary": "独立开发者分享 Poople 答案站上线一周：Google 点击从每天 42 次骤降至 1 次。"
   }
 }
