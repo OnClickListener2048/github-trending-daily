@@ -83,6 +83,12 @@
     "last_seen": "2026-11-27",
     "summary": "Show HN 发布 Fuck_data_brokers.py，一个用于清理和删除数据经纪商所持个人信息的 Python 脚本，获 233 分和 49 条评论。"
   },
+  "hn:50667726": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "bouncemarket 是一个围绕弹跳球实时走势的预测市场小游戏，登上 Hacker News 后获 367 分、124 条评论。"
+  },
   "ph:1226465": {
     "analyzed_at": "2026-11-19",
     "first_seen": "2026-11-19",
@@ -94,6 +100,12 @@
     "first_seen": "2026-11-23",
     "last_seen": "2026-11-23",
     "summary": "Daymaker 推出一款能送出高度个性化礼物的工具，让潜在客户更愿意接受会面。"
+  },
+  "ph:1286312": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "overads.io 在 Product Hunt 发布，主打在你睡觉时也能自动运转的营销与 GTM 方案。"
   },
   "ph:1294141": {
     "analyzed_at": "2026-11-27",
@@ -137,6 +149,12 @@
     "last_seen": "2026-11-21",
     "summary": "FFMPA Kids News 上线，为5到15岁孩子提供平静、经事实核查的新闻内容。"
   },
+  "ph:1316236": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "RetainIQ 帮你识别哪些"
+  },
   "ph:1317062": {
     "analyzed_at": "2026-11-22",
     "first_seen": "2026-11-22",
@@ -155,6 +173,12 @@
     "last_seen": "2026-11-21",
     "summary": "Salus 今日在 Product Hunt 发布，帮助用户发现捷克共和国的福利与"
   },
+  "ph:1319623": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "Slopie 推出免费浏览器端 3D 地图，覆盖所有滑雪场。"
+  },
   "ph:1320128": {
     "analyzed_at": "2026-11-22",
     "first_seen": "2026-11-22",
@@ -172,6 +196,12 @@
     "first_seen": "2026-11-19",
     "last_seen": "2026-11-19",
     "summary": "Ctruh 推出 Verse Engine，支持一键将 Blender、Unity 或 Unreal 场景转为实时 3D 链接。"
+  },
+  "ph:1320696": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "微软决策模型 Microsoft-Decision-1.1 正式 GA，经过校准且速度提升 2 倍。"
   },
   "ph:1320807": {
     "analyzed_at": "2026-11-24",
@@ -262,6 +292,12 @@
     "first_seen": "2026-11-25",
     "last_seen": "2026-11-25",
     "summary": "eluna 是一款面向伴侣的经期追踪工具，不只提示“何时”，更解释“为何”。"
+  },
+  "ph:1326649": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "Tano 是一款韩语词汇应用，能跳过你已经掌握的单词。"
   },
   "ph:1327970": {
     "first_seen": "2026-11-24",
@@ -608,5 +644,35 @@
     "first_seen": "2026-11-27",
     "last_seen": "2026-11-27",
     "summary": "独立开发者分享 Poople 答案站上线一周：Google 点击从每天 42 次骤降至 1 次。"
+  },
+  "v2ex:1260539": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "V2EX 开发者分享了一款浏览器撸猫游戏，不用养猫也能在线吸猫。"
+  },
+  "v2ex:1260543": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "一位开发者受 Hermes 启发，开源了一款能记录经验的 AI 浏览器插件。"
+  },
+  "v2ex:1260557": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "独立开发者推出100%本地Chrome浏览记忆插件，关闭未读标签也不怕忘，可按正文关键词找回，且无需账号。"
+  },
+  "v2ex:1260569": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "V2EX 独立开发者分享一款磁盘清理工具，黑五期间限时免费领取。"
+  },
+  "v2ex:1260570": {
+    "analyzed_at": "2026-11-28",
+    "first_seen": "2026-11-28",
+    "last_seen": "2026-11-28",
+    "summary": "独立开发者吐槽已写 robots.txt，爬虫仍把免费 Worker 刷到 8840 次超限。"
   }
 }

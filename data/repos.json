@@ -294,7 +294,7 @@
     ],
     "first_seen": "2026-11-11",
     "intro": "这是一套以 Claude Code 插件形式分发的学术研究技能集，把论文工作拆成 research → write → review → revise → finalize 五个阶段，每到一个阶段就停下来等你确认；它可以起草整篇论文，但选题、方法、数据解读和结论必须由你决定。它主要解决的事情包括：查找并核对文献、按格式整理引用、检查数据与逻辑是否一致，以及避免 AI 自己编造引用或结果。安装只需两条命令：先把插件市场加到本地环境，再安装插件；随后输入 /ars-plan，它就会用苏格拉底式提问帮你梳理论文结构。它也支持在 claude.ai 或 Claude Desktop 上安装，不过 hooks 和插件 agent 在纯聊天界面不会运行。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "一款 Claude Code 学术研究技能包，覆盖从调研到定稿的完整论文流程。"
   },
@@ -460,6 +460,23 @@
     "last_seen": "2026-11-07",
     "streak_days": 3,
     "summary": "NVIDIA 开源的企业本体框架，为 AI Agent 构建语义与知识图谱推理层，保证查询结果可信且可解释。"
+  },
+  "NYLLON-SOFTWARE/SignuDoc": {
+    "analyzed_at": "2026-11-28",
+    "audience": "需要频繁收发合同、又在意成本与数据归属的中小团队、律所、代理机构和自托管爱好者。",
+    "features": [
+      "上传 PDF 后可视化放置签名、姓名、日期、文本、数字、复选框、下拉框、单选按钮等字段，每个字段可设必填或选填并绑定到指定签署人",
+      "最多 25 名签署人，支持顺序签署或部分人同时签署，也可添加只接收成品的抄送人",
+      "签署人免注册，通过邮件链接打开，在任意设备上输入或手绘签名；可先下载原文，也可填理由拒签并通知发起人",
+      "身份核验：可要求签署人输入你线下告知的访问码，或由系统在打开链接时发送一次性验证码，审计证书记录核验方式、IP 和浏览器",
+      "信封管理：卡片式仪表盘显示首页缩略图与状态（草稿、已发送、已完成、已拒绝、已作废、已过期），支持搜索和状态筛选，签署期限 3~90 天可中途修改，支持每 1/2/3/7 天自动提醒及手动催办",
+      "发错邮箱可更正，旧链接失效、新地址收到新邀请；已完成信封可复制为新草稿（沿用文档、签署人和字段）；可存为模板"
+    ],
+    "first_seen": "2026-11-28",
+    "intro": "SignuDoc 是一个 MIT 协议的开源电子签名应用，用来替代 DocuSign 这类按席位收费的服务。它解决三个问题：席位费贵（15 人团队用 DocuSign 一年 5400~8100 美元）、信封额度受限、合同文件存放在第三方手里。用法很直接：点 Deploy 按钮，在免费的 Vercel、Neon、Resend 计划上自动建好数据库、文件存储和邮件服务；然后上传 PDF、拖放签署字段、按顺序添加签署人，系统发出签署链接，签署人无需注册账号即可在手机或电脑上输入或手绘签名，完成后所有各方拿到带 PAdES 密封和审计证书的最终 PDF。",
+    "last_seen": "2026-11-28",
+    "streak_days": 1,
+    "summary": "开源电子签名平台，部署在自己的 Vercel 账号上，按席位零成本，文档与审计证据自持。"
   },
   "NationalSecurityAgency/ghidra": {
     "analyzed_at": "2026-11-10",
@@ -785,7 +802,7 @@
     ],
     "first_seen": "2026-11-20",
     "intro": "OpenCode 是一个开源的 AI 编码智能体，官方定位就是「The open source coding agent」。它把 AI 助手放进你的终端：既能直接改代码、跑 bash 命令干开发活，也能切成只读模式，先摸清陌生代码库再动手。安装很轻，一条 curl 脚本或 npm、brew、pacman、mise、nix 都能装好，另外还提供处于 Beta 阶段的桌面应用（macOS、Windows、Linux）。想深入了解配置可以看官方文档，社区在 Discord 和 X 上。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "开源 AI 编码智能体，在终端里直接帮你写代码、查代码、跑命令。"
   },
@@ -989,7 +1006,7 @@
     ],
     "first_seen": "2026-11-10",
     "intro": "AnyPS5 是一个 C++ 编写的转换工具，目标是把 PS5 的可执行文件自动移植到 Linux 和 Windows 上运行。它的核心是 relinker（重链接器），会把 PS5 可执行文件转换成目标系统的原生格式，同时提供一套可动态链接的 system prx 系统库实现，不依赖模拟器，也不需要额外的运行时进程。项目还带有基于网页的转换器，文件全程留在本地设备上，不上传。官方提供了程序构建、架构说明、代码规范、技术债清单等文档，以及各游戏的兼容性讨论区。命令行遇到未支持状态会抛 C++ 异常；着色器重编译器在启用 SPIRV-Tools 的构建中可产出经过验证的 SPIR-V。仅含 relinker 的构建还能在 macOS（包括 Apple silicon）上运行。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "把 PS5 可执行文件自动重链接为 Linux、Windows 原生程序的转换工具"
   },
@@ -1210,7 +1227,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "Claude-BugHunter 是一个可直接安装的 Claude Code 技能包：装一次，Claude 就从聊天机器人变成有经验的漏洞赏金研究员或红队操作员。它把方法论、58 个按漏洞类别整理的 hunt-* 技能、企业身份与基础设施攻击链、以及定级报告与证据脱敏流程分层堆叠起来；这些 hunt-* 技能源自 681 份公开 HackerOne 报告。使用时不用记技能名，直接用日常语言描述你在测什么，相关技能就会自动加载。支持通过插件市场一键安装，也可以用脚本复制安装，并能同时装进 OpenCode、Codex CLI 等其他 agent 工具。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "装进 Claude Code 的漏洞赏金与外部红队技能包，83 个技能开箱即用"
   },
@@ -1436,7 +1453,7 @@
     ],
     "first_seen": "2026-11-16",
     "intro": "这是 Google Labs 为 Stitch（Google 的 AI 界面设计工具）整理的一套 Agent Skills 和插件合集，遵循 Agent Skills 开放标准，因此能直接用在 Codex、Antigravity、Gemini CLI、Claude Code、Cursor、OpenCode 等编码 Agent 里。它要解决的是「设计和写代码各干各的、需要人工来回搬运」的问题：Agent 通过 Stitch MCP 服务器连上 Stitch 后，就能用自然语言生成界面、修改现有屏幕、批量产出设计变体，也能把已有的前端代码反向转成设计稿，或者从源码里抽出 DESIGN.md 设计系统再统一套用到所有屏幕上。安装方式按客户端分：Codex 通过插件市场，Claude Code 和 Cursor 用 npx plugins 安装，OpenCode 则需要手动拷贝 skill 目录并自行配置远程 MCP 条目。前提是先在 Agent 环境中完成 Stitch MCP 的注册和凭据配置。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "Google Stitch 官方 Agent Skills 库：让编码 Agent 直接操作设计稿与设计系统"
   },
@@ -1572,7 +1589,7 @@
     ],
     "first_seen": "2026-11-22",
     "intro": "awesome-mac 是一个面向 Mac 用户的软件精选合集，目标是把散落在各处的优质 macOS 应用集中起来，并按类别系统化整理，解决“想找某个功能的 Mac 软件却不知道用什么好”的问题。它不是代码库，而是一份持续维护的清单：你可以直接在目录里按分类浏览，比如效率工具、开发工具、设计、系统增强等，快速定位到具体应用。遇到合适的项目，按清单里的链接前往官网或商店获取即可。适合当作日常查阅的 Mac 软件选型参考。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "一份系统整理 macOS 优质软件的精选清单，按类别归纳，方便查找和使用。"
   },
@@ -1662,7 +1679,7 @@
     ],
     "first_seen": "2026-11-24",
     "intro": "Antigravity Tools 是一款面向开发者和 AI 爱好者的桌面应用，核心思路是把多账号矩阵管理、协议转换和智能请求调度合到一起，在本地搭一个稳定、快速、低成本的 AI 中转站。它最实用的一点是能把常见的 Web Session（Google、Anthropic）转换成标准化的 API 接口，省掉不同供应商之间的协议差异，让你用统一的接口去调用。日常使用时，你在图形界面里集中看所有账号的配额健康度，由系统挑出当前最合适的账号一键切换，再配合请求调度把流量分摊到多个账号上。项目用 Tauri v2 + React 构建界面、Rust 写后端，属于安装即用的跨平台桌面程序，不必自己搭服务。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "把多账号管理、协议转换与请求调度装进一个桌面端的本地 AI 中转站。"
   },
@@ -1842,7 +1859,7 @@
     ],
     "first_seen": "2026-11-20",
     "intro": "MarkItDown 是一个轻量级 Python 工具，用来把 PDF、Office 文档、图片、音频、HTML 等多种格式转换成 Markdown。它和 textract 定位相似，但重点是保留标题、列表、表格、链接等文档结构，方便喂给 LLM 和文本分析流水线。可以用命令行直接转换（markitdown file.pdf > out.md，支持 -o 和管道输入），也可以作为库调用。它更偏向给分析工具消费，而不是追求人类阅读级的高保真排版。",
-    "last_seen": "2026-11-24",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "微软出品的轻量 Python 工具，把各类文档转成适合 LLM 处理的 Markdown。"
   },
@@ -2506,7 +2523,7 @@
     ],
     "first_seen": "2026-11-22",
     "intro": "treg 把 agent 真正干活需要的工具集中到一个网关后面：SEO 与反链、社交与趋势、人物与公司信息补全、广告、抓取、图像视频生成，覆盖数千个端点，按次计费、最低一分钱起，不用去各家注册账号。它替团队持有 Semrush、Moz、Crunchbase、Apollo 这类订阅，让你按调用付费，而不是按席位买月费。装好 CLI 后执行 treg login，用 treg catalog search 按「要做什么」找工具，treg call 直接调用，treg balance 看这一单花了多少。你还可以把团队自己的 API 账号、OAuth、厂商 CLI 或 SKILL.md 注册进来，用自己的 key 调用且不计费。",
-    "last_seen": "2026-11-22",
+    "last_seen": "2026-11-28",
     "streak_days": 1,
     "summary": "面向 agent 的工具版 OpenRouter：一个 token 调用数千个按次计费的第三方 API"
   },
